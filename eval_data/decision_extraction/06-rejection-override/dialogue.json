@@ -1,0 +1,294 @@
+{
+  "dialogues": {
+    "2025-01-15": {
+      "推翻决策-A": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-15 10:00:00",
+          "dialogue": "之前定了用Jenkins，现在决定改用GitHub Actions"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-15 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-15 10:04:00",
+          "dialogue": "GitHub Actions性能更好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-15 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-15 10:08:00",
+          "dialogue": "那就GitHub Actions了"
+        }
+      ]
+    },
+    "2025-01-16": {
+      "推翻决策-B": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-16 10:00:00",
+          "dialogue": "之前定了用Jenkins，现在决定改用GitHub Actions"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-16 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-16 10:04:00",
+          "dialogue": "GitHub Actions性能更好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-16 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-16 10:08:00",
+          "dialogue": "那就GitHub Actions了"
+        }
+      ]
+    },
+    "2025-01-17": {
+      "推翻决策-C": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:00:00",
+          "dialogue": "之前定了用Webpack，现在决定改用Vite"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-17 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:04:00",
+          "dialogue": "Vite性能更好"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-17 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:08:00",
+          "dialogue": "那就Vite了"
+        }
+      ]
+    },
+    "2025-01-18": {
+      "推翻决策-D": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-18 10:00:00",
+          "dialogue": "之前定了用Webpack，现在决定改用Vite"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-18 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-18 10:04:00",
+          "dialogue": "Vite性能更好"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-18 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-18 10:08:00",
+          "dialogue": "那就Vite了"
+        }
+      ]
+    },
+    "2025-01-19": {
+      "推翻决策-E": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-19 10:00:00",
+          "dialogue": "之前定了用npm，现在决定改用yarn"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-19 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-19 10:04:00",
+          "dialogue": "yarn性能更好"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-19 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-19 10:08:00",
+          "dialogue": "那就yarn了"
+        }
+      ]
+    },
+    "2025-01-20": {
+      "推翻决策-F": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:00:00",
+          "dialogue": "之前定了用npm，现在决定改用yarn"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-20 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:04:00",
+          "dialogue": "yarn性能更好"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-20 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:08:00",
+          "dialogue": "那就yarn了"
+        }
+      ]
+    },
+    "2025-01-21": {
+      "推翻决策-G": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-21 10:00:00",
+          "dialogue": "之前定了用Redux，现在决定改用Zustand"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-21 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-21 10:04:00",
+          "dialogue": "Zustand性能更好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-21 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-21 10:08:00",
+          "dialogue": "那就Zustand了"
+        }
+      ]
+    },
+    "2025-01-22": {
+      "推翻决策-H": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-22 10:00:00",
+          "dialogue": "之前定了用Redux，现在决定改用Zustand"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-22 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-22 10:04:00",
+          "dialogue": "Zustand性能更好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-22 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-22 10:08:00",
+          "dialogue": "那就Zustand了"
+        }
+      ]
+    },
+    "2025-01-23": {
+      "推翻决策-I": [
+        {
+          "speaker": "陈七",
+          "time": "2025-01-23 10:00:00",
+          "dialogue": "之前定了用Flask，现在决定改用FastAPI"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-23 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-23 10:04:00",
+          "dialogue": "FastAPI性能更好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-23 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-23 10:08:00",
+          "dialogue": "那就FastAPI了"
+        }
+      ]
+    },
+    "2025-01-24": {
+      "推翻决策-J": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:00:00",
+          "dialogue": "之前定了用Flask，现在决定改用FastAPI"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-24 10:02:00",
+          "dialogue": "为什么换？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:04:00",
+          "dialogue": "FastAPI性能更好"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-24 10:06:00",
+          "dialogue": "同意"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:08:00",
+          "dialogue": "那就FastAPI了"
+        }
+      ]
+    }
+  }
+}

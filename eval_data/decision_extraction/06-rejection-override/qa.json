@@ -1,0 +1,694 @@
+{
+  "qars": [
+    {
+      "id": "de_06_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_000_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Jenkins",
+        "B": "GitHub Actions",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_000_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_000_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "赵六",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_000_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "李四",
+        "B": "赵六",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_000_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_001_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Jenkins",
+        "B": "GitHub Actions",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_001_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_001_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_001_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_001_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_002_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Webpack",
+        "B": "Vite",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_002_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_002_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_002_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "王五",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_002_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_003_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Webpack",
+        "B": "Vite",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_003_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_003_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "李四",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_003_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "李四",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_003_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_004_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "npm",
+        "B": "yarn",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_004_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_004_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_004_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "王五",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_004_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_005_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "npm",
+        "B": "yarn",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_005_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_005_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_005_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "赵六",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_005_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_006_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Redux",
+        "B": "Zustand",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_006_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_006_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_006_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_006_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_007_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Redux",
+        "B": "Zustand",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_007_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_007_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "陈七",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_007_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "李四",
+        "B": "陈七",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_007_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_008_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Flask",
+        "B": "FastAPI",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_008_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_008_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "赵六",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_008_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "陈七",
+        "B": "赵六",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_008_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_06_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，做出了新决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_06_009_content",
+      "Q": "最终决定用什么？",
+      "A": "B",
+      "options": {
+        "A": "Flask",
+        "B": "FastAPI",
+        "C": "两个都用",
+        "D": "都不选"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_06_009_status",
+      "Q": "旧决策的状态应该是？",
+      "A": "C",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "superseded",
+        "D": "completed"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_06_009_proposer",
+      "Q": "新决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_06_009_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_06_009_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    }
+  ]
+}

@@ -1,0 +1,774 @@
+{
+  "qars": [
+    {
+      "id": "de_05_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_000_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "MySQL",
+        "B": "PostgreSQL",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_000_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_000_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_000_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_000_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_000_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_001_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "MySQL",
+        "B": "PostgreSQL",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_001_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_001_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_001_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_001_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_001_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_002_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "React",
+        "B": "Vue",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_002_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_002_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "张三",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_002_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "张三",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_002_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_002_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_003_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "React",
+        "B": "Vue",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_003_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_003_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "张三",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_003_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "李四",
+        "B": "张三",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_003_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_003_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_004_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "微服务",
+        "B": "单体架构",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_004_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_004_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_004_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "王五",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_004_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_004_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_005_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "微服务",
+        "B": "单体架构",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_005_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_005_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "张三",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_005_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "李四",
+        "B": "张三",
+        "C": "赵六",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_005_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_005_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_006_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "timeout=30s",
+        "B": "timeout=60s",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_006_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_006_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_006_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_006_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_006_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_007_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "timeout=30s",
+        "B": "timeout=60s",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_007_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_007_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_007_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_007_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_007_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_008_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "Kubernetes",
+        "B": "Docker Compose",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_008_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_008_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_008_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "赵六",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_008_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_008_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_05_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，有多个决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_05_009_content",
+      "Q": "最终决定是什么？",
+      "A": "B",
+      "options": {
+        "A": "Kubernetes",
+        "B": "Docker Compose",
+        "C": "未决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_05_009_conflict",
+      "Q": "对话中的决策是否存在冲突？",
+      "A": "A",
+      "options": {
+        "A": "是，前后决策矛盾",
+        "B": "否，不矛盾"
+      },
+      "dimension": "conflict"
+    },
+    {
+      "id": "de_05_009_proposer",
+      "Q": "最终决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_05_009_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "王五",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_05_009_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_05_009_status",
+      "Q": "最终决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "superseded"
+      },
+      "dimension": "status"
+    }
+  ]
+}

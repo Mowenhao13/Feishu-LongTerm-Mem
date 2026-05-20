@@ -1,0 +1,559 @@
+{
+  "dialogues": {
+    "2025-01-15": {
+      "技术选型-A": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-15 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-15 10:02:00",
+          "dialogue": "我推荐用PostgreSQL，成熟稳定"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-15 10:04:00",
+          "dialogue": "MySQL也不错，生态好"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-15 10:06:00",
+          "dialogue": "PostgreSQL团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-15 10:08:00",
+          "dialogue": "好，那就定PostgreSQL吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-15 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-16": {
+      "技术选型-B": [
+        {
+          "speaker": "王五",
+          "time": "2025-01-16 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-16 10:02:00",
+          "dialogue": "我推荐用MySQL，成熟稳定"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-16 10:04:00",
+          "dialogue": "MongoDB也不错，生态好"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-16 10:06:00",
+          "dialogue": "MySQL团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-16 10:08:00",
+          "dialogue": "好，那就定MySQL吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-16 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-17": {
+      "技术选型-C": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-17 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:02:00",
+          "dialogue": "我推荐用MongoDB，成熟稳定"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-17 10:04:00",
+          "dialogue": "Redis也不错，生态好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:06:00",
+          "dialogue": "MongoDB团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-17 10:08:00",
+          "dialogue": "好，那就定MongoDB吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-17 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-18": {
+      "技术选型-D": [
+        {
+          "speaker": "陈七",
+          "time": "2025-01-18 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-18 10:02:00",
+          "dialogue": "我推荐用Redis，成熟稳定"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-18 10:04:00",
+          "dialogue": "ElasticSearch也不错，生态好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-18 10:06:00",
+          "dialogue": "Redis团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-18 10:08:00",
+          "dialogue": "好，那就定Redis吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-18 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-19": {
+      "技术选型-E": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-19 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-19 10:02:00",
+          "dialogue": "我推荐用ElasticSearch，成熟稳定"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-19 10:04:00",
+          "dialogue": "PostgreSQL也不错，生态好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-19 10:06:00",
+          "dialogue": "ElasticSearch团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-19 10:08:00",
+          "dialogue": "好，那就定ElasticSearch吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-19 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-20": {
+      "技术选型-F": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-20 10:02:00",
+          "dialogue": "我推荐用PostgreSQL，成熟稳定"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-20 10:04:00",
+          "dialogue": "MySQL也不错，生态好"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-20 10:06:00",
+          "dialogue": "PostgreSQL团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:08:00",
+          "dialogue": "好，那就定PostgreSQL吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-20 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-21": {
+      "技术选型-G": [
+        {
+          "speaker": "陈七",
+          "time": "2025-01-21 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-21 10:02:00",
+          "dialogue": "我推荐用MySQL，成熟稳定"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-21 10:04:00",
+          "dialogue": "MongoDB也不错，生态好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-21 10:06:00",
+          "dialogue": "MySQL团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-21 10:08:00",
+          "dialogue": "好，那就定MySQL吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-21 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-22": {
+      "技术选型-H": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-22 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-22 10:02:00",
+          "dialogue": "我推荐用MongoDB，成熟稳定"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-22 10:04:00",
+          "dialogue": "Redis也不错，生态好"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-22 10:06:00",
+          "dialogue": "MongoDB团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-22 10:08:00",
+          "dialogue": "好，那就定MongoDB吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-22 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-23": {
+      "技术选型-I": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-23 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-23 10:02:00",
+          "dialogue": "我推荐用Redis，成熟稳定"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-23 10:04:00",
+          "dialogue": "ElasticSearch也不错，生态好"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-23 10:06:00",
+          "dialogue": "Redis团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-23 10:08:00",
+          "dialogue": "好，那就定Redis吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-23 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-24": {
+      "技术选型-J": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-24 10:00:00",
+          "dialogue": "数据库选型，大家有什么建议？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:02:00",
+          "dialogue": "我推荐用ElasticSearch，成熟稳定"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-24 10:04:00",
+          "dialogue": "PostgreSQL也不错，生态好"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:06:00",
+          "dialogue": "ElasticSearch团队经验丰富，维护成本低"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-24 10:08:00",
+          "dialogue": "好，那就定ElasticSearch吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-24 10:10:00",
+          "dialogue": "同意"
+        }
+      ]
+    },
+    "2025-01-25": {
+      "技术选型-K": [
+        {
+          "speaker": "王五",
+          "time": "2025-01-25 10:00:00",
+          "dialogue": "候选方案：MongoDB、PostgreSQL、Redis"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-25 10:02:00",
+          "dialogue": "MongoDB最符合我们需求"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-25 10:04:00",
+          "dialogue": "支持MongoDB"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-25 10:06:00",
+          "dialogue": "那就选MongoDB"
+        }
+      ]
+    },
+    "2025-01-26": {
+      "技术选型-L": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-26 10:00:00",
+          "dialogue": "候选方案：MongoDB、ElasticSearch、PostgreSQL"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-26 10:02:00",
+          "dialogue": "MongoDB最符合我们需求"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-26 10:04:00",
+          "dialogue": "支持MongoDB"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-26 10:06:00",
+          "dialogue": "那就选MongoDB"
+        }
+      ]
+    },
+    "2025-01-27": {
+      "技术选型-M": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-27 10:00:00",
+          "dialogue": "候选方案：PostgreSQL、MongoDB、Redis"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-27 10:02:00",
+          "dialogue": "PostgreSQL最符合我们需求"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-27 10:04:00",
+          "dialogue": "支持PostgreSQL"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-27 10:06:00",
+          "dialogue": "那就选PostgreSQL"
+        }
+      ]
+    },
+    "2025-01-28": {
+      "技术选型-N": [
+        {
+          "speaker": "陈七",
+          "time": "2025-01-28 10:00:00",
+          "dialogue": "候选方案：MySQL、PostgreSQL、Redis"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-28 10:02:00",
+          "dialogue": "MySQL最符合我们需求"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-28 10:04:00",
+          "dialogue": "支持MySQL"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-28 10:06:00",
+          "dialogue": "那就选MySQL"
+        }
+      ]
+    },
+    "2025-02-01": {
+      "技术选型-O": [
+        {
+          "speaker": "李四",
+          "time": "2025-02-01 10:00:00",
+          "dialogue": "候选方案：MySQL、PostgreSQL、ElasticSearch"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-02-01 10:02:00",
+          "dialogue": "MySQL最符合我们需求"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-02-01 10:04:00",
+          "dialogue": "支持MySQL"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-02-01 10:06:00",
+          "dialogue": "那就选MySQL"
+        }
+      ]
+    },
+    "2025-02-02": {
+      "技术选型-P": [
+        {
+          "speaker": "王五",
+          "time": "2025-02-02 10:00:00",
+          "dialogue": "这次我们用PostgreSQL吧"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-02-02 10:02:00",
+          "dialogue": "可以"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-02-02 10:04:00",
+          "dialogue": "就这么定了，用PostgreSQL"
+        }
+      ]
+    },
+    "2025-02-03": {
+      "技术选型-Q": [
+        {
+          "speaker": "王五",
+          "time": "2025-02-03 10:00:00",
+          "dialogue": "这次我们用MySQL吧"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-02-03 10:02:00",
+          "dialogue": "可以"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-02-03 10:04:00",
+          "dialogue": "就这么定了，用MySQL"
+        }
+      ]
+    },
+    "2025-02-04": {
+      "技术选型-R": [
+        {
+          "speaker": "王五",
+          "time": "2025-02-04 10:00:00",
+          "dialogue": "这次我们用MongoDB吧"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-02-04 10:02:00",
+          "dialogue": "可以"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-02-04 10:04:00",
+          "dialogue": "就这么定了，用MongoDB"
+        }
+      ]
+    },
+    "2025-02-05": {
+      "技术选型-S": [
+        {
+          "speaker": "王五",
+          "time": "2025-02-05 10:00:00",
+          "dialogue": "这次我们用Redis吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-02-05 10:02:00",
+          "dialogue": "可以"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-02-05 10:04:00",
+          "dialogue": "就这么定了，用Redis"
+        }
+      ]
+    },
+    "2025-02-06": {
+      "技术选型-T": [
+        {
+          "speaker": "李四",
+          "time": "2025-02-06 10:00:00",
+          "dialogue": "这次我们用ElasticSearch吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-02-06 10:02:00",
+          "dialogue": "可以"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-02-06 10:04:00",
+          "dialogue": "就这么定了，用ElasticSearch"
+        }
+      ]
+    }
+  }
+}

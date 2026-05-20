@@ -1,0 +1,144 @@
+{
+  "qars": [
+    {
+      "id": "de_12_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_005_content",
+      "Q": "决策内容是什么？",
+      "A": "A",
+      "options": {
+        "A": "选择了具体方案",
+        "B": "没有明确方案"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_12_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_006_content",
+      "Q": "决策内容是什么？",
+      "A": "A",
+      "options": {
+        "A": "选择了具体方案",
+        "B": "没有明确方案"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_12_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_007_content",
+      "Q": "决策内容是什么？",
+      "A": "A",
+      "options": {
+        "A": "选择了具体方案",
+        "B": "没有明确方案"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_12_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_12_008_content",
+      "Q": "决策内容是什么？",
+      "A": "A",
+      "options": {
+        "A": "选择了具体方案",
+        "B": "没有明确方案"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_12_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否"
+      },
+      "dimension": "detection"
+    }
+  ]
+}

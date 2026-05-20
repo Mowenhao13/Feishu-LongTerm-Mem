@@ -1,0 +1,344 @@
+{
+  "dialogues": {
+    "2025-01-15": {
+      "冲突决策-A": [
+        {
+          "speaker": "王五",
+          "time": "2025-01-15 10:00:00",
+          "dialogue": "用MySQL吧"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-15 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-15 10:04:00",
+          "dialogue": "等等，还是用PostgreSQL吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-15 10:06:00",
+          "dialogue": "为什么换PostgreSQL？"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-15 10:08:00",
+          "dialogue": "PostgreSQL更适合我们的场景"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-15 10:10:00",
+          "dialogue": "那就PostgreSQL"
+        }
+      ]
+    },
+    "2025-01-16": {
+      "冲突决策-B": [
+        {
+          "speaker": "王五",
+          "time": "2025-01-16 10:00:00",
+          "dialogue": "用MySQL吧"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-16 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-16 10:04:00",
+          "dialogue": "等等，还是用PostgreSQL吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-16 10:06:00",
+          "dialogue": "为什么换PostgreSQL？"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-16 10:08:00",
+          "dialogue": "PostgreSQL更适合我们的场景"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-16 10:10:00",
+          "dialogue": "那就PostgreSQL"
+        }
+      ]
+    },
+    "2025-01-17": {
+      "冲突决策-C": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-17 10:00:00",
+          "dialogue": "用React吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-17 10:04:00",
+          "dialogue": "等等，还是用Vue吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-17 10:06:00",
+          "dialogue": "为什么换Vue？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-17 10:08:00",
+          "dialogue": "Vue更适合我们的场景"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-17 10:10:00",
+          "dialogue": "那就Vue"
+        }
+      ]
+    },
+    "2025-01-18": {
+      "冲突决策-D": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-18 10:00:00",
+          "dialogue": "用React吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-18 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-18 10:04:00",
+          "dialogue": "等等，还是用Vue吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-18 10:06:00",
+          "dialogue": "为什么换Vue？"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-18 10:08:00",
+          "dialogue": "Vue更适合我们的场景"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-18 10:10:00",
+          "dialogue": "那就Vue"
+        }
+      ]
+    },
+    "2025-01-19": {
+      "冲突决策-E": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-19 10:00:00",
+          "dialogue": "用微服务吧"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-19 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-19 10:04:00",
+          "dialogue": "等等，还是用单体架构吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-19 10:06:00",
+          "dialogue": "为什么换单体架构？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-19 10:08:00",
+          "dialogue": "单体架构更适合我们的场景"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-19 10:10:00",
+          "dialogue": "那就单体架构"
+        }
+      ]
+    },
+    "2025-01-20": {
+      "冲突决策-F": [
+        {
+          "speaker": "李四",
+          "time": "2025-01-20 10:00:00",
+          "dialogue": "用微服务吧"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-20 10:04:00",
+          "dialogue": "等等，还是用单体架构吧"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-20 10:06:00",
+          "dialogue": "为什么换单体架构？"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-20 10:08:00",
+          "dialogue": "单体架构更适合我们的场景"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-20 10:10:00",
+          "dialogue": "那就单体架构"
+        }
+      ]
+    },
+    "2025-01-21": {
+      "冲突决策-G": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-21 10:00:00",
+          "dialogue": "用timeout=30s吧"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-21 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-21 10:04:00",
+          "dialogue": "等等，还是用timeout=60s吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-21 10:06:00",
+          "dialogue": "为什么换timeout=60s？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-21 10:08:00",
+          "dialogue": "timeout=60s更适合我们的场景"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-21 10:10:00",
+          "dialogue": "那就timeout=60s"
+        }
+      ]
+    },
+    "2025-01-22": {
+      "冲突决策-H": [
+        {
+          "speaker": "张三",
+          "time": "2025-01-22 10:00:00",
+          "dialogue": "用timeout=30s吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-22 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-22 10:04:00",
+          "dialogue": "等等，还是用timeout=60s吧"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-22 10:06:00",
+          "dialogue": "为什么换timeout=60s？"
+        },
+        {
+          "speaker": "张三",
+          "time": "2025-01-22 10:08:00",
+          "dialogue": "timeout=60s更适合我们的场景"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-22 10:10:00",
+          "dialogue": "那就timeout=60s"
+        }
+      ]
+    },
+    "2025-01-23": {
+      "冲突决策-I": [
+        {
+          "speaker": "陈七",
+          "time": "2025-01-23 10:00:00",
+          "dialogue": "用Kubernetes吧"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-23 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-23 10:04:00",
+          "dialogue": "等等，还是用Docker Compose吧"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-23 10:06:00",
+          "dialogue": "为什么换Docker Compose？"
+        },
+        {
+          "speaker": "陈七",
+          "time": "2025-01-23 10:08:00",
+          "dialogue": "Docker Compose更适合我们的场景"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-23 10:10:00",
+          "dialogue": "那就Docker Compose"
+        }
+      ]
+    },
+    "2025-01-24": {
+      "冲突决策-J": [
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:00:00",
+          "dialogue": "用Kubernetes吧"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-24 10:02:00",
+          "dialogue": "好"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:04:00",
+          "dialogue": "等等，还是用Docker Compose吧"
+        },
+        {
+          "speaker": "王五",
+          "time": "2025-01-24 10:06:00",
+          "dialogue": "为什么换Docker Compose？"
+        },
+        {
+          "speaker": "赵六",
+          "time": "2025-01-24 10:08:00",
+          "dialogue": "Docker Compose更适合我们的场景"
+        },
+        {
+          "speaker": "李四",
+          "time": "2025-01-24 10:10:00",
+          "dialogue": "那就Docker Compose"
+        }
+      ]
+    }
+  }
+}

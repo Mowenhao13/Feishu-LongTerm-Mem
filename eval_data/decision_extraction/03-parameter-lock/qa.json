@@ -1,0 +1,664 @@
+{
+  "qars": [
+    {
+      "id": "de_03_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_000_content",
+      "Q": "索引分片数最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "128",
+        "B": "shard_count=256",
+        "C": "512",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_000_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "张三",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_000_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "张三",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_000_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_000_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_001_content",
+      "Q": "超时时间最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "15s",
+        "B": "timeout=30s",
+        "C": "60s",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_001_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_001_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_001_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_001_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_002_content",
+      "Q": "并发限制最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "50",
+        "B": "max_connections=100",
+        "C": "200",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_002_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "陈七",
+        "B": "王五",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_002_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "王五",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_002_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_002_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_003_content",
+      "Q": "缓存过期时间最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "1800s",
+        "B": "cache_ttl=3600s",
+        "C": "7200s",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_003_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_003_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_003_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_003_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_004_content",
+      "Q": "日志级别最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "DEBUG",
+        "B": "log_level=INFO",
+        "C": "WARN",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_004_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_004_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_004_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_004_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_005_content",
+      "Q": "部署副本数最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "1",
+        "B": "replicas=3",
+        "C": "5",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_005_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "王五",
+        "B": "张三",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_005_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "王五",
+        "B": "张三",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_005_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_005_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_006_content",
+      "Q": "内存限制最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "2GB",
+        "B": "memory_limit=4GB",
+        "C": "8GB",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_006_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_006_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_006_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_006_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_007_content",
+      "Q": "端口配置最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "3000",
+        "B": "port=8080",
+        "C": "9090",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_007_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "李四",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_007_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "李四",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_007_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_007_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_008_content",
+      "Q": "重试次数最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "1",
+        "B": "max_retries=3",
+        "C": "5",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_008_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_008_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_008_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_008_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_03_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，参数已锁定",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_03_009_content",
+      "Q": "批处理大小最终设定为？",
+      "A": "B",
+      "options": {
+        "A": "500",
+        "B": "batch_size=1000",
+        "C": "2000",
+        "D": "暂不决定"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_03_009_proposer",
+      "Q": "参数设置是谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_03_009_executor",
+      "Q": "这个配置由谁执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_03_009_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_03_009_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "pending_confirmation"
+      },
+      "dimension": "status"
+    }
+  ]
+}

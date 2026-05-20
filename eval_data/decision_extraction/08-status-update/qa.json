@@ -1,0 +1,154 @@
+{
+  "qars": [
+    {
+      "id": "de_08_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_010_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_011_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_012_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_013_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_08_014_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是状态更新"
+      },
+      "dimension": "detection"
+    }
+  ]
+}
