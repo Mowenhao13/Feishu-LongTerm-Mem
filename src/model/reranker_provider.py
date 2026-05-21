@@ -15,12 +15,17 @@ import math
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class RerankerProvider:
-    def __init__(self, base_url: str, model_name: str, timeout: int = 120, max_retries: int = 10):
-        self.base_url = base_url
-        self.model_name = model_name
+    def __init__(self, base_url: str = None, model_name: str = None, timeout: int = 120, max_retries: int = 10):
+        self.base_url = base_url or os.getenv("RERANKER_BASE_URL", "http://0.0.0.0:11000")
+        self.model_name = model_name or os.getenv("RERANKER_MODEL_NAME", "Qwen3-Reranker-4B")
+        self.api_key = os.getenv("RERANKER_API_KEY", "")
         self.timeout = timeout
         self.max_retries = max_retries
 
@@ -61,6 +66,9 @@ class RerankerProvider:
         last_exception = None
         for attempt in range(self.max_retries):
             try:
+                headers = {}
+                if self.api_key:
+                    headers["Authorization"] = f"Bearer {self.api_key}"
                 response = self.session.post(
                     completions_url,
                     json={
@@ -70,7 +78,8 @@ class RerankerProvider:
                         "logprobs": 20,  # Official uses 20
                         "temperature": 0,
                     },
-                    timeout=self.timeout
+                    timeout=self.timeout,
+                    headers=headers
                 )
                 response.raise_for_status()
                 result = response.json()

@@ -4,11 +4,16 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import numpy as np
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class EmbeddingProvider:
-    def __init__(self, base_url: str, model_name: str, timeout: int = 120, max_retries: int = 5):
-        self.base_url = base_url
-        self.model_name = model_name
+    def __init__(self, base_url: str = None, model_name: str = None, timeout: int = 120, max_retries: int = 5):
+        self.base_url = base_url or os.getenv("EMBEDDING_BASE_URL", "http://0.0.0.0:11000/v1/embeddings")
+        self.model_name = model_name or os.getenv("EMBEDDING_MODEL_NAME", "Qwen3-Embedding-4B")
+        self.api_key = os.getenv("EMBEDDING_API_KEY", "")
         self.timeout = timeout
         self.max_retries = max_retries
         
@@ -59,10 +64,14 @@ class EmbeddingProvider:
         last_exception = None
         for attempt in range(self.max_retries):
             try:
+                headers = {}
+                if self.api_key:
+                    headers["Authorization"] = f"Bearer {self.api_key}"
                 response = self.session.post(
                     self.base_url, 
                     json={"input": texts, "model": self.model_name},
-                    timeout=self.timeout
+                    timeout=self.timeout,
+                    headers=headers
                 )
                 response.raise_for_status()
                 result = response.json()
