@@ -2,17 +2,17 @@
 
 ## 评估结果
 
-### 决策提取评估（2026-05-20）
+### 决策提取评估（Deepseek-v4-flash)
 
-| 场景 | 基准准确率 | 优化后准确率 | 变化 | 状态 |
-|------|-----------|------------|-----|------|
-| 01-technical-selection | 66.7% | 88.3% | ▲ +21.7pp | ✅ 达标 |
-| 02-task-assignment | 78.9% | 94.4% | ▲ +15.5pp | ✅ 达标 |
-| 03-parameter-lock | 60.0% | 88.3% | ▲ +28.3pp | ✅ 达标 |
-| 05-conflict-decisions | 78.6% | 97.1% | ▲ +18.5pp | ✅ 达标 |
-| **整体（优化场景）** | **71.1%** | **92.1%** | **▲ +21.0pp** | 🎉 |
+| 场景 | 基准准确率 |
+|------|-----------|
+| 01-technical-selection | 88.3% | 
+| 02-task-assignment | 94.4% |
+| 03-parameter-lock | 88.3% | 
+| 05-conflict-decisions | 97.1% | 
+| **整体** | **92.1%** |
 
-### 按维度准确率（优化后）
+### 维度准确率
 
 | 维度 | 准确率 | 说明 |
 |------|-------|------|
@@ -70,32 +70,28 @@ data/
 #### 运行完整评估
 
 ```bash
-cd /Users/halllo/projects/local/feishu-mem
 # 不带存储
-PYTHONPATH=/Users/halllo/projects/local/feishu-mem .venv/bin/python3 -c "
-from src.llm.client import LLMClient
-from src.eval.evaluator import run_extraction_eval
-client = LLMClient()
-report = run_extraction_eval(client, scenarios=['02-task-assignment'])
-print(report.to_dict())
-"
+cd /path/to/Feishu-LongTerm-Mem
+source .venv/bin/activate
+python ./scripts/eval_nostorage.py
 
 # 带存储
-PYTHONPATH=/Users/halllo/projects/local/feishu-mem .venv/bin/python3 -c "
-from src.llm.client import LLMClient
-from src.eval.evaluator import run_extraction_eval
-client = LLMClient()
-report = run_extraction_eval(client, enable_storage=True)
-print(report.to_dict())
-"
+cd /path/to/Feishu-LongTerm-Mem
+source .venv/bin/activate
+python ./scripts/eval_nostorage.py
+
 ```
 
 #### 运行测试
 
 ```bash
 # 所有测试
-PYTHONPATH=/Users/halllo/projects/local/feishu-mem .venv/bin/python3 -m pytest
+cd /path/to/Feishu-LongTerm-Mem
+source .venv/bin/activate
+python -m pytest
 
 # 特定测试
-PYTHONPATH=/Users/halllo/projects/local/feishu-mem .venv/bin/python3 -m pytest tests/test_eval_extraction.py -v
+cd /path/to/Feishu-LongTerm-Mem
+source .venv/bin/activate
+python -m pytest tests/test_eval_extraction.py -v
 ```
