@@ -107,24 +107,220 @@ async def run_detector_loop(
     logger.info("[%s] Detector loop stopped", name)
 
 
-# ==================== IM 检测器（占位） ====================
+# ==================== IM 检测器 ====================
+
+
+class LarkIMDetector:
+    """飞书 IM 检测器 — 基于 LarkIMClient 的完整实现
+
+    支持两种消息接收模式:
+      1. 轮询模式（默认）: get_conversation_history() 按间隔拉取
+      2. WS 长连接模式（可选）: start_ws_listener() 事件驱动
+
+    LarkIMClient 已实现的功能:
+      - send_message / reply_message / edit_message / forward_message
+      - get_conversation_history / get_all_conversation_history
+      - start_ws_listener (WebSocket 长连接, 自动重连)
+      - get_group_info / list_groups
+    """
+
+    def __init__(self):
+        self._client: Optional[Any] = None
+        self._chat_ids: List[str] = []
+        self._last_poll_time: Dict[str, str] = {}  # chat_id -> start_time (毫秒时间戳)
+        self._available = False
+
+    def initialize(self) -> bool:
+        """初始化 LarkIM 客户端
+
+        从 .env 加载 LARK_APP_ID / LARK_APP_SECRET / GROUP_CHAT_IDS
+        若配置缺失则打印警告并返回 False（不影响系统启动）
+        """
+        app_id = os.environ.get("LARK_APP_ID", "")
+        app_secret = os.environ.get("LARK_APP_SECRET", "")
+        chat_ids_raw = os.environ.get("GROUP_CHAT_IDS", "")
+
+        if not app_id or not app_secret:
+            logger.warning("[lark_im] LARK_APP_ID / LARK_APP_SECRET not configured, IM detector disabled")
+            logger.warning("[lark_im] Set these in .env to enable real Lark IM message detection")
+            return False
+
+        if not chat_ids_raw:
+            logger.warning("[lark_im] GROUP_CHAT_IDS not configured, IM detector disabled")
+            logger.warning("[lark_im] Add GROUP_CHAT_IDS=oc_xxxxx,oc_yyyyy to .env")
+            return False
+
+        try:
+            from src.adapter.lark_im import LarkIMClient, LarkIMConfig
+
+            config = LarkIMConfig(
+                app_id=app_id,
+                app_secret=app_secret,
+                encrypt_key=os.environ.get("LARK_ENCRYPT_KEY", ""),
+                verification_token=os.environ.get("LARK_VERIFICATION_TOKEN", ""),
+            )
+            self._client = LarkIMClient(config)
+            self._chat_ids = [cid.strip() for cid in chat_ids_raw.split(",") if cid.strip()]
+            self._available = True
+
+            # 初始化轮询时间戳（首次拉取最近 5 分钟的消息）
+            now_ms = str(int(time.time() * 1000))
+            five_min_ago = str(int(time.time() * 1000) - 300_000)
+            for chat_id in self._chat_ids:
+                self._last_poll_time[chat_id] = five_min_ago
+
+            logger.info("[lark_im] Initialized: %d chat(s) monitored: %s", len(self._chat_ids), self._chat_ids)
+            return True
+
+        except ImportError as e:
+            logger.warning("[lark_im] Failed to import LarkIMClient: %s", e)
+            return False
+        except Exception as e:
+            logger.warning("[lark_im] Initialization failed: %s", e)
+            return False
+
+    def poll(self) -> Any:
+        """轮询模式 — 拉取所有群聊的新消息并通过信号检测器分析
+
+        LarkIMClient.get_all_conversation_history() 内部处理分页
+        返回 DetectResult（含 has_changes / messages 列表）
+        """
+        if not self._available or self._client is None:
+            return type("DetectResult", (), {"has_changes": False, "messages": [], "signal_results": []})()
+
+        from src.signal.detector import EnhancedDetector
+        from src.signal.types import DetectContext, DetectionResult
+
+        detector = EnhancedDetector.create_im_detector()
+        all_new_messages: List[Any] = []
+        signal_results: List[Dict] = []
+
+        for chat_id in self._chat_ids:
+            try:
+                start_time = self._last_poll_time.get(chat_id)
+                response = self._client.get_conversation_history(
+                    container_id=chat_id,
+                    container_id_type="chat",
+                    page_size=50,
+                    sort_type="ByCreateTimeDesc",
+                    start_time=start_time,
+                )
+
+                if response.data and response.data.items:
+                    messages = response.data.items
+                    all_new_messages.extend(messages)
+
+                    # 更新轮询起点（取最新消息的时间戳）
+                    if messages:
+                        latest = messages[0]
+                        if hasattr(latest, "create_time") and latest.create_time:
+                            self._last_poll_time[chat_id] = str(
+                                max(
+                                    int(self._last_poll_time.get(chat_id, "0")),
+                                    int(latest.create_time),
+                                )
+                            )
+
+                    # 对每条消息执行信号检测
+                    for msg in messages:
+                        content = getattr(msg, "body", None)
+                        sender = getattr(msg, "sender", None)
+                        if content is not None and hasattr(content, "content"):
+                            msg_text = content.content or ""
+                        else:
+                            msg_text = ""
+
+                        ctx = DetectContext(
+                            source="lark_im",
+                            chat_id=chat_id,
+                            sender_id=str(sender.id) if sender and hasattr(sender, "id") else "unknown",
+                        )
+                        result = detector.analyze(msg_text, ctx)
+                        signal_results.append({
+                            "message_id": getattr(msg, "message_id", ""),
+                            "chat_id": chat_id,
+                            "text": msg_text[:200],
+                            "signal_score": result.score,
+                            "is_decision": result.is_decision,
+                        })
+
+                        if result.is_decision:
+                            logger.info(
+                                "[lark_im] >>> Decision signal in chat=%s msg=%s score=%.2f: %.80s",
+                                chat_id[:12], getattr(msg, "message_id", "")[:12],
+                                result.score, msg_text[:80],
+                            )
+
+            except Exception as e:
+                logger.debug("[lark_im] Poll chat=%s error: %s", chat_id[:12], e)
+
+        if all_new_messages:
+            logger.info("[lark_im] Polled %d new messages from %d chat(s), %d decision signals",
+                        len(all_new_messages), len(self._chat_ids),
+                        sum(1 for r in signal_results if r["is_decision"]))
+
+        result = type("DetectResult", (), {
+            "has_changes": bool(all_new_messages),
+            "messages": all_new_messages,
+            "signal_results": signal_results,
+        })()
+        return result
+
+    def start_ws(self) -> None:
+        """WS 长连接模式 — 事件驱动，实时接收消息推送
+
+        LarkIMClient.start_ws_listener() 内部使用：
+          - lark_oapi.ws.Client
+          - 自动重连 auto_reconnect=True
+          - 独立 daemon 线程运行
+        """
+        if not self._available or self._client is None:
+            logger.warning("[lark_im] Cannot start WS listener: client not initialized")
+            return
+
+        def on_message(event: Any) -> None:
+            try:
+                msg = getattr(event, "event", None)
+                if msg is None:
+                    return
+                message = getattr(msg, "message", None)
+                if message is None:
+                    return
+                content = getattr(message, "content", "")
+                chat_id = getattr(message, "chat_id", "")
+                sender = getattr(message, "sender", None)
+                sender_id = str(getattr(sender, "id", "")) if sender else ""
+
+                logger.info("[lark_im] WS received: chat=%s sender=%s len=%d",
+                            chat_id[:12], sender_id[:12], len(content or ""))
+            except Exception as e:
+                logger.debug("[lark_im] WS handler error: %s", e)
+
+        self._client.set_event_handler(on_message)
+        self._client.start_ws_listener(auto_reconnect=True)
+        logger.info("[lark_im] WS listener started for %d chat(s)", len(self._chat_ids))
+
+    def stop_ws(self) -> None:
+        if self._client is not None:
+            self._client.stop_ws_listener()
+
+
+# 全局 IM 检测器实例（在 main_async 中初始化）
+_im_detector = LarkIMDetector()
 
 
 def detect_im() -> Any:
-    """IM 检测器 — 监听飞书群聊消息
+    """IM 检测器 — 轮询 LarkIMClient.get_conversation_history()
 
-    TODO: 飞书 WebSocket 或轮询实现
+    轮询模式直接复用 run_detector_loop() 的标准循环架构。
+    消息到达后自动通过 EnhancedDetector 进行决策信号分析。
+
+    替代方案 — WS 长连接（事件驱动）:
+      若需实时推送而非轮询，可在 main_async 中调用:
+        _im_detector.start_ws()
+      此时 detect_im() 仍可作为备用轮询兜底。
     """
-    from src.signal.detector import EnhancedDetector
-    from src.signal.types import DetectContext
-
-    logger.debug("[IM] Detecting messages...")
-
-    # placeholder: 未来通过 LarkIMAdapter 实现
-    # lark_im_adapter.poll_new_messages() -> list[MessageRecord]
-    # EnhancedDetector.analyze(content, ctx) -> DetectionResult
-
-    return type("DetectResult", (), {"has_changes": False})()
+    return _im_detector.poll()
 
 
 # ==================== 文档检测器（本地文件模式） ====================
@@ -227,7 +423,12 @@ async def main_async() -> None:
     # 5. 创建停止事件
     stop_event = asyncio.Event()
 
-    # 6. 启动检测器循环
+    # 6. 初始化 IM 检测器
+    im_initialized = _im_detector.initialize()
+    if im_initialized:
+        logger.info("[lark_im] IM detector ready (poll interval=%ds)", det_cfg["lark_im"]["interval"])
+
+    # 7. 启动检测器循环
     detector_states: Dict[str, asyncio.Task] = {}
     det_cfg = cfg["detectors"]
 

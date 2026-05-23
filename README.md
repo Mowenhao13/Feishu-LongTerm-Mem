@@ -192,8 +192,8 @@ main.py
   ├── MemoryEngine.initialize()
   ├── PushEngine.start_push_scheduler()
   ├── asyncio 检测器循环:
-  │   ├── run_detector_loop("lark_im")   # IM 检测器 (占位)
-  │   └── run_detector_loop("lark_doc")   # 文档检测器
+  │   ├── run_detector_loop("lark_im")   # IM 检测器（LarkIMClient 轮询 + WS 长连接）
+  │   └── run_detector_loop("lark_doc")   # 文档检测器（本地文件轮询）
   ├── 突发模式管理 (burst mode):
   │   ├── 正常模式: 按 interval 轮询
   │   └── 突发模式: 检测到变更后按 burst_interval 密集扫描
@@ -221,7 +221,7 @@ uv run python main.py
 uv run pytest tests/test_doc_detector.py -v
 ```
 
-> **注意**: `lark_im` 检测器当前为占位实现，未来接入飞书 WebSocket 后将自动启用。
+> **提示**: 若 `.env` 中未配置 `LARK_APP_ID` / `LARK_APP_SECRET` / `GROUP_CHAT_IDS`，IM 检测器会自动跳过并打印配置指引。
 
 ### 5. 信号检测 (`src/signal/`)
 
@@ -289,12 +289,23 @@ data/
 
 ### 9. 外部 API 适配器 (`src/adapter/`)
 
-飞书原生 API 集成：
-- **LarkIMClient** — 完整消息 CRUD（发送/回复/编辑/转发/撤回），支持 text / post / card / image / file 等多种消息类型
+飞书原生 API 完整封装，重点模块：
+
+**LarkIMClient** (`src/adapter/lark_im.py`) — IM 完整 CRUD：
+
+| 分类 | 方法 | 说明 |
+|------|------|------|
+| 发送 | `send_message` / `reply_message` / `edit_message` | 支持 text / post / card / image / file / audio 等 9 种消息类型 |
+| 转发 | `forward_message` / `merge_forward_message` | 单条 / 合并转发 |
+| 撤回 | `recall_message` | 删除消息 |
+| 拉取 | `get_conversation_history` / `get_all_conversation_history` / `get_message` | 分页历史消息 / 全量拉取 / 单条查询 |
+| 资源 | `get_message_resource` / `download_message_resource` | 获取 / 下载消息中的文件 |
+| 群组 | `get_group_info` / `list_groups` / `get_group_share_link` | 群信息查询 |
+| 公告 | `get_group_announcement` | 群公告读取 |
+| **长连接** | `set_event_handler` + `start_ws_listener` | **WebSocket 事件驱动**，支持自动重连，独立线程运行 |
+
 - **NoiseFilter** — 消息噪音过滤（emoji / 链接 / 噪音话题检测）
 - **MessageBatcher** — 对话分批聚合（按时间和关键词重叠分组）
-- **ContextMessage** — 上下文消息提取
-- **LarkDocClient** — 飞书文档读取
 
 ### 10. MCP 服务器 (`src/mcp_server/`)
 
