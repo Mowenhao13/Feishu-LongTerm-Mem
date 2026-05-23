@@ -11,6 +11,10 @@ DATA_DIR = PROJECT_ROOT / "data"
 RESULTS_DIR = PROJECT_ROOT / "results"
 
 
+def get_storage_path() -> str:
+    return os.environ.get("STORAGE_PATH", str(DATA_DIR))
+
+
 class ModelConfig:
     # ==================== General ====================
     experiment_name: str = os.environ.get("HYPERMEM_EXPERIMENT_NAME", "HyperMem-v3")

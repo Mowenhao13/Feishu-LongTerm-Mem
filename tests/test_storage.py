@@ -274,3 +274,76 @@ class TestGitStorage:
         storage.write_decision(decision)
         storage.archive_project("default")
         assert not (storage.work_dir / "decisions" / "default").exists()
+
+
+class TestStoragePathConfig:
+    def test_get_storage_path_default(self) -> None:
+        from config import get_storage_path
+
+        path = get_storage_path()
+        assert "data" in path
+        assert isinstance(path, str)
+
+    def test_get_storage_path_from_env(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        from config import get_storage_path
+
+        monkeypatch.setenv("STORAGE_PATH", "/tmp/custom-storage")
+        import importlib
+        import config
+        importlib.reload(config)
+        from config import get_storage_path
+
+        path = get_storage_path()
+        assert path == "/tmp/custom-storage"
+
+    def test_gitstorage_uses_config_path(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        import tempfile
+        from storage.git_storage import GitStorage, GitStorageConfig
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            monkeypatch.setenv("STORAGE_PATH", tmpdir)
+            import importlib
+            import config
+            importlib.reload(config)
+
+            gs = GitStorage(GitStorageConfig(work_dir=tmpdir))
+            assert str(gs.work_dir) == str(Path(tmpdir).resolve())
+            assert gs._config.work_dir == tmpdir
+
+    def test_mcp_server_uses_get_storage_path(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            monkeypatch.setenv("STORAGE_PATH", tmpdir)
+            import importlib
+            import config
+            importlib.reload(config)
+
+            from importlib import reload
+            import mcp_server.server as mcp_mod
+            reload(mcp_mod)
+
+            storage = mcp_mod._get_storage()
+            assert str(storage.work_dir) == str(Path(tmpdir).resolve())
+
+    def test_evaluator_uses_config_path(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            monkeypatch.setenv("STORAGE_PATH", tmpdir)
+            import importlib
+            import config
+            importlib.reload(config)
+
+            from importlib import reload
+            import eval.evaluator as eval_mod
+            reload(eval_mod)
+
+            from eval.evaluator import run_extraction_eval
+            from src.llm.client import LLMClient
+
+            client = LLMClient()
+            report = run_extraction_eval(client, scenarios=["07-pure-discussion"], enable_storage=True)
+            assert report.total_stored >= 0

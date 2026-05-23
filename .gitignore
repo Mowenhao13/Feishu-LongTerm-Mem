@@ -35,3 +35,4 @@ eval_reports/
 # Config
 .env
 .DS_Store
+ref/

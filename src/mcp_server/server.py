@@ -4,6 +4,7 @@ from typing import Any, Optional
 
 from mcp.server.fastmcp import FastMCP
 
+from src.config import get_storage_path
 from src.llm.client import LLMClient
 
 mcp = FastMCP(
@@ -13,7 +14,6 @@ mcp = FastMCP(
 
 
 _mcp_llm_client: Optional[LLMClient] = None
-_DEFAULT_STORAGE_PATH = "data"
 _DEFAULT_PROJECT = "feishu-mem"
 
 
@@ -31,7 +31,18 @@ def get_llm_client() -> LLMClient:
 
 def _get_storage() -> Any:
     from src.storage.git_storage import GitStorage, GitStorageConfig
-    return GitStorage(GitStorageConfig(work_dir=_DEFAULT_STORAGE_PATH))
+    return GitStorage(GitStorageConfig(work_dir=get_storage_path()))
+
+
+def _get_memory_graph() -> Any:
+    from src.graph.memory_graph import MemoryGraph
+    graph = MemoryGraph()
+    try:
+        storage = _get_storage()
+        graph.load_from_git(storage, _DEFAULT_PROJECT)
+    except Exception:
+        pass
+    return graph
 
 
 def _get_all_decisions() -> list[dict[str, Any]]:
@@ -66,9 +77,9 @@ def search(query: str, topic: str = "", limit: int = 20) -> str:
 
 @mcp.tool(
     name="decision",
-    description="获取单个决策的详细信息",
+    description="获取单个决策的详细信息，支持推送决策卡片",
 )
-def decision(sdr_id: str, topic: str = "") -> str:
+def decision(sdr_id: str, topic: str = "", push: bool = False) -> str:
     if not topic:
         all_decisions = _get_all_decisions()
         for d in all_decisions:
@@ -84,6 +95,19 @@ def decision(sdr_id: str, topic: str = "") -> str:
     if d is None:
         return f"未找到决策: {sdr_id}"
 
+    if push:
+        try:
+            graph = _get_memory_graph()
+            from src.card.pusher import PushEngine, PushTrigger
+            from src.card.config import CardConfig
+            engine = PushEngine(
+                config=CardConfig.from_env(),
+                memory_graph=graph,
+            )
+            engine.push_decision_card(sdr_id, PushTrigger.MANUAL_QUERY)
+        except Exception as e:
+            return f"推送失败: {e}"
+
     lines = [
         f"## {d.get('sid', 'unknown')}",
         f"- **SDR ID**: {d.get('sid', '')}",
@@ -96,6 +120,8 @@ def decision(sdr_id: str, topic: str = "") -> str:
         lines.append(f"- **全文**: {full[:500]}...")
     elif d.get("summary"):
         lines.append(f"- **全文**: {d['summary']}")
+    if push:
+        lines.append(f"\n✅ 决策卡片已推送")
     return "\n".join(lines)
 
 

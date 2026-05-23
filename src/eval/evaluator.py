@@ -9,6 +9,7 @@ from src.eval import (
     list_extraction_scenarios,
 )
 from src.llm.client import LLMClient
+from src.config import get_storage_path
 from src.storage.git_storage import GitStorage, GitStorageConfig, GitStorageError
 
 
@@ -252,7 +253,7 @@ def run_extraction_eval(
 
     storage: Optional[GitStorage] = None
     if enable_storage:
-        storage = GitStorage(config=GitStorageConfig(work_dir="data"))
+        storage = GitStorage(config=GitStorageConfig(work_dir=get_storage_path()))
 
     llm_client.token_tracker.reset()
     results: list[EvalResult] = []
