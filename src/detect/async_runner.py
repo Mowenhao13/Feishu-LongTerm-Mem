@@ -106,7 +106,7 @@ class AsyncSignalProcessor:
     """
 
     def __init__(self, runner: Optional[AsyncTaskRunner] = None) -> None:
-        from src.signal.detector import EnhancedDetector
+        from src.detect.detector import EnhancedDetector
 
         self._runner = runner or get_global_runner()
         self._detector = EnhancedDetector()
@@ -117,7 +117,7 @@ class AsyncSignalProcessor:
         source: str = "im",
     ) -> dict[str, Any]:
         """Async text processing: detect decision signals."""
-        from src.signal.detector import async_detect
+        from src.detect.detector import async_detect
 
         return await self._runner.run(async_detect(content, source))
 
@@ -126,7 +126,7 @@ class AsyncSignalProcessor:
         items: list[dict[str, str]],
     ) -> list[dict[str, Any]]:
         """Async batch processing."""
-        from src.signal.detector import async_detect
+        from src.detect.detector import async_detect
 
         coros = [async_detect(item.get("content", ""), item.get("source", "im")) for item in items]
         return await self._runner.run_many(coros)

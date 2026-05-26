@@ -161,8 +161,8 @@ class GitCLI:
             return 0
 
     def ls_tree(self, branch: str) -> List[str]:
-        output = self.run("ls-tree", "-r", "--name-only", branch)
-        return [line.strip('" \t\r\n') for line in output.split("\n") if line.strip()]
+        output = self.run("-c", "core.quotepath=false", "ls-tree", "-r", "--name-only", branch)
+        return [line.strip() for line in output.split("\n") if line.strip()]
 
     @staticmethod
     def _parse_grep_output(output: str) -> List[SearchHit]:

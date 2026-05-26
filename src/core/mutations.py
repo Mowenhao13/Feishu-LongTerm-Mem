@@ -25,9 +25,12 @@ class DecisionMutation:
 
     summary: str = ""
     full_text: str = ""
+    title: str = ""
+    rationale: str = ""
     proposer: str = ""
     executor: str = ""
     tags: List[str] = field(default_factory=list)
+    source: str = ""
 
     new_status: str = ""
     old_status: str = ""

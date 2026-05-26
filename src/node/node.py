@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
-from node.types import (
+from src.node.types import (
     AccessStats,
     DecisionStatus,
     FeishuLinks,
@@ -52,53 +52,48 @@ DECISION_ROLE_OPTIONS: List[str] = [
 
 
 class DecisionNode(BaseModel):
-    """Decision node in the memory graph.
+    """Decision node — a structured representation of a team decision.
 
-    Translated from ref/decision/node.go DecisionNode struct.
-    Aligned with structure.py DecisionNode fields (decision_role, confidence, impact_level).
+    Translates ref/decision/node.go DecisionNode.
     """
-    sid: SDRID = Field(..., description="Unique decision SDRID")
 
-    topic_id: str = Field(default="", description="Associated topic ID from the topic memory layer")
-    tags: List[str] = Field(default_factory=list, description="Tags/categories")
+    sid: str = Field(default="", description="Unique SDRID (hash-based)")
+    sdr_type: Optional[str] = Field(default="", description="Type hint for the node")
+    project_id: str = Field(default="", description="Project this decision belongs to")
+    topic_id: str = Field(default="", description="Topic/category within the project")
 
-    summary: str = Field(default="", description="Decision summary (short)")
-    full_text: str = Field(default="", description="Full decision text/content")
+    title: str = Field(default="", description="Short title")
+    summary: str = Field(default="", description="Human-readable summary")
+    full_text: str = Field(default="", description="Full decision prose")
+    rationale: str = Field(default="", description="Reasoning/justification")
+    alternatives: List[str] = Field(default_factory=list, description="Alternatives considered")
+    scope: Optional[str] = Field(default=None, description="Scope of the decision (team-wide, project-wide, etc.)")
 
-    status: DecisionStatus = Field(default=DecisionStatus.PENDING, description="Lifecycle status")
-    decision_role: str = Field(
-        default=DecisionRole.ROLE_DECISION,
-        description="Role of this node: decision/plan/consideration/action",
-    )
-    phase_scope: PhaseScope = Field(default=PhaseScope.POINT, description="Phase scope")
-    impact_level: ImpactLevel = Field(default=ImpactLevel.MINOR, description="Impact level")
-    confidence: float = Field(default=1.0, ge=0.0, le=1.0, description="Confidence score")
-    authority: str = Field(default="", description="Decision authority (who decided)")
-    assignee: str = Field(default="", description="Person responsible for execution")
+    proposer: str = Field(default="", description="Who proposed the decision")
+    authority: str = Field(default="", description="Authority/role who made the decision")
+    assignee: str = Field(default="", description="Who is responsible for execution")
 
-    depends_on: List[str] = Field(default_factory=list, description="SDRIDs this decision depends on")
+    status: DecisionStatus = Field(default=DecisionStatus.PENDING)
+    impact_level: ImpactLevel = Field(default=ImpactLevel.MINOR)
 
-    version: str = Field(default="v1.0", description="Semantic version (e.g. v1.0, v1.1)")
-    version_range: VersionRange = Field(default_factory=VersionRange)
+    version: int = Field(default=1, description="Decision version (incrementing integer)")
+    branch: str = Field(default="", description="Git branch name: decision/{sid}")
+    conflict_status: str = Field(default="", description="Conflict status: ''|active|resolved")
+    conflict_with: str = Field(default="", description="SDRID of the conflicting decision")
 
-    relations: List[Relation] = Field(default_factory=list, description="Outgoing relations")
-    objections: List[Objection] = Field(default_factory=list, description="Associated objections")
-
-    source_type: str = Field(default="", description="Source: im/doc/meeting/comment")
-    source_doc_token: str = Field(default="", description="Source doc token")
-    source_message_id: str = Field(default="", description="Source message ID")
-    source_chat_id: str = Field(default="", description="Source chat ID")
-    source_minute_token: str = Field(default="", description="Source minute token")
-    source_event_id: str = Field(default="", description="Source event ID")
-
+    tags: List[str] = Field(default_factory=list)
+    relations: List[Relation] = Field(default_factory=list)
+    objections: List[Objection] = Field(default_factory=list)
     feishu_links: FeishuLinks = Field(default_factory=FeishuLinks)
-
-    created_at: datetime = Field(default_factory=datetime.now)
-    updated_at: datetime = Field(default_factory=datetime.now)
-    decided_at: Optional[datetime] = Field(default=None)
-
-    extra: Dict[str, Any] = Field(default_factory=dict, description="Extensible extra metadata")
     access_stats: AccessStats = Field(default_factory=AccessStats)
+    version_chain: List[VersionRange] = Field(default_factory=list)
+
+    source: str = Field(default="", description="Source channel: lark_im / doc / meeting / manual")
+    created_at: Optional[datetime] = Field(default=None)
+    updated_at: Optional[datetime] = Field(default=None)
+
+    confidence: float = Field(default=0.8, ge=0.0, le=1.0, description="Extraction confidence from LLM")
+    git_commit_hash: str = Field(default="", description="Last git commit hash")
 
     # ==================== Status helpers ====================
 
@@ -115,33 +110,16 @@ class DecisionNode(BaseModel):
             DecisionStatus.COMPLETED,
         )
 
-    # ==================== Branch version helpers (from node.go) ====================
+    # ==================== Branch version helpers ====================
 
     def branch_version(self) -> str:
-        if not self.version:
-            return "v1.0"
-        return self.version
+        return f"v{self.version}"
 
-    def next_version(self, base: str = "v1.0") -> str:
-        if not self.version:
-            return base
-        parts = self.version.lstrip("v").split(".")
-        try:
-            major = int(parts[0])
-            minor = int(parts[1]) if len(parts) > 1 else 0
-            return f"v{major}.{minor + 1}"
-        except (ValueError, IndexError):
-            return base
+    def next_version(self) -> int:
+        return self.version + 1
 
-    def next_major_version(self) -> str:
-        if not self.version:
-            return "v1.0"
-        parts = self.version.lstrip("v").split(".")
-        try:
-            major = int(parts[0])
-            return f"v{major + 1}.0"
-        except (ValueError, IndexError):
-            return "v1.0"
+    def next_major_version(self) -> int:
+        return self.version + 1
 
     # ==================== Conflict helpers (from node.go) ====================
 

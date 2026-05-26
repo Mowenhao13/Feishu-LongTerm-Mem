@@ -17,14 +17,31 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 import os
 import signal
 import sys
 import time
 import traceback
 from datetime import datetime
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+# Add project root and src/ to sys.path for all import styles
+PROJECT_ROOT = Path(__file__).resolve().parent
+SRC_DIR = PROJECT_ROOT / "src"
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+from dotenv import load_dotenv
+load_dotenv()
+
+# Pre-import lark_oapi WS client before asyncio.run() so it creates
+# its own event loop instead of grabbing the running one.
+import lark_oapi.ws.client as _lark_ws_client  # noqa: F401
 
 from src.card.config import CardConfig
 from src.card.pusher import PushEngine
@@ -35,6 +52,24 @@ from src.storage.git_storage import GitStorage, GitStorageConfig
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+# ==================== 文件日志配置 ====================
+LOGS_DIR = PROJECT_ROOT / "logs"
+LOGS_DIR.mkdir(exist_ok=True)
+_log_file = LOGS_DIR / f"mem_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+_file_handler = RotatingFileHandler(
+    _log_file,
+    maxBytes=50 * 1024 * 1024,  # 50MB
+    backupCount=5,
+    encoding="utf-8",
+)
+_file_handler.setLevel(logging.INFO)
+_file_handler.setFormatter(logging.Formatter(
+    "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+))
+logging.getLogger().addHandler(_file_handler)
+logger.info("File logging to %s", _log_file)
 
 
 # ==================== 状态管理 ====================
@@ -107,6 +142,37 @@ async def run_detector_loop(
     logger.info("[%s] Detector loop stopped", name)
 
 
+async def run_episode_check_loop(
+    episode_manager: Any,
+    engine: Optional[Any],
+    check_interval: float = 10.0,
+) -> None:
+    """后台检查所有 episode buffer 的超时边界
+
+    两种模式下都运行：
+      - WS 模式：WS 消息实时累积 + 本循环处理超时边界
+      - 轮询模式：poll() 拉取消息累积 + 本循环处理超时边界
+    """
+    logger.info("[Episode] Check loop started (interval=%.0fs)", check_interval)
+    while True:
+        try:
+            now = time.time()
+            stats = episode_manager.stats()
+            if stats.get("buffers"):
+                logger.debug("[Episode] Pre-check: %s", stats)
+            for episode in episode_manager.check_all_timeouts(now):
+                if engine is not None:
+                    logger.info("[Episode] >>> Timeout closed episode=%s (msgs=%d, dur=%.0fs), dispatching to engine",
+                                episode.id[:12], episode.message_count, episode.duration)
+                    await engine._process_episode(episode, episode_manager)
+
+        except asyncio.CancelledError:
+            break
+        except Exception as e:
+            logger.error("[Episode] Check loop error: %s\n%s", e, traceback.format_exc())
+        await asyncio.sleep(check_interval)
+
+
 # ==================== IM 检测器 ====================
 
 
@@ -127,8 +193,11 @@ class LarkIMDetector:
     def __init__(self):
         self._client: Optional[Any] = None
         self._chat_ids: List[str] = []
-        self._last_poll_time: Dict[str, str] = {}  # chat_id -> start_time (毫秒时间戳)
+        self._last_poll_time: Dict[str, str] = {}  # chat_id -> end_time (毫秒时间戳)
         self._available = False
+        self._engine: Optional[Any] = None  # MemoryEngine 引用（WS 和轮询模式共用）
+        self._loop: Optional[asyncio.AbstractEventLoop] = None
+        self._episode_manager: Optional[Any] = None  # 两种模式共用
 
     def initialize(self) -> bool:
         """初始化 LarkIM 客户端
@@ -163,11 +232,20 @@ class LarkIMDetector:
             self._chat_ids = [cid.strip() for cid in chat_ids_raw.split(",") if cid.strip()]
             self._available = True
 
-            # 初始化轮询时间戳（首次拉取最近 5 分钟的消息）
+            from src.detect.episode import EpisodeManager
+            self._episode_manager = EpisodeManager()
+            logger.info("[lark_im] EpisodeManager created: gap=%.0fs max_msgs=%d max_dur=%.0fs flush=%ds semantic=%.2f reopen=%.2f",
+                        self._episode_manager._time_gap,
+                        self._episode_manager._max_messages,
+                        self._episode_manager._max_duration,
+                        self._episode_manager._idle_flush,
+                        self._episode_manager._semantic_threshold,
+                        self._episode_manager._reopen_threshold)
+
+            # 初始化轮询时间戳（记录最新已拉取的时间作为游标）
             now_ms = str(int(time.time() * 1000))
-            five_min_ago = str(int(time.time() * 1000) - 300_000)
             for chat_id in self._chat_ids:
-                self._last_poll_time[chat_id] = five_min_ago
+                self._last_poll_time[chat_id] = now_ms
 
             logger.info("[lark_im] Initialized: %d chat(s) monitored: %s", len(self._chat_ids), self._chat_ids)
             return True
@@ -188,22 +266,18 @@ class LarkIMDetector:
         if not self._available or self._client is None:
             return type("DetectResult", (), {"has_changes": False, "messages": [], "signal_results": []})()
 
-        from src.signal.detector import EnhancedDetector
-        from src.signal.types import DetectContext, DetectionResult
-
-        detector = EnhancedDetector.create_im_detector()
         all_new_messages: List[Any] = []
         signal_results: List[Dict] = []
 
         for chat_id in self._chat_ids:
             try:
                 start_time = self._last_poll_time.get(chat_id)
+                # 获取在该时间之前的消息（ByCreateTimeDesc 返回最新的消息，end_time 作为上限）
                 response = self._client.get_conversation_history(
                     container_id=chat_id,
                     container_id_type="chat",
                     page_size=50,
                     sort_type="ByCreateTimeDesc",
-                    start_time=start_time,
                 )
 
                 if response.data and response.data.items:
@@ -221,7 +295,7 @@ class LarkIMDetector:
                                 )
                             )
 
-                    # 对每条消息执行信号检测
+                    # 将每条消息送入 EpisodeBuffer
                     for msg in messages:
                         content = getattr(msg, "body", None)
                         sender = getattr(msg, "sender", None)
@@ -230,26 +304,38 @@ class LarkIMDetector:
                         else:
                             msg_text = ""
 
-                        ctx = DetectContext(
-                            source="lark_im",
-                            chat_id=chat_id,
-                            sender_id=str(sender.id) if sender and hasattr(sender, "id") else "unknown",
-                        )
-                        result = detector.analyze(msg_text, ctx)
+                        sender_id = str(sender.id) if sender and hasattr(sender, "id") else "unknown"
+                        msg_id = getattr(msg, "message_id", "") or ""
+
                         signal_results.append({
-                            "message_id": getattr(msg, "message_id", ""),
+                            "message_id": msg_id,
                             "chat_id": chat_id,
-                            "text": msg_text[:200],
-                            "signal_score": result.score,
-                            "is_decision": result.is_decision,
                         })
 
-                        if result.is_decision:
-                            logger.info(
-                                "[lark_im] >>> Decision signal in chat=%s msg=%s score=%.2f: %.80s",
-                                chat_id[:12], getattr(msg, "message_id", "")[:12],
-                                result.score, msg_text[:80],
+                        if self._episode_manager is not None and msg_text:
+                            create_time_str = getattr(msg, "create_time", None)
+                            try:
+                                msg_ts = int(create_time_str) / 1000.0 if create_time_str else time.time()
+                            except (ValueError, TypeError):
+                                msg_ts = time.time()
+
+                            from src.detect.episode import EpisodeMessage
+                            ep_msg = EpisodeMessage(
+                                chat_id=chat_id,
+                                sender_id=sender_id,
+                                content=msg_text,
+                                timestamp=msg_ts,
+                                message_id=msg_id,
                             )
+                            closed_episode = self._episode_manager.add_message(ep_msg)
+                            if closed_episode is not None:
+                                logger.info("[lark_im] Episode closed in poll: id=%s chat=%s msgs=%d, dispatching to LLM",
+                                            closed_episode.id[:12], chat_id[:12], closed_episode.message_count)
+                                if self._engine is not None and self._loop is not None:
+                                    asyncio.run_coroutine_threadsafe(
+                                        self._engine._process_episode(closed_episode, self._episode_manager),
+                                        self._loop,
+                                    )
 
             except Exception as e:
                 logger.debug("[lark_im] Poll chat=%s error: %s", chat_id[:12], e)
@@ -266,35 +352,66 @@ class LarkIMDetector:
         })()
         return result
 
-    def start_ws(self) -> None:
+    def start_ws(self, engine: Optional[Any] = None, loop: Optional[asyncio.AbstractEventLoop] = None) -> None:
         """WS 长连接模式 — 事件驱动，实时接收消息推送
 
         LarkIMClient.start_ws_listener() 内部使用：
           - lark_oapi.ws.Client
           - 自动重连 auto_reconnect=True
           - 独立 daemon 线程运行
+
+        参数:
+          engine: 若传入 MemoryEngine，WS 收到决策信号后自动触发决策提取
+          loop:   主事件循环引用（engine 传入时需要），用于 run_coroutine_threadsafe
         """
         if not self._available or self._client is None:
             logger.warning("[lark_im] Cannot start WS listener: client not initialized")
             return
 
+        self._engine = engine
+        self._loop = loop
+
+        from src.detect.episode import EpisodeMessage
+
         def on_message(event: Any) -> None:
             try:
+                logger.info("[lark_im] WS >>> on_message called, event type=%s", type(event).__name__)
+
                 msg = getattr(event, "event", None)
                 if msg is None:
+                    logger.warning("[lark_im] WS event has no 'event' attribute, raw=%s", str(event)[:200])
                     return
                 message = getattr(msg, "message", None)
                 if message is None:
+                    logger.warning("[lark_im] WS event has no 'message', attrs=%s", [a for a in dir(msg) if not a.startswith('_')][:10])
                     return
                 content = getattr(message, "content", "")
                 chat_id = getattr(message, "chat_id", "")
                 sender = getattr(message, "sender", None)
-                sender_id = str(getattr(sender, "id", "")) if sender else ""
+                sender_id = str(getattr(sender, "sender_id", "") or getattr(sender, "id", "")) if sender else ""
 
-                logger.info("[lark_im] WS received: chat=%s sender=%s len=%d",
-                            chat_id[:12], sender_id[:12], len(content or ""))
+                logger.info("[lark_im] WS received: chat=%s sender=%s len=%d content=%.60s",
+                            chat_id[:12], sender_id[:12], len(content or ""), content[:60])
+
+                if self._engine is not None and self._loop is not None and content and self._episode_manager is not None:
+                    msg_obj = EpisodeMessage(
+                        chat_id=chat_id,
+                        sender_id=sender_id,
+                        content=content,
+                        timestamp=time.time(),
+                        message_id=getattr(message, "message_id", "") or "",
+                    )
+                    closed_episode = self._episode_manager.add_message(msg_obj)
+                    if closed_episode is not None:
+                        logger.info("[lark_im] Episode closed: id=%s chat=%s msgs=%d, dispatching to LLM",
+                                    closed_episode.id[:12], chat_id[:12], closed_episode.message_count)
+                        asyncio.run_coroutine_threadsafe(
+                            self._engine._process_episode(closed_episode, self._episode_manager),
+                            self._loop,
+                        )
+
             except Exception as e:
-                logger.debug("[lark_im] WS handler error: %s", e)
+                logger.error("[lark_im] WS handler error: %s\n%s", e, traceback.format_exc())
 
         self._client.set_event_handler(on_message)
         self._client.start_ws_listener(auto_reconnect=True)
@@ -303,6 +420,9 @@ class LarkIMDetector:
     def stop_ws(self) -> None:
         if self._client is not None:
             self._client.stop_ws_listener()
+            self._client = None
+        self._engine = None
+        self._loop = None
 
 
 # 全局 IM 检测器实例（在 main_async 中初始化）
@@ -312,13 +432,10 @@ _im_detector = LarkIMDetector()
 def detect_im() -> Any:
     """IM 检测器 — 轮询 LarkIMClient.get_conversation_history()
 
-    轮询模式直接复用 run_detector_loop() 的标准循环架构。
+    仅在 LARK_IM_MODE=poll 时由 run_detector_loop() 定期调用。
     消息到达后自动通过 EnhancedDetector 进行决策信号分析。
 
-    替代方案 — WS 长连接（事件驱动）:
-      若需实时推送而非轮询，可在 main_async 中调用:
-        _im_detector.start_ws()
-      此时 detect_im() 仍可作为备用轮询兜底。
+    LARK_IM_MODE=websocket 时使用 start_ws() 事件驱动模式，不调用此函数。
     """
     return _im_detector.poll()
 
@@ -331,7 +448,7 @@ def detect_docs(docs_dir: str) -> Any:
 
     TODO: 替换为飞书 API docs +search 轮询
     """
-    from src.signal.doc_detector import DocDetector
+    from src.detect.doc_detector import DocDetector
     from src.adapter.doc_adapter import DocAdapter
 
     adapter = DocAdapter(docs_dir=docs_dir, polling_interval=30, debounce_window=30)
@@ -356,6 +473,7 @@ def load_config() -> Dict[str, Any]:
         "docs_dir": os.environ.get("DOC_DOCS_DIR", "data/docs"),
         "detectors": {
             "lark_im": {
+                "mode": os.environ.get("LARK_IM_MODE", "poll").lower(),
                 "enabled": os.environ.get("LARK_IM_DETECTOR_ENABLED", "true").lower() == "true",
                 "interval": int(os.environ.get("LARK_IM_POLL_INTERVAL", "30")),
                 "burst_interval": int(os.environ.get("LARK_IM_BURST_INTERVAL", "5")),
@@ -404,11 +522,58 @@ async def main_async() -> None:
     # 3. 初始化 MemoryEngine
     engine_cfg = EngineConfig(
         project=cfg["project"],
-        git_storage_path=cfg["storage_path"],
+        storage_path=cfg["storage_path"],
     )
-    engine = MemoryEngine(config=engine_cfg)
+
+    # 创建 LLM 决策提取器
+    from src.model.llm_provider import LLMProvider
+    from src.extractors.simple_llm_extractor import SimpleLLMExtractor
+
+    llm_provider = None
+    if os.getenv("API_KEY"):
+        llm_provider = LLMProvider(
+            provider_type="openai",
+            base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
+            api_key=os.getenv("API_KEY", ""),
+            model=os.getenv("MODEL_NAME", "deepseek-chat"),
+            max_tokens=4096,
+        )
+        logger.info("[LLM] LLMProvider created: %s model=%s",
+                    os.getenv("BASE_URL"), os.getenv("MODEL_NAME"))
+    else:
+        logger.warning("[LLM] API_KEY not configured, decision extraction disabled")
+
+    decision_extractor = SimpleLLMExtractor(llm_provider) if llm_provider else None
+    if decision_extractor:
+        logger.info("[LLM] Decision extractor enabled")
+
+    engine = MemoryEngine(config=engine_cfg, decision_extractor=decision_extractor)
     engine.initialize()
     logger.info("[MemoryEngine] initialized")
+
+    # Inject embedding/reranker for similarity search
+    try:
+        from src.model.embedding_provider import EmbeddingProvider
+        from src.model.reranker_provider import RerankerProvider
+        embedder = EmbeddingProvider()
+        reranker = RerankerProvider()
+
+        # 检查 embedding 和 reranker 服务连接
+        emb_ok = embedder.check_connection(timeout=5)
+        rerank_ok = reranker.check_connection(timeout=5)
+        if emb_ok and rerank_ok:
+            logger.info("[Engine] Embedding+Reranker services both connected")
+        elif not emb_ok and not rerank_ok:
+            logger.warning("[Engine] Both embedding and reranker services unreachable — will fallback to bigram similarity")
+        elif not emb_ok:
+            logger.warning("[Engine] Embedding service unreachable — will fallback to bigram similarity")
+        else:
+            logger.warning("[Engine] Reranker service unreachable — embedding only, no rerank")
+
+        engine.set_embedding_reranker(embedder, reranker)
+        logger.info("[Engine] Embedding+Reranker injected for similarity search")
+    except Exception as e:
+        logger.warning("[Engine] Failed to init embedding/reranker (non-fatal): %s", e)
 
     # 4. 初始化 PushEngine
     push_engine = PushEngine(
@@ -423,16 +588,25 @@ async def main_async() -> None:
     # 5. 创建停止事件
     stop_event = asyncio.Event()
 
+    det_cfg = cfg["detectors"]
+
     # 6. 初始化 IM 检测器
     im_initialized = _im_detector.initialize()
+    im_mode = det_cfg["lark_im"]["mode"]
     if im_initialized:
-        logger.info("[lark_im] IM detector ready (poll interval=%ds)", det_cfg["lark_im"]["interval"])
+        logger.info("[lark_im] IM detector ready (mode=%s)", im_mode)
+
+        try:
+            if _im_detector._episode_manager is not None:
+                _im_detector._episode_manager.set_embedding_provider(embedder)
+                logger.info("[lark_im] EmbeddingProvider injected for episode boundary detection")
+        except Exception as e:
+            logger.warning("[lark_im] Failed to inject embedding provider (non-fatal): %s", e)
 
     # 7. 启动检测器循环
     detector_states: Dict[str, asyncio.Task] = {}
-    det_cfg = cfg["detectors"]
 
-    # lark_im 检测器
+    # lark_im 检测器 — 根据 mode 选择启动方式
     im_state = DetectorState(
         name="lark_im",
         enabled=det_cfg["lark_im"]["enabled"],
@@ -441,11 +615,24 @@ async def main_async() -> None:
         burst_timeout=det_cfg["lark_im"]["burst_timeout"],
     )
     if im_state.enabled:
-        task = asyncio.create_task(
-            run_detector_loop("lark_im", detect_im, im_state, engine, stop_event)
-        )
-        detector_states["lark_im"] = task
-        logger.info("[lark_im] detector started (interval=%ds)", im_state.interval)
+        if im_mode == "websocket":
+            _im_detector.start_ws(engine=engine, loop=asyncio.get_event_loop())
+            logger.info("[lark_im] WS listener started (mode=%s)", im_mode)
+        else:
+            _im_detector._loop = asyncio.get_event_loop()
+            task = asyncio.create_task(
+                run_detector_loop("lark_im", detect_im, im_state, engine, stop_event)
+            )
+            detector_states["lark_im"] = task
+            logger.info("[lark_im] poll detector started (interval=%ds)", im_state.interval)
+
+        # 两种模式都启动 episode 检查循环
+        if _im_detector._episode_manager is not None:
+            ep_check_task = asyncio.create_task(
+                run_episode_check_loop(_im_detector._episode_manager, engine)
+            )
+            detector_states["episode_check"] = ep_check_task
+            logger.info("[Episode] Check loop task created")
 
     # lark_doc 检测器
     doc_state = DetectorState(
@@ -473,7 +660,8 @@ async def main_async() -> None:
     logger.info("[Detectors] Configuration:")
     for name, state in [("lark_im", im_state), ("lark_doc", doc_state)]:
         if state.enabled:
-            logger.info("  %s: interval=%ds, burst=%ds, timeout=%ds", name, state.interval, state.burst_interval, state.burst_timeout)
+            mode_str = f" mode={im_mode}" if name == "lark_im" else ""
+            logger.info("  %s: interval=%ds, burst=%ds, timeout=%ds%s", name, state.interval, state.burst_interval, state.burst_timeout, mode_str)
         else:
             logger.info("  %s: disabled", name)
 
@@ -485,11 +673,16 @@ async def main_async() -> None:
     except (asyncio.CancelledError, KeyboardInterrupt):
         logger.info("[System] Shutting down...")
     finally:
-        # 停止所有检测器
+        # 停止所有检测器循环任务
         for name, task in detector_states.items():
             task.cancel()
         if detector_states:
             await asyncio.gather(*detector_states.values(), return_exceptions=True)
+
+        # 停止 WS 长连接（websocket 模式）
+        if im_state.enabled and im_mode == "websocket":
+            _im_detector.stop_ws()
+            logger.info("[lark_im] WS listener stopped")
 
         # 停止推送引擎
         await push_engine.stop()

@@ -263,8 +263,10 @@ class MemoryGraph:
 
         sid = data.get("sid", "") or data.get("id", "")
         topic_id = data.get("topic_id", "") or data.get("topic", "general")
-        summary = data.get("title", "") or data.get("summary", "")
+        title = data.get("title", "") or ""
+        summary = data.get("summary", "") or title
         full_text = data.get("content", "") or data.get("decision", "")
+        rationale = data.get("rationale", "") or data.get("Rationale", "")
 
         status_str = data.get("status", "pending")
         try:
@@ -278,31 +280,70 @@ class MemoryGraph:
         except ValueError:
             impact = ImpactLevel.MINOR
 
+        created_at_val = None
+        raw_created = data.get("created_at")
+        if raw_created:
+            try:
+                from datetime import datetime
+                created_at_val = datetime.fromisoformat(raw_created) if isinstance(raw_created, str) else raw_created
+            except Exception:
+                created_at_val = None
+
+        raw_version = data.get("version", 1)
+        if isinstance(raw_version, str):
+            try:
+                version = int(raw_version.lstrip("v").split(".")[0])
+            except (ValueError, IndexError):
+                version = 1
+        else:
+            version = int(raw_version) if raw_version else 1
+
         return DecisionNode(
             sid=sid,
             topic_id=topic_id,
-            summary=summary,
+            title=title,
+            summary=summary or title,
             full_text=full_text,
+            rationale=rationale,
             status=status,
             impact_level=impact,
+            version=version,
+            branch=data.get("branch", ""),
+            conflict_status=data.get("conflict_status", ""),
+            conflict_with=data.get("conflict_with", ""),
+            proposer=data.get("proposer", ""),
+            authority=data.get("authority", "") or data.get("proposer", ""),
+            assignee=data.get("executor", "") or data.get("assignee", ""),
             tags=data.get("tags", []),
-            confidence=data.get("confidence", 1.0),
-            authority=data.get("proposer", ""),
-            assignee=data.get("executor", ""),
+            confidence=data.get("confidence", 0.8),
+            source=data.get("source", ""),
+            created_at=created_at_val,
         )
 
     def node_to_dict(self, node: DecisionNode) -> dict:
-        return {
+        d = {
             "sid": node.sid,
             "topic_id": node.topic_id,
-            "title": node.summary,
+            "title": node.title or node.summary,
+            "summary": node.summary,
             "decision": node.full_text,
+            "rationale": node.rationale,
             "status": node.status.value,
             "impact_level": node.impact_level.value,
+            "version": node.version,
+            "branch": node.branch or f"decision/{node.sid}",
+            "conflict_status": node.conflict_status,
+            "conflict_with": node.conflict_with,
+            "proposer": node.proposer,
+            "authority": node.authority,
+            "executor": node.assignee,
             "tags": node.tags,
             "confidence": node.confidence,
-            "proposer": node.authority,
-            "executor": node.assignee,
-            "version": getattr(node, "version", 0),
+            "source": node.source,
+            "created_at": node.created_at.isoformat() if node.created_at else None,
+            "updated_at": node.updated_at.isoformat() if node.updated_at else None,
             "project": "feishu-mem",
         }
+        if node.git_commit_hash:
+            d["git_commit_hash"] = node.git_commit_hash
+        return d

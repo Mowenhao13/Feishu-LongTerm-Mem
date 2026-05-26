@@ -36,3 +36,5 @@ eval_reports/
 .env
 .DS_Store
 ref/
+logs/
+data/snapshots/

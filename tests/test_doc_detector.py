@@ -15,8 +15,8 @@ import time
 import pytest
 
 from src.adapter.doc_adapter import DocAdapter, DocDebounceTracker
-from src.signal.doc_detector import DocDetector
-from src.signal.types import AdapterType
+from src.detect.doc_detector import DocDetector
+from src.detect.types import AdapterType
 
 
 # ==================== 防抖追踪器测试 ====================

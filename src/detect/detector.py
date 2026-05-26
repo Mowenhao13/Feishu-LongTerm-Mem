@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from typing import Optional
 
-from src.signal.types import (
+from src.detect.types import (
     DecisionLevel,
     DetectContext,
     DetectionResult,

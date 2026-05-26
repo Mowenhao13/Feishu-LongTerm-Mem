@@ -60,6 +60,14 @@ class PushEngine:
 
     # ==================== 公开推送方法 ====================
 
+    def set_lark_client(self, lark_client: Any) -> None:
+        """设置飞书客户端（初始化时可调用）"""
+        self._lark = lark_client
+        if lark_client is not None:
+            logger.info("PushEngine: lark_client set")
+        else:
+            logger.warning("PushEngine: lark_client cleared")
+
     def push_decision_card(self, sdr_id: str, trigger: PushTrigger = PushTrigger.MANUAL_QUERY) -> bool:
         """推送单条决策卡片到所有启用的渠道"""
         if self._graph is None:
@@ -299,19 +307,25 @@ class PushEngine:
         """根据配置分发到启用的渠道"""
         success = False
 
-        if self._config.enable_feishu and self._lark is not None and self._config.feishu_chat_id:
-            try:
-                from src.adapter.lark_im import MessageContent
-                content = MessageContent.interactive(card_json) if card_json else MessageContent.text(markdown or "")
-                self._lark.send_message(
-                    self._config.feishu_chat_id,
-                    content,
-                    self._config.feishu_receive_id_type,
-                )
-                logger.info("Feishu push OK: trigger=%s, sdr_ids=%s", trigger.value, sdr_ids)
-                success = True
-            except Exception as e:
-                logger.warning("Feishu push failed (degraded to terminal): %s", e)
+        # 确定推送目标群聊列表
+        target_ids = list(self._config.card_chat_ids) if self._config.card_chat_ids else []
+
+        if self._config.enable_feishu and self._lark is not None and target_ids:
+            from src.adapter.lark_im import MessageContent
+            content = MessageContent.interactive(card_json) if card_json else MessageContent.text(markdown or "")
+            for chat_id in target_ids:
+                try:
+                    self._lark.send_message(
+                        chat_id,
+                        content,
+                        self._config.feishu_receive_id_type,
+                    )
+                    logger.info("Feishu push OK: trigger=%s, chat=%s, sdr_ids=%s",
+                                trigger.value, chat_id[:16], sdr_ids)
+                    success = True
+                except Exception as e:
+                    logger.warning("Feishu push failed (chat=%s, degraded to terminal): %s",
+                                   chat_id[:16], e)
 
         if self._config.enable_terminal:
             self._output_to_terminal(trigger, markdown or card_json or {})

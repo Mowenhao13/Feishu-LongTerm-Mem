@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pytest
 
-from src.signal.detector import (
+from src.detect.detector import (
     DynamicAnalyzer,
     EnhancedDetector,
     LexicalAnalyzer,
@@ -14,7 +14,7 @@ from src.signal.detector import (
     _is_mostly_emoji,
     _is_pure_question,
 )
-from src.signal.emitter import (
+from src.detect.emitter import (
     CalendarEmitter,
     ContactEmitter,
     DetectChange,
@@ -27,7 +27,7 @@ from src.signal.emitter import (
     WikiEmitter,
     new_emitters,
 )
-from src.signal.types import (
+from src.detect.types import (
     AdapterType,
     ChangeType,
     DecisionLevel,

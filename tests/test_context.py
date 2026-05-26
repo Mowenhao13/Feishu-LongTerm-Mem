@@ -4,7 +4,7 @@ import pytest
 
 from src.node.node import DecisionNode
 from src.node.types import DecisionStatus
-from src.signal.context import (
+from src.detect.context import (
     AssembledContext,
     ContextAssembler,
     ContextProviderFactory,
@@ -14,7 +14,7 @@ from src.signal.context import (
     IMContextProvider,
     WikiContextProvider,
 )
-from src.signal.types import AdapterType, EmbeddedURL, SignalContext, StateChangeSignal
+from src.detect.types import AdapterType, EmbeddedURL, SignalContext, StateChangeSignal
 
 
 def make_signal(

@@ -19,7 +19,7 @@ from typing import Any, Dict, List, Optional, Set
 
 from pydantic import BaseModel, Field
 
-from node.types import Relation, RelationType
+from src.node.types import Relation, RelationType
 
 
 # ==================== Participant role (who participates in a hyperedge) ====================

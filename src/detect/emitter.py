@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from src.signal.types import (
+from src.detect.types import (
     AdapterType,
     SignalStrength,
     StateChangeSignal,

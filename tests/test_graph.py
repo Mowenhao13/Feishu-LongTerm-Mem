@@ -159,7 +159,7 @@ class TestHypergraphBuilder:
 
 class TestSnapshot:
     def test_snapshot_create(self, tmp_path):
-        from src.signal.types import DecisionLevel, DetectionResult, ScoreBreakdown
+        from src.detect.types import DecisionLevel, DetectionResult, ScoreBreakdown
         result = DetectionResult(
             score=0.85,
             level=DecisionLevel.HIGH,
@@ -172,7 +172,7 @@ class TestSnapshot:
         assert snapshot.detection_result["score"] == 0.85
 
     def test_snapshot_manager_save_and_load(self, tmp_path):
-        from src.signal.types import DecisionLevel, DetectionResult, ScoreBreakdown
+        from src.detect.types import DecisionLevel, DetectionResult, ScoreBreakdown
         mgr = SnapshotManager(str(tmp_path))
         result = DetectionResult(
             score=0.9, level=DecisionLevel.HIGH, is_decision=True,

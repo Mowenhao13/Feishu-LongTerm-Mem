@@ -4,7 +4,7 @@ import asyncio
 
 import pytest
 
-from src.signal.async_runner import (
+from src.detect.async_runner import (
     AsyncSignalProcessor,
     AsyncTaskRunner,
     get_global_runner,
@@ -13,7 +13,7 @@ from src.signal.async_runner import (
     run_async,
     setup_event_loop,
 )
-from src.signal.detector import async_detect
+from src.detect.detector import async_detect
 
 
 class TestEventLoopSetup:

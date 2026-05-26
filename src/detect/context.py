@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from typing import Any, Optional, Protocol
 
 from src.node.node import DecisionNode
-from src.signal.types import AdapterType, StateChangeSignal
+from src.detect.types import AdapterType, StateChangeSignal
 
 
 @dataclass

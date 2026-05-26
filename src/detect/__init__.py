@@ -1,4 +1,4 @@
-from src.signal.async_runner import (
+from src.detect.async_runner import (
     AsyncSignalProcessor,
     AsyncTaskRunner,
     get_global_runner,
@@ -7,7 +7,7 @@ from src.signal.async_runner import (
     run_async,
     setup_event_loop,
 )
-from src.signal.context import (
+from src.detect.context import (
     AssembledContext,
     ContextAssembler,
     ContextProvider,
@@ -18,7 +18,7 @@ from src.signal.context import (
     IMContextProvider,
     WikiContextProvider,
 )
-from src.signal.detector import (
+from src.detect.detector import (
     DynamicAnalyzer,
     EnhancedDetector,
     LexicalAnalyzer,
@@ -27,7 +27,7 @@ from src.signal.detector import (
     async_detect,
     classify_doc_type,
 )
-from src.signal.emitter import (
+from src.detect.emitter import (
     CalendarEmitter,
     ContactEmitter,
     DocsEmitter,
@@ -39,7 +39,7 @@ from src.signal.emitter import (
     WikiEmitter,
     new_emitters,
 )
-from src.signal.types import (
+from src.detect.types import (
     AdapterType,
     ChangeType,
     Conflict,

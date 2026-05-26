@@ -5,8 +5,11 @@ description = "feishu longterm agentic memory"
 readme = "README.md"
 requires-python = ">=3.12.13"
 dependencies = [
+    "aiohttp>=3.13.5",
     "langchain-text-splitters>=1.1.2",
     "lark-oapi>=1.6.5",
+    "mcp>=1.27.1",
+    "numpy>=2.0.0",
     "pybreaker>=1.4.1",
     "python-dotenv>=1.2.2",
     "pyyaml>=6.0.3",

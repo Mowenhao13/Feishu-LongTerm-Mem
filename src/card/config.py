@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 
 
 @dataclass
@@ -11,6 +11,7 @@ class CardConfig:
     enable_osascript: bool = False
 
     feishu_chat_id: str = ""
+    card_chat_ids: List[str] = field(default_factory=list)
     feishu_receive_id_type: str = "chat_id"
 
     trigger_on_conflict: bool = True
@@ -37,6 +38,8 @@ class CardConfig:
         cfg.enable_terminal = os.getenv("PUSH_TERMINAL_ENABLED", "true").lower() == "true"
         cfg.enable_osascript = os.getenv("PUSH_OSASCRIPT_ENABLED", "false").lower() == "true"
         cfg.feishu_chat_id = os.getenv("PUSH_FEISHU_CHAT_ID", "")
+        raw_card_ids = os.getenv("CARD_CHAT_IDS", "")
+        cfg.card_chat_ids = [cid.strip() for cid in raw_card_ids.split(",") if cid.strip()]
         cfg.trigger_on_conflict = os.getenv("PUSH_TRIGGER_CONFLICT", "true").lower() == "true"
         cfg.trigger_on_update = os.getenv("PUSH_TRIGGER_UPDATE", "true").lower() == "true"
         cfg.trigger_on_hot_score_threshold = os.getenv("PUSH_TRIGGER_HOT_SCORE", "true").lower() == "true"

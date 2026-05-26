@@ -149,6 +149,9 @@ class DetectionResult:
 
 @dataclass
 class DetectContext:
+    source: str = ""
+    chat_id: str = ""
+    sender_id: str = ""
     is_reply: bool = False
     has_mention: bool = False
     recent_keywords: list[str] = field(default_factory=list)

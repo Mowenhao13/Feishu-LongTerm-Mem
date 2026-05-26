@@ -224,7 +224,7 @@ def main():
                     print(f"  ✗ 决策写入失败")
                 
                 # 3e. 保存快照 (模拟检测器行为)
-                from src.signal.types import DetectionResult, DecisionLevel, ScoreBreakdown
+                from src.detect.types import DetectionResult, DecisionLevel, ScoreBreakdown
                 fake_result = DetectionResult(
                     score=0.85,
                     level=DecisionLevel.HIGH,

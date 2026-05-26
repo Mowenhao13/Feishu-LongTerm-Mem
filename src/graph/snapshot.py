@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from src.signal.types import DetectContext, DetectionResult, ScoreBreakdown, SignalDetail
+from src.detect.types import DetectContext, DetectionResult, ScoreBreakdown, SignalDetail
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -161,6 +161,9 @@ def _context_to_dict(ctx: Optional[DetectContext]) -> Dict[str, Any]:
     if ctx is None:
         return {}
     return {
+        "source": ctx.source,
+        "chat_id": ctx.chat_id,
+        "sender_id": ctx.sender_id,
         "is_reply": ctx.is_reply,
         "has_mention": ctx.has_mention,
         "recent_keywords": ctx.recent_keywords,

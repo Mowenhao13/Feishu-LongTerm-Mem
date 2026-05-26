@@ -1,566 +1,141 @@
-# Feishu-Mem — 飞书长程协作记忆系统
+# feishu-mem — 飞书协作记忆系统
 
-## 概述
+通过飞书 WebSocket 监听群聊消息，自动提取团队决策并持久化存储，支持 MCP 协议接入 AI 客户端进行语义检索。
 
-Feishu-Mem 是一个面向飞书（Lark）团队的**长程项目协作记忆系统**。它实时监听飞书群聊、文档、会议等场景，自动提取团队决策、构建超图记忆网络，并通过 Git 版本化存储持久化。系统提供决策冲突检测、热点值管理、主动推送卡片、MCP 工具查询等能力，帮助团队追踪历史决策、避免重复讨论、减少信息流失。
+---
 
-### 核心能力
-
-- **决策提取** — 从 IM 对话中自动识别并提取结构化决策（技术选型、任务分配、参数锁定等）
-- **超图记忆** — 5 维索引（决策/议题/关系/跨议题引用/项目）的内存级运行时图
-- **8 种决策生命周期 Mutation** — CREATE / UPDATE / STATUS_CHANGE / CONFLICT_MERGE / CONFLICT_KEEP_BOTH / OBJECTION / DEPRECATE / REVERT
-- **Git 版本化存储** — 每个决策独立 Git 分支，全文 Markdown + YAML frontmatter 持久化
-- **冲突检测** — 基于关系和关键词的运行时冲突识别
-- **热点值管理** — 推送递增 + 时间衰减，自动识别遗忘决策
-- **决策卡片推送** — 2 通道（飞书 API / 终端）× 4 种触发（冲突/更新/热点值/定时）
-- **MCP 协议** — 支持 AI Agent（Claude Desktop 等）通过 MCP 工具搜索、查询、推送决策
-- **飞书原生集成** — 群聊消息监听、API 调用、事件驱动
-
-## 使用截图
-
-### 决策卡片日报
-![alt text](image.png)
-
-### 决策卡片
-![alt text](image-1.png)
-
-## 整体架构
+## 核心架构
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                          外部接入层 (MCP / Lark API)                         │
-│  ┌───────────────┐  ┌──────────────┐  ┌──────────────────────────────────┐ │
-│  │  Claude Desktop│  │  IM 群聊事件  │  │  飞书开放 API (发送/读取消息)     │ │
-│  │  (MCP Client)  │  │  (WS长连接)   │  │  LarkIMClient                  │ │
-│  └───────┬───────┘  └──────┬───────┘  └────────────┬─────────────────────┘ │
-└──────────┼─────────────────┼────────────────────────┼───────────────────────┘
-           │                 │                        │
-┌──────────┼─────────────────┼────────────────────────┼───────────────────────┐
-│          ▼                 ▼                        ▼                       │
-│  ┌──────────────────────────────────────────────────────────────────────┐  │
-│  │                        信号检测层 (Signal)                            │  │
-│  │  ┌──────────┐  ┌──────────────┐  ┌──────────┐  ┌──────────────────┐ │  │
-│  │  │Lexical   │→│  SignalEmitter│→│Detector  │→│  DecisionLevel    │ │  │
-│  │  │Analyzer  │  │  (打分聚合)   │  │Engine    │  │  HIGH/MEDIUM/LOW  │ │  │
-│  │  └──────────┘  └──────────────┘  └──────────┘  └──────────────────┘ │  │
-│  └──────────────────────────┬───────────────────────────────────────────┘  │
-│                             │                                              │
-│  ┌──────────────────────────▼───────────────────────────────────────────┐  │
-│  │                     LLM 决策提取层                                    │  │
-│  │  ┌──────────────┐  ┌───────────────┐  ┌──────────────────────────┐  │  │
-│  │  │LLMClient    │→│DecisionExtractor│→│  DecisionNode (结构化)    │  │  │
-│  │  │(DeepSeek/   │  │(Prompt-driven) │  │  sid/topic/status/impact │  │  │
-│  │  │ OpenAI api) │  └───────────────┘  │  authority/relations/...  │  │  │
-│  │  └──────────────┘                    └──────────────────────────┘  │  │
-│  └──────────────────────────┬───────────────────────────────────────────┘  │
-│                             │                                              │
-│  ┌──────────────────────────▼───────────────────────────────────────────┐  │
-│  │                      核心引擎层 (Core Engine)                         │  │
-│  │                                                                      │  │
-│  │  ┌──────────────────────────────────────────────────────────────┐   │  │
-│  │  │  PipelineEngine (8 种 Mutation)                              │   │  │
-│  │  │  ┌────────┐ ┌────────┐ ┌───────────┐ ┌───────┐ ┌──────────┐ │   │  │
-│  │  │  │ CREATE │ │ UPDATE │ │STATUS_CHG │ │MERGE  │ │KEEP_BOTH │ │   │  │
-│  │  │  ├────────┤ ├────────┤ ├───────────┤ ├───────┤ ├──────────┤ │   │  │
-│  │  │  │OBJECTION│ │DEPRECATE│ │ REVERT    │ │       │ │          │ │   │  │
-│  │  │  └────────┘ └────────┘ └───────────┘ └───────┘ └──────────┘ │   │  │
-│  │  └──────────────────────────┬───────────────────────────────────┘   │  │
-│  │                             │                                       │  │
-│  │  ┌──────────────────────────▼───────────────────────────────────┐   │  │
-│  │  │  MemoryEngine (长驻后台 asyncio 进程)                         │   │  │
-│  │  │  - 检测器循环 │ 决策提取 │ Mutation 应用 │ 存储同步 │ 推送触发 │   │  │
-│  │  └──────────────────────────────────────────────────────────────┘   │  │
-│  └──────────────────────────┬───────────────────────────────────────────┘  │
-│                             │                                              │
-│  ┌──────────┬───────────────┼───────────────┬─────────────────┬──────────┐ │
-│  │          ▼               ▼               ▼                 ▼          │ │
-│  │  ┌──────────┐   ┌────────────┐  ┌────────────┐  ┌─────────────────┐  │ │
-│  │  │MemoryGraph│  │SnapshotMgr │  │ PushEngine │  │ 卡片渲染器       │  │ │
-│  │  │(5 索引)  │  │(检测快照)   │  │(4 触发)    │  │ CardRenderer    │  │ │
-│  │  └──────────┘   └────────────┘  │ 3 通道     │  │ (Lark JSON + MD)│  │ │
-│  │                                 └────────────┘  └─────────────────┘  │ │
-│  └──────────────────────────────────────────────────────────────────────┘  │
-│                             │                                              │
-│  ┌──────────────────────────▼───────────────────────────────────────────┐  │
-│  │                        存储层 (Storage)                               │  │
-│  │  ┌──────────────────────────────────────────────────────────────┐   │  │
-│  │  │  GitStorage (文件系统 + Git 版本控制)                          │   │  │
-│  │  │  data/decisions/{project}/{topic}/{sid}.md                   │   │  │
-│  │  │  每个决策 → 独立 Git 分支 (decision/{sid})                    │   │  │
-│  │  └──────────────────────────────────────────────────────────────┘   │  │
-│  └──────────────────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────────────┘
+飞书群聊消息 → WebSocket → 检测器(EnhancedDetector) → Snapshot → LLM提取(DeepSeek) → Git存储
+                                                                                        ↓
+                                                                              MCP Server ← ─ ─ 语义检索(Embedding + Reranker)
 ```
 
-## 模块详解
+## MCP Server
 
-### 1. 超图记忆层 (`src/graph/`)
+MCP (Model Context Protocol) 服务器通过 stdio 传输协议暴露决策查询工具，供 Claude Desktop、OpenClaw 等 MCP 客户端使用。
 
-运行时内存级决策图，提供**5 维索引**加速检索：
+### 注册的工具 (tools)
 
-| 索引 | 类型 | 说明 |
-|------|------|------|
-| `_decisions` | `Dict[str, DecisionNode]` | SDR ID → 决策节点 |
-| `_topics` | `Dict[str, List[str]]` | 议题 → SDR ID 列表 |
-| `_relations` | `Dict[str, List[Relation]]` | SDR ID → 关联关系 |
-| `_cross_topic_refs` | `Dict[str, List[str]]` | 跨议题引用映射 |
-| `_projects` | `Dict[str, List[str]]` | 项目 → SDR ID 列表 |
+34 个工具全部注册在 [scripts/mcp_server.py](scripts/mcp_server.py)，分 6 类：
 
-- **MemoryGraph** — 核心内存图，支持 upsert / query / search / conflict detection / hot score / dirty tracking
-- **HypergraphBuilder** — 超图构建器，从内容/对话/决策列表构建超图结构
-- **HierarchicalRetriever** — 3 层层次检索（Topic → Fact → Episode）+ RRF 融合
-- **SnapshotManager** — 检测器状态快照，JSON 格式持久化到 `{STORAGE_PATH}/snapshots/`
-- **BM25Indexer** — BM25 索引骨架（等待 Embedding 模型接入）
+#### 查询类 (12)
 
-### 2. 决策管道引擎 (`src/core/`)
-
-**PipelineEngine** — 决策变更的原子化执行单元。接收 `DecisionMutation` 并按类型分发到对应处理器，保证 MemoryGraph + GitStorage 的**双写一致性**。
-
-8 种 Mutation：
-
-| MutationType | 说明 | 处理器 |
+| 工具 | 功能 | 关键参数 |
 |---|---|---|
-| `CREATE` | 新建决策 | `_apply_create` |
-| `UPDATE` | 更新决策 | `_apply_update` |
-| `STATUS_CHANGE` | 状态变更 | `_apply_status_change` |
-| `CONFLICT_MERGE` | 合并冲突 | `_apply_conflict_merge` |
-| `CONFLICT_KEEP_BOTH` | 保留双方冲突 | `_apply_conflict_keep_both` |
-| `OBJECTION` | 添加异议 | `_apply_objection` |
-| `DEPRECATE` | 废弃决策 | `_apply_deprecate` |
-| `REVERT` | 回退版本 | `_apply_revert` |
+| `list_decisions` | **列出所有决策**（推荐，无需参数） | `top_k` (默认50) |
+| `topic` | 按议题查询决策（省略 `topic_id` 则返回全部） | `topic_id`, `top_k` |
+| `search` | 语义搜索决策（Embedding+Reranker，降级关键词） | `query`, `topic`, `top_k` |
+| `decision` | 获取单个决策详情 | `sid` |
+| `timeline` | 决策时间线（按创建时间倒序） | `top_k` |
+| `list_topics` | 列出所有议题 | — |
+| `get_relations` | 获取指定决策的关系网络 | `sid` |
+| `stats` | 系统统计（总数、状态分布、影响分布） | — |
+| `hot_decisions` | 热点决策排名（按热度值） | `min_score`, `top_k` |
+| `forgotten_decisions` | 被遗忘的决策（低热度值） | `max_score`, `top_k` |
+| `related_decisions` | 获取与指定决策相关的其他决策 | `sid` |
+| `recent_decisions` | 最近创建的决策（按小时筛选） | `hours`, `top_k` |
+| `fulltext_search` | 全文搜索（关键词匹配） | `query`, `topic`, `top_k` |
 
-**MemoryEngine** — 长驻后台的 asyncio 进程，完整生命周期：
+#### Git 类 (3)
 
-```
-initialize()
-  ├── GitStorage 初始化
-  ├── PipelineEngine 初始化
-  ├── 从 Git 加载已有决策到 MemoryGraph
-  ├── 快照管理器初始化
-  └── PushEngine 初始化
-start()
-  ├── 检测器循环（持续监听信号）
-  ├── 存储同步循环（定期刷脏数据）
-  └── 推送调度器（热点值扫描 + 定时摘要）
-stop()
-  └── 清理 async 任务 → 推送停止 → 脏数据同步
-```
+| 工具 | 功能 | 关键参数 |
+|---|---|---|
+| `git_history` | Git 提交历史 | `limit` |
+| `git_search` | Git 内容搜索 | `query` |
+| `git_blame` | Git 追溯（每行最后修改人） | `sid`, `topic_id` |
 
-### 3. 文档检测引擎 (`src/adapter/doc_adapter.py` + `src/signal/doc_detector.py`)
+#### 冲突与异议类 (4)
 
-基于本地文件的文档决策检测系统，**无需飞书 API** 即可运行。
+| 工具 | 功能 | 关键参数 |
+|---|---|---|
+| `conflict_list` | 列出所有已记录的决策冲突 | `top_k` |
+| `objection_list` | 列出异议 | `topic_id` |
+| `decision_card` | 获取决策的飞书卡片格式 JSON | `sid` |
+| `decision_history` | 决策版本变更历史 | `sid`, `topic_id` |
 
-**DocAdapter** — 文档适配器（对应 `ref/lark-adapter/lark_doc.go`）：
+#### 写入类 (8)
 
-| 功能 | 当前实现 | TODO (飞书 API) |
-|------|---------|-----------------|
-| 文档轮询 | 扫描 `data/docs/*.md` 文件 mtime | `docs +search` 按时间过滤 |
-| 内容对比 | SHA256 content_hash 对比 | `docs +fetch` + diff 分析 |
-| 防抖机制 | `DocDebounceTracker`（JSON 持久化） | 相同接口 |
-| 文档列表 | `list_docs()` 扫描目录 | `docs +search` 返回列表 |
-| 内容获取 | `fetch_content()` 读本地文件 | `docs +fetch --doc <token>` |
+| 工具 | 功能 | 关键参数 |
+|---|---|---|
+| `create_decision` | 创建新决策 | `summary`, `content`, `topic_id`, `impact_level` |
+| `update_decision` | 更新已有决策 | `sid`, `summary`, `content`, `status` |
+| `confirm_decision` | 确认（批准）决策 | `sid` |
+| `reject_decision` | 拒绝决策 | `sid`, `reason` |
+| `revert_decision` | 回滚到指定 Git 版本 | `sid`, `commit_hash` |
+| `resolve_conflict` | 标记冲突已解决 | `decision_a`, `decision_b`, `resolution` |
+| `classify_topic` | 重新归类到指定议题 | `sid`, `topic_id` |
+| `detect_crosstopic` | 检测跨议题影响 | `sid` |
 
-**DocDebounceTracker** — 防抖追踪器（对应 `ref/lark-adapter/debounce_tracker.go`）：
-- 文档变更时记录 `last_change` 时间戳
-- 静默期内（`debounce_window` 秒）不触发处理
-- 内容哈希相同则跳过重复处理
-- 状态持久化到 `{state_dir}/debounce_state.json`
+#### LLM 辅助类 (5)
 
-**DocDetector** — 文档检测器：
-- 调用 `DocAdapter.detect()` 获取变更
-- `EnhancedDetector.analyze_document()` 信号级判断
-- 输出 `DocDetectionJob` → 后续进入 `PipelineEngine`
+| 工具 | 功能 | 关键参数 |
+|---|---|---|
+| `extract_decision` | 从文本提取决策信息 | `text` |
+| `extract_and_create` | 提取决策并自动创建 | `text`, `topic_id` |
+| `check_conflict` | 检查与现有决策的冲突 | `summary`, `content`, `topic_id` |
+| `evaluate_dedup` | 评估决策重复或冲突 | `sid_a`, `sid_b` |
+| `resolve_conflict_action` | 获取冲突解决建议 | `sid_a`, `sid_b` |
 
-**DocDecisionExtractor** (`src/extractors/doc_decision_extractor.py`) — 文档决策提取器：
+#### 系统类 (1)
 
-| 方法 | 功能 |
-|------|------|
-| `extract()` | 从文档内容中提取结构化决策（LLM） |
-| `dedup()` | 决策去重（vs MemoryGraph 已有决策） |
-| `assess_conflict()` | 跨文档冲突评估 |
-| `detect_doc_update()` | 版本变更检测（diff 级别） |
+| 工具 | 功能 | 关键参数 |
+|---|---|---|
+| `refresh` | 从 Git 存储重新加载所有决策 | — |
 
-### 4. 系统启动入口 (`main.py`)
-
-参考 `ref/main.go` 的 Python 版系统启动入口：
-
-```
-main.py
-  ├── load_config()          # 从 .env 加载配置
-  ├── GitStorage 初始化
-  ├── MemoryGraph.load_from_git()
-  ├── MemoryEngine.initialize()
-  ├── PushEngine.start_push_scheduler()
-  ├── asyncio 检测器循环:
-  │   ├── run_detector_loop("lark_im")   # IM 检测器（LarkIMClient 轮询 + WS 长连接）
-  │   └── run_detector_loop("lark_doc")   # 文档检测器（本地文件轮询）
-  ├── 突发模式管理 (burst mode):
-  │   ├── 正常模式: 按 interval 轮询
-  │   └── 突发模式: 检测到变更后按 burst_interval 密集扫描
-  └── 信号处理: SIGINT/SIGTERM → 优雅关闭
-```
-
-**检测器循环**（对应 `ref/main.go runDetectorLoop`）：
-```
-while True:
-    interval = burst_interval if in_burst_mode else normal_interval
-    result = detect_fn()
-    if has_changes:
-        enter_burst_mode()  # 缩短轮询间隔
-    elif no_changes_for_timeout:
-        exit_burst_mode()   # 恢复常规间隔
-    await asyncio.sleep(interval)
-```
-
-用法：
+**启动方式**:
 ```bash
-# 启动完整系统（IM + 文档双检测器）
-uv run python main.py
-
-# 仅运行测试
-uv run pytest tests/test_doc_detector.py -v
+uv run python scripts/mcp_server.py
 ```
 
-> **提示**: 若 `.env` 中未配置 `LARK_APP_ID` / `LARK_APP_SECRET` / `GROUP_CHAT_IDS`，IM 检测器会自动跳过并打印配置指引。
+---
 
-### 5. 信号检测 (`src/signal/`)
+## 接入 OpenClaw
 
-基于**词法分析 + 信号聚合**的决策识别引擎，不依赖 LLM 即可快速筛选潜在决策内容。
-
-- **LexicalAnalyzer** — 三权重关键词库（高/中/低），匹配决策信号片段
-- **SignalEmitter** — 聚合原始信号，结合上下文产生 `SignalDetail`
-- **Detector** — 决策检测器，输出 `DetectionResult`（含 `DecisionLevel` 分数）
-- **ContextProvider** — 提供对话上下文、历史记录等辅助检测
-- **Emitter** — 信号事件发射器，支持 async 事件流
-
-**决策检测分数维度**：
-
-| 分数段 | 级别 | 含义 |
-|--------|------|------|
-| ≥ 0.8 | HIGH | 明确决策（"决定了"、"最终决定"） |
-| ≥ 0.5 | MEDIUM | 可能决策（"建议"、"选型"） |
-| ≥ 0.3 | LOW | 弱信号（纯讨论） |
-| < 0.3 | NONE | 非决策（闲聊） |
-
-### 6. 决策节点模型 (`src/node/`)
-
-- **DecisionNode** — Pydantic BaseModel，含 sid / topic_id / summary / full_text / status / impact_level / confidence / authority / assignee / relations / objections / access_stats 等
-- **DecisionStatus** — 8 种状态：`PENDING → DECIDED → IN_PROGRESS → COMPLETED / SUPERSEDED / REJECTED / DEPRECATED / SHELVED`
-- **ImpactLevel** — 4 级影响：`ADVISORY → MINOR → MAJOR → CRITICAL`
-- **Relation** — 6 种关系类型：`DEPENDS_ON / SUPERSEDES / REFINES / CONFLICTS_WITH / RELATES_TO / OBJECTION`
-- **AccessStats** — 热点值追踪：`hot_score / access_count / last_accessed / last_calculated`
-
-### 7. 存储层 (`src/storage/`)
-
-基于 Git 版本控制的文件系统存储：
-
-```
-data/
-└── decisions/
-    └── <project>/
-        └── <topic>/
-            └── <sid>.md     # 每个决策一个 Markdown 文件
-```
-
-- **GitStorage** — 高层 CRUD API（write_decision / read_decision / list_decisions / list_topics / list_branches / search_content）
-- **GitFormat** — Markdown + YAML frontmatter 序列化/反序列化
-- **GitCLI** — 底层 git 命令封装（init / add / commit / branch / checkout / log / grep）
-- **分支策略**：每个决策写入独立 `decision/{sid}` 分支，主分支（main）仅包含索引和汇总
-
-### 8. 决策卡片推送 (`src/card/`)
-
-**PushEngine** — 推送引擎，3 通道 × 4 触发：
-
-**通道**（按配置优先级）：
-1. **飞书 API** — `LarkIMClient.send_message()`，发送交互式 Lark 卡片（异常自动降级到终端）
-2. **终端输出** — 格式化 Markdown 文本 stdout 输出
-3. **macOS osascript** — 系统通知（`display notification`）
-
-**触发时机**：
-1. **冲突检测** — MemoryEngine 检测到冲突时自动推送冲突解决卡片
-2. **决策更新** — CREATE / UPDATE / STATUS_CHANGE 时推送决策卡片
-3. **热点值过低** — 定期扫描，热点值低于阈值时推送遗忘提醒
-4. **定时摘要** — 每日 08:00 / 每周六 21:00 推送决策摘要
-
-**热点值机制**：
-- 每次推送 → 热点值 +10（上限 100）
-- 每次扫描 → 热点值 ×0.95（时间衰减）
-- 热点值 < 20 → `FORGOTTEN` 分类，触发低热点推送
-
-### 9. 外部 API 适配器 (`src/adapter/`)
-
-飞书原生 API 完整封装，重点模块：
-
-**LarkIMClient** (`src/adapter/lark_im.py`) — IM 完整 CRUD：
-
-| 分类 | 方法 | 说明 |
-|------|------|------|
-| 发送 | `send_message` / `reply_message` / `edit_message` | 支持 text / post / card / image / file / audio 等 9 种消息类型 |
-| 转发 | `forward_message` / `merge_forward_message` | 单条 / 合并转发 |
-| 撤回 | `recall_message` | 删除消息 |
-| 拉取 | `get_conversation_history` / `get_all_conversation_history` / `get_message` | 分页历史消息 / 全量拉取 / 单条查询 |
-| 资源 | `get_message_resource` / `download_message_resource` | 获取 / 下载消息中的文件 |
-| 群组 | `get_group_info` / `list_groups` / `get_group_share_link` | 群信息查询 |
-| 公告 | `get_group_announcement` | 群公告读取 |
-| **长连接** | `set_event_handler` + `start_ws_listener` | **WebSocket 事件驱动**，支持自动重连，独立线程运行 |
-
-- **NoiseFilter** — 消息噪音过滤（emoji / 链接 / 噪音话题检测）
-- **MessageBatcher** — 对话分批聚合（按时间和关键词重叠分组）
-
-### 10. MCP 服务器 (`src/mcp_server/`)
-
-基于 `FastMCP` 协议实现，供 AI Agent（如 Claude Desktop）通过标准 MCP 工具调用：
-
-| 工具 | 说明 |
-|------|------|
-| `search` | 关键词搜索决策记录 |
-| `decision` | 获取单个决策详情，支持 `push` 参数被动推送卡片 |
-| `extract_decision` | 从文本中智能提取决策 |
-| `classify_topic` | 决策议题分类 |
-| `detect_crosstopic` | 跨议题影响检测 |
-| `check_conflict` | 两个决策间的冲突评估 |
-| `list_topics` | 列出所有议题 |
-| `stats` | 系统统计信息 |
-| `timeline` | 决策历史时间线 |
-
-### 11. LLM 集成 (`src/llm/`)
-
-- **LLMClient** — 统一 LLM API 客户端（支持 chat / chat_json / streaming）
-- **TokenTracker** — Token 消耗追踪
-- **CircuitBreaker** — 熔断保护（基于 pybreaker）
-- **Guardrails** — 输出格式护栏
-- **Recovery** — 自动重试（基于 tenacity）
-
-### 12. 评估系统 (`src/eval/`)
-
-- **Evaluator** — 端到端评估框架，支持 12 个场景的数据集
-- **评估维度**：detection / content / status / conflict / impact_level / proposer / executor
-- **决策提取准确率**：整体 92.1%（基于 DeepSeek v4 模型）
-
-## 配置
-
-### 环境变量（`.env`）
-
-```env
-# ===== LLM 配置 =====
-BASE_URL=https://api.deepseek.com
-API_KEY=sk-xxxxx
-MODEL_NAME=deepseek-chat
-
-# ===== 飞书应用配置 =====
-LARK_APP_ID=cli_xxxxxxxx
-LARK_APP_SECRET=xxxxx
-GROUP_CHAT_IDS=oc_xxxxx    # 监听的群聊 ID
-CARD_CHAT_IDS=oc_xxxxx     # 推送目标群聊 ID
-
-# ===== 存储路径 =====
-STORAGE_PATH=data
-
-# ===== Embedding / Reranker（可选）=====
-EMBEDDING_BASE_URL=http://0.0.0.0:11000/v1/embeddings
-EMBEDDING_MODEL_NAME=Qwen3-Embedding-4B
-RERANKER_BASE_URL=http://0.0.0.0:11000
-RERANKER_MODEL_NAME=Qwen3-Reranker-4B
-
-# ===== 推送配置 =====
-PUSH_FEISHU_ENABLED=false      # 飞书 API 推送（配额保护）
-PUSH_TERMINAL_ENABLED=true     # 终端输出
-PUSH_OSASCRIPT_ENABLED=false   # macOS 通知
-PUSH_TRIGGER_CONFLICT=true     # 冲突触发
-PUSH_TRIGGER_UPDATE=true       # 更新触发
-PUSH_TRIGGER_HOT_SCORE=true    # 低热点值触发
-PUSH_HOT_SCORE_THRESHOLD=20.0  # 热点值低阈值
-PUSH_DAILY_SUMMARY=true        # 每日摘要
-PUSH_DAILY_TIME=08:00          # 摘要时间
-PUSH_WEEKLY_DAY=6              # 每周六摘要
-PUSH_WEEKLY_TIME=21:00
-PUSH_HOT_SCORE_INCREMENT=10.0  # 推送递增
-PUSH_HOT_SCORE_DECAY=0.95
-
-# ===== Doc Detector Config =====
-LARK_DOC_DETECTOR_ENABLED=true
-LARK_DOC_POLL_INTERVAL=30
-LARK_DOC_BURST_INTERVAL=5
-LARK_DOC_BURST_TIMEOUT=120
-LARK_DOC_DEBOUNCE_WINDOW=30
-DOC_DOCS_DIR=data/docs
-# TODO: LARK_DOC_TOKENS=xxx,yyy  # 飞书 API 白名单
-```
-
-## 快速开始
-
-### 安装
+### 1. 配置 MCP Server
 
 ```bash
-git clone https://github.com/Mowenhao13/Feishu-LongTerm-Mem
-cd feishu-mem
-uv sync
-cp .env.example .env   # 编辑配置
+openclaw mcp set feishu-mem '{
+  "command": "uv",
+  "args": ["run", "python", "scripts/mcp_server.py"],
+  "cwd": "/Users/halllo/projects/local/feishu-mem"
+}'
 ```
 
-### 配置飞书应用
-
-1. 在[飞书开放平台](https://open.feishu.cn)创建应用
-2. 开启 `im:message` 权限
-3. 获取 App ID / App Secret → 填入 `.env`
-4. 将机器人加入目标群聊
-
-### 运行
+### 2. 验证配置
 
 ```bash
-# 运行评估测试（无需飞书 API）
-uv run python scripts/eval_nostorage.py
-
-# E2E 冲突决策测试（MemoryGraph + PipelineEngine + GitStorage 全链路）
-uv run python scripts/test_conflict_graph.py
-
-# 启动完整系统（IM + 文档双检测器）
-uv run python main.py
-
-# 启动 MCP 服务器
-uv run python -c "from src.mcp_server.server import run_server; run_server()"
-
-# 启动完整引擎（需要飞书配置）
-uv run python -c "from src.core.engine import MemoryEngine; import asyncio; e=MemoryEngine(); e.initialize(); asyncio.run(e.start())"
-
-# 文档检测器测试（本地方案，无需飞书 API）
-uv run pytest tests/test_doc_detector.py -v
-
-# 运行全量测试
-uv run pytest tests/ -v
+openclaw mcp list
 ```
 
-## 评估结果
+### 3. 在对话中使用
 
-### 决策提取准确率
+在 OpenClaw 中直接询问：
 
-| 场景 | 准确率 |
-|------|--------|
-| 技术选型 (01) | 88.3% |
-| 任务分配 (02) | 94.4% |
-| 参数锁定 (03) | 88.3% |
-| 冲突决策 (05) | 97.1% |
-| **整体** | **92.1%** |
+> "查一下我们的技术决策"
+> "搜索阿里云相关的决策记忆"
+> "查看决策 3309244b260d 的详情"
 
-### 维度准确率
+OpenClaw 会自动拉起 MCP server 并调用对应工具。
 
-| 维度 | 准确率 | 说明 |
-|------|--------|------|
-| detection | 100% | 是否做出决策 |
-| content | 95.0% | 决策内容提取 |
-| status | 93.3% | 状态判断 |
-| conflict | 97.1% | 冲突检测 |
-| impact_level | 86.7% | 影响级别 |
-| proposer | 78.6% | 提议者识别 |
-| executor | 93.3% | 执行者识别 |
+---
 
-## 项目结构
+## 数据存储
 
-```
-src/
-├── adapter/           # 飞书 API 适配器（IM / 文档 / 消息处理）
-│   ├── lark_im.py     # 飞书 IM 适配器
-│   ├── doc_adapter.py # 文档适配器（本地文件轮询 + 防抖）
-│   └── types.py       # 适配器类型定义
-├── card/              # 决策卡片渲染 + 推送引擎
-├── core/              # 核心引擎（MemoryEngine / PipelineEngine）
-├── eval/              # 端到端评估框架
-├── extractors/        # 决策 / 事实 / 对话提取器
-│   ├── decision_extractor.py    # IM 决策提取器
-│   └── doc_decision_extractor.py # 文档决策提取器
-├── graph/             # 超图记忆（MemoryGraph / Builder / Retrieval / Snapshot）
-├── llm/               # LLM 客户端（支持降级、熔断、重试）
-├── mcp_server/        # MCP 协议服务器
-├── model/             # Embedding / Reranker 模型接入
-├── node/              # 决策节点模型（DecisionNode / Relation / Objection）
-├── prompts/           # 决策提取 / 分类 / 冲突检测 Prompt 模板
-│   ├── decision_prompts.py      # IM 决策 prompts
-│   ├── doc_decision_prompts.py   # 文档决策 prompts（提取/去重/冲突/版本变更）
-│   └── topic_prompts.py         # 议题分类 prompts
-├── signal/            # 信号检测引擎（词法分析 + 信号聚合）
-│   ├── detector.py    # IM 消息检测器
-│   ├── doc_detector.py # 文档检测器（集成信号分析）
-│   └── types.py       # 信号类型定义
-├── storage/           # Git 版本化存储后端
-└── utils/             # 工具库（日志 / 时间 / Markdown 分片）
+- **目录**: `data/decisions/{project}/{topic}/{sid}.md`
+- **格式**: YAML 前置元数据 + Markdown 正文
+- **版本控制**: 每次决策变更自动 Git commit + push
 
-main.py                # 系统启动入口（双检测器 + 推送引擎）
+---
 
-data/
-├── docs/              # 文档检测器默认扫描目录（*.md 文件）
-└── decisions/         # Git 存储根目录
+## 模型服务 (可选)
 
-ref/                   # Go 版参考实现（架构参考）
-├── card/              # 卡片渲染（Go 原版）
-├── core/              # Pipeline / MemoryGraph（Go 原版）
-├── decision/          # 决策节点（Go 原版）
-├── git/               # Git 存储（Go 原版）
-├── lark-adapter/      # 飞书适配器（Go 原版）
-├── llm/               # LLM 集成（Go 原版）
-├── main/              # Stage1-6 处理流程（Python）
-└── signal/            # 检测器（Go 原版）
+语义检索需要运行 Embedding 和 Reranker 模型服务：
 
-scripts/               # 运行脚本
-├── eval_nostorage.py       # 无存储评估
-├── eval_storage.py         # 带存储评估
-└── test_conflict_graph.py  # E2E 冲突决策测试
+| 服务 | 端口 | 模型 |
+|---|---|---|
+| Embedding | `127.0.0.1:8000` | Qwen3-Embedding-4B |
+| Reranker | `127.0.0.1:8001` | Qwen3-Reranker-4B |
 
-tests/                 # 测试
-├── test_graph.py      # 超图 + 构建器 + 快照 + 检索（15 tests）
-├── test_push.py       # 推送引擎（7 tests）
-├── test_storage.py    # Git 存储
-├── test_signal.py     # 信号检测
-└── ...
-```
-
-## 数据流
-
-```
-飞书群聊消息                                     本地文档目录 (data/docs/)
-    │                                                    │
-    ▼                                                    ▼
-NoiseFilter ─── 过滤噪音                         DocAdapter.detect()
-    │                                              SHA256 content_hash 对比
-    ▼                                                    │
-MessageBatcher ── 按时间窗口 + 话题分组                    │
-    │                                                    ▼
-    ▼                                              DocDebounceTracker
-LexicalAnalyzer ── 词法匹配检测决策信号              防抖判断 (30s)
-    │                                                    │
-    ▼                                              can_process_now? ───否→ 跳过
-SignalEmitter ──── 聚合信号，计算 DecisionLevel              │ 是
-    │                                                    ▼
-    ▼                                              EnhancedDetector
-Detector ───────── 判断 is_decision               analyze_document()
-    │                                             (信号分数 + 文档类型)
-    ├─ false → 跳过                                       │
-    │                                                    ▼
-    └─ true                                         DocDecisionExtractor
-         │                                              │
-         ▼                                              ▼
-    SnapshotManager ── 保存检测快照                  LLM 提取决策
-         │                                          (文档专用 prompt)
-         ▼                                              │
-    LLMClient ──────── 调用 LLM 提取结构化决策               │
-         │                                              ▼
-         ▼                                          DecisionNode
-    DecisionNode ───── 结构化决策节点                   (与 IM 共享)
-         │                                              │
-         ▼                                              ▼
-    MemoryGraph.detect_conflicts()
-         │
-         ├─ 有冲突 → CONFLICT_KEEP_BOTH Mutation → PushEngine.push_conflict_card()
-         │
-         ▼
-    PipelineEngine.apply_mutation()
-         │
-         ├─ CREATE  → push_decision_card()
-         ├─ UPDATE  → push_decision_update_card()
-         └─ ...
-              │
-              ▼
-    GitStorage.write_decision()  ── 写入独立 Git 分支
-              │
-              ▼
-    PushEngine ── 定时任务：热点值衰减 → 低热点推送 → 每日摘要
-```
+模型不可用时 `search_decisions` 自动降级为关键词检索，`list_decisions` 和 `get_decision` 不依赖模型服务。

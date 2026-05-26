@@ -100,32 +100,38 @@ class GitStorage:
 
     def write_decision(self, decision: Dict[str, Any]) -> str:
         branch = self._get_decision_branch(decision)
+        saved_branch = self.get_current_branch()
+
         self._ensure_decision_branch(branch)
-        self._switch_to_branch(branch)
+        if saved_branch != branch:
+            self._switch_to_branch(branch)
 
-        project = decision.get("project", "default")
-        topic = decision.get("topic_id", "") or decision.get("topic", "general")
-        sid = decision.get("sid", "") or decision.get("id", "")
-        if not sid:
-            raise GitStorageError("decision must have 'sid' or 'id' field")
+        try:
+            project = decision.get("project", "default")
+            topic = decision.get("topic_id", "") or decision.get("topic", "general")
+            sid = decision.get("sid", "") or decision.get("id", "")
+            if not sid:
+                raise GitStorageError("decision must have 'sid' or 'id' field")
 
-        decision_dir = self._work_dir / "decisions" / project / topic
-        decision_dir.mkdir(parents=True, exist_ok=True)
+            decision_dir = self._work_dir / "decisions" / project / topic
+            decision_dir.mkdir(parents=True, exist_ok=True)
 
-        path = decision_dir / f"{sid}.md"
+            path = decision_dir / f"{sid}.md"
 
-        version = self._cli.rev_list_count(branch, self._config.branch)
-        if version > 0:
-            decision["version"] = version
+            version = self._cli.rev_list_count(branch, self._config.branch)
+            decision["version"] = version + 1
 
-        content = render_decision_file(decision)
-        path.write_text(content, encoding="utf-8")
+            content = render_decision_file(decision)
+            path.write_text(content, encoding="utf-8")
 
-        rel_path = str(path.relative_to(self._work_dir))
-        msg = self._format_commit_message("decision", decision)
-        commit_hash = self._cli.commit(rel_path, msg)
+            rel_path = str(path.relative_to(self._work_dir))
+            msg = self._format_commit_message("decision", decision)
+            commit_hash = self._cli.commit(rel_path, msg)
 
-        decision["git_commit_hash"] = commit_hash
+            decision["git_commit_hash"] = commit_hash
+        finally:
+            if saved_branch and saved_branch != branch:
+                self._switch_to_branch(saved_branch)
 
         if self._config.auto_push and self._config.remote:
             self._push()

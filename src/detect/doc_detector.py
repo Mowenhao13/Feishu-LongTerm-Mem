@@ -14,8 +14,8 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
 from src.adapter.doc_adapter import DocAdapter, DocChange, DocDetectResult
-from src.signal.detector import EnhancedDetector, classify_doc_type
-from src.signal.types import (
+from src.detect.detector import EnhancedDetector, classify_doc_type
+from src.detect.types import (
     AdapterType,
     ChangeType,
     DecisionLevel,
