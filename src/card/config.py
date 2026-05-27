@@ -14,6 +14,7 @@ class CardConfig:
     card_chat_ids: List[str] = field(default_factory=list)
     feishu_receive_id_type: str = "chat_id"
 
+    trigger_on_create: bool = True
     trigger_on_conflict: bool = True
     trigger_on_update: bool = True
     trigger_on_hot_score_threshold: bool = True
@@ -40,6 +41,7 @@ class CardConfig:
         cfg.feishu_chat_id = os.getenv("PUSH_FEISHU_CHAT_ID", "")
         raw_card_ids = os.getenv("CARD_CHAT_IDS", "")
         cfg.card_chat_ids = [cid.strip() for cid in raw_card_ids.split(",") if cid.strip()]
+        cfg.trigger_on_create = os.getenv("PUSH_TRIGGER_CREATE", "true").lower() == "true"
         cfg.trigger_on_conflict = os.getenv("PUSH_TRIGGER_CONFLICT", "true").lower() == "true"
         cfg.trigger_on_update = os.getenv("PUSH_TRIGGER_UPDATE", "true").lower() == "true"
         cfg.trigger_on_hot_score_threshold = os.getenv("PUSH_TRIGGER_HOT_SCORE", "true").lower() == "true"

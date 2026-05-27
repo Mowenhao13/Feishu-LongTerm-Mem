@@ -17,6 +17,7 @@ logger = get_logger(__name__)
 
 
 class PushTrigger(str, Enum):
+    CREATE = "create"
     CONFLICT = "conflict"
     DECISION_UPDATE = "decision_update"
     HOT_SCORE_LOW = "hot_score_low"
