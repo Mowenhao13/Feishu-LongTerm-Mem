@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import asyncio
+import hashlib
+import os
 import signal
 import time
 from datetime import datetime
@@ -15,6 +17,7 @@ from src.graph.memory_graph import Conflict, MemoryGraph
 from src.graph.snapshot import DetectorSnapshot, SnapshotManager
 from src.node.node import DecisionNode
 from src.node.types import DecisionStatus, ImpactLevel, Objection, Relation, RelationType
+from src.prompts import REALTIME_DEDUP_PROMPT
 from src.storage.git_storage import GitStorage, GitStorageConfig
 from src.utils.logger import get_logger
 
@@ -131,6 +134,7 @@ class PipelineEngine:
             tags=mut.tags or [],
             confidence=mut.confidence,
             source=mut.source or "",
+            parent_id=mut.parent_id,
             created_at=datetime.now(),
             updated_at=datetime.now(),
         )
@@ -172,6 +176,8 @@ class PipelineEngine:
             existing.assignee = mut.executor
         if mut.tags:
             existing.tags = mut.tags
+        if mut.parent_id and mut.parent_id != existing.parent_id:
+            existing.parent_id = mut.parent_id
         if mut.new_status:
             try:
                 existing.status = DecisionStatus(mut.new_status)
@@ -379,28 +385,6 @@ class PipelineEngine:
         return True
 
 
-DUPLICATE_JUDGE_PROMPT = """你是一个决策去重判断助手。判断两条决策是否是同一决策（内容相近、主题相同）。
-
-新提取的决策：
-标题: {new_title}
-摘要: {new_summary}
-内容: {new_content}
-主题: {new_topic}
-
-已有的决策：
-标题: {existing_title}
-摘要: {existing_summary}
-内容: {existing_content}
-主题: {existing_topic}
-
-请判断：
-1. 这两条决策是否描述同一个决策事项？（是/否）
-2. 新决策是否应该覆盖旧决策？（是/否 — 如果新决策提供了更完整或更新的信息，则应覆盖）
-
-返回 JSON：
-{{"is_same": true/false, "should_overwrite": true/false, "reason": "简要说明"}}"""
-
-
 class MemoryEngine:
     """记忆系统引擎 — 长驻后台进程
 
@@ -428,6 +412,15 @@ class MemoryEngine:
 
         self._embedder = None
         self._reranker = None
+
+        self._hypergraph: Any = None
+        self._hg_persistence: Any = None
+        self._hypergraph_modified: bool = False
+
+        self._processed_episode_hashes: Set[str] = set()
+        self._base_view_syncer: Any = None
+
+        self._sleep_manager: Any = None
 
         self._running = False
         self._tasks: List[asyncio.Task] = []
@@ -494,6 +487,53 @@ class MemoryEngine:
             storage_path=self._config.detector_snapshot_storage_path
         )
 
+        try:
+            from src.graph.persistence import HypergraphPersistence
+            from src.structure import Hypergraph
+            hg_dir = Path(self._config.storage_path) / "hypergraph"
+            self._hg_persistence = HypergraphPersistence(hg_dir / "state.json")
+            if self._hg_persistence.exists():
+                self._hypergraph = self._hg_persistence.load()
+                stats = self._hypergraph.get_stats()
+                logger.info("Hypergraph loaded: decisions=%d facts=%d episodes=%d topics=%d",
+                            stats["decisions"], stats["facts"], stats["episodes"], stats["topics"])
+            else:
+                self._hypergraph = Hypergraph()
+                logger.info("No existing hypergraph found, starting fresh")
+        except Exception as e:
+            logger.warning("Hypergraph init failed (non-fatal): %s", e)
+            from src.structure import Hypergraph
+            self._hypergraph = Hypergraph()
+
+        try:
+            from src.view.syncer import BaseViewSyncer
+            self._base_view_syncer = BaseViewSyncer(self._storage, self._graph)
+            logger.info("BaseViewSyncer initialized")
+        except Exception as e:
+            logger.debug("BaseViewSyncer not available (non-fatal): %s", e)
+            self._base_view_syncer = None
+
+        try:
+            from src.memory.sleep import SleepManager
+            self._sleep_manager = SleepManager(
+                graph=self._graph,
+                pipeline=self._pipeline,
+                storage=self._storage,
+                hypergraph=self._hypergraph,
+                hg_persistence=self._hg_persistence,
+                base_view_syncer=self._base_view_syncer,
+                llm_provider=self._extractor._llm if hasattr(self._extractor, "_llm") else None,
+            )
+            sleep_enabled = os.getenv("MEMORY_SLEEP_ENABLED", "true").lower() == "true"
+            if sleep_enabled:
+                logger.info("SleepManager initialized (auto-sleep ENABLED, interval=%ss)",
+                            os.getenv("MEMORY_SLEEP_INTERVAL", "3600"))
+            else:
+                logger.info("SleepManager initialized (auto-sleep DISABLED, manual only)")
+        except Exception as e:
+            logger.debug("SleepManager not available (non-fatal): %s", e)
+            self._sleep_manager = None
+
         self._push_engine = PushEngine(
             config=CardConfig.from_env(),
             memory_graph=self._graph,
@@ -525,6 +565,20 @@ class MemoryEngine:
             )
         )
 
+        self._tasks.append(
+            asyncio.create_task(
+                self._hg_sync_loop(),
+                name="hg-sync-loop",
+            )
+        )
+
+        self._tasks.append(
+            asyncio.create_task(
+                self._sleep_loop(),
+                name="sleep-loop",
+            )
+        )
+
         if self._push_engine:
             self._push_engine.start_push_scheduler()
 
@@ -543,6 +597,14 @@ class MemoryEngine:
 
         if self._push_engine:
             await self._push_engine.stop()
+
+        # Save hypergraph before stopping
+        if self._hg_persistence and self._hypergraph:
+            try:
+                self._hg_persistence.save(self._hypergraph)
+                logger.info("Hypergraph saved on stop")
+            except Exception as e:
+                logger.warning("Hypergraph save on stop failed: %s", e)
 
         await self._sync_dirty_to_storage()
 
@@ -611,7 +673,8 @@ class MemoryEngine:
                 self._status.last_snapshot_time = snapshot.timestamp
 
             # Step 2: Extract decision via LLM
-            node = await self._extract_decision(content, source)
+            existing_decisions = self._build_existing_decisions_context()
+            node = await self._extract_decision(content, source, existing_decisions=existing_decisions)
 
             # Step 3: Apply mutations
             if node:
@@ -648,6 +711,14 @@ class MemoryEngine:
         chat_id = episode.chat_id
         episode_id = episode.id
 
+        # Episode 级别内容去重：相同 content 的重复发送直接跳过
+        content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16]
+        if content_hash in self._processed_episode_hashes:
+            logger.info("[Engine] Episode %s content hash %s already processed, skipping duplicate",
+                        episode_id[:12], content_hash)
+            return
+        self._processed_episode_hashes.add(content_hash)
+
         logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d",
                     episode_id[:12], chat_id[:12], episode.message_count, len(content))
 
@@ -664,7 +735,8 @@ class MemoryEngine:
         reconnected_episode_id: Optional[str] = None
 
         try:
-            node = await self._extract_decision(content, "im")
+            node = await self._extract_decision(content, "im",
+                                                 existing_decisions=self._build_existing_decisions_context())
 
             if node:
                 await self._apply_decision_mutations(node, "im")
@@ -673,17 +745,8 @@ class MemoryEngine:
                             episode_id[:12], len(content))
 
             if episode_manager is not None:
-                try:
-                    episode_manager.register_closed_episode(episode)
-                    similar = episode_manager.find_similar_episode(episode)
-                    if similar is not None:
-                        reconnected_episode_id = similar.episode_id
-                        episode.topic = similar.topic
-                        logger.info("[Engine] Episode %s reconnected to %s (topic=%s)",
-                                    episode.id[:12], similar.episode_id[:12],
-                                    similar.topic)
-                except Exception as e:
-                    logger.warning("[Engine] Semantic reconnection failed: %s", str(e)[:60])
+                logger.debug("[Engine] Episode %s managed by SuspendPool (reconnect handled at buffer level)",
+                             episode_id[:12])
 
             try:
                 from src.graph.builder import HypergraphBuilder
@@ -696,10 +759,21 @@ class MemoryEngine:
                     episode_dict["_reconnect_to"] = reconnected_episode_id
                     episode_dict["_reconnect_role"] = EpisodeRole.RECURRING.value
 
-                hypergraph = builder.build_from_episodes([episode_dict], self._extractor)
-                stats = hypergraph.get_stats()
+                if self._hypergraph is None:
+                    from src.structure import Hypergraph
+                    self._hypergraph = Hypergraph()
+
+                self._hypergraph = builder.build_from_episodes(
+                    [episode_dict], self._extractor,
+                    existing_hypergraph=self._hypergraph,
+                )
+                stats = self._hypergraph.get_stats()
                 if stats.get("episodes", 0) > 0:
-                    logger.info("[Engine] Hypergraph built: stats=%s", stats)
+                    logger.info("[Engine] Hypergraph updated: stats=%s", stats)
+
+                if self._hg_persistence:
+                    self._hg_persistence.save(self._hypergraph)
+                    self._hypergraph_modified = True
             except Exception as hg_err:
                 logger.warning("[Engine] Hypergraph build skipped: %s", str(hg_err)[:60])
 
@@ -712,11 +786,28 @@ class MemoryEngine:
             import traceback
             logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
 
-    async def _extract_decision(self, content: str, source: str) -> Optional[DecisionNode]:
-        """使用 LLM 提取决策"""
+    async def _extract_decision(self, content: str, source: str,
+                                 existing_decisions: Optional[List[Dict]] = None) -> Optional[DecisionNode]:
+        """使用 LLM 提取决策
+
+        Args:
+            content: 对话内容
+            source: 来源 ("im", "doc", etc.)
+            existing_decisions: 已有决策列表（注入到 prompt 中让 LLM 避免重复提取）
+                格式: [{"title": "...", "summary": "..."}, ...]
+        """
         if self._extractor is None:
             logger.warning("[LLM] No extractor configured, skipping LLM extraction")
             return None
+
+        # 注入已有决策上下文（Plan A）
+        if existing_decisions:
+            lines = ["⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！"]
+            for d in existing_decisions:
+                lines.append(f"- {d['title'] or d['summary']}")
+            context = "\n".join(lines)
+            content = f"{context}\n\n## 新对话\n\n{content}"
+            logger.info("[LLM] Injected %d existing decisions as context", len(existing_decisions))
 
         content_preview = content[:80].replace("\n", " ")
         logger.info("[LLM] >>> _extract_decision source=%s len=%d content=%.60s",
@@ -765,6 +856,28 @@ class MemoryEngine:
             self._status.last_error = str(e)
             return None
 
+    def _build_existing_decisions_context(self) -> Optional[List[Dict]]:
+        """收集已有活跃决策，作为提取时的去重上下文
+
+        只取每个决策的 title + summary，不暴露太多信息以控制 token 消耗。
+        """
+        if self._graph is None:
+            return None
+        try:
+            all_d = self._graph.get_all_decisions()
+            if not all_d:
+                return None
+            active = [d for d in all_d if d.status.is_active()]
+            if not active:
+                return None
+            # 每个决策只取 title+summary，最多 50 条
+            ctx = [{"title": d.title or d.summary, "summary": d.summary} for d in active[:50]]
+            logger.debug("[LLM] Built existing decisions context: %d active decisions", len(ctx))
+            return ctx
+        except Exception as e:
+            logger.warning("[LLM] Failed to build existing decisions context: %s", str(e)[:60])
+            return None
+
     def set_embedding_reranker(self, embedder: Any = None, reranker: Any = None) -> None:
         """设置 embedding + reranker 模型用于相似度检索（可选）"""
         self._embedder = embedder
@@ -774,7 +887,44 @@ class MemoryEngine:
         if reranker:
             logger.info("Reranker provider set for similarity search")
 
-    async def _find_similar_decision(self, node: DecisionNode, project: str) -> Optional[DecisionNode]:
+    @staticmethod
+    def _summary_similarity(a: str, b: str) -> float:
+        """计算两条决策摘要的文本相似度
+
+        使用字符级别的 Dice 系数（bigram 交集 / 总 bigram 数），
+        用于重复决策检测的快速预过滤。
+        """
+        if not a or not b:
+            return 0.0
+        a = a.strip().lower()
+        b = b.strip().lower()
+        def bigrams(s):
+            return set(s[i:i+2] for i in range(max(0, len(s)-1)))
+        a_bg, b_bg = bigrams(a), bigrams(b)
+        if not a_bg or not b_bg:
+            return 0.0
+        return len(a_bg & b_bg) / len(a_bg | b_bg)
+
+    @staticmethod
+    def _fast_prefilter(a: DecisionNode, b: DecisionNode) -> bool:
+        """快速预过滤：只有通过预过滤的候选才会进入 LLM 精判
+
+        与 SleepManager._fast_prefilter 对称，保持逻辑一致：
+        1. 必须同 topic
+        2. Dice >= 0.35（低阈值高召回，减少 LLM 调用）
+        3. summary 为空时退回到 full_text 比较
+        """
+        if a.topic_id != b.topic_id:
+            return False
+        dice = MemoryEngine._summary_similarity(a.summary, b.summary)
+        if dice >= 0.35:
+            return True
+        if not a.summary and not b.summary and a.full_text and b.full_text:
+            dice = MemoryEngine._summary_similarity(a.full_text, b.full_text)
+            return dice >= 0.35
+        return False
+
+    async def _find_similar_decision(self, node: DecisionNode, project: str) -> Tuple[Optional[DecisionNode], float]:
         """查找同一 topic 下内容相似的已有决策
 
         Strategy:
@@ -783,10 +933,15 @@ class MemoryEngine:
 
         同步阻塞 IO（embedding HTTP、reranker HTTP）通过 asyncio.to_thread 卸到线程池，
         避免阻塞主事件循环，确保 IM WS 长连接和防抖循环不被打断。
+
+        Returns:
+            (matched_node, similarity_score)
+            matched_node: 匹配到的决策节点，未找到则为 None
+            similarity_score: 相似度分数 (0.0~1.0)
         """
         same_topic = self._graph.query_by_topic(project, node.topic_id)
         if not same_topic:
-            return None
+            return None, 0.0
 
         candidate_texts = [(d, d.full_text or d.summary) for d in same_topic]
 
@@ -812,7 +967,7 @@ class MemoryEngine:
                 if top_candidates and top_candidates[0][1] > 0.5:
                     logger.info("[Similar] Found by embedding: sid=%s score=%.4f",
                                 top_candidates[0][0].sid[:12], top_candidates[0][1])
-                    return top_candidates[0][0]
+                    return top_candidates[0][0], top_candidates[0][1]
 
                 logger.info("[Similar] Embedding search no match (top=%.4f)",
                             top_candidates[0][1] if top_candidates else 0)
@@ -830,48 +985,66 @@ class MemoryEngine:
             return len(a_bg & b_bg) / len(a_bg | b_bg)
 
         for existing in same_topic:
-            if bigram_similarity(node.summary, existing.summary) >= 0.35:
-                logger.info("[Similar] Found by bigram: sid=%s", existing.sid[:12])
-                return existing
+            bsim = bigram_similarity(node.summary, existing.summary)
+            if bsim >= 0.35:
+                logger.info("[Similar] Found by bigram: sid=%s score=%.2f", existing.sid[:12], bsim)
+                return existing, bsim
 
-        return None
+        return None, 0.0
 
     async def _judge_decision_duplicate(self, new_node: DecisionNode, existing_node: DecisionNode) -> tuple:
-        """用 LLM 判断新决策是否与已有决策重复
+        """用 LLM 判断新决策与已有决策的关系
+
+        如果两者是同父决策或存在直接父子关系，跳过 LLM 判断直接返回 create_new。
 
         Returns:
-            (is_same: bool, should_overwrite: bool, reason: str)
+            (action: str, reason: str, info_to_merge: str)
+            action: "skip" | "update" | "conflict" | "create_new"
         """
-        if self._extractor is None:
-            return False, False, "no LLM"
+        # Phase 3: 同父决策是兄弟选项，不合并
+        if new_node.parent_id and existing_node.parent_id and new_node.parent_id == existing_node.parent_id:
+            logger.debug("[Dedup] Sibling guard: both under parent=%s, keeping both", new_node.parent_id[:12])
+            return "create_new", "siblings with same parent", ""
+        # 父子关系也不合并
+        if new_node.parent_id == existing_node.sid or existing_node.parent_id == new_node.sid:
+            logger.debug("[Dedup] Parent-child guard: skipping dedup")
+            return "create_new", "parent-child relationship", ""
 
-        prompt = DUPLICATE_JUDGE_PROMPT.format(
+        if self._extractor is None:
+            return "create_new", "no LLM", ""
+
+        prompt = REALTIME_DEDUP_PROMPT.format(
             new_title=new_node.title or new_node.summary,
             new_summary=new_node.summary,
             new_content=(new_node.full_text or new_node.summary)[:300],
             new_topic=new_node.topic_id,
+            new_confidence=new_node.confidence,
+            new_source="",
             existing_title=existing_node.title or existing_node.summary,
             existing_summary=existing_node.summary,
             existing_content=(existing_node.full_text or existing_node.summary)[:300],
             existing_topic=existing_node.topic_id,
+            existing_version=existing_node.version,
+            existing_status=existing_node.status.value,
         )
+        _dedup_temperature = float(os.getenv("MEMORY_DEDUP_TEMPERATURE", "0.05"))
         try:
             if hasattr(self._extractor, "_llm") and hasattr(self._extractor._llm, "generate"):
                 resp = await self._extractor._llm.generate(
                     prompt,
+                    temperature=_dedup_temperature,
                     response_format={"type": "json_object"},
                 )
                 import json
                 result = json.loads(resp)
-                is_same = result.get("is_same", False)
-                should_overwrite = result.get("should_overwrite", False)
+                action = result.get("action", "create_new")
                 reason = result.get("reason", "")
-                logger.info("[Dedup] LLM judge: is_same=%s overwrite=%s reason=%.60s",
-                            is_same, should_overwrite, reason)
-                return is_same, should_overwrite, reason
+                info = result.get("info_to_merge", "")
+                logger.info("[Dedup] LLM judge: action=%s reason=%.60s", action, reason)
+                return action, reason, info
         except Exception as e:
             logger.warning("[Dedup] LLM judge failed: %s", str(e)[:60])
-        return False, False, "judge_failed"
+        return "create_new", "judge_failed", ""
 
     async def _apply_decision_mutations(self, node: DecisionNode, source: str) -> None:
         """将提取的决策应用于超图和存储
@@ -909,10 +1082,14 @@ class MemoryEngine:
                 executor=node.assignee,
                 tags=node.tags,
                 confidence=node.confidence,
+                parent_id=node.parent_id,
             )
             if await asyncio.to_thread(self._pipeline.apply_mutation, updates):
                 self._status.total_mutations_applied += 1
                 logger.info("[Mutation] UPDATE applied: sid=%s v%d", node.sid[:12], existing.version + 1)
+                if self._base_view_syncer:
+                    await asyncio.to_thread(self._base_view_syncer.sync_decision, node.sid)
+                    logger.info("[Mutation] Base sync triggered for UPDATE: sid=%s", node.sid[:12])
                 if self._push_engine and self._push_engine._config.trigger_on_update:
                     await asyncio.to_thread(
                         self._push_engine.push_decision_update_card,
@@ -924,45 +1101,93 @@ class MemoryEngine:
                 logger.warning("[Mutation] UPDATE FAILED: sid=%s", node.sid[:12])
             return
 
-        similar = await self._find_similar_decision(node, project)
+        similar, similar_score = await self._find_similar_decision(node, project)
         if similar:
-            logger.info("[Mutation] Similar found: sid=%s summary=%.40s — judging by LLM",
-                        similar.sid[:12], similar.summary[:40])
-            is_same, should_overwrite, reason = await self._judge_decision_duplicate(node, similar)
-            if is_same and should_overwrite:
-                logger.info("[Mutation] LLM confirmed duplicate, overwriting: old_sid=%s new_sid=%s reason=%.40s",
-                            similar.sid[:12], node.sid[:12], reason)
-                node.sid = similar.sid
-                updates = DecisionMutation(
-                    mtype=MutationType.UPDATE,
-                    sdr_id=node.sid,
-                    project=project,
-                    topic=node.topic_id,
-                    title=node.title or node.summary,
-                    summary=node.summary,
-                    full_text=node.full_text,
-                    rationale=node.rationale,
-                    proposer=node.proposer or node.authority,
-                    executor=node.assignee,
-                    tags=node.tags,
-                    confidence=node.confidence,
-                )
-                if await asyncio.to_thread(self._pipeline.apply_mutation, updates):
-                    self._status.total_mutations_applied += 1
-                    logger.info("[Mutation] OVERWRITE applied: sid=%s v%d", node.sid[:12], similar.version + 1)
-                    if self._push_engine:
-                        await asyncio.to_thread(self._push_engine.push_decision_card, node.sid, PushTrigger.DECISION_UPDATE)
-                else:
-                    logger.warning("[Mutation] OVERWRITE FAILED: sid=%s", node.sid[:12])
-                return
-            elif is_same and not should_overwrite:
-                logger.info("[Mutation] LLM says same but don't overwrite: %s", reason)
-                return
-            else:
-                logger.info("[Mutation] LLM says not same: %s", reason)
+            logger.info("[Mutation] Similar found: sid=%s summary=%.40s score=%.4f",
+                        similar.sid[:12], similar.summary[:40], similar_score)
 
-        logger.info("[Mutation] New decision: sid=%s status=%s impact=%s",
-                    node.sid[:12], node.status.value, node.impact_level.value)
+            # Plan B: Embedding 硬约束 — 强匹配时直接合并，不走 LLM judge
+            if similar_score >= 0.65:
+                logger.info("[Mutation] HARD constraint: score=%.4f >= 0.65, direct UPDATE", similar_score)
+                node.sid = similar.sid
+                node.confidence = max(node.confidence, similar.confidence)
+                node.tags = list(set(node.tags + similar.tags))
+            else:
+                action, reason, info = await self._judge_decision_duplicate(node, similar)
+
+                if action == "skip":
+                    logger.info("[Mutation] SKIP: new=%s similar=%s reason=%.60s",
+                                node.sid[:12], similar.sid[:12], reason)
+                    return
+
+                elif action == "update":
+                    logger.info("[Mutation] UPDATE: new=%s -> similar=%s reason=%.60s",
+                                node.sid[:12], similar.sid[:12], reason)
+                    node.sid = similar.sid
+                    if info and info not in (node.full_text or ""):
+                        node.full_text = (node.full_text or "") + "\n\n[补充]\n" + info
+                    node.tags = list(set(node.tags + similar.tags))
+                    node.confidence = max(node.confidence, similar.confidence)
+                elif action == "conflict":
+                    logger.info("[Mutation] CONFLICT: new=%s vs similar=%s reason=%.60s",
+                                node.sid[:12], similar.sid[:12], reason)
+                    similar.add_relation(Relation(
+                        type=RelationType.CONFLICTS_WITH,
+                        target_id=node.sid, description=reason,
+                    ))
+                    node.add_relation(Relation(
+                        type=RelationType.CONFLICTS_WITH,
+                        target_id=similar.sid, description=reason,
+                    ))
+                    self._graph.upsert_decision(similar, project)
+                    if self._storage:
+                        await asyncio.to_thread(self._storage.write_decision,
+                            self._graph.node_to_dict(similar))
+                else:  # create_new
+                    logger.info("[Mutation] LLM says not same: %s", reason)
+
+        # 预过滤 + LLM 精判（替代 inline bigram dedup）
+        # 对未命中 embedding 的新决策，用 _fast_prefilter 快速扫描已有决策
+        if not similar:
+            all_decisions = self._graph.get_all_decisions()
+            for existing in all_decisions:
+                if existing.sid == node.sid:
+                    continue
+                if not self._fast_prefilter(node, existing):
+                    continue
+                action, reason, info = await self._judge_decision_duplicate(node, existing)
+                if action == "skip":
+                    logger.info("[Mutation] Prefilter SKIP: new=%s vs existing=%s reason=%.60s",
+                                node.sid[:12], existing.sid[:12], reason)
+                    return
+                elif action == "update":
+                    logger.info("[Mutation] Prefilter UPDATE: new=%s -> existing=%s reason=%.60s",
+                                node.sid[:12], existing.sid[:12], reason)
+                    node.sid = existing.sid
+                    if info and info not in (node.full_text or ""):
+                        node.full_text = (node.full_text or "") + "\n\n[补充]\n" + info
+                    node.tags = list(set(node.tags + existing.tags))
+                    node.confidence = max(node.confidence, existing.confidence)
+                    break
+                elif action == "conflict":
+                    logger.info("[Mutation] Prefilter CONFLICT: new=%s vs existing=%s reason=%.60s",
+                                node.sid[:12], existing.sid[:12], reason)
+                    existing.add_relation(Relation(
+                        type=RelationType.CONFLICTS_WITH,
+                        target_id=node.sid, description=reason,
+                    ))
+                    node.add_relation(Relation(
+                        type=RelationType.CONFLICTS_WITH,
+                        target_id=existing.sid, description=reason,
+                    ))
+                    self._graph.upsert_decision(existing, project)
+                    if self._storage:
+                        await asyncio.to_thread(self._storage.write_decision,
+                            self._graph.node_to_dict(existing))
+                else:  # create_new
+                    pass
+
+        logger.info("[Mutation] Confirmed new decision: sid=%s v1", node.sid[:12])
         create = DecisionMutation(
             mtype=MutationType.CREATE,
             sdr_id=node.sid,
@@ -977,12 +1202,16 @@ class MemoryEngine:
             tags=node.tags,
             confidence=node.confidence,
             source=source,
+            parent_id=node.parent_id,
             new_status=node.status.value,
             new_impact_level=node.impact_level.value,
         )
         if await asyncio.to_thread(self._pipeline.apply_mutation, create):
             self._status.total_mutations_applied += 1
             logger.info("[Mutation] CREATE applied: sid=%s v1", node.sid[:12])
+            if self._base_view_syncer:
+                await asyncio.to_thread(self._base_view_syncer.sync_decision, node.sid)
+                logger.info("[Mutation] Base sync triggered for CREATE: sid=%s", node.sid[:12])
             if self._push_engine:
                 await asyncio.to_thread(self._push_engine.push_decision_card, node.sid, PushTrigger.DECISION_UPDATE)
         else:
@@ -1029,6 +1258,75 @@ class MemoryEngine:
             except Exception as e:
                 logger.error("Sync loop error: %s", e)
 
+    async def _hg_sync_loop(self) -> None:
+        """定期 Git 提交 hypergraph state.json
+
+        与 _sync_loop 不同的职责：
+        - _sync_loop 同步 MemoryGraph 的脏决策（独立 .md 文件）
+        - _hg_sync_loop 同步 Hypergraph 的 state.json（单一文件）
+
+        两个回路用 graph_sync_interval 相同的调度频率，
+        避免过多小提交。
+        """
+        while self._running:
+            try:
+                await asyncio.sleep(self._config.graph_sync_interval)
+                if self._hypergraph_modified and self._hg_persistence and self._hypergraph:
+                    try:
+                        self._hg_persistence.save(self._hypergraph)
+                        if self._storage:
+                            await asyncio.to_thread(
+                                self._storage.cli.run,
+                                "add", "hypergraph/state.json",
+                            )
+                            await asyncio.to_thread(
+                                self._storage.cli.run,
+                                "commit", "-m", "hypergraph: auto-sync",
+                            )
+                        self._hypergraph_modified = False
+                        logger.debug("Hypergraph synced to git")
+                    except Exception as e:
+                        logger.warning("Hypergraph git sync skipped: %s", str(e)[:60])
+            except asyncio.CancelledError:
+                break
+            except Exception as e:
+                logger.error("Hypergraph sync loop error: %s", e)
+
+    async def _sleep_loop(self) -> None:
+        """定时记忆整理（睡眠）后台循环
+
+        受 MEMORY_SLEEP_ENABLED 环境变量控制：
+        - true（默认）：按 MEMORY_SLEEP_INTERVAL 间隔自动运行
+        - false：该 loop 只记录一行日志并退出，纯手动触发
+        """
+        sleep_enabled = os.getenv("MEMORY_SLEEP_ENABLED", "true").lower() == "true"
+        if not sleep_enabled:
+            logger.info("[Sleep] Auto-sleep disabled by MEMORY_SLEEP_ENABLED=false, manual only via scripts/sleep_mem.py")
+            return
+
+        interval = int(os.getenv("MEMORY_SLEEP_INTERVAL", "3600"))
+        logger.info("[Sleep] Auto-sleep loop started (interval=%ds)", interval)
+
+        while self._running:
+            try:
+                await asyncio.sleep(interval)
+                if self._sleep_manager is None:
+                    logger.debug("[Sleep] SleepManager not available, skipping")
+                    continue
+                logger.info("[Sleep] >>> Auto-sleep cycle triggered")
+                report = await asyncio.to_thread(
+                    self._sleep_manager.sleep,
+                    self._processed_episode_hashes,
+                )
+                d = report.to_dict()
+                logger.info("[Sleep] <<< Auto-sleep done: merged=%d pruned=%d promoted=%d errors=%d",
+                            d.get("duplicates_merged", 0), d.get("noise_pruned", 0),
+                            d.get("decisions_promoted", 0), len(d.get("errors", [])))
+            except asyncio.CancelledError:
+                break
+            except Exception as e:
+                logger.error("[Sleep] Auto-sleep cycle failed: %s", e)
+
     async def _sync_dirty_to_storage(self) -> None:
         if not self._storage or not self._config.graph_auto_sync:
             return
@@ -1068,6 +1366,18 @@ class MemoryEngine:
             logger.error("Process failed: %s", e)
             return False
 
+    def sleep(self) -> dict:
+        """手动触发一次记忆整理（睡眠）
+
+        供 scripts/sleep_mem.py 或外部代码调用。
+        MEMORY_SLEEP_ENABLED=false 时也可调用。
+        """
+        if self._sleep_manager:
+            report = self._sleep_manager.sleep(self._processed_episode_hashes)
+            return report.to_dict()
+        logger.warning("[Sleep] SleepManager not initialized")
+        return {"error": "SleepManager not initialized"}
+
     def retrieve(self, query: str, top_k: int = 10) -> List[DecisionNode]:
         """从 MemoryGraph 检索决策"""
         return self._graph.search_by_keywords(query)[:top_k]
@@ -1088,7 +1398,7 @@ class MemoryEngine:
 
             topic_id = data.get("topic_id", "") or data.get("topic", "general")
             title = data.get("title", "") or ""
-            summary = title or data.get("summary", "") or data.get("decision", "") or ""
+            summary = title or data.get("summary", "") or data.get("content", "") or data.get("decision", "") or ""
             full_text = data.get("content", "") or data.get("decision", "") or ""
             rationale = data.get("rationale", "") or ""
 

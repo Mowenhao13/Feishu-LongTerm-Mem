@@ -139,3 +139,72 @@ OpenClaw 会自动拉起 MCP server 并调用对应工具。
 | Reranker | `127.0.0.1:8001` | Qwen3-Reranker-4B |
 
 模型不可用时 `search_decisions` 自动降级为关键词检索，`list_decisions` 和 `get_decision` 不依赖模型服务。
+
+---
+
+## Eval 模式 — 测试结果
+
+支持通过命令行 `--eval` 模式从本地文件模拟消息处理、验证系统稳定性。
+
+### 一、单群聊测试（150 条 + 6 话题）
+
+测试配置：`--eval --delay 0 --max-messages 150`
+
+**阈值迭代：**
+
+| 轮次 | SEMANTIC | REOPEN | Suspend | Reopen | 决策 | 说明 |
+|------|----------|--------|---------|--------|------|------|
+| ① | 0.45 (均) | 0.65 (均) | 13 | 0 | 26 | Mean聚合，reopen阈值太高 |
+| ② | 0.50 (均) | 0.55 (均) | 13 | 0 | 22 | 降阈值仍不够 |
+| ③ | 0.50 (均) | 0.55 (**Max**) | 12 | **84** | 13 | Max-similarity 方案A生效 |
+
+**发现**：Max-similarity（新消息与episode内每条消息逐一比相似度取最高分）替代 Mean-aggregation（取平均）后，reopen 从 0 升至 84 次，话题回切时能正确匹配。
+
+### 二、多群聊测试（250 条 × 3 群聊）
+
+测试配置：`--eval --delay 0 --group-num 3`
+
+```
+群聊分布:
+  eval_0     84 msgs
+  eval_1     83 msgs
+  eval_2     83 msgs
+  ─────────────────
+  Episode:
+    Suspend:  31 次
+    Reopen:  120 次
+    池大小:   20 / 20（触发2次LRU淘汰）
+  ─────────────────
+  新决策:     65 个
+  总操作:     88 次（CREATE + UPDATE）
+  失败:       0
+  总耗时:     618.5s
+```
+
+**验证结论：**
+
+| 特性 | 状态 | 说明 |
+|------|------|------|
+| 群聊隔离 | ✅ | 每群独立 `ChatEpisodeBuffer`，`find_reopen` 按 `chat_id` 过滤 |
+| SuspendPool 持久化 | ✅ | 重启后从 JSON 恢复，支持 LRU 淘汰 |
+| Plan A 去重 | ✅ | 250条提取65个决策，避免重复 |
+| 语义边界检测 | ✅ | embedding + keyword 双通道触发 suspend |
+| 系统稳定性 | ✅ | 全量通过 0 崩溃 |
+
+### 三、启动 Eval 测试
+
+```bash
+# 单群聊快速测试
+uv run python main.py --eval --max-messages 20
+
+# 单群聊全量
+uv run python main.py --eval --delay 0
+
+# 多群聊测试（3个群聊 round-robin）
+uv run python main.py --eval --delay 0 --group-num 3
+
+# 限制消息数
+uv run python main.py --eval --max-messages 50 --group-num 3
+```
+
+完整设计方案见 [`ref/design/eval_mode_design.md`](ref/design/eval_mode_design.md)。

@@ -31,6 +31,7 @@ class DecisionMutation:
     executor: str = ""
     tags: List[str] = field(default_factory=list)
     source: str = ""
+    parent_id: str = ""
 
     new_status: str = ""
     old_status: str = ""

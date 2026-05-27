@@ -21,6 +21,7 @@ from src.node.types import (
     Objection,
     PhaseScope,
     Relation,
+    RelationType,
     VersionRange,
 )
 
@@ -78,6 +79,7 @@ class DecisionNode(BaseModel):
 
     version: int = Field(default=1, description="Decision version (incrementing integer)")
     branch: str = Field(default="", description="Git branch name: decision/{sid}")
+    parent_id: str = Field(default="", description="Parent decision SDRID, empty = root node")
     conflict_status: str = Field(default="", description="Conflict status: ''|active|resolved")
     conflict_with: str = Field(default="", description="SDRID of the conflicting decision")
 
@@ -155,6 +157,22 @@ class DecisionNode(BaseModel):
     def add_relation(self, relation: Relation) -> None:
         self.relations.append(relation)
         self.updated_at = datetime.now()
+
+    # ==================== Tree helpers ====================
+
+    def add_child(self, child_sid: str) -> None:
+        self.add_relation(Relation(
+            type=RelationType.PARENT_OF,
+            target_id=child_sid,
+            description=f"Parent of {child_sid}",
+        ))
+
+    def get_children(self, graph: Any = None) -> List[str]:
+        """从 relations 中获取子决策 SDRID 列表"""
+        return [r.target_id for r in self.relations if r.type == RelationType.PARENT_OF]
+
+    def has_parent(self) -> bool:
+        return bool(self.parent_id)
 
     # ==================== Topic association ====================
 

@@ -264,7 +264,7 @@ class MemoryGraph:
         sid = data.get("sid", "") or data.get("id", "")
         topic_id = data.get("topic_id", "") or data.get("topic", "general")
         title = data.get("title", "") or ""
-        summary = data.get("summary", "") or title
+        summary = data.get("summary", "") or title or data.get("content", "") or data.get("decision", "")
         full_text = data.get("content", "") or data.get("decision", "")
         rationale = data.get("rationale", "") or data.get("Rationale", "")
 
@@ -316,6 +316,7 @@ class MemoryGraph:
             assignee=data.get("executor", "") or data.get("assignee", ""),
             tags=data.get("tags", []),
             confidence=data.get("confidence", 0.8),
+            parent_id=data.get("parent_id", ""),
             source=data.get("source", ""),
             created_at=created_at_val,
         )
@@ -332,6 +333,7 @@ class MemoryGraph:
             "impact_level": node.impact_level.value,
             "version": node.version,
             "branch": node.branch or f"decision/{node.sid}",
+            "parent_id": node.parent_id,
             "conflict_status": node.conflict_status,
             "conflict_with": node.conflict_with,
             "proposer": node.proposer,
@@ -347,3 +349,56 @@ class MemoryGraph:
         if node.git_commit_hash:
             d["git_commit_hash"] = node.git_commit_hash
         return d
+
+    def get_root_nodes(self, project: str = "") -> List[DecisionNode]:
+        """返回所有根决策（parent_id 为空且活跃的决策）"""
+        with self._lock:
+            return [
+                d for d in self._decisions.values()
+                if not d.parent_id and d.status.is_active()
+                and (not project or d.project_id == project)
+            ]
+
+    def get_children_of(self, sid: str) -> List[DecisionNode]:
+        """获取指定决策的直接子决策列表（同时检查 parent_id 字段和 PARENT_OF 关系）"""
+        with self._lock:
+            # 从 PARENT_OF 关系获取
+            parent = self._decisions.get(sid)
+            if parent is None:
+                return []
+            child_ids = set(
+                r.target_id for r in parent.relations if r.type == RelationType.PARENT_OF
+            )
+            # 从 parent_id 字段获取（当子节点直接设置了 parent_id 时）
+            for node in self._decisions.values():
+                if node.parent_id == sid and node.sid != sid:
+                    child_ids.add(node.sid)
+            return [self._decisions[cid] for cid in child_ids if cid in self._decisions]
+
+    def get_descendants(self, sid: str) -> List[DecisionNode]:
+        """递归获取指定决策的所有后代"""
+        with self._lock:
+            result: List[DecisionNode] = []
+            children = self.get_children_of(sid)
+            for child in children:
+                result.append(child)
+                result.extend(self.get_descendants(child.sid))
+            return result
+
+    def get_ancestors(self, sid: str) -> List[DecisionNode]:
+        """获取从根到自身的祖先路径"""
+        with self._lock:
+            result: List[DecisionNode] = []
+            current = self._decisions.get(sid)
+            while current and current.parent_id:
+                parent = self._decisions.get(current.parent_id)
+                if parent:
+                    result.insert(0, parent)
+                    current = parent
+                else:
+                    break
+            return result
+
+    def get_tree_depth(self, sid: str) -> int:
+        """获取指定决策的树深度（根=0）"""
+        return len(self.get_ancestors(sid))

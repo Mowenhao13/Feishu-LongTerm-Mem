@@ -47,7 +47,7 @@ from lark_oapi.api.im.v1 import P2ImMessageReceiveV1
 from lark_oapi.event.dispatcher_handler import EventDispatcherHandler
 from lark_oapi.ws import Client as WSClient
 
-from config import PROJECT_ROOT
+from src.config import PROJECT_ROOT
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)

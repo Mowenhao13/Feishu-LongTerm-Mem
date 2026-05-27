@@ -1,20 +1,85 @@
+"""
+MCP (Model Context Protocol) 服务器 — 决策记忆查询与管理工具
+
+通过 stdio 传输协议暴露工具给 OpenClaw、Claude Desktop 等 MCP 客户端。
+
+入口: scripts/mcp_server.py
+"""
+
 from __future__ import annotations
 
-from typing import Any, Optional
+import json
+import logging
+import os
+import time as _time
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
+import numpy as np
+from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP
 
 from src.config import get_storage_path
+from src.graph.memory_graph import MemoryGraph
 from src.llm.client import LLMClient
+from src.model.embedding_provider import EmbeddingProvider
+from src.model.reranker_provider import RerankerProvider
+from src.view import BaseViewSyncer, is_bitable_enabled
+from src.node.node import DecisionNode
+from src.node.types import DecisionStatus, ImpactLevel
+from src.storage.git_storage import GitStorage, GitStorageConfig
+from src.utils.logger import get_logger
+
+logger = get_logger("mcp_server")
+
+PROJECT = "feishu-mem"
+WORK_DIR = get_storage_path()
 
 mcp = FastMCP(
     "Feishu Memory Agent",
-    instructions="Feishu Memory Agent 提供决策记忆管理功能，包括搜索、分类、冲突检测等",
+    instructions="""飞书协作记忆系统的决策记忆查询服务。
+
+提供以下工具:
+1. list_decisions — 列出所有决策
+2. topic — 按议题查询决策
+3. search — 搜索决策
+4. decision — 获取单个决策详情
+5. timeline — 决策时间线
+6. list_topics — 列出所有议题
+7. get_relations — 获取决策关系网络
+8. stats — 系统统计
+9. hot_decisions — 热点决策排名
+10. forgotten_decisions — 被遗忘的决策
+11. related_decisions — 相关决策
+12. recent_decisions — 最近决策
+13. git_history — Git 提交历史
+14. git_search — Git 内容搜索
+15. git_blame — Git 追溯
+16. fulltext_search — 全文搜索
+17. conflict_list — 冲突列表
+18. objection_list — 异议列表
+19. decision_card — 决策卡片
+20. decision_history — 决策版本历史
+21. create_decision — 创建决策
+22. update_decision — 更新决策
+23. confirm_decision — 确认决策
+24. reject_decision — 拒绝决策
+25. revert_decision — 回滚决策
+26. resolve_conflict — 解决冲突
+27. resolve_conflict_action — 获取冲突解决建议
+28. evaluate_dedup — 去重/冲突评估
+29. extract_decision — 从文本提取决策
+30. classify_topic — 议题归类
+31. detect_crosstopic — 检测跨议题影响
+32. check_conflict — 检测冲突
+33. extract_and_create — 提取并创建决策
+34. refresh — 重新加载
+""",
+    log_level="WARNING",
 )
 
-
 _mcp_llm_client: Optional[LLMClient] = None
-_DEFAULT_PROJECT = "feishu-mem"
 
 
 def set_llm_client(client: LLMClient) -> None:
@@ -29,271 +94,793 @@ def get_llm_client() -> LLMClient:
     return _mcp_llm_client
 
 
-def _get_storage() -> Any:
-    from src.storage.git_storage import GitStorage, GitStorageConfig
-    return GitStorage(GitStorageConfig(work_dir=get_storage_path()))
+# ==================== 数据加载 ====================
 
 
-def _get_memory_graph() -> Any:
-    from src.graph.memory_graph import MemoryGraph
-    graph = MemoryGraph()
-    try:
-        storage = _get_storage()
-        graph.load_from_git(storage, _DEFAULT_PROJECT)
-    except Exception:
-        pass
-    return graph
+class MemoryLoader:
+    def __init__(self):
+        self._graph: Optional[MemoryGraph] = None
+        self._storage: Optional[GitStorage] = None
+        self._decisions: List[Any] = []
+        self._syncer: Optional[BaseViewSyncer] = None
+        self._loaded = False
+
+    def ensure_loaded(self) -> None:
+        if self._loaded:
+            return
+        self._storage = GitStorage(config=GitStorageConfig(work_dir=WORK_DIR))
+        graph = MemoryGraph()
+        graph.load_from_git(self._storage, PROJECT)
+        self._graph = graph
+        self._decisions = graph.get_all_decisions()
+        self._loaded = True
+
+        try:
+            if not is_bitable_enabled():
+                logger.info("[BaseView] Skipped (BITABLE_ENABLED=false)")
+            else:
+                self._syncer = BaseViewSyncer(self._storage, self._graph)
+                self._storage.post_commit_hooks.append(self._syncer.sync_decision)
+                self._syncer.full_sync()
+        except Exception as e:
+            logger.warning("[BaseView] Sync init failed (non-fatal): %s", e)
+
+    @property
+    def graph(self) -> MemoryGraph:
+        self.ensure_loaded()
+        return self._graph
+
+    @property
+    def storage(self) -> GitStorage:
+        self.ensure_loaded()
+        return self._storage
+
+    @property
+    def decisions(self) -> List[Any]:
+        self.ensure_loaded()
+        return self._decisions
+
+    def reload(self) -> None:
+        self._loaded = False
+        self._graph = None
+        self._storage = None
+        self._decisions = []
+        self.ensure_loaded()
 
 
-def _get_all_decisions() -> list[dict[str, Any]]:
-    storage = _get_storage()
-    topics = storage.list_topics(_DEFAULT_PROJECT)
-    all_decisions: list[dict[str, Any]] = []
-    for t in topics:
-        all_decisions.extend(storage.list_decisions(_DEFAULT_PROJECT, t))
-    return all_decisions
+_loader = MemoryLoader()
+
+
+# ==================== 工具函数 ====================
+
+
+def _node_to_dict(node: Any) -> Dict[str, Any]:
+    return {
+        "sid": node.sid,
+        "summary": node.summary or "",
+        "full_text": node.full_text or "",
+        "topic": node.topic_id or "",
+        "status": node.status.value if hasattr(node.status, "value") else str(node.status),
+        "impact_level": node.impact_level.value if hasattr(node.impact_level, "value") else str(node.impact_level),
+        "authority": node.authority or "",
+        "assignee": node.assignee or "",
+        "tags": list(node.tags) if node.tags else [],
+        "version": getattr(node, "version", 1),
+        "hot_score": round(getattr(node.access_stats, "hot_score", 0.0), 1),
+        "created_at": node.created_at.strftime("%Y-%m-%d %H:%M") if node.created_at else "",
+        "updated_at": node.updated_at.strftime("%Y-%m-%d %H:%M") if hasattr(node, "updated_at") and node.updated_at else "",
+    }
+
+
+def _relation_to_dict(rel: Any) -> Dict[str, str]:
+    return {
+        "type": rel.type.value if hasattr(rel.type, "value") else str(rel.type),
+        "target_id": rel.target_id,
+        "description": rel.description,
+    }
+
+
+def _commit_log_to_dict(entry: Any) -> Dict[str, str]:
+    return {
+        "hash": getattr(entry, "hash", "") or getattr(entry, "commit_hash", ""),
+        "author": getattr(entry, "author", ""),
+        "date": getattr(entry, "date", ""),
+        "message": getattr(entry, "message", ""),
+    }
+
+
+def _gen_sid() -> str:
+    import uuid
+    return uuid.uuid4().hex[:12]
+
+
+# ==================== Query Tools ====================
 
 
 @mcp.tool(
     name="search",
-    description="搜索记忆系统中的决策记录，支持关键词、议题过滤",
+    description="搜索决策记忆。优先使用 Embedding + Reranker 语义检索，模型不可用时自动降级为关键词检索。",
 )
-def search(query: str, topic: str = "", limit: int = 20) -> str:
-    from src.storage.git_cli import GitCLIError
+def search(query: str, topic: str = "", top_k: int = 10) -> str:
+    _loader.ensure_loaded()
+    graph = _loader.graph
+    if not _loader.decisions:
+        return json.dumps({"results": [], "total": 0}, ensure_ascii=False)
 
-    storage = _get_storage()
+    top_k = min(max(top_k, 1), 30)
+
     try:
-        results = storage.search_content(_DEFAULT_PROJECT, query)
-    except GitCLIError:
-        return "未找到匹配的决策记录"
-    if not results:
-        return "未找到匹配的决策记录"
+        embedder = EmbeddingProvider()
+        reranker = RerankerProvider()
+        candidates = _loader.decisions
 
-    lines = ["## 搜索结果\n"]
-    for r in results[:limit]:
-        lines.append(f"- {r.file}:{r.line_num}: {r.content}")
-    return "\n".join(lines)
+        query_vec = np.array(embedder.embed([query])[0])
+        texts = [d.full_text or d.summary for d in candidates]
+        doc_vectors = np.array(embedder.embed(texts))
+        scores = embedder.cosine_similarity(query_vec, doc_vectors)
+
+        top_indices = np.argsort(scores)[::-1][:min(top_k * 2, 30)]
+        scored = [(candidates[int(i)], float(scores[int(i)])) for i in top_indices]
+        docs = [d.full_text or d.summary for d, _ in scored]
+        rerank_scores = reranker.rerank_single(query, docs)
+
+        combined = sorted(
+            [(_node_to_dict(n), es, float(rerank_scores[i])) for i, (n, es) in enumerate(scored)],
+            key=lambda x: x[2], reverse=True,
+        )[:top_k]
+
+        results = [
+            {**item[0], "score_embedding": item[1], "score_reranker": item[2]}
+            for item in combined
+        ]
+        return json.dumps({"results": results, "total": len(results), "method": "semantic"}, ensure_ascii=False)
+
+    except Exception:
+        logger.info("[search] Model unavailable, fallback to keyword")
+        kw = graph.search_by_keywords(query, topic)
+        results = [_node_to_dict(d) for d in kw[:top_k]]
+        return json.dumps({"results": results, "total": len(results), "method": "keyword"}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="topic",
+    description="按议题查询决策列表。不传 topic_id 则返回所有决策（按时间倒序）。",
+)
+def topic(topic_id: str = "", top_k: int = 50) -> str:
+    _loader.ensure_loaded()
+    if topic_id:
+        nodes = _loader.graph.query_by_topic(PROJECT, topic_id)
+    else:
+        nodes = sorted(_loader.decisions, key=lambda d: d.created_at or datetime.min, reverse=True)
+    results = [_node_to_dict(d) for d in nodes[:top_k]]
+    return json.dumps({"results": results, "total": len(results), "topic": topic_id or "all"}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="list_decisions",
+    description="列出所有存储的决策（按创建时间倒序）。不需要 topic 参数，返回完整列表。",
+)
+def list_decisions(top_k: int = 50) -> str:
+    return topic(topic_id="", top_k=top_k)
 
 
 @mcp.tool(
     name="decision",
-    description="获取单个决策的详细信息，支持推送决策卡片",
+    description="通过 SDR ID 获取单个决策的详细信息。",
 )
-def decision(sdr_id: str, topic: str = "", push: bool = False) -> str:
-    if not topic:
-        all_decisions = _get_all_decisions()
-        for d in all_decisions:
-            if d.get("sid") == sdr_id:
-                topic = d.get("topic_id", "")
-                break
-
-    if not topic:
-        return f"未找到决策: {sdr_id}"
-
-    storage = _get_storage()
-    d = storage.read_decision(_DEFAULT_PROJECT, topic, sdr_id)
+def decision(sid: str) -> str:
+    _loader.ensure_loaded()
+    d = _loader.graph.get_decision(sid)
     if d is None:
-        return f"未找到决策: {sdr_id}"
-
-    if push:
-        try:
-            graph = _get_memory_graph()
-            from src.card.pusher import PushEngine, PushTrigger
-            from src.card.config import CardConfig
-            engine = PushEngine(
-                config=CardConfig.from_env(),
-                memory_graph=graph,
-            )
-            engine.push_decision_card(sdr_id, PushTrigger.MANUAL_QUERY)
-        except Exception as e:
-            return f"推送失败: {e}"
-
-    lines = [
-        f"## {d.get('sid', 'unknown')}",
-        f"- **SDR ID**: {d.get('sid', '')}",
-        f"- **议题**: {d.get('topic_id', topic)}",
-        f"- **状态**: {d.get('status', '')}",
-        f"- **摘要**: {d.get('summary', '')}",
-    ]
-    full = d.get("full_text", "")
-    if full:
-        lines.append(f"- **全文**: {full[:500]}...")
-    elif d.get("summary"):
-        lines.append(f"- **全文**: {d['summary']}")
-    if push:
-        lines.append(f"\n✅ 决策卡片已推送")
-    return "\n".join(lines)
-
-
-@mcp.tool(
-    name="extract_decision",
-    description="从文本内容中智能提取决策信息",
-)
-def extract_decision(content: str, topics: Optional[list[str]] = None) -> str:
-    from src.prompts.decision_prompts import DECISION_EXTRACTION_PROMPT_SHORT
-
-    prompt = DECISION_EXTRACTION_PROMPT_SHORT.format(conversation_text=content)
-    client = get_llm_client()
-
-    try:
-        result = client.chat_json(
-            messages=[
-                {"role": "system", "content": prompt},
-                {"role": "user", "content": content},
-            ],
-        )
-        has_decision = result.get("has_decisions", False) if isinstance(result.get("has_decisions"), bool) else False
-        if not has_decision:
-            return "未检测到决策信息"
-
-        decisions = result.get("decisions", [])
-        if not decisions:
-            return "未检测到决策信息"
-
-        lines = ["## 决策提取结果\n"]
-        for d in decisions[:3]:
-            lines.append(f"- **标题**: {d.get('title', 'untitled')}")
-            lines.append(f"  **决策**: {d.get('content', '')}")
-            lines.append(f"  **置信度**: {d.get('confidence', 0)}")
-        return "\n".join(lines)
-    except Exception as e:
-        return f"提取失败: {e}"
-
-
-@mcp.tool(
-    name="classify_topic",
-    description="将决策智能分类到正确的议题",
-)
-def classify_topic(decision_text: str, topics: list[str]) -> str:
-    from src.prompts.topic_prompts import CLASSIFICATION_PROMPT
-
-    client = get_llm_client()
-    topics_str = ", ".join(topics)
-
-    try:
-        result = client.chat_json(
-            messages=[
-                {"role": "system", "content": CLASSIFICATION_PROMPT},
-                {"role": "user", "content": f"决策内容: {decision_text}\\n候选议题: {topics_str}"},
-            ],
-        )
-        lines = ["## 议题分类结果\n"]
-        lines.append(f"- **建议议题**: {result.get('topic', '未知')}")
-        lines.append(f"- **置信度**: {result.get('confidence', 0)}")
-        lines.append(f"- **说明**: {result.get('reasoning', '')}")
-        return "\n".join(lines)
-    except Exception as e:
-        return f"分类失败: {e}"
-
-
-@mcp.tool(
-    name="detect_crosstopic",
-    description="检测决策是否会影响多个议题",
-)
-def detect_crosstopic(title: str, decision_text: str, candidate_topics: list[str]) -> str:
-    from src.prompts.topic_prompts import CROSS_TOPIC_DETECT_PROMPT
-
-    client = get_llm_client()
-    topics_str = ", ".join(candidate_topics)
-
-    try:
-        result = client.chat_json(
-            messages=[
-                {"role": "system", "content": CROSS_TOPIC_DETECT_PROMPT},
-                {"role": "user", "content": f"决策标题: {title}\\n决策内容: {decision_text}\\n候选议题: {topics_str}"},
-            ],
-        )
-        is_cross = result.get("is_cross_topic", False)
-        lines = ["## 跨议题检测结果\n"]
-        if is_cross:
-            lines.append("⚠️ **检测到跨议题影响**")
-            refs = result.get("cross_topic_refs", [])
-            if refs:
-                lines.append(f"- **受影响议题**: {', '.join(refs)}")
-        else:
-            lines.append("✅ **无跨议题影响**")
-        lines.append(f"\\n- **置信度**: {result.get('confidence', 0)}")
-        return "\n".join(lines)
-    except Exception as e:
-        return f"检测失败: {e}"
-
-
-@mcp.tool(
-    name="check_conflict",
-    description="评估两个决策之间是否存在冲突",
-)
-def check_conflict(decision_a: str, decision_b: str) -> str:
-    from src.prompts.decision_prompts import CONFLICT_ASSESSMENT_PROMPT
-
-    client = get_llm_client()
-
-    try:
-        result = client.chat_json(
-            messages=[
-                {"role": "system", "content": CONFLICT_ASSESSMENT_PROMPT},
-                {"role": "user", "content": f"决策A: {decision_a}\\n\\n决策B: {decision_b}"},
-            ],
-        )
-        lines = ["## 冲突评估结果\n"]
-        lines.append(f"- **冲突分数**: {result.get('contradiction_score', 0)}")
-        lines.append(f"- **冲突类型**: {result.get('contradiction_type', 'unknown')}")
-        lines.append(f"- **描述**: {result.get('description', '')}")
-        lines.append(f"- **建议**: {result.get('suggestion', '')}")
-        return "\n".join(lines)
-    except Exception as e:
-        return f"冲突评估失败: {e}"
-
-
-@mcp.tool(
-    name="list_topics",
-    description="列出所有议题",
-)
-def list_topics(project: str = "") -> str:
-    storage = _get_storage()
-    topics = storage.list_topics(project or _DEFAULT_PROJECT)
-
-    lines = ["## 所有议题\n"]
-    if not topics:
-        lines.append("暂无议题")
-    else:
-        for t in topics:
-            lines.append(f"- {t}")
-    return "\n".join(lines)
-
-
-@mcp.tool(
-    name="stats",
-    description="获取系统统计信息",
-)
-def stats() -> str:
-    all_decisions = _get_all_decisions()
-    storage = _get_storage()
-    topics = storage.list_topics(_DEFAULT_PROJECT)
-
-    lines = ["## 系统统计\n"]
-    lines.append(f"- **总决策数**: {len(all_decisions)}")
-    lines.append(f"- **议题数**: {len(topics)}")
-    return "\n".join(lines)
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    return json.dumps({"result": _node_to_dict(d)}, ensure_ascii=False)
 
 
 @mcp.tool(
     name="timeline",
-    description="获取决策历史时间线",
+    description="获取所有决策的时间线（按创建时间排序）。",
 )
-def timeline() -> str:
-    all_decisions = _get_all_decisions()
+def timeline(top_k: int = 50) -> str:
+    _loader.ensure_loaded()
+    nodes = sorted(_loader.decisions, key=lambda d: d.created_at or datetime.min, reverse=True)
+    results = [_node_to_dict(d) for d in nodes[:top_k]]
+    return json.dumps({"results": results, "total": len(results)}, ensure_ascii=False)
 
-    lines = ["## 决策时间线\n"]
-    if not all_decisions:
-        lines.append("暂无决策记录")
-    else:
-        for d in all_decisions:
-            sid = d.get("sid", "unknown")
-            topic = d.get("topic_id", "")
-            summary = d.get("summary", "")
-            status = d.get("status", "")
-            lines.append(f"- [{status}] {sid}: {summary} (议题: {topic})")
-    return "\n".join(lines)
+
+@mcp.tool(
+    name="list_topics",
+    description="列出所有议题分类。",
+)
+def list_topics() -> str:
+    _loader.ensure_loaded()
+    topics = _loader.graph.list_all_topics(PROJECT)
+    return json.dumps({"topics": topics, "total": len(topics)}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="get_relations",
+    description="获取指定决策的关系网络。",
+)
+def get_relations(sid: str) -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    relations = _loader.graph.get_relations(sid)
+    related = _loader.graph.get_related_decisions(sid)
+    return json.dumps({
+        "sid": sid,
+        "summary": node.summary,
+        "relations": [_relation_to_dict(r) for r in relations],
+        "related_decisions": [_node_to_dict(d) for d in related],
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="stats",
+    description="获取系统统计信息。",
+)
+def stats() -> str:
+    _loader.ensure_loaded()
+    graph = _loader.graph
+    topics = graph.list_all_topics(PROJECT)
+    decisions = graph.get_all_decisions()
+
+    status_counts = {}
+    impact_counts = {}
+    for d in decisions:
+        s = d.status.value if hasattr(d.status, "value") else str(d.status)
+        status_counts[s] = status_counts.get(s, 0) + 1
+        imp = d.impact_level.value if hasattr(d.impact_level, "value") else str(d.impact_level)
+        impact_counts[imp] = impact_counts.get(imp, 0) + 1
+
+    return json.dumps({
+        "total_decisions": len(decisions),
+        "total_topics": len(topics),
+        "topics": topics,
+        "status_distribution": status_counts,
+        "impact_distribution": impact_counts,
+        "active_decisions": sum(1 for d in decisions if d.status.is_active()),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="hot_decisions",
+    description="获取热点决策排名（按热度值从高到低）。",
+)
+def hot_decisions(min_score: float = 50.0, top_k: int = 10) -> str:
+    _loader.ensure_loaded()
+    for d in _loader.decisions:
+        _loader.graph.recalculate_hot_score(d.sid)
+    nodes = _loader.graph.get_decisions_by_hot_score(min_score)
+    results = [_node_to_dict(d) for d in nodes[:top_k]]
+    return json.dumps({"results": results, "total": len(results), "min_score": min_score}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="forgotten_decisions",
+    description="获取被遗忘的决策（热度值低的决策）。",
+)
+def forgotten_decisions(max_score: float = 30.0, top_k: int = 10) -> str:
+    _loader.ensure_loaded()
+    for d in _loader.decisions:
+        _loader.graph.recalculate_hot_score(d.sid)
+    all_nodes = _loader.graph.get_all_decisions()
+    filtered = [d for d in all_nodes if d.access_stats.hot_score <= max_score and d.status.is_active()]
+    filtered.sort(key=lambda x: x.access_stats.hot_score)
+    results = [_node_to_dict(d) for d in filtered[:top_k]]
+    return json.dumps({"results": results, "total": len(results), "max_score": max_score}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="related_decisions",
+    description="获取与指定决策相关的其他决策。",
+)
+def related_decisions(sid: str) -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    related = _loader.graph.get_related_decisions(sid)
+    return json.dumps({
+        "sid": sid,
+        "summary": node.summary,
+        "related": [_node_to_dict(d) for d in related],
+        "total": len(related),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="recent_decisions",
+    description="获取最近创建的决策（按小时数筛选）。",
+)
+def recent_decisions(hours: int = 24, top_k: int = 20) -> str:
+    _loader.ensure_loaded()
+    since = datetime.now() - timedelta(hours=hours)
+    nodes = _loader.graph.get_recent_decisions(since)
+    results = [_node_to_dict(d) for d in nodes[:top_k]]
+    return json.dumps({"results": results, "total": len(results), "hours": hours}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="fulltext_search",
+    description="全文搜索决策内容（基于关键词匹配）。",
+)
+def fulltext_search(query: str, topic: str = "", top_k: int = 20) -> str:
+    _loader.ensure_loaded()
+    nodes = _loader.graph.search_by_keywords(query, topic)
+    results = [_node_to_dict(d) for d in nodes[:top_k]]
+    return json.dumps({"results": results, "total": len(results), "query": query}, ensure_ascii=False)
+
+
+# ==================== Git Tools ====================
+
+
+@mcp.tool(
+    name="git_history",
+    description="获取 Git 提交历史。",
+)
+def git_history(limit: int = 20) -> str:
+    _loader.ensure_loaded()
+    entries = _loader.storage.get_commit_log(limit=limit)
+    results = [_commit_log_to_dict(e) for e in entries]
+    return json.dumps({"entries": results, "total": len(results)}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="git_search",
+    description="在 Git 历史中搜索决策内容。",
+)
+def git_search(query: str) -> str:
+    _loader.ensure_loaded()
+    hits = _loader.storage.search_content(PROJECT, query)
+    results = [
+        {
+            "path": h.path if hasattr(h, "path") else getattr(h, "file_path", ""),
+            "line": getattr(h, "line", 0),
+            "content": getattr(h, "content", ""),
+        }
+        for h in hits
+    ]
+    return json.dumps({"results": results, "total": len(results), "query": query}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="git_blame",
+    description="追溯决策文件的每一行最后修改人。",
+)
+def git_blame(sid: str, topic_id: str = "") -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    t = topic_id or node.topic_id or "general"
+    entries = _loader.storage.blame_decision(PROJECT, t, sid)
+    results = [
+        {
+            "line": getattr(e, "line", 0) or getattr(e, "line_no", 0),
+            "author": getattr(e, "author", ""),
+            "time": getattr(e, "time", "") or getattr(e, "date", ""),
+            "content": getattr(e, "content", ""),
+        }
+        for e in entries
+    ]
+    return json.dumps({"sid": sid, "results": results, "total": len(results)}, ensure_ascii=False)
+
+
+# ==================== Conflict & Objection Tools ====================
+
+
+@mcp.tool(
+    name="conflict_list",
+    description="列出所有已记录的决策冲突。",
+)
+def conflict_list(top_k: int = 20) -> str:
+    _loader.ensure_loaded()
+    conflicts = []
+    for d in _loader.decisions:
+        if hasattr(d, "relations") and d.relations:
+            for r in d.relations:
+                r_type = r.type.value if hasattr(r.type, "value") else str(r.type)
+                if r_type == "CONFLICTS_WITH":
+                    target = _loader.graph.get_decision(r.target_id)
+                    conflicts.append({
+                        "decision_a": d.sid,
+                        "summary_a": d.summary,
+                        "decision_b": r.target_id,
+                        "summary_b": target.summary if target else "",
+                        "description": r.description,
+                    })
+    return json.dumps({"results": conflicts[:top_k], "total": len(conflicts)}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="objection_list",
+    description="列出指定议题下所有的异议（反对意见）。",
+)
+def objection_list(topic_id: str = "general") -> str:
+    _loader.ensure_loaded()
+    objections = _loader.storage.list_objections(PROJECT, topic_id)
+    return json.dumps({"results": objections, "total": len(objections), "topic": topic_id}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="decision_card",
+    description="获取决策的飞书卡片格式 JSON。",
+)
+def decision_card(sid: str) -> str:
+    _loader.ensure_loaded()
+    d = _loader.graph.get_decision(sid)
+    if d is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    card = {
+        "sid": d.sid,
+        "summary": d.summary,
+        "content": d.full_text,
+        "status": d.status.value if hasattr(d.status, "value") else str(d.status),
+        "impact_level": d.impact_level.value if hasattr(d.impact_level, "value") else str(d.impact_level),
+        "topic": d.topic_id,
+        "proposer": d.authority or "未知",
+        "hot_score": round(getattr(d.access_stats, "hot_score", 0.0), 1),
+        "tags": list(d.tags) if d.tags else [],
+        "created_at": d.created_at.strftime("%Y-%m-%d %H:%M") if d.created_at else "",
+    }
+    return json.dumps({"card": card}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="decision_history",
+    description="获取决策的版本变更历史。",
+)
+def decision_history(sid: str, topic_id: str = "") -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    t = topic_id or node.topic_id or "general"
+    entries = _loader.storage.get_decision_history(PROJECT, t, sid)
+    return json.dumps({
+        "sid": sid,
+        "summary": node.summary,
+        "history": [_commit_log_to_dict(e) for e in entries],
+        "total": len(entries),
+    }, ensure_ascii=False)
+
+
+# ==================== Write Tools ====================
+
+
+@mcp.tool(
+    name="create_decision",
+    description="创建一条新的决策。",
+)
+def create_decision(summary: str, content: str, topic_id: str = "general",
+                    impact_level: str = "minor", tags: str = "") -> str:
+    _loader.ensure_loaded()
+    sid = _gen_sid()
+    try:
+        impact = ImpactLevel(impact_level)
+    except ValueError:
+        impact = ImpactLevel.MINOR
+
+    tag_list = [t.strip() for t in tags.split(",") if t.strip()] if tags else []
+
+    now = datetime.now()
+    node = DecisionNode(
+        sid=sid, topic_id=topic_id, summary=summary,
+        full_text=content, status=DecisionStatus.DECIDED,
+        impact_level=impact, tags=tag_list,
+        created_at=now, updated_at=now,
+    )
+    _loader.graph.upsert_decision(node, PROJECT)
+
+    dec_dict = _node_to_dict(node)
+    dec_dict["project"] = PROJECT
+    commit_hash = _loader.storage.write_decision(dec_dict)
+
+    _loader.decisions = _loader.graph.get_all_decisions()
+    return json.dumps({"sid": sid, "summary": summary, "commit_hash": commit_hash}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="update_decision",
+    description="更新已有决策的内容或状态。",
+)
+def update_decision(sid: str, summary: str = "", content: str = "",
+                    status: str = "", impact_level: str = "") -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+
+    if summary:
+        node.summary = summary
+    if content:
+        node.full_text = content
+    if status:
+        try:
+            node.status = DecisionStatus(status)
+        except ValueError:
+            pass
+    if impact_level:
+        try:
+            node.impact_level = ImpactLevel(impact_level)
+        except ValueError:
+            pass
+    node.updated_at = datetime.now()
+
+    _loader.graph.upsert_decision(node, PROJECT)
+    dec_dict = _node_to_dict(node)
+    dec_dict["project"] = PROJECT
+    commit_hash = _loader.storage.write_decision(dec_dict)
+
+    _loader.decisions = _loader.graph.get_all_decisions()
+    return json.dumps({"sid": sid, "summary": node.summary, "commit_hash": commit_hash}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="confirm_decision",
+    description="确认（批准）决策，将状态设为 decided。",
+)
+def confirm_decision(sid: str) -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    node.status = DecisionStatus.DECIDED
+    node.updated_at = datetime.now()
+    _loader.graph.upsert_decision(node, PROJECT)
+    dec_dict = _node_to_dict(node)
+    dec_dict["project"] = PROJECT
+    _loader.storage.write_decision(dec_dict)
+    _loader.decisions = _loader.graph.get_all_decisions()
+    return json.dumps({"sid": sid, "status": "decided", "summary": node.summary}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="reject_decision",
+    description="拒绝决策，将状态设为 rejected。",
+)
+def reject_decision(sid: str, reason: str = "") -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    node.status = DecisionStatus.REJECTED
+    node.updated_at = datetime.now()
+    _loader.graph.upsert_decision(node, PROJECT)
+    dec_dict = _node_to_dict(node)
+    dec_dict["project"] = PROJECT
+    _loader.storage.write_decision(dec_dict)
+    _loader.decisions = _loader.graph.get_all_decisions()
+    return json.dumps({"sid": sid, "status": "rejected", "summary": node.summary}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="revert_decision",
+    description="回滚决策到指定 Git 提交版本。",
+)
+def revert_decision(sid: str, commit_hash: str, topic_id: str = "") -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    t = topic_id or node.topic_id or "general"
+    try:
+        old_data = _loader.storage.read_decision_at_commit(PROJECT, t, sid, commit_hash)
+        old_node = MemoryGraph._dict_to_node(old_data)
+        _loader.graph.upsert_decision(old_node, PROJECT)
+        dec_dict = _node_to_dict(old_node)
+        dec_dict["project"] = PROJECT
+        _loader.storage.write_decision(dec_dict)
+        _loader.decisions = _loader.graph.get_all_decisions()
+        return json.dumps({"sid": sid, "summary": old_node.summary,
+                           "reverted_to": commit_hash[:12]}, ensure_ascii=False)
+    except Exception as e:
+        return json.dumps({"error": f"Revert failed: {str(e)}"}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="resolve_conflict",
+    description="标记两个决策之间的冲突已解决。",
+)
+def resolve_conflict(decision_a: str, decision_b: str, resolution: str) -> str:
+    _loader.ensure_loaded()
+    a = _loader.graph.get_decision(decision_a)
+    b = _loader.graph.get_decision(decision_b)
+    if a is None or b is None:
+        return json.dumps({"error": "One or both decisions not found"}, ensure_ascii=False)
+    a.updated_at = datetime.now()
+    b.updated_at = datetime.now()
+    _loader.graph.upsert_decision(a, PROJECT)
+    _loader.graph.upsert_decision(b, PROJECT)
+    return json.dumps({
+        "resolved": True,
+        "decision_a": decision_a, "decision_b": decision_b,
+        "resolution": resolution,
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="extract_decision",
+    description="从文本中提取决策信息（需要 LLM 服务）。",
+)
+def extract_decision(text: str) -> str:
+    try:
+        from src.extractors.simple_llm_extractor import SimpleLLMExtractor
+        from src.model.llm_provider import LLMProvider as DirectLLMProvider
+        api_key = os.getenv("API_KEY", "")
+        if not api_key:
+            return json.dumps({
+                "error": "LLM not available: API_KEY not configured",
+                "hint": "Set API_KEY in .env and restart"
+            }, ensure_ascii=False)
+        provider = DirectLLMProvider(
+            provider_type="openai",
+            base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
+            api_key=api_key,
+            model=os.getenv("MODEL_NAME", "deepseek-chat"),
+        )
+        extractor = SimpleLLMExtractor(provider)
+        import asyncio
+        result = asyncio.run(extractor.extract_decision(text))
+        if result is None:
+            return json.dumps({"decision": None, "message": "No decision pattern found"}, ensure_ascii=False)
+        return json.dumps({"decision": result}, ensure_ascii=False)
+    except Exception as e:
+        return json.dumps({"error": f"Extraction failed: {str(e)}"}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="classify_topic",
+    description="给决策重新归类到指定议题。",
+)
+def classify_topic(sid: str, topic_id: str) -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    node.topic_id = topic_id
+    node.updated_at = datetime.now()
+    _loader.graph.upsert_decision(node, PROJECT)
+    dec_dict = _node_to_dict(node)
+    dec_dict["project"] = PROJECT
+    _loader.storage.write_decision(dec_dict)
+    _loader.decisions = _loader.graph.get_all_decisions()
+    return json.dumps({"sid": sid, "topic": topic_id, "summary": node.summary}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="detect_crosstopic",
+    description="检测决策对其他议题的跨议题影响。",
+)
+def detect_crosstopic(sid: str) -> str:
+    _loader.ensure_loaded()
+    node = _loader.graph.get_decision(sid)
+    if node is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    results = _loader.graph.query_cross_topic(PROJECT, node.topic_id)
+    affected = [d for d in results if d.sid != sid]
+    return json.dumps({
+        "sid": sid, "summary": node.summary, "topic": node.topic_id,
+        "cross_topic_impacts": [_node_to_dict(d) for d in affected],
+        "total": len(affected),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="check_conflict",
+    description="检查新决策与现有决策之间的冲突。",
+)
+def check_conflict(summary: str, content: str, topic_id: str = "general") -> str:
+    _loader.ensure_loaded()
+    now = datetime.now()
+    dummy = DecisionNode(
+        sid="_dummy_check_", topic_id=topic_id, summary=summary,
+        full_text=content, status=DecisionStatus.DECIDED,
+        impact_level=ImpactLevel.MINOR, created_at=now, updated_at=now,
+    )
+    conflicts = _loader.graph.detect_conflicts(dummy)
+    return json.dumps({
+        "has_conflict": len(conflicts) > 0,
+        "conflicts": [
+            {
+                "decision_a": c.decision_a,
+                "decision_b": c.decision_b,
+                "description": c.description,
+                "score": c.contradiction_score,
+            }
+            for c in conflicts
+        ],
+        "total": len(conflicts),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="evaluate_dedup",
+    description="评估决策可能存在重复或冲突。需要 LLM 服务以获得准确评估。",
+)
+def evaluate_dedup(sid_a: str, sid_b: str) -> str:
+    _loader.ensure_loaded()
+    a = _loader.graph.get_decision(sid_a)
+    b = _loader.graph.get_decision(sid_b)
+    if a is None or b is None:
+        return json.dumps({"error": "One or both decisions not found"}, ensure_ascii=False)
+    return json.dumps({
+        "decision_a": {"sid": a.sid, "summary": a.summary, "topic": a.topic_id},
+        "decision_b": {"sid": b.sid, "summary": b.summary, "topic": b.topic_id},
+        "same_topic": a.topic_id == b.topic_id,
+        "note": "Use LLM extract_decision for deeper semantic comparison",
+        "possible_dup": a.summary.lower() == b.summary.lower(),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="resolve_conflict_action",
+    description="获取解决两个决策之间冲突的建议。需要 LLM 服务。",
+)
+def resolve_conflict_action(sid_a: str, sid_b: str) -> str:
+    _loader.ensure_loaded()
+    a = _loader.graph.get_decision(sid_a)
+    b = _loader.graph.get_decision(sid_b)
+    if a is None or b is None:
+        return json.dumps({"error": "One or both decisions not found"}, ensure_ascii=False)
+    return json.dumps({
+        "decision_a": {"sid": a.sid, "summary": a.summary},
+        "decision_b": {"sid": b.sid, "summary": b.summary},
+        "actions": [
+            "1. Supersede: 标记其中一个决策被另一个取代",
+            "2. Refine: 将两个决策合并为一个更精确的决策",
+            "3. Reject: 拒绝其中一个决策并记录理由",
+        ],
+        "note": "Use LLM-based extract_decision for automated resolution suggestions",
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="extract_and_create",
+    description="从文本提取决策信息并自动创建决策。需要 LLM 服务。",
+)
+def extract_and_create(text: str, topic_id: str = "general") -> str:
+    try:
+        from src.extractors.simple_llm_extractor import SimpleLLMExtractor
+        from src.model.llm_provider import LLMProvider as DirectLLMProvider
+        api_key = os.getenv("API_KEY", "")
+        if not api_key:
+            return json.dumps({
+                "error": "LLM not available: API_KEY not configured",
+                "hint": "Set API_KEY in .env and restart"
+            }, ensure_ascii=False)
+        provider = DirectLLMProvider(
+            provider_type="openai",
+            base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
+            api_key=api_key,
+            model=os.getenv("MODEL_NAME", "deepseek-chat"),
+        )
+        extractor = SimpleLLMExtractor(provider)
+        import asyncio
+        result = asyncio.run(extractor.extract_decision(text))
+        if result is None:
+            return json.dumps({"error": "No decision pattern found in text"}, ensure_ascii=False)
+        summary = result.get("title", text[:60])
+        impact = result.get("impact_level", "minor")
+        return create_decision(summary=summary, content=text,
+                               topic_id=result.get("topic", topic_id),
+                               impact_level=impact)
+    except Exception as e:
+        return json.dumps({"error": f"Extract and create failed: {str(e)}"}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="refresh",
+    description="从 Git 存储重新加载所有决策。",
+)
+def refresh() -> str:
+    _loader.reload()
+    return json.dumps({"reloaded": True, "total": len(_loader.decisions)}, ensure_ascii=False)
+
+
+# ==================== 启动 ====================
 
 
 def run_server(transport: str = "stdio") -> None:

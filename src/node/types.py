@@ -24,6 +24,8 @@ class RelationType(str, Enum):
     CONFLICTS_WITH = "CONFLICTS_WITH"
     RELATES_TO = "RELATES_TO"
     OBJECTION = "OBJECTION"
+    PARENT_OF = "PARENT_OF"
+    CHILD_OF = "CHILD_OF"
 
 
 RELATION_TYPE_DESCRIPTIONS: Dict[RelationType, str] = {
@@ -33,6 +35,8 @@ RELATION_TYPE_DESCRIPTIONS: Dict[RelationType, str] = {
     RelationType.CONFLICTS_WITH: "A conflicts with B (A and B cannot both be true)",
     RelationType.RELATES_TO: "A relates to B (general association, no specific semantics)",
     RelationType.OBJECTION: "A has an objection from some source (links to Objection entity)",
+    RelationType.PARENT_OF: "A is the parent of B (A contains B as a sub-decision)",
+    RelationType.CHILD_OF: "A is the child of B (A is a sub-decision of B)",
 }
 
 

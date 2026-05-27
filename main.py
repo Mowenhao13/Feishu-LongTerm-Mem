@@ -157,14 +157,10 @@ async def run_episode_check_loop(
     while True:
         try:
             now = time.time()
-            stats = episode_manager.stats()
-            if stats.get("buffers"):
+            stats = episode_manager.pool_stats()
+            if stats.get("pool_size", 0) > 0:
                 logger.debug("[Episode] Pre-check: %s", stats)
-            for episode in episode_manager.check_all_timeouts(now):
-                if engine is not None:
-                    logger.info("[Episode] >>> Timeout closed episode=%s (msgs=%d, dur=%.0fs), dispatching to engine",
-                                episode.id[:12], episode.message_count, episode.duration)
-                    await engine._process_episode(episode, episode_manager)
+            episode_manager.check_all_timeouts()
 
         except asyncio.CancelledError:
             break
@@ -232,8 +228,8 @@ class LarkIMDetector:
             self._chat_ids = [cid.strip() for cid in chat_ids_raw.split(",") if cid.strip()]
             self._available = True
 
-            from src.detect.episode import EpisodeManager
-            self._episode_manager = EpisodeManager()
+            from src.detect.episode import ChatEpisodeManager
+            self._episode_manager = ChatEpisodeManager()
             logger.info("[lark_im] EpisodeManager created: gap=%.0fs max_msgs=%d max_dur=%.0fs flush=%ds semantic=%.2f reopen=%.2f",
                         self._episode_manager._time_gap,
                         self._episode_manager._max_messages,
@@ -319,23 +315,18 @@ class LarkIMDetector:
                             except (ValueError, TypeError):
                                 msg_ts = time.time()
 
-                            from src.detect.episode import EpisodeMessage
-                            ep_msg = EpisodeMessage(
+                            from src.detect.episode import ChatMessage
+                            ep_msg = ChatMessage(
                                 chat_id=chat_id,
                                 sender_id=sender_id,
                                 content=msg_text,
                                 timestamp=msg_ts,
                                 message_id=msg_id,
                             )
-                            closed_episode = self._episode_manager.add_message(ep_msg)
-                            if closed_episode is not None:
-                                logger.info("[lark_im] Episode closed in poll: id=%s chat=%s msgs=%d, dispatching to LLM",
-                                            closed_episode.id[:12], chat_id[:12], closed_episode.message_count)
-                                if self._engine is not None and self._loop is not None:
-                                    asyncio.run_coroutine_threadsafe(
-                                        self._engine._process_episode(closed_episode, self._episode_manager),
-                                        self._loop,
-                                    )
+                            self._episode_manager.add_message(ep_msg)
+                            if self._engine is not None:
+                                logger.debug("[lark_im] Poll msg=%s added to episode buffer (suspend/reopen managed internally)",
+                                            msg_id[:12])
 
             except Exception as e:
                 logger.debug("[lark_im] Poll chat=%s error: %s", chat_id[:12], e)
@@ -371,7 +362,7 @@ class LarkIMDetector:
         self._engine = engine
         self._loop = loop
 
-        from src.detect.episode import EpisodeMessage
+        from src.detect.episode import ChatMessage
 
         def on_message(event: Any) -> None:
             try:
@@ -394,21 +385,17 @@ class LarkIMDetector:
                             chat_id[:12], sender_id[:12], len(content or ""), content[:60])
 
                 if self._engine is not None and self._loop is not None and content and self._episode_manager is not None:
-                    msg_obj = EpisodeMessage(
+                    msg_obj = ChatMessage(
                         chat_id=chat_id,
                         sender_id=sender_id,
                         content=content,
                         timestamp=time.time(),
                         message_id=getattr(message, "message_id", "") or "",
                     )
-                    closed_episode = self._episode_manager.add_message(msg_obj)
-                    if closed_episode is not None:
-                        logger.info("[lark_im] Episode closed: id=%s chat=%s msgs=%d, dispatching to LLM",
-                                    closed_episode.id[:12], chat_id[:12], closed_episode.message_count)
-                        asyncio.run_coroutine_threadsafe(
-                            self._engine._process_episode(closed_episode, self._episode_manager),
-                            self._loop,
-                        )
+                    self._episode_manager.add_message(msg_obj)
+                    if self._engine is not None:
+                        logger.debug("[lark_im] WS msg=%s added to episode buffer (suspend/reopen managed internally)",
+                                    message_id[:12])
 
             except Exception as e:
                 logger.error("[lark_im] WS handler error: %s\n%s", e, traceback.format_exc())
@@ -537,6 +524,7 @@ async def main_async() -> None:
             api_key=os.getenv("API_KEY", ""),
             model=os.getenv("MODEL_NAME", "deepseek-chat"),
             max_tokens=4096,
+            enable_stats=True,
         )
         logger.info("[LLM] LLMProvider created: %s model=%s",
                     os.getenv("BASE_URL"), os.getenv("MODEL_NAME"))
@@ -603,8 +591,27 @@ async def main_async() -> None:
         except Exception as e:
             logger.warning("[lark_im] Failed to inject embedding provider (non-fatal): %s", e)
 
-    # 7. 启动检测器循环
+    # 7. 启动检测器循环 + LLM 统计定期输出
     detector_states: Dict[str, asyncio.Task] = {}
+
+    # 定期输出 LLM 调用统计
+    async def log_llm_stats(interval: int = 300):
+        while True:
+            await asyncio.sleep(interval)
+            if llm_provider:
+                stats = llm_provider.get_accumulated_stats()
+                if stats and stats.get("call_count", 0) > 0:
+                    avg_dur = stats["total_duration"] / stats["call_count"]
+                    logger.info(
+                        "[LLM Stats] calls=%d | tokens=%d (%d in / %d out) | "
+                        "total=%.1fs | avg=%.2fs/call",
+                        stats["call_count"],
+                        stats["total_tokens"],
+                        stats["prompt_tokens"],
+                        stats["completion_tokens"],
+                        stats["total_duration"],
+                        avg_dur,
+                    )
 
     # lark_im 检测器 — 根据 mode 选择启动方式
     im_state = DetectorState(
@@ -656,7 +663,7 @@ async def main_async() -> None:
         detector_states["lark_doc"] = task
         logger.info("[lark_doc] detector started (interval=%ds, docs_dir=%s)", doc_state.interval, docs_dir)
 
-    # 7. 打印检测器状态
+    # 7. 打印检测器状态并启动 LLM 统计任务
     logger.info("[Detectors] Configuration:")
     for name, state in [("lark_im", im_state), ("lark_doc", doc_state)]:
         if state.enabled:
@@ -664,6 +671,9 @@ async def main_async() -> None:
             logger.info("  %s: interval=%ds, burst=%ds, timeout=%ds%s", name, state.interval, state.burst_interval, state.burst_timeout, mode_str)
         else:
             logger.info("  %s: disabled", name)
+
+    stats_task = asyncio.create_task(log_llm_stats(interval=300), name="llm-stats-log")
+    detector_states["llm_stats"] = stats_task
 
     logger.info("[System] All detectors started, waiting for signals...")
 
@@ -690,11 +700,41 @@ async def main_async() -> None:
         # 停止引擎
         await engine.stop()
 
+        # 打印最终 LLM 统计
+        if llm_provider:
+            stats = llm_provider.get_accumulated_stats()
+            if stats and stats.get("call_count", 0) > 0:
+                avg_dur = stats["total_duration"] / stats["call_count"]
+                print()
+                print("=" * 60)
+                print("  LLM 调用统计（本次运行）")
+                print("=" * 60)
+                print(f"  调用次数:      {stats['call_count']}")
+                print(f"  总 Token:      {stats['total_tokens']:,}  (输入 {stats['prompt_tokens']:,} / 输出 {stats['completion_tokens']:,})")
+                print(f"  总耗时:        {stats['total_duration']:.1f}s")
+                print(f"  平均耗时:      {avg_dur:.2f}s/次")
+                print("=" * 60)
+                print()
+            else:
+                logger.info("[LLM Stats] No LLM calls recorded in this session")
+
         logger.info("[System] Shutdown complete")
 
 
 def main() -> None:
     """同步入口"""
+    if "--eval" in sys.argv:
+        try:
+            from src.eval_runner import run_eval
+            import asyncio
+            asyncio.run(run_eval())
+        except KeyboardInterrupt:
+            logger.info("[Eval] Interrupted by user")
+        except Exception:
+            logger.error("[Eval] Error: %s", traceback.format_exc())
+            sys.exit(1)
+        return
+
     try:
         asyncio.run(main_async())
     except KeyboardInterrupt:

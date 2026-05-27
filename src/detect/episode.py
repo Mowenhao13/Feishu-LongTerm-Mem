@@ -12,6 +12,7 @@ import numpy as np
 from src.utils.logger import get_logger
 
 if TYPE_CHECKING:
+    from src.detect.suspend_pool import SuspendPool, SuspendedEpisode
     from src.model.embedding_provider import EmbeddingProvider
 
 logger = get_logger(__name__)
@@ -28,7 +29,7 @@ REOPEN_THRESHOLD = 0.65
 
 
 @dataclass
-class EpisodeMessage:
+class ChatMessage:
     chat_id: str
     sender_id: str
     content: str
@@ -37,10 +38,10 @@ class EpisodeMessage:
 
 
 @dataclass
-class Episode:
+class ChatEpisode:
     id: str
     chat_id: str
-    messages: List[EpisodeMessage] = field(default_factory=list)
+    messages: List[ChatMessage] = field(default_factory=list)
     start_time: float = 0.0
     end_time: float = 0.0
     topic: str = ""
@@ -53,6 +54,8 @@ class Episode:
     @property
     def message_count(self) -> int:
         return len(self.messages)
+
+
 
     @property
     def duration(self) -> float:
@@ -86,11 +89,11 @@ class Episode:
         return result
 
 
-class _InternalEpisode:
+class _InternalChatEpisode:
     def __init__(self, chat_id: str):
         self.id = _generate_episode_id()
         self.chat_id = chat_id
-        self.messages: List[EpisodeMessage] = []
+        self.messages: List[ChatMessage] = []
         self.first_timestamp: float = 0.0
         self.last_timestamp: float = 0.0
         self.last_content: str = ""
@@ -98,7 +101,21 @@ class _InternalEpisode:
         self._embeddings: List[np.ndarray] = []
         self._last_embedding: Optional[np.ndarray] = None
 
-    def add(self, msg: EpisodeMessage, embedding: Optional[np.ndarray] = None) -> None:
+    @classmethod
+    def resume(cls, suspended: "SuspendedEpisode") -> "_InternalChatEpisode":
+        ep = cls.__new__(cls)
+        ep.id = suspended.episode_id
+        ep.chat_id = suspended.chat_id
+        ep.messages = [ChatMessage(**m) for m in suspended.messages_data]
+        ep.first_timestamp = suspended.start_time
+        ep.last_timestamp = suspended.last_timestamp
+        ep.last_content = suspended.last_content
+        ep._embeddings = [np.array(e) for e in suspended.embeddings]
+        ep._last_embedding = ep._embeddings[-1] if ep._embeddings else None
+        ep.message_count = len(ep.messages)
+        return ep
+
+    def add(self, msg: ChatMessage, embedding: Optional[np.ndarray] = None) -> None:
         if self.message_count == 0:
             self.first_timestamp = msg.timestamp
         self.last_timestamp = msg.timestamp
@@ -114,9 +131,9 @@ class _InternalEpisode:
             return None
         return np.mean(self._embeddings, axis=0)
 
-    def to_episode(self) -> Episode:
+    def to_chat_episode(self) -> ChatEpisode:
         agg_emb = self.aggregate_embedding()
-        return Episode(
+        return ChatEpisode(
             id=self.id,
             chat_id=self.chat_id,
             messages=self.messages,
@@ -132,7 +149,7 @@ class _InternalEpisode:
         return now - self.first_timestamp
 
 
-class EpisodeBuffer:
+class ChatEpisodeBuffer:
     def __init__(
         self,
         chat_id: str,
@@ -140,15 +157,19 @@ class EpisodeBuffer:
         max_messages: int = 100,
         max_duration: float = 7200.0,
         semantic_threshold: float = SEMANTIC_GAP_THRESHOLD,
+        reopen_threshold: float = REOPEN_THRESHOLD,
         idle_flush_interval: float = 30.0,
+        pool: Optional[SuspendPool] = None,
     ):
         self.chat_id = chat_id
         self._time_gap = time_gap_threshold
         self._max_messages = max_messages
         self._max_duration = max_duration
         self._semantic_threshold = semantic_threshold
+        self._reopen_threshold = reopen_threshold
         self._idle_flush = idle_flush_interval
-        self._current: Optional[_InternalEpisode] = None
+        self._pool = pool
+        self._current: Optional[_InternalChatEpisode] = None
         self._embedding_fn: Optional[Any] = None
 
     def set_embedding_fn(self, fn: Any) -> None:
@@ -169,11 +190,44 @@ class EpisodeBuffer:
         norm = float(np.linalg.norm(a) * np.linalg.norm(b))
         return dot / norm if norm > 1e-9 else 0.0
 
-    def add_message(self, msg: EpisodeMessage) -> Optional[Episode]:
+    def _suspend_current(self) -> None:
+        if self._current is None or self._pool is None:
+            return
+        self._pool.suspend(
+            chat_id=self.chat_id,
+            messages_data=[m.__dict__ for m in self._current.messages],
+            embeddings=self._current._embeddings,
+            start_time=self._current.first_timestamp,
+            last_timestamp=self._current.last_timestamp,
+            last_content=self._current.last_content,
+            episode_id=self._current.id,
+        )
+        self._current = None
+
+    def _try_reopen(self, msg_embedding: Optional[np.ndarray]) -> bool:
+        if self._pool is None or msg_embedding is None:
+            return False
+        candidate = self._pool.find_reopen(
+            self.chat_id, msg_embedding, self._reopen_threshold
+        )
+        if candidate is None:
+            return False
+        suspended = self._pool.reopen(candidate.episode_id)
+        if suspended is None:
+            return False
+        self._current = _InternalChatEpisode.resume(suspended)
+        logger.info("[Episode] chat=%s REOPENED episode=%s (msgs=%d)",
+                    self.chat_id[:12], self._current.id[:12], self._current.message_count)
+        return True
+
+    def add_message(self, msg: ChatMessage) -> Optional[ChatEpisode]:
         msg_embedding = self._compute_embedding(msg.content)
 
         if self._current is None:
-            self._current = _InternalEpisode(chat_id=self.chat_id)
+            if self._try_reopen(msg_embedding):
+                self._current.add(msg, msg_embedding)
+                return None
+            self._current = _InternalChatEpisode(chat_id=self.chat_id)
             logger.info("[Episode] chat=%s new episode=%s started with msg=%s",
                         self.chat_id[:12], self._current.id[:12], msg.message_id[:12])
 
@@ -181,42 +235,51 @@ class EpisodeBuffer:
             gap = msg.timestamp - self._current.last_timestamp
             if gap >= self._time_gap:
                 gap_min = gap / 60.0
-                logger.info("[Episode] chat=%s TIME-GAP boundary: gap=%.1fmin >= %.0fmin, closing episode=%s (msgs=%d)",
+                logger.info("[Episode] chat=%s TIME-GAP boundary: gap=%.1fmin >= %.0fmin, suspend episode=%s (msgs=%d)",
                             self.chat_id[:12], gap_min, self._time_gap / 60.0,
                             self._current.id[:12], self._current.message_count)
-                closed = self._close_current()
-                self._current = _InternalEpisode(chat_id=self.chat_id)
-                logger.info("[Episode] chat=%s new episode=%s started after time-gap close",
+                self._suspend_current()
+                if self._try_reopen(msg_embedding):
+                    self._current.add(msg, msg_embedding)
+                    return None
+                self._current = _InternalChatEpisode(chat_id=self.chat_id)
+                logger.info("[Episode] chat=%s new episode=%s started after time-gap suspend",
                             self.chat_id[:12], self._current.id[:12])
                 self._current.add(msg, msg_embedding)
-                return closed
+                return None
 
         if self._current.message_count > 0:
             if _is_topic_shift(msg.content, self._current.last_content):
-                logger.info("[Episode] chat=%s KEYWORD boundary: keyword match in '%s', closing episode=%s (msgs=%d)",
+                logger.info("[Episode] chat=%s KEYWORD boundary: keyword match in '%s', suspend episode=%s (msgs=%d)",
                             self.chat_id[:12], msg.content[:30],
                             self._current.id[:12], self._current.message_count)
-                closed = self._close_current()
-                self._current = _InternalEpisode(chat_id=self.chat_id)
-                logger.info("[Episode] chat=%s new episode=%s started after keyword close",
+                self._suspend_current()
+                if self._try_reopen(msg_embedding):
+                    self._current.add(msg, msg_embedding)
+                    return None
+                self._current = _InternalChatEpisode(chat_id=self.chat_id)
+                logger.info("[Episode] chat=%s new episode=%s started after keyword suspend",
                             self.chat_id[:12], self._current.id[:12])
                 self._current.add(msg, msg_embedding)
-                return closed
+                return None
 
         if (self._current.message_count > 0
                 and msg_embedding is not None
                 and self._current._last_embedding is not None):
             sim = self._cosine_similarity(msg_embedding, self._current._last_embedding)
             if sim < self._semantic_threshold:
-                logger.info("[Episode] chat=%s SEMANTIC-GAP boundary: sim=%.4f < %.2f, closing episode=%s (msgs=%d)",
+                logger.info("[Episode] chat=%s SEMANTIC-GAP boundary: sim=%.4f < %.2f, suspend episode=%s (msgs=%d)",
                             self.chat_id[:12], sim, self._semantic_threshold,
                             self._current.id[:12], self._current.message_count)
-                closed = self._close_current()
-                self._current = _InternalEpisode(chat_id=self.chat_id)
+                self._suspend_current()
+                if self._try_reopen(msg_embedding):
+                    self._current.add(msg, msg_embedding)
+                    return None
+                self._current = _InternalChatEpisode(chat_id=self.chat_id)
                 logger.info("[Episode] chat=%s new episode=%s started after semantic gap",
                             self.chat_id[:12], self._current.id[:12])
                 self._current.add(msg, msg_embedding)
-                return closed
+                return None
             logger.debug("[Episode] chat=%s semantic sim=%.4f within threshold",
                          self.chat_id[:12], sim)
 
@@ -226,59 +289,60 @@ class EpisodeBuffer:
                      self._current.id[:12], self._current.message_count)
 
         if self._current.message_count >= self._max_messages:
-            logger.info("[Episode] chat=%s MAX-MSG boundary: %d >= %d, force-closing episode=%s",
+            logger.info("[Episode] chat=%s MAX-MSG boundary: %d >= %d, suspending episode=%s",
                         self.chat_id[:12], self._current.message_count, self._max_messages,
                         self._current.id[:12])
-            return self.force_close()
+            self._suspend_current()
+            if self._try_reopen(None):
+                return None
+            self._current = _InternalChatEpisode(chat_id=self.chat_id)
+            logger.info("[Episode] chat=%s new episode=%s started after max-msg suspend",
+                        self.chat_id[:12], self._current.id[:12])
 
         return None
 
-    def check_timeout(self, now: float) -> Optional[Episode]:
+    def check_timeout(self, now: float) -> Optional[ChatEpisode]:
         if self._current is None or self._current.message_count == 0:
             return None
 
-        # 短超时静默刷新：用户停止发送一段时间后，自动关闭并分发
         gap = now - self._current.last_timestamp
         if gap >= self._idle_flush:
-            logger.info("[Episode] chat=%s IDLE-FLUSH: idle=%.1fs >= %.0fs, closing episode=%s (msgs=%d)",
+            logger.info("[Episode] chat=%s IDLE-FLUSH: idle=%.1fs >= %.0fs, suspending episode=%s (msgs=%d)",
                         self.chat_id[:12], gap, self._idle_flush,
                         self._current.id[:12], self._current.message_count)
-            return self.force_close()
+            self._suspend_current()
+            return None
 
-        # 长超时主题边界：长时间无消息，视为新主题的开始
         if gap >= self._time_gap:
             gap_min = gap / 60.0
-            logger.info("[Episode] chat=%s TIME-GAP boundary: idle=%.1fmin >= %.0fmin, closing episode=%s (msgs=%d)",
+            logger.info("[Episode] chat=%s TIME-GAP boundary: idle=%.1fmin >= %.0fmin, suspending episode=%s (msgs=%d)",
                         self.chat_id[:12], gap_min, self._time_gap / 60.0,
                         self._current.id[:12], self._current.message_count)
-            return self.force_close()
+            self._suspend_current()
+            return None
 
         total_dur = now - self._current.first_timestamp
         if total_dur >= self._max_duration:
             dur_min = total_dur / 60.0
-            logger.info("[Episode] chat=%s DURATION timeout: span=%.1fmin >= %.0fmin, closing episode=%s (msgs=%d)",
+            logger.info("[Episode] chat=%s DURATION timeout: span=%.1fmin >= %.0fmin, suspending episode=%s (msgs=%d)",
                         self.chat_id[:12], dur_min, self._max_duration / 60.0,
                         self._current.id[:12], self._current.message_count)
-            return self.force_close()
+            self._suspend_current()
+            return None
         return None
 
-    def force_close(self) -> Optional[Episode]:
+    def force_close(self) -> Optional[ChatEpisode]:
         if self._current is None or self._current.message_count == 0:
             if self._current is not None:
                 self._current = None
             return None
-        closed = self._close_current()
-        if closed:
-            logger.info("[Episode] chat=%s FORCE-CLOSE episode=%s (msgs=%d, dur=%.0fs)",
-                        self.chat_id[:12], closed.id[:12], closed.message_count,
-                        closed.duration)
-        self._current = None
-        return closed
+        self._suspend_current()
+        return None
 
-    def _close_current(self) -> Optional[Episode]:
+    def _close_current(self) -> Optional[ChatEpisode]:
         if self._current is None:
             return None
-        ep = self._current.to_episode()
+        ep = self._current.to_chat_episode()
         self._current = None
         logger.debug("[Episode] chat=%s episode=%s closed (msgs=%d)",
                      self.chat_id[:12], ep.id[:12], ep.message_count)
@@ -294,7 +358,7 @@ class EpisodeBuffer:
 
 
 @dataclass
-class _ClosedEpisodeRecord:
+class _ClosedChatEpisodeRecord:
     episode_id: str
     chat_id: str
     embedding: np.ndarray
@@ -304,7 +368,7 @@ class _ClosedEpisodeRecord:
     closed_at: float
 
 
-class EpisodeManager:
+class ChatEpisodeManager:
     """Thread-safe manager for per-chat episode buffers with semantic reconnection."""
 
     def __init__(
@@ -315,6 +379,7 @@ class EpisodeManager:
         semantic_threshold: Optional[float] = None,
         reopen_threshold: Optional[float] = None,
         idle_flush_interval: Optional[float] = None,
+        pool: Optional[SuspendPool] = None,
     ):
         self._time_gap = (
             time_gap_threshold if time_gap_threshold is not None
@@ -340,174 +405,58 @@ class EpisodeManager:
             idle_flush_interval if idle_flush_interval is not None
             else float(os.getenv("EPISODE_IDLE_FLUSH", "30"))
         )
-        self._buffers: Dict[str, EpisodeBuffer] = {}
+        self._buffers: Dict[str, ChatEpisodeBuffer] = {}
         self._lock = threading.Lock()
-        self._embedding_provider: Any = None
-        self._closed_episodes: Dict[str, _ClosedEpisodeRecord] = {}
+        self._pool = pool or SuspendPool()
+        self._embedding_fn: Optional[Any] = None
 
-    def set_embedding_provider(self, provider: Any) -> None:
-        self._embedding_provider = provider
-        embed_fn = getattr(provider, "embed", None)
-        if embed_fn is None:
-            logger.warning("[EpisodeManager] Embedding provider has no embed() method")
-            return
+    def get_or_create_buffer(self, chat_id: str) -> ChatEpisodeBuffer:
         with self._lock:
-            for buf in self._buffers.values():
-                buf.set_embedding_fn(embed_fn)
-
-    def get_or_create_buffer(self, chat_id: str) -> EpisodeBuffer:
-        with self._lock:
-            buf = self._buffers.get(chat_id)
-            if buf is None:
-                buf = EpisodeBuffer(
+            if chat_id not in self._buffers:
+                buf = ChatEpisodeBuffer(
                     chat_id=chat_id,
                     time_gap_threshold=self._time_gap,
                     max_messages=self._max_messages,
                     max_duration=self._max_duration,
                     semantic_threshold=self._semantic_threshold,
+                    reopen_threshold=self._reopen_threshold,
                     idle_flush_interval=self._idle_flush,
+                    pool=self._pool,
                 )
-                embed_fn = getattr(self._embedding_provider, "embed", None) if self._embedding_provider else None
-                if embed_fn:
-                    buf.set_embedding_fn(embed_fn)
+                if self._embedding_fn is not None:
+                    buf.set_embedding_fn(self._embedding_fn)
                 self._buffers[chat_id] = buf
                 logger.info("[EpisodeManager] Created buffer for chat=%s", chat_id[:12])
-            return buf
+            return self._buffers[chat_id]
 
-    def add_message(self, msg: EpisodeMessage) -> Optional[Episode]:
+    def set_buffer_embedding_fn(self, embed_fn: Any) -> None:
+        self._embedding_fn = embed_fn
+        with self._lock:
+            for buf in self._buffers.values():
+                buf.set_embedding_fn(embed_fn)
+
+    def add_message(self, msg: ChatMessage) -> None:
         buf = self.get_or_create_buffer(msg.chat_id)
-        return buf.add_message(msg)
+        buf.add_message(msg)
 
-    def register_closed_episode(self, episode: Episode) -> None:
-        if episode.embedding is None:
-            logger.debug("[EpisodeManager] Episode %s has no embedding, computing on close", episode.id[:12])
-            episode.embedding = self._compute_episode_embedding(episode)
-        if episode.embedding is None:
-            return
-        record = _ClosedEpisodeRecord(
-            episode_id=episode.id,
-            chat_id=episode.chat_id,
-            embedding=episode.embedding,
-            full_text_snippet=episode.full_text[:120],
-            message_count=episode.message_count,
-            topic=episode.topic,
-            closed_at=time.time(),
-        )
+    def check_all_timeouts(self) -> None:
+        now = time.time()
+        for buf in self._buffers.values():
+            buf.check_timeout(now)
+
+    def close_all(self) -> List[ChatEpisode]:
         with self._lock:
-            self._closed_episodes[episode.id] = record
-        logger.info("[EpisodeManager] Registered closed episode=%s chat=%s (msgs=%d, topic=%s)",
-                    episode.id[:12], episode.chat_id[:12], episode.message_count, episode.topic or "untagged")
+            for buf in self._buffers.values():
+                buf.force_close()
+            self._buffers.clear()
+        self._pool.save()
+        return []
 
-    def find_similar_episode(
-        self,
-        episode: Episode,
-        min_similarity: Optional[float] = None,
-    ) -> Optional[_ClosedEpisodeRecord]:
-        threshold = min_similarity if min_similarity is not None else self._reopen_threshold
-        if episode.embedding is None:
-            episode.embedding = self._compute_episode_embedding(episode)
-        if episode.embedding is None:
-            return None
+    def pool_size(self) -> int:
+        return self._pool.size
 
-        best_sim = 0.0
-        best_record: Optional[_ClosedEpisodeRecord] = None
-        with self._lock:
-            for record in self._closed_episodes.values():
-                if record.chat_id != episode.chat_id:
-                    continue
-                sim = float(np.dot(episode.embedding, record.embedding)) / (
-                    float(np.linalg.norm(episode.embedding)) * float(np.linalg.norm(record.embedding)) + 1e-9
-                )
-                if sim > best_sim:
-                    best_sim = sim
-                    best_record = record
-
-        if best_record and best_sim >= threshold:
-            logger.info("[EpisodeManager] Found similar episode: new=%s old=%s sim=%.4f (threshold=%.2f)",
-                        episode.id[:12], best_record.episode_id[:12], best_sim, threshold)
-        else:
-            logger.debug("[EpisodeManager] No similar episode found for %s (best=%.4f, threshold=%.2f)",
-                         episode.id[:12], best_sim, threshold)
-
-        return best_record if best_sim >= threshold else None
-
-    def _compute_episode_embedding(self, episode: Episode) -> Optional[np.ndarray]:
-        if self._embedding_provider is None:
-            return None
-        try:
-            full_text = episode.full_text
-            if not full_text or len(full_text.strip()) < 10:
-                return None
-            embed_fn = getattr(self._embedding_provider, "embed", None)
-            if embed_fn is None:
-                return None
-            vectors = embed_fn([full_text])
-            if vectors:
-                return np.array(vectors[0])
-        except Exception as e:
-            logger.debug("[EpisodeManager] Embedding compute failed: %s", str(e)[:60])
-        return None
-
-    def check_all_timeouts(self, now: float) -> List[Episode]:
-        ready: List[Episode] = []
-        with self._lock:
-            for chat_id, buf in self._buffers.items():
-                if buf.current_message_count > 0:
-                    last_ts = buf._current.last_timestamp if buf._current else 0
-                    logger.debug("[EpisodeManager] Checking chat=%s episode=%s msgs=%d idle=%.0fs",
-                                 chat_id[:12], buf.current_episode_id, buf.current_message_count,
-                                 now - last_ts)
-                ep = buf.check_timeout(now)
-                if ep is not None:
-                    ready.append(ep)
-        if ready:
-            logger.info("[EpisodeManager] Timeout check: %d episode(s) closed", len(ready))
-        return ready
-
-    def force_close(self, chat_id: str) -> Optional[Episode]:
-        with self._lock:
-            buf = self._buffers.get(chat_id)
-            if buf is None:
-                return None
-            return buf.force_close()
-
-    def close_all(self) -> List[Episode]:
-        all_episodes: List[Episode] = []
-        with self._lock:
-            for chat_id in list(self._buffers.keys()):
-                buf = self._buffers[chat_id]
-                ep = buf.force_close()
-                if ep is not None:
-                    all_episodes.append(ep)
-                self._buffers.pop(chat_id, None)
-        if all_episodes:
-            logger.info("[EpisodeManager] Closed all: %d episode(s)", len(all_episodes))
-        return all_episodes
-
-    @property
-    def buffer_count(self) -> int:
-        with self._lock:
-            return len(self._buffers)
-
-    @property
-    def closed_count(self) -> int:
-        with self._lock:
-            return len(self._closed_episodes)
-
-    def stats(self) -> Dict[str, Any]:
-        with self._lock:
-            return {
-                "buffer_count": len(self._buffers),
-                "closed_episodes": len(self._closed_episodes),
-                "buffers": {
-                    cid: {
-                        "episode": buf.current_episode_id,
-                        "messages": buf.current_message_count,
-                    }
-                    for cid, buf in self._buffers.items()
-                    if buf.current_message_count > 0
-                },
-            }
+    def pool_stats(self) -> Dict[str, Any]:
+        return self._pool.stats()
 
 
 def _is_topic_shift(content: str, last_content: str) -> bool:

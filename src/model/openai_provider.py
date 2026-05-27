@@ -7,6 +7,7 @@ This provider uses OpenRouter API to access OpenAI models.
 import os
 import time
 import json
+import threading
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -60,8 +61,8 @@ class OpenAIProvider(LLMProvider):
         
         # Optional statistics feature (disabled by default, does not affect existing usage)
         if self.enable_stats:
-            self.current_call_stats = None  # Store current call statistics
-            # Accumulated statistics (for tracking token usage across the entire session)
+            self.current_call_stats = None
+            self._stats_lock = threading.Lock()
             self.accumulated_stats = {
                 'prompt_tokens': 0,
                 'completion_tokens': 0,
@@ -184,12 +185,12 @@ class OpenAIProvider(LLMProvider):
                                 'duration': end_time - start_time,
                                 'timestamp': time.time()
                             }
-                            # Add to accumulated statistics
-                            self.accumulated_stats['prompt_tokens'] += prompt_tokens
-                            self.accumulated_stats['completion_tokens'] += completion_tokens
-                            self.accumulated_stats['total_tokens'] += total_tokens
-                            self.accumulated_stats['call_count'] += 1
-                            self.accumulated_stats['total_duration'] += end_time - start_time
+                            with self._stats_lock:
+                                self.accumulated_stats['prompt_tokens'] += prompt_tokens
+                                self.accumulated_stats['completion_tokens'] += completion_tokens
+                                self.accumulated_stats['total_tokens'] += total_tokens
+                                self.accumulated_stats['call_count'] += 1
+                                self.accumulated_stats['total_duration'] += end_time - start_time
                         
                         return response_data['choices'][0]['message']['content']
                 
@@ -241,21 +242,23 @@ class OpenAIProvider(LLMProvider):
         return None
     
     def get_accumulated_stats(self) -> Optional[dict]:
-        """Get accumulated statistics"""
+        """Get accumulated statistics (thread-safe)"""
         if self.enable_stats:
-            return self.accumulated_stats.copy()
+            with self._stats_lock:
+                return self.accumulated_stats.copy()
         return None
     
     def reset_accumulated_stats(self) -> None:
-        """Reset accumulated statistics"""
+        """Reset accumulated statistics (thread-safe)"""
         if self.enable_stats:
-            self.accumulated_stats = {
-                'prompt_tokens': 0,
-                'completion_tokens': 0,
-                'total_tokens': 0,
-                'call_count': 0,
-                'total_duration': 0.0
-            }
+            with self._stats_lock:
+                self.accumulated_stats = {
+                    'prompt_tokens': 0,
+                    'completion_tokens': 0,
+                    'total_tokens': 0,
+                    'call_count': 0,
+                    'total_duration': 0.0
+                }
 
     def __repr__(self) -> str:
         """String representation of the provider."""
