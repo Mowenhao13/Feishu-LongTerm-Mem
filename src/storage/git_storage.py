@@ -16,7 +16,7 @@ import os
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 
 from src.utils.logger import get_logger
 
@@ -56,6 +56,7 @@ class GitStorage:
         self._work_dir = Path(config.work_dir).resolve()
         self._cli = GitCLI(str(self._work_dir))
         self._init_repo()
+        self.post_commit_hooks: List[Callable[[str], None]] = []
 
     @property
     def cli(self) -> GitCLI:
@@ -129,6 +130,7 @@ class GitStorage:
             commit_hash = self._cli.commit(rel_path, msg)
 
             decision["git_commit_hash"] = commit_hash
+            self._run_post_commit_hooks(sid)
         finally:
             if saved_branch and saved_branch != branch:
                 self._switch_to_branch(saved_branch)
@@ -283,6 +285,13 @@ class GitStorage:
             self._cli.run("commit", "-m", f"archive({project}): project archived")
 
     # ==================== Helpers ====================
+
+    def _run_post_commit_hooks(self, sid: str) -> None:
+        for hook in self.post_commit_hooks:
+            try:
+                hook(sid)
+            except Exception as e:
+                logger.error(f"Post-commit hook failed for {sid}: {e}")
 
     def _ensure_decision_branch(self, branch_name: str) -> None:
         branches = self.list_branches()

@@ -21,6 +21,27 @@ from typing import Any, Dict, Optional
 import yaml
 
 
+class SafeFrontmatterLoader(yaml.SafeLoader):
+    """Extends SafeLoader to handle unknown YAML tags (e.g. !!python/name)
+    by returning a placeholder string instead of raising."""
+    pass
+
+
+def _construct_undefined(loader, tag_suffix, node):
+    if isinstance(node, yaml.ScalarNode):
+        if node.value and node.value != "null" and node.value != "~":
+            return loader.construct_scalar(node)
+        return ""
+    elif isinstance(node, yaml.SequenceNode):
+        return loader.construct_sequence(node)
+    elif isinstance(node, yaml.MappingNode):
+        return loader.construct_mapping(node)
+    return None
+
+# Register the handler for any unknown tag
+yaml.add_multi_constructor("tag:yaml.org,2002:python/", _construct_undefined, Loader=SafeFrontmatterLoader)
+
+
 class GitFormatError(Exception):
     pass
 
@@ -71,7 +92,7 @@ def parse_decision_file(data: str) -> Dict[str, Any]:
     frontmatter = _extract_frontmatter(data)
     if not frontmatter:
         raise GitFormatError("no frontmatter found")
-    return yaml.safe_load(frontmatter)
+    return yaml.load(frontmatter, Loader=SafeFrontmatterLoader)
 
 
 def render_objection_file(data: Dict[str, Any]) -> str:
@@ -124,7 +145,7 @@ def parse_objection_file(data: str) -> Dict[str, Any]:
     frontmatter = _extract_frontmatter(data)
     if not frontmatter:
         raise GitFormatError("no frontmatter found")
-    return yaml.safe_load(frontmatter)
+    return yaml.load(frontmatter, Loader=SafeFrontmatterLoader)
 
 
 def format_decision_summary(data: Dict[str, Any]) -> str:
