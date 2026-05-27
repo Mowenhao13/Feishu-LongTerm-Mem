@@ -1212,8 +1212,8 @@ class MemoryEngine:
             if self._base_view_syncer:
                 await asyncio.to_thread(self._base_view_syncer.sync_decision, node.sid)
                 logger.info("[Mutation] Base sync triggered for CREATE: sid=%s", node.sid[:12])
-            if self._push_engine:
-                await asyncio.to_thread(self._push_engine.push_decision_card, node.sid, PushTrigger.DECISION_UPDATE)
+            if self._push_engine and self._push_engine._config.trigger_on_create:
+                await asyncio.to_thread(self._push_engine.push_decision_card, node.sid, PushTrigger.CREATE)
         else:
             logger.warning("[Mutation] CREATE FAILED: sid=%s", node.sid[:12])
 
