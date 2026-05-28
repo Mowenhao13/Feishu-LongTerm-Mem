@@ -6,296 +6,74 @@
   ],
   "pages": [
     {
-      "title": "Project Overview",
-      "purpose": "High-level introduction to Feishu-LongTerm-Mem: what it does, why it exists, key architectural concepts, and how the major subsystems fit together. Links to child pages for deeper coverage.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
       "title": "Getting Started & Configuration",
       "purpose": "Setup instructions, environment variables (.env), dependency management (pyproject.toml / uv.lock), MCP client configuration (mcp-claude-config.json), and how to run the system for the first time.",
-      "parent": "Project Overview",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "System Architecture & Data Flow",
       "purpose": "End-to-end data flow from Feishu IM/Docs ingestion through detection, episode management, LLM extraction, memory graph storage, and MCP exposure. Describes the detector-engine-storage pattern and key design decisions.",
-      "parent": "Project Overview",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Ingestion & Detection Layer",
-      "purpose": "Overview of how raw Feishu messages and documents are ingested, filtered, and classified as decision signals. Links to child pages covering IM detection, document detection, and episode management.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "Feishu IM Detector",
-      "purpose": "Details the LarkIMDetector and its two modes (polling and WebSocket), the EnhancedDetector heuristic scoring pipeline (LexicalAnalyzer, StructuralAnalyzer, DynamicAnalyzer, PatternMatcherV2), anti-signal filtering, and burst-mode polling logic.",
-      "parent": "Ingestion & Detection Layer",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Document Detector & Debounce Tracker",
-      "purpose": "Covers DocAdapter (local filesystem polling, SHA-256 hashing, planned Lark API integration), DocDebounceTracker (state persistence, debounce window logic), DocDetector (signal scoring, job creation), and the doc_detector module.",
-      "parent": "Ingestion & Detection Layer",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Details the LarkIMDetector and its two modes (polling and WebSocket), the EnhancedDetector heuristic scoring pipeline, anti-signal filtering, and burst-mode polling logic.",
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "Episode Management",
       "purpose": "Explains how individual messages are buffered into Episodes by EpisodeManager, the time-gap and semantic-threshold boundary detection, the run_episode_check_loop reaper, and how episodes are dispatched to the MemoryEngine.",
-      "parent": "Ingestion & Detection Layer",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "LLM & Extraction Layer",
-      "purpose": "Overview of how raw text (episodes, documents) is transformed into structured DecisionNode objects via LLM calls. Links to child pages for the LLM client, extractors, and prompt library.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "LLM Client & Error Handling",
-      "purpose": "Documents the LLMClient (OpenAI-compatible wrapper), LLMConfig, TokenTracker, and the error_handling subsystem (circuit breaker, guardrails, retry/recovery logic).",
-      "parent": "LLM & Extraction Layer",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Decision Extractors",
-      "purpose": "Covers SimpleLLMExtractor (IM/episode extraction), DocDecisionExtractor (document extraction, deduplication, conflict assessment, update detection), and the conv_episode_extractor and fact_extractors modules.",
-      "parent": "LLM & Extraction Layer",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Prompt Library",
-      "purpose": "Catalogs all prompt modules (decision_prompts, doc_decision_prompts, conv_prompts, episode_prompts, fact_prompts, topic_prompts, answer_prompts) and explains how prompts are structured and used by extractors.",
-      "parent": "LLM & Extraction Layer",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Memory Graph & Storage",
-      "purpose": "Overview of the dual-layer persistence architecture: in-memory MemoryGraph for fast querying and Git-backed GitStorage for versioned persistence. Links to child pages for each layer.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "MemoryGraph (In-Memory Index)",
       "purpose": "Deep dive into MemoryGraph: five internal indices, DecisionNode schema, hot score algorithm, conflict detection via CONFLICTS_WITH relations, dirty-node tracking, and the GitReader protocol.",
-      "parent": "Memory Graph & Storage",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "Git Storage Backend",
       "purpose": "Explains GitStorage CRUD operations, the decision branch-per-record strategy, file format (YAML frontmatter + Markdown body), commit message conventions, GitCLI wrapper, git_format serialization, and auto-push configuration.",
-      "parent": "Memory Graph & Storage",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "Hypergraph Structure & Retrieval",
-      "purpose": "Covers the three-layer hypergraph (FactNode/L1, EpisodeNode/L2, TopicNode/L3), HypergraphBuilder, HierarchicalRetriever (BM25 + vector fusion), and the graph/builder and graph/retrieval modules.",
-      "parent": "Memory Graph & Storage",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Core Engine & Pipeline",
-      "purpose": "Overview of the MemoryEngine orchestrator and PipelineEngine mutation processor. Links to child pages for the engine lifecycle and the DecisionNode/mutation data model.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Covers the four-layer hypergraph (Decision L0, Fact L1, Episode L2, Topic L3), HypergraphBuilder, HierarchicalRetriever (BM25 + vector fusion), and the graph/builder and graph/retrieval modules.",
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "MemoryEngine Lifecycle",
       "purpose": "Details MemoryEngine initialization, the detector loop, sync loop (dirty-node flushing), semantic reconnection of episodes, deduplication via embedding+reranker+LLM judge, conflict detection, and graceful shutdown.",
-      "parent": "Core Engine & Pipeline",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "DecisionNode & Mutation Model",
-      "purpose": "Documents the DecisionNode Pydantic schema (all fields, roles, status state machine), DecisionMutation command types (CREATE, UPDATE, STATUS_CHANGE, CONFLICT_MERGE, OBJECTION, REVERT, DEPRECATE), and PipelineEngine.apply_mutation dispatch logic.",
-      "parent": "Core Engine & Pipeline",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Semantic Search (Embedding & Reranking)",
-      "purpose": "Overview of the two-stage semantic retrieval pipeline: EmbeddingProvider for vector search and RerankerProvider for relevance scoring. Links to child pages for each provider.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "EmbeddingProvider",
-      "purpose": "Covers EmbeddingProvider initialization, the embed() batch API, cosine_similarity utility, connection pooling with HTTPAdapter, exponential backoff retry strategy, and Qwen3-Embedding model validation.",
-      "parent": "Semantic Search (Embedding & Reranking)",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "RerankerProvider",
-      "purpose": "Covers RerankerProvider dual-path execution (REST /v1/rerank vs vLLM /v1/completions logprobs), the yes/no softmax scoring formula, single vs. batch query routing, and fallback behavior.",
-      "parent": "Semantic Search (Embedding & Reranking)",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "MCP Server",
-      "purpose": "Overview of the Model Context Protocol server that exposes the decision memory system to AI clients (Claude Desktop, OpenClaw). Links to child pages for tool categories and server configuration.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Documents the DecisionNode Pydantic schema (all fields, roles, status state machine), DecisionMutation command types, and PipelineEngine.apply_mutation dispatch logic.",
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "MCP Tool Reference",
-      "purpose": "Comprehensive reference for all 34 MCP tools grouped by category: Query tools (list_decisions, search, topic, timeline, stats, hot_decisions, forgotten_decisions), Writing tools (create_decision, update_decision, confirm_decision, reject_decision, revert_decision, resolve_conflict), LLM-assisted tools (extract_decision, check_conflict, evaluate_dedup), and Git/system tools (git_history, git_blame, refresh).",
-      "parent": "MCP Server",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Comprehensive reference for all 34 MCP tools grouped by category: Query tools, Writing tools, LLM-assisted tools, and Git/system tools.",
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "MCP Server Deployment",
-      "purpose": "Explains how to launch the MCP server via `uv run`, configure it in Claude Desktop or OpenClaw (mcp-claude-config.json), required environment variables (MODEL_NAME, BASE_URL, API_KEY, STORAGE_PATH), and the stdio transport protocol.",
-      "parent": "MCP Server",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Notification & Push System",
-      "purpose": "Overview of the PushEngine that delivers decision cards to Feishu/Lark, terminal, and macOS notifications. Links to child pages for the card renderer and push scheduling.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Explains how to launch the MCP server via `uv run`, configure it in Claude Desktop or OpenClaw, required environment variables, and the stdio transport protocol.",
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "PushEngine & Scheduling",
-      "purpose": "Details PushEngine triggers (CONFLICT, DECISION_UPDATE, HOT_SCORE_LOW, SCHEDULED_DAILY, SCHEDULED_WEEKLY, MANUAL_QUERY), the hot score decay/increment system, daily/weekly summary loops, multi-channel dispatch (Feishu interactive card, terminal, osascript), and error degradation.",
-      "parent": "Notification & Push System",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Details PushEngine triggers (CREATE, CONFLICT, DECISION_UPDATE, SCHEDULED_DAILY, etc.), the hot score decay/increment system, daily/weekly summary loops, multi-channel dispatch, and error degradation.",
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "Card Renderer",
       "purpose": "Covers CardRenderer output formats (Feishu interactive card JSON, Markdown), decision card layout, conflict card comparative view, and daily summary format.",
-      "parent": "Notification & Push System",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Evaluation Framework",
-      "purpose": "Overview of the extraction evaluation system used to benchmark LLM decision-extraction accuracy. Links to child pages for the evaluator and the eval dataset.",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "page_notes": [{"content": ""}]
     },
     {
       "title": "Evaluator & Scenarios",
-      "purpose": "Documents the ExtractionEvaluator (run_extraction_eval), the 12 evaluation scenarios (technical-selection through boundary-case), evaluation dimensions (detection, content, proposer, executor, impact_level, status), the QA multiple-choice format, and the eval report schema.",
-      "parent": "Evaluation Framework",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Eval Dataset",
-      "purpose": "Describes the eval_data/decision_extraction/ directory structure (dialogue.json + qa.json per scenario), the 12 scenario types and their Chinese-language dialogue examples, and how to add new scenarios.",
-      "parent": "Evaluation Framework",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
+      "purpose": "Documents the ExtractionEvaluator (EvalRunner), the eval_data/test_data.txt simulation mode, the decision_extraction QA dataset (12 scenarios, 170 samples), evaluation dimensions, and the eval report schema.",
+      "page_notes": [{"content": ""}]
     }
   ]
 }
-

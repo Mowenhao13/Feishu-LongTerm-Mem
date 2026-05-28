@@ -147,7 +147,7 @@ async def run_episode_check_loop(
     engine: Optional[Any],
     check_interval: float = 10.0,
 ) -> None:
-    """后台检查所有 episode buffer 的超时边界
+    """后台检查所有 episode buffer 的超时边界，并将已挂起的 episode 分派给 engine 做决策提取
 
     两种模式下都运行：
       - WS 模式：WS 消息实时累积 + 本循环处理超时边界
@@ -160,7 +160,17 @@ async def run_episode_check_loop(
             stats = episode_manager.pool_stats()
             if stats.get("pool_size", 0) > 0:
                 logger.debug("[Episode] Pre-check: %s", stats)
-            episode_manager.check_all_timeouts()
+            suspended = episode_manager.check_all_timeouts()
+
+            if suspended and engine:
+                for ep in suspended:
+                    try:
+                        logger.info("[Episode] Dispatching episode=%s (chat=%s, msgs=%d) to engine",
+                                    ep.id[:12], ep.chat_id[:12], ep.message_count)
+                        await engine._process_episode(ep, episode_manager)
+                    except Exception as ep_err:
+                        logger.error("[Episode] Failed to process episode=%s: %s\n%s",
+                                     ep.id[:12], ep_err, traceback.format_exc())
 
         except asyncio.CancelledError:
             break
@@ -395,7 +405,7 @@ class LarkIMDetector:
                     self._episode_manager.add_message(msg_obj)
                     if self._engine is not None:
                         logger.debug("[lark_im] WS msg=%s added to episode buffer (suspend/reopen managed internally)",
-                                    message_id[:12])
+                                    getattr(message, "message_id", "")[:12])
 
             except Exception as e:
                 logger.error("[lark_im] WS handler error: %s\n%s", e, traceback.format_exc())
@@ -586,7 +596,7 @@ async def main_async() -> None:
 
         try:
             if _im_detector._episode_manager is not None:
-                _im_detector._episode_manager.set_embedding_provider(embedder)
+                _im_detector._episode_manager.set_buffer_embedding_fn(embedder)
                 logger.info("[lark_im] EmbeddingProvider injected for episode boundary detection")
         except Exception as e:
             logger.warning("[lark_im] Failed to inject embedding provider (non-fatal): %s", e)
@@ -726,7 +736,6 @@ def main() -> None:
     if "--eval" in sys.argv:
         try:
             from src.eval_runner import run_eval
-            import asyncio
             asyncio.run(run_eval())
         except KeyboardInterrupt:
             logger.info("[Eval] Interrupted by user")
