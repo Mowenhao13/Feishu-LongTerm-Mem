@@ -157,6 +157,7 @@ _loader = MemoryLoader()
 def _node_to_dict(node: Any) -> Dict[str, Any]:
     return {
         "sid": node.sid,
+        "parent_id": node.parent_id or "",
         "summary": node.summary or "",
         "full_text": node.full_text or "",
         "topic": node.topic_id or "",
@@ -526,6 +527,98 @@ def decision_card(sid: str) -> str:
         "created_at": d.created_at.strftime("%Y-%m-%d %H:%M") if d.created_at else "",
     }
     return json.dumps({"card": card}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="decision_children",
+    description="获取指定决策的直接子决策列表。",
+)
+def decision_children(sid: str) -> str:
+    _loader.ensure_loaded()
+    children = _loader.graph.get_children_of(sid)
+    return json.dumps({
+        "sid": sid,
+        "children": [_node_to_dict(c) for c in children],
+        "total": len(children),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="decision_descendants",
+    description="递归获取指定决策的所有后代决策。",
+)
+def decision_descendants(sid: str) -> str:
+    _loader.ensure_loaded()
+    descendants = _loader.graph.get_descendants(sid)
+    return json.dumps({
+        "sid": sid,
+        "descendants": [_node_to_dict(d) for d in descendants],
+        "total": len(descendants),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="decision_ancestors",
+    description="获取指定决策的祖先路径（从根到自身）。",
+)
+def decision_ancestors(sid: str) -> str:
+    _loader.ensure_loaded()
+    ancestors = _loader.graph.get_ancestors(sid)
+    return json.dumps({
+        "sid": sid,
+        "ancestors": [_node_to_dict(a) for a in ancestors],
+        "total": len(ancestors),
+    }, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="decision_tree",
+    description="获取指定决策的完整层级树（包含所有后代，递归嵌套结构）。",
+)
+def decision_tree(sid: str) -> str:
+    _loader.ensure_loaded()
+
+    def _build_subtree(node_sid: str) -> Dict[str, Any]:
+        node = _loader.graph.get_decision(node_sid)
+        if node is None:
+            return {}
+        children = _loader.graph.get_children_of(node_sid)
+        return {
+            **_node_to_dict(node),
+            "children": [_build_subtree(c.sid) for c in children],
+        }
+
+    root = _loader.graph.get_decision(sid)
+    if root is None:
+        return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
+    return json.dumps(_build_subtree(sid), ensure_ascii=False)
+
+
+@mcp.tool(
+    name="show_tree",
+    description="展示完整的决策森林（所有根决策及其递归后代，无需参数）。",
+)
+def show_tree() -> str:
+    _loader.ensure_loaded()
+
+    def _build_subtree(node_sid: str) -> Dict[str, Any]:
+        node = _loader.graph.get_decision(node_sid)
+        if node is None:
+            return {}
+        children = _loader.graph.get_children_of(node_sid)
+        return {
+            **_node_to_dict(node),
+            "children": [_build_subtree(c.sid) for c in children],
+        }
+
+    all_decisions = _loader.graph.get_all_decisions()
+    roots = [d for d in all_decisions if not d.parent_id]
+    trees = [_build_subtree(r.sid) for r in roots]
+    return json.dumps({
+        "total": len(all_decisions),
+        "root_count": len(roots),
+        "trees": trees,
+    }, ensure_ascii=False)
 
 
 @mcp.tool(

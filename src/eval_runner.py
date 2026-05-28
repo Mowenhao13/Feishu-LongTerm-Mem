@@ -24,7 +24,6 @@ from src.core.engine import MemoryEngine
 from src.core.engine_config import EngineConfig
 from src.detect.episode import ChatEpisodeManager, ChatMessage
 from src.detect.suspend_pool import SuspendPool
-from src.detect.types import DecisionLevel, DetectContext, DetectionResult, ScoreBreakdown, SignalDetail
 from src.graph.memory_graph import MemoryGraph
 from src.storage.git_storage import GitStorage, GitStorageConfig
 from src.utils.logger import get_logger
@@ -118,14 +117,28 @@ class EvalRunner:
         for i, content in enumerate(messages_to_process, 1):
             await self._process_one_message(i, len(messages_to_process), content)
 
-        # 5. 等待所有异步处理完成
+        # 5. 等待所有消息缓冲完成，然后以 episode 级别处理决策提取
         await asyncio.sleep(2)
 
-        # 6. 关闭所有 buffer
-        if self._episode_manager:
-            self._episode_manager.close_all()
+        if self._episode_manager and self._engine:
+            old_decision_count = len(self._engine._graph.get_all_decisions()) if hasattr(self._engine, "_graph") else 0
 
-        # 7. 停止引擎
+            # 5a. 检查超时边界，获取已 idle-flush 的 episode
+            timed_out = self._episode_manager.check_all_timeouts()
+            for ep in timed_out:
+                logger.info("[Eval] Processing timed-out episode=%s (msgs=%d)", ep.id[:12], ep.message_count)
+                await self._engine._process_episode(ep, self._episode_manager)
+
+            # 5b. 关闭所有 buffer，获取剩余的 episode
+            closed_eps = self._episode_manager.close_all()
+            for ep in closed_eps:
+                logger.info("[Eval] Processing closed episode=%s (msgs=%d)", ep.id[:12], ep.message_count)
+                await self._engine._process_episode(ep, self._episode_manager)
+
+            new_decision_count = len(self._engine._graph.get_all_decisions()) if hasattr(self._engine, "_graph") else 0
+            self._stats["decisions_created"] = new_decision_count - old_decision_count
+
+        # 6. 停止引擎
         await engine.stop()
 
         # 8. 打印报告
@@ -233,29 +246,7 @@ class EvalRunner:
             self._stats["ep_suspend_count"] += (pool_after - pool_before)
             pool_changed = f" {_REALTIME_COLORS['suspend']}⏸ suspend{_REALTIME_COLORS['reset']}"
 
-        # 3. 送入引擎提取决策
-        det_result = DetectionResult(
-            score=0.5,
-            level=DecisionLevel.NONE,
-            is_decision=True,
-            signal_details=[],
-            anti_signals=[],
-            factors=ScoreBreakdown(lexical=0, structural=0, dynamic=0, pattern=0, anti_score=0, final=0),
-        )
-        det_result.content = content
-        det_result.source = "eval"
-        det_result.context = DetectContext(source="eval", chat_id="eval", sender_id="eval_user")
-        try:
-            old_decision_count = len(self._engine._graph.get_all_decisions()) if hasattr(self._engine, "_graph") else 0
-            await self._engine._process_detection(det_result)
-            new_decision_count = len(self._engine._graph.get_all_decisions()) if hasattr(self._engine, "_graph") else 0
-            decision_delta = new_decision_count - old_decision_count
-            if decision_delta > 0:
-                self._stats["decisions_created"] += decision_delta
-        except Exception as e:
-            logger.error("Decision extraction failed: %s", e)
-
-        # 4. 实时输出
+        # 3. 实时输出
         episode_info = ""
         if hasattr(self._episode_manager, "_buffers"):
             for cid, buf in self._episode_manager._buffers.items():
@@ -281,7 +272,7 @@ class EvalRunner:
         llm_stats = None
         if self._engine:
             try:
-                ext = getattr(self._engine, "_decision_extractor", None)
+                ext = getattr(self._engine, "_extractor", None)
                 if ext and hasattr(ext, "_llm"):
                     llm_stats = ext._llm.get_accumulated_stats()
             except Exception:

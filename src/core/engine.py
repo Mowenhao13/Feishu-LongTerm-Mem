@@ -802,7 +802,7 @@ class MemoryEngine:
 
         # 注入已有决策上下文（Plan A）
         if existing_decisions:
-            lines = ["⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！"]
+            lines = ["⚠️ 以下决策已存在于系统中（仅作参考，不要因此跳过提取）。请分析新对话是否与已有决策冲突或需要更新，如有请正常提取新的决策事项。"]
             for d in existing_decisions:
                 lines.append(f"- {d['title'] or d['summary']}")
             context = "\n".join(lines)
@@ -906,22 +906,22 @@ class MemoryEngine:
         return len(a_bg & b_bg) / len(a_bg | b_bg)
 
     @staticmethod
-    def _fast_prefilter(a: DecisionNode, b: DecisionNode) -> bool:
+    def _fast_prefilter(a: DecisionNode, b: DecisionNode, threshold: float = 0.15) -> bool:
         """快速预过滤：只有通过预过滤的候选才会进入 LLM 精判
 
         与 SleepManager._fast_prefilter 对称，保持逻辑一致：
         1. 必须同 topic
-        2. Dice >= 0.35（低阈值高召回，减少 LLM 调用）
-        3. summary 为空时退回到 full_text 比较
+        2. Dice >= threshold（默认 0.15，低阈值高召回，由 LLM 精判做最终过滤）
+        3. summary 不够时退回到 full_text 比较
         """
         if a.topic_id != b.topic_id:
             return False
         dice = MemoryEngine._summary_similarity(a.summary, b.summary)
-        if dice >= 0.35:
+        if dice >= threshold:
             return True
-        if not a.summary and not b.summary and a.full_text and b.full_text:
+        if a.full_text and b.full_text:
             dice = MemoryEngine._summary_similarity(a.full_text, b.full_text)
-            return dice >= 0.35
+            return dice >= threshold
         return False
 
     async def _find_similar_decision(self, node: DecisionNode, project: str) -> Tuple[Optional[DecisionNode], float]:
@@ -986,7 +986,7 @@ class MemoryEngine:
 
         for existing in same_topic:
             bsim = bigram_similarity(node.summary, existing.summary)
-            if bsim >= 0.35:
+            if bsim >= 0.15:
                 logger.info("[Similar] Found by bigram: sid=%s score=%.2f", existing.sid[:12], bsim)
                 return existing, bsim
 
@@ -1146,44 +1146,54 @@ class MemoryEngine:
                 else:  # create_new
                     logger.info("[Mutation] LLM says not same: %s", reason)
 
-        # 预过滤 + LLM 精判（替代 inline bigram dedup）
-        # 对未命中 embedding 的新决策，用 _fast_prefilter 快速扫描已有决策
-        if not similar:
-            all_decisions = self._graph.get_all_decisions()
-            for existing in all_decisions:
-                if existing.sid == node.sid:
-                    continue
-                if not self._fast_prefilter(node, existing):
-                    continue
-                action, reason, info = await self._judge_decision_duplicate(node, existing)
-                if action == "skip":
-                    logger.info("[Mutation] Prefilter SKIP: new=%s vs existing=%s reason=%.60s",
-                                node.sid[:12], existing.sid[:12], reason)
-                    return
-                elif action == "update":
-                    logger.info("[Mutation] Prefilter UPDATE: new=%s -> existing=%s reason=%.60s",
-                                node.sid[:12], existing.sid[:12], reason)
-                    node.sid = existing.sid
-                    if info and info not in (node.full_text or ""):
-                        node.full_text = (node.full_text or "") + "\n\n[补充]\n" + info
-                    node.tags = list(set(node.tags + existing.tags))
-                    node.confidence = max(node.confidence, existing.confidence)
-                    break
-                elif action == "conflict":
-                    logger.info("[Mutation] Prefilter CONFLICT: new=%s vs existing=%s reason=%.60s",
-                                node.sid[:12], existing.sid[:12], reason)
-                    existing.add_relation(Relation(
-                        type=RelationType.CONFLICTS_WITH,
-                        target_id=node.sid, description=reason,
-                    ))
-                    node.add_relation(Relation(
-                        type=RelationType.CONFLICTS_WITH,
-                        target_id=existing.sid, description=reason,
-                    ))
-                    self._graph.upsert_decision(existing, project)
-                    if self._storage:
-                        await asyncio.to_thread(self._storage.write_decision,
-                            self._graph.node_to_dict(existing))
+        # 预过滤 + LLM 精判：对所有已有决策执行快速扫描
+        # 即使 embedding 找到了相似决策，也需要检查其余决策（多冲突场景）
+        all_decisions = self._graph.get_all_decisions()
+        logger.info("[Mutation] Prefilter scan: new_topic=%s new_summary='%s', existing_count=%d",
+                    node.topic_id, node.summary[:80], len(all_decisions))
+        for existing in all_decisions:
+            if existing.sid == node.sid:
+                continue
+            if similar and existing.sid == similar.sid:
+                logger.info("[Mutation] Prefilter skip: already checked in similar path, sid=%s", existing.sid[:12])
+                continue
+            pf = self._fast_prefilter(node, existing)
+            if not pf:
+                logger.info("[Mutation] Prefilter skip: topic=%s vs %s, dice=%.3f(dice_ft=%.3f), existing_summary='%s'",
+                            existing.topic_id, node.topic_id,
+                            MemoryEngine._summary_similarity(node.summary, existing.summary),
+                            MemoryEngine._summary_similarity((node.full_text or ""), (existing.full_text or "")),
+                            existing.summary[:80])
+                continue
+            action, reason, info = await self._judge_decision_duplicate(node, existing)
+            if action == "skip":
+                logger.info("[Mutation] Prefilter SKIP: new=%s vs existing=%s reason=%.60s",
+                            node.sid[:12], existing.sid[:12], reason)
+                return
+            elif action == "update":
+                logger.info("[Mutation] Prefilter UPDATE: new=%s -> existing=%s reason=%.60s",
+                            node.sid[:12], existing.sid[:12], reason)
+                node.sid = existing.sid
+                if info and info not in (node.full_text or ""):
+                    node.full_text = (node.full_text or "") + "\n\n[补充]\n" + info
+                node.tags = list(set(node.tags + existing.tags))
+                node.confidence = max(node.confidence, existing.confidence)
+                break
+            elif action == "conflict":
+                logger.info("[Mutation] Prefilter CONFLICT: new=%s vs existing=%s reason=%.60s",
+                            node.sid[:12], existing.sid[:12], reason)
+                existing.add_relation(Relation(
+                    type=RelationType.CONFLICTS_WITH,
+                    target_id=node.sid, description=reason,
+                ))
+                node.add_relation(Relation(
+                    type=RelationType.CONFLICTS_WITH,
+                    target_id=existing.sid, description=reason,
+                ))
+                self._graph.upsert_decision(existing, project)
+                if self._storage:
+                    await asyncio.to_thread(self._storage.write_decision,
+                        self._graph.node_to_dict(existing))
                 else:  # create_new
                     pass
 
@@ -1391,10 +1401,8 @@ class MemoryEngine:
             import hashlib
             from datetime import datetime
 
-            sid = data.get("sid", "") or data.get("id", "")
-            if not sid:
-                content = data.get("summary", "") or data.get("decision", "") or str(data)
-                sid = hashlib.md5(content.encode()).hexdigest()[:12]
+            content = data.get("summary", "") or data.get("title", "") or data.get("content", "") or data.get("decision", "") or str(data)
+            sid = hashlib.md5(content.encode()).hexdigest()[:12]
 
             topic_id = data.get("topic_id", "") or data.get("topic", "general")
             title = data.get("title", "") or ""
@@ -1416,6 +1424,7 @@ class MemoryEngine:
 
             return DecisionNode(
                 sid=sid,
+                parent_id=data.get("parent_id", "") or "",
                 topic_id=topic_id,
                 title=title,
                 summary=summary[:200],
