@@ -52,7 +52,7 @@
     },
     {
       "title": "MCP Tool Reference",
-      "purpose": "Comprehensive reference for all 34 MCP tools grouped by category: Query tools, Writing tools, LLM-assisted tools, and Git/system tools.",
+      "purpose": "Comprehensive reference for all 39 MCP tools grouped by category: Query tools, Writing tools, LLM-assisted tools, and Git/system tools.",
       "page_notes": [{"content": ""}]
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "title": "Evaluator & Scenarios",
-      "purpose": "Documents the ExtractionEvaluator (EvalRunner), the eval_data/test_data.txt simulation mode, the decision_extraction QA dataset (12 scenarios, 170 samples), evaluation dimensions, and the eval report schema.",
+      "purpose": "Documents the EvalRunner simulation mode, test data format, multi-chat round-robin evaluation, and hierarchy test scenarios.",
       "page_notes": [{"content": ""}]
     }
   ]
