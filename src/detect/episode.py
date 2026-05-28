@@ -9,10 +9,10 @@ from typing import Any, Dict, List, Optional, TYPE_CHECKING
 
 import numpy as np
 
+from src.detect.suspend_pool import SuspendPool, SuspendedEpisode
 from src.utils.logger import get_logger
 
 if TYPE_CHECKING:
-    from src.detect.suspend_pool import SuspendPool, SuspendedEpisode
     from src.model.embedding_provider import EmbeddingProvider
 
 logger = get_logger(__name__)
@@ -190,9 +190,10 @@ class ChatEpisodeBuffer:
         norm = float(np.linalg.norm(a) * np.linalg.norm(b))
         return dot / norm if norm > 1e-9 else 0.0
 
-    def _suspend_current(self) -> None:
+    def _suspend_current(self) -> Optional[ChatEpisode]:
         if self._current is None or self._pool is None:
-            return
+            return None
+        episode = self._current.to_chat_episode()
         self._pool.suspend(
             chat_id=self.chat_id,
             messages_data=[m.__dict__ for m in self._current.messages],
@@ -203,6 +204,7 @@ class ChatEpisodeBuffer:
             episode_id=self._current.id,
         )
         self._current = None
+        return episode
 
     def _try_reopen(self, msg_embedding: Optional[np.ndarray]) -> bool:
         if self._pool is None or msg_embedding is None:
@@ -310,16 +312,14 @@ class ChatEpisodeBuffer:
             logger.info("[Episode] chat=%s IDLE-FLUSH: idle=%.1fs >= %.0fs, suspending episode=%s (msgs=%d)",
                         self.chat_id[:12], gap, self._idle_flush,
                         self._current.id[:12], self._current.message_count)
-            self._suspend_current()
-            return None
+            return self._suspend_current()
 
         if gap >= self._time_gap:
             gap_min = gap / 60.0
             logger.info("[Episode] chat=%s TIME-GAP boundary: idle=%.1fmin >= %.0fmin, suspending episode=%s (msgs=%d)",
                         self.chat_id[:12], gap_min, self._time_gap / 60.0,
                         self._current.id[:12], self._current.message_count)
-            self._suspend_current()
-            return None
+            return self._suspend_current()
 
         total_dur = now - self._current.first_timestamp
         if total_dur >= self._max_duration:
@@ -327,8 +327,7 @@ class ChatEpisodeBuffer:
             logger.info("[Episode] chat=%s DURATION timeout: span=%.1fmin >= %.0fmin, suspending episode=%s (msgs=%d)",
                         self.chat_id[:12], dur_min, self._max_duration / 60.0,
                         self._current.id[:12], self._current.message_count)
-            self._suspend_current()
-            return None
+            return self._suspend_current()
         return None
 
     def force_close(self) -> Optional[ChatEpisode]:
@@ -336,8 +335,7 @@ class ChatEpisodeBuffer:
             if self._current is not None:
                 self._current = None
             return None
-        self._suspend_current()
-        return None
+        return self._suspend_current()
 
     def _close_current(self) -> Optional[ChatEpisode]:
         if self._current is None:
@@ -439,18 +437,25 @@ class ChatEpisodeManager:
         buf = self.get_or_create_buffer(msg.chat_id)
         buf.add_message(msg)
 
-    def check_all_timeouts(self) -> None:
+    def check_all_timeouts(self) -> List[ChatEpisode]:
         now = time.time()
+        suspended: List[ChatEpisode] = []
         for buf in self._buffers.values():
-            buf.check_timeout(now)
+            ep = buf.check_timeout(now)
+            if ep is not None:
+                suspended.append(ep)
+        return suspended
 
     def close_all(self) -> List[ChatEpisode]:
+        closed: List[ChatEpisode] = []
         with self._lock:
             for buf in self._buffers.values():
-                buf.force_close()
+                ep = buf.force_close()
+                if ep is not None:
+                    closed.append(ep)
             self._buffers.clear()
         self._pool.save()
-        return []
+        return closed
 
     def pool_size(self) -> int:
         return self._pool.size
