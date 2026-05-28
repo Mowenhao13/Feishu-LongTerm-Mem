@@ -1,0 +1,8 @@
+项目技术选型：数据库决定使用PostgreSQL 16，功能全面
+项目技术选型：数据库决定使用PostgreSQL 16，支持JSONB和CTE查询
+项目技术选型：数据库决定使用PostgreSQL 16，性能优于MySQL
+经过评估，项目技术选型数据库决定使用PostgreSQL 16，全体通过
+项目技术选型数据库决定使用PostgreSQL 16，生态完善
+确认了，项目技术选型数据库决定使用PostgreSQL 16，开始搭建
+没有异议，技术选型数据库决定使用PostgreSQL 16
+好，定了，技术选型数据库决定使用PostgreSQL 16

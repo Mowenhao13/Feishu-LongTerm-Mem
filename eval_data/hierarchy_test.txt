@@ -1,0 +1,52 @@
+微服务架构要定了，整体方案分为通信、网关、服务治理几个方面
+微服务架构的通信协议我倾向gRPC，性能优势明显
+微服务架构的网关层可以用Kong，插件生态丰富
+微服务架构的服务发现用Consul比较成熟
+最终微服务架构确定为gRPC + Kong + Consul的组合
+gRPC基于HTTP/2，支持双向流和Protocol Buffers，比REST高效很多
+服务间通信就用gRPC，Proto文件统一管理，代码生成自动化
+确定gRPC作为微服务间通信标准协议
+Kong网关做流量入口，统一认证限流和日志
+Kong的插件机制很灵活，社区版的Rate Limiting和Key Auth就够用
+API网关确定用Kong，后续按需扩展插件
+Consul做服务注册和发现，健康检查机制完善
+Consul支持多数据中心，KV存储还能做动态配置
+服务注册统一用Consul，与Spring Cloud集成方便
+微服务架构的技术栈讨论就告一段落，回头验证一下选型效果
+前端技术栈确定用React+Next.js
+前端状态管理选了Zustand，比Redux轻量
+前端打包用Vite，开发体验好，HMR快
+前端UI组件库用Ant Design
+前端请求层封装用React Query + Axios
+前端CI增加ESLint和Prettier
+前端CDN缓存策略用阿里云CDN + 边缘脚本
+容器化方案用K8s，生态最成熟
+容器监控用Prometheus+Grafana
+容器网络插件用Calico，支持NetworkPolicy
+容器资源限制用Resource Quota + LimitRange
+容器化后的日志采集用Fluentd收集到ELK
+容器镜像仓库用Harbor
+确定K8s作为容器编排平台
+数据库用PostgreSQL，RDS托管，PgBouncer连接池
+数据库迁移工具用golang-migrate
+数据库备份用pg_dump + WAL归档
+缓存层用Redis Cluster，做热点数据缓存
+消息队列用Kafka，配合流处理
+确定了整套技术栈选型
+gRPC通信协议在微服务中的应用实践需要进一步规范
+gRPC的Proto文件要统一放在mono-repo的proto目录下
+gRPC服务定义要遵循Google API Design Guide
+微服务间gRPC通信统一使用双向TLS认证
+proto文件的版本管理通过Git LFS实现
+Kong网关的认证插件用OAuth2+JWT
+Kong网关的路由规则根据服务前缀自动生成
+Kong网关的限流策略按API Key分级
+Consul的健康检查用TCP+HTTP两种模式
+Consul的KV配置按环境分层 dev/staging/prod
+Consul的ACL权限控制开启以保障安全
+gRPC通信的负载均衡策略用客户端侧加权轮询
+gRPC的超时重试机制统一配置为3次重试+指数退避
+gRPC链路追踪通过OpenTelemetry集成Jaeger
+Kong网关的日志通过syslog对接ELK
+Kong网关和Consul的服务发现自动同步配置
+整体系列微服务治理方案确认，Kong网关+Consul服务发现+gRPC通信

@@ -1,0 +1,8 @@
+技术选型：新项目认证方案选择使用Session-Cookie，最简单最稳定
+技术选型：新项目认证方案选择使用Session-Cookie，团队最熟悉
+技术选型：新项目认证方案选择使用Session-Cookie，兼容性最好
+经过评估，技术选型认证方案选择使用Session-Cookie，最终决定
+技术选型认证方案选择使用Session-Cookie，无需额外学习成本
+确认了，技术选型认证方案选择使用Session-Cookie，马上开始
+技术选型认证方案选择使用Session-Cookie，之前的方案都太复杂
+好，技术选型认证方案选择使用Session-Cookie，开始推进
