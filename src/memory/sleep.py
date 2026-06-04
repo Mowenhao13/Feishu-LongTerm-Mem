@@ -68,6 +68,7 @@ class SleepManager:
         task_view_syncer: Any = None,
         llm_provider: Any = None,
         embedder: Any = None,
+        source_path: Optional[str] = None,
     ) -> None:
         self._graph = graph
         self._pipeline = pipeline
@@ -77,6 +78,7 @@ class SleepManager:
         self._task_view_syncer = task_view_syncer
         self._llm = llm_provider
         self._embedder = embedder
+        self._source_path = source_path
 
         self._dedup_threshold = float(os.getenv("MEMORY_SLEEP_DEDUP_THRESHOLD", "0.7"))
         self._noise_hot_score_min = float(os.getenv("MEMORY_SLEEP_NOISE_HOT_MIN", "5.0"))
@@ -85,11 +87,85 @@ class SleepManager:
 
         self._cached_judgments: List[Tuple[str, str, str, str, str]] = []
 
+    def _load_decisions_from_path(self, path: str) -> List[DecisionNode]:
+        """从备份目录加载决策文件
+
+        预期结构:
+          {path}/decisions/{project}/{topic}/*.md
+        """
+        from pathlib import Path
+
+        decisions_dir = Path(path) / "decisions"
+        if not decisions_dir.exists():
+            logger.warning("[Sleep] No decisions directory found at %s", decisions_dir)
+            return []
+
+        loaded: List[DecisionNode] = []
+        for md_file in sorted(decisions_dir.rglob("*.md")):
+            try:
+                content = md_file.read_text(encoding="utf-8")
+                # Parse simple key: value lines from the md front matter
+                record: Dict[str, Any] = {"sid": md_file.stem}
+                for line in content.split("\n"):
+                    line = line.strip()
+                    if ":" in line and not line.startswith("#") and not line.startswith("---") and not line.startswith("```"):
+                        k, v = line.split(":", 1)
+                        record[k.strip().lower()] = v.strip()
+
+                node = DecisionNode(
+                    sid=record.get("sid", md_file.stem),
+                    topic_id=record.get("topic_id", "") or record.get("topic", ""),
+                    title=record.get("title", "")[:100],
+                    summary=record.get("summary", "")[:200],
+                    full_text=content,
+                    status=self._parse_status(record.get("status", "pending")),
+                    impact_level=self._parse_impact(record.get("impact_level", "minor")),
+                    is_suggestion=record.get("is_suggestion", "false").lower() in ("true", "1", "yes"),
+                    confidence=float(record.get("confidence", 0.8)),
+                    proposer=record.get("proposer", ""),
+                    assignee=record.get("assignee", "") or record.get("executor", ""),
+                    version=int(record.get("version", 1)),
+                )
+                loaded.append(node)
+            except Exception as e:
+                logger.warning("[Sleep] Failed to load decision %s: %s", md_file.name, str(e)[:60])
+
+        logger.info("[Sleep] Loaded %d decisions from %s", len(loaded), path)
+        return loaded
+
+    @staticmethod
+    def _parse_status(val: str) -> Any:
+        from src.node.types import DecisionStatus
+        try:
+            return DecisionStatus(val)
+        except ValueError:
+            for s in DecisionStatus:
+                if s.value == val or s.name.lower() == val.lower():
+                    return s
+            return DecisionStatus.PENDING
+
+    @staticmethod
+    def _parse_impact(val: str) -> Any:
+        from src.node.types import ImpactLevel
+        try:
+            return ImpactLevel(val)
+        except ValueError:
+            for iv in ImpactLevel:
+                if iv.value == val or iv.name.lower() == val.lower():
+                    return iv
+            return ImpactLevel.MINOR
+
     # ==================== Phase 1: Light Sleep ====================
 
     def light_sleep(self, report: SleepReport) -> List[DecisionNode]:
         """Phase 1 - 浅睡：收集所有决策，统计基础信息"""
         report.phase = "light_sleep"
+        if self._source_path:
+            decisions = self._load_decisions_from_path(self._source_path)
+            report.total_decisions = len(decisions)
+            logger.info("[Sleep] Phase 1 (Light Sleep): loaded %d decisions from %s",
+                        len(decisions), self._source_path)
+            return decisions
         if self._graph is None:
             report.errors.append("No graph available")
             return []
