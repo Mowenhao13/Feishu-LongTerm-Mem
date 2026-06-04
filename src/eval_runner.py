@@ -6,8 +6,9 @@ import os
 import sys
 import time
 import traceback
+from collections import defaultdict
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
 from dotenv import load_dotenv
 
@@ -22,7 +23,7 @@ if str(SRC_DIR) not in sys.path:
 
 from src.core.engine import MemoryEngine
 from src.core.engine_config import EngineConfig
-from src.detect.episode import ChatEpisodeManager, ChatMessage
+from src.detect.episode import ChatEpisode, ChatEpisodeManager, ChatMessage
 from src.detect.suspend_pool import SuspendPool
 from src.graph.memory_graph import MemoryGraph
 from src.storage.git_storage import GitStorage, GitStorageConfig
@@ -45,11 +46,13 @@ class EvalRunner:
     def __init__(self, input_path: str = "eval_data/test_data.txt",
                  delay: float = 1.0,
                  max_messages: int = 0,
-                 group_num: int = 1):
+                 group_num: int = 1,
+                 expected_path: str = ""):
         self._input_path = str(PROJECT_ROOT / input_path) if not os.path.isabs(input_path) else input_path
         self._delay = delay
         self._max_messages = max_messages
         self._group_num = max(1, group_num)
+        self._expected_path = str(PROJECT_ROOT / expected_path) if expected_path and not os.path.isabs(expected_path) else expected_path
         self._engine: Optional[MemoryEngine] = None
         self._episode_manager: Optional[ChatEpisodeManager] = None
         self._pool: Optional[SuspendPool] = None
@@ -104,6 +107,14 @@ class EvalRunner:
 
         # 注入 embedding 函数到 episode buffer（支持语义边界检测和 reopen）
         if hasattr(engine, '_embedder') and engine._embedder:
+            try:
+                # Eval mode: use timestamps from messages, not wall-clock.
+                # Disable idle-flush to avoid spurious timeouts when simulated timestamps
+                # differ hugely from time.time().
+                self._episode_manager.set_idle_flush_threshold(999999.0)  # effectively disabled
+                logger.info("[Eval] Idle flush disabled (simulated timestamps)")
+            except Exception:
+                pass
             embed_fn = engine._embedder.embed
             self._episode_manager.set_buffer_embedding_fn(embed_fn)
             print(f"  Embedding 函数已注入 episode buffer\n")
@@ -129,10 +140,18 @@ class EvalRunner:
                 logger.info("[Eval] Processing timed-out episode=%s (msgs=%d)", ep.id[:12], ep.message_count)
                 await self._engine._process_episode(ep, self._episode_manager)
 
-            # 5b. 关闭所有 buffer，获取剩余的 episode
+            # 5b. 从 SuspendPool 取出所有已挂起的 episode（time-gap 拆分的）
+            drained = self._episode_manager.drain_suspended_episodes()
+            for ep in drained:
+                logger.info("[Eval] Processing suspended episode=%s chat=%s (msgs=%d)",
+                            ep.id[:12], ep.chat_id, ep.message_count)
+                await self._engine._process_episode(ep, self._episode_manager)
+
+            # 5c. 关闭所有 buffer，获取剩余的 episode
             closed_eps = self._episode_manager.close_all()
             for ep in closed_eps:
-                logger.info("[Eval] Processing closed episode=%s (msgs=%d)", ep.id[:12], ep.message_count)
+                logger.info("[Eval] Processing closed episode=%s chat=%s (msgs=%d)",
+                            ep.id[:12], ep.chat_id, ep.message_count)
                 await self._engine._process_episode(ep, self._episode_manager)
 
             new_decision_count = len(self._engine._graph.get_all_decisions()) if hasattr(self._engine, "_graph") else 0
@@ -141,10 +160,14 @@ class EvalRunner:
         # 6. 停止引擎
         await engine.stop()
 
+        # 7. 精度评估（如有 expected 文件）
+        if self._expected_path:
+            self._run_comparison()
+
         # 8. 打印报告
         self._print_report()
 
-    def _load_messages(self) -> List[str]:
+    def _load_messages(self) -> List[Union[str, Dict[str, Any]]]:
         path = Path(self._input_path)
         if not path.exists():
             logger.error("Input file not found: %s", self._input_path)
@@ -156,6 +179,15 @@ class EvalRunner:
             if isinstance(data, list):
                 return [item.get("content", "") for item in data if item.get("content")]
             return []
+        if path.suffix == ".jsonl":
+            import json
+            messages: List[Dict[str, Any]] = []
+            with open(path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        messages.append(json.loads(line))
+            return messages
         with open(path, "r", encoding="utf-8") as f:
             return [line.strip() for line in f if line.strip()]
 
@@ -215,21 +247,39 @@ class EvalRunner:
             "storage_path": os.environ.get("STORAGE_PATH", "data"),
         }
 
-    async def _process_one_message(self, idx: int, total: int, content: str) -> None:
+    async def _process_one_message(self, idx: int, total: int,
+                                 content: Union[str, Dict[str, Any]]) -> None:
         if self._engine is None or self._episode_manager is None:
             return
 
-        preview = content[:60].replace("\n", " ")
+        if isinstance(content, dict):
+            msg_text = content.get("msg", content.get("content", ""))
+            chat_id = content.get("chat_id", f"eval_{(idx - 1) % self._group_num}")
+            sender = content.get("speaker", content.get("sender", "eval_user"))
+            # Use provided timestamp if available, otherwise use current time
+            msg_ts = content.get("timestamp")
+            if msg_ts is not None:
+                timestamp = float(msg_ts)
+            else:
+                timestamp = time.time()
+        else:
+            msg_text = content
+            chat_id = f"eval_{(idx - 1) % self._group_num}" if self._group_num > 1 else "eval"
+            sender = "eval_user"
+            timestamp = time.time()
 
-        # round-robin 分配群聊
-        chat_id = f"eval_{(idx - 1) % self._group_num}" if self._group_num > 1 else "eval"
+        if not msg_text:
+            return
+
+        preview = msg_text[:60].replace("\n", " ")
+
         self._stats["group_msg_counts"][chat_id] = self._stats["group_msg_counts"].get(chat_id, 0) + 1
 
         msg = ChatMessage(
             chat_id=chat_id,
-            sender_id="eval_user",
-            content=content,
-            timestamp=time.time(),
+            sender_id=sender,
+            content=msg_text,
+            timestamp=timestamp,
             message_id=f"eval_{idx}",
         )
 
@@ -344,6 +394,63 @@ class EvalRunner:
         print(f"{'=' * 62}{_REALTIME_COLORS['reset']}")
         print()
 
+    def _run_comparison(self) -> None:
+        from src.eval.comparator import EvalComparator
+        decisions = self._engine._graph.get_all_decisions() if self._engine else []
+        actual = [
+            {
+                "sid": d.sid,
+                "topic_id": d.topic_id or "",
+                "summary": d.summary or "",
+                "status": d.status.value if hasattr(d.status, "value") else str(d.status),
+                "impact": d.impact.value if hasattr(d.impact, "value") else str(d.impact),
+                "chat_id": getattr(d, "chat_id", ""),
+                "is_suggestion": getattr(d, "is_suggestion", False),
+            }
+            for d in decisions
+        ]
+        comparator = EvalComparator(self._expected_path)
+        comparator.match(actual)
+        report = comparator.to_dict()
+
+        # Print colored report
+        print()
+        print(f"\033[1m{'=' * 62}")
+        print(f"  精度评估报告")
+        print(f"{'=' * 62}\033[0m")
+        print(f"  预期:          {report['total_expected']}")
+        print(f"  实际检测:      {report['total_detected']}")
+        print(f"  TP:            {report['true_positives']}")
+        print(f"  FP:            {report['false_positives']}")
+        print(f"  FN:            {report['false_negatives']}")
+        p, r, f = report["precision"], report["recall"], report["f1"]
+        print(f"\n  \033[1mPrecision:  {p:.1%}   Recall:  {r:.1%}   F1:  {f:.1%}\033[0m")
+
+        # 决策/建议分类统计
+        dm = report.get("decision_metrics", {})
+        if dm:
+            print(f"\n  {_REALTIME_COLORS['bold']}决策与建议分类{_REALTIME_COLORS['reset']}")
+            print(f"    决策:  TP={dm.get('decision_tp', 0)}  FN={dm.get('decision_fn', 0)}  Recall={dm.get('decision_recall', 0):.1%}")
+            print(f"    建议:  TP={dm.get('suggestion_tp', 0)}  FN={dm.get('suggestion_fn', 0)}  Recall={dm.get('suggestion_recall', 0):.1%}")
+
+        if report.get("by_topic"):
+            print(f"\n  按话题:")
+            for t, v in report["by_topic"].items():
+                print(f"    {t:<12}  P={v['precision']:.1%}  R={v['recall']:.1%}  F1={v['f1']:.1%}")
+        if report.get("by_chat"):
+            iso = report["by_chat"].get("_isolation", {})
+            if iso:
+                print(f"\n  跨群隔离:  score={iso.get('score', 1.0):.1%}  issues={iso.get('issues', 0)}")
+        print(f"\n  {'=' * 62}\033[0m")
+        print()
+
+        # Save report to JSON
+        report_path = Path(self._input_path).parent / "eval_report.json"
+        import json
+        with open(report_path, "w", encoding="utf-8") as f:
+            json.dump(report, f, ensure_ascii=False, indent=2)
+        print(f"  报告已保存: {report_path}")
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Eval 模式 — 从文件模拟消息处理")
@@ -356,6 +463,8 @@ def parse_args() -> argparse.Namespace:
                         help="最大处理消息数 (0=全部)")
     parser.add_argument("--group-num", type=int, default=1,
                         help="群聊数量 (>1 启用多群聊 round-robin 模式)")
+    parser.add_argument("--expected", default="",
+                        help="expected.jsonl 路径，启用精度评估")
     return parser.parse_args()
 
 
@@ -363,7 +472,8 @@ async def run_eval() -> None:
     args = parse_args()
     runner = EvalRunner(input_path=args.input, delay=args.delay,
                         max_messages=args.max_messages,
-                        group_num=args.group_num)
+                        group_num=args.group_num,
+                        expected_path=args.expected)
     await runner.run()
 
 

@@ -50,6 +50,7 @@ from src.core.engine_config import EngineConfig
 from src.graph.memory_graph import MemoryGraph
 from src.storage.git_storage import GitStorage, GitStorageConfig
 from src.utils.logger import get_logger
+from src.view.tenant_token import TenantTokenManager
 
 logger = get_logger(__name__)
 
@@ -179,7 +180,17 @@ async def run_episode_check_loop(
         await asyncio.sleep(check_interval)
 
 
-# ==================== IM 检测器 ====================
+_tenant_token_mgr = TenantTokenManager()
+
+
+async def run_tenant_token_refresh_loop(interval: int = 3600) -> None:
+    """定时刷新 tenant_access_token（默认每小时一次）"""
+    while True:
+        try:
+            _tenant_token_mgr.refresh()
+        except Exception as e:
+            logger.error("[TenantToken] Refresh loop error: %s", e)
+        await asyncio.sleep(interval)
 
 
 class LarkIMDetector:
@@ -684,6 +695,13 @@ async def main_async() -> None:
 
     stats_task = asyncio.create_task(log_llm_stats(interval=300), name="llm-stats-log")
     detector_states["llm_stats"] = stats_task
+
+    # 启动 tenant_access_token 定时刷新（每小时一次）
+    token_refresh_task = asyncio.create_task(
+        run_tenant_token_refresh_loop(interval=3600),
+        name="tenant-token-refresh",
+    )
+    detector_states["tenant_token_refresh"] = token_refresh_task
 
     logger.info("[System] All detectors started, waiting for signals...")
 

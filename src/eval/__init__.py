@@ -5,6 +5,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Optional
 
+from src.eval.comparator import EvalComparator
+from src.eval.generator import EvalDatasetGenerator
+
 EVALDATA_DIR = Path(__file__).resolve().parent.parent.parent / "eval_data"
 
 

@@ -182,9 +182,9 @@ Return JSON:
 """
 
 DECISION_EXTRACTION_PROMPT_SHORT = """
-You are an expert in extracting decisions from group chat messages.
+You are an expert in extracting decisions and suggestions from group chat messages.
 
-Analyze the following conversation and extract ALL decisions made.
+Analyze the following conversation and extract ALL decisions and suggestions made.
 
 ## CONVERSATION
 
@@ -192,19 +192,25 @@ Analyze the following conversation and extract ALL decisions made.
 
 ---
 
-# WHAT COUNTS AS A DECISION?
+# WHAT COUNTS AS A DECISION (is_suggestion=false)?
 
 1. A clear choice/plan/conclusion was reached
 2. Technical parameters were specified (e.g. shard_count=256)
 3. Responsibility was assigned ("张三负责", "李四来改")
 4. Explicit agreement ("那就定", "确认用", "同意")
 
+# WHAT COUNTS AS A SUGGESTION (is_suggestion=true)?
+
+1. Someone proposes a specific technical approach or configuration, but it hasn't been confirmed yet
+2. A concrete recommendation with reasoning ("建议用X，因为...")
+3. A proposed action plan or process improvement that's being considered
+
 # WHAT DOES NOT COUNT?
 
 1. Pure status updates
-2. Brainstorming without conclusion
+2. Brainstorming without any concrete proposal
 3. Casual chat and greetings
-4. Vague intent without commitment
+4. Vague intent without any commitment
 
 ---
 
@@ -217,20 +223,23 @@ Return JSON:
     "decisions": [
         {{
             "decision_id": "dec_1",
-            "title": "Concise decision title",
+            "title": "Concise decision/suggestion title",
             "content": "Full description including context and parameters",
             "confidence": 0.85,
-            "rationale": "Why this decision was made",
+            "rationale": "Why this decision/suggestion was made",
             "proposer": "Name or null",
             "executor": "Name or null",
-            "impact_level": "major/minor/advisory"
+            "impact_level": "major/minor/advisory",
+            "is_suggestion": false
         }}
     ],
     "reasoning": "Brief explanation"
 }}
 ```
 
-If no decisions found, return {"has_decisions": false, "decisions": []}
+If no decisions found, return {{"has_decisions": false, "decisions": []}}
+
+**IMPORTANT**: Set `is_suggestion: true` for items that are proposed but not yet confirmed. Set `is_suggestion: false` for items that have been agreed upon or decided.
 """
 
 

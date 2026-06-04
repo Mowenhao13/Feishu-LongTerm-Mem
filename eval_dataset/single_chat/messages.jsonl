@@ -1,0 +1,98 @@
+{"chat_id": "chat_0", "msg_id": "m001", "speaker": "Alice", "msg": "新项目就用PG吧，不用纠结。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m002", "speaker": "Bob", "msg": "PG支持更丰富的数据类型，但MySQL的社区生态更成熟，迁移成本也得算进去。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m003", "speaker": "Carol", "msg": "@Alice @Bob 确定吗？我们之前很多业务逻辑依赖MySQL的某些特性，兼容性测试做了吗？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m004", "speaker": "Alice", "msg": "今天中午食堂的鱼香肉丝不错，你们吃了没？", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_0", "msg_id": "m005", "speaker": "Bob", "msg": "@Carol 兼容性确实是个问题，建议先拉一个现有MySQL特性的清单，对比PG的替代方案。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m006", "speaker": "Carol", "msg": "那迁移时间成本呢？我们项目排期很紧，不能拖太久。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m007", "speaker": "Alice", "msg": "行，那就先做兼容性测试，没问题就切PG @Bob @Carol", "expected_decision": true, "expected_topic": "用PG还是MySQL", "expected_summary": "先进行兼容性测试，通过后采用PostgreSQL", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}
+{"chat_id": "chat_0", "msg_id": "m008", "speaker": "Alice", "msg": "key命名就按业务缩写加冒号分层，简单点。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m009", "speaker": "Bob", "msg": "建议统一前缀，比如'project:module:key'，同时给每个key设个合理的TTL，避免内存爆炸。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m010", "speaker": "Carol", "msg": "@Bob 如果有些key需要长期保留呢？是不是得区分业务场景？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m011", "speaker": "Alice", "msg": "@Carol 那就分两类，临时key设TTL，持久key不设但加个标记。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m012", "speaker": "Bob", "msg": "对，比如用'cache:'和'perm:'区分，这样容易维护。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m013", "speaker": "Carol", "msg": "那默认TTL设多久？1小时？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m014", "speaker": "Alice", "msg": "1小时可以，大家觉得呢？", "expected_decision": true, "expected_topic": "Redis缓存key规范", "expected_summary": "采用'project:module:key'命名，临时key设1小时TTL并加'cache:'前缀，持久key加'perm:'前缀", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m015", "speaker": "Bob", "msg": "外面下雨了，你们带伞了吗？", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_0", "msg_id": "m016", "speaker": "Alice", "msg": "就用ShardingSphere，社区活跃，文档也全。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m017", "speaker": "Bob", "msg": "ShardingSphere的SQL兼容性更好，但MyCAT在分片算法上更灵活，看我们侧重哪方面。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m018", "speaker": "Carol", "msg": "@Bob 我们团队对MyCAT比较熟，换ShardingSphere的学习成本会不会太高？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m019", "speaker": "Alice", "msg": "学习成本不是问题，关键看长期维护。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m020", "speaker": "Bob", "msg": "@Carol 我查了下，ShardingSphere的文档很全，上手不难，而且兼容MySQL协议，迁移成本低。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m021", "speaker": "Carol", "msg": "那先让团队看一周文档，评估一下？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m022", "speaker": "Alice", "msg": "行，那就先评估，没问题就用ShardingSphere。", "expected_decision": true, "expected_topic": "分库分表方案", "expected_summary": "先让团队评估ShardingSphere的学习成本，通过后采用", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}
+{"chat_id": "chat_0", "msg_id": "m023", "speaker": "Alice", "msg": "App Router是未来，直接迁吧。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m024", "speaker": "Bob", "msg": "App Router支持RSC，但Pages Router的getServerSideProps迁移起来要改不少代码，建议分模块逐步迁移。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m025", "speaker": "Carol", "msg": "@Bob 并行维护期间会不会出现路由冲突？有没有什么工具可以辅助？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m026", "speaker": "Alice", "msg": "有官方迁移指南，应该问题不大。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m027", "speaker": "Bob", "msg": "@Carol 可以先用next codemod工具自动转换一部分，剩下的手动改，并行维护时路由命名空间不同，不会冲突。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m028", "speaker": "Carol", "msg": "那先迁一个模块试试？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m029", "speaker": "Alice", "msg": "可以，先拿用户模块试水。", "expected_decision": true, "expected_topic": "Next.js App Router迁移", "expected_summary": "先迁移用户模块作为试点，使用codemod工具辅助，逐步推进", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard"}
+{"chat_id": "chat_0", "msg_id": "m030", "speaker": "Bob", "msg": "周末有人去爬山吗？天气好像不错。", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_0", "msg_id": "m031", "speaker": "Alice", "msg": "Antd生态强，就用Antd。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m032", "speaker": "Bob", "msg": "Semi的国际化支持更好，而且字节在维护，但Antd的组件数量更多，社区插件也丰富。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m033", "speaker": "Carol", "msg": "@Alice @Bob 我们现有项目很多基于Antd，如果换Semi，是不是要重写很多样式？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m034", "speaker": "Alice", "msg": "那就别换了，继续用Antd。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m035", "speaker": "Bob", "msg": "但新项目可以考虑Semi，国际化需求越来越多了。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m036", "speaker": "Carol", "msg": "新项目用Semi，老项目不动，这样行吗？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m037", "speaker": "Alice", "msg": "行，就这么办。", "expected_decision": true, "expected_topic": "组件库选Antd还是Semi", "expected_summary": "新项目采用Semi Design，老项目继续使用Antd", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m038", "speaker": "Alice", "msg": "Vite快，直接换。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m039", "speaker": "Bob", "msg": "Vite开发体验好，但生产构建有些Webpack插件还没对应替代品，比如某些代码分割插件。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m040", "speaker": "Carol", "msg": "@Bob 确定CI那边能无缝切换吗？要不要先在小项目试一下？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m041", "speaker": "Alice", "msg": "先试，不行再换回来。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m042", "speaker": "Bob", "msg": "那选个内部小工具项目试点，比如admin面板，风险低。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m043", "speaker": "Carol", "msg": "@Bob 试点期间CI配置我来配合改。", "expected_decision": true, "expected_topic": "构建工具切Vite", "expected_summary": "先在内部小工具项目试点Vite，评估兼容性和CI改动", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard"}
+{"chat_id": "chat_0", "msg_id": "m044", "speaker": "Bob", "msg": "今天好热，空调是不是坏了？", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_0", "msg_id": "m045", "speaker": "Alice", "msg": "就用kubeadm升级，简单直接。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m046", "speaker": "Bob", "msg": "kubeadm升级步骤清晰，但Rancher有UI界面，适合多集群管理，看我们集群规模。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m047", "speaker": "Carol", "msg": "@Alice @Bob 如果升级过程中某个节点挂了，有没有回滚方案？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m048", "speaker": "Alice", "msg": "先备份etcd，挂了就恢复。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m049", "speaker": "Bob", "msg": "对，kubeadm升级前可以拍快照，回滚不难。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m050", "speaker": "Carol", "msg": "那先做一次演练？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m051", "speaker": "Alice", "msg": "可以，测试环境先跑一遍。", "expected_decision": true, "expected_topic": "K8s版本升级策略", "expected_summary": "使用kubeadm升级，先在测试环境演练，备份etcd并制定回滚方案", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard"}
+{"chat_id": "chat_0", "msg_id": "m052", "speaker": "Alice", "msg": "直接用alpine基础镜像，体积能小很多。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m053", "speaker": "Bob", "msg": "alpine确实小，但有些依赖需要编译，不如用多阶段构建，把编译环境和运行环境分开。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m054", "speaker": "Carol", "msg": "@Bob 我们的应用依赖glibc，alpine用的musl，会不会有坑？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m055", "speaker": "Alice", "msg": "那就用多阶段构建，基础镜像用ubuntu slim。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m056", "speaker": "Bob", "msg": "ubuntu slim体积也不大，而且glibc兼容性好，建议就用它。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m057", "speaker": "Carol", "msg": "那多阶段构建的Dockerfile我来写，试一下。", "expected_decision": true, "expected_topic": "Docker镜像体积优化", "expected_summary": "采用多阶段构建，基础镜像使用ubuntu slim，由Carol编写Dockerfile试点", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m058", "speaker": "Alice", "msg": "CPU超过80%就告警，内存超过70%就告警。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m059", "speaker": "Bob", "msg": "固定阈值容易误报，建议参考P99延迟，比如P99超过200ms才告警，CPU阈值按业务高峰期动态调。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m060", "speaker": "Carol", "msg": "@Bob 动态阈值需要历史数据吧？我们有没有足够的监控数据支撑？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m061", "speaker": "Alice", "msg": "先按固定阈值来，数据多了再调。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m062", "speaker": "Bob", "msg": "也行，先收集一个月数据，再优化。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m063", "speaker": "Carol", "msg": "那先按Alice说的设，后续再讨论动态方案。", "expected_decision": true, "expected_topic": "告警阈值调多少", "expected_summary": "先采用固定阈值（CPU 80%，内存 70%），收集数据后优化为动态方案", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m064", "speaker": "Carol", "msg": "下午茶有人要点奶茶吗？", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_0", "msg_id": "m065", "speaker": "Alice", "msg": "直接用JSON模型重构，方便版本管理。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m066", "speaker": "Bob", "msg": "JSON模型便于代码审查和自动化，但UI编辑更直观，建议两者结合，核心面板用JSON维护。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m067", "speaker": "Carol", "msg": "@Bob 如果JSON写错了，有没有预览或校验工具？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m068", "speaker": "Alice", "msg": "Grafana有JSON校验，直接黏贴就能看到效果。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m069", "speaker": "Bob", "msg": "对，可以先在UI里编辑，然后导出JSON，再手动优化。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m070", "speaker": "Carol", "msg": "那就先UI编辑再转JSON，这样稳妥。", "expected_decision": true, "expected_topic": "Grafana大盘重构", "expected_summary": "采用UI编辑后导出JSON的方式重构大盘，核心面板用JSON维护", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m071", "speaker": "Alice", "msg": "采样率直接设10%，省存储。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m072", "speaker": "Bob", "msg": "错误日志应该全量采集，INFO日志可以采样，比如ERROR全量，WARN 50%，INFO 10%。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m073", "speaker": "Carol", "msg": "@Bob 如果线上出问题，采样后的日志够不够定位？要不要保留全量一段时间？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m074", "speaker": "Alice", "msg": "ERROR全量就够了，INFO没必要。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m075", "speaker": "Bob", "msg": "@Carol 可以设置一个全量保留窗口，比如最近7天的ERROR全量，其他级别采样。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m076", "speaker": "Carol", "msg": "那WARN也全量吧，有些问题先报WARN再变ERROR。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m077", "speaker": "Alice", "msg": "行，就按Bob的方案来。", "expected_decision": true, "expected_topic": "日志采样率", "expected_summary": "ERROR和WARN全量采集，INFO采样10%，保留最近7天全量日志", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m078", "speaker": "Alice", "msg": "分区数直接加倍，吞吐肯定上去。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m079", "speaker": "Bob", "msg": "增加分区确实能提升并行度，但会导致重平衡，而且分区数太多会增加文件句柄开销，建议先评估当前吞吐瓶颈。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m080", "speaker": "Carol", "msg": "@Bob 重平衡期间会不会丢消息？有没有优雅扩缩容的方案？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m081", "speaker": "Alice", "msg": "先看看监控，瓶颈在哪。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m082", "speaker": "Bob", "msg": "我查一下当前分区消费延迟，如果消费者是瓶颈，加分区没用。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m083", "speaker": "Carol", "msg": "那等Bob分析完再决定吧。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m084", "speaker": "Bob", "msg": "今天食堂的宫保鸡丁太咸了。", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_0", "msg_id": "m085", "speaker": "Alice", "msg": "死信队列直接配成延迟队列，重试3次。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m086", "speaker": "Bob", "msg": "死信处理可以结合TTL和DLX，但不同消息的重要程度不同，建议核心业务单独配置重试间隔。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m087", "speaker": "Carol", "msg": "@Bob 如果重试都失败了，死信一直堆积怎么办？要不要设个最大堆积阈值？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m088", "speaker": "Alice", "msg": "设个告警就行，手动处理。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m089", "speaker": "Bob", "msg": "可以设置死信队列的max length，超过就触发告警，同时把死信转存到冷存储。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m090", "speaker": "Carol", "msg": "那核心业务和非核心业务分开配置？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m091", "speaker": "Alice", "msg": "可以，核心业务重试5次，非核心3次。", "expected_decision": true, "expected_topic": "RabbitMQ死信队列", "expected_summary": "核心业务重试5次并单独配置，非核心重试3次，设置死信队列告警和转存机制", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}
+{"chat_id": "chat_0", "msg_id": "m092", "speaker": "Alice", "msg": "每个业务线一个租户，topic按功能命名。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m093", "speaker": "Bob", "msg": "租户隔离有利于权限管理，但namespace也要规划好，比如按环境分dev/staging/prod，避免混乱。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m094", "speaker": "Carol", "msg": "@Bob 如果两个业务线需要共享数据，跨租户访问怎么配置？会不会有性能影响？", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m095", "speaker": "Alice", "msg": "跨租户就建个共享租户。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m096", "speaker": "Bob", "msg": "可以单独建一个shared租户，专门放跨业务topic，权限单独管理。", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m097", "speaker": "Carol", "msg": "那每个租户下namespace按环境分，这样清晰。", "expected_decision": true, "expected_topic": "Pulsar Topic管理", "expected_summary": "每个业务线一个租户，namespace按环境划分，跨业务数据使用shared租户", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}
+{"chat_id": "chat_0", "msg_id": "m098", "speaker": "Carol", "msg": "今天周五了，晚上有人约饭吗？", "expected_decision": false, "is_distractor": true}

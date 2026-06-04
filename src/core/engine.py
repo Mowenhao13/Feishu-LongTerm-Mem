@@ -418,7 +418,7 @@ class MemoryEngine:
         self._hypergraph_modified: bool = False
 
         self._processed_episode_hashes: Set[str] = set()
-        self._base_view_syncer: Any = None
+        self._task_view_syncer: Any = None
 
         self._sleep_manager: Any = None
 
@@ -506,12 +506,12 @@ class MemoryEngine:
             self._hypergraph = Hypergraph()
 
         try:
-            from src.view.syncer import BaseViewSyncer
-            self._base_view_syncer = BaseViewSyncer(self._storage, self._graph)
-            logger.info("BaseViewSyncer initialized")
+            from src.view import TaskViewSyncer
+            self._task_view_syncer = TaskViewSyncer(graph_path=self._config.storage_path)
+            logger.info("[TaskView] TaskViewSyncer initialized")
         except Exception as e:
-            logger.debug("BaseViewSyncer not available (non-fatal): %s", e)
-            self._base_view_syncer = None
+            logger.debug("[TaskView] TaskViewSyncer not available (non-fatal): %s", e)
+            self._task_view_syncer = None
 
         try:
             from src.memory.sleep import SleepManager
@@ -521,7 +521,7 @@ class MemoryEngine:
                 storage=self._storage,
                 hypergraph=self._hypergraph,
                 hg_persistence=self._hg_persistence,
-                base_view_syncer=self._base_view_syncer,
+                task_view_syncer=self._task_view_syncer,
                 llm_provider=self._extractor._llm if hasattr(self._extractor, "_llm") else None,
             )
             sleep_enabled = os.getenv("MEMORY_SLEEP_ENABLED", "true").lower() == "true"
@@ -735,11 +735,12 @@ class MemoryEngine:
         reconnected_episode_id: Optional[str] = None
 
         try:
-            node = await self._extract_decision(content, "im",
-                                                 existing_decisions=self._build_existing_decisions_context())
+            nodes = await self._extract_decision(content, "im",
+                                                  existing_decisions=self._build_existing_decisions_context())
 
-            if node:
-                await self._apply_decision_mutations(node, "im")
+            if nodes:
+                for node in nodes:
+                    await self._apply_decision_mutations(node, "im")
             else:
                 logger.info("[Engine] No decision extracted from episode %s (len=%d)",
                             episode_id[:12], len(content))
@@ -787,8 +788,8 @@ class MemoryEngine:
             logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
 
     async def _extract_decision(self, content: str, source: str,
-                                 existing_decisions: Optional[List[Dict]] = None) -> Optional[DecisionNode]:
-        """使用 LLM 提取决策
+                                 existing_decisions: Optional[List[Dict]] = None) -> Optional[List[DecisionNode]]:
+        """使用 LLM 提取决策（支持批量返回多条决策）
 
         Args:
             content: 对话内容
@@ -836,18 +837,31 @@ class MemoryEngine:
             logger.info("[LLM] <<< Extract result type=%s time=%.2fs",
                         type(result).__name__, elapsed)
 
+            # Handle list of decisions (batch extraction)
+            if isinstance(result, list):
+                nodes = []
+                for item in result:
+                    if isinstance(item, DecisionNode):
+                        nodes.append(item)
+                    elif isinstance(item, dict):
+                        nodes.append(self._dict_to_node(item, source))
+                if nodes:
+                    logger.info("[LLM] Extracted %d decisions", len(nodes))
+                    return nodes
+                return None
+
             if isinstance(result, DecisionNode):
                 logger.info("[LLM] Extracted decision: sid=%s summary=%.50s status=%s",
                             result.sid[:12], result.summary, result.status.value)
-                return result
+                return [result]
             if isinstance(result, dict):
                 logger.info("[LLM] Extracted decision dict with %d keys", len(result))
-                return self._dict_to_node(result, source)
+                return [self._dict_to_node(result, source)]
             if result is None:
                 logger.info("[LLM] No decision found in content (%.60s)", content_preview)
                 return None
             logger.info("[LLM] Converting result dict to node")
-            return self._dict_to_node(result, source)
+            return [self._dict_to_node(result, source)]
 
         except Exception as e:
             elapsed = time.time() - extract_start
@@ -1087,9 +1101,9 @@ class MemoryEngine:
             if await asyncio.to_thread(self._pipeline.apply_mutation, updates):
                 self._status.total_mutations_applied += 1
                 logger.info("[Mutation] UPDATE applied: sid=%s v%d", node.sid[:12], existing.version + 1)
-                if self._base_view_syncer:
-                    await asyncio.to_thread(self._base_view_syncer.sync_decision, node.sid)
-                    logger.info("[Mutation] Base sync triggered for UPDATE: sid=%s", node.sid[:12])
+                if self._task_view_syncer:
+                    await asyncio.to_thread(self._task_view_syncer.sync_decision, node.sid)
+                    logger.info("[TaskView] Sync triggered for UPDATE: sid=%s", node.sid[:12])
                 if self._push_engine and self._push_engine._config.trigger_on_update:
                     await asyncio.to_thread(
                         self._push_engine.push_decision_update_card,
@@ -1219,9 +1233,9 @@ class MemoryEngine:
         if await asyncio.to_thread(self._pipeline.apply_mutation, create):
             self._status.total_mutations_applied += 1
             logger.info("[Mutation] CREATE applied: sid=%s v1", node.sid[:12])
-            if self._base_view_syncer:
-                await asyncio.to_thread(self._base_view_syncer.sync_decision, node.sid)
-                logger.info("[Mutation] Base sync triggered for CREATE: sid=%s", node.sid[:12])
+            if self._task_view_syncer:
+                await asyncio.to_thread(self._task_view_syncer.sync_decision, node.sid)
+                logger.info("[TaskView] Sync triggered for CREATE: sid=%s", node.sid[:12])
             if self._push_engine and self._push_engine._config.trigger_on_create:
                 await asyncio.to_thread(self._push_engine.push_decision_card, node.sid, PushTrigger.CREATE)
         else:
@@ -1439,6 +1453,7 @@ class MemoryEngine:
                 proposer=data.get("proposer", "") or data.get("authority", ""),
                 authority=data.get("proposer", "") or data.get("authority", ""),
                 assignee=data.get("executor", "") or data.get("assignee", ""),
+                is_suggestion=bool(data.get("is_suggestion", False)),
                 source=source,
                 created_at=datetime.now(),
                 updated_at=datetime.now(),

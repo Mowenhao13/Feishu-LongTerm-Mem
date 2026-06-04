@@ -65,7 +65,7 @@ class SleepManager:
         storage: Any = None,
         hypergraph: Any = None,
         hg_persistence: Any = None,
-        base_view_syncer: Any = None,
+        task_view_syncer: Any = None,
         llm_provider: Any = None,
         embedder: Any = None,
     ) -> None:
@@ -74,7 +74,7 @@ class SleepManager:
         self._storage = storage
         self._hypergraph = hypergraph
         self._hg_persistence = hg_persistence
-        self._base_view_syncer = base_view_syncer
+        self._task_view_syncer = task_view_syncer
         self._llm = llm_provider
         self._embedder = embedder
 
@@ -375,13 +375,13 @@ class SleepManager:
             except Exception as e:
                 report.errors.append(f"Local storage write failed: {e}")
 
-        if self._base_view_syncer:
+        if self._task_view_syncer:
             try:
-                self._base_view_syncer.full_sync()
-                logger.info("[Sleep]   Base view synced to 飞书多维表格")
+                self._task_view_syncer.full_sync()
+                logger.info("[Sleep]   Task view synced to 飞书任务")
             except Exception as e:
-                logger.warning("[Sleep]   Base view sync failed (non-fatal, local files safe): %s", str(e)[:80])
-                report.errors.append(f"Base view sync failed: {e}")
+                logger.warning("[Sleep]   Task view sync failed (non-fatal, local files safe): %s", str(e)[:80])
+                report.errors.append(f"Task view sync failed: {e}")
 
         if self._storage and self._graph:
             try:
@@ -641,10 +641,10 @@ class SleepManager:
             except Exception:
                 pass
 
-        if self._base_view_syncer:
+        if self._task_view_syncer:
             try:
-                self._base_view_syncer.sync_decision(keeper.sid)
-                self._base_view_syncer.sync_decision(mergee.sid)
+                self._task_view_syncer.sync_decision(keeper.sid)
+                self._task_view_syncer.sync_decision(mergee.sid)
             except Exception:
                 pass
 

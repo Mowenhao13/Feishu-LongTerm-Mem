@@ -25,7 +25,7 @@ from src.graph.memory_graph import MemoryGraph
 from src.llm.client import LLMClient
 from src.model.embedding_provider import EmbeddingProvider
 from src.model.reranker_provider import RerankerProvider
-from src.view import BaseViewSyncer, is_bitable_enabled
+from src.view import TaskViewSyncer, is_task_view_enabled
 from src.node.node import DecisionNode
 from src.node.types import DecisionStatus, ImpactLevel
 from src.storage.git_storage import GitStorage, GitStorageConfig
@@ -102,7 +102,7 @@ class MemoryLoader:
         self._graph: Optional[MemoryGraph] = None
         self._storage: Optional[GitStorage] = None
         self._decisions: List[Any] = []
-        self._syncer: Optional[BaseViewSyncer] = None
+        self._syncer: Optional[TaskViewSyncer] = None
         self._loaded = False
 
     def ensure_loaded(self) -> None:
@@ -116,14 +116,14 @@ class MemoryLoader:
         self._loaded = True
 
         try:
-            if not is_bitable_enabled():
-                logger.info("[BaseView] Skipped (BITABLE_ENABLED=false)")
+            if not is_task_view_enabled():
+                logger.info("[TaskView] Skipped (TASK_ENABLED=false)")
             else:
-                self._syncer = BaseViewSyncer(self._storage, self._graph)
+                self._syncer = TaskViewSyncer(WORK_DIR)
                 self._storage.post_commit_hooks.append(self._syncer.sync_decision)
                 self._syncer.full_sync()
         except Exception as e:
-            logger.warning("[BaseView] Sync init failed (non-fatal): %s", e)
+            logger.warning("[TaskView] Sync init failed (non-fatal): %s", e)
 
     @property
     def graph(self) -> MemoryGraph:

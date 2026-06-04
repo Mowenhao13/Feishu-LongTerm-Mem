@@ -1,11 +1,10 @@
 import os
-
-from .syncer import BaseViewSyncer
-from .client import BaseViewClient
-
-
-def is_bitable_enabled() -> bool:
-    return os.environ.get("BITABLE_ENABLED", "").strip().lower() == "true"
+from .task_syncer import TaskViewSyncer
+from .task_client import TaskViewClient
 
 
-__all__ = ["BaseViewSyncer", "BaseViewClient", "is_bitable_enabled"]
+def is_task_view_enabled() -> bool:
+    return os.environ.get("TASK_ENABLED", "").strip().lower() == "true"
+
+
+__all__ = ["TaskViewSyncer", "TaskViewClient", "is_task_view_enabled"]

@@ -97,6 +97,8 @@ class DecisionNode(BaseModel):
     confidence: float = Field(default=0.8, ge=0.0, le=1.0, description="Extraction confidence from LLM")
     git_commit_hash: str = Field(default="", description="Last git commit hash")
 
+    is_suggestion: bool = Field(default=False, description="True if this is a suggestion rather than a firm decision")
+
     # ==================== Status helpers ====================
 
     def is_active(self) -> bool:

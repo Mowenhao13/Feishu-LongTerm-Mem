@@ -29,6 +29,10 @@ env/
 # Data
 data/
 eval_reports/
+eval_data/
+outputs/
+test_files/
+mem-data/
 *.md~
 *.pyc
 
@@ -38,3 +42,4 @@ eval_reports/
 ref/
 logs/
 data/snapshots/
+plugin/feishu-mem-addon/node_modules/

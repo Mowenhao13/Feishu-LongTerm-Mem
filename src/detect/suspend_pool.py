@@ -195,6 +195,25 @@ class SuspendPool:
                 "chat_ids": list({e.chat_id for e in self._pool.values()}),
             }
 
+    def drain_all(self) -> List[Dict[str, Any]]:
+        """Remove and return all suspended episodes. Used in eval mode for final processing."""
+        with self._lock:
+            entries = list(self._pool.values())
+            self._pool.clear()
+            self._dirty = True
+            logger.info("[SuspendPool] Drained %d episodes", len(entries))
+            return [
+                {
+                    "episode_id": e.episode_id,
+                    "chat_id": e.chat_id,
+                    "messages_data": e.messages_data,
+                    "start_time": e.start_time,
+                    "last_timestamp": e.last_timestamp,
+                    "last_content": e.last_content,
+                }
+                for e in entries
+            ]
+
     # ── persistence ──
 
     def save(self) -> None:

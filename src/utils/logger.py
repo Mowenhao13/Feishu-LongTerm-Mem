@@ -6,6 +6,28 @@ Replaces core.observation.logger dependency
 import logging
 import sys
 
+_default_handler_set = False
+
+
+def setup_logger(level: str = "INFO") -> None:
+    """设置根 logger 的级别和格式（供入口脚本调用）"""
+    global _default_handler_set
+    if _default_handler_set:
+        return
+
+    root = logging.getLogger("src")
+    root.setLevel(getattr(logging, level.upper(), logging.INFO))
+
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(getattr(logging, level.upper(), logging.INFO))
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    handler.setFormatter(formatter)
+    root.addHandler(handler)
+    _default_handler_set = True
+
 
 def get_logger(name: str) -> logging.Logger:
     """

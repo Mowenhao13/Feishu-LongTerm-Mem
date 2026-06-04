@@ -26,6 +26,8 @@ TOPIC_SHIFT_KEYWORDS = [
 
 SEMANTIC_GAP_THRESHOLD = 0.45
 REOPEN_THRESHOLD = 0.65
+TOPIC_DIVERSION_THRESHOLD = 0.30
+TOPIC_BASELINE_SIZE = 5
 
 
 @dataclass
@@ -90,7 +92,7 @@ class ChatEpisode:
 
 
 class _InternalChatEpisode:
-    def __init__(self, chat_id: str):
+    def __init__(self, chat_id: str, baseline_size: int = TOPIC_BASELINE_SIZE):
         self.id = _generate_episode_id()
         self.chat_id = chat_id
         self.messages: List[ChatMessage] = []
@@ -100,6 +102,8 @@ class _InternalChatEpisode:
         self.message_count: int = 0
         self._embeddings: List[np.ndarray] = []
         self._last_embedding: Optional[np.ndarray] = None
+        self._baseline_size = baseline_size
+        self._baseline_embedding: Optional[np.ndarray] = None
 
     @classmethod
     def resume(cls, suspended: "SuspendedEpisode") -> "_InternalChatEpisode":
@@ -125,6 +129,9 @@ class _InternalChatEpisode:
         if embedding is not None:
             self._embeddings.append(embedding)
             self._last_embedding = embedding
+            # Build baseline from first N messages
+            if len(self._embeddings) == self._baseline_size:
+                self._baseline_embedding = np.mean(self._embeddings, axis=0)
 
     def aggregate_embedding(self) -> Optional[np.ndarray]:
         if not self._embeddings:
@@ -157,6 +164,7 @@ class ChatEpisodeBuffer:
         max_messages: int = 100,
         max_duration: float = 7200.0,
         semantic_threshold: float = SEMANTIC_GAP_THRESHOLD,
+        topic_diversion_threshold: float = TOPIC_DIVERSION_THRESHOLD,
         reopen_threshold: float = REOPEN_THRESHOLD,
         idle_flush_interval: float = 30.0,
         pool: Optional[SuspendPool] = None,
@@ -166,6 +174,7 @@ class ChatEpisodeBuffer:
         self._max_messages = max_messages
         self._max_duration = max_duration
         self._semantic_threshold = semantic_threshold
+        self._topic_diversion = topic_diversion_threshold
         self._reopen_threshold = reopen_threshold
         self._idle_flush = idle_flush_interval
         self._pool = pool
@@ -261,6 +270,24 @@ class ChatEpisodeBuffer:
                     return None
                 self._current = _InternalChatEpisode(chat_id=self.chat_id)
                 logger.info("[Episode] chat=%s new episode=%s started after keyword suspend",
+                            self.chat_id[:12], self._current.id[:12])
+                self._current.add(msg, msg_embedding)
+                return None
+
+        if (self._current.message_count > 0
+                and msg_embedding is not None
+                and self._current._baseline_embedding is not None):
+            sim = self._cosine_similarity(msg_embedding, self._current._baseline_embedding)
+            if sim < self._topic_diversion:
+                logger.info("[Episode] chat=%s TOPIC-DIVERGENCE boundary: baseline_sim=%.4f < %.2f, suspend episode=%s (msgs=%d)",
+                            self.chat_id[:12], sim, self._topic_diversion,
+                            self._current.id[:12], self._current.message_count)
+                self._suspend_current()
+                if self._try_reopen(msg_embedding):
+                    self._current.add(msg, msg_embedding)
+                    return None
+                self._current = _InternalChatEpisode(chat_id=self.chat_id)
+                logger.info("[Episode] chat=%s new episode=%s started after topic divergence",
                             self.chat_id[:12], self._current.id[:12])
                 self._current.add(msg, msg_embedding)
                 return None
@@ -375,6 +402,7 @@ class ChatEpisodeManager:
         max_messages: Optional[int] = None,
         max_duration: Optional[float] = None,
         semantic_threshold: Optional[float] = None,
+        topic_diversion_threshold: Optional[float] = None,
         reopen_threshold: Optional[float] = None,
         idle_flush_interval: Optional[float] = None,
         pool: Optional[SuspendPool] = None,
@@ -394,6 +422,10 @@ class ChatEpisodeManager:
         self._semantic_threshold = (
             semantic_threshold if semantic_threshold is not None
             else float(os.getenv("EPISODE_SEMANTIC_THRESHOLD", str(SEMANTIC_GAP_THRESHOLD)))
+        )
+        self._topic_diversion = (
+            topic_diversion_threshold if topic_diversion_threshold is not None
+            else float(os.getenv("EPISODE_TOPIC_DIVERSION", str(TOPIC_DIVERSION_THRESHOLD)))
         )
         self._reopen_threshold = (
             reopen_threshold if reopen_threshold is not None
@@ -417,6 +449,7 @@ class ChatEpisodeManager:
                     max_messages=self._max_messages,
                     max_duration=self._max_duration,
                     semantic_threshold=self._semantic_threshold,
+                    topic_diversion_threshold=self._topic_diversion,
                     reopen_threshold=self._reopen_threshold,
                     idle_flush_interval=self._idle_flush,
                     pool=self._pool,
@@ -433,6 +466,11 @@ class ChatEpisodeManager:
             for buf in self._buffers.values():
                 buf.set_embedding_fn(embed_fn)
 
+    def set_idle_flush_threshold(self, threshold: float) -> None:
+        with self._lock:
+            for buf in self._buffers.values():
+                buf._idle_flush = threshold
+
     def add_message(self, msg: ChatMessage) -> None:
         buf = self.get_or_create_buffer(msg.chat_id)
         buf.add_message(msg)
@@ -445,6 +483,34 @@ class ChatEpisodeManager:
             if ep is not None:
                 suspended.append(ep)
         return suspended
+
+    def drain_suspended_episodes(self) -> List[ChatEpisode]:
+        """Remove and return all suspended episodes as ChatEpisode objects."""
+        entries = self._pool.drain_all()
+        episodes = []
+        for entry in entries:
+            msg_dicts = entry["messages_data"]
+            messages = []
+            for md in msg_dicts:
+                # ChatMessage.__dict__ stores: chat_id, sender_id, content, timestamp, message_id
+                messages.append(ChatMessage(
+                    chat_id=md.get("chat_id", entry["chat_id"]),
+                    sender_id=md.get("sender_id", "unknown"),
+                    content=md.get("content", ""),
+                    timestamp=md.get("timestamp", entry["last_timestamp"]),
+                    message_id=md.get("message_id", ""),
+                ))
+            ep = ChatEpisode(
+                id=entry["episode_id"],
+                chat_id=entry["chat_id"],
+                messages=messages,
+                start_time=entry["start_time"],
+                end_time=entry["last_timestamp"],
+            )
+            episodes.append(ep)
+            logger.info("[EpisodeManager] Drained episode=%s (chat=%s, msgs=%d)",
+                        entry["episode_id"][:12], entry["chat_id"][:12], len(messages))
+        return episodes
 
     def close_all(self) -> List[ChatEpisode]:
         closed: List[ChatEpisode] = []

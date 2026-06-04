@@ -106,7 +106,8 @@ class OpenAIProvider(LLMProvider):
             "messages": [{"role": "user", "content": prompt}],
             "temperature": temperature if temperature is not None else self.temperature,
             "provider": openrouter_provider,
-            "response_format": response_format
+            "response_format": response_format,
+            "stream": False,  # Disable streaming for reliable JSON response
         }
         # print(data)
         # print(data["extra_body"])
@@ -134,8 +135,21 @@ class OpenAIProvider(LLMProvider):
                         chunks = []
                         async for chunk in response.content.iter_any():
                             chunks.append(chunk)
-                        test = b"".join(chunks).decode()
-                        response_data = json.loads(test)
+                        raw_text = b"".join(chunks).decode()
+
+                        # Handle SSE streaming response (strip "data: " prefixes)
+                        if raw_text.startswith("data:"):
+                            lines = raw_text.strip().split("\n")
+                            last_data = ""
+                            for line in lines:
+                                line = line.strip()
+                                if line.startswith("data:"):
+                                    payload = line[5:].strip()
+                                    if payload and payload != "[DONE]":
+                                        last_data = payload
+                            raw_text = last_data
+
+                        response_data = json.loads(raw_text)
                         # print(response_data)
                         # Handle error response
                         if response.status != 200:
