@@ -24,6 +24,8 @@ class SleepReport:
         self.duplicates_merged: int = 0
         self.noise_pruned: int = 0
         self.conflicts_found: int = 0
+        self.fp_found: int = 0
+        self.fp_shelved: int = 0
         self.hot_scores_updated: int = 0
         self.decisions_promoted: int = 0
         self.errors: List[str] = []
@@ -37,6 +39,8 @@ class SleepReport:
             "duplicates_merged": self.duplicates_merged,
             "noise_pruned": self.noise_pruned,
             "conflicts_found": self.conflicts_found,
+            "fp_found": self.fp_found,
+            "fp_shelved": self.fp_shelved,
             "hot_scores_updated": self.hot_scores_updated,
             "decisions_promoted": self.decisions_promoted,
             "errors": self.errors,
@@ -46,8 +50,9 @@ class SleepReport:
 class SleepManager:
     """记忆整理管理器（仿 OpenClaw 睡眠机制）
 
-    四阶段整理流程：
-    Phase 1 - Light Sleep（浅睡）：收集当前所有决策，统计基础信息
+    五阶段整理流程：
+    Phase 1 - Light Sleep（浅睡）：收集当前所有决策
+    Phase 1b - REM Sleep（质量评估）：批量 LLM 识别 FP/噪声，低置信度决策被 SHELVED
     Phase 2 - Deep Sleep（深睡）：预过滤 + 批量 LLM 精判，发现重复/冲突
     Phase 3 - Promote（巩固）：根据 LLM action 分派处理（skip/merge/conflict/keep）
     Phase 4 - Wave（存档）：清理 processed_episode_hashes，保存状态
@@ -273,6 +278,49 @@ class SleepManager:
         logger.info("[Sleep] Phase 2 (Deep Sleep): fallback Dice found %d duplicates", report.duplicates_found)
         return duplicates
 
+    # ==================== Phase 1b: REM Sleep (FP Assessment) ====================
+
+    def rem_sleep(
+        self,
+        decisions: List[DecisionNode],
+        report: SleepReport,
+    ) -> None:
+        """Phase 1b - REM 睡眠（快速眼动）：质量评估，识别 FP/噪声
+        
+        在 Light Sleep 收集完所有决策后，对低置信度决策 (confidence < 0.8)
+        进行批量 LLM 质量评估，标记 FP 为 SHELVED。
+        
+        LLM 不可用时跳过，不影响已有决策。
+        """
+        report.phase = "rem_sleep"
+        
+        judgments = self._batch_fp_judge(decisions)
+        if not judgments:
+            logger.info("[Sleep] Phase 1b (REM): no FP judgments (all high-confidence or LLM unavailable)")
+            return
+        
+        fp_count = 0
+        for sid, action, reason in judgments:
+            if action != "shelve":
+                continue
+            # Find the decision node and mark it
+            for d in decisions:
+                if d.sid == sid and d.status.is_active():
+                    logger.info("[Sleep]   FP shelve: %s (conf=%.2f) — %s", sid[:12], d.confidence, reason)
+                    if self._graph:
+                        d.change_status(DecisionStatus.SHELVED)
+                        self._graph.upsert_decision(d, "feishu-mem")
+                    if self._storage:
+                        try:
+                            self._storage.write_decision({"sid": d.sid, "status": "shelved"})
+                        except Exception:
+                            pass
+                    fp_count += 1
+                    break
+        
+        report.fp_found = fp_count
+        logger.info("[Sleep] Phase 1b (REM): assessed %d, shelved %d FPs", len(judgments), fp_count)
+
     # ==================== Phase 3: Promote ====================
 
     def promote(
@@ -485,6 +533,7 @@ class SleepManager:
 
         try:
             decisions = self.light_sleep(report)
+            self.rem_sleep(decisions, report)          # NEW: FP assessment
             duplicates = self.deep_sleep(decisions, report)
             self.promote(decisions, duplicates, report)
             self.build_tree(decisions, report)
@@ -597,6 +646,72 @@ class SleepManager:
                 for _, c, _ in batch:
                     results.append((main.sid, c.sid, "keep", "LLM_error", ""))
 
+        return results
+
+    # ==================== Batch FP Judge ====================
+
+    def _batch_fp_judge(
+        self,
+        decisions: List[DecisionNode],
+    ) -> List[Tuple[str, str, str]]:
+        """批量调用 LLM 评估决策质量，识别 FP
+        
+        Only evaluates decisions with confidence < 0.8 (high-confidence ones are kept automatically).
+        
+        Returns:
+            [(sid, action, reason), ...]
+            action: "keep" | "shelve"
+        """
+        if not self._llm or not hasattr(self._llm, "generate"):
+            return []
+        
+        # Only assess low-confidence decisions
+        to_assess = [d for d in decisions if d.status.is_active() and d.confidence < 0.8]
+        if not to_assess:
+            return []
+        
+        from src.prompts import SLEEP_FP_ASSESS_PROMPT
+        import json as _json
+        
+        batch_size = 20
+        results: List[Tuple[str, str, str]] = []
+        
+        for i in range(0, len(to_assess), batch_size):
+            batch = to_assess[i:i + batch_size]
+            decision_list = _json.dumps([
+                {
+                    "sid": d.sid,
+                    "title": d.title or "",
+                    "summary": d.summary or "",
+                    "content": (d.full_text or d.summary or "")[:200],
+                    "topic": d.topic_id or "",
+                    "status": d.status.value if hasattr(d.status, "value") else str(d.status),
+                    "confidence": d.confidence,
+                    "is_suggestion": getattr(d, "is_suggestion", False),
+                }
+                for d in batch
+            ], ensure_ascii=False, indent=2)
+            
+            prompt = SLEEP_FP_ASSESS_PROMPT.format(decisions_json=decision_list)
+            _temp = float(os.getenv("MEMORY_DEDUP_TEMPERATURE", "0.05"))
+            
+            try:
+                resp = self._llm.generate(
+                    prompt,
+                    temperature=_temp,
+                    response_format={"type": "json_object"},
+                )
+                result = _json.loads(resp) if isinstance(resp, str) else resp
+                for j in result.get("judgments", []):
+                    sid = j.get("sid", "")
+                    action = j.get("action", "keep")
+                    reason = j.get("reason", "")
+                    results.append((sid, action, reason))
+            except Exception as e:
+                logger.warning("[Sleep] FP batch judge call failed: %s", str(e)[:60])
+                for d in batch:
+                    results.append((d.sid, "keep", "LLM_error"))
+        
         return results
 
     # ==================== Action 处理器 ====================
