@@ -502,18 +502,34 @@ class SleepManager:
         """快速预过滤：只有通过预过滤的候选才会进入 LLM 判断
 
         严格的条件尽可能减少 LLM 调用次数：
-        1. 必须同 topic
+        1. 同 topic 或跨群 topic 语义相近
         2. Dice >= 0.35（低阈值，高召回）
         3. summary 为空时退回到 full_text 比较
+
+        跨群匹配（新增）：不同 chat_id 但 topic 语义相似度 >= 0.5 也视为候选。
         """
-        if a.topic_id != b.topic_id:
+        if a.topic_id == b.topic_id:
+            # Same topic: check similarity
+            dice = self._summary_similarity(a.summary, b.summary)
+            if dice >= self._prefilter_dice:
+                return True
+            if not a.summary and not b.summary and a.full_text and b.full_text:
+                dice = self._summary_similarity(a.full_text, b.full_text)
+                return dice >= self._prefilter_dice
             return False
-        dice = self._summary_similarity(a.summary, b.summary)
-        if dice >= self._prefilter_dice:
-            return True
-        if not a.summary and not b.summary and a.full_text and b.full_text:
-            dice = self._summary_similarity(a.full_text, b.full_text)
-            return dice >= self._prefilter_dice
+
+        # Cross-chat: different chat_id but semantically similar topic
+        a_cid = getattr(a, "chat_id", None)
+        b_cid = getattr(b, "chat_id", None)
+        if a_cid is not None and b_cid is not None and a_cid != b_cid:
+            topic_sim = self._summary_similarity(a.topic_id, b.topic_id)
+            if topic_sim >= 0.5:
+                dice = self._summary_similarity(a.summary, b.summary)
+                logger.debug("[Sleep] Cross-chat candidate: %s(topic=%s) <-> %s(topic=%s) topic_sim=%.2f dice=%.2f",
+                              a.sid[:12], a.topic_id, b.sid[:12], b.topic_id, topic_sim, dice)
+                if dice >= self._prefilter_dice:
+                    return True
+
         return False
 
     # ==================== 批量 LLM 判断 ====================
