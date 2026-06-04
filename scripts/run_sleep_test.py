@@ -52,7 +52,7 @@ async def run_eval(dataset: str) -> None:
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
-    stdout, stderr = await proc.communicate(timeout=900)
+    stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=900)
     print(stdout.decode()[-3000:] if stdout else "")
     if proc.returncode != 0:
         print(f"[Sleep Test] Eval failed:\n{stderr.decode()[-1000:]}")
