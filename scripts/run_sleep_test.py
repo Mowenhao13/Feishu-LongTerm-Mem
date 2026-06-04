@@ -61,26 +61,99 @@ async def run_eval(dataset: str) -> None:
 
 
 def collect_decisions_from_path(path: str) -> List[Dict[str, Any]]:
-    """从备份路径收集所有决策（解析 md 文件）"""
+    """从备份路径收集所有决策（解析 md 文件 + git branches）"""
     decisions: List[Dict[str, Any]] = []
     decisions_dir = Path(path) / "decisions"
-    if not decisions_dir.exists():
-        return decisions
+    if decisions_dir.exists():
+        for md_file in decisions_dir.rglob("*.md"):
+            try:
+                content = md_file.read_text(encoding="utf-8")
+                lines = content.strip().split("\n")
+                record: Dict[str, Any] = {"sid": md_file.stem}
+                for line in lines:
+                    if ":" in line and not line.startswith("#") and not line.startswith("---"):
+                        k, v = line.split(":", 1)
+                        record[k.strip().lower()] = v.strip()
+                decisions.append(record)
+            except Exception as e:
+                print(f"[Sleep Test] Error reading {md_file}: {e}")
 
-    for md_file in decisions_dir.rglob("*.md"):
-        try:
-            content = md_file.read_text(encoding="utf-8")
-            lines = content.strip().split("\n")
-            record: Dict[str, Any] = {"sid": md_file.stem}
-            for line in lines:
-                if ":" in line and not line.startswith("#") and not line.startswith("---"):
-                    k, v = line.split(":", 1)
-                    record[k.strip().lower()] = v.strip()
-            decisions.append(record)
-        except Exception as e:
-            print(f"[Sleep Test] Error reading {md_file}: {e}")
+    # Also read from git decision/* branches
+    git_dir = Path(path) / ".git"
+    if git_dir.exists():
+        import subprocess
+        result = subprocess.run(
+            ["git", "branch", "--list", "decision/*"],
+            cwd=path, capture_output=True, text=True, timeout=30,
+        )
+        branches = [b.strip().lstrip("* ") for b in result.stdout.strip().split("\n") if b.strip()]
+        for branch in branches:
+            try:
+                result = subprocess.run(
+                    ["git", "ls-tree", "-r", "--name-only", branch, "--", "decisions/"],
+                    cwd=path, capture_output=True, text=True, timeout=30,
+                )
+                md_files = [f for f in result.stdout.strip().split("\n") if f.endswith(".md")]
+                for fpath in md_files:
+                    # Skip if already collected from disk
+                    sid = Path(fpath).stem
+                    if any(d.get("sid") == sid for d in decisions):
+                        continue
+                    result = subprocess.run(
+                        ["git", "show", f"{branch}:{fpath}"],
+                        cwd=path, capture_output=True, text=True, timeout=30,
+                    )
+                    content = result.stdout
+                    if content.startswith("---"):
+                        parts = content.split("---", 2)
+                        if len(parts) >= 3:
+                            yaml_text = parts[1]
+                            record: Dict[str, Any] = {"sid": sid}
+                            for line in yaml_text.split("\n"):
+                                if ":" in line:
+                                    k, v = line.split(":", 1)
+                                    record[k.strip().lower()] = v.strip()
+                            decisions.append(record)
+            except Exception as e:
+                print(f"[Sleep Test] Error reading git branch {branch}: {e}")
 
     return decisions
+
+
+def _checkout_decision_files_to_disk(backup_path: str) -> None:
+    """提取 git decision/* 分支中的决策文件到工作目录"""
+    import subprocess
+    path = Path(backup_path)
+    git_dir = path / ".git"
+    if not git_dir.exists():
+        return
+    # Ensure on main branch
+    subprocess.run(["git", "checkout", "main"], cwd=backup_path, capture_output=True, timeout=30)
+    # Get all decision branches
+    result = subprocess.run(
+        ["git", "branch", "--list", "decision/*"],
+        cwd=backup_path, capture_output=True, text=True, timeout=30,
+    )
+    branches = [b.strip().lstrip("* ") for b in result.stdout.strip().split("\n") if b.strip()]
+    for branch in branches:
+        try:
+            result = subprocess.run(
+                ["git", "ls-tree", "-r", "--name-only", branch, "--", "decisions/"],
+                cwd=backup_path, capture_output=True, text=True, timeout=30,
+            )
+            md_files = [f for f in result.stdout.strip().split("\n") if f.endswith(".md")]
+            for fpath in md_files:
+                result = subprocess.run(
+                    ["git", "show", f"{branch}:{fpath}"],
+                    cwd=backup_path, capture_output=True, text=True, timeout=30,
+                )
+                content = result.stdout
+                file_path = path / fpath
+                file_path.parent.mkdir(parents=True, exist_ok=True)
+                file_path.write_text(content, encoding="utf-8")
+                print(f"[Sleep Test]  Checked out {fpath} to disk")
+        except Exception as e:
+            print(f"[Sleep Test]  Failed to checkout branch {branch}: {e}")
 
 
 def compare_decisions(before: List[Dict], after_sleep_path: str) -> Dict[str, Any]:
@@ -129,7 +202,10 @@ async def main():
     before = collect_decisions_from_path(backup_path)
     print(f"[Sleep Test] Before sleep: {len(before)} decisions")
 
-    # Step 4: Run SleepManager on the backup
+    # Step 4: Checkout decision files from git branches to disk
+    _checkout_decision_files_to_disk(backup_path)
+
+    # Step 5: Run SleepManager on the backup
     print(f"[Sleep Test] Running SleepManager.sleep() on backup...")
     sm = SleepManager(source_path=backup_path)
     report = sm.sleep()
@@ -142,7 +218,7 @@ async def main():
     if report.errors:
         print(f"  errors:            {report.errors}")
 
-    # Step 5: Compare before/after
+    # Step 6: Compare before/after
     # Sleep writes decisions back via the _storage layer.
     # We need a mem-data snapshot after sleep for comparison.
     after_backup = backup_mem_data(f"{args.dataset}_after_sleep")
