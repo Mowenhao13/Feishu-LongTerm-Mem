@@ -70,7 +70,7 @@ class EmbeddingProvider:
             return False
 
     def embed(self, texts: List[str]) -> List[List[float]]:
-        if 'Qwen3' not in self.model_name:
+        if 'qwen3' not in self.model_name.lower():
             raise ValueError(f"Model {self.model_name} is not supported, only Qwen3-Embedding series models is supported")
 
         n_texts = len(texts)

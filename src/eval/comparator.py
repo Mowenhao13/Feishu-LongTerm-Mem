@@ -4,8 +4,13 @@
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+
+import numpy as np
+
+logger = logging.getLogger(__name__)
 
 
 class EvalComparator:
@@ -17,8 +22,9 @@ class EvalComparator:
         report = comparator.compute_metrics()
     """
 
-    def __init__(self, expected_path: str):
+    def __init__(self, expected_path: str, embedding_provider: Optional[Any] = None):
         self._expected_path = expected_path
+        self._embedder = embedding_provider
         self._expected_decisions: List[Dict[str, Any]] = []
         self._actual_decisions: List[Dict[str, Any]] = []
         self._true_positives: List[Tuple[Dict, Dict]] = []  # (expected, actual)
@@ -39,7 +45,7 @@ class EvalComparator:
 
     @staticmethod
     def _summary_similarity(s1: str, s2: str) -> float:
-        """基于字符重叠率的摘要相似度"""
+        """基于字符重叠率的摘要相似度（回退方案）"""
         if not s1 or not s2:
             return 0.0
         s1_chars = set(s1.lower())
@@ -48,6 +54,56 @@ class EvalComparator:
             return 0.0
         intersection = s1_chars & s2_chars
         return len(intersection) / max(len(s1_chars), len(s2_chars))
+
+    def _build_similarity_matrix(self) -> Optional[np.ndarray]:
+        """使用 embedding 构建期望决策与实际决策的余弦相似度矩阵
+
+        Returns:
+            shape=(n_expected, n_actual) 的 cosine similarity 矩阵，
+            如果 embedding 不可用或失败返回 None。
+        """
+        if not self._embedder:
+            return None
+
+        exp_summaries = [(e.get("expected_summary") or "").strip() for e in self._expected_decisions]
+        act_summaries = [(a.get("summary") or "").strip() for a in self._actual_decisions]
+
+        # 收集所有非空摘要，去重后 batch embed
+        all_texts = list(set(s for s in exp_summaries + act_summaries if s))
+        if not all_texts:
+            return None
+
+        try:
+            vectors = self._embedder.embed(all_texts)
+        except Exception as e:
+            logger.warning("Embedding similarity failed, falling back to char: %s", e)
+            return None
+
+        vec_map = dict(zip(all_texts, vectors))
+        dim = len(vectors[0]) if vectors else 0
+
+        def _get_vec(text: str) -> np.ndarray:
+            if text in vec_map:
+                return np.array(vec_map[text])
+            return np.zeros(dim)
+
+        # 构建余弦相似度矩阵
+        n_exp = len(self._expected_decisions)
+        n_act = len(self._actual_decisions)
+        matrix = np.zeros((n_exp, n_act))
+
+        for ei in range(n_exp):
+            v1 = _get_vec(exp_summaries[ei])
+            n1 = np.linalg.norm(v1)
+            if n1 == 0:
+                continue
+            for ai in range(n_act):
+                v2 = _get_vec(act_summaries[ai])
+                n2 = np.linalg.norm(v2)
+                if n2 > 0:
+                    matrix[ei][ai] = float(np.dot(v1, v2) / (n1 * n2))
+
+        return matrix
 
     def match(self, actual_decisions: List[Dict[str, Any]]) -> None:
         """将实际决策与真值进行匹配
@@ -61,34 +117,51 @@ class EvalComparator:
         self._false_positives = []
         self._false_negatives = []
 
+        # 预计算 embedding 相似度矩阵（语义匹配优先）
+        similarity_matrix = self._build_similarity_matrix()
+        use_semantic = similarity_matrix is not None
+        if use_semantic:
+            logger.info("[Comparator] Using embedding similarity (%d x %d matrix)",
+                        similarity_matrix.shape[0], similarity_matrix.shape[1])
+
         matched_actual = set()
 
-        for expected in self._expected_decisions:
+        for ei, expected in enumerate(self._expected_decisions):
             expected_topic = (expected.get("expected_topic") or "").strip()
             expected_summary = (expected.get("expected_summary") or "").strip()
             expected_suggestion = bool(expected.get("is_suggestion", False))
             best_match_idx = None
             best_score = 0.0
 
-            for i, actual in enumerate(self._actual_decisions):
-                if i in matched_actual:
+            for ai, actual in enumerate(self._actual_decisions):
+                if ai in matched_actual:
                     continue
                 actual_topic = (actual.get("topic_id") or "").strip()
                 actual_summary = (actual.get("summary") or "").strip()
                 actual_suggestion = bool(actual.get("is_suggestion", False))
 
-                # 话题必须匹配
-                if expected_topic and actual_topic and expected_topic != actual_topic:
+                # chat_id 必须匹配（多群模式下，不同群的决策不能互相匹配）
+                expected_chat = expected.get("chat_id", "")
+                actual_chat = actual.get("chat_id", "")
+                if expected_chat and actual_chat and expected_chat != actual_chat:
                     continue
 
-                # suggestion 类型必须匹配（建议只能和建议匹配，决策只能和决策匹配）
-                if expected_suggestion != actual_suggestion:
+                # 话题必须匹配（但 actual_topic 为 "general" 时跳过话题约束，仅依赖 summary 匹配）
+                if expected_topic and actual_topic and actual_topic != "general" and expected_topic != actual_topic:
                     continue
 
-                score = self._summary_similarity(expected_summary, actual_summary)
-                if score >= 0.3 and score > best_score:
+                # suggestion 类型匹配：同类型完全匹配优先，跨类型允许但需更高相似度
+                type_match = expected_suggestion == actual_suggestion
+                min_score = 0.3 if type_match else 0.45  # 跨类型需要更高的 summary 相似度
+
+                if use_semantic:
+                    score = float(similarity_matrix[ei][ai])
+                else:
+                    score = self._summary_similarity(expected_summary, actual_summary)
+
+                if score >= min_score and score > best_score:
                     best_score = score
-                    best_match_idx = i
+                    best_match_idx = ai
 
             if best_match_idx is not None:
                 matched_actual.add(best_match_idx)

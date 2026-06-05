@@ -117,6 +117,10 @@ class _InternalChatEpisode:
         ep._embeddings = [np.array(e) for e in suspended.embeddings]
         ep._last_embedding = ep._embeddings[-1] if ep._embeddings else None
         ep.message_count = len(ep.messages)
+        ep._baseline_size = TOPIC_BASELINE_SIZE
+        ep._baseline_embedding = None
+        if len(ep._embeddings) >= ep._baseline_size:
+            ep._baseline_embedding = np.mean(ep._embeddings[:ep._baseline_size], axis=0)
         return ep
 
     def add(self, msg: ChatMessage, embedding: Optional[np.ndarray] = None) -> None:

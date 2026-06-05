@@ -227,3 +227,24 @@ MemoryEngine 可能因负载原因暂时拒绝新 Episode——此时架构的�
 | `EPISODE_POOL_MAX_SIZE` | 20 个 | SuspendPool 容量上限 |
 
 这些参数需要在**记忆的粒度**与**计算开销**之间取得平衡。较短的时间间隔和较低的语义阈值会产生更多、更小的 Episode，提供更精细的话题划分，但会增加 MemoryEngine 的处理负载；反之，较宽松的参数会产生更粗粒度的 Episode，降低精度但提升吞吐。
+
+# 已知问题与修复
+
+## `_baseline_size` 缺失（Resume 路径）
+
+在 `resume()` 方法从 SuspendPool 恢复 Episode 时，原有实现遗漏了 `_baseline_size`、`_baseline_embedding` 的初始化，导致后续调用 `add()` 时触发 `AttributeError`。这是因为在早期版本中 embedding 服务经常因配置问题不可用，`resume()` 路径从未被实际执行。
+
+**修复**：在 `resume()` 中补全初始化：
+
+```python
+ep._baseline_size = TOPIC_BASELINE_SIZE
+ep._baseline_embedding = None
+if len(ep._embeddings) >= ep._baseline_size:
+    ep._baseline_embedding = np.mean(ep._embeddings[:ep._baseline_size], axis=0)
+```
+
+## Embedding Provider 模型名大小写
+
+`src/model/embedding_provider.py` 中的模型名检查使用硬编码大写 `'Qwen3'`，但实际模型名为小写 `qwen3-embedding-4b`，导致所有 embedding 请求在验证阶段即被拒绝。该 bug 使系统在整个运行期间都回退到 bigram 相似度。
+
+**修复**：改为大小写不敏感检查 `self.model_name.lower()`。

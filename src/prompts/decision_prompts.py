@@ -204,13 +204,17 @@ Analyze the following conversation and extract ALL decisions and suggestions mad
 1. Someone proposes a specific technical approach or configuration, but it hasn't been confirmed yet
 2. A concrete recommendation with reasoning ("建议用X，因为...")
 3. A proposed action plan or process improvement that's being considered
+4. Someone says "建议/可以/要不要/考虑用..." with specific technical details
+
+**IMPORTANT**: Most conversations contain MORE suggestions than final decisions. Be liberal in marking items as suggestions.
+If someone makes a concrete technical proposal but nobody explicitly says "OK let's do it", mark it as is_suggestion=true.
 
 # WHAT DOES NOT COUNT?
 
-1. Pure status updates
+1. Pure status updates ("我完成了XX")
 2. Brainstorming without any concrete proposal
 3. Casual chat and greetings
-4. Vague intent without any commitment
+4. Vague intent without any commitment ("再看看"、"回头看看")
 
 ---
 
@@ -223,23 +227,46 @@ Return JSON:
     "decisions": [
         {{
             "decision_id": "dec_1",
-            "title": "Concise decision/suggestion title",
-            "content": "Full description including context and parameters",
-            "confidence": 0.85,
-            "rationale": "Why this decision/suggestion was made",
-            "proposer": "Name or null",
-            "executor": "Name or null",
-            "impact_level": "major/minor/advisory",
+            "title": "采用PostgreSQL作为主数据库",
+            "content": "决定使用PostgreSQL替代MySQL，先并行运行再切换",
+            "confidence": 0.90,
+            "rationale": "团队达成共识，有明确执行计划",
+            "proposer": "张三",
+            "executor": "李四",
+            "impact_level": "major",
             "is_suggestion": false
+        }},
+        {{
+            "decision_id": "dec_2",
+            "title": "建议Redis key加业务前缀",
+            "content": "有人提出key命名规范，但还在讨论中",
+            "topic": "Redis缓存规范",
+            "confidence": 0.65,
+            "rationale": "具体建议但尚未确认",
+            "proposer": "王五",
+            "executor": null,
+            "impact_level": "minor",
+            "is_suggestion": true
         }}
     ],
     "reasoning": "Brief explanation"
 }}
 ```
 
+**Confidence guidelines** — Vary confidence based on how definitive the decision is:
+- **0.85-0.95**: Clear confirmed decision with explicit agreement
+- **0.70-0.85**: Specific suggestion with clear technical parameters, not yet confirmed
+- **0.60-0.70**: Vague or tentative suggestion
+- Below 0.60: Do not extract (skip it)
+
+**IMPORTANT**: NOT all decisions should be 0.85. Use low confidence (0.60-0.70) for tentative suggestions.
+
 If no decisions found, return {{"has_decisions": false, "decisions": []}}
 
-**IMPORTANT**: Set `is_suggestion: true` for items that are proposed but not yet confirmed. Set `is_suggestion: false` for items that have been agreed upon or decided.
+**IMPORTANT**: 
+- Set `is_suggestion: true` for items that are proposed but not yet confirmed
+- Set `is_suggestion: false` for items that have been agreed upon or decided
+- Always extract a specific `topic` — DO NOT default to "general" unless truly cross-cutting
 """
 
 
@@ -550,36 +577,35 @@ REALTIME_DEDUP_PROMPT = """# 系统提示词：决策去重判断
 SLEEP_FP_ASSESS_PROMPT = """# 系统提示词：记忆整理 — 决策质量评估
 
 ## 角色
-你是记忆整理专家。评估一批决策的质量，判断哪些是真实有价值的决策/建议，哪些是噪声/误提取（FP）。
+你是记忆整理专家。评估一批低置信度的决策质量，判断哪些是真实有价值的决策/建议，哪些是噪声/误提取（FP）。
 
 ## 输入
-以下是从群聊中提取的决策列表。请对每条决策判断其质量。
+以下是从群聊中提取的决策列表。每条包含 sid、标题、摘要、内容片段、话题、置信度和是否为建议的标记。
+注意：内容可能因长度限制被截断，不要因为内容不完整就搁置。
 
 {decisions_json}
 
 ## 判断标准
 
-对每条决策，判断它是"keep"（保留）还是"shelve"（搁置/FP）：
+对每条决策，判断它是"keep"（保留）还是"shelve"（搁置/FP）。
 
-### keep — 保留为有效决策
-- 是清晰的技术决策、方案选型、任务分配（已达成共识）
+### keep — 保留为有效决策（搁置前请三思）
+- 是技术决策、方案选型、任务分配（有明确结论或正在推动）
 - 是具体的建议——包含明确的技术方案、参数配置、改进方向
-- 有人明确认领了执行任务
-- 有明确的执行意图和上下文
+- 有人认领了执行任务
+- 是讨论中形成的阶段性结论
 
-### shelve — 搁置（可能是噪声/误提取/FP）
-- 纯状态更新："已完成XX"、"正在处理XX"、"准备做XX"
-- 无结论的头脑风暴——只是列出了选项但没有选择
-- 闲聊和日常问候
-- 模糊意图无承诺："打算用"、"准备尝试"、"可以考虑"
-- 纯信息分享，没有决策意图："XX发布了新版本"、"XX有这么一个功能"
-- 讨论中的中间过程语句："需要验证一下"、"我看看文档"、"确认一下"
-- 重复表达——上下文中的同一意思被反复提取
+### shelve — 搁置（向下述标准时再搁置）
+以下场景有较大概率是 FP，应仔细判断并倾向于搁置：
+- **纯状态更新无决策内容**："已完成XX"、"正在处理XX"、"准备做XX"
+- **无结论的讨论**：只是抛出问题或列出选项，未形成任何倾向或共识——如"需要验证一下"、"确认一下"、"回头看看"
+- **模糊的建议**：建议内容过于宽泛，缺乏具体的技术方案、参数或执行方向——如"可以考虑一下"、"建议看看"、"再看看"
+- **纯信息转发**：只是转发了一个链接或消息，没有自己的观点和判断
+- **闲聊问候**：与技术讨论完全无关的日常聊天
 
-## 置信度参考
-- confidence >= 0.8: 高置信度，倾向 keep
-- confidence < 0.6: 低置信度，仔细判断是否为 FP
-- is_suggestion=true 的建议：如果是具体技术方案，保留；如果只是模糊想法，搁置
+**注意**：
+- ❌ 不要因为决策和其他决策相似就搁置——去重阶段会处理
+- ✅ 模糊的建议（没有具体技术方案的）应该搁置，即使看起来像建议
 
 ## 输出格式
 {{

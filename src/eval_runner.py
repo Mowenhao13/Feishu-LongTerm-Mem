@@ -239,6 +239,16 @@ class EvalRunner:
         except Exception as e:
             logger.warning("Embedding/reranker init failed (non-fatal): %s", e)
 
+        try:
+            from src.memory_graph.doc_context_provider import DocContextProvider
+            wiki_space_id = os.getenv("EVAL_WIKI_SPACE_ID", "")
+            if wiki_space_id:
+                doc_ctx = DocContextProvider(wiki_space_id=wiki_space_id)
+                engine.set_doc_context_provider(doc_ctx)
+                logger.info("[Eval] DocContextProvider configured (wiki_space=%s)", wiki_space_id[:12])
+        except Exception as e:
+            logger.warning("DocContextProvider init failed (non-fatal): %s", e)
+
         return engine
 
     def _load_config(self) -> Dict[str, Any]:
@@ -403,13 +413,14 @@ class EvalRunner:
                 "topic_id": d.topic_id or "",
                 "summary": d.summary or "",
                 "status": d.status.value if hasattr(d.status, "value") else str(d.status),
-                "impact": d.impact.value if hasattr(d.impact, "value") else str(d.impact),
+                "impact": d.impact_level.value if hasattr(d.impact_level, "value") else str(d.impact_level),
                 "chat_id": getattr(d, "chat_id", ""),
                 "is_suggestion": getattr(d, "is_suggestion", False),
             }
             for d in decisions
         ]
-        comparator = EvalComparator(self._expected_path)
+        embedder = getattr(self._engine, "_embedder", None) if self._engine else None
+        comparator = EvalComparator(self._expected_path, embedding_provider=embedder)
         comparator.match(actual)
         report = comparator.to_dict()
 

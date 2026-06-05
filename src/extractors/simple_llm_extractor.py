@@ -80,16 +80,37 @@ class SimpleLLMExtractor:
 
             extracted = []
             for d in decisions:
+                # Calculate confidence from decision features
+                base_conf = d.get("confidence", 0.80)
+                is_sug = bool(d.get("is_suggestion", False))
+                impact = d.get("impact_level", "minor")
+                has_executor = bool(d.get("executor"))
+                title = d.get("title", "")
+                
+                # Vary confidence based on decision attributes
+                conf = base_conf
+                if is_sug:
+                    conf = min(conf, 0.75)  # Suggestions are inherently less certain
+                if impact == "advisory" or impact == "minor":
+                    conf -= 0.05
+                if not has_executor:
+                    conf -= 0.05  # No executor means less definitive
+                if any(w in title for w in ["考虑", "建议", "可以", "看看", "确认", "准备"]):
+                    conf -= 0.10  # Tentative language
+                if any(w in title for w in ["决定", "确认", "通过", "采用", "切换", "升级"]):
+                    conf += 0.05  # Definitive language
+                conf = max(0.50, min(0.95, round(conf, 2)))
+                
                 extracted.append({
                     "title": d.get("title", ""),
                     "content": d.get("content", content),
                     "summary": d.get("title", ""),
-                    "topic": d.get("topic", "general"),
+                    "topic": "general",
                     "status": d.get("status", "decided"),
-                    "impact_level": d.get("impact_level", "minor"),
-                    "is_suggestion": bool(d.get("is_suggestion", False)),
+                    "impact_level": impact,
+                    "is_suggestion": is_sug,
                     "parent_id": d.get("parent_id", ""),
-                    "confidence": d.get("confidence", 0.85),
+                    "confidence": conf,
                     "rationale": d.get("rationale", ""),
                     "proposer": d.get("proposer"),
                     "executor": d.get("executor"),

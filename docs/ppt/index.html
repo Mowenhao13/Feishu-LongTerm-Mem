@@ -114,6 +114,7 @@
   .slide-content {
     max-width: 1100px;
     width: 100%;
+    transform: translateY(12px);
   }
 
   h1 {
@@ -832,48 +833,123 @@
   <div class="slide" data-index="9">
     <div class="slide-content">
       <h2>评估与测试</h2>
-      <p class="subtitle">EvalRunner 多群聊模拟 · 全流程端到端测试</p>
+      <p class="subtitle">Precision/Recall/F1 精度评估 · Embedding 语义匹配</p>
       <div class="grid-2">
         <div>
-          <h3>EvalRunner 流模拟</h3>
-          <div class="stat-row">
-            <div class="stat-item"><div class="stat-num">250</div><div class="stat-label">消息数</div></div>
-            <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">群聊数</div></div>
-            <div class="stat-item"><div class="stat-num">120</div><div class="stat-label">Reopen</div></div>
-            <div class="stat-item"><div class="stat-num">14</div><div class="stat-label">Suspend</div></div>
+          <h3>匹配算法</h3>
+          <div class="arch-flow">
+            <div class="arch-box green"><div class="icon">📋</div>expected.jsonl</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-box cyan"><div class="icon">🧠</div>Embedding</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-box purple"><div class="icon">📐</div>余弦矩阵</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-box orange"><div class="icon">📊</div>P/R/F1</div>
           </div>
-          <p style="margin-top:12px;">从 <span class="key-inline">test_data.txt</span> 读取话题交织的 250 条消息，round-robin 分配到 3 个群聊，模拟真实多群聊讨论场景。</p>
-          <ul style="margin-top:8px;">
-            <li>Max-similarity reopen 策略有效恢复跨话题对话</li>
-            <li>SuspendPool LRU 淘汰机制运行正常</li>
-            <li>去重流水线有效避免重复决策</li>
-            <li>新增决策层级关系追踪，支持父子决策树展示</li>
+          <ul style="margin-top:12px;">
+            <li>qwen3-embedding-4b batch embed 所有摘要（2560 维）</li>
+            <li>chat_id 跨群隔离约束</li>
+            <li>suggestion 同类型阈值 0.3，跨类型 0.45</li>
           </ul>
+          <h3 style="margin-top:16px;">改进对比</h3>
+          <table class="compact-table">
+            <tr><th>指标</th><th>旧版字符</th><th>Embedding</th></tr>
+            <tr><td>single F1</td><td>45.6%</td><td style="color:var(--green);font-weight:700;">88.6%</td></tr>
+            <tr><td>multi F1</td><td>48.9%</td><td style="color:var(--green);font-weight:700;">84.5%</td></tr>
+            <tr><td>single Recall</td><td>46.2%</td><td style="color:var(--green);font-weight:700;">100.0%</td></tr>
+          </table>
         </div>
         <div>
-          <h3>EvalRunner 测试报告</h3>
-          <div class="terminal" style="margin-top:8px;font-size:0.78rem;">
-            <span class="bold">📊 Eval 模式测试报告</span><br>
+          <h3>最新测试结果（2026-06-05）</h3>
+          <table class="compact-table">
+            <tr><th>数据集</th><th>消息</th><th>期望</th><th>P</th><th>R</th><th>F1</th></tr>
+            <tr><td>argusbot_single</td><td>200</td><td>39</td><td style="color:var(--green);font-weight:700;">79.6%</td><td style="color:var(--green);font-weight:700;">100.0%</td><td style="color:var(--green);font-weight:700;">88.6%</td></tr>
+            <tr><td>argusbot_multi</td><td>320</td><td>69</td><td style="color:var(--green);font-weight:700;">96.3%</td><td>75.4%</td><td style="color:var(--green);font-weight:700;">84.5%</td></tr>
+          </table>
+          <div style="margin-top:16px;">
+            <h4>关键发现</h4>
+            <ul>
+              <li>single 所有 39 个期望决策全部匹配（FN=0）</li>
+              <li>multi 8 群跨群隔离 <span style="color:var(--green);font-weight:700;">100%</span></li>
+              <li>Precision 提升最大：multi +49pp</li>
+              <li>Recall 瓶颈在 LLM 提取环节</li>
+            </ul>
+          </div>
+          <div class="terminal" style="margin-top:12px;font-size:0.72rem;">
+            <span class="comment"># 运行评估</span><br>
+            python -m src.eval_runner \<br>
+            &nbsp;&nbsp;--eval \<br>
+            &nbsp;&nbsp;--input eval_dataset/argusbot_single/msgs.jsonl \<br>
+            &nbsp;&nbsp;--expected eval_dataset/argusbot_single/expected.jsonl
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 10b: 评估流水线 ==================== -->
+  <div class="slide" data-index="10">
+    <div class="slide-content">
+      <h2>评估流水线架构</h2>
+      <p class="subtitle">从消息输入到 Precision/Recall 全流程</p>
+      <div class="grid-2">
+        <div>
+          <h3>数据准备 → 处理 → 匹配 → 评估</h3>
+          <div class="arch-flow" style="flex-direction:column;gap:12px;">
+            <div class="arch-flow">
+              <div class="arch-box green"><div class="icon">📝</div>消息<br><span style="font-size:0.7rem;color:var(--text2);">messages.jsonl</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box accent"><div class="icon">⚙️</div>EvalRunner<br><span style="font-size:0.7rem;color:var(--text2);">逐条处理</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box cyan"><div class="icon">🧠</div>LLM 提取<br><span style="font-size:0.7rem;color:var(--text2);">实际决策</span></div>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-box purple"><div class="icon">📋</div>期望<br><span style="font-size:0.7rem;color:var(--text2);">expected.jsonl</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box orange"><div class="icon">📐</div>Embedding<br><span style="font-size:0.7rem;color:var(--text2);">余弦匹配</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box green"><div class="icon">📊</div>指标<br><span style="font-size:0.7rem;color:var(--text2);">P / R / F1</span></div>
+            </div>
+          </div>
+          <h3 style="margin-top:24px;">关键组件</h3>
+          <table class="compact-table">
+            <tr><th>组件</th><th>职责</th></tr>
+            <tr><td>EvalRunner</td><td>逐条消息送入引擎，模拟真实消息流</td></tr>
+            <tr><td>LLM Extractor</td><td>从对话中提取结构化决策</td></tr>
+            <tr><td>EvalComparator</td><td>Embedding 语义匹配，计算 TP/FP/FN</td></tr>
+            <tr><td>Embedding Provider</td><td>qwen3-embedding-4b，batch 向量化</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>匹配逻辑</h3>
+          <div class="terminal" style="font-size:0.72rem;">
+            <span class="comment"># 1. Embedding 向量化（去重后 batch）</span><br>
+            all_texts = set(exp_summaries + act_summaries)<br>
+            vectors = embedder.embed(all_texts)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ <span class="highlight">2560 维</span><br>
             <br>
-            输入文件:     eval_data/test_data.txt<br>
-            消息总数:     250<br>
-            群聊数量:     3<br>
-            总耗时:       289.7s<br>
-            处理速率:     0.9 msg/s<br>
+            <span class="comment"># 2. 余弦相似度矩阵</span><br>
+            matrix[i][j] = cosine(exp[i], act[j])<br>
             <br>
-            <span class="bold">Episode</span><br>
-            Suspend:       31 次<br>
-            Reopen:        120 次<br>
+            <span class="comment"># 3. 约束过滤</span><br>
+            if chat_id != expected_chat: <span class="error">continue</span><br>
+            if topic mismatch: <span class="error">continue</span><br>
             <br>
-            <span class="bold">决策</span><br>
-            新创建:        3 条<br>
-            层级关系:      容器化 → K8s → 容器网络/监控/安全<br>
+            <span class="comment"># 4. 贪心匹配</span><br>
+            min_score = <span class="highlight">0.3</span> if same_type else <span class="warn">0.45</span><br>
+            if score >= min_score → <span class="green">TP</span><br>
+            else → <span class="error">FN</span><br>
+            unmatched actual → <span class="warn">FP</span>
+          </div>
+          <h3 style="margin-top:16px;">Embedding 修复</h3>
+          <div class="terminal" style="font-size:0.72rem;">
+            <span class="comment"># 修复前：模型名大小写检查失败</span><br>
+            <span class="error">if 'Qwen3' not in self.model_name:</span><br>
+            &nbsp;&nbsp;raise ValueError()<br>
             <br>
-            <span class="bold">LLM 调用</span><br>
-            调用次数:      3 次<br>
-            总 Token:      2,784 (输入 2,604 / 输出 180)<br>
-            总耗时:        3.2s<br>
-            平均耗时:      1.06s/次<br>
+            <span class="comment"># 修复后：大小写不敏感</span><br>
+            <span class="green">if 'qwen3' not in self.model_name.lower():</span><br>
+            &nbsp;&nbsp;raise ValueError()
           </div>
         </div>
       </div>
@@ -881,7 +957,7 @@
   </div>
 
   <!-- ==================== SLIDE 11: 决策推送 ==================== -->
-  <div class="slide" data-index="10">
+  <div class="slide" data-index="11">
     <div class="slide-content">
       <h2>决策推送与通知</h2>
       <p class="subtitle">多通道推送 · 热点值管理 · 定时摘要</p>
@@ -922,7 +998,7 @@
   </div>
 
   <!-- ==================== SLIDE 12: 技术栈 ==================== -->
-  <div class="slide" data-index="11">
+  <div class="slide" data-index="12">
     <div class="slide-content">
       <h2>技术栈</h2>
       <div class="grid-3">
@@ -975,7 +1051,7 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 14: 决策层级结构 ==================== -->
+  <!-- ==================== SLIDE 13: 决策层级结构 ==================== -->
   <div class="slide" data-index="13">
     <div class="slide-content">
       <h2>决策层级结构</h2>
@@ -1012,7 +1088,7 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 15: 冲突检测与解决 ==================== -->
+  <!-- ==================== SLIDE 14: 冲突检测与解决 ==================== -->
   <div class="slide" data-index="14">
     <div class="slide-content">
       <h2>冲突检测与解决</h2>
@@ -1065,7 +1141,7 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 16: 项目路线图 ==================== -->
+  <!-- ==================== SLIDE 15: 项目路线图 ==================== -->
   <div class="slide" data-index="15">
     <div class="slide-content">
       <h2>项目路线图</h2>
@@ -1099,7 +1175,7 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 17: 快速开始 ==================== -->
+  <!-- ==================== SLIDE 16: 快速开始 ==================== -->
   <div class="slide" data-index="16">
     <div class="slide-content">
       <h2>快速开始</h2>
@@ -1149,7 +1225,7 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 18: 扩展特性与展望 ==================== -->
+  <!-- ==================== SLIDE 17: 扩展特性与展望 ==================== -->
   <div class="slide" data-index="17">
     <div class="slide-content">
       <h2>扩展特性与展望</h2>
@@ -1183,8 +1259,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 13: Q&A ==================== -->
-  <div class="slide" data-index="17">
+  <!-- ==================== SLIDE 18: Q&A ==================== -->
+  <div class="slide" data-index="18">
     <div class="slide-content" style="text-align:center;">
       <h1 style="font-size:4rem;">Q & A</h1>
       <p class="subtitle" style="font-size:1.2rem; margin-top:20px;">感谢聆听 · 欢迎提问</p>

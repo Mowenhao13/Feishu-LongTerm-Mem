@@ -2802,6 +2802,93 @@ EvalRunner 在报告阶段输出以下指标：
 
 ---
 
+### 精度评估：Embedding 语义匹配
+
+#### 概述
+
+在 EvalRunner 基础上，系统新增了**精度评估（Precision/Recall/F1）**能力：通过 `--expected` 参数传入人工标注的期望决策（JSONL 格式），在全部消息处理完成后，使用 Embedding 语义相似度将实际提取的决策与期望决策进行自动匹配，计算 Precision、Recall、F1 指标。
+
+```mermaid
+flowchart TD
+    A[加载 expected.jsonl] --> B[处理消息 → 提取实际决策]
+    B --> C[Embedding Batch: 所有摘要]
+    C --> D[构建余弦相似度矩阵]
+    D --> E[贪心匹配: 每期望找最佳]
+    E --> F[TP / FP / FN 统计]
+    F --> G[Precision / Recall / F1]
+```
+
+#### 匹配算法
+
+匹配过程在 `src/eval/comparator.py` 中实现，核心步骤：
+
+1. **Embedding 向量化**：调用 qwen3-embedding-4b 将所有期望摘要和实际摘要一次性 batch embed（去重后），得到 2560 维向量
+2. **余弦相似度矩阵**：计算 `matrix[i][j] = cosine(exp[i], act[j])`，形状 `(n_expected, n_actual)`
+3. **约束过滤**：`chat_id` 必须匹配（多群隔离）、`topic` 必须匹配（实际 topic="general" 时跳过话题约束）
+4. **类型阈值**：suggestion 同类型匹配阈值 0.3，跨类型匹配阈值 0.45
+5. **贪心匹配**：遍历每个期望，取未被匹配且相似度最高的实际决策作为 TP
+
+如果 embedding 不可用，自动回退到字符重叠率相似度。
+
+#### 数据集格式
+
+`eval_dataset/<dataset_name>/expected.jsonl` 每行一个期望决策：
+
+```json
+{
+  "msg_id": "m042",
+  "chat_id": "chat_0",
+  "expected_topic": "多智能体循环架构",
+  "expected_summary": "采用四Agent架构（Main+Reviewer+Planner+Stall）",
+  "is_suggestion": false,
+  "status": "decided",
+  "impact_level": "major"
+}
+```
+
+#### 最新测试结果（2026-06-05）
+
+| 数据集 | 消息数 | 期望决策 | 实际提取 | P | R | F1 | Decision R | Suggestion R |
+|--------|--------|----------|----------|------|------|------|-----------|-------------|
+| argusbot_single | 200 | 39 | 49 | **79.6%** | **100.0%** | **88.6%** | 100.0% | 100.0% |
+| argusbot_multi | 320 | 69 | 54 | **96.3%** | **75.4%** | **84.5%** | 93.1% | 62.5% |
+
+- **single**：所有 39 个期望决策全部匹配（FN=0），FP=10 来自非技术决策（聚餐、团建等）
+- **multi**：8 个群聊跨群隔离 100%，Precision 96.3%（仅 2 FP），Recall 75.4% 受限于 LLM 提取环节的 recall 不足
+- **跨群隔离**：两个数据集均为 100.0%，不同群的决策从未互相混淆
+
+#### 运行精度评估
+
+```bash
+# 单群评估
+python -m src.eval_runner --eval --input eval_dataset/argusbot_single/messages.jsonl \
+  --expected eval_dataset/argusbot_single/expected.jsonl --delay 0.3
+
+# 多群评估
+python -m src.eval_runner --eval --input eval_dataset/argusbot_multi/messages.jsonl \
+  --expected eval_dataset/argusbot_multi/expected.jsonl --delay 0.3 --group-num 8
+```
+
+报告输出到 `eval_dataset/<dataset_name>/eval_report.json`。
+
+#### Embedding Provider 修复
+
+在实现 embedding 语义匹配时，发现并修复了 `src/model/embedding_provider.py` 中的模型名大小写检查 bug：
+
+```python
+# 修复前（模型名为小写时永远报错）
+if 'Qwen3' not in self.model_name:
+    raise ValueError(...)
+
+# 修复后
+if 'qwen3' not in self.model_name.lower():
+    raise ValueError(...)
+```
+
+同时修复了 `resume()` 方法中 `_baseline_size` 缺失导致的 AttributeError。
+
+---
+
 ### ExtractionEvaluator 结构化 QA 评估
 
 #### 数据集概述
