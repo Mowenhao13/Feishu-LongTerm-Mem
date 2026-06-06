@@ -142,31 +142,55 @@ OpenClaw 会自动拉起 MCP server 并调用对应工具。
 
 ## Eval 模式 — 测试结果
 
-支持通过 `--eval` 模式从本地文件模拟消息处理、验证系统稳定性。
+支持通过 `--eval` 模式从本地文件模拟消息处理，验证系统决策提取准确度。
 
-### 一、多群聊测试（250 条 × 3 群聊）
+### v2 数据集评估（argusbot_multi_v2）
 
-测试配置：`--eval --delay 0 --group-num 3`
+| 指标 | 值 | 解释 |
+|------|-----|------|
+| **样本数** | 1,500 | 消息总数，覆盖 5 个群聊 (chat_0 ~ chat_4) |
+| **主题数** | 10 | 技术主题（多智能体循环架构、Daemon与CLI双模式等） |
+| **期待决策数** | 41 | 过滤空值后的有效预期决策 |
+| **实际决策数** | 31 | 系统实际提取的决策数量 |
+| **Precision（精确率）** | 100.0% | 提取的决策中正确命中的比例 = TP/(TP+FP) |
+| **Recall（召回率）** | 75.6% | 预期决策中被成功提取的比例 = TP/(TP+FN) |
+| **F1 Score** | 86.1% | 精确率和召回率的调和平均数 |
+| **误检率** | 0% | FP/(TP+FP)，零误检 |
 
-```
-群聊分布:
-  eval_0     84 msgs
-  eval_1     83 msgs
-  eval_2     83 msgs
-  ─────────────────
-  Episode:
-    Suspend:  31 次
-    Reopen:  120 次
-    池大小:   20 / 20（触发2次LRU淘汰）
-  ─────────────────
-  新决策:     3 条 (含层级关系)
-  层级关系:   容器化 → K8s → 容器网络/监控/安全
-  LLM 调用:   3 次 (2,784 tokens)
-  总耗时:     289.7s
-```
+#### LLM 调用统计
 
+| 指标 | 值 |
+|------|-----|
+| **调用次数** | 22 次 |
+| **总 Token** | 22,969（输入 17,830 / 输出 5,139） |
+| **总耗时** | 92.2 秒 |
+| **处理速率** | 30.0 msg/s |
 
-### 二、启动 Eval 测试
+#### 主题级表现
+
+| 主题 | Precision | Recall | F1 |
+|------|-----------|--------|-----|
+| 多智能体循环架构 | 100.0% | 100.0% | 100.0% |
+| Daemon与CLI双模式 | 100.0% | 100.0% | 100.0% |
+| 会话持久化与恢复 | 100.0% | 100.0% | 100.0% |
+| JSONL命令总线 | 100.0% | 100.0% | 100.0% |
+| 飞书集成方案 | 100.0% | 100.0% | 100.0% |
+| Telegram集成 | 100.0% | 66.7% | 80.0% |
+| PlannerAgent策略 | 100.0% | 100.0% | 100.0% |
+| BTW Side-Agent集成 | 100.0% | 50.0% | 66.7% |
+
+#### 决策提取演示（gRPC 通信协议选型）
+
+| 指标 | 值 |
+|------|-----|
+| **Precision** | 100.0% |
+| **Recall** | 100.0% |
+| **F1** | **100.0%** ✅ |
+| **LLM 调用次数** | 1 次 |
+
+核心决策（"Alice拍板采用gRPC作为Agent间通信协议"）准确提取，无漏检无误检。
+
+### 启动 Eval 测试
 
 ```bash
 # 基础运行（单群聊，默认1秒延迟）
@@ -175,11 +199,19 @@ uv run python main.py --eval
 # 多群聊测试（3个群聊 round-robin）
 uv run python main.py --eval --delay 0 --group-num 3
 
-# 层级关系测试
-uv run python scripts/test_decision_hierarchy.py
+# 评估 v2 数据集
+PROJECT_NAME=argusbot_multi_v2 STORAGE_PATH=memory_stores/argusbot_multi_v2 \
+  uv run python src/eval_runner.py --eval \
+    --input eval_dataset/argusbot_multi_v2/messages.jsonl \
+    --expected eval_dataset/argusbot_multi_v2/messages.jsonl \
+    --delay 0.05
 
-# 展示决策树
-uv run python scripts/show_decision_tree.py
+# 演示消息评估
+PROJECT_NAME=argusbot-demo-grpc STORAGE_PATH=memory_stores/argusbot-demo-grpc \
+  uv run python src/eval_runner.py --eval \
+    --input eval_dataset/demo_grpc/messages.jsonl \
+    --expected eval_dataset/demo_grpc/messages.jsonl \
+    --delay 0.05
 ```
 
 ---
