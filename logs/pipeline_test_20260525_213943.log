@@ -1,0 +1,12 @@
+2026-05-25 21:39:43 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 21:39:43 - src.core.engine - INFO - GitStorage initialized at /Users/halllo/projects/local/feishu-mem/data
+2026-05-25 21:39:43 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 21:39:43 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-25 21:39:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=im content=大家好，我是UserOnly，我决定前端使用React框架，组件库用Ant Design，构建工具用Vite
+2026-05-25 21:39:43 - src.core.engine - WARNING - [LLM] No extractor configured, skipping LLM extraction
+2026-05-25 21:39:43 - src.core.engine - INFO - [Engine] No decision extracted from content (大家好，我是UserOnly，我决定前端使用React框架，组件库用Ant Design，构建工具用Vite)
+2026-05-25 21:39:43 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.00s
+2026-05-25 21:39:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=im content=项目排期我决定第一阶段3周完成需求分析和核心功能开发，第二阶段2周完成测试和优化，整体6月1日上线
+2026-05-25 21:39:43 - src.core.engine - WARNING - [LLM] No extractor configured, skipping LLM extraction
+2026-05-25 21:39:43 - src.core.engine - INFO - [Engine] No decision extracted from content (项目排期我决定第一阶段3周完成需求分析和核心功能开发，第二阶段2周完成测试和优化，整体6月1日上线)
+2026-05-25 21:39:43 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.00s

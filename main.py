@@ -50,7 +50,10 @@ from src.core.engine_config import EngineConfig
 from src.graph.memory_graph import MemoryGraph
 from src.storage.git_storage import GitStorage, GitStorageConfig
 from src.utils.logger import get_logger
-from src.view.tenant_token import TenantTokenManager
+try:
+    from src.view.tenant_token import TenantTokenManager
+except ImportError:
+    TenantTokenManager = None
 
 logger = get_logger(__name__)
 
@@ -180,7 +183,10 @@ async def run_episode_check_loop(
         await asyncio.sleep(check_interval)
 
 
-_tenant_token_mgr = TenantTokenManager()
+if TenantTokenManager is not None:
+    _tenant_token_mgr = TenantTokenManager()
+else:
+    _tenant_token_mgr = None
 
 
 async def run_tenant_token_refresh_loop(interval: int = 3600) -> None:
@@ -246,7 +252,24 @@ class LarkIMDetector:
                 verification_token=os.environ.get("LARK_VERIFICATION_TOKEN", ""),
             )
             self._client = LarkIMClient(config)
-            self._chat_ids = [cid.strip() for cid in chat_ids_raw.split(",") if cid.strip()]
+            # 解析 GROUP_CHAT_IDS 格式: "chat_id1:群名1,chat_id2:群名2"
+            # 群名可选，不提供则用 chat_id 前 16 位作显示名
+            self._chat_ids = []
+            self._chat_group_map: dict[str, str] = {}
+            for entry in chat_ids_raw.split(","):
+                entry = entry.strip()
+                if not entry:
+                    continue
+                if ":" in entry:
+                    cid, gname = entry.split(":", 1)
+                    cid = cid.strip()
+                    gname = gname.strip()
+                else:
+                    cid = entry
+                    gname = cid[:16]
+                if cid:
+                    self._chat_ids.append(cid)
+                    self._chat_group_map[cid] = gname
             self._available = True
 
             from src.detect.episode import ChatEpisodeManager
@@ -264,7 +287,8 @@ class LarkIMDetector:
             for chat_id in self._chat_ids:
                 self._last_poll_time[chat_id] = now_ms
 
-            logger.info("[lark_im] Initialized: %d chat(s) monitored: %s", len(self._chat_ids), self._chat_ids)
+            group_info = ", ".join(f"{cid[:8]}...({self._chat_group_map.get(cid, cid[:16])})" for cid in self._chat_ids)
+            logger.info("[lark_im] Initialized: %d chat(s) monitored: %s", len(self._chat_ids), group_info)
             return True
 
         except ImportError as e:
@@ -513,11 +537,16 @@ async def main_async() -> None:
     logger.info("Storage: %s", cfg["storage_path"])
     logger.info("DocsDir: %s", cfg["docs_dir"])
 
-    # 1. 初始化存储
+    # 1. 初始化存储 — 自动检测并创建 git 仓库
     storage = GitStorage(GitStorageConfig(
         work_dir=cfg["storage_path"],
     ))
-    logger.info("[GitStorage] initialized")
+    git_dir = os.path.join(cfg["storage_path"], ".git")
+    if os.path.isdir(git_dir) and os.path.isfile(os.path.join(git_dir, "HEAD")):
+        logger.info("[GitStorage] Git repo verified at %s", cfg["storage_path"])
+    else:
+        logger.error("[GitStorage] Git repo not found at %s after init!", cfg["storage_path"])
+        sys.exit(1)
 
     # 2. 初始化 MemoryGraph
     graph = MemoryGraph()
@@ -697,11 +726,12 @@ async def main_async() -> None:
     detector_states["llm_stats"] = stats_task
 
     # 启动 tenant_access_token 定时刷新（每小时一次）
-    token_refresh_task = asyncio.create_task(
-        run_tenant_token_refresh_loop(interval=3600),
-        name="tenant-token-refresh",
-    )
-    detector_states["tenant_token_refresh"] = token_refresh_task
+    if _tenant_token_mgr is not None:
+        token_refresh_task = asyncio.create_task(
+            run_tenant_token_refresh_loop(interval=3600),
+            name="tenant-token-refresh",
+        )
+        detector_states["tenant_token_refresh"] = token_refresh_task
 
     logger.info("[System] All detectors started, waiting for signals...")
 

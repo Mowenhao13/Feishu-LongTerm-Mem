@@ -1,0 +1,42 @@
+{
+  "total_expected": 1,
+  "total_detected": 4,
+  "true_positives": 1,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "decision_metrics": {
+    "decision_tp": 1,
+    "decision_fn": 0,
+    "decision_precision": 1.0,
+    "decision_recall": 1.0,
+    "suggestion_tp": 0,
+    "suggestion_fn": 0,
+    "suggestion_recall": 0.0
+  },
+  "dimension_accuracy": {
+    "topic": 0.0,
+    "status": 1.0
+  },
+  "by_topic": {
+    "多智能体循环架构": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "by_chat": {
+    "chat_0": {
+      "expected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "_isolation": {
+      "issues": 0,
+      "score": 1.0
+    }
+  }
+}

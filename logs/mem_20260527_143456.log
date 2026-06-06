@@ -1,0 +1,2279 @@
+2026-05-27 14:34:56 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260527_143456.log
+2026-05-27 14:34:57 - src.eval_runner - INFO - MemoryGraph loaded: 19 decisions
+2026-05-27 14:34:57 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-27 14:34:57 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-27 14:34:57 - src.core.engine - INFO - Loaded 19 decisions, 3 topics
+2026-05-27 14:34:57 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=58 topics=1
+2026-05-27 14:34:57 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-27 14:34:57 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-27 14:34:57 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-27 14:34:57 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-27 14:34:57 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-27 14:34:57 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-27 14:34:57 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-27 14:34:57 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-05-27 14:34:57 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-27 14:34:57 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_b2b00e684 started with msg=eval_1
+2026-05-27 14:34:57 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+2026-05-27 14:34:57 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:34:57 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:34:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化肯定要上K8s，生产环境都这么用了
+2026-05-27 14:34:58 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:34:58 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:34:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS
+2026-05-27 14:34:58 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:34:58 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:34:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列我觉得Kafka更合适，高吞吐低延迟
+2026-05-27 14:34:59 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:34:59 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:34:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化方案就用K8s吧，生态最成熟
+2026-05-27 14:34:59 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:34:59 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:00 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型还是要看团队能力，PG学习成本高一些
+2026-05-27 14:35:00 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:00 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:00 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端可以考虑用React，社区资源丰富
+2026-05-27 14:35:00 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:00 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:01 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器的监控用Prometheus+Grafana吧
+2026-05-27 14:35:01 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:01 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:01 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列选了Kafka，配合流处理引擎很强大
+2026-05-27 14:35:01 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:01 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:02 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库还是决定用PG，RDS托管省心省力
+2026-05-27 14:35:02 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:02 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:02 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Sentry做错误监控很成熟，可以试试
+2026-05-27 14:35:02 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:02 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选PG了，大家没意见吧
+2026-05-27 14:35:03 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:03 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化用K8s，helm chart管理部署
+2026-05-27 14:35:03 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:03 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:04 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端性能优化可以用SSR和服务端组件
+2026-05-27 14:35:04 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:04 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:04 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池用PgBouncer，支持事务池
+2026-05-27 14:35:04 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:04 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:05 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器资源限制用resource quota和limit range
+2026-05-27 14:35:05 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:05 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:05 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端CDN缓存策略也得考虑，减少回源
+2026-05-27 14:35:05 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:05 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:06 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库迁移工具用golang-migrate
+2026-05-27 14:35:06 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:06 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:06 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器网络插件用Calico，支持网络策略
+2026-05-27 14:35:06 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:06 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:07 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端打包工具换成Vite，比Webpack快很多
+2026-05-27 14:35:07 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:07 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:07 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库备份用pg_dump加上WAL归档
+2026-05-27 14:35:07 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:07 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器安全要用Pod Security Standards
+2026-05-27 14:35:08 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:08 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端状态管理用Zustand，轻量好用
+2026-05-27 14:35:08 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:08 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库读写分离用主从复制，异步模式
+2026-05-27 14:35:09 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:09 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器日志收集用Loki，轻量级方案
+2026-05-27 14:35:09 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:09 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:10 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库分表方案用Citus，支持分布式
+2026-05-27 14:35:10 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:10 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:10 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端监控加上Web Vitals，关注用户体验
+2026-05-27 14:35:10 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:10 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:11 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接用SSL加密，安全合规
+2026-05-27 14:35:11 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:11 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:11 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器镜像仓库用Harbor，支持漏洞扫描
+2026-05-27 14:35:11 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:11 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:12 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端构建产物放OSS，CDN加速分发
+2026-05-27 14:35:12 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:12 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:12 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库死锁检测和自动重试机制要加上
+2026-05-27 14:35:12 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:12 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:13 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器滚动更新策略用maxSurge和maxUnavailable控制
+2026-05-27 14:35:13 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:13 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:13 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端版本发布用灰度策略，逐步放量
+2026-05-27 14:35:13 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:13 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:14 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库冷热数据分离方案需要考虑
+2026-05-27 14:35:14 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:14 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:14 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器Pod内多容器用sidecar模式
+2026-05-27 14:35:14 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:14 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:15 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端组件库用Ant Design，开箱即用
+2026-05-27 14:35:15 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:15 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:15 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库用PG就定了吧，开始搞方案设计
+2026-05-27 14:35:15 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:15 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:16 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列还是用Kafka吧，之前讨论过
+2026-05-27 14:35:16 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:16 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:16 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化用K8s集群，先搭测试环境
+2026-05-27 14:35:16 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:16 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:17 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端性能基线要建立，Lighthouse评分80+
+2026-05-27 14:35:17 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:17 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:17 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列引入Schema Registry管理数据格式
+2026-05-27 14:35:17 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:17 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:18 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器使用PV/PVC做持久化存储
+2026-05-27 14:35:18 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:18 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:18 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端用Next.js做SSR，SEO更好
+2026-05-27 14:35:18 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:18 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka的Partition策略会影响顺序消费
+2026-05-27 14:35:19 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:19 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器结合Istio做灰度发布
+2026-05-27 14:35:19 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:19 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:20 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端微前端方案用Module Federation
+2026-05-27 14:35:20 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:20 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:20 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列设置消息保留策略，7天自动清理
+2026-05-27 14:35:20 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:20 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:21 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器资源预留和限制要规划好
+2026-05-27 14:35:21 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:21 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:21 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Bundle分析用Vite内置的rollup-plugin-visualizer
+2026-05-27 14:35:21 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:21 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:22 - src.detect.episode - INFO - [Episode] chat=eval MAX-MSG boundary: 50 >= 50, suspending episode=ep_b2b00e684
+2026-05-27 14:35:22 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_b2b00e684 (chat=eval, msgs=50, pool=1/20)
+2026-05-27 14:35:22 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_9f3b9034c started after max-msg suspend
+2026-05-27 14:35:22 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka的Topic设计按业务域划分
+2026-05-27 14:35:22 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:22 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:22 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器利用Operator模式自动化运维
+2026-05-27 14:35:22 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:22 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:23 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端主题定制用CSS变量，运行时切换
+2026-05-27 14:35:23 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:23 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:23 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列配置死信队列处理消费失败
+2026-05-27 14:35:23 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:23 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:24 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器Node节点的污点和容忍度配置很关键
+2026-05-27 14:35:24 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:24 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:24 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端WebWorker处理大数据渲染
+2026-05-27 14:35:24 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:24 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列KafKa和现有系统的集成方案
+2026-05-27 14:35:25 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:25 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器认证和RBAC权限管理要规划
+2026-05-27 14:35:25 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:25 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:26 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端无障碍a11y支持，WCAG 2.1标准
+2026-05-27 14:35:26 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:26 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:26 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列还是Kafka好，生态系统最全
+2026-05-27 14:35:26 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:26 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:27 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器我们选K8s搭建，不要托管方案
+2026-05-27 14:35:27 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:27 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:27 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端用React+TypeScript，类型安全
+2026-05-27 14:35:27 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:27 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:28 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Topic命名规范要有统一前缀
+2026-05-27 14:35:28 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:28 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:28 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器先搭1主2从的测试集群
+2026-05-27 14:35:28 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:28 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:29 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端路由用React Router v6
+2026-05-27 14:35:29 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:29 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:29 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka的监控用Burrow
+2026-05-27 14:35:29 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:29 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:30 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器日志采集用Fluentd+Elasticsearch
+2026-05-27 14:35:30 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:30 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:30 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端组件单元测试用Vitest
+2026-05-27 14:35:30 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:30 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:31 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列消费者要做好幂等处理
+2026-05-27 14:35:31 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:31 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:31 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器部署用GitOps，ArgoCD管理
+2026-05-27 14:35:31 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:31 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:32 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Sentry的错误分组规则要配置好
+2026-05-27 14:35:32 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:32 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:32 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka的Rebalance机制要注意
+2026-05-27 14:35:32 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:32 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:33 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器用Kustomize做环境差异化配置
+2026-05-27 14:35:33 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:33 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:33 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端接口请求用React Query管理缓存
+2026-05-27 14:35:33 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:33 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:34 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列消息体不要太大，建议小于1MB
+2026-05-27 14:35:34 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:34 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:34 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器CICD流水线用GitHub Actions
+2026-05-27 14:35:34 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:34 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端i18n用react-intl，支持多语言
+2026-05-27 14:35:35 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:35 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Schema兼容性用FORWARD模式
+2026-05-27 14:35:35 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:35 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:36 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器自动扩缩容用HPA+VPA
+2026-05-27 14:35:36 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:36 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:36 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端首屏加载控制在2秒内
+2026-05-27 14:35:36 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:36 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka的Controller节点要高可用
+2026-05-27 14:35:37 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:37 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器集群规模预估300个Pod
+2026-05-27 14:35:37 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:37 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:38 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端骨架屏方案提升感知性能
+2026-05-27 14:35:38 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:38 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:38 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库迁移工具换成sqitch，支持回滚
+2026-05-27 14:35:38 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:38 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器网络策略默认拒绝所有入站流量
+2026-05-27 14:35:39 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:39 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端的日志采集用Sentry
+2026-05-27 14:35:39 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:39 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:40 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库查询优化用EXPLAIN ANALYZE分析
+2026-05-27 14:35:40 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:40 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:40 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器Pod健康检查用liveness+readiness
+2026-05-27 14:35:40 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:40 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:41 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端代码规范用ESLint+Prettier
+2026-05-27 14:35:41 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:41 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:41 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池大小根据TPS动态调整
+2026-05-27 14:35:41 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:41 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器ConfigMap和Secret管理方案
+2026-05-27 14:35:42 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:42 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端组件Storybook做可视化开发
+2026-05-27 14:35:42 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:42 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库索引整理和重建策略
+2026-05-27 14:35:43 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:43 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器Linux capabilities最小化配置
+2026-05-27 14:35:43 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:43 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:44 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端依赖更新用Renovate自动化
+2026-05-27 14:35:44 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:44 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:44 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库归档用timescaledb自动分区
+2026-05-27 14:35:44 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:44 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器使用LimitRange设置默认资源限制
+2026-05-27 14:35:45 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:45 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端业务组件抽离成独立npm包
+2026-05-27 14:35:45 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:45 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:46 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库SQL审核用Bytebase平台
+2026-05-27 14:35:46 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:46 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:46 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器Pod Anti-Affinity提高可用性
+2026-05-27 14:35:46 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:46 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:47 - src.detect.episode - INFO - [Episode] chat=eval MAX-MSG boundary: 50 >= 50, suspending episode=ep_9f3b9034c
+2026-05-27 14:35:47 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_9f3b9034c (chat=eval, msgs=50, pool=2/20)
+2026-05-27 14:35:47 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_93bc866ee started after max-msg suspend
+2026-05-27 14:35:47 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端浏览器兼容性列表支持Chrome/Firefox/Edge
+2026-05-27 14:35:47 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:47 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:47 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG的Vacuum机制要配置合理
+2026-05-27 14:35:47 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:47 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器使用K8s Event-driven Autoscaling(KEDA)
+2026-05-27 14:35:48 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:48 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端APM用Sentry Performance
+2026-05-27 14:35:48 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:48 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:49 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库还是用PG吧，各种方案都考虑过了
+2026-05-27 14:35:49 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:49 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:49 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化方案之前讨论用K8s，就这么定
+2026-05-27 14:35:49 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:49 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:50 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端监控体系之前规划了Sentry+Web Vitals
+2026-05-27 14:35:50 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:50 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:50 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池用PgBouncer，事务池模式
+2026-05-27 14:35:50 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:50 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:51 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器Ingress用Nginx Ingress Controller
+2026-05-27 14:35:51 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:51 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:51 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端国际化用react-intl，之前说过的
+2026-05-27 14:35:51 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:51 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:52 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库TB级别数据用Citus做分布式
+2026-05-27 14:35:52 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:52 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:52 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器镜像分层优化，减少构建时间
+2026-05-27 14:35:52 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:52 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:53 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端SSR用Next.js，之前评估过
+2026-05-27 14:35:53 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:53 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:53 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库备份策略全量+增量结合
+2026-05-27 14:35:53 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:53 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:54 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器PodDisruptionBudget保证HA
+2026-05-27 14:35:54 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:54 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:54 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端CDN缓存OSS上放静态资源
+2026-05-27 14:35:54 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:54 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:55 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG的扩展机制可以支持多种数据类型
+2026-05-27 14:35:55 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:55 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:55 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器就用K8s了，helm管理一切
+2026-05-27 14:35:55 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:55 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:56 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端就用React全套生态
+2026-05-27 14:35:56 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:56 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:56 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列最终选Kafka，方案确认
+2026-05-27 14:35:56 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:56 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:57 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG方案定稿，开始技术设计
+2026-05-27 14:35:57 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:57 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:57 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端性能优化方案汇总出文档
+2026-05-27 14:35:57 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:57 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s部署方案写RFC文档
+2026-05-27 14:35:58 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:58 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka集成方案评审
+2026-05-27 14:35:58 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:58 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池和分库分表方案确认
+2026-05-27 14:35:59 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:59 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:35:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端监控Sentry接入方案实施
+2026-05-27 14:35:59 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:35:59 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:00 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s集群搭建方案落地
+2026-05-27 14:36:00 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:00 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:00 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka Topic设计定稿
+2026-05-27 14:36:00 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:00 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:01 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG生产环境部署方案OK
+2026-05-27 14:36:01 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:01 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:01 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Next.js SSG方案测试通过
+2026-05-27 14:36:01 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:01 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:02 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s HPA弹性策略方案验证
+2026-05-27 14:36:02 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:02 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:02 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka消息压缩开启
+2026-05-27 14:36:02 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:02 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG高可用用Patroni方案
+2026-05-27 14:36:03 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:03 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端路由权限控制方案确定
+2026-05-27 14:36:03 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:03 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:04 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s安全策略Pod Security落地
+2026-05-27 14:36:04 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:04 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:04 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka MirrorMaker跨集群
+2026-05-27 14:36:04 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:04 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:05 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG扩容方案在线增加节点
+2026-05-27 14:36:05 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:05 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:05 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端AB测试方案用Feature Flag
+2026-05-27 14:36:05 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:05 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:06 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s Gateway API替代Ingress评估
+2026-05-27 14:36:06 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:06 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:06 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka升级方案无损迁移
+2026-05-27 14:36:06 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:06 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:07 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG的查询计划缓存优化
+2026-05-27 14:36:07 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:07 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:07 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s使用Kubebuilder开发Operator
+2026-05-27 14:36:07 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:07 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端页面性能优化使用流式SSR
+2026-05-27 14:36:08 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:08 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka的消费者组重平衡优化
+2026-05-27 14:36:08 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:08 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG的数据校验工具pg_verify_checksums
+2026-05-27 14:36:09 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:09 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s使用Velero做集群备份恢复
+2026-05-27 14:36:09 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:09 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:10 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端资源加载优化使用preload/prefetch
+2026-05-27 14:36:10 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:10 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:10 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列Kafka使用kraft模式去ZooKeeper
+2026-05-27 14:36:10 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:10 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:11 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库PG的pg_stat_statements分析慢查询
+2026-05-27 14:36:11 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:11 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:11 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器K8s Service Mesh选型最终用Istio
+2026-05-27 14:36:11 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:11 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:12 - src.detect.episode - INFO - [Episode] chat=eval MAX-MSG boundary: 50 >= 50, suspending episode=ep_93bc866ee
+2026-05-27 14:36:12 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_93bc866ee (chat=eval, msgs=50, pool=3/20)
+2026-05-27 14:36:12 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_fc63cdb16 started after max-msg suspend
+2026-05-27 14:36:12 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端测试框架用Playwright替代Cypress
+2026-05-27 14:36:12 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 0.00s: 'EvalDetectionResult' object has no attribute 'score'
+2026-05-27 14:36:12 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 671, in _process_detection
+    snapshot = DetectorSnapshot.from_detection(content, source, det, ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 67, in from_detection
+    detection_result=_result_to_dict(result),
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/graph/snapshot.py", line 135, in _result_to_dict
+    "score": result.score,
+             ^^^^^^^^^^^^
+AttributeError: 'EvalDetectionResult' object has no attribute 'score'
+
+2026-05-27 14:36:14 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 3 episode(s) to data/suspend_pool.json
+2026-05-27 14:36:14 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-27 14:36:14 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-27 14:36:14 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)

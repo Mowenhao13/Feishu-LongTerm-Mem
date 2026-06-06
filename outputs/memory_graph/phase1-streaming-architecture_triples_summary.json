@@ -1,0 +1,2226 @@
+{
+  "triples": [
+    {
+      "head": "Phase 1: Claude CLI 流式输出架构设计",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-56995b"
+    },
+    {
+      "head": "Phase 1: Claude CLI 流式输出架构设计",
+      "relation": "related_to",
+      "tail": "Claude CLI",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-56995b"
+    },
+    {
+      "head": "Phase 1: Claude CLI 流式输出架构设计",
+      "relation": "related_to",
+      "tail": "前端流式输出",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-56995b"
+    },
+    {
+      "head": "ClaudeStreamMessage",
+      "relation": "defined_in",
+      "tail": "packages/core/src/types/claude.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "MessageType",
+      "relation": "defined_in",
+      "tail": "packages/core/src/types/claude.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Session",
+      "relation": "defined_in",
+      "tail": "packages/core/src/types/claude.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "ExecutionResult",
+      "relation": "defined_in",
+      "tail": "packages/core/src/types/claude.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Backend",
+      "relation": "defined_in",
+      "tail": "packages/core/src/types/claude.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "ExecOptions",
+      "relation": "defined_in",
+      "tail": "packages/core/src/types/claude.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Session",
+      "relation": "contains",
+      "tail": "ClaudeStreamMessage",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "ExecutionResult",
+      "relation": "contains",
+      "tail": "ClaudeStreamMessage",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Backend",
+      "relation": "uses",
+      "tail": "Session",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Backend",
+      "relation": "uses",
+      "tail": "ExecutionResult",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Backend",
+      "relation": "uses",
+      "tail": "ExecOptions",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "ClaudeStreamMessage",
+      "relation": "has_type",
+      "tail": "MessageType",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Claude Adapter",
+      "relation": "implemented_in",
+      "tail": "server/src/adapter/claude.ts",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "Claude Adapter",
+      "relation": "implements",
+      "tail": "Backend",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-6c3815"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "implements",
+      "tail": "Backend",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "uses",
+      "tail": "Queue",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "uses",
+      "tail": "Scanner",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "uses",
+      "tail": "spawn",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "uses",
+      "tail": "crypto.randomUUID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "depends_on",
+      "tail": "@agenthub/core/types",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "adopts",
+      "tail": "stream-json",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "adopts",
+      "tail": "AsyncIterable",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "adopts",
+      "tail": "streaming_architecture",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "filterCustomArgs",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "filterCustomArgs",
+      "relation": "rejects",
+      "tail": "--allow-unsafe",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "filterCustomArgs",
+      "relation": "rejects",
+      "tail": "--danger",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "Queue",
+      "relation": "implements",
+      "tail": "bounded_queue",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "Queue",
+      "relation": "uses",
+      "tail": "async/await",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "produces",
+      "tail": "ClaudeStreamMessage",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "produces",
+      "tail": "Session",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "produces",
+      "tail": "ExecutionResult",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8c2d"
+    },
+    {
+      "head": "runTask",
+      "relation": "uses",
+      "tail": "ClaudeAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "uses",
+      "tail": "wsHub",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "uses",
+      "tail": "Task",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "based_on",
+      "tail": "Claude",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "wsHub",
+      "relation": "based_on",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "wsHub",
+      "relation": "uses",
+      "tail": "WSMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "WSHub",
+      "relation": "responsible_for",
+      "tail": "broadcastToWorkspace",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "WSHub",
+      "relation": "responsible_for",
+      "tail": "broadcastAll",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "WSHub",
+      "relation": "responsible_for",
+      "tail": "addConnection",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "WSHub",
+      "relation": "responsible_for",
+      "tail": "removeConnection",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "uses",
+      "tail": "onMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "onMessage",
+      "relation": "uses",
+      "tail": "wsHub",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "uses",
+      "tail": "messageChan",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "uses",
+      "tail": "result",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "broadcasts",
+      "tail": "task:message",
+      "schema": [
+        "SYSTEM",
+        "broadcasts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "broadcasts",
+      "tail": "task:completed",
+      "schema": [
+        "SYSTEM",
+        "broadcasts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "runTask",
+      "relation": "broadcasts",
+      "tail": "task:failed",
+      "schema": [
+        "SYSTEM",
+        "broadcasts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "wsHub",
+      "relation": "depends_on",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "imported_from",
+      "tail": "../adapter/claude",
+      "schema": [
+        "TECHNOLOGY",
+        "imported_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "wsHub",
+      "relation": "imported_from",
+      "tail": "../realtime/hub",
+      "schema": [
+        "SYSTEM",
+        "imported_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "Task",
+      "relation": "imported_from",
+      "tail": "@agenthub/core/types",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "WSMessage",
+      "relation": "imported_from",
+      "tail": "@agenthub/core/types",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-003-2e32d8"
+    },
+    {
+      "head": "Hono",
+      "relation": "adopts",
+      "tail": "WebSocket",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "wsHub",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "wsHub",
+      "relation": "responsible_for",
+      "tail": "addConnection",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "uses",
+      "tail": "SSE",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "responsible_for",
+      "tail": "execute",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "execute",
+      "relation": "produces",
+      "tail": "messageChan",
+      "schema": [
+        "CONCEPT",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "messageChan",
+      "relation": "related_to",
+      "tail": "SSE",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "Bun",
+      "relation": "adopts",
+      "tail": "Hono",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "Bun",
+      "relation": "adopts",
+      "tail": "WebSocket",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "Bun",
+      "relation": "adopts",
+      "tail": "SSE",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "based_on",
+      "tail": "HTTP",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "SSE",
+      "relation": "based_on",
+      "tail": "HTTP",
+      "schema": [
+        "STANDARD",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-73feee"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:queued",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:dispatch",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:running",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:waiting_local_directory",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:progress",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:completed",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:failed",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:message",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "defines",
+      "tail": "task:cancelled",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSMessage",
+      "relation": "has_property",
+      "tail": "type",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSMessage",
+      "relation": "has_property",
+      "tail": "payload",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSMessage",
+      "relation": "has_property",
+      "tail": "actor_id",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSMessage",
+      "relation": "has_property",
+      "tail": "actor_type",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "task_id",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "seq",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "type",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "tool",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "content",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "input",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "has_property",
+      "tail": "output",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "canMergeStreamingText",
+      "relation": "implements",
+      "tail": "streaming_text_merge_logic",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "coalesceTimelineItems",
+      "relation": "uses",
+      "tail": "canMergeStreamingText",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "coalesceTimelineItems",
+      "relation": "implements",
+      "tail": "timeline_coalescing",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "appendTimelineItem",
+      "relation": "uses",
+      "tail": "coalesceTimelineItems",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "uses",
+      "tail": "coalesceTimelineItems",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "transforms",
+      "tail": "TaskMessagePayload",
+      "schema": [
+        "CONCEPT",
+        "transforms",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "produces",
+      "tail": "TimelineItem",
+      "schema": [
+        "CONCEPT",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSClient",
+      "relation": "located_in",
+      "tail": "packages/core/src/api/ws-client.ts",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSEventType",
+      "relation": "located_in",
+      "tail": "packages/core/src/types/events.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSMessage",
+      "relation": "located_in",
+      "tail": "packages/core/src/types/events.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "TaskMessagePayload",
+      "relation": "located_in",
+      "tail": "packages/core/src/types/events.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "canMergeStreamingText",
+      "relation": "located_in",
+      "tail": "packages/core/src/task/build-timeline.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "coalesceTimelineItems",
+      "relation": "located_in",
+      "tail": "packages/core/src/task/build-timeline.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "appendTimelineItem",
+      "relation": "located_in",
+      "tail": "packages/core/src/task/build-timeline.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "located_in",
+      "tail": "packages/core/src/task/build-timeline.ts",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-afa82e"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "uses",
+      "tail": "WSClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "uses",
+      "tail": "WSContext",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "depends_on",
+      "tail": "authStore",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "uses",
+      "tail": "React",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "useWS",
+      "relation": "uses",
+      "tail": "WSContext",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "uses",
+      "tail": "WSClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "uses",
+      "tail": "taskMessageKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "implements",
+      "tail": "增量更新",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "taskKeys",
+      "relation": "related_to",
+      "tail": "taskMessageKeys",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "taskMessageKeys",
+      "relation": "based_on",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "WSClient",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "responsible_for",
+      "tail": "WebSocket连接管理",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "responsible_for",
+      "tail": "QueryCache实时同步",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-6b5169"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "uses",
+      "tail": "useQuery",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "uses",
+      "tail": "useWS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "uses",
+      "tail": "buildTimeline",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "uses",
+      "tail": "taskMessageKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "uses",
+      "tail": "TimelineEntry",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "useQuery",
+      "relation": "based_on",
+      "tail": "@tanstack/react-query",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "useWS",
+      "relation": "based_on",
+      "tail": "@agenthub/core/realtime/provider",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "based_on",
+      "tail": "@agenthub/core/task/build-timeline",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "taskMessageKeys",
+      "relation": "based_on",
+      "tail": "@agenthub/core/task/queries",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "adopts",
+      "tail": "staleTime: Infinity",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TaskTranscript",
+      "relation": "adopts",
+      "tail": "WebSocket 实时增量更新",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "WebSocket 实时增量更新",
+      "relation": "uses",
+      "tail": "incremental setQueryData",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "incremental setQueryData",
+      "relation": "updates",
+      "tail": "queryCache",
+      "schema": [
+        "CONCEPT",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "queryCache",
+      "relation": "triggers",
+      "tail": "React Query 自动组件重渲染",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TimelineEntry",
+      "relation": "handles",
+      "tail": "text",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TimelineEntry",
+      "relation": "handles",
+      "tail": "thinking",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TimelineEntry",
+      "relation": "handles",
+      "tail": "tool_use",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TimelineEntry",
+      "relation": "handles",
+      "tail": "tool_result",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "TimelineEntry",
+      "relation": "handles",
+      "tail": "error",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-80cb99"
+    },
+    {
+      "head": "Multica",
+      "relation": "based_on",
+      "tail": "page_refresh_recovery",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "page_refresh_recovery",
+      "relation": "uses",
+      "tail": "backend",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "backend",
+      "relation": "responsible_for",
+      "tail": "task_message_persistence",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "page_refresh_recovery",
+      "relation": "uses",
+      "tail": "frontend",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "frontend",
+      "relation": "uses",
+      "tail": "GET /api/tasks/:id/messages",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "API"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "frontend",
+      "relation": "uses",
+      "tail": "Query Cache",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "page_refresh_recovery",
+      "relation": "uses",
+      "tail": "WS",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "WS",
+      "relation": "responsible_for",
+      "tail": "real_time_incremental_append",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "page_refresh_recovery",
+      "relation": "uses",
+      "tail": "buildTimeline",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "FUNCTION"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "processes",
+      "tail": "rawMessages",
+      "schema": [
+        "FUNCTION",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "buildTimeline",
+      "relation": "produces",
+      "tail": "timeline",
+      "schema": [
+        "FUNCTION",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "Query Cache",
+      "relation": "depends_on",
+      "tail": "GET /api/tasks/:id/messages",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "API"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "WS",
+      "relation": "subscribes_to",
+      "tail": "task:message",
+      "schema": [
+        "TECHNOLOGY",
+        "subscribes_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "WS",
+      "relation": "updates",
+      "tail": "Query Cache",
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "React",
+      "relation": "reacts_to",
+      "tail": "Query Cache",
+      "schema": [
+        "TECHNOLOGY",
+        "reacts_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-976707"
+    },
+    {
+      "head": "core",
+      "relation": "contains",
+      "tail": "types",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "core",
+      "relation": "contains",
+      "tail": "api",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "core",
+      "relation": "contains",
+      "tail": "realtime",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "core",
+      "relation": "contains",
+      "tail": "task",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "types",
+      "relation": "contains",
+      "tail": "claude.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "types",
+      "relation": "contains",
+      "tail": "events.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "types",
+      "relation": "contains",
+      "tail": "task.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "api",
+      "relation": "contains",
+      "tail": "client.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "api",
+      "relation": "contains",
+      "tail": "ws-client.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "realtime",
+      "relation": "contains",
+      "tail": "provider.tsx",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "realtime",
+      "relation": "contains",
+      "tail": "use-realtime-sync.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "task",
+      "relation": "contains",
+      "tail": "build-timeline.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "task",
+      "relation": "contains",
+      "tail": "queries.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "ui",
+      "relation": "related_to",
+      "tail": "core",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "views",
+      "relation": "related_to",
+      "tail": "core",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "web",
+      "relation": "uses",
+      "tail": "core",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "web",
+      "relation": "uses",
+      "tail": "ui",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "web",
+      "relation": "uses",
+      "tail": "views",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "web",
+      "relation": "based_on",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "server",
+      "relation": "based_on",
+      "tail": "Bun",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "server",
+      "relation": "based_on",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "server",
+      "relation": "contains",
+      "tail": "adapter",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "server",
+      "relation": "contains",
+      "tail": "daemon",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "server",
+      "relation": "contains",
+      "tail": "realtime",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "server",
+      "relation": "contains",
+      "tail": "index.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "adapter",
+      "relation": "contains",
+      "tail": "claude.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "adapter",
+      "relation": "contains",
+      "tail": "codex.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "claude.ts",
+      "relation": "adopts",
+      "tail": "streaming",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "codex.ts",
+      "relation": "adopts",
+      "tail": "JSON-RPC",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "daemon",
+      "relation": "contains",
+      "tail": "runner.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "realtime",
+      "relation": "contains",
+      "tail": "hub.ts",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "hub.ts",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "hub.ts",
+      "relation": "responsible_for",
+      "tail": "broadcast",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "index.ts",
+      "relation": "based_on",
+      "tail": "Hono",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "provider.tsx",
+      "relation": "uses",
+      "tail": "React",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "provider.tsx",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "use-realtime-sync.ts",
+      "relation": "uses",
+      "tail": "QueryCache",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "build-timeline.ts",
+      "relation": "responsible_for",
+      "tail": "timeline_building",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "queries.ts",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "ws-client.ts",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "client.ts",
+      "relation": "uses",
+      "tail": "HTTP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-011-799617"
+    },
+    {
+      "head": "后端服务器",
+      "relation": "uses",
+      "tail": "bun",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-b80103"
+    },
+    {
+      "head": "SSE 流式输出",
+      "relation": "related_to",
+      "tail": "后端服务器",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-b80103"
+    },
+    {
+      "head": "WS 实时广播",
+      "relation": "related_to",
+      "tail": "Issue 详情页面",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-b80103"
+    }
+  ],
+  "stats": {
+    "total_chunks": 13,
+    "total_triples": 196,
+    "unique_schemas": 56,
+    "schema_distribution": {
+      "('CONCEPT', 'based_on', 'SYSTEM')": 2,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 3,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'defined_in', 'SYSTEM')": 6,
+      "('CONCEPT', 'contains', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 7,
+      "('CONCEPT', 'has_type', 'CONCEPT')": 1,
+      "('SYSTEM', 'implemented_in', 'SYSTEM')": 1,
+      "('SYSTEM', 'implements', 'CONCEPT')": 4,
+      "('SYSTEM', 'uses', 'SYSTEM')": 11,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 20,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'adopts', 'STANDARD')": 2,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 5,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 2,
+      "('SYSTEM', 'produces', 'CONCEPT')": 3,
+      "('SYSTEM', 'uses', 'CONCEPT')": 6,
+      "('TECHNOLOGY', 'based_on', 'TECHNOLOGY')": 5,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 6,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 10,
+      "('CONCEPT', 'uses', 'SYSTEM')": 3,
+      "('SYSTEM', 'broadcasts', 'CONCEPT')": 3,
+      "('SYSTEM', 'depends_on', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'imported_from', 'SYSTEM')": 1,
+      "('SYSTEM', 'imported_from', 'SYSTEM')": 1,
+      "('CONCEPT', 'imported_from', 'ORG')": 2,
+      "('TECHNOLOGY', 'adopts', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'uses', 'STANDARD')": 2,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 2,
+      "('CONCEPT', 'produces', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'STANDARD')": 1,
+      "('TECHNOLOGY', 'adopts', 'STANDARD')": 1,
+      "('TECHNOLOGY', 'based_on', 'STANDARD')": 1,
+      "('STANDARD', 'based_on', 'STANDARD')": 1,
+      "('CONCEPT', 'defines', 'CONCEPT')": 9,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 11,
+      "('CONCEPT', 'implements', 'CONCEPT')": 2,
+      "('CONCEPT', 'transforms', 'CONCEPT')": 1,
+      "('SYSTEM', 'located_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'located_in', 'SYSTEM')": 7,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 3,
+      "('CONCEPT', 'updates', 'CONCEPT')": 1,
+      "('CONCEPT', 'triggers', 'CONCEPT')": 1,
+      "('SYSTEM', 'handles', 'CONCEPT')": 5,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'API')": 1,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'uses', 'FUNCTION')": 1,
+      "('FUNCTION', 'processes', 'CONCEPT')": 1,
+      "('FUNCTION', 'produces', 'CONCEPT')": 1,
+      "('SYSTEM', 'depends_on', 'API')": 1,
+      "('TECHNOLOGY', 'subscribes_to', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'updates', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'reacts_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'contains', 'SYSTEM')": 21,
+      "('SYSTEM', 'uses', 'STANDARD')": 1
+    },
+    "schema_layer_size": 56,
+    "fact_layer_size": 196,
+    "passage_layer_size": 13
+  }
+}

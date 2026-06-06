@@ -1,0 +1,901 @@
+{
+  "triples": [
+    {
+      "head": "OpenAI Agent Python SDK",
+      "relation": "uses",
+      "tail": "RunContextWrapper",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "RunContextWrapper",
+      "relation": "contains",
+      "tail": "context",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "based_on",
+      "tail": "Python object",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "related_to",
+      "tail": "dataclass",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "related_to",
+      "tail": "Pydantic",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "Runner.run",
+      "relation": "accepts",
+      "tail": "context",
+      "schema": [
+        "TECHNOLOGY",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "RunContextWrapper",
+      "relation": "used_by",
+      "tail": "tool calls",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "RunContextWrapper",
+      "relation": "used_by",
+      "tail": "lifecycle hooks",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "is_subclass_of",
+      "tail": "RunContextWrapper",
+      "schema": [
+        "TECHNOLOGY",
+        "is_subclass_of",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "contains",
+      "tail": "tool_call_id",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "contains",
+      "tail": "tool_name",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "contains",
+      "tail": "tool_arguments",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "used_for",
+      "tail": "contextual data",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "used_for",
+      "tail": "dependencies",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "used_for",
+      "tail": "helper functions",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "related_to",
+      "tail": "local context",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "related_to",
+      "tail": "LLM context",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "context",
+      "relation": "rejects",
+      "tail": "sending to LLM",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4"
+    },
+    {
+      "head": "派生包装器",
+      "relation": "shares",
+      "tail": "应用上下文",
+      "schema": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "派生包装器",
+      "relation": "shares",
+      "tail": "审批状态",
+      "schema": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "派生包装器",
+      "relation": "shares",
+      "tail": "用量跟踪",
+      "schema": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "Agent.as_tool()",
+      "relation": "may_attach",
+      "tail": "tool_input",
+      "schema": [
+        "TECHNOLOGY",
+        "may_attach",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper",
+      "relation": "wraps",
+      "tail": "应用上下文对象",
+      "schema": [
+        "TECHNOLOGY",
+        "wraps",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.context",
+      "relation": "provides",
+      "tail": "可变应用状态",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.context",
+      "relation": "provides",
+      "tail": "依赖项",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.usage",
+      "relation": "tracks",
+      "tail": "请求和token用量",
+      "schema": [
+        "CONCEPT",
+        "tracks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.tool_input",
+      "relation": "provides",
+      "tail": "结构化输入",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.approve_tool",
+      "relation": "updates",
+      "tail": "审批状态",
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.reject_tool",
+      "relation": "updates",
+      "tail": "审批状态",
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "wrapper.context",
+      "relation": "defined_by",
+      "tail": "应用",
+      "schema": [
+        "CONCEPT",
+        "defined_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "其他字段",
+      "relation": "managed_by",
+      "tail": "SDK",
+      "schema": [
+        "CONCEPT",
+        "managed_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunState",
+      "relation": "contains",
+      "tail": "运行时元数据",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunState",
+      "relation": "used_for",
+      "tail": "人工介入",
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunState",
+      "relation": "used_for",
+      "tail": "持久化作业工作流",
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "RunContextWrapper.context",
+      "relation": "should_avoid",
+      "tail": "密钥",
+      "schema": [
+        "CONCEPT",
+        "should_avoid",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "会话状态",
+      "relation": "related_to",
+      "tail": "多轮对话延续",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "result.to_input_list()",
+      "relation": "used_for",
+      "tail": "会话状态管理",
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "session",
+      "relation": "used_for",
+      "tail": "会话状态管理",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "conversation_id",
+      "relation": "used_for",
+      "tail": "会话状态管理",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "previous_response_id",
+      "relation": "used_for",
+      "tail": "会话状态管理",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "工具",
+      "relation": "receives",
+      "tail": "RunContextWrapper[UserInfo]",
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "工具实现",
+      "relation": "reads_from",
+      "tail": "上下文",
+      "schema": [
+        "CONCEPT",
+        "reads_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6"
+    },
+    {
+      "head": "UserInfo",
+      "relation": "used_by",
+      "tail": "智能体",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "UserInfo",
+      "relation": "related_to",
+      "tail": "类型检查器",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "上下文",
+      "relation": "passed_to",
+      "tail": "run 函数",
+      "schema": [
+        "CONCEPT",
+        "passed_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "智能体",
+      "relation": "calls",
+      "tail": "工具",
+      "schema": [
+        "SYSTEM",
+        "calls",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "extends",
+      "tail": "RunContextWrapper",
+      "schema": [
+        "CONCEPT",
+        "extends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "provides",
+      "tail": "tool_name",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "provides",
+      "tail": "tool_call_id",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "provides",
+      "tail": "tool_arguments",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "provides",
+      "tail": "tool_namespace",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "provides",
+      "tail": "qualified_tool_name",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "RunContextWrapper",
+      "relation": "provides",
+      "tail": "context 属性",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "provides",
+      "tail": "context 属性",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "used_for",
+      "tail": "工具级元数据",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "RunContextWrapper",
+      "relation": "used_for",
+      "tail": "一般上下文共享",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "Agent.as_tool()",
+      "relation": "provides",
+      "tail": "结构化输入",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "ToolContext",
+      "relation": "exposes",
+      "tail": "tool_input",
+      "schema": [
+        "CONCEPT",
+        "exposes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f92"
+    },
+    {
+      "head": "LLM",
+      "relation": "uses",
+      "tail": "对话历史",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "对话历史",
+      "relation": "provides_data_to",
+      "tail": "LLM",
+      "schema": [
+        "CONCEPT",
+        "provides_data_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "instructions",
+      "relation": "provides_context_to",
+      "tail": "智能体",
+      "schema": [
+        "CONCEPT",
+        "provides_context_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "系统提示词",
+      "relation": "equivalent_to",
+      "tail": "instructions",
+      "schema": [
+        "CONCEPT",
+        "equivalent_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "开发者消息",
+      "relation": "equivalent_to",
+      "tail": "instructions",
+      "schema": [
+        "CONCEPT",
+        "equivalent_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "系统提示词",
+      "relation": "can_be",
+      "tail": "静态字符串",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "系统提示词",
+      "relation": "can_be",
+      "tail": "动态函数",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "动态函数",
+      "relation": "receives",
+      "tail": "上下文",
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "动态函数",
+      "relation": "outputs",
+      "tail": "字符串",
+      "schema": [
+        "CONCEPT",
+        "outputs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "Runner.run",
+      "relation": "accepts",
+      "tail": "input",
+      "schema": [
+        "TECHNOLOGY",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "input",
+      "relation": "provides_context_to",
+      "tail": "智能体",
+      "schema": [
+        "CONCEPT",
+        "provides_context_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "工具调用",
+      "relation": "provides_context_to",
+      "tail": "LLM",
+      "schema": [
+        "CONCEPT",
+        "provides_context_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "工具调用",
+      "relation": "is",
+      "tail": "按需上下文",
+      "schema": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "LLM",
+      "relation": "decides_when_to_use",
+      "tail": "工具调用",
+      "schema": [
+        "TECHNOLOGY",
+        "decides_when_to_use",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "检索",
+      "relation": "is",
+      "tail": "特殊工具",
+      "schema": [
+        "TECHNOLOGY",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "网络检索",
+      "relation": "is",
+      "tail": "特殊工具",
+      "schema": [
+        "TECHNOLOGY",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "检索",
+      "relation": "fetches_data_from",
+      "tail": "文件",
+      "schema": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "检索",
+      "relation": "fetches_data_from",
+      "tail": "数据库",
+      "schema": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    },
+    {
+      "head": "网络检索",
+      "relation": "fetches_data_from",
+      "tail": "网络",
+      "schema": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb861"
+    }
+  ],
+  "stats": {
+    "total_chunks": 4,
+    "total_triples": 77,
+    "unique_schemas": 40,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'contains', 'CONCEPT')": 5,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'accepts', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'used_by', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'is_subclass_of', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 8,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 1,
+      "('CONCEPT', 'shares', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'may_attach', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'wraps', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides', 'CONCEPT')": 11,
+      "('CONCEPT', 'tracks', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'updates', 'CONCEPT')": 2,
+      "('CONCEPT', 'defined_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'managed_by', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 3,
+      "('CONCEPT', 'should_avoid', 'CONCEPT')": 1,
+      "('CONCEPT', 'receives', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'reads_from', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'passed_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'calls', 'CONCEPT')": 1,
+      "('CONCEPT', 'extends', 'CONCEPT')": 1,
+      "('CONCEPT', 'exposes', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides_data_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'provides_context_to', 'SYSTEM')": 2,
+      "('CONCEPT', 'equivalent_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'can_be', 'CONCEPT')": 2,
+      "('CONCEPT', 'receives', 'CONCEPT')": 1,
+      "('CONCEPT', 'outputs', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides_context_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'is', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'decides_when_to_use', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'is', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'fetches_data_from', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'fetches_data_from', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 40,
+    "fact_layer_size": 77,
+    "passage_layer_size": 4
+  }
+}

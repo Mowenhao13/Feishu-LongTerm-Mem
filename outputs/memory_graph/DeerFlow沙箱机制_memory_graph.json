@@ -1,0 +1,1825 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        3,
+        4
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        6,
+        7
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        8
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        9,
+        10
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        11
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        12,
+        15,
+        16
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        13,
+        14
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        17,
+        19
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        18,
+        22
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        20,
+        21,
+        23
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        24,
+        25
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        26,
+        37,
+        39
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "TECHNOLOGY",
+        "creates",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        27
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "CONCEPT",
+        "operates_on",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        28,
+        29
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "SYSTEM",
+        "identified_by",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        30
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "CONCEPT",
+        "derived_from",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        31
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "CONCEPT",
+        "returns",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        32
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "SYSTEM",
+        "shared_by",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        33
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        34
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        35,
+        36
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "TECHNOLOGY",
+        "ensures",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        38
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "TECHNOLOGY",
+        "prevents",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        40
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "CONCEPT",
+        "occurs_in",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        41
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "CONCEPT",
+        "example_of",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        42
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "CONCEPT",
+        "has",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        43
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "SYSTEM",
+        "used_by",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        44
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "SYSTEM",
+        "is_read_only",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        45
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        46
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "DeerFlow沙箱机制",
+        "related_to",
+        "DeerFlow"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "DeerFlow",
+        "has",
+        "Sandbox System"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "Sandbox System",
+        "provides",
+        "isolated execution environment"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "Sandbox System",
+        "enables",
+        "safe shell command execution"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "Sandbox System",
+        "enables",
+        "safe file management"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "multi-agent collaboration",
+        "uses",
+        "shared thread_id"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "shared thread_id",
+        "enables",
+        "concurrent access to sandbox instance"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "shared thread_id",
+        "enables",
+        "state synchronization"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "DeerFlow",
+        "based_on",
+        "SandboxProvider"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "SandboxProvider",
+        "related_to",
+        "LocalSandboxProvider"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "SandboxProvider",
+        "related_to",
+        "AioSandboxProvider"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "LocalSandboxProvider",
+        "uses",
+        "path_mapping"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "LocalSandboxProvider",
+        "related_to",
+        "本地模式"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "AioSandboxProvider",
+        "based_on",
+        "Docker"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "AioSandboxProvider",
+        "based_on",
+        "K8s"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "AioSandboxProvider",
+        "related_to",
+        "容器模式"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "AioSandboxProvider",
+        "related_to",
+        "生产环境"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "沙箱_ID",
+        "based_on",
+        "thread_id"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "SandboxMiddleware",
+        "uses",
+        "acquire"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "acquire",
+        "based_on",
+        "thread_id"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "沙箱",
+        "related_to",
+        "温池"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "温池",
+        "related_to",
+        "冷启动"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "智能体",
+        "uses",
+        "虚拟路径"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "虚拟路径",
+        "related_to",
+        "物理路径"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "DeerFlow",
+        "has_component",
+        "lead_agent"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "DeerFlow",
+        "has_component",
+        "sub_agents"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "lead_agent",
+        "uses",
+        "task_tool"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "task_tool",
+        "creates",
+        "sub_agents"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "lead_agent",
+        "operates_on",
+        "sandbox"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "sub_agents",
+        "operates_on",
+        "sandbox"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "sandbox",
+        "identified_by",
+        "sandbox_id"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "sandbox_id",
+        "derived_from",
+        "thread_id"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "ensure_sandbox_initialized",
+        "returns",
+        "sandbox_instance"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "sandbox_instance",
+        "shared_by",
+        "multiple_agents"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "system",
+        "implements",
+        "two_layer_locking_mechanism"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "two_layer_locking_mechanism",
+        "includes",
+        "process_level_locking"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "two_layer_locking_mechanism",
+        "includes",
+        "cross_process_locking"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "process_level_locking",
+        "uses",
+        "threading_Lock"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "threading_Lock",
+        "ensures",
+        "serialized_access_to_sandbox"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "cross_process_locking",
+        "uses",
+        "file_lock"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "file_lock",
+        "prevents",
+        "duplicate_container_creation"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "duplicate_container_creation",
+        "occurs_in",
+        "multiple_instances"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "multiple_instances",
+        "example_of",
+        "K8s_pods"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "each_thread",
+        "has",
+        "independent_acp_workspace"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "acp_workspace",
+        "used_by",
+        "ACP_plugin"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "acp_workspace",
+        "is_read_only",
+        "within_sandbox"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "read_only_acp_workspace",
+        "ensures",
+        "execution_result_immutability"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        3
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-41b7bb6fe8d1d051",
+      "content": "# DeerFlow沙箱机制",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "content": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "fact_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "content": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "fact_indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "content": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "fact_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "DeerFlow沙箱机制",
+        "related_to",
+        "DeerFlow"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-41b7bb6fe8d1d051",
+      "passage": "# DeerFlow沙箱机制",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "DeerFlow",
+        "has",
+        "Sandbox System"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "Sandbox System",
+        "provides",
+        "isolated execution environment"
+      ],
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "Sandbox System",
+        "enables",
+        "safe shell command execution"
+      ],
+      "schema": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "Sandbox System",
+        "enables",
+        "safe file management"
+      ],
+      "schema": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "multi-agent collaboration",
+        "uses",
+        "shared thread_id"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "shared thread_id",
+        "enables",
+        "concurrent access to sandbox instance"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "shared thread_id",
+        "enables",
+        "state synchronization"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "passage": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "DeerFlow",
+        "based_on",
+        "SandboxProvider"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "SandboxProvider",
+        "related_to",
+        "LocalSandboxProvider"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "SandboxProvider",
+        "related_to",
+        "AioSandboxProvider"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "LocalSandboxProvider",
+        "uses",
+        "path_mapping"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "LocalSandboxProvider",
+        "related_to",
+        "本地模式"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "AioSandboxProvider",
+        "based_on",
+        "Docker"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "AioSandboxProvider",
+        "based_on",
+        "K8s"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "AioSandboxProvider",
+        "related_to",
+        "容器模式"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "AioSandboxProvider",
+        "related_to",
+        "生产环境"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "沙箱_ID",
+        "based_on",
+        "thread_id"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "SandboxMiddleware",
+        "uses",
+        "acquire"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "acquire",
+        "based_on",
+        "thread_id"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "沙箱",
+        "related_to",
+        "温池"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "温池",
+        "related_to",
+        "冷启动"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "智能体",
+        "uses",
+        "虚拟路径"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "虚拟路径",
+        "related_to",
+        "物理路径"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "passage": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "DeerFlow",
+        "has_component",
+        "lead_agent"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "DeerFlow",
+        "has_component",
+        "sub_agents"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "lead_agent",
+        "uses",
+        "task_tool"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "task_tool",
+        "creates",
+        "sub_agents"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "creates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "lead_agent",
+        "operates_on",
+        "sandbox"
+      ],
+      "schema": [
+        "CONCEPT",
+        "operates_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "sub_agents",
+        "operates_on",
+        "sandbox"
+      ],
+      "schema": [
+        "CONCEPT",
+        "operates_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "sandbox",
+        "identified_by",
+        "sandbox_id"
+      ],
+      "schema": [
+        "SYSTEM",
+        "identified_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "sandbox_id",
+        "derived_from",
+        "thread_id"
+      ],
+      "schema": [
+        "CONCEPT",
+        "derived_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "ensure_sandbox_initialized",
+        "returns",
+        "sandbox_instance"
+      ],
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "sandbox_instance",
+        "shared_by",
+        "multiple_agents"
+      ],
+      "schema": [
+        "SYSTEM",
+        "shared_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "system",
+        "implements",
+        "two_layer_locking_mechanism"
+      ],
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "two_layer_locking_mechanism",
+        "includes",
+        "process_level_locking"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "two_layer_locking_mechanism",
+        "includes",
+        "cross_process_locking"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "process_level_locking",
+        "uses",
+        "threading_Lock"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "threading_Lock",
+        "ensures",
+        "serialized_access_to_sandbox"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "cross_process_locking",
+        "uses",
+        "file_lock"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "file_lock",
+        "prevents",
+        "duplicate_container_creation"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "duplicate_container_creation",
+        "occurs_in",
+        "multiple_instances"
+      ],
+      "schema": [
+        "CONCEPT",
+        "occurs_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "multiple_instances",
+        "example_of",
+        "K8s_pods"
+      ],
+      "schema": [
+        "CONCEPT",
+        "example_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "each_thread",
+        "has",
+        "independent_acp_workspace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "acp_workspace",
+        "used_by",
+        "ACP_plugin"
+      ],
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "acp_workspace",
+        "is_read_only",
+        "within_sandbox"
+      ],
+      "schema": [
+        "SYSTEM",
+        "is_read_only",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    },
+    {
+      "triple": [
+        "read_only_acp_workspace",
+        "ensures",
+        "execution_result_immutability"
+      ],
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "passage": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-41b7bb6fe8d1d051",
+      "chunk_text": "# DeerFlow沙箱机制",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-44eb229bf96c09fd",
+      "chunk_text": "## DeerFlow沙箱机制\n\n\n\nDeerFlow 的沙箱机制（Sandbox System）为智能体提供了一个隔离的执行环境，使其能够安全地运行 shell 命令和管理文件。多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-b6237673dbb680ed",
+      "chunk_text": "## 沙箱机制核心原理\n\n\n\nDeerFlow 的沙箱架构基于 SandboxProvider 抽象接口，支持多种运行模式：\n\n\n\n### 运行模式与隔离级别\n\n\n\n- 本地模式 (****LocalSandboxProvider****): 直接在宿主机文件系统运行，通过路径映射（Path Mapping）限制访问范围，主要用于受信任的本地开发 [1](#3-0) 。\n\n- 容器模式 (****AioSandboxProvider****): 基于 Docker 或 K8s，为每个会话提供完全隔离的容器环境。它是生产环境的推荐模式 [2](#3-1) 。\n\n### 确定性沙箱 ID 与生命周期\n\n\n\n沙箱的 ID 是根据 thread_id 确定性生成的 [3](#3-2) 。\n\n\n\n- 获取 (****acquire****): SandboxMiddleware 在智能体运行前根据当前线程 ID 获取沙箱 [4](#3-3) 。\n\n- 复用: 沙箱在同一线程的多次对话（Turns）中会被复用，并存放在“温池”（Warm Pool）中以减少冷启动开销 [5](#3-4) 。\n\n### 虚拟路径映射\n\n\n\n智能体操作的是虚拟路径（如 /mnt/user-data/workspace），系统会将其透明地转换为宿主机上与该线程绑定的物理路径 [6](#3-5) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-de0370d84c29651b",
+      "chunk_text": "## 多智能体如何操作沙箱\n\n\n\n在 DeerFlow 中，lead_agent（主智能体）和通过 task() 工具拉起的 sub-agents（子智能体）可以共同操作沙箱：\n\n\n\n### 共享沙箱环境\n\n\n\n由于沙箱 ID 是由 thread_id 派生的，只要多个智能体处于同一个会话线程中，它们通过 ensure_sandbox_initialized 获取到的将是同一个沙箱实例 [7](#3-6) 。这使得子智能体可以读取主智能体上传的文件，或者为主智能体生成输出。\n\n\n\n### 并发安全与锁定\n\n\n\n为了防止多个智能体同时操作同一个沙箱导致冲突（例如同时修改同一个文件），系统实现了两层锁定机制：\n\n\n\n- 进程内锁定: 使用 threading.Lock 确保同一进程内的多个线程序列化访问特定沙箱 [8](#3-7) 。\n\n- 跨进程锁定: 在获取沙箱时使用文件锁（File Lock），确保多个实例（如 K8s 中的不同 Pod）不会重复创建同名容器 [9](#3-8) 。\n\n### 隔离的 ACP 工作区\n\n\n\n虽然基础文件系统是共享的，但每个线程都有独立的 acp-workspace（用于 ACP 插件），该目录在沙箱内通常是只读的，以保证执行结果的不可篡改性 [10](#3-9) 。",
+      "doc_path": "test_files/docs/references/DeerFlow沙箱机制.md",
+      "chunk_index": 3
+    }
+  ],
+  "stats": {
+    "total_chunks": 4,
+    "total_triples": 47,
+    "unique_schemas": 32,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'has', 'SYSTEM')": 1,
+      "('SYSTEM', 'provides', 'CONCEPT')": 1,
+      "('SYSTEM', 'enables', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 2,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'based_on', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3,
+      "('SYSTEM', 'has_component', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'creates', 'CONCEPT')": 1,
+      "('CONCEPT', 'operates_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'identified_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'derived_from', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'SYSTEM')": 1,
+      "('SYSTEM', 'shared_by', 'CONCEPT')": 1,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'prevents', 'CONCEPT')": 1,
+      "('CONCEPT', 'occurs_in', 'CONCEPT')": 1,
+      "('CONCEPT', 'example_of', 'SYSTEM')": 1,
+      "('CONCEPT', 'has', 'SYSTEM')": 1,
+      "('SYSTEM', 'used_by', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'is_read_only', 'CONCEPT')": 1,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 32,
+    "fact_layer_size": 47,
+    "passage_layer_size": 4
+  }
+}

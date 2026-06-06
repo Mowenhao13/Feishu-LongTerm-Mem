@@ -1,0 +1,563 @@
+{
+  "triples": [
+    {
+      "head": "DeerFlow沙箱机制",
+      "relation": "related_to",
+      "tail": "DeerFlow",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-41b7bb"
+    },
+    {
+      "head": "DeerFlow",
+      "relation": "has",
+      "tail": "Sandbox System",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "Sandbox System",
+      "relation": "provides",
+      "tail": "isolated execution environment",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "Sandbox System",
+      "relation": "enables",
+      "tail": "safe shell command execution",
+      "schema": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "Sandbox System",
+      "relation": "enables",
+      "tail": "safe file management",
+      "schema": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "multi-agent collaboration",
+      "relation": "uses",
+      "tail": "shared thread_id",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "shared thread_id",
+      "relation": "enables",
+      "tail": "concurrent access to sandbox instance",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "shared thread_id",
+      "relation": "enables",
+      "tail": "state synchronization",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-44eb22"
+    },
+    {
+      "head": "DeerFlow",
+      "relation": "based_on",
+      "tail": "SandboxProvider",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "SandboxProvider",
+      "relation": "related_to",
+      "tail": "LocalSandboxProvider",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "SandboxProvider",
+      "relation": "related_to",
+      "tail": "AioSandboxProvider",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "LocalSandboxProvider",
+      "relation": "uses",
+      "tail": "path_mapping",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "LocalSandboxProvider",
+      "relation": "related_to",
+      "tail": "本地模式",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "AioSandboxProvider",
+      "relation": "based_on",
+      "tail": "Docker",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "AioSandboxProvider",
+      "relation": "based_on",
+      "tail": "K8s",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "AioSandboxProvider",
+      "relation": "related_to",
+      "tail": "容器模式",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "AioSandboxProvider",
+      "relation": "related_to",
+      "tail": "生产环境",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "沙箱_ID",
+      "relation": "based_on",
+      "tail": "thread_id",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "SandboxMiddleware",
+      "relation": "uses",
+      "tail": "acquire",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "acquire",
+      "relation": "based_on",
+      "tail": "thread_id",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "沙箱",
+      "relation": "related_to",
+      "tail": "温池",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "温池",
+      "relation": "related_to",
+      "tail": "冷启动",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "智能体",
+      "relation": "uses",
+      "tail": "虚拟路径",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "虚拟路径",
+      "relation": "related_to",
+      "tail": "物理路径",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-b62376"
+    },
+    {
+      "head": "DeerFlow",
+      "relation": "has_component",
+      "tail": "lead_agent",
+      "schema": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "DeerFlow",
+      "relation": "has_component",
+      "tail": "sub_agents",
+      "schema": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "lead_agent",
+      "relation": "uses",
+      "tail": "task_tool",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "task_tool",
+      "relation": "creates",
+      "tail": "sub_agents",
+      "schema": [
+        "TECHNOLOGY",
+        "creates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "lead_agent",
+      "relation": "operates_on",
+      "tail": "sandbox",
+      "schema": [
+        "CONCEPT",
+        "operates_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "sub_agents",
+      "relation": "operates_on",
+      "tail": "sandbox",
+      "schema": [
+        "CONCEPT",
+        "operates_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "sandbox",
+      "relation": "identified_by",
+      "tail": "sandbox_id",
+      "schema": [
+        "SYSTEM",
+        "identified_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "sandbox_id",
+      "relation": "derived_from",
+      "tail": "thread_id",
+      "schema": [
+        "CONCEPT",
+        "derived_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "ensure_sandbox_initialized",
+      "relation": "returns",
+      "tail": "sandbox_instance",
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "sandbox_instance",
+      "relation": "shared_by",
+      "tail": "multiple_agents",
+      "schema": [
+        "SYSTEM",
+        "shared_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "system",
+      "relation": "implements",
+      "tail": "two_layer_locking_mechanism",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "two_layer_locking_mechanism",
+      "relation": "includes",
+      "tail": "process_level_locking",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "two_layer_locking_mechanism",
+      "relation": "includes",
+      "tail": "cross_process_locking",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "process_level_locking",
+      "relation": "uses",
+      "tail": "threading_Lock",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "threading_Lock",
+      "relation": "ensures",
+      "tail": "serialized_access_to_sandbox",
+      "schema": [
+        "TECHNOLOGY",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "cross_process_locking",
+      "relation": "uses",
+      "tail": "file_lock",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "file_lock",
+      "relation": "prevents",
+      "tail": "duplicate_container_creation",
+      "schema": [
+        "TECHNOLOGY",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "duplicate_container_creation",
+      "relation": "occurs_in",
+      "tail": "multiple_instances",
+      "schema": [
+        "CONCEPT",
+        "occurs_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "multiple_instances",
+      "relation": "example_of",
+      "tail": "K8s_pods",
+      "schema": [
+        "CONCEPT",
+        "example_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "each_thread",
+      "relation": "has",
+      "tail": "independent_acp_workspace",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "acp_workspace",
+      "relation": "used_by",
+      "tail": "ACP_plugin",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "acp_workspace",
+      "relation": "is_read_only",
+      "tail": "within_sandbox",
+      "schema": [
+        "SYSTEM",
+        "is_read_only",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    },
+    {
+      "head": "read_only_acp_workspace",
+      "relation": "ensures",
+      "tail": "execution_result_immutability",
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-de0370"
+    }
+  ],
+  "stats": {
+    "total_chunks": 4,
+    "total_triples": 47,
+    "unique_schemas": 32,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'has', 'SYSTEM')": 1,
+      "('SYSTEM', 'provides', 'CONCEPT')": 1,
+      "('SYSTEM', 'enables', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 2,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'based_on', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3,
+      "('SYSTEM', 'has_component', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'creates', 'CONCEPT')": 1,
+      "('CONCEPT', 'operates_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'identified_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'derived_from', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'SYSTEM')": 1,
+      "('SYSTEM', 'shared_by', 'CONCEPT')": 1,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'prevents', 'CONCEPT')": 1,
+      "('CONCEPT', 'occurs_in', 'CONCEPT')": 1,
+      "('CONCEPT', 'example_of', 'SYSTEM')": 1,
+      "('CONCEPT', 'has', 'SYSTEM')": 1,
+      "('SYSTEM', 'used_by', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'is_read_only', 'CONCEPT')": 1,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 32,
+    "fact_layer_size": 47,
+    "passage_layer_size": 4
+  }
+}

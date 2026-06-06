@@ -1,45 +1,8 @@
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
-venv/
-.venv/
-env/
-.idea/
-.vscode/
-
-# Data
+# Memory stores (each is its own git repo)
+memory_stores/
 data/
-eval_reports/
-eval_data/
-outputs/
-test_files/
 mem-data/
-*.md~
-*.pyc
-
-# Config
-.env
-.DS_Store
+src/data/
 ref/
-logs/
-data/snapshots/
-plugin/feishu-mem-addon/node_modules/
+# Image files at root
+image*.png

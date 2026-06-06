@@ -60,7 +60,7 @@ class GitCLI:
             )
             if result.returncode != 0:
                 raise GitCLIError(
-                    f"git {' '.join(args)} failed: {result.stderr.strip()}"
+                    f"git {' '.join(args)} failed (exit {result.returncode}): {result.stderr.strip()}"
                 )
             return result.stdout.strip()
         except FileNotFoundError:
@@ -132,7 +132,7 @@ class GitCLI:
         try:
             output = self.run(*args)
         except GitCLIError as e:
-            if "exit status 1" in str(e):
+            if "exit 1" in str(e):
                 return []
             raise
         return self._parse_grep_output(output)
@@ -163,6 +163,9 @@ class GitCLI:
     def ls_tree(self, branch: str) -> List[str]:
         output = self.run("-c", "core.quotepath=false", "ls-tree", "-r", "--name-only", branch)
         return [line.strip() for line in output.split("\n") if line.strip()]
+
+    def update_ref(self, ref: str, commit: str) -> None:
+        self.run("update-ref", f"refs/heads/{ref}", commit)
 
     @staticmethod
     def _parse_grep_output(output: str) -> List[SearchHit]:

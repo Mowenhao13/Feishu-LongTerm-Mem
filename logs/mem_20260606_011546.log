@@ -1,0 +1,37 @@
+2026-06-06 01:15:46 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260606_011546.log
+2026-06-06 01:15:46 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-06-06 01:15:46 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-06 01:15:46 - src.core.engine - INFO - [Engine] Git repo verified at memory_stores/argusbot-eval-v2
+2026-06-06 01:15:46 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-06-06 01:15:46 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-06-06 01:15:46 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-06 01:15:46 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-06 01:15:46 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-06 01:15:46 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=qwen3-embedding-4b timeout=120 retries=5
+2026-06-06 01:15:46 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=qwen3-reranker-4b timeout=120 retries=10
+2026-06-06 01:15:46 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-06 01:15:46 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-06 01:15:46 - src.eval_runner - WARNING - DocContextProvider init failed (non-fatal): 'MemoryEngine' object has no attribute 'set_doc_context_provider'
+2026-06-06 01:15:46 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 2 episode(s) from data/suspend_pool.json
+2026-06-06 01:15:46 - src.eval_runner - INFO - [Eval] Idle flush disabled (simulated timestamps)
+2026-06-06 01:15:46 - __main__ - ERROR - [Eval] Error: Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/main.py", line 787, in main
+    asyncio.run(run_eval())
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/eval_runner.py", line 530, in run_eval
+    await runner.run()
+  File "/Users/halllo/projects/local/feishu-mem/src/eval_runner.py", line 129, in run
+    await self._process_one_message(i, len(messages_to_process), content)
+  File "/Users/halllo/projects/local/feishu-mem/src/eval_runner.py", line 314, in _process_one_message
+    timestamp = float(msg_ts)
+                ^^^^^^^^^^^^^
+ValueError: could not convert string to float: '2026-03-10T09:01:27'
+

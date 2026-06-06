@@ -21,7 +21,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-os.environ["BITABLE_ENABLED"] = "false"
 
 from src.mcp_server.server import _loader, show_tree
 

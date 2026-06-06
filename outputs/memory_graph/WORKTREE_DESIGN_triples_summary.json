@@ -1,0 +1,1025 @@
+{
+  "triples": [
+    {
+      "head": "Worktree 设计文档",
+      "relation": "related_to",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-0ae736"
+    },
+    {
+      "head": "Worktree 设计文档",
+      "relation": "related_to",
+      "tail": "Vibe Kanban",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-0ae736"
+    },
+    {
+      "head": "Repo4",
+      "relation": "provides",
+      "tail": "GitWorktreeService",
+      "schema": [
+        "ORG",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-0ae736"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "provides",
+      "tail": "WorktreeOrchestrationTool",
+      "schema": [
+        "ORG",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-0ae736"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "adopts",
+      "tail": "WorktreeOrchestrationTool",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-0ae736"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "GitWorktreeService",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "WorktreeManagementService",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "WorktreeOrchestrationTool",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "WorktreeOrchestrationTool",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "located_in",
+      "tail": "AgentHubCore/Services/GitWorktreeService.swift",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "located_in",
+      "tail": "AgentHubCLI/WorktreeManagementService.swift",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "WorktreeOrchestrationTool",
+      "relation": "located_in",
+      "tail": "AgentHubCore/Intelligence/WorktreeOrchestrationTool.swift",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "vibe-kanban",
+      "relation": "contains",
+      "tail": "docs/Kanban机制.md",
+      "schema": [
+        "ORG",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "docs/Kanban机制.md",
+      "relation": "documents",
+      "tail": "Git Worktree 隔离",
+      "schema": [
+        "SYSTEM",
+        "documents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d4c1de"
+    },
+    {
+      "head": "Repo4 GitWorktreeService",
+      "relation": "based_on",
+      "tail": "Git Worktree",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "Repo4 GitWorktreeService",
+      "relation": "adopts",
+      "tail": "完全隔离开发环境",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeInventoryServiceProtocol",
+      "relation": "part_of",
+      "tail": "Repo4 GitWorktreeService",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeCreationServiceProtocol",
+      "relation": "part_of",
+      "tail": "Repo4 GitWorktreeService",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeRemovalServiceProtocol",
+      "relation": "part_of",
+      "tail": "Repo4 GitWorktreeService",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "implements",
+      "tail": "GitWorktreeInventoryServiceProtocol",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "implements",
+      "tail": "GitWorktreeCreationServiceProtocol",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "implements",
+      "tail": "GitWorktreeRemovalServiceProtocol",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "depends_on",
+      "tail": "WorktreeManagementService",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git worktree list",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git worktree add",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git worktree remove --force",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git branch -f",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git branch -D",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git fetch origin",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeManagementService",
+      "relation": "uses",
+      "tail": "git rev-parse",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeInventoryViewModel",
+      "relation": "part_of",
+      "tail": "Repo4 GitWorktreeService",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "WorktreeInventorySection",
+      "relation": "part_of",
+      "tail": "Repo4 GitWorktreeService",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "CreateWorktreeSheet",
+      "relation": "part_of",
+      "tail": "Repo4 GitWorktreeService",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "Repo4 WorktreeOrchestrationTool",
+      "relation": "adopts",
+      "tail": "结构化标记",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "Repo4 WorktreeOrchestrationTool",
+      "relation": "uses",
+      "tail": "OrchestrationPlan",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "OrchestrationPlan",
+      "relation": "contains",
+      "tail": "OrchestrationSession",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "OrchestrationSession",
+      "relation": "has_type",
+      "tail": "SessionType",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "SessionType",
+      "relation": "includes",
+      "tail": "parallel",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "SessionType",
+      "relation": "includes",
+      "tail": "prototype",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "SessionType",
+      "relation": "includes",
+      "tail": "exploration",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-163da2"
+    },
+    {
+      "head": "orchestration_plan",
+      "relation": "uses",
+      "tail": "parallel",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "orchestration_plan",
+      "relation": "uses",
+      "tail": "prototype",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "orchestration_plan",
+      "relation": "uses",
+      "tail": "exploration",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "orchestration_plan",
+      "relation": "based_on",
+      "tail": "agent_output",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "agent_output",
+      "relation": "uses",
+      "tail": "xml",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "agent_output",
+      "relation": "uses",
+      "tail": "json",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "vibe_kanban",
+      "relation": "uses",
+      "tail": "git_worktree",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "git_worktree",
+      "relation": "provides",
+      "tail": "workspace_isolation",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "workspace_isolation",
+      "relation": "includes",
+      "tail": "branch_isolation",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "workspace_isolation",
+      "relation": "includes",
+      "tail": "terminal_isolation",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "workspace_isolation",
+      "relation": "includes",
+      "tail": "dev_server_isolation",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "multi_session_mechanism",
+      "relation": "enables",
+      "tail": "multiple_agent_sessions",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "multiple_agent_sessions",
+      "relation": "addresses",
+      "tail": "context_length_limit",
+      "schema": [
+        "CONCEPT",
+        "addresses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cfe418"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "GitWorktreeService",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "OrchestrationTool",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Parallel Session Spawn",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Cleanup & GC",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "OrchestrationTool",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Parallel Session Spawn",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Cleanup & GC",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Cleanup & GC",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "uses",
+      "tail": "协议驱动",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "uses",
+      "tail": "异步操作",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "uses",
+      "tail": "WorktreeNaming",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "GitWorktreeService",
+      "relation": "uses",
+      "tail": "cleanupCancelledWorktreeCreation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "OrchestrationTool",
+      "relation": "uses",
+      "tail": "<orchestration-plan>",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "OrchestrationTool",
+      "relation": "uses",
+      "tail": "parallel",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "OrchestrationTool",
+      "relation": "uses",
+      "tail": "prototype",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "OrchestrationTool",
+      "relation": "uses",
+      "tail": "exploration",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Parallel Session Spawn",
+      "relation": "uses",
+      "tail": "Orchestrator",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Parallel Session Spawn",
+      "relation": "uses",
+      "tail": "OrchestrationPlan",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Parallel Session Spawn",
+      "relation": "uses",
+      "tail": "Worktree Session",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Parallel Session Spawn",
+      "relation": "uses",
+      "tail": "Git Worktree",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Parallel Session Spawn",
+      "relation": "uses",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Cleanup & GC",
+      "relation": "uses",
+      "tail": "GC",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "responsible_for",
+      "tail": "Handoff DAG",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "uses",
+      "tail": "WorktreeOrchestrationTool",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "WorktreeOrchestrationTool",
+      "relation": "responsible_for",
+      "tail": "OrchestrationPlan",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Git Worktree",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "List/Create/Remove 三协议",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "<orchestration-plan>",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "parallel/prototype/exploration",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "WorktreeNaming",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "cleanupCancelledWorktreeCreation",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multica GC Loop",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-ade8be"
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 89,
+    "unique_schemas": 32,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'ORG')": 2,
+      "('ORG', 'provides', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'adopts', 'TECHNOLOGY')": 1,
+      "('ORG', 'implements', 'SYSTEM')": 3,
+      "('SYSTEM', 'implemented_in', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'located_in', 'SYSTEM')": 3,
+      "('ORG', 'contains', 'SYSTEM')": 1,
+      "('SYSTEM', 'documents', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 10,
+      "('CONCEPT', 'part_of', 'SYSTEM')": 6,
+      "('SYSTEM', 'implements', 'CONCEPT')": 3,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 1,
+      "('SYSTEM', 'uses', 'COMMAND')": 7,
+      "('SYSTEM', 'uses', 'CONCEPT')": 10,
+      "('CONCEPT', 'contains', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_type', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 6,
+      "('CONCEPT', 'uses', 'CONCEPT')": 8,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'STANDARD')": 2,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('CONCEPT', 'addresses', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 2,
+      "('SYSTEM', 'based_on', 'ORG')": 2,
+      "('CONCEPT', 'based_on', 'ORG')": 3,
+      "('CONCEPT', 'responsible_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'SYSTEM')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 1
+    },
+    "schema_layer_size": 32,
+    "fact_layer_size": 89,
+    "passage_layer_size": 5
+  }
+}

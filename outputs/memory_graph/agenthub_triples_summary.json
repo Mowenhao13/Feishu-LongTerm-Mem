@@ -1,0 +1,1394 @@
+{
+  "triples": [
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "related_to",
+      "tail": "https://github.com/multica-ai/multica",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Multi-Workspace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Multi-Workspace",
+      "relation": "related_to",
+      "tail": "workspace",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "workspace",
+      "relation": "related_to",
+      "tail": "isolation",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "成员邀请系统",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "成员邀请系统",
+      "relation": "supports",
+      "tail": "角色权限",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "角色权限",
+      "relation": "includes",
+      "tail": "owner",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "角色权限",
+      "relation": "includes",
+      "tail": "admin",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "角色权限",
+      "relation": "includes",
+      "tail": "member",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Agent作为一等公民",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Agent作为一等公民",
+      "relation": "related_to",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Agent",
+      "relation": "can_be",
+      "tail": "issue assignee",
+      "schema": [
+        "TECHNOLOGY",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Agent",
+      "relation": "can_be",
+      "tail": "commenter",
+      "schema": [
+        "TECHNOLOGY",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Agent",
+      "relation": "can_be",
+      "tail": "project负责人",
+      "schema": [
+        "TECHNOLOGY",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Squad",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Squad",
+      "relation": "composed_of",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Squad",
+      "relation": "composed_of",
+      "tail": "人类成员",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Squad",
+      "relation": "has",
+      "tail": "leader agent",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "leader agent",
+      "relation": "responsible_for",
+      "tail": "任务分配协调",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "supports",
+      "tail": "无数量限制",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "无数量限制",
+      "relation": "depends_on",
+      "tail": "硬件支持",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Agent",
+      "relation": "has",
+      "tail": "可配置的并发限制",
+      "schema": [
+        "TECHNOLOGY",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "multica",
+      "relation": "supports",
+      "tail": "多机器运行时",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Agent",
+      "relation": "has",
+      "tail": "可见性控制",
+      "schema": [
+        "TECHNOLOGY",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "可见性控制",
+      "relation": "includes",
+      "tail": "workspace可见",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "可见性控制",
+      "relation": "includes",
+      "tail": "私有",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "workspace可见",
+      "relation": "allows",
+      "tail": "任何成员可分配",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "私有",
+      "relation": "allows",
+      "tail": "仅创建者和管理员可分配",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Squad",
+      "relation": "has",
+      "tail": "工作流程",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "工作流程",
+      "relation": "includes",
+      "tail": "Leader认领任务",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "Leader认领任务",
+      "relation": "triggers",
+      "tail": "leader agent",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-1140d8"
+    },
+    {
+      "head": "leader",
+      "relation": "receives",
+      "tail": "squad_operating_protocol",
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "receives",
+      "tail": "squad_roster",
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "receives",
+      "tail": "squad_instructions",
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "uses",
+      "tail": "at_mention",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "uses",
+      "tail": "multica_squad_activity_command",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "responsible_for",
+      "tail": "delegation",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "responsible_for",
+      "tail": "evaluation_recording",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "rejects",
+      "tail": "execution_of_actual_work",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader",
+      "relation": "depends_on",
+      "tail": "member_feedback",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "non_member_comment",
+      "relation": "triggers",
+      "tail": "leader_reactivation",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "squad_member_progress_update_without_mention",
+      "relation": "triggers",
+      "tail": "leader_reactivation",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "explicit_at_mention_of_agent_member_squad_all",
+      "relation": "rejects",
+      "tail": "leader_reactivation",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "leader_own_comment",
+      "relation": "rejects",
+      "tail": "leader_reactivation",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "system",
+      "relation": "enforces",
+      "tail": "single_agent_task_limit",
+      "schema": [
+        "SYSTEM",
+        "enforces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "single_agent_task_limit",
+      "relation": "uses",
+      "tail": "database_unique_index",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "system",
+      "relation": "allows",
+      "tail": "parallel_agent_work",
+      "schema": [
+        "SYSTEM",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "parallel_agent_work",
+      "relation": "based_on",
+      "tail": "independent_task_entries",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "agent",
+      "relation": "uses",
+      "tail": "at_mention_trigger",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "agent",
+      "relation": "uses",
+      "tail": "comment_reply",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "agent",
+      "relation": "can_create",
+      "tail": "new_issue",
+      "schema": [
+        "CONCEPT",
+        "can_create",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "queued",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "dispatched",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "running",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "completed",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "failed",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "cancelled",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "daemon",
+      "relation": "transitions",
+      "tail": "queued_to_dispatched",
+      "schema": [
+        "SYSTEM",
+        "transitions",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "agent",
+      "relation": "transitions",
+      "tail": "dispatched_to_running",
+      "schema": [
+        "CONCEPT",
+        "transitions",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "daemon",
+      "relation": "uses",
+      "tail": "polling_mechanism",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "polling_mechanism",
+      "relation": "uses",
+      "tail": "for_update_skip_locked",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "polling_mechanism",
+      "relation": "has_interval",
+      "tail": "3_seconds",
+      "schema": [
+        "CONCEPT",
+        "has_interval",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9ed5c6"
+    },
+    {
+      "head": "Squad",
+      "relation": "based_on",
+      "tail": "orchestrator_subagent_paradigm",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Leader agent",
+      "relation": "acts_as",
+      "tail": "orchestrator",
+      "schema": [
+        "SYSTEM",
+        "acts_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Leader agent",
+      "relation": "responsible_for",
+      "tail": "coordination",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Leader agent",
+      "relation": "uses",
+      "tail": "Squad Operating Protocol",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Squad Operating Protocol",
+      "relation": "coordination_logic",
+      "tail": "Squad Operating Protocol",
+      "schema": [
+        "SYSTEM",
+        "coordination_logic",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Subagent",
+      "relation": "responsible_for",
+      "tail": "task_execution",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Leader agent",
+      "relation": "delegates_to",
+      "tail": "Subagent",
+      "schema": [
+        "SYSTEM",
+        "delegates_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Leader agent",
+      "relation": "uses",
+      "tail": "at_mention",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "at_mention",
+      "relation": "triggers",
+      "tail": "agent",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Shared-StateAgent",
+      "relation": "uses",
+      "tail": "shared_state",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "shared_state",
+      "relation": "includes",
+      "tail": "issue_status",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "shared_state",
+      "relation": "includes",
+      "tail": "comment_thread",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "comment_system",
+      "relation": "acts_as",
+      "tail": "message_bus",
+      "schema": [
+        "SYSTEM",
+        "acts_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "at_mention",
+      "relation": "acts_as",
+      "tail": "routing_signal",
+      "schema": [
+        "CONCEPT",
+        "acts_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "at_mention",
+      "relation": "similar_to",
+      "tail": "event_subscription",
+      "schema": [
+        "CONCEPT",
+        "similar_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Leader agent",
+      "relation": "reacts_to",
+      "tail": "comment_event",
+      "schema": [
+        "SYSTEM",
+        "reacts_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "comment_event",
+      "relation": "drives",
+      "tail": "collaboration_flow",
+      "schema": [
+        "CONCEPT",
+        "drives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "used_for",
+      "tail": "real_time_push",
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "real_time_push",
+      "relation": "pushes_to",
+      "tail": "UI",
+      "schema": [
+        "CONCEPT",
+        "pushes_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "dispatched_task",
+      "relation": "has_timeout",
+      "tail": "5_minutes",
+      "schema": [
+        "CONCEPT",
+        "has_timeout",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "running_task",
+      "relation": "has_timeout",
+      "tail": "2.5_hours",
+      "schema": [
+        "CONCEPT",
+        "has_timeout",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "timeout",
+      "relation": "triggers",
+      "tail": "auto_fail_and_retry",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3a76fc"
+    },
+    {
+      "head": "Serial Sub-task Chain",
+      "relation": "related_to",
+      "tail": "Agent A",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Serial Sub-task Chain",
+      "relation": "related_to",
+      "tail": "Agent B",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Agent A",
+      "relation": "uses",
+      "tail": "backlog→todo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Agent A",
+      "relation": "triggers",
+      "tail": "Agent B",
+      "schema": [
+        "SYSTEM",
+        "triggers",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "uses",
+      "tail": "@mention",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "coordination",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "delegates_to",
+      "tail": "professional member",
+      "schema": [
+        "SYSTEM",
+        "delegates_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "explicit @mention handoff",
+      "relation": "uses",
+      "tail": "@mention",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Agent A",
+      "relation": "uses",
+      "tail": "explicit @mention handoff",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Agent A",
+      "relation": "triggers",
+      "tail": "Agent B",
+      "schema": [
+        "SYSTEM",
+        "triggers",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Issue assignment change",
+      "relation": "uses",
+      "tail": "assignee change",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "assignee change",
+      "relation": "cancels",
+      "tail": "old agent's active tasks",
+      "schema": [
+        "CONCEPT",
+        "cancels",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "assignee change",
+      "relation": "enqueues",
+      "tail": "new task for new agent",
+      "schema": [
+        "CONCEPT",
+        "enqueues",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "anti-loop mechanism",
+      "relation": "prevents",
+      "tail": "infinite loops",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "anti-loop mechanism",
+      "relation": "includes",
+      "tail": "same-issue self-trigger protection",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "same-issue self-trigger protection",
+      "relation": "uses",
+      "tail": "X-Task-ID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "anti-loop mechanism",
+      "relation": "includes",
+      "tail": "comment reply loop prevention",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "comment reply loop prevention",
+      "relation": "instructs",
+      "tail": "Meta skill",
+      "schema": [
+        "CONCEPT",
+        "instructs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Meta skill",
+      "relation": "prevents",
+      "tail": "agent from @mentioning another agent in reply",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Multica handoff",
+      "relation": "is",
+      "tail": "responsibility transfer",
+      "schema": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "Multica handoff",
+      "relation": "is_not",
+      "tail": "simple message forwarding",
+      "schema": [
+        "CONCEPT",
+        "is_not",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cc9e94"
+    },
+    {
+      "head": "任务所有权变更",
+      "relation": "related_to",
+      "tail": "assignee 变更",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "任务所有权变更",
+      "relation": "related_to",
+      "tail": "squad 委派",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "任务所有权变更",
+      "relation": "results_in",
+      "tail": "责任明确转移给新 agent",
+      "schema": [
+        "CONCEPT",
+        "results_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "独立 task 入队",
+      "relation": "related_to",
+      "tail": "每个被触发的 agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "独立 task 入队",
+      "relation": "related_to",
+      "tail": "独立的 task entry",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "每个被触发的 agent",
+      "relation": "executes_on",
+      "tail": "自己的 runtime",
+      "schema": [
+        "CONCEPT",
+        "executes_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "状态管理",
+      "relation": "related_to",
+      "tail": "原 agent 的任务被取消或完成",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "状态管理",
+      "relation": "related_to",
+      "tail": "新 agent 开始独立执行",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "串行子任务链",
+      "relation": "designed_for",
+      "tail": "线性工作流",
+      "schema": [
+        "CONCEPT",
+        "designed_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "agent",
+      "relation": "uses",
+      "tail": "CLI",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "agent",
+      "relation": "creates",
+      "tail": "子 issue",
+      "schema": [
+        "CONCEPT",
+        "creates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "子 issue",
+      "relation": "assigned_to",
+      "tail": "专业 agent",
+      "schema": [
+        "CONCEPT",
+        "assigned_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "状态变更",
+      "relation": "triggers",
+      "tail": "接力",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    },
+    {
+      "head": "parent agent → child agent 工作流",
+      "relation": "verified_by",
+      "tail": "测试用例",
+      "schema": [
+        "CONCEPT",
+        "verified_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-154e0b"
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 120,
+    "unique_schemas": 60,
+    "schema_distribution": {
+      "('SYSTEM', 'based_on', 'SYSTEM')": 1,
+      "('SYSTEM', 'related_to', 'ORG')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 10,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 8,
+      "('CONCEPT', 'supports', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 10,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'can_be', 'CONCEPT')": 3,
+      "('CONCEPT', 'composed_of', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'has', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 2,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'has', 'CONCEPT')": 2,
+      "('CONCEPT', 'allows', 'CONCEPT')": 2,
+      "('CONCEPT', 'has', 'CONCEPT')": 1,
+      "('CONCEPT', 'triggers', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'receives', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'CONCEPT')": 5,
+      "('CONCEPT', 'responsible_for', 'CONCEPT')": 2,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 3,
+      "('CONCEPT', 'triggers', 'CONCEPT')": 4,
+      "('SYSTEM', 'enforces', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 5,
+      "('SYSTEM', 'allows', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'can_create', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_state', 'CONCEPT')": 6,
+      "('SYSTEM', 'transitions', 'CONCEPT')": 1,
+      "('CONCEPT', 'transitions', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_interval', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'acts_as', 'CONCEPT')": 2,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 3,
+      "('SYSTEM', 'coordination_logic', 'CONCEPT')": 1,
+      "('SYSTEM', 'delegates_to', 'SYSTEM')": 2,
+      "('CONCEPT', 'triggers', 'SYSTEM')": 1,
+      "('CONCEPT', 'acts_as', 'CONCEPT')": 1,
+      "('CONCEPT', 'similar_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'reacts_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'drives', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'pushes_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'has_timeout', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 2,
+      "('SYSTEM', 'triggers', 'SYSTEM')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'cancels', 'CONCEPT')": 1,
+      "('CONCEPT', 'enqueues', 'CONCEPT')": 1,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 2,
+      "('CONCEPT', 'instructs', 'CONCEPT')": 1,
+      "('CONCEPT', 'is', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_not', 'CONCEPT')": 1,
+      "('CONCEPT', 'results_in', 'CONCEPT')": 1,
+      "('CONCEPT', 'executes_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'designed_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'creates', 'CONCEPT')": 1,
+      "('CONCEPT', 'assigned_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'verified_by', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 60,
+    "fact_layer_size": 119,
+    "passage_layer_size": 5
+  }
+}

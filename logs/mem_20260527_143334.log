@@ -1,0 +1,9 @@
+2026-05-27 14:33:34 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260527_143334.log
+2026-05-27 14:33:34 - __main__ - ERROR - [Eval] Error: Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/main.py", line 728, in main
+    from src.eval_runner import run_eval
+  File "/Users/halllo/projects/local/feishu-mem/src/eval_runner.py", line 75
+    print(f"{_REALTIME_COLORS['bold']}={' * 60}")
+                                        ^
+SyntaxError: unterminated string literal (detected at line 75)
+

@@ -1,0 +1,2385 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        0,
+        1,
+        2,
+        12
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        3,
+        4,
+        5,
+        42
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        8
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        9
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        10,
+        11,
+        15
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        13,
+        17
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "TECHNOLOGY",
+        "manages",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        14
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "SYSTEM",
+        "allocates",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        16
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "SYSTEM",
+        "created_by",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        18
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "SYSTEM",
+        "adjusts",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        19
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        20
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "SYSTEM",
+        "tracks",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        21
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        22,
+        23,
+        28,
+        29
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "CONCEPT",
+        "saves",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        30
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        31
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        32
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        33,
+        34
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        35
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        38
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        39
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        40
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "STANDARD",
+        "passed_to",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        41
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "CONCEPT",
+        "generated_by",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        51
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "CONCEPT",
+        "determines",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        52
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        58,
+        59,
+        60,
+        61,
+        62
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        63
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "CONCEPT",
+        "adapts_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        64
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "AgentManager"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "ParallelAgent"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "MinimalAgent"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "AgentManager",
+        "responsible_for",
+        "high-level coordination"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "ParallelAgent",
+        "responsible_for",
+        "parallel execution management"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "MinimalAgent",
+        "responsible_for",
+        "specific task execution"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "AI Scientist-v2",
+        "based_on",
+        "layered architecture"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "layered architecture",
+        "enables",
+        "multi-agent collaboration"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "主从架构"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "AgentHub",
+        "uses",
+        "进程池"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "AgentManager",
+        "responsible_for",
+        "阶段协调"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "ParallelAgent",
+        "responsible_for",
+        "并行执行管理"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "ParallelAgent",
+        "uses",
+        "ProcessPoolExecutor"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "ParallelAgent",
+        "uses",
+        "GPUManager"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "ProcessPoolExecutor",
+        "manages",
+        "Worker"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "GPUManager",
+        "responsible_for",
+        "资源分配"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "GPUManager",
+        "allocates",
+        "GPU"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "Worker",
+        "uses",
+        "MinimalAgent"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "MinimalAgent",
+        "created_by",
+        "_process_node_wrapper"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "ParallelAgent",
+        "adjusts",
+        "worker数量"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "worker数量",
+        "based_on",
+        "GPU数量"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "Journal",
+        "tracks",
+        "experiment_node"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "Journal",
+        "maintains",
+        "tree_structure"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "Journal",
+        "maintains",
+        "parent_child_relationship"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "Node",
+        "contains",
+        "code"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "Node",
+        "contains",
+        "execution_result"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "Node",
+        "contains",
+        "metric"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "Node",
+        "contains",
+        "VLM_analysis"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "AgentManager",
+        "maintains",
+        "stage_history"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "AgentManager",
+        "maintains",
+        "current_state"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "checkpoint_mechanism",
+        "saves",
+        "complete_state"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "checkpoint_mechanism",
+        "uses",
+        "pickle_file"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "checkpoint_mechanism",
+        "supports",
+        "interrupt_recovery"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "query()",
+        "uses",
+        "LLM"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "query()",
+        "uses",
+        "FunctionSpec"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "FunctionSpec",
+        "related_to",
+        "structured_output"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "node_data",
+        "uses",
+        "serialization"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "node_data",
+        "uses",
+        "deserialization"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "node_data",
+        "used_for",
+        "inter_process_communication"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "GPUManager",
+        "uses",
+        "process_id"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "GPUManager",
+        "uses",
+        "CUDA_VISIBLE_DEVICES"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "CUDA_VISIBLE_DEVICES",
+        "passed_to",
+        "worker_process"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "GPUManager",
+        "responsible_for",
+        "GPU_resource_coordination"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "research_process",
+        "composed_of",
+        "initial_implementation"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "research_process",
+        "composed_of",
+        "baseline_tuning"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "research_process",
+        "composed_of",
+        "creative_research"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "research_process",
+        "composed_of",
+        "ablation_studies"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "initial_implementation",
+        "has_substage",
+        "substage"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "baseline_tuning",
+        "has_substage",
+        "substage"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "creative_research",
+        "has_substage",
+        "substage"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "ablation_studies",
+        "has_substage",
+        "substage"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "substage",
+        "generated_by",
+        "_create_next_substage"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "parent_node",
+        "determines",
+        "node_processing_type"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "node_processing_type",
+        "includes",
+        "_debug"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "node_processing_type",
+        "includes",
+        "_generate_hyperparam_tuning_node"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "node_processing_type",
+        "includes",
+        "_generate_ablation_node"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "node_processing_type",
+        "includes",
+        "_improve"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "node_processing_type",
+        "includes",
+        "_draft"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "_debug",
+        "triggered_by",
+        "buggy_parent_node"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "_generate_hyperparam_tuning_node",
+        "triggered_by",
+        "stage_2"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "_generate_ablation_node",
+        "triggered_by",
+        "stage_4"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "_improve",
+        "triggered_by",
+        "non_buggy_non_stage_2_4"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "_draft",
+        "triggered_by",
+        "null_parent_node"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "_select_parallel_nodes",
+        "implements",
+        "exploration_exploitation_balance"
+      ],
+      "schema_idx": 32,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "_select_parallel_nodes",
+        "adapts_to",
+        "stage_characteristics"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        4
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "content": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "fact_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "content": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "fact_indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "content": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "fact_indices": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "content": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "fact_indices": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "content": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "fact_indices": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "AgentManager"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "ParallelAgent"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "MinimalAgent"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AgentManager",
+        "responsible_for",
+        "high-level coordination"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ParallelAgent",
+        "responsible_for",
+        "parallel execution management"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "MinimalAgent",
+        "responsible_for",
+        "specific task execution"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "based_on",
+        "layered architecture"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "layered architecture",
+        "enables",
+        "multi-agent collaboration"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "passage": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "主从架构"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "进程池"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AgentManager",
+        "responsible_for",
+        "阶段协调"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ParallelAgent",
+        "responsible_for",
+        "并行执行管理"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ParallelAgent",
+        "uses",
+        "ProcessPoolExecutor"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ParallelAgent",
+        "uses",
+        "GPUManager"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ProcessPoolExecutor",
+        "manages",
+        "Worker"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "GPUManager",
+        "responsible_for",
+        "资源分配"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "GPUManager",
+        "allocates",
+        "GPU"
+      ],
+      "schema": [
+        "SYSTEM",
+        "allocates",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Worker",
+        "uses",
+        "MinimalAgent"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "MinimalAgent",
+        "created_by",
+        "_process_node_wrapper"
+      ],
+      "schema": [
+        "SYSTEM",
+        "created_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ParallelAgent",
+        "adjusts",
+        "worker数量"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adjusts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "worker数量",
+        "based_on",
+        "GPU数量"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "passage": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Journal",
+        "tracks",
+        "experiment_node"
+      ],
+      "schema": [
+        "SYSTEM",
+        "tracks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Journal",
+        "maintains",
+        "tree_structure"
+      ],
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Journal",
+        "maintains",
+        "parent_child_relationship"
+      ],
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Node",
+        "contains",
+        "code"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Node",
+        "contains",
+        "execution_result"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Node",
+        "contains",
+        "metric"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "Node",
+        "contains",
+        "VLM_analysis"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AgentManager",
+        "maintains",
+        "stage_history"
+      ],
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "AgentManager",
+        "maintains",
+        "current_state"
+      ],
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "checkpoint_mechanism",
+        "saves",
+        "complete_state"
+      ],
+      "schema": [
+        "CONCEPT",
+        "saves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "checkpoint_mechanism",
+        "uses",
+        "pickle_file"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "checkpoint_mechanism",
+        "supports",
+        "interrupt_recovery"
+      ],
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "passage": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "query()",
+        "uses",
+        "LLM"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "query()",
+        "uses",
+        "FunctionSpec"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "FunctionSpec",
+        "related_to",
+        "structured_output"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_data",
+        "uses",
+        "serialization"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_data",
+        "uses",
+        "deserialization"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_data",
+        "used_for",
+        "inter_process_communication"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "GPUManager",
+        "uses",
+        "process_id"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "GPUManager",
+        "uses",
+        "CUDA_VISIBLE_DEVICES"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "CUDA_VISIBLE_DEVICES",
+        "passed_to",
+        "worker_process"
+      ],
+      "schema": [
+        "STANDARD",
+        "passed_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "GPUManager",
+        "responsible_for",
+        "GPU_resource_coordination"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "passage": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "research_process",
+        "composed_of",
+        "initial_implementation"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "research_process",
+        "composed_of",
+        "baseline_tuning"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "research_process",
+        "composed_of",
+        "creative_research"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "research_process",
+        "composed_of",
+        "ablation_studies"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "initial_implementation",
+        "has_substage",
+        "substage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "baseline_tuning",
+        "has_substage",
+        "substage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "creative_research",
+        "has_substage",
+        "substage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "ablation_studies",
+        "has_substage",
+        "substage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "substage",
+        "generated_by",
+        "_create_next_substage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "generated_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "parent_node",
+        "determines",
+        "node_processing_type"
+      ],
+      "schema": [
+        "CONCEPT",
+        "determines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_processing_type",
+        "includes",
+        "_debug"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_processing_type",
+        "includes",
+        "_generate_hyperparam_tuning_node"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_processing_type",
+        "includes",
+        "_generate_ablation_node"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_processing_type",
+        "includes",
+        "_improve"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "node_processing_type",
+        "includes",
+        "_draft"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_debug",
+        "triggered_by",
+        "buggy_parent_node"
+      ],
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_generate_hyperparam_tuning_node",
+        "triggered_by",
+        "stage_2"
+      ],
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_generate_ablation_node",
+        "triggered_by",
+        "stage_4"
+      ],
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_improve",
+        "triggered_by",
+        "non_buggy_non_stage_2_4"
+      ],
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_draft",
+        "triggered_by",
+        "null_parent_node"
+      ],
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_select_parallel_nodes",
+        "implements",
+        "exploration_exploitation_balance"
+      ],
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    },
+    {
+      "triple": [
+        "_select_parallel_nodes",
+        "adapts_to",
+        "stage_characteristics"
+      ],
+      "schema": [
+        "CONCEPT",
+        "adapts_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "passage": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-2b80f1c07a369089",
+      "chunk_text": "# AI-scientist-v2\n\n\n\nAI Scientist-v2 系统通过分层架构实现多agent协作，使用 AgentManager 作为高层协调器，ParallelAgent 管理并行执行，MinimalAgent 在工作进程中执行具体任务 [1](#2-0) 。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-390d17a8acadbdcf",
+      "chunk_text": "## 多Agent协作\n\n\n\n系统采用主从架构，通过进程池实现并行执行：\n\n\n\n```\ngraph TD\n    AM[\"AgentManager<br/>阶段协调器\"] --> PA[\"ParallelAgent<br/>并行执行管理器\"]\n    PA --> PPE[\"ProcessPoolExecutor<br/>进程池\"]\n    PPE --> W1[\"Worker 1: MinimalAgent\"]\n    PPE --> W2[\"Worker 2: MinimalAgent\"]\n    PPE --> W3[\"Worker 3: MinimalAgent\"]\n    PA --> GPU[\"GPUManager<br/>资源分配\"]\n    GPU --> W1\n    GPU --> W2\n    GPU --> W3\n\n```\n\n\n\nParallelAgent 初始化时创建 ProcessPoolExecutor 和 GPUManager，根据GPU数量自动调整worker数量 [2](#2-1) 。每个worker进程通过 \\_process\\_node\\_wrapper 静态方法创建独立的 MinimalAgent 实例 [3](#2-2) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-6b836b99044455e6",
+      "chunk_text": "## 上下文管理\n\n\n\n上下文通过三个层次管理：\n\n\n\n### 1. Journal和Node\n\n\n\nJournal 跟踪所有实验节点，维护树结构和父子关系 [4](#2-3) 。每个 Node 包含代码、执行结果、指标和VLM分析。\n\n\n\n### 2. 阶段状态\n\n\n\nAgentManager 维护阶段历史和当前状态 [1](#2-0) ：\n\n\n\n```\nself.stages: List[Stage] = []\nself.journals: Dict[str, Journal] = {}\nself.stage_history: List[StageTransition] = []\n\n```\n\n\n\n### 3. 检查点机制\n\n\n\n每个阶段完成后保存完整状态到pickle文件，支持中断恢复 [5](#2-4) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-e399160f991cf53b",
+      "chunk_text": "## 消息传递\n\n\n\n### 1. LLM交互\n\n\n\n通过 query\\(\\) 函数与LLM通信，使用 FunctionSpec 强制结构化输出 [6](#2-5) 。\n\n\n\n### 2. 进程间通信\n\n\n\n节点数据通过序列化/反序列化在进程间传递 [7](#2-6) ：\n\n\n\n```\nnode_data = node.to_dict()  # 主进程序列化\nparent_node = Node.from_dict(node_data, journal=None)  # 工作进程反序列化\n\n```\n\n\n\n### 3. GPU资源协调\n\n\n\nGPUManager 通过进程ID分配GPU，通过环境变量 CUDA\\_VISIBLE\\_DEVICES 传递给工作进程 [8](#2-7) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-8c81ecb15cca12ac",
+      "chunk_text": "## 任务分解\n\n\n\n### 1. 阶段分解\n\n\n\n研究过程分解为四个主要阶段 [9](#2-8) ：\n\n\n\n|阶段|目标||---|---||initial\\_implementation|基础实现||baseline\\_tuning|超参数调优||creative\\_research|创造性研究||ablation\\_studies|消融研究|\n\n\n\n### 2. 子阶段分解\n\n\n\n每个主阶段可包含多个子阶段，通过 \\_create\\_next\\_substage 动态生成 [10](#2-9) 。\n\n\n\n### 3. 节点处理分解\n\n\n\n根据父节点状态和当前阶段，节点处理分为不同类型 [11](#2-10) ：\n\n\n\n```\ngraph TD\n    A[\"parent_node\"] --> B{is_buggy?}\n    B -->|Yes| C[\"_debug\"]\n    B -->|No| D{stage 2?}\n    D -->|Yes| E[\"_generate_hyperparam_tuning_node\"]\n    D -->|No| F{stage 4?}\n    F -->|Yes| G[\"_generate_ablation_node\"]\n    F -->|No| H[\"_improve\"]\n    A --> I{parent_node is None?}\n    I -->|Yes| J[\"_draft\"]\n\n```\n\n\n\n### 4. 并行任务选择\n\n\n\n\\_select\\_parallel\\_nodes 实现探索与利用的平衡，根据阶段特性选择不同策略 [12](#2-11) 。",
+      "doc_path": "test_files/docs/references/AI-scientist-v2.md",
+      "chunk_index": 4
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 65,
+    "unique_schemas": 34,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 3,
+      "('SYSTEM', 'uses', 'SYSTEM')": 2,
+      "('TECHNOLOGY', 'manages', 'SYSTEM')": 1,
+      "('SYSTEM', 'allocates', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'created_by', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adjusts', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'tracks', 'CONCEPT')": 1,
+      "('SYSTEM', 'maintains', 'CONCEPT')": 4,
+      "('CONCEPT', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'saves', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'supports', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'STANDARD')": 1,
+      "('STANDARD', 'passed_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 4,
+      "('CONCEPT', 'has_substage', 'CONCEPT')": 4,
+      "('CONCEPT', 'generated_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'determines', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 5,
+      "('CONCEPT', 'triggered_by', 'CONCEPT')": 5,
+      "('CONCEPT', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'adapts_to', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 34,
+    "fact_layer_size": 65,
+    "passage_layer_size": 5
+  }
+}

@@ -1,0 +1,2791 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        1,
+        9,
+        10,
+        11,
+        31
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        3,
+        4,
+        43
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "TECHNOLOGY",
+        "accepts",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        5,
+        67
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "TECHNOLOGY",
+        "used_by",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        6,
+        7
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "TECHNOLOGY",
+        "is_subclass_of",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        8
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 8,
+      "fact_indices": [
+        12,
+        13,
+        14,
+        37,
+        38,
+        39,
+        54,
+        55
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        15,
+        16,
+        35
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        17
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "TECHNOLOGY",
+        "may_attach",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        21
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "TECHNOLOGY",
+        "wraps",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        22
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "frequency": 11,
+      "fact_indices": [
+        23,
+        24,
+        26,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "CONCEPT",
+        "tracks",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        25
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        27,
+        28
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "CONCEPT",
+        "defined_by",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        29
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "CONCEPT",
+        "managed_by",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        30
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        32,
+        33,
+        36
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "CONCEPT",
+        "should_avoid",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        34
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "CONCEPT",
+        "receives",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        40
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "CONCEPT",
+        "reads_from",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        41
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        42
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "CONCEPT",
+        "passed_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        44
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "SYSTEM",
+        "calls",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        45
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "CONCEPT",
+        "extends",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        46
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "CONCEPT",
+        "exposes",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        57
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        58
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "CONCEPT",
+        "provides_data_to",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        59
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "CONCEPT",
+        "provides_context_to",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        60,
+        68
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "CONCEPT",
+        "equivalent_to",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        61,
+        62
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        63,
+        64
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        65
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "CONCEPT",
+        "outputs",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        66
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "CONCEPT",
+        "provides_context_to",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        69
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        70
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "TECHNOLOGY",
+        "decides_when_to_use",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        71
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "TECHNOLOGY",
+        "is",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        72,
+        73
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        74,
+        76
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        75
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "OpenAI Agent Python SDK",
+        "uses",
+        "RunContextWrapper"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "RunContextWrapper",
+        "contains",
+        "context"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "context",
+        "based_on",
+        "Python object"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "context",
+        "related_to",
+        "dataclass"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "context",
+        "related_to",
+        "Pydantic"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "Runner.run",
+        "accepts",
+        "context"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "RunContextWrapper",
+        "used_by",
+        "tool calls"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "RunContextWrapper",
+        "used_by",
+        "lifecycle hooks"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "ToolContext",
+        "is_subclass_of",
+        "RunContextWrapper"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "ToolContext",
+        "contains",
+        "tool_call_id"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "ToolContext",
+        "contains",
+        "tool_name"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "ToolContext",
+        "contains",
+        "tool_arguments"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "context",
+        "used_for",
+        "contextual data"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "context",
+        "used_for",
+        "dependencies"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "context",
+        "used_for",
+        "helper functions"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "context",
+        "related_to",
+        "local context"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "context",
+        "related_to",
+        "LLM context"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "context",
+        "rejects",
+        "sending to LLM"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "派生包装器",
+        "shares",
+        "应用上下文"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "派生包装器",
+        "shares",
+        "审批状态"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "派生包装器",
+        "shares",
+        "用量跟踪"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "Agent.as_tool()",
+        "may_attach",
+        "tool_input"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "RunContextWrapper",
+        "wraps",
+        "应用上下文对象"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "RunContextWrapper.context",
+        "provides",
+        "可变应用状态"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "RunContextWrapper.context",
+        "provides",
+        "依赖项"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "RunContextWrapper.usage",
+        "tracks",
+        "请求和token用量"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "RunContextWrapper.tool_input",
+        "provides",
+        "结构化输入"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "RunContextWrapper.approve_tool",
+        "updates",
+        "审批状态"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "RunContextWrapper.reject_tool",
+        "updates",
+        "审批状态"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "wrapper.context",
+        "defined_by",
+        "应用"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "其他字段",
+        "managed_by",
+        "SDK"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "RunState",
+        "contains",
+        "运行时元数据"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "RunState",
+        "used_for",
+        "人工介入"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "RunState",
+        "used_for",
+        "持久化作业工作流"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "RunContextWrapper.context",
+        "should_avoid",
+        "密钥"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "会话状态",
+        "related_to",
+        "多轮对话延续"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "result.to_input_list()",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "session",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "conversation_id",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "previous_response_id",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "工具",
+        "receives",
+        "RunContextWrapper[UserInfo]"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "工具实现",
+        "reads_from",
+        "上下文"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "UserInfo",
+        "used_by",
+        "智能体"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "UserInfo",
+        "related_to",
+        "类型检查器"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "上下文",
+        "passed_to",
+        "run 函数"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "智能体",
+        "calls",
+        "工具"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "ToolContext",
+        "extends",
+        "RunContextWrapper"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "ToolContext",
+        "provides",
+        "tool_name"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "ToolContext",
+        "provides",
+        "tool_call_id"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "ToolContext",
+        "provides",
+        "tool_arguments"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "ToolContext",
+        "provides",
+        "tool_namespace"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "ToolContext",
+        "provides",
+        "qualified_tool_name"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "RunContextWrapper",
+        "provides",
+        "context 属性"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "ToolContext",
+        "provides",
+        "context 属性"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "ToolContext",
+        "used_for",
+        "工具级元数据"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "RunContextWrapper",
+        "used_for",
+        "一般上下文共享"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "Agent.as_tool()",
+        "provides",
+        "结构化输入"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "ToolContext",
+        "exposes",
+        "tool_input"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "LLM",
+        "uses",
+        "对话历史"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "对话历史",
+        "provides_data_to",
+        "LLM"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "instructions",
+        "provides_context_to",
+        "智能体"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "系统提示词",
+        "equivalent_to",
+        "instructions"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "开发者消息",
+        "equivalent_to",
+        "instructions"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "系统提示词",
+        "can_be",
+        "静态字符串"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "系统提示词",
+        "can_be",
+        "动态函数"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 65,
+      "content": [
+        "动态函数",
+        "receives",
+        "上下文"
+      ],
+      "schema_idx": 32,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 66,
+      "content": [
+        "动态函数",
+        "outputs",
+        "字符串"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 67,
+      "content": [
+        "Runner.run",
+        "accepts",
+        "input"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 68,
+      "content": [
+        "input",
+        "provides_context_to",
+        "智能体"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 69,
+      "content": [
+        "工具调用",
+        "provides_context_to",
+        "LLM"
+      ],
+      "schema_idx": 34,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 70,
+      "content": [
+        "工具调用",
+        "is",
+        "按需上下文"
+      ],
+      "schema_idx": 35,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 71,
+      "content": [
+        "LLM",
+        "decides_when_to_use",
+        "工具调用"
+      ],
+      "schema_idx": 36,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 72,
+      "content": [
+        "检索",
+        "is",
+        "特殊工具"
+      ],
+      "schema_idx": 37,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 73,
+      "content": [
+        "网络检索",
+        "is",
+        "特殊工具"
+      ],
+      "schema_idx": 37,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 74,
+      "content": [
+        "检索",
+        "fetches_data_from",
+        "文件"
+      ],
+      "schema_idx": 38,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 75,
+      "content": [
+        "检索",
+        "fetches_data_from",
+        "数据库"
+      ],
+      "schema_idx": 39,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 76,
+      "content": [
+        "网络检索",
+        "fetches_data_from",
+        "网络"
+      ],
+      "schema_idx": 38,
+      "passage_indices": [
+        3
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "content": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "fact_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "content": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "fact_indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "content": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "fact_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "content": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "fact_indices": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "OpenAI Agent Python SDK",
+        "uses",
+        "RunContextWrapper"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper",
+        "contains",
+        "context"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "based_on",
+        "Python object"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "related_to",
+        "dataclass"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "related_to",
+        "Pydantic"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "Runner.run",
+        "accepts",
+        "context"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper",
+        "used_by",
+        "tool calls"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper",
+        "used_by",
+        "lifecycle hooks"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "is_subclass_of",
+        "RunContextWrapper"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "is_subclass_of",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "contains",
+        "tool_call_id"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "contains",
+        "tool_name"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "contains",
+        "tool_arguments"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "used_for",
+        "contextual data"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "used_for",
+        "dependencies"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "used_for",
+        "helper functions"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "related_to",
+        "local context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "related_to",
+        "LLM context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "context",
+        "rejects",
+        "sending to LLM"
+      ],
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "passage": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "派生包装器",
+        "shares",
+        "应用上下文"
+      ],
+      "schema": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "派生包装器",
+        "shares",
+        "审批状态"
+      ],
+      "schema": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "派生包装器",
+        "shares",
+        "用量跟踪"
+      ],
+      "schema": [
+        "CONCEPT",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "Agent.as_tool()",
+        "may_attach",
+        "tool_input"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "may_attach",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper",
+        "wraps",
+        "应用上下文对象"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "wraps",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.context",
+        "provides",
+        "可变应用状态"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.context",
+        "provides",
+        "依赖项"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.usage",
+        "tracks",
+        "请求和token用量"
+      ],
+      "schema": [
+        "CONCEPT",
+        "tracks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.tool_input",
+        "provides",
+        "结构化输入"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.approve_tool",
+        "updates",
+        "审批状态"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.reject_tool",
+        "updates",
+        "审批状态"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "wrapper.context",
+        "defined_by",
+        "应用"
+      ],
+      "schema": [
+        "CONCEPT",
+        "defined_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "其他字段",
+        "managed_by",
+        "SDK"
+      ],
+      "schema": [
+        "CONCEPT",
+        "managed_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunState",
+        "contains",
+        "运行时元数据"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunState",
+        "used_for",
+        "人工介入"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunState",
+        "used_for",
+        "持久化作业工作流"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper.context",
+        "should_avoid",
+        "密钥"
+      ],
+      "schema": [
+        "CONCEPT",
+        "should_avoid",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "会话状态",
+        "related_to",
+        "多轮对话延续"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "result.to_input_list()",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "session",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "conversation_id",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "previous_response_id",
+        "used_for",
+        "会话状态管理"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "工具",
+        "receives",
+        "RunContextWrapper[UserInfo]"
+      ],
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "工具实现",
+        "reads_from",
+        "上下文"
+      ],
+      "schema": [
+        "CONCEPT",
+        "reads_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "passage": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "UserInfo",
+        "used_by",
+        "智能体"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "UserInfo",
+        "related_to",
+        "类型检查器"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "上下文",
+        "passed_to",
+        "run 函数"
+      ],
+      "schema": [
+        "CONCEPT",
+        "passed_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "智能体",
+        "calls",
+        "工具"
+      ],
+      "schema": [
+        "SYSTEM",
+        "calls",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "extends",
+        "RunContextWrapper"
+      ],
+      "schema": [
+        "CONCEPT",
+        "extends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "provides",
+        "tool_name"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "provides",
+        "tool_call_id"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "provides",
+        "tool_arguments"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "provides",
+        "tool_namespace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "provides",
+        "qualified_tool_name"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper",
+        "provides",
+        "context 属性"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "provides",
+        "context 属性"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "used_for",
+        "工具级元数据"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "RunContextWrapper",
+        "used_for",
+        "一般上下文共享"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "Agent.as_tool()",
+        "provides",
+        "结构化输入"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "ToolContext",
+        "exposes",
+        "tool_input"
+      ],
+      "schema": [
+        "CONCEPT",
+        "exposes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "passage": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "LLM",
+        "uses",
+        "对话历史"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "对话历史",
+        "provides_data_to",
+        "LLM"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides_data_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "instructions",
+        "provides_context_to",
+        "智能体"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides_context_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "系统提示词",
+        "equivalent_to",
+        "instructions"
+      ],
+      "schema": [
+        "CONCEPT",
+        "equivalent_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "开发者消息",
+        "equivalent_to",
+        "instructions"
+      ],
+      "schema": [
+        "CONCEPT",
+        "equivalent_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "系统提示词",
+        "can_be",
+        "静态字符串"
+      ],
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "系统提示词",
+        "can_be",
+        "动态函数"
+      ],
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "动态函数",
+        "receives",
+        "上下文"
+      ],
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "动态函数",
+        "outputs",
+        "字符串"
+      ],
+      "schema": [
+        "CONCEPT",
+        "outputs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "Runner.run",
+        "accepts",
+        "input"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "input",
+        "provides_context_to",
+        "智能体"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides_context_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "工具调用",
+        "provides_context_to",
+        "LLM"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides_context_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "工具调用",
+        "is",
+        "按需上下文"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "LLM",
+        "decides_when_to_use",
+        "工具调用"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "decides_when_to_use",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "检索",
+        "is",
+        "特殊工具"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "网络检索",
+        "is",
+        "特殊工具"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "检索",
+        "fetches_data_from",
+        "文件"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "检索",
+        "fetches_data_from",
+        "数据库"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    },
+    {
+      "triple": [
+        "网络检索",
+        "fetches_data_from",
+        "网络"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "fetches_data_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "passage": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-e76fe4055fffa91a",
+      "chunk_text": "# OpenAI-agent-python上下文策略\n\n\n\n### 上下文管理\n\n\n\n上下文是一个含义丰富的术语。你可能关心的上下文主要有两类：\n\n\n\n- 代码本地可用的上下文：这是工具函数运行时、on_handoff 等回调中、生命周期钩子中等可能需要的数据和依赖项。\n\n- LLM 可用的上下文：这是 LLM 在生成响应时看到的数据。\n\n### 本地上下文\n\n\n\n这通过 [RunContextWrapper][agents.run_context.RunContextWrapper] 类及其中的 [context][agents.run_context.RunContextWrapper.context] 属性来表示。它的工作方式如下：\n\n\n\n- 你创建任意所需的 Python 对象。常见模式是使用 dataclass 或 Pydantic 对象。\n\n- 你将该对象传递给各种 run 方法（例如 Runner.run(..., context=whatever)）。\n\n- 你的所有工具调用、生命周期钩子等都会收到一个包装对象 RunContextWrapper[T]，其中 T 表示你的上下文对象类型，你可以通过 wrapper.context 访问它。\n\n对于一些运行时特定的回调，SDK 可能会传递 RunContextWrapper[T] 的更专用子类。例如，工具调用生命周期钩子通常会接收 ToolContext，它还会公开工具调用元数据，例如 tool_call_id、tool_name 和 tool_arguments。\n\n\n\n需要注意的最重要事项：对于给定的智能体运行，其每个智能体、工具函数、生命周期等都必须使用相同的上下文_类型_。\n\n\n\n你可以将上下文用于以下用途：\n\n\n\n- 运行所需的上下文数据（例如用户名/uid 或关于用户的其他信息）\n\n- 依赖项（例如日志记录器对象、数据获取器等）\n\n- 辅助函数\n\n!!! danger &#34;注意&#34;\n\n\n\n上下文对象不会发送给 LLM。它纯粹是一个本地对象，你可以从中读取、向其写入，并调用其方法。\n\n\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-fe96b6fddaec36aa",
+      "chunk_text": "在单次运行中，派生包装器共享相同的底层应用上下文、审批状态和用量跟踪。嵌套的 [Agent.as_tool()][agents.agent.Agent.as_tool] 运行可能会附加不同的 tool_input，但默认情况下不会获得应用状态的隔离副本。\n\n\n\n### RunContextWrapper 公开的内容\n\n\n\n[RunContextWrapper][agents.run_context.RunContextWrapper] 是围绕你应用定义的上下文对象的包装器。实践中你最常使用的是：\n\n\n\n- [wrapper.context][agents.run_context.RunContextWrapper.context]：用于你自己的可变应用状态和依赖项。\n\n- [wrapper.usage][agents.run_context.RunContextWrapper.usage]：用于当前运行中聚合的请求和 token 用量。\n\n- [wrapper.tool_input][agents.run_context.RunContextWrapper.tool_input]：用于当前运行在 [Agent.as_tool()][agents.agent.Agent.as_tool] 内执行时的结构化输入。\n\n- [wrapper.approve_tool(...)][agents.run_context.RunContextWrapper.approve_tool] / [wrapper.reject_tool(...)][agents.run_context.RunContextWrapper.reject_tool]：当你需要以编程方式更新审批状态时使用。\n\n只有 wrapper.context 是你应用定义的对象。其他字段都是由 SDK 管理的运行时元数据。\n\n\n\n如果你之后为了人工介入或持久化作业工作流而序列化 [RunState][agents.run_state.RunState]，这些运行时元数据会随状态一起保存。如果你打算持久化或传输序列化状态，请避免在 [RunContextWrapper.context][agents.run_context.RunContextWrapper.context] 中放入密钥。\n\n\n\n会话状态是另一个单独的问题。根据你希望如何延续多轮对话，可以使用 result.to_input_list()、session、conversation_id 或 previous_response_id。有关该决策，请参见[结果](results.md)、[运行智能体](running_agents.md)和[会话](sessions/index.md)。\n\n\n\n- 这是上下文对象。这里我们使用了 dataclass，但你可以使用任意类型。\n\n- 这是一个工具。你可以看到它接收 RunContextWrapper[UserInfo]。工具实现会从上下文中读取信息。\n",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-609f9298d3c9b09c",
+      "chunk_text": "- 我们用泛型 UserInfo 标记该智能体，这样类型检查器就能捕获错误（例如，如果我们尝试传入一个接收不同上下文类型的工具）。\n\n- 上下文会传递给 run 函数。\n\n- 智能体会正确调用该工具并获得年龄。\n\n### 高级：ToolContext\n\n\n\n在某些情况下，你可能希望访问有关正在执行的工具的额外元数据，例如其名称、调用 ID 或原始参数字符串。\n\n\n\n为此，你可以使用 [ToolContext][agents.tool_context.ToolContext] 类，它扩展了 RunContextWrapper。\n\n\n\nToolContext 提供与 RunContextWrapper 相同的 .context 属性，\n\n\n\n此外还提供当前工具调用特有的额外字段：\n\n\n\n- tool_name – 被调用工具的名称\n\n- tool_call_id – 此工具调用的唯一标识符\n\n- tool_arguments – 传递给工具的原始参数字符串\n\n- tool_namespace – 工具调用的 Responses 命名空间，当工具通过 tool_namespace() 或其他带命名空间的表面加载时可用\n\n- qualified_tool_name – 当有可用命名空间时，带命名空间限定的工具名称\n\n当你在执行期间需要工具级元数据时，请使用 ToolContext。\n\n\n\n对于智能体与工具之间的一般上下文共享，RunContextWrapper 仍然足够。由于 ToolContext 扩展了 RunContextWrapper，当嵌套的 Agent.as_tool() 运行提供了结构化输入时，它也可以公开 .tool_input。\n\n\n\n---",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-fbb86179cc5fc68b",
+      "chunk_text": "## 智能体/LLM 上下文\n\n\n\n调用 LLM 时，它唯一能看到的数据来自对话历史。这意味着，如果你想让一些新数据可供 LLM 使用，就必须以能让这些数据出现在该历史中的方式来提供。有几种方式可以做到这一点：\n\n\n\n- 你可以将其添加到智能体的 instructions 中。这也称为“系统提示词”或“开发者消息”。系统提示词可以是静态字符串，也可以是接收上下文并输出字符串的动态函数。对于始终有用的信息（例如用户姓名或当前日期），这是一种常见策略。\n\n- 在调用 Runner.run 函数时将其添加到 input 中。这类似于 instructions 策略，但允许你使用在指令链中层级较低的消息。\n\n- 通过工具调用公开它。这对于_按需_上下文很有用——LLM 决定何时需要某些数据，并可以调用工具来获取这些数据。\n\n- 使用检索或网络检索。这些是特殊工具，能够从文件或数据库中获取相关数据（检索），或从网络获取相关数据（网络检索）。",
+      "doc_path": "test_files/docs/references/OpenAI-agent-python上下文策略.md",
+      "chunk_index": 3
+    }
+  ],
+  "stats": {
+    "total_chunks": 4,
+    "total_triples": 77,
+    "unique_schemas": 40,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'contains', 'CONCEPT')": 5,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'accepts', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'used_by', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'is_subclass_of', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 8,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 1,
+      "('CONCEPT', 'shares', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'may_attach', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'wraps', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides', 'CONCEPT')": 11,
+      "('CONCEPT', 'tracks', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'updates', 'CONCEPT')": 2,
+      "('CONCEPT', 'defined_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'managed_by', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 3,
+      "('CONCEPT', 'should_avoid', 'CONCEPT')": 1,
+      "('CONCEPT', 'receives', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'reads_from', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'passed_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'calls', 'CONCEPT')": 1,
+      "('CONCEPT', 'extends', 'CONCEPT')": 1,
+      "('CONCEPT', 'exposes', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides_data_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'provides_context_to', 'SYSTEM')": 2,
+      "('CONCEPT', 'equivalent_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'can_be', 'CONCEPT')": 2,
+      "('CONCEPT', 'receives', 'CONCEPT')": 1,
+      "('CONCEPT', 'outputs', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides_context_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'is', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'decides_when_to_use', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'is', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'fetches_data_from', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'fetches_data_from', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 40,
+    "fact_layer_size": 77,
+    "passage_layer_size": 4
+  }
+}

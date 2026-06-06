@@ -1,0 +1,127 @@
+{"chat_id": "chat_0", "msg_id": "m001", "speaker": "Alice", "msg": "就PG吧，MySQL分区表坑太多 @Bob @Charlie", "expected_decision": false, "is_distractor": false, "timestamp": 1700000101}
+{"chat_id": "chat_0", "msg_id": "m002", "speaker": "Bob", "msg": "PG的窗口函数和CTE确实强，但MySQL的生态工具更成熟，比如binlog同步，迁移成本得算进去", "expected_decision": false, "is_distractor": false, "timestamp": 1700000185}
+{"chat_id": "chat_0", "msg_id": "m003", "speaker": "Charlie", "msg": "确定要全量迁移吗？现有业务很多用到了MySQL的JSON字段，PG的jsonb语法不完全兼容 @Alice", "expected_decision": false, "is_distractor": false, "timestamp": 1700000233}
+{"chat_id": "chat_0", "msg_id": "m004", "speaker": "Alice", "msg": "那就用PG，不兼容的地方改代码，别犹豫了", "expected_decision": false, "is_distractor": false, "timestamp": 1700000288}
+{"chat_id": "chat_0", "msg_id": "m005", "speaker": "Bob", "msg": "今天下雨真烦，通勤堵了半小时", "expected_decision": false, "is_distractor": true, "timestamp": 1700000319}
+{"chat_id": "chat_0", "msg_id": "m006", "speaker": "Bob", "msg": "如果迁移，建议先做半年的并行运行，用Debezium做实时同步，这样风险可控", "expected_decision": false, "is_distractor": false, "timestamp": 1700000436}
+{"chat_id": "chat_0", "msg_id": "m007", "speaker": "Charlie", "msg": "并行运行的话，双写一致性问题怎么保证？再想想 @Bob", "expected_decision": false, "is_distractor": false, "timestamp": 1700000553}
+{"chat_id": "chat_0", "msg_id": "m008", "speaker": "Alice", "msg": "就双写，先写MySQL，再异步同步到PG，读PG，简单粗暴", "expected_decision": false, "is_distractor": false, "timestamp": 1700000601}
+{"chat_id": "chat_0", "msg_id": "m009", "speaker": "Bob", "msg": "其实可以考虑用Citus扩展PG做分布式，这样以后分库也方便 @Alice", "expected_decision": false, "is_distractor": false, "timestamp": 1700000675}
+{"chat_id": "chat_0", "msg_id": "m010", "speaker": "Charlie", "msg": "大家都同意用PG的话就这么定了 @Alice @Bob", "expected_decision": true, "expected_topic": "用PG还是MySQL", "expected_summary": "采用PostgreSQL作为主数据库，先并行运行再切换", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "timestamp": 1700002817}
+{"chat_id": "chat_0", "msg_id": "m011", "speaker": "Alice", "msg": "接下来聊Redis缓存key规范，就统一用冒号分隔，业务:模块:ID", "expected_decision": false, "is_distractor": false, "timestamp": 1700002882}
+{"chat_id": "chat_0", "msg_id": "m012", "speaker": "Bob", "msg": "还要加版本号吧，比如v1:user:123，方便以后升级迭代 @Alice", "expected_decision": false, "is_distractor": false, "timestamp": 1700002995}
+{"chat_id": "chat_0", "msg_id": "m013", "speaker": "Charlie", "msg": "确定所有key都要设过期时间吗？有些配置数据可能是永久的，比如系统参数", "expected_decision": false, "is_distractor": false, "timestamp": 1700003097}
+{"chat_id": "chat_0", "msg_id": "m014", "speaker": "Alice", "msg": "就统一7天过期，永久的单独拎出来用另一个前缀，比如perm:开头的", "expected_decision": false, "is_distractor": false, "timestamp": 1700003162}
+{"chat_id": "chat_0", "msg_id": "m015", "speaker": "Bob", "msg": "午饭吃啥，楼下新开了家川菜馆", "expected_decision": false, "is_distractor": true, "timestamp": 1700003280}
+{"chat_id": "chat_0", "msg_id": "m016", "speaker": "Bob", "msg": "建议热点key不设过期，用主动淘汰，避免缓存雪崩，比如user session", "expected_decision": false, "is_distractor": false, "timestamp": 1700003345}
+{"chat_id": "chat_0", "msg_id": "m017", "speaker": "Charlie", "msg": "那key长度要不要限制？太长了占内存，比如某些业务key拼了20个字段", "expected_decision": false, "is_distractor": false, "timestamp": 1700003451}
+{"chat_id": "chat_0", "msg_id": "m018", "speaker": "Alice", "msg": "就限制在50字符以内，用缩写，比如user缩写u", "expected_decision": false, "is_distractor": false, "timestamp": 1700003491}
+{"chat_id": "chat_0", "msg_id": "m019", "speaker": "Bob", "msg": "我整理一份规范文档，大家review一下，包括命名、过期策略和限长", "expected_decision": false, "is_distractor": false, "timestamp": 1700003554}
+{"chat_id": "chat_0", "msg_id": "m020", "speaker": "Charlie", "msg": "文档出来大家过一遍，没什么问题就按这个来 @Alice @Bob", "expected_decision": true, "expected_topic": "Redis缓存key规范", "expected_summary": "统一key命名格式为v1:业务:模块:ID，默认TTL7天，热点key不设过期，key长度限制50字符", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "timestamp": 1700005942}
+{"chat_id": "chat_0", "msg_id": "m021", "speaker": "Alice", "msg": "分库分表方案，就ShardingSphere，社区活跃文档全", "expected_decision": false, "is_distractor": false, "timestamp": 1700005996}
+{"chat_id": "chat_0", "msg_id": "m022", "speaker": "Bob", "msg": "ShardingSphere的JPA支持不太好，MyCAT对MySQL协议兼容更彻底，但维护状态堪忧", "expected_decision": false, "is_distractor": false, "timestamp": 1700006052}
+{"chat_id": "chat_0", "msg_id": "m023", "speaker": "Charlie", "msg": "分片键确定用user_id吗？如果查询条件没有user_id会全路由，性能堪忧", "expected_decision": false, "is_distractor": false, "timestamp": 1700006152}
+{"chat_id": "chat_0", "msg_id": "m024", "speaker": "Alice", "msg": "就按user_id哈希，其他查询走ES，别纠结", "expected_decision": false, "is_distractor": false, "timestamp": 1700006186}
+{"chat_id": "chat_0", "msg_id": "m025", "speaker": "Bob", "msg": "扩容时数据重分布，ShardingSphere支持自动迁移吗？还是得手动操作 @Alice", "expected_decision": false, "is_distractor": false, "timestamp": 1700006241}
+{"chat_id": "chat_0", "msg_id": "m026", "speaker": "Charlie", "msg": "今天好热，空调是不是坏了", "expected_decision": false, "is_distractor": true, "timestamp": 1700006343}
+{"chat_id": "chat_0", "msg_id": "m027", "speaker": "Charlie", "msg": "先小规模试跑一个月再决定吧，别一上来就全量切 @Alice", "expected_decision": false, "is_distractor": false, "timestamp": 1700006462}
+{"chat_id": "chat_0", "msg_id": "m028", "speaker": "Alice", "msg": "就先用ShardingSphere，MyCAT停止维护了，别选个死项目", "expected_decision": false, "is_distractor": false, "timestamp": 1700006563}
+{"chat_id": "chat_0", "msg_id": "m029", "speaker": "Bob", "msg": "我写个POC对比报告，下周出结论，大家再投票决定", "expected_decision": false, "is_distractor": false, "timestamp": 1700006652}
+{"chat_id": "chat_0", "msg_id": "m030", "speaker": "Charlie", "msg": "那等Bob的报告出来再定，先不急 @Alice", "expected_decision": false, "is_distractor": false, "timestamp": 1700006737}
+{"chat_id": "chat_1", "msg_id": "m031", "speaker": "David", "msg": "就切App Router，13.4已经稳定了，别拖了", "expected_decision": false, "is_distractor": false, "timestamp": 1700000100}
+{"chat_id": "chat_1", "msg_id": "m032", "speaker": "Emma", "msg": "App Router的Server Component能减少客户端JS，但Pages Router的getServerSideProps迁移成本高，得评估", "expected_decision": false, "is_distractor": false, "timestamp": 1700000168}
+{"chat_id": "chat_1", "msg_id": "m033", "speaker": "Frank", "msg": "确定所有页面都适合SSR吗？有些营销页静态化更好，比如首页", "expected_decision": false, "is_distractor": false, "timestamp": 1700000284}
+{"chat_id": "chat_1", "msg_id": "m034", "speaker": "David", "msg": "就全量SSR，性能不够再加CDN，别想太多", "expected_decision": false, "is_distractor": false, "timestamp": 1700000391}
+{"chat_id": "chat_1", "msg_id": "m035", "speaker": "Emma", "msg": "建议增量迁移，先迁移一个路由模块看看效果，比如用户中心", "expected_decision": false, "is_distractor": false, "timestamp": 1700000448}
+{"chat_id": "chat_1", "msg_id": "m036", "speaker": "Frank", "msg": "layout.tsx和template.tsx的嵌套逻辑是不是和现有嵌套路由冲突？得验证一下 @Emma", "expected_decision": false, "is_distractor": false, "timestamp": 1700000554}
+{"chat_id": "chat_1", "msg_id": "m037", "speaker": "David", "msg": "就新建一个app目录，pages目录保留，慢慢切，共存方案", "expected_decision": false, "is_distractor": false, "timestamp": 1700000639}
+{"chat_id": "chat_1", "msg_id": "m038", "speaker": "Emma", "msg": "我用新的路由组(route groups)来组织代码，避免URL结构变化，大家觉得呢 @David @Frank", "expected_decision": false, "is_distractor": false, "timestamp": 1700000687}
+{"chat_id": "chat_1", "msg_id": "m039", "speaker": "Frank", "msg": "那就先增量迁移一个模块，用route groups，没问题再扩大范围", "expected_decision": true, "expected_topic": "Next.js App Router迁移", "expected_summary": "采用增量迁移策略，新建app目录与pages目录共存，用route groups组织代码", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard", "timestamp": 1700002518}
+{"chat_id": "chat_1", "msg_id": "m040", "speaker": "David", "msg": "组件库选Antd还是Semi，就Antd，用的人多", "expected_decision": false, "is_distractor": false, "timestamp": 1700002628}
+{"chat_id": "chat_1", "msg_id": "m041", "speaker": "Emma", "msg": "Semi的CSS变量主题定制更灵活，Antd的ConfigProvider太重量了，换主题得重启", "expected_decision": false, "is_distractor": false, "timestamp": 1700002728}
+{"chat_id": "chat_1", "msg_id": "m042", "speaker": "Frank", "msg": "Semi的Table组件在大数据量下性能怎么样？Antd的虚拟滚动我们验证过，没问题", "expected_decision": false, "is_distractor": false, "timestamp": 1700002765}
+{"chat_id": "chat_1", "msg_id": "m043", "speaker": "David", "msg": "就Antd，现有代码全是Antd，迁移成本太高，别折腾", "expected_decision": false, "is_distractor": false, "timestamp": 1700002841}
+{"chat_id": "chat_1", "msg_id": "m044", "speaker": "Emma", "msg": "如果选Semi，可以用工具自动转换Antd的API，但有些自定义组件要重写，比如图表组件", "expected_decision": false, "is_distractor": false, "timestamp": 1700002875}
+{"chat_id": "chat_1", "msg_id": "m045", "speaker": "Frank", "msg": "确定Semi的国际化支持完整吗？我们有日语和阿拉伯语需求，得确认 @Emma", "expected_decision": false, "is_distractor": false, "timestamp": 1700002910}
+{"chat_id": "chat_1", "msg_id": "m046", "speaker": "David", "msg": "那就Antd，别折腾了，就这么定", "expected_decision": false, "is_distractor": false, "timestamp": 1700003006}
+{"chat_id": "chat_1", "msg_id": "m047", "speaker": "Emma", "msg": "我做个组件对比表格，大家投票，下周出结果", "expected_decision": false, "is_distractor": false, "timestamp": 1700003064}
+{"chat_id": "chat_1", "msg_id": "m048", "speaker": "Frank", "msg": "今天食堂的鱼不错，你们去尝尝", "expected_decision": false, "is_distractor": true, "timestamp": 1700003181}
+{"chat_id": "chat_1", "msg_id": "m049", "speaker": "Frank", "msg": "那等Emma的对比表出来再定，别急着拍板 @David", "expected_decision": false, "is_distractor": false, "timestamp": 1700003219}
+{"chat_id": "chat_1", "msg_id": "m050", "speaker": "David", "msg": "行，那就先看对比表，但大概率还是Antd", "expected_decision": false, "is_distractor": false, "timestamp": 1700003274}
+{"chat_id": "chat_1", "msg_id": "m051", "speaker": "David", "msg": "构建工具切Vite，Webpack太慢了，就切", "expected_decision": false, "is_distractor": false, "timestamp": 1700003338}
+{"chat_id": "chat_1", "msg_id": "m052", "speaker": "Emma", "msg": "Vite开发体验确实好，但生产构建Rollup的代码分割不如Webpack灵活，比如动态导入", "expected_decision": false, "is_distractor": false, "timestamp": 1700003451}
+{"chat_id": "chat_1", "msg_id": "m053", "speaker": "Frank", "msg": "确定所有Webpack插件都有Vite替代吗？比如image-webpack-loader压缩图片", "expected_decision": false, "is_distractor": false, "timestamp": 1700003509}
+{"chat_id": "chat_1", "msg_id": "m054", "speaker": "David", "msg": "就先用Vite，遇到问题再找替代，别怕", "expected_decision": false, "is_distractor": false, "timestamp": 1700003596}
+{"chat_id": "chat_1", "msg_id": "m055", "speaker": "Emma", "msg": "建议先迁移一个不重要的子项目，比如管理后台，验证可行性", "expected_decision": false, "is_distractor": false, "timestamp": 1700003704}
+{"chat_id": "chat_1", "msg_id": "m056", "speaker": "Frank", "msg": "Vite的HMR在大型项目里会不会变慢？比如我们的项目有500+组件，再想想", "expected_decision": false, "is_distractor": false, "timestamp": 1700003745}
+{"chat_id": "chat_1", "msg_id": "m057", "speaker": "David", "msg": "就Vite，大不了加esbuild做预构建，提速", "expected_decision": false, "is_distractor": false, "timestamp": 1700003863}
+{"chat_id": "chat_1", "msg_id": "m058", "speaker": "Emma", "msg": "我写个迁移指南，包括polyfill和env变量的处理，大家先看看", "expected_decision": false, "is_distractor": false, "timestamp": 1700003968}
+{"chat_id": "chat_1", "msg_id": "m059", "speaker": "Frank", "msg": "那就先试点管理后台，没问题再推广 @David @Emma", "expected_decision": true, "expected_topic": "构建工具切Vite", "expected_summary": "先迁移管理后台作为试点，验证Vite可行性后再全量切换", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard", "timestamp": 1700006043}
+{"chat_id": "chat_2", "msg_id": "m060", "speaker": "Grace", "msg": "K8s版本升级，就升到1.28，跳过1.27", "expected_decision": false, "is_distractor": false, "timestamp": 1700000098}
+{"chat_id": "chat_2", "msg_id": "m061", "speaker": "Henry", "msg": "1.26到1.28跨了两个大版本，kubeadm不支持跨版本升级，需要先升到1.27再升1.28", "expected_decision": false, "is_distractor": false, "timestamp": 1700000155}
+{"chat_id": "chat_2", "msg_id": "m062", "speaker": "Ivy", "msg": "确定所有第三方控制器都兼容1.28吗？比如cert-manager和ingress-nginx", "expected_decision": false, "is_distractor": false, "timestamp": 1700000206}
+{"chat_id": "chat_2", "msg_id": "m063", "speaker": "Grace", "msg": "就用kubeadm，Rancher太重了，别加复杂工具", "expected_decision": false, "is_distractor": false, "timestamp": 1700000243}
+{"chat_id": "chat_2", "msg_id": "m064", "speaker": "Henry", "msg": "建议先升级一个测试集群，运行一周的稳定性测试，再升生产", "expected_decision": false, "is_distractor": false, "timestamp": 1700000307}
+{"chat_id": "chat_2", "msg_id": "m065", "speaker": "Ivy", "msg": "如果升级过程中etcd出问题，回滚方案是什么？得准备一下 @Henry", "expected_decision": false, "is_distractor": false, "timestamp": 1700000397}
+{"chat_id": "chat_2", "msg_id": "m066", "speaker": "Grace", "msg": "就先升测试集群，没问题再升生产，回滚方案Henry准备", "expected_decision": false, "is_distractor": false, "timestamp": 1700000479}
+{"chat_id": "chat_2", "msg_id": "m067", "speaker": "Henry", "msg": "我准备一个checklist，包括kubeadm config的变更点和回滚步骤", "expected_decision": false, "is_distractor": false, "timestamp": 1700000568}
+{"chat_id": "chat_2", "msg_id": "m068", "speaker": "Ivy", "msg": "那按Henry的checklist来，先升测试集群 @Grace", "expected_decision": true, "expected_topic": "K8s版本升级策略", "expected_summary": "先升级测试集群到1.28，通过稳定性测试后再升级生产，使用kubeadm工具", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard", "timestamp": 1700002696}
+{"chat_id": "chat_2", "msg_id": "m069", "speaker": "Grace", "msg": "Docker镜像体积优化，就用alpine，基础镜像小", "expected_decision": false, "is_distractor": false, "timestamp": 1700002728}
+{"chat_id": "chat_2", "msg_id": "m070", "speaker": "Henry", "msg": "alpine的glibc兼容性有问题，有些node包需要编译，比如sharp库", "expected_decision": false, "is_distractor": false, "timestamp": 1700002820}
+{"chat_id": "chat_2", "msg_id": "m071", "speaker": "Ivy", "msg": "确定多阶段构建能减少多少体积？先测一下，别凭感觉", "expected_decision": false, "is_distractor": false, "timestamp": 1700002918}
+{"chat_id": "chat_2", "msg_id": "m072", "speaker": "Grace", "msg": "就多阶段构建，把编译依赖全放在builder里，最终镜像只留产物", "expected_decision": false, "is_distractor": false, "timestamp": 1700002993}
+{"chat_id": "chat_2", "msg_id": "m073", "speaker": "Henry", "msg": "建议用distroless镜像，比alpine更安全，但调试困难，线上问题不好排查", "expected_decision": false, "is_distractor": false, "timestamp": 1700003088}
+{"chat_id": "chat_2", "msg_id": "m074", "speaker": "Ivy", "msg": "如果用了distroless，线上问题怎么排查？没有shell和工具", "expected_decision": false, "is_distractor": false, "timestamp": 1700003120}
+{"chat_id": "chat_2", "msg_id": "m075", "speaker": "Grace", "msg": "就alpine加多阶段构建，别搞太复杂，简单可靠", "expected_decision": false, "is_distractor": false, "timestamp": 1700003170}
+{"chat_id": "chat_2", "msg_id": "m076", "speaker": "Henry", "msg": "我写个Dockerfile模板，统一各团队的构建方式，包括多阶段和alpine", "expected_decision": false, "is_distractor": false, "timestamp": 1700003287}
+{"chat_id": "chat_2", "msg_id": "m077", "speaker": "Ivy", "msg": "那就按Grace说的，alpine+多阶段构建，Henry出模板 @Grace @Henry", "expected_decision": true, "expected_topic": "Docker镜像体积优化", "expected_summary": "采用alpine基础镜像配合多阶段构建，统一Dockerfile模板", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "timestamp": 1700005496}
+{"chat_id": "chat_2", "msg_id": "m078", "speaker": "Grace", "msg": "告警阈值调多少，就P99 500ms，超了就告警", "expected_decision": false, "is_distractor": false, "timestamp": 1700005586}
+{"chat_id": "chat_2", "msg_id": "m079", "speaker": "Henry", "msg": "不同接口差异大，登录接口500ms可以，但查询接口200ms就该告警，得差异化", "expected_decision": false, "is_distractor": false, "timestamp": 1700005660}
+{"chat_id": "chat_2", "msg_id": "m080", "speaker": "Ivy", "msg": "确定CPU阈值设80%吗？还是看平均负载？不同场景不一样", "expected_decision": false, "is_distractor": false, "timestamp": 1700005755}
+{"chat_id": "chat_2", "msg_id": "m081", "speaker": "Grace", "msg": "就CPU 80%，内存90%，简单粗暴", "expected_decision": false, "is_distractor": false, "timestamp": 1700005840}
+{"chat_id": "chat_2", "msg_id": "m082", "speaker": "Henry", "msg": "建议用动态阈值，基于历史数据自动调整，减少误报，比如用Prometheus的预测", "expected_decision": false, "is_distractor": false, "timestamp": 1700005957}
+{"chat_id": "chat_2", "msg_id": "m083", "speaker": "Ivy", "msg": "动态阈值在业务突增时会不会漏报？比如双十一流量暴涨 @Henry", "expected_decision": false, "is_distractor": false, "timestamp": 1700006021}
+{"chat_id": "chat_2", "msg_id": "m084", "speaker": "Grace", "msg": "就先静态阈值，跑一个月再调，别一开始就搞复杂", "expected_decision": false, "is_distractor": false, "timestamp": 1700006082}
+{"chat_id": "chat_2", "msg_id": "m085", "speaker": "Henry", "msg": "我按接口维度整理一份阈值建议表，大家review，下周定", "expected_decision": false, "is_distractor": false, "timestamp": 1700006156}
+{"chat_id": "chat_2", "msg_id": "m086", "speaker": "Ivy", "msg": "那等Henry的表出来再定，先静态阈值跑着 @Grace", "expected_decision": false, "is_distractor": false, "timestamp": 1700006189}
+{"chat_id": "chat_3", "msg_id": "m087", "speaker": "Jack", "msg": "Grafana大盘重构，就全部用JSON模型，UI太慢了", "expected_decision": false, "is_distractor": false, "timestamp": 1700000093}
+{"chat_id": "chat_3", "msg_id": "m088", "speaker": "Kate", "msg": "JSON模型适合版本控制，但面板的坐标调整很麻烦，得手动写", "expected_decision": false, "is_distractor": false, "timestamp": 1700000175}
+{"chat_id": "chat_3", "msg_id": "m089", "speaker": "Leo", "msg": "确定要统一用Loki作为数据源吗？现有Prometheus的Panel要迁移，工作量不小", "expected_decision": false, "is_distractor": false, "timestamp": 1700000227}
+{"chat_id": "chat_3", "msg_id": "m090", "speaker": "Jack", "msg": "就统一用Prometheus，Loki只负责日志，别混用", "expected_decision": false, "is_distractor": false, "timestamp": 1700000343}
+{"chat_id": "chat_3", "msg_id": "m091", "speaker": "Kate", "msg": "建议按服务维度重新组织大盘，每个服务一个folder，方便查找", "expected_decision": false, "is_distractor": false, "timestamp": 1700000402}
+{"chat_id": "chat_3", "msg_id": "m092", "speaker": "Leo", "msg": "模板变量用标签还是用变量查询？标签性能更好，但灵活性差一些", "expected_decision": false, "is_distractor": false, "timestamp": 1700000466}
+{"chat_id": "chat_3", "msg_id": "m093", "speaker": "Jack", "msg": "就用标签变量，别搞复杂查询，简单点", "expected_decision": false, "is_distractor": false, "timestamp": 1700000566}
+{"chat_id": "chat_3", "msg_id": "m094", "speaker": "Kate", "msg": "我先画一个大盘的草图，大家确认后再JSON化，避免返工", "expected_decision": false, "is_distractor": false, "timestamp": 1700000650}
+{"chat_id": "chat_3", "msg_id": "m095", "speaker": "Leo", "msg": "那按Kate的草图来，没问题就转JSON @Jack @Kate", "expected_decision": true, "expected_topic": "Grafana大盘重构", "expected_summary": "采用JSON模型配置大盘，按服务维度组织folder，使用标签变量，Prometheus为主数据源", "expected_status": "decided", "expected_impact": "minor", "difficulty": "medium", "timestamp": 1700002823}
+{"chat_id": "chat_3", "msg_id": "m096", "speaker": "Jack", "msg": "日志采样率，就全量采集，别采样", "expected_decision": false, "is_distractor": false, "timestamp": 1700002905}
+{"chat_id": "chat_3", "msg_id": "m097", "speaker": "Kate", "msg": "全量采集成本太高，Loki的存储虽然便宜但查询慢，尤其是大范围搜索", "expected_decision": false, "is_distractor": false, "timestamp": 1700002935}
+{"chat_id": "chat_3", "msg_id": "m098", "speaker": "Leo", "msg": "确定错误日志也要采样吗？错误日志应该全量，info可以采样 @Jack", "expected_decision": false, "is_distractor": false, "timestamp": 1700003000}
+{"chat_id": "chat_3", "msg_id": "m099", "speaker": "Jack", "msg": "那就错误全量，info采样10%，折中方案", "expected_decision": false, "is_distractor": false, "timestamp": 1700003062}
+{"chat_id": "chat_3", "msg_id": "m100", "speaker": "Kate", "msg": "建议用动态采样，根据流量自动调整比例，低峰期全量，高峰期降采样", "expected_decision": false, "is_distractor": false, "timestamp": 1700003167}
+{"chat_id": "chat_3", "msg_id": "m101", "speaker": "Leo", "msg": "动态采样会不会导致流量高峰时丢失重要日志？比如线上故障时", "expected_decision": false, "is_distractor": false, "timestamp": 1700003247}
+{"chat_id": "chat_3", "msg_id": "m102", "speaker": "Jack", "msg": "就固定采样，简单可靠，别搞动态那套", "expected_decision": false, "is_distractor": false, "timestamp": 1700003301}
+{"chat_id": "chat_3", "msg_id": "m103", "speaker": "Kate", "msg": "我配置一个Logstash的采样filter，先试跑一周，看看效果", "expected_decision": false, "is_distractor": false, "timestamp": 1700003343}
+{"chat_id": "chat_3", "msg_id": "m104", "speaker": "Leo", "msg": "那就先试跑一周，错误全量info 10%，没问题就固化 @Jack @Kate", "expected_decision": true, "expected_topic": "日志采样率", "expected_summary": "错误日志全量采集，info日志固定采样10%，先试跑一周验证", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "timestamp": 1700005268}
+{"chat_id": "chat_3", "msg_id": "m105", "speaker": "Jack", "msg": "Kafka分区数调整，就扩到24分区，现在12不够用", "expected_decision": false, "is_distractor": false, "timestamp": 1700005386}
+{"chat_id": "chat_3", "msg_id": "m106", "speaker": "Kate", "msg": "分区数增加会导致重平衡时间变长，消费者组需要重新分配，可能影响在线服务", "expected_decision": false, "is_distractor": false, "timestamp": 1700005452}
+{"chat_id": "chat_3", "msg_id": "m107", "speaker": "Leo", "msg": "确定现有消费者能处理24分区的并行度吗？有些消费者是单线程的，比如日志消费", "expected_decision": false, "is_distractor": false, "timestamp": 1700005533}
+{"chat_id": "chat_3", "msg_id": "m108", "speaker": "Jack", "msg": "就分批扩，先扩到16，观察一周再扩到24，稳妥", "expected_decision": false, "is_distractor": false, "timestamp": 1700005613}
+{"chat_id": "chat_3", "msg_id": "m109", "speaker": "Kate", "msg": "建议先调整消息key的分布，避免数据倾斜，比如user_id哈希不均匀", "expected_decision": false, "is_distractor": false, "timestamp": 1700005700}
+{"chat_id": "chat_3", "msg_id": "m110", "speaker": "Leo", "msg": "扩分区后，旧数据还在旧分区吗？还是自动重分布？得搞清楚", "expected_decision": false, "is_distractor": false, "timestamp": 1700005752}
+{"chat_id": "chat_3", "msg_id": "m111", "speaker": "Jack", "msg": "就只影响新数据，旧数据不管，简单", "expected_decision": false, "is_distractor": false, "timestamp": 1700005859}
+{"chat_id": "chat_3", "msg_id": "m112", "speaker": "Kate", "msg": "我写个分区调整脚本，包含监控和回滚步骤，先扩到16", "expected_decision": false, "is_distractor": false, "timestamp": 1700005951}
+{"chat_id": "chat_3", "msg_id": "m113", "speaker": "Leo", "msg": "那按Kate的脚本先扩到16，观察一周再说 @Jack @Kate", "expected_decision": true, "expected_topic": "Kafka分区数调整", "expected_summary": "先扩分区到16，观察一周后再考虑扩到24，配合消息key分布优化", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "timestamp": 1700008351}
+{"chat_id": "chat_4", "msg_id": "m114", "speaker": "Mia", "msg": "RabbitMQ死信队列，就统一用死信队列处理失败消息", "expected_decision": false, "is_distractor": false, "timestamp": 1700000050}
+{"chat_id": "chat_4", "msg_id": "m115", "speaker": "Noah", "msg": "死信队列需要配合重试机制，建议指数退避加最大重试次数，比如3次", "expected_decision": false, "is_distractor": false, "timestamp": 1700000129}
+{"chat_id": "chat_4", "msg_id": "m116", "speaker": "Olivia", "msg": "确定死信消息的TTL设多久？太长会堆积，太短可能来不及处理", "expected_decision": false, "is_distractor": false, "timestamp": 1700000208}
+{"chat_id": "chat_4", "msg_id": "m117", "speaker": "Mia", "msg": "就重试3次，TTL 1小时，简单", "expected_decision": false, "is_distractor": false, "timestamp": 1700000260}
+{"chat_id": "chat_4", "msg_id": "m118", "speaker": "Noah", "msg": "建议用延迟队列插件代替死信+TTL，更精确，比如延迟10秒重试", "expected_decision": false, "is_distractor": false, "timestamp": 1700000354}
+{"chat_id": "chat_4", "msg_id": "m119", "speaker": "Olivia", "msg": "延迟队列插件在集群模式下稳定吗？之前听说有bug @Noah", "expected_decision": false, "is_distractor": false, "timestamp": 1700000419}
+{"chat_id": "chat_4", "msg_id": "m120", "speaker": "Mia", "msg": "就死信+TTL，简单不依赖插件，稳定优先", "expected_decision": false, "is_distractor": false, "timestamp": 1700000456}
+{"chat_id": "chat_4", "msg_id": "m121", "speaker": "Noah", "msg": "我画一个消息流转图，明确各队列的绑定关系，大家确认", "expected_decision": false, "is_distractor": false, "timestamp": 1700000565}
+{"chat_id": "chat_4", "msg_id": "m122", "speaker": "Olivia", "msg": "那按Mia的方案，死信+TTL，Noah出流转图 @Mia @Noah", "expected_decision": true, "expected_topic": "RabbitMQ死信队列", "expected_summary": "采用死信队列配合TTL处理失败消息，重试3次，TTL设为1小时", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "timestamp": 1700002768}
+{"chat_id": "chat_4", "msg_id": "m123", "speaker": "Mia", "msg": "Pulsar Topic管理，就按业务线创建租户，每个租户下多个namespace", "expected_decision": false, "is_distractor": false, "timestamp": 1700002804}
+{"chat_id": "chat_4", "msg_id": "m124", "speaker": "Noah", "msg": "租户隔离级别怎么设？建议用资源配额限制每个租户的吞吐，避免互相影响", "expected_decision": false, "is_distractor": false, "timestamp": 1700002897}
+{"chat_id": "chat_4", "msg_id": "m125", "speaker": "Olivia", "msg": "确定Topic命名规范吗？比如<tenant>/<namespace>/<topic>，统一格式", "expected_decision": false, "is_distractor": false, "timestamp": 1700002951}
+{"chat_id": "chat_4", "msg_id": "m126", "speaker": "Mia", "msg": "就统一小写，用斜杠分隔，别搞花哨", "expected_decision": false, "is_distractor": false, "timestamp": 1700003039}
+{"chat_id": "chat_4", "msg_id": "m127", "speaker": "Noah", "msg": "建议开启自动Topic创建，但限制namespace下的最大Topic数，比如100个", "expected_decision": false, "is_distractor": false, "timestamp": 1700003109}

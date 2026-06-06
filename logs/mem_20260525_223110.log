@@ -1,0 +1,66 @@
+2026-05-25 22:31:10 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260525_223110.log
+2026-05-25 22:31:10 - __main__ - INFO - ========================================
+2026-05-25 22:31:10 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-25 22:31:10 - __main__ - INFO - ========================================
+2026-05-25 22:31:10 - __main__ - INFO - Project: default
+2026-05-25 22:31:10 - __main__ - INFO - Storage: data
+2026-05-25 22:31:10 - __main__ - INFO - DocsDir: data/docs
+2026-05-25 22:31:10 - __main__ - INFO - [GitStorage] initialized
+2026-05-25 22:31:10 - __main__ - INFO - [MemoryGraph] loaded 0 decisions from Git
+2026-05-25 22:31:10 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-25 22:31:10 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-25 22:31:10 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 22:31:10 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-25 22:31:10 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 22:31:10 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-25 22:31:10 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-25 22:31:10 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-25 22:31:10 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-25 22:31:10 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-25 22:31:10 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-25 22:31:10 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-25 22:31:10 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-25 22:31:10 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-25 22:31:10 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-25 22:31:10 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-25 22:31:10 - src.adapter.lark_im - INFO - WS listener started
+2026-05-25 22:31:10 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-25 22:31:10 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-25 22:31:10 - __main__ - INFO - [Detectors] Configuration:
+2026-05-25 22:31:10 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-25 22:31:10 - __main__ - INFO -   lark_doc: disabled
+2026-05-25 22:31:10 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-25 22:31:13 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7643836897987808228&access_key=2e377d56ff327ed8e212d97230288e57&service_id=33554678&ticket=1905a329-8ae8-4f30-a059-2933456c2383 [conn_id=7643836897987808228]
+2026-05-25 22:33:28 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:28 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=38 content={"text":"首先说一下整体架构，我觉得微服务架构比较适合我们的场景"}
+2026-05-25 22:33:29 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:29 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=36 content={"text":"微服务的好处是独立部署、独立扩展，团队可以并行开发"}
+2026-05-25 22:33:30 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:30 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=35 content={"text":"而且微服务之间通过API通信，技术栈可以灵活选择"}
+2026-05-25 22:33:30 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:30 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"我决定采用微服务架构来构建我们的后端系统"}
+2026-05-25 22:33:30 - __main__ - INFO - [lark_im] WS >>> Decision signal score=0.78: {"text":"我决定采用微服务架构来构建我们的后端系统"}
+2026-05-25 22:33:30 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"我决定采用微服务架构来构建我们的后端系统"}
+2026-05-25 22:33:30 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525223330-66900179.json
+2026-05-25 22:33:30 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=31 content={"text":"我决定采用微服务架构来构建我们的后端系统"}
+2026-05-25 22:33:30 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=31)
+2026-05-25 22:33:31 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:31 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"每个微服务使用独立的数据库，避免耦合"}
+2026-05-25 22:33:32 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:32 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"服务之间通过gRPC进行通信"}
+2026-05-25 22:33:32 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.77s
+2026-05-25 22:33:32 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 22:33:32 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=918c31690dbb summary=采用微服务架构 source=lark_im
+2026-05-25 22:33:32 - src.core.engine - INFO - [Mutation] New decision: sid=918c31690dbb status=decided impact=major
+2026-05-25 22:33:32 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:32 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"API网关使用Kong作为入口统一管理"}
+2026-05-25 22:33:32 - src.core.engine - INFO - Created decision: 918c31690dbb — 采用微服务架构
+2026-05-25 22:33:32 - src.core.engine - INFO - [Mutation] CREATE applied: sid=918c31690dbb
+2026-05-25 22:33:32 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=918c31690dbb
+2026-05-25 22:33:32 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.97s
+2026-05-25 22:33:32 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:32 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"服务注册与发现用Consul来实现"}
+2026-05-25 22:33:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:33:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"服务之间通信统一用gRPC协议"}
+2026-05-25 22:50:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:50:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=39 content={"text":"需要将服务之间的通信换成http协议 不要用gRPC协议"}

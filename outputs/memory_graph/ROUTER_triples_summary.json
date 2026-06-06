@@ -1,0 +1,5100 @@
+{
+  "triples": [
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "跨平台导航适配器模式",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-b1e047"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-b1e047"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "provides",
+      "tail": "统一导航接口",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-b1e047"
+    },
+    {
+      "head": "不同平台",
+      "relation": "uses",
+      "tail": "不同路由实现",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-b1e047"
+    },
+    {
+      "head": "不同路由实现",
+      "relation": "related_to",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-b1e047"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Next.js 16 App Router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "next/navigation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "文件系统路由",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Web 端",
+      "relation": "supports",
+      "tail": "服务端渲染（SSR）",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "uses",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "uses",
+      "tail": "createMemoryRouter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "uses",
+      "tail": "内存路由",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "uses",
+      "tail": "useNavigation() hook",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "has",
+      "tail": "独立的路由实例",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "Expo React Navigation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "Stack Navigation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "supports",
+      "tail": "模态页面",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "supports",
+      "tail": "sheet 组件",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-cb9dd8"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "provides",
+      "tail": "unified_navigation_api",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "located_in",
+      "tail": "packages/views/navigation",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "Web_NavigationAdapter",
+      "relation": "wraps",
+      "tail": "next/navigation",
+      "schema": [
+        "SYSTEM",
+        "wraps",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "Desktop_NavigationAdapter",
+      "relation": "wraps",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "wraps",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "Mobile_NavigationAdapter",
+      "relation": "is",
+      "tail": "independent_implementation",
+      "schema": [
+        "SYSTEM",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "Mobile_NavigationAdapter",
+      "relation": "not_shared",
+      "tail": "shared_code",
+      "schema": [
+        "SYSTEM",
+        "not_shared",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "useNavigation()",
+      "relation": "used_by",
+      "tail": "shared_code",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "useNavigation()",
+      "relation": "abstracts",
+      "tail": "framework_specific_routing_api",
+      "schema": [
+        "TECHNOLOGY",
+        "abstracts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "shared_code",
+      "relation": "uses",
+      "tail": "useNavigation()",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "shared_code",
+      "relation": "avoids",
+      "tail": "framework_specific_routing_api",
+      "schema": [
+        "CONCEPT",
+        "avoids",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0936d5"
+    },
+    {
+      "head": "router",
+      "relation": "has_route",
+      "tail": "workspace_routes",
+      "schema": [
+        "SYSTEM",
+        "has_route",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "router",
+      "relation": "has_route",
+      "tail": "search_command_palette",
+      "schema": [
+        "SYSTEM",
+        "has_route",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "workspace_routes",
+      "relation": "includes",
+      "tail": "/{slug}/issues",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "workspace_routes",
+      "relation": "includes",
+      "tail": "/{slug}/issues/[id]",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "workspace_routes",
+      "relation": "includes",
+      "tail": "/{slug}/projects",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "workspace_routes",
+      "relation": "includes",
+      "tail": "/{slug}/agents",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "workspace_routes",
+      "relation": "includes",
+      "tail": "/{slug}/settings",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "search_command_palette",
+      "relation": "provides",
+      "tail": "page_navigation",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "search_command_palette",
+      "relation": "triggered_by",
+      "tail": "Cmd+K",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "search_command_palette",
+      "relation": "uses",
+      "tail": "NavPage",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "NavPage",
+      "relation": "has_property",
+      "tail": "key",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "NavPage",
+      "relation": "has_property",
+      "tail": "label",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "NavPage",
+      "relation": "has_property",
+      "tail": "icon",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "NavPage",
+      "relation": "has_property",
+      "tail": "keywords",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d0d64f"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "URL 变化",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-92d811"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "工作区切换",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-92d811"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "uses",
+      "tail": "switchWorkspace()",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-92d811"
+    },
+    {
+      "head": "Desktop 端",
+      "relation": "uses",
+      "tail": "导航适配器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-92d811"
+    },
+    {
+      "head": "导航适配器",
+      "relation": "detects",
+      "tail": "跨工作区的 push()",
+      "schema": [
+        "TECHNOLOGY",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-92d811"
+    },
+    {
+      "head": "导航适配器",
+      "relation": "translates_into",
+      "tail": "switchWorkspace(slug, targetPath)",
+      "schema": [
+        "TECHNOLOGY",
+        "translates_into",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-92d811"
+    },
+    {
+      "head": "multica",
+      "relation": "adopts",
+      "tail": "共享业务逻辑，平台特定路由",
+      "schema": [
+        "ORG",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "based_on",
+      "tail": "共享业务逻辑，平台特定路由",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "uses",
+      "tail": "useNavigation()",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "platform/",
+      "relation": "provides",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "used_by",
+      "tail": "useNavigation()",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "packages/core/platform/",
+      "relation": "provides",
+      "tail": "CoreProvider",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "initializes",
+      "tail": "API client",
+      "schema": [
+        "CONCEPT",
+        "initializes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "initializes",
+      "tail": "auth/workspace stores",
+      "schema": [
+        "CONCEPT",
+        "initializes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "initializes",
+      "tail": "WS connection",
+      "schema": [
+        "CONCEPT",
+        "initializes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "initializes",
+      "tail": "QueryClient",
+      "schema": [
+        "CONCEPT",
+        "initializes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "server/",
+      "relation": "uses",
+      "tail": "Chi router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "server/",
+      "relation": "uses",
+      "tail": "sqlc",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "server/",
+      "relation": "uses",
+      "tail": "gorilla/websocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "apps/web/",
+      "relation": "uses",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "apps/web/",
+      "relation": "uses",
+      "tail": "App Router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "apps/desktop/",
+      "relation": "uses",
+      "tail": "Electron",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "apps/desktop/",
+      "relation": "uses",
+      "tail": "electron-vite",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-9bfc04"
+    },
+    {
+      "head": "packages/core",
+      "relation": "rejects",
+      "tail": "react-dom",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/core",
+      "relation": "rejects",
+      "tail": "localStorage",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/core",
+      "relation": "rejects",
+      "tail": "process.env",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/core",
+      "relation": "rejects",
+      "tail": "UI libraries",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/core",
+      "relation": "uses",
+      "tail": "StorageAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/core",
+      "relation": "contains",
+      "tail": "Zustand stores",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/ui",
+      "relation": "rejects",
+      "tail": "@multica/core",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/views",
+      "relation": "rejects",
+      "tail": "next/*",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/views",
+      "relation": "rejects",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/views",
+      "relation": "rejects",
+      "tail": "stores",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/views",
+      "relation": "uses",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "apps/web/platform",
+      "relation": "uses",
+      "tail": "next/navigation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "apps/desktop/src/renderer/src/platform",
+      "relation": "uses",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "shared packages",
+      "relation": "based_on",
+      "tail": "No-Duplication Rule",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "packages/views",
+      "relation": "contains",
+      "tail": "page components",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "apps/web/app",
+      "relation": "contains",
+      "tail": "routes",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "desktop router",
+      "relation": "contains",
+      "tail": "routes",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "pre-workspace transition flows",
+      "relation": "uses",
+      "tail": "WindowOverlay",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "shared code",
+      "relation": "uses",
+      "tail": "useNavigation().push()",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "shared code",
+      "relation": "uses",
+      "tail": "AppLink",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "DashboardGuard",
+      "relation": "located_in",
+      "tail": "packages/views/layout",
+      "schema": [
+        "CONCEPT",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "shared layout components",
+      "relation": "uses",
+      "tail": "props slots",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "hooks needing workspace context",
+      "relation": "accepts",
+      "tail": "wsId parameter",
+      "schema": [
+        "CONCEPT",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-2920db"
+    },
+    {
+      "head": "push(path)",
+      "relation": "detected_by",
+      "tail": "navigation adapter",
+      "schema": [
+        "CONCEPT",
+        "detected_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "navigation adapter",
+      "relation": "located_in",
+      "tail": "platform/navigation.tsx",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "push(path)",
+      "relation": "translated_into",
+      "tail": "switchWorkspace(slug, targetPath)",
+      "schema": [
+        "CONCEPT",
+        "translated_into",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "switchWorkspace(slug, targetPath)",
+      "relation": "related_to",
+      "tail": "cross-workspace navigation",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "useNavigation()",
+      "relation": "used_by",
+      "tail": "navigation adapter",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "defined_in",
+      "tail": "apps/desktop/src/renderer/src/routes.tsx",
+      "schema": [
+        "SYSTEM",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "contains",
+      "tail": "PageShell",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "contains",
+      "tail": "WorkspaceRouteLayout",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "IssuesPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "IssueDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "ProjectsPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "ProjectDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "AutopilotsPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "AutopilotDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "MyIssuesPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "DesktopRuntimesPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "RuntimeDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "SkillsPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "SkillDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "AgentsPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "AgentDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "MemberDetailPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "SquadsPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "SquadDetailPageView",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "InboxPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "AttachmentPreviewRoute",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "DashboardPage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "contains",
+      "tail": "DesktopSettingsRoute",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "createTabRouter",
+      "relation": "creates",
+      "tail": "memory router",
+      "schema": [
+        "CONCEPT",
+        "creates",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "createTabRouter",
+      "relation": "uses",
+      "tail": "createMemoryRouter",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "createMemoryRouter",
+      "relation": "uses",
+      "tail": "appRoutes",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "memory router",
+      "relation": "based_on",
+      "tail": "appRoutes",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-f862f3"
+    },
+    {
+      "head": "new-issue-picker/priority",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-issue-picker/assignee",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-issue-picker/project",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-issue-picker/due-date",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-project-picker/status",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-project-picker/priority",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "issues-filter",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "chat-sessions",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "switch-workspace",
+      "relation": "uses",
+      "tail": "SHEET_OPTIONS",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "issues-filter",
+      "relation": "uses",
+      "tail": "view-store",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "issues-filter",
+      "relation": "based_on",
+      "tail": "scope URL parameter",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "switch-workspace",
+      "relation": "uses",
+      "tail": "iOS Alert confirm",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "switch-workspace",
+      "relation": "uses",
+      "tail": "WorkspaceCard",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-issue",
+      "relation": "uses",
+      "tail": "ModalCloseButton",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "search",
+      "relation": "uses",
+      "tail": "ModalCloseButton",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-issue",
+      "relation": "uses",
+      "tail": "modal presentation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "search",
+      "relation": "uses",
+      "tail": "modal presentation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-project-picker/*",
+      "relation": "based_on",
+      "tail": "new-issue-picker/*",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "new-project-picker/*",
+      "relation": "depends_on",
+      "tail": "project/new modal",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "RealtimeProvider",
+      "relation": "contains",
+      "tail": "Stack navigator",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "workspace routing",
+      "relation": "uses",
+      "tail": "slug parameter",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/issues",
+      "relation": "related_to",
+      "tail": "board view",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/issues",
+      "relation": "related_to",
+      "tail": "list view",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/my-issues",
+      "relation": "uses",
+      "tail": "three scopes",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "profile tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "appearance tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "tokens tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "workspace tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "members tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "repos tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "daemon tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "/settings",
+      "relation": "contains",
+      "tail": "updates tab",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-486558"
+    },
+    {
+      "head": "navPages",
+      "relation": "uses",
+      "tail": "Web",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-74e952"
+    },
+    {
+      "head": "navPages",
+      "relation": "uses",
+      "tail": "Desktop",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-74e952"
+    },
+    {
+      "head": "navPages",
+      "relation": "uses",
+      "tail": "Mobile",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-74e952"
+    },
+    {
+      "head": "Web",
+      "relation": "uses",
+      "tail": "routing_system",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-74e952"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "routing_system",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-74e952"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "routing_system",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-74e952"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Next.js App Router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "useNavigation() 适配器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "NavigationAdapter 接口",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "useNavigation() 适配器",
+      "relation": "based_on",
+      "tail": "NavigationAdapter 接口",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "NavigationAdapter 接口",
+      "relation": "rejects",
+      "tail": "next/navigation",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "proxy.ts 中间件",
+      "relation": "responsible_for",
+      "tail": "旧 URL 重定向",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "工作区内路由",
+      "relation": "uses",
+      "tail": "workspaceSlug 动态段",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "工作区内路由",
+      "relation": "uses",
+      "tail": "proxy.ts 中间件",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "登录页",
+      "relation": "uses",
+      "tail": "magic link",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "登录页",
+      "relation": "uses",
+      "tail": "OAuth",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-010-9aad14"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "createMemoryRouter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "WorkspaceRouteLayout",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "WindowOverlay",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "导航适配器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "switchWorkspace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "createMemoryRouter",
+      "relation": "provides",
+      "tail": "独立的路由实例",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Issues 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Issue 详情页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Projects 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Project 详情页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Autopilots 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "My Issues 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Runtimes 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Runtime 详情页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Skills 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Agents 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Agent 详情页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Squads 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Inbox 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Desktop",
+      "relation": "has",
+      "tail": "Settings 页面",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Issues 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/issues/components",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Issue 详情页面",
+      "relation": "imported_from",
+      "tail": "./pages/issue-detail-page",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Projects 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/projects/components",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Project 详情页面",
+      "relation": "imported_from",
+      "tail": "./pages/project-detail-page",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Autopilots 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/autopilots/components",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "My Issues 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/my-issues",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Runtimes 页面",
+      "relation": "imported_from",
+      "tail": "./components/desktop-runtimes-page",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Runtime 详情页面",
+      "relation": "imported_from",
+      "tail": "./pages/runtime-detail-page",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Skills 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/skills",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Agents 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/agents",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Agent 详情页面",
+      "relation": "imported_from",
+      "tail": "./pages/agent-detail-page",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Squads 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/squads/components",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Inbox 页面",
+      "relation": "imported_from",
+      "tail": "@multica/views/inbox",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Settings 页面",
+      "relation": "imported_from",
+      "tail": "./components/desktop-settings-route",
+      "schema": [
+        "CONCEPT",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "supports",
+      "tail": "多标签",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "WindowOverlay",
+      "relation": "handles",
+      "tail": "预工作区流程",
+      "schema": [
+        "CONCEPT",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "导航适配器",
+      "relation": "detects",
+      "tail": "跨工作区导航",
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "导航适配器",
+      "relation": "calls",
+      "tail": "switchWorkspace",
+      "schema": [
+        "CONCEPT",
+        "calls",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-94cd81"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "Expo Router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "Stack 导航",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "Tab 导航",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "Modal Sheet",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "router.replace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Chat",
+      "relation": "related_to",
+      "tail": "(tabs)/chat",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Issues",
+      "relation": "related_to",
+      "tail": "(tabs)/issues",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Inbox",
+      "relation": "related_to",
+      "tail": "(tabs)/inbox",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "More",
+      "relation": "related_to",
+      "tail": "(tabs)/more",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Issue 详情",
+      "relation": "related_to",
+      "tail": "issue/[id]",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Project 详情",
+      "relation": "related_to",
+      "tail": "project/[id]",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "会话选择",
+      "relation": "related_to",
+      "tail": "chat-sessions",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "工作区切换",
+      "relation": "related_to",
+      "tail": "switch-workspace",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "工作区切换",
+      "relation": "uses",
+      "tail": "router.replace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "Modal Sheet",
+      "relation": "uses",
+      "tail": "presentation: \"formSheet\"",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-e7c12a"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "contains",
+      "tail": "packages/views/issues/",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "contains",
+      "tail": "packages/views/projects/",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "contains",
+      "tail": "packages/views/agents/",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "contains",
+      "tail": "packages/views/settings/",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "contains",
+      "tail": "packages/views/dashboard/",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "Web",
+      "relation": "shares",
+      "tail": "packages/views/",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "Desktop",
+      "relation": "shares",
+      "tail": "packages/views/",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-6b09eb"
+    },
+    {
+      "head": "预工作区路由",
+      "relation": "uses",
+      "tail": "单个单词或 /{noun}/{verb} 格式",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-014-f5ac5e"
+    },
+    {
+      "head": "工作区路由",
+      "relation": "uses",
+      "tail": "/{slug}/{section} 格式",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-014-f5ac5e"
+    },
+    {
+      "head": "Web",
+      "relation": "uses",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Web",
+      "relation": "shares_with",
+      "tail": "Desktop",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Web",
+      "relation": "uses",
+      "tail": "packages/views/",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "packages/views/",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Mobile",
+      "relation": "independent_from",
+      "tail": "Web",
+      "schema": [
+        "SYSTEM",
+        "independent_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Mobile",
+      "relation": "independent_from",
+      "tail": "Desktop",
+      "schema": [
+        "SYSTEM",
+        "independent_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Mobile",
+      "relation": "shares_with",
+      "tail": "packages/core/",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "import type",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "unifies",
+      "tail": "navigation_logic",
+      "schema": [
+        "CONCEPT",
+        "unifies",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "used_by",
+      "tail": "Web",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "used_by",
+      "tail": "Desktop",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "used_by",
+      "tail": "Mobile",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Go backend",
+      "relation": "uses",
+      "tail": "Chi router",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Go backend",
+      "relation": "uses",
+      "tail": "sqlc",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Go backend",
+      "relation": "uses",
+      "tail": "gorilla/websocket",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "apps/web/",
+      "relation": "uses",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "apps/desktop/",
+      "relation": "uses",
+      "tail": "Electron",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "apps/desktop/",
+      "relation": "uses",
+      "tail": "electron-vite",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "apps/mobile/",
+      "relation": "uses",
+      "tail": "Expo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "apps/mobile/",
+      "relation": "uses",
+      "tail": "React Native",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "packages/core/",
+      "relation": "contains",
+      "tail": "headless_business_logic",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "packages/ui/",
+      "relation": "contains",
+      "tail": "atomic_ui_components",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "contains",
+      "tail": "shared_business_pages",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "avoids",
+      "tail": "next/* imports",
+      "schema": [
+        "SYSTEM",
+        "avoids",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "packages/views/",
+      "relation": "avoids",
+      "tail": "react-router imports",
+      "schema": [
+        "SYSTEM",
+        "avoids",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Web",
+      "relation": "shares_with",
+      "tail": "packages/core/",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Desktop",
+      "relation": "shares_with",
+      "tail": "packages/core/",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Web",
+      "relation": "shares_with",
+      "tail": "packages/ui/",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Desktop",
+      "relation": "shares_with",
+      "tail": "packages/ui/",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Mobile",
+      "relation": "shares_with",
+      "tail": "types",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "Mobile",
+      "relation": "shares_with",
+      "tail": "pure_functions",
+      "schema": [
+        "SYSTEM",
+        "shares_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-663d63"
+    },
+    {
+      "head": "desktop_app",
+      "relation": "uses",
+      "tail": "route_categories",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "session_routes",
+      "relation": "related_to",
+      "tail": "workspace-scoped_pages",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "session_routes",
+      "relation": "rendered_by",
+      "tail": "per-tab_memory_router",
+      "schema": [
+        "CONCEPT",
+        "rendered_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "session_routes",
+      "relation": "rendered_by",
+      "tail": "WorkspaceRouteLayout",
+      "schema": [
+        "CONCEPT",
+        "rendered_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "transition_flows",
+      "relation": "implemented_as",
+      "tail": "WindowOverlay_state",
+      "schema": [
+        "CONCEPT",
+        "implemented_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "navigation_adapter",
+      "relation": "dispatches",
+      "tail": "WindowOverlay_state",
+      "schema": [
+        "SYSTEM",
+        "dispatches",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "navigation_adapter",
+      "relation": "detects",
+      "tail": "push('/workspaces/new')",
+      "schema": [
+        "SYSTEM",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "navigation_adapter",
+      "relation": "detects",
+      "tail": "push('/invite/<id>')",
+      "schema": [
+        "SYSTEM",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "NewWorkspacePage",
+      "relation": "used_by",
+      "tail": "transition_flows",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "InvitePage",
+      "relation": "used_by",
+      "tail": "transition_flows",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "WorkspaceRouteLayout",
+      "relation": "auto-heals",
+      "tail": "stale_tab_groups",
+      "schema": [
+        "SYSTEM",
+        "auto-heals",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "desktop_app",
+      "relation": "uses",
+      "tail": "WindowOverlay",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "WindowOverlay",
+      "relation": "defined_in",
+      "tail": "stores/window-overlay-store.ts",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "pre-workspace_flows",
+      "relation": "registered_as",
+      "tail": "WindowOverlay",
+      "schema": [
+        "CONCEPT",
+        "registered_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "pre-workspace_flows",
+      "relation": "not_added_to",
+      "tail": "routes.tsx",
+      "schema": [
+        "CONCEPT",
+        "not_added_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "web_app",
+      "relation": "uses",
+      "tail": "routes.tsx",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "tabs",
+      "relation": "grouped_per_workspace_in",
+      "tail": "stores/tab-store.ts",
+      "schema": [
+        "CONCEPT",
+        "grouped_per_workspace_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "TabBar",
+      "relation": "shows",
+      "tail": "active_workspace_tabs",
+      "schema": [
+        "SYSTEM",
+        "shows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "navigation_adapter",
+      "relation": "detects",
+      "tail": "cross-workspace_push",
+      "schema": [
+        "SYSTEM",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "navigation_adapter",
+      "relation": "translates_to",
+      "tail": "switchWorkspace(slug, targetPath)",
+      "schema": [
+        "SYSTEM",
+        "translates_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "shared_code",
+      "relation": "provides",
+      "tail": "useNavigation()",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "pre-workspace_routes",
+      "relation": "must_use_pattern",
+      "tail": "single_word_or_{noun}/{verb}",
+      "schema": [
+        "CONCEPT",
+        "must_use_pattern",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "hyphenated_root_routes",
+      "relation": "collides_with",
+      "tail": "workspace_slugs",
+      "schema": [
+        "CONCEPT",
+        "collides_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "workspace-scoped_routes",
+      "relation": "lives_under",
+      "tail": "/{slug}/{section}",
+      "schema": [
+        "CONCEPT",
+        "lives_under",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "workspace-scoped_routes",
+      "relation": "uses",
+      "tail": "useNavigation().push()",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-016-019ceb"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "useRouter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "useAuthStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "useHasOnboarded",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "useQuery",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "workspaceListOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "useRef",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "useEffect",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "OnboardingFlow",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "CliInstallInstructions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "resolvePostAuthDestination",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "uses",
+      "tail": "paths",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "adopts",
+      "tail": "completingRef",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "completingRef",
+      "relation": "prevents",
+      "tail": "race_condition",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "race_condition",
+      "relation": "related_to",
+      "tail": "router.replace",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "race_condition",
+      "relation": "related_to",
+      "tail": "router.push",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingFlow",
+      "relation": "has_property",
+      "tail": "onComplete",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "onComplete",
+      "relation": "triggers",
+      "tail": "router.push",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "has_property",
+      "tail": "guard_logic",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "guard_logic",
+      "relation": "uses",
+      "tail": "router.replace",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "guard_logic",
+      "relation": "checks",
+      "tail": "hasOnboarded",
+      "schema": [
+        "CONCEPT",
+        "checks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "guard_logic",
+      "relation": "checks",
+      "tail": "workspacesFetched",
+      "schema": [
+        "CONCEPT",
+        "checks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "guard_logic",
+      "relation": "checks",
+      "tail": "user",
+      "schema": [
+        "CONCEPT",
+        "checks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingPage",
+      "relation": "has_property",
+      "tail": "scroll_behavior",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "scroll_behavior",
+      "relation": "overrides",
+      "tail": "root_layout",
+      "schema": [
+        "CONCEPT",
+        "overrides",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "root_layout",
+      "relation": "sets",
+      "tail": "overflow_hidden",
+      "schema": [
+        "SYSTEM",
+        "sets",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "OnboardingFlow",
+      "relation": "has_property",
+      "tail": "per_step_width_constraint",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "Welcome",
+      "relation": "has_property",
+      "tail": "wide_two_column_hero",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "other_steps",
+      "relation": "has_property",
+      "tail": "max_w_xl",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "bootstrap_path",
+      "relation": "calls",
+      "tail": "refreshMe",
+      "schema": [
+        "CONCEPT",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "refreshMe",
+      "relation": "sets",
+      "tail": "hasOnboarded",
+      "schema": [
+        "TECHNOLOGY",
+        "sets",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "Step_3",
+      "relation": "creates",
+      "tail": "workspace",
+      "schema": [
+        "CONCEPT",
+        "creates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "onComplete",
+      "relation": "creates",
+      "tail": "onboarding_issue",
+      "schema": [
+        "CONCEPT",
+        "creates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "onComplete",
+      "relation": "navigates_to",
+      "tail": "workspace_issues_list",
+      "schema": [
+        "CONCEPT",
+        "navigates_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "onComplete",
+      "relation": "navigates_to",
+      "tail": "issue_detail_page",
+      "schema": [
+        "CONCEPT",
+        "navigates_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-10f008"
+    },
+    {
+      "head": "proxy",
+      "relation": "uses",
+      "tail": "NextRequest",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "proxy",
+      "relation": "uses",
+      "tail": "NextResponse",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "proxy",
+      "relation": "uses",
+      "tail": "multica_logged_in",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "proxy",
+      "relation": "uses",
+      "tail": "last_workspace_slug",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "proxy",
+      "relation": "implements",
+      "tail": "legacy_url_redirect",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "proxy",
+      "relation": "implements",
+      "tail": "root_path_redirect",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "proxy",
+      "relation": "implements",
+      "tail": "locale_header_forwarding",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "MyIssuesPage",
+      "relation": "imported_from",
+      "tail": "@multica/views/my-issues",
+      "schema": [
+        "SYSTEM",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "AgentDetailRoute",
+      "relation": "imported_from",
+      "tail": "@multica/views/agents",
+      "schema": [
+        "SYSTEM",
+        "imported_from",
+        "ORG"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "AgentDetailRoute",
+      "relation": "uses",
+      "tail": "use",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "AgentDetailRoute",
+      "relation": "renders",
+      "tail": "AgentDetailPage",
+      "schema": [
+        "SYSTEM",
+        "renders",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "AgentDetailPage",
+      "relation": "depends_on",
+      "tail": "agentId",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "MyIssuesPage",
+      "relation": "related_to",
+      "tail": "workspaceSlug",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "AgentDetailRoute",
+      "relation": "related_to",
+      "tail": "workspaceSlug",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-804470"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "defines",
+      "tail": "push",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "defines",
+      "tail": "replace",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "defines",
+      "tail": "back",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "defines",
+      "tail": "openInNewTab",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "defines",
+      "tail": "getShareableUrl",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "defines",
+      "tail": "prefetch",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "openInNewTab",
+      "relation": "has_parameter",
+      "tail": "activate",
+      "schema": [
+        "CONCEPT",
+        "has_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "prefetch",
+      "relation": "related_to",
+      "tail": "router.prefetch",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "react-router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "Desktop",
+      "relation": "uses",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "Web",
+      "relation": "uses",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "Web",
+      "relation": "uses",
+      "tail": "router.prefetch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "Desktop",
+      "relation": "leaves_undefined",
+      "tail": "prefetch",
+      "schema": [
+        "SYSTEM",
+        "leaves_undefined",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "TabBar",
+      "relation": "depends_on",
+      "tail": "activeWorkspaceSlug",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "activeWorkspaceSlug",
+      "relation": "determines",
+      "tail": "TabBar",
+      "schema": [
+        "CONCEPT",
+        "determines",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "WindowOverlay",
+      "relation": "handles",
+      "tail": "pre-workspace flows",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "WindowOverlay",
+      "relation": "dispatched_by",
+      "tail": "navigation adapter",
+      "schema": [
+        "SYSTEM",
+        "dispatched_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "App.tsx",
+      "relation": "handles",
+      "tail": "malformed persisted state",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "App.tsx",
+      "relation": "repoints",
+      "tail": "activeWorkspaceSlug",
+      "schema": [
+        "SYSTEM",
+        "repoints",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "root index route",
+      "relation": "acts_as",
+      "tail": "safety net",
+      "schema": [
+        "CONCEPT",
+        "acts_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "root index route",
+      "relation": "falls_back_to",
+      "tail": "null",
+      "schema": [
+        "CONCEPT",
+        "falls_back_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-0d18d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "PageShell",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "WorkspaceRouteLayout",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "ErrorBoundary",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "IssuesPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "IssueDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "ProjectsPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "ProjectDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "AutopilotsPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "AutopilotDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "MyIssuesPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "DesktopRuntimesPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "RuntimeDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "SkillsPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "SkillDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "AgentsPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "AgentDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "MemberDetailPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "SquadsPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "SquadDetailPageView",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "InboxPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "AttachmentPreviewRoute",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "DashboardPage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "DesktopSettingsRoute",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "Navigate",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "based_on",
+      "tail": "React Router",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "appRoutes",
+      "relation": "uses",
+      "tail": "RouteObject",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-1c47d0"
+    },
+    {
+      "head": "Stack",
+      "relation": "uses",
+      "tail": "Stack.Screen",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "project/[id]",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "project/[id]/edit",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/edit",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "project/new",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/picker/status",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/picker/priority",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/picker/assignee",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/picker/label",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "mention-picker",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/picker/project",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/picker/due-date",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Stack.Screen",
+      "relation": "related_to",
+      "tail": "issue/[id]/runs",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/picker/status",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/picker/priority",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/picker/assignee",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/picker/label",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "mention-picker",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/picker/project",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/picker/due-date",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "used_by",
+      "tail": "issue/[id]/runs",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "uses",
+      "tail": "UISearchController",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "uses",
+      "tail": "iOS-native nav header",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "UISearchController",
+      "relation": "related_to",
+      "tail": "iOS-native nav header",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "based_on",
+      "tail": "explicit numeric detents",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "explicit numeric detents",
+      "relation": "related_to",
+      "tail": "expo/expo#42904",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "explicit numeric detents",
+      "relation": "related_to",
+      "tail": "expo/expo#42965",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "explicit numeric detents",
+      "relation": "related_to",
+      "tail": "fitToContents zero-size bugs",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "explicit numeric detents",
+      "relation": "related_to",
+      "tail": "iOS 26",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "explicit numeric detents",
+      "relation": "related_to",
+      "tail": "Expo 55",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "uses",
+      "tail": "iOS native grabber",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "SHEET_OPTIONS",
+      "relation": "uses",
+      "tail": "contentStyle.height=100%",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "contentStyle.height=100%",
+      "relation": "related_to",
+      "tail": "zero-size class of bugs",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "rejects",
+      "tail": "body-rendered header pattern",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "body-rendered header pattern",
+      "relation": "related_to",
+      "tail": "#3634 overlap class of bugs",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "body-rendered header pattern",
+      "relation": "related_to",
+      "tail": "focus-loss footgun",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "focus-loss footgun",
+      "relation": "related_to",
+      "tail": "custom TextInput",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "focus-loss footgun",
+      "relation": "related_to",
+      "tail": "ListHeaderComponent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "uses",
+      "tail": "headerSearchBarOptions",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "headerSearchBarOptions",
+      "relation": "implemented_by",
+      "tail": "setOptions",
+      "schema": [
+        "CONCEPT",
+        "implemented_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "related_to",
+      "tail": "label picker",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "related_to",
+      "tail": "project picker",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "related_to",
+      "tail": "search pickers",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "issue/[id]/picker/assignee",
+      "relation": "related_to",
+      "tail": "CLAUDE.md Lesson 6",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-ffeaf6"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "formSheet",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "Alert.alert",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "router.replace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "router.dismiss",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "WorkspaceCard",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "WorkspaceRouteLayout",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "uses",
+      "tail": "setCurrentWorkspace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "based_on",
+      "tail": "iOS Alert",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "adopts",
+      "tail": "confirm step",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "confirm step",
+      "relation": "rejects",
+      "tail": "instant switch",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "confirm step",
+      "relation": "based_on",
+      "tail": "Principle 3 — iOS native > RNR > discuss",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "react-native",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "expo-image",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "expo-router",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "@tanstack/react-query",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "@multica/core/types",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "workspaceListOptions",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "useWorkspaceStore",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "useColorScheme",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "THEME",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "cn",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "depends_on",
+      "tail": "Text",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "related_to",
+      "tail": "More popover",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    },
+    {
+      "head": "Workspace Switcher",
+      "relation": "related_to",
+      "tail": "Stack",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-023-28a315"
+    }
+  ],
+  "stats": {
+    "total_chunks": 24,
+    "total_triples": 452,
+    "unique_schemas": 114,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'CONCEPT')": 43,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 77,
+      "('TECHNOLOGY', 'provides', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 8,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 6,
+      "('SYSTEM', 'supports', 'CONCEPT')": 3,
+      "('SYSTEM', 'has', 'CONCEPT')": 15,
+      "('SYSTEM', 'provides', 'CONCEPT')": 3,
+      "('SYSTEM', 'located_in', 'SYSTEM')": 2,
+      "('SYSTEM', 'wraps', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'is', 'CONCEPT')": 1,
+      "('SYSTEM', 'not_shared', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'used_by', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'abstracts', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 9,
+      "('CONCEPT', 'avoids', 'CONCEPT')": 1,
+      "('SYSTEM', 'has_route', 'CONCEPT')": 2,
+      "('CONCEPT', 'includes', 'CONCEPT')": 5,
+      "('CONCEPT', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'triggered_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 5,
+      "('TECHNOLOGY', 'detects', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'translates_into', 'TECHNOLOGY')": 1,
+      "('ORG', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 2,
+      "('CONCEPT', 'used_by', 'CONCEPT')": 9,
+      "('CONCEPT', 'initializes', 'CONCEPT')": 4,
+      "('SYSTEM', 'rejects', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 3,
+      "('SYSTEM', 'contains', 'CONCEPT')": 7,
+      "('SYSTEM', 'rejects', 'SYSTEM')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 3,
+      "('CONCEPT', 'located_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'accepts', 'CONCEPT')": 1,
+      "('CONCEPT', 'detected_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'translated_into', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 13,
+      "('TECHNOLOGY', 'used_by', 'SYSTEM')": 1,
+      "('SYSTEM', 'defined_in', 'SYSTEM')": 1,
+      "('SYSTEM', 'contains', 'SYSTEM')": 36,
+      "('CONCEPT', 'creates', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'uses', 'SYSTEM')": 1,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'uses', 'SYSTEM')": 13,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 12,
+      "('TECHNOLOGY', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'rejects', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'STANDARD')": 1,
+      "('CONCEPT', 'imported_from', 'ORG')": 14,
+      "('CONCEPT', 'supports', 'CONCEPT')": 1,
+      "('CONCEPT', 'handles', 'CONCEPT')": 1,
+      "('CONCEPT', 'detects', 'CONCEPT')": 1,
+      "('CONCEPT', 'calls', 'CONCEPT')": 1,
+      "('SYSTEM', 'shares', 'SYSTEM')": 2,
+      "('CONCEPT', 'uses', 'STANDARD')": 2,
+      "('SYSTEM', 'shares_with', 'SYSTEM')": 6,
+      "('SYSTEM', 'independent_from', 'SYSTEM')": 2,
+      "('CONCEPT', 'unifies', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_by', 'SYSTEM')": 3,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'avoids', 'CONCEPT')": 2,
+      "('SYSTEM', 'shares_with', 'CONCEPT')": 2,
+      "('CONCEPT', 'rendered_by', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'rendered_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'implemented_as', 'CONCEPT')": 1,
+      "('SYSTEM', 'dispatches', 'CONCEPT')": 1,
+      "('SYSTEM', 'detects', 'CONCEPT')": 3,
+      "('SYSTEM', 'used_by', 'CONCEPT')": 2,
+      "('SYSTEM', 'auto-heals', 'CONCEPT')": 1,
+      "('CONCEPT', 'defined_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'registered_as', 'CONCEPT')": 1,
+      "('CONCEPT', 'not_added_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'grouped_per_workspace_in', 'SYSTEM')": 1,
+      "('SYSTEM', 'shows', 'CONCEPT')": 1,
+      "('SYSTEM', 'translates_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'must_use_pattern', 'CONCEPT')": 1,
+      "('CONCEPT', 'collides_with', 'CONCEPT')": 1,
+      "('CONCEPT', 'lives_under', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 2,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 1,
+      "('SYSTEM', 'has_property', 'CONCEPT')": 5,
+      "('CONCEPT', 'triggers', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'checks', 'CONCEPT')": 3,
+      "('CONCEPT', 'overrides', 'SYSTEM')": 1,
+      "('SYSTEM', 'sets', 'CONCEPT')": 1,
+      "('CONCEPT', 'calls', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'sets', 'CONCEPT')": 1,
+      "('CONCEPT', 'creates', 'CONCEPT')": 2,
+      "('CONCEPT', 'navigates_to', 'SYSTEM')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 3,
+      "('SYSTEM', 'imported_from', 'ORG')": 2,
+      "('SYSTEM', 'renders', 'SYSTEM')": 1,
+      "('SYSTEM', 'depends_on', 'CONCEPT')": 7,
+      "('CONCEPT', 'defines', 'CONCEPT')": 6,
+      "('CONCEPT', 'has_parameter', 'CONCEPT')": 1,
+      "('SYSTEM', 'leaves_undefined', 'CONCEPT')": 1,
+      "('CONCEPT', 'determines', 'SYSTEM')": 1,
+      "('SYSTEM', 'handles', 'CONCEPT')": 2,
+      "('SYSTEM', 'dispatched_by', 'CONCEPT')": 1,
+      "('SYSTEM', 'repoints', 'CONCEPT')": 1,
+      "('CONCEPT', 'acts_as', 'CONCEPT')": 1,
+      "('CONCEPT', 'falls_back_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 13,
+      "('TECHNOLOGY', 'related_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 2,
+      "('CONCEPT', 'implemented_by', 'CONCEPT')": 1,
+      "('SYSTEM', 'depends_on', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'depends_on', 'ORG')": 1,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 2
+    },
+    "schema_layer_size": 114,
+    "fact_layer_size": 448,
+    "passage_layer_size": 24
+  }
+}

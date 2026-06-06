@@ -11,7 +11,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from src.node.types import (
     AccessStats,
@@ -77,17 +77,28 @@ class DecisionNode(BaseModel):
     status: DecisionStatus = Field(default=DecisionStatus.PENDING)
     impact_level: ImpactLevel = Field(default=ImpactLevel.MINOR)
 
-    version: int = Field(default=1, description="Decision version (incrementing integer)")
+    version: str = Field(default="v1.0", description="Decision version (string like v1.0)")
     branch: str = Field(default="", description="Git branch name: decision/{sid}")
     parent_id: str = Field(default="", description="Parent decision SDRID, empty = root node")
-    conflict_status: str = Field(default="", description="Conflict status: ''|active|resolved")
+
+    # ==================== New fields ====================
+    decision_role: str = Field(default=DecisionRole.ROLE_DECISION, description="Role: decision/plan/consideration/action")
+    phase_scope: Optional[PhaseScope] = Field(default=PhaseScope.POINT, description="Phase scope of the decision")
+    decided_at: Optional[datetime] = Field(default=None, description="When the decision was decided")
+    source_type: str = Field(default="", description="Source channel: im/doc/meeting/manual")
+    source_message_id: str = Field(default="", description="Source message ID")
+    source_chat_id: str = Field(default="", description="Source chat ID")
+    extra: Dict[str, Any] = Field(default_factory=dict, description="Extra custom fields")
+
+    # Renamed to avoid shadowing the conflict_status() static method
+    conflict_state: str = Field(default="", description="Conflict status: ''|active|resolved")
     conflict_with: str = Field(default="", description="SDRID of the conflicting decision")
 
     tags: List[str] = Field(default_factory=list)
     relations: List[Relation] = Field(default_factory=list)
     objections: List[Objection] = Field(default_factory=list)
     feishu_links: FeishuLinks = Field(default_factory=FeishuLinks)
-    access_stats: AccessStats = Field(default_factory=AccessStats)
+    access_stats: Any = Field(default_factory=lambda: AccessStats())
     version_chain: List[VersionRange] = Field(default_factory=list)
 
     source: str = Field(default="", description="Source channel: lark_im / doc / meeting / manual")
@@ -98,6 +109,15 @@ class DecisionNode(BaseModel):
     git_commit_hash: str = Field(default="", description="Last git commit hash")
 
     is_suggestion: bool = Field(default=False, description="True if this is a suggestion rather than a firm decision")
+
+    @field_validator("version", mode="before")
+    @classmethod
+    def _coerce_version(cls, v: Any) -> str:
+        if isinstance(v, int):
+            return f"v{v}.0"
+        if isinstance(v, str) and v:
+            return v if v.startswith("v") else f"v{v}"
+        return "v1.0"
 
     # ==================== Status helpers ====================
 
@@ -117,13 +137,27 @@ class DecisionNode(BaseModel):
     # ==================== Branch version helpers ====================
 
     def branch_version(self) -> str:
-        return f"v{self.version}"
+        if not self.version or self.version == "":
+            return "v1.0"
+        return self.version
 
-    def next_version(self) -> int:
-        return self.version + 1
+    def next_version(self, current: Optional[str] = None) -> str:
+        if not self.version:
+            if current:
+                return current
+            return "v1.1"
+        ver = current or self.version
+        parts = ver.lstrip("v").split(".")
+        major = int(parts[0]) if parts[0].isdigit() else 1
+        minor = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else 0
+        return f"v{major}.{minor + 1}"
 
-    def next_major_version(self) -> int:
-        return self.version + 1
+    def next_major_version(self) -> str:
+        if not self.version:
+            return "v1.0"
+        parts = self.version.lstrip("v").split(".")
+        major = int(parts[0]) if parts[0].isdigit() else 1
+        return f"v{major + 1}.0"
 
     # ==================== Conflict helpers (from node.go) ====================
 
@@ -164,14 +198,14 @@ class DecisionNode(BaseModel):
 
     def add_child(self, child_sid: str) -> None:
         self.add_relation(Relation(
-            type=RelationType.PARENT_OF,
+            type=RelationType.RELATES_TO,
             target_id=child_sid,
             description=f"Parent of {child_sid}",
         ))
 
     def get_children(self, graph: Any = None) -> List[str]:
         """从 relations 中获取子决策 SDRID 列表"""
-        return [r.target_id for r in self.relations if r.type == RelationType.PARENT_OF]
+        return [r.target_id for r in self.relations if r.type == RelationType.RELATES_TO and "Parent of" in r.description]
 
     def has_parent(self) -> bool:
         return bool(self.parent_id)

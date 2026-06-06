@@ -157,6 +157,9 @@ class EvalRunner:
             new_decision_count = len(self._engine._graph.get_all_decisions()) if hasattr(self._engine, "_graph") else 0
             self._stats["decisions_created"] = new_decision_count - old_decision_count
 
+            # 5d. 推送到飞书群聊（如果配置了 CARD_CHAT_IDS）
+            self._push_decisions_to_feishu()
+
         # 6. 停止引擎
         await engine.stop()
 
@@ -166,6 +169,45 @@ class EvalRunner:
 
         # 8. 打印报告
         self._print_report()
+
+    def _push_decisions_to_feishu(self) -> None:
+        from src.card.config import CardConfig
+        card_config = CardConfig.from_env()
+        if not card_config.enable_feishu or not card_config.card_chat_ids:
+            logger.info("[Eval] Feishu push disabled (enable_feishu=%s, card_chat_ids=%s)",
+                        card_config.enable_feishu, card_config.card_chat_ids)
+            return
+        if self._engine is None or not hasattr(self._engine, "_graph"):
+            return
+
+        try:
+            from src.adapter.lark_im import create_client_from_env
+            lark_client = create_client_from_env()
+        except Exception as e:
+            logger.warning("[Eval] Failed to create Lark client for push: %s", e)
+            return
+
+        from src.card.pusher import PushEngine, PushTrigger
+        engine = PushEngine(
+            config=card_config,
+            memory_graph=self._engine._graph,
+            pipeline=None,
+            lark_client=lark_client,
+        )
+
+        decisions = self._engine._graph.get_all_decisions()
+        if not decisions:
+            logger.info("[Eval] No decisions to push")
+            return
+
+        logger.info("[Eval] Pushing %d decision(s) to Feishu chat(s): %s",
+                    len(decisions), card_config.card_chat_ids)
+        success = 0
+        for d in decisions:
+            ok = engine.push_decision_card(d.sid, PushTrigger.MANUAL_QUERY)
+            if ok:
+                success += 1
+        logger.info("[Eval] Feishu push result: %d/%d success", success, len(decisions))
 
     def _load_messages(self) -> List[Union[str, Dict[str, Any]]]:
         path = Path(self._input_path)

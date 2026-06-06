@@ -1,0 +1,200 @@
+{"chat_id": "chat_0", "msg_id": "m001", "speaker": "Alice", "msg": "大家好，今天讨论多智能体循环架构，我提议用Main+Reviewer+Planner+Stall四个Agent协作，这样职责清晰。", "is_distractor": false, "expected_decision": true, "expected_topic": "多智能体循环架构", "expected_summary": "Alice提议采用Main+Reviewer+Planner+Stall四Agent协作架构", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_0", "msg_id": "m002", "speaker": "Bob", "msg": "这个架构看起来合理，但Stall Agent的职责需要明确，是用来处理超时或阻塞的吗？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m003", "speaker": "Charlie", "msg": "我担心Stall Agent会增加复杂性，建议先明确它的触发条件和行为。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m004", "speaker": "Diana", "msg": "从产品角度，Stall Agent能防止死循环，对用户体验很重要，我支持。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m005", "speaker": "Bob", "msg": "那Main Agent负责协调，Reviewer做质量检查，Planner制定计划，Stall处理异常，分工没问题。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m006", "speaker": "Alice", "msg": "好，那四Agent架构就这么定了，Stall Agent在检测到超时或循环时介入。", "is_distractor": false, "expected_decision": true, "expected_topic": "多智能体循环架构", "expected_summary": "Alice确认采用四Agent架构，Stall负责处理超时和循环", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_0", "msg_id": "m007", "speaker": "Charlie", "msg": "午餐吃什么？我快饿死了。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m008", "speaker": "Diana", "msg": "楼下新开了家川菜馆，要不要试试？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m009", "speaker": "Alice", "msg": "先讨论完再说吃的。接下来讨论PlannerAgent的模式选择，有三种模式：auto、execute-only、record-only。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m010", "speaker": "Bob", "msg": "auto模式自动决定执行或记录，灵活性最高，但可能不够可控。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m011", "speaker": "Charlie", "msg": "execute-only模式只执行不记录，性能好但缺乏审计。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m012", "speaker": "Diana", "msg": "record-only模式只记录不执行，适合测试和调试。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m013", "speaker": "Alice", "msg": "我建议默认用auto模式，特殊情况切换。", "is_distractor": false, "expected_decision": true, "expected_topic": "PlannerAgent模式选择", "expected_summary": "Alice建议默认使用auto模式，特殊情况可切换", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_0", "msg_id": "m014", "speaker": "Bob", "msg": "auto模式好，但需要加一个配置项来限制自动决策的范围，防止误操作。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m015", "speaker": "Charlie", "msg": "我担心auto模式在复杂场景下可能选错，建议默认用execute-only，更稳定。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m016", "speaker": "Diana", "msg": "用户场景不同，需求也不一样，auto模式能自适应最好，但需要充分测试。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m017", "speaker": "Alice", "msg": "Charlie的顾虑有道理，那我们默认用execute-only，但保留auto作为可选，通过配置切换。", "is_distractor": false, "expected_decision": true, "expected_topic": "PlannerAgent模式选择", "expected_summary": "Alice最终决策：默认execute-only，保留auto作为可选配置", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_0", "msg_id": "m018", "speaker": "Bob", "msg": "同意，这样既稳定又灵活。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m019", "speaker": "Diana", "msg": "那record-only模式什么时候用？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m020", "speaker": "Alice", "msg": "record-only用于开发和测试阶段，上线后关闭。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m021", "speaker": "Charlie", "msg": "今天天气真热，空调能不能开大点？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m022", "speaker": "Bob", "msg": "我刚调了，过一会儿就凉快了。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m023", "speaker": "Alice", "msg": "好，那Planner模式也定了，接下来讨论一下实现细节。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m024", "speaker": "Bob", "msg": "我建议Main Agent用事件驱动方式，这样扩展性好。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m025", "speaker": "Charlie", "msg": "事件驱动要注意消息队列的可靠性，否则容易丢消息。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m026", "speaker": "Diana", "msg": "可靠性是必须的，用户不能感觉到卡顿或失败。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m027", "speaker": "Alice", "msg": "Bob，你出个事件驱动的设计文档，下周review。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m028", "speaker": "Bob", "msg": "没问题，我周五前给初稿。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m029", "speaker": "Charlie", "msg": "Reviewer Agent的反馈周期建议设置成异步，避免阻塞主流程。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m030", "speaker": "Alice", "msg": "好，Reviewer异步处理，这个也写进设计文档。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m031", "speaker": "Diana", "msg": "我去接杯水，谁要？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m032", "speaker": "Bob", "msg": "帮我带一杯，谢谢。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m033", "speaker": "Alice", "msg": "那今天就到这，大家按分工推进。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m034", "speaker": "Charlie", "msg": "我明天部署测试环境，需要提前通知我。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m035", "speaker": "Diana", "msg": "好，我发个通知给团队。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m036", "speaker": "Bob", "msg": "对了，刚才说的川菜馆，今晚有人去吗？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m037", "speaker": "Alice", "msg": "我晚上有会，去不了。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m038", "speaker": "Charlie", "msg": "我去，叫上Diana一起？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m039", "speaker": "Diana", "msg": "行，那下班后一楼集合。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_0", "msg_id": "m040", "speaker": "Alice", "msg": "好了，都去忙吧，下周见。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m001", "speaker": "Alice", "msg": "我们考虑一下Daemon和CLI双模式，后台常驻进程加上一次性命令行执行，大家怎么看？", "is_distractor": false, "expected_decision": true, "expected_topic": "Daemon与CLI双模式", "expected_summary": "提出Daemon+CLI双模式方案", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_1", "msg_id": "m002", "speaker": "Bob", "msg": "这个思路不错，但后台Daemon的资源占用和日志管理需要设计好，不然长期运行会有问题。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m003", "speaker": "Eve", "msg": "前端这边CLI一次性执行比较方便，Daemon模式对API调用更友好，我支持。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m004", "speaker": "Frank", "msg": "Daemon模式有安全风险，如果监听端口需要严格访问控制，建议默认关闭。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m005", "speaker": "Alice", "msg": "好，那就定下来双模式，Daemon默认不启动，CLI优先实现。", "is_distractor": false, "expected_decision": true, "expected_topic": "Daemon与CLI双模式", "expected_summary": "确认双模式方案，Daemon默认关闭，CLI优先", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m006", "speaker": "Bob", "msg": "今天午饭吃什么？我有点饿。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m007", "speaker": "Eve", "msg": "楼下新开的麻辣烫不错，要不去试试？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m008", "speaker": "Alice", "msg": "接下来讨论Codex CLI封装，用subprocess.Popen来调用，大家觉得？", "is_distractor": false, "expected_decision": true, "expected_topic": "Codex CLI封装", "expected_summary": "提出使用subprocess.Popen封装Codex CLI", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_1", "msg_id": "m009", "speaker": "Bob", "msg": "subprocess.Popen比较直接，但要注意进程管理和超时处理，防止僵尸进程。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m010", "speaker": "Frank", "msg": "封装CLI输入输出需要做参数校验，防止注入攻击，尤其是用户输入的部分。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m011", "speaker": "Eve", "msg": "前端只需要标准输出，异步处理就行，Popen应该够用。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m012", "speaker": "Alice", "msg": "行，就用subprocess.Popen，加上超时和参数校验，就这么办。", "is_distractor": false, "expected_decision": true, "expected_topic": "Codex CLI封装", "expected_summary": "确认使用subprocess.Popen，增加超时和参数校验", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m013", "speaker": "Bob", "msg": "我下午要写个定时任务，用Daemon模式来触发？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m014", "speaker": "Alice", "msg": "可以，但记得先起CLI版本测试，稳定了再切Daemon。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m015", "speaker": "Eve", "msg": "今天天气真热，办公室空调是不是坏了？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m016", "speaker": "Frank", "msg": "Daemon模式如果监听localhost，安全风险会小很多，建议绑定127.0.0.1。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m017", "speaker": "Alice", "msg": "同意，Daemon绑定localhost，端口用随机高位端口，避免冲突。", "is_distractor": false, "expected_decision": true, "expected_topic": "Daemon与CLI双模式", "expected_summary": "Daemon绑定localhost并使用随机高位端口", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m018", "speaker": "Bob", "msg": "好的，我记一下接口设计，CLI和Daemon共用一套核心逻辑。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m019", "speaker": "Alice", "msg": "对，代码复用很重要，别写两套。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m020", "speaker": "Eve", "msg": "点奶茶吗？凑单满减。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m021", "speaker": "Frank", "msg": "Codex CLI封装那边，建议加个白名单参数列表，别什么都传。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m022", "speaker": "Bob", "msg": "好主意，白名单可以减少攻击面，我来实现。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m023", "speaker": "Alice", "msg": "Frank说得对，加白名单，Bob负责落地。", "is_distractor": false, "expected_decision": true, "expected_topic": "Codex CLI封装", "expected_summary": "增加白名单参数列表，由Bob实现", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m024", "speaker": "Eve", "msg": "我这边前端要展示Daemon的运行状态，需要暴露一个健康检查接口。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m025", "speaker": "Alice", "msg": "可以，加一个/health端点，返回简单状态。", "is_distractor": false, "expected_decision": true, "expected_topic": "Daemon与CLI双模式", "expected_summary": "Daemon增加/health健康检查接口", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m026", "speaker": "Bob", "msg": "那我设计一下进程管理，Daemon用systemd服务还是自己管理？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m027", "speaker": "Alice", "msg": "自己管理吧，保持轻量，systemd依赖太重。", "is_distractor": false, "expected_decision": true, "expected_topic": "Daemon与CLI双模式", "expected_summary": "Daemon进程自行管理，不依赖systemd", "expected_status": "decided", "expected_impact": "major", "difficulty": "hard", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m028", "speaker": "Frank", "msg": "自己管理的话，pid文件和信号处理要做好，防止异常退出。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m029", "speaker": "Bob", "msg": "嗯，我会用atexit和信号钩子。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m030", "speaker": "Eve", "msg": "今天下午茶谁请客？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m031", "speaker": "Alice", "msg": "我请，但先干完活。回到Codex CLI封装，日志输出格式统一一下。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m032", "speaker": "Bob", "msg": "JSON格式输出？方便前端解析。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m033", "speaker": "Alice", "msg": "好，JSON格式，统一字段名。", "is_distractor": false, "expected_decision": true, "expected_topic": "Codex CLI封装", "expected_summary": "统一使用JSON格式输出日志", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_1", "msg_id": "m034", "speaker": "Frank", "msg": "日志里不要包含敏感信息，比如命令行参数。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m035", "speaker": "Alice", "msg": "对，敏感信息脱敏，Frank你列个清单。", "is_distractor": false, "expected_decision": true, "expected_topic": "Codex CLI封装", "expected_summary": "日志中敏感信息脱敏，Frank提供清单", "expected_status": "pending", "expected_impact": "minor", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_1", "msg_id": "m036", "speaker": "Bob", "msg": "我周末加班把Daemon核心搞完，周一大家review。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m037", "speaker": "Alice", "msg": "辛苦，周一上午开个短会过一下。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m038", "speaker": "Eve", "msg": "那我周一之前把前端mock接口准备好。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m039", "speaker": "Frank", "msg": "我下周三前出安全审计报告，覆盖这两个话题。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_1", "msg_id": "m040", "speaker": "Alice", "msg": "好，大家行动，明天下午茶我请！", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m001", "speaker": "Bob", "msg": "我觉得可以用JSONL作为命令总线，daemon和child各一个文件，这样读写隔离，避免锁竞争。", "is_distractor": false, "expected_decision": true, "expected_topic": "JSONL命令总线", "expected_summary": "建议daemon和child各用一个JSONL文件实现命令总线", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_2", "msg_id": "m002", "speaker": "Charlie", "msg": "各一个文件确实能减少I/O冲突，但得考虑清理机制，不然文件会无限增长。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m003", "speaker": "Grace", "msg": "那测试的时候需要模拟并发读写两个文件，确保数据一致性。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m004", "speaker": "Hank", "msg": "文件格式定了吗？每条记录包含timestamp、cmd、payload？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m005", "speaker": "Bob", "msg": "对，标准JSONL，每条一个JSON对象，含id, type, data, timestamp。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m006", "speaker": "Charlie", "msg": "我建议daemon的文件由daemon自己轮转，child文件由child轮转，互不干扰。", "is_distractor": false, "expected_decision": true, "expected_topic": "JSONL命令总线", "expected_summary": "建议daemon和child各自负责自己的文件轮转", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_2", "msg_id": "m007", "speaker": "Grace", "msg": "中午吃什么？我有点想吃麻辣烫。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m008", "speaker": "Bob", "msg": "好，那就这么定：两个JSONL文件，各自轮转，每条记录标准格式。", "is_distractor": false, "expected_decision": true, "expected_topic": "JSONL命令总线", "expected_summary": "确认采用双JSONL文件方案，各自轮转，标准记录格式", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_2", "msg_id": "m009", "speaker": "Hank", "msg": "下一个话题，会话持久化策略。session状态需要持久化到state_file吗？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m010", "speaker": "Bob", "msg": "我建议把session状态持久化到state_file，这样崩溃恢复时可以直接加载。", "is_distractor": false, "expected_decision": true, "expected_topic": "会话持久化策略", "expected_summary": "建议将session状态持久化到state_file用于崩溃恢复", "expected_status": "pending", "expected_impact": "critical", "difficulty": "hard", "is_suggestion": true}
+{"chat_id": "chat_2", "msg_id": "m011", "speaker": "Charlie", "msg": "持久化到文件的话，写频率怎么控制？高频写入会影响性能。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m012", "speaker": "Grace", "msg": "测试时要验证文件损坏或写入一半的情况，确保恢复逻辑健壮。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m013", "speaker": "Hank", "msg": "可以做成增量快照，每N次操作写一次完整状态，减少I/O。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m014", "speaker": "Bob", "msg": "增量快照不错，但初始实现先做全量持久化，后面再优化。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m015", "speaker": "Charlie", "msg": "建议加一个校验和，写入后验证完整性，读取时检查。", "is_distractor": false, "expected_decision": true, "expected_topic": "会话持久化策略", "expected_summary": "建议在state_file中加入校验和保证数据完整性", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_2", "msg_id": "m016", "speaker": "Grace", "msg": "校验和可以用SHA256吗？还是简单的CRC32就够了？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m017", "speaker": "Bob", "msg": "CRC32够用，毕竟只是检测传输或写入错误，不是防篡改。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m018", "speaker": "Hank", "msg": "文件路径和命名规范也定一下吧，比如state_<session_id>.json。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m019", "speaker": "Bob", "msg": "可以，每个session独立一个state_file，命名就用session_id。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m020", "speaker": "Charlie", "msg": "今天天气真好，难得不下雨。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m021", "speaker": "Grace", "msg": "那持久化时机呢？每次状态变更都写？还是定时写？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m022", "speaker": "Bob", "msg": "关键操作后立即写，非关键操作批量写，比如每5秒一次。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m023", "speaker": "Hank", "msg": "关键操作可以定义成：会话创建、销毁、权限变更。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m024", "speaker": "Charlie", "msg": "这个分类可以，但批量写入要考虑原子性，避免写一半崩溃。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m025", "speaker": "Bob", "msg": "那就用临时文件+rename的方式保证原子写入。", "is_distractor": false, "expected_decision": true, "expected_topic": "会话持久化策略", "expected_summary": "确认使用临时文件+rename实现原子写入，关键操作立即持久化", "expected_status": "decided", "expected_impact": "critical", "difficulty": "hard", "is_suggestion": false}
+{"chat_id": "chat_2", "msg_id": "m026", "speaker": "Grace", "msg": "测试我会覆盖正常写入、写入中断、文件损坏等场景。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m027", "speaker": "Hank", "msg": "持久化格式用JSON还是Protocol Buffers？JSON可读性好，但体积大。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m028", "speaker": "Bob", "msg": "先JSON吧，方便调试，后续性能瓶颈再优化。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m029", "speaker": "Charlie", "msg": "JSON没问题，但注意不要序列化循环引用。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m030", "speaker": "Grace", "msg": "谁要点奶茶？我准备下单了。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m031", "speaker": "Bob", "msg": "我要一杯四季春茶，少糖。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m032", "speaker": "Hank", "msg": "我不喝奶茶，谢谢。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m033", "speaker": "Charlie", "msg": "给我来一杯乌龙玛奇朵。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m034", "speaker": "Bob", "msg": "回到技术话题，session过期策略也要持久化到state_file吗？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m035", "speaker": "Hank", "msg": "过期时间应该作为session元数据的一部分，持久化时一起存。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m036", "speaker": "Charlie", "msg": "恢复时如果session已过期，直接丢弃，不加载。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m037", "speaker": "Bob", "msg": "对，恢复时先校验过期时间，过期的直接清理。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m038", "speaker": "Grace", "msg": "那清理逻辑也需要测试，确保过期session不会残留。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m039", "speaker": "Hank", "msg": "整体方案我整理一下：每个session独立state_file，JSON格式，CRC32校验，临时文件+rename写入，关键操作立即持久化。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_2", "msg_id": "m040", "speaker": "Bob", "msg": "没错，这就是最终方案，开始实现吧。", "is_distractor": false, "expected_decision": true, "expected_topic": "会话持久化策略", "expected_summary": "确认完整持久化方案：独立文件、JSON格式、CRC32校验、原子写入、关键操作即时持久化", "expected_status": "decided", "expected_impact": "critical", "difficulty": "hard", "is_suggestion": false}
+{"chat_id": "chat_3", "msg_id": "m001", "speaker": "Alice", "msg": "大家早，今天先讨论Telegram集成的事。我建议直接用长轮询，简单可靠，不需要Webhook的额外运维。", "is_distractor": false, "expected_decision": true, "expected_topic": "Telegram集成", "expected_summary": "建议采用长轮询方式集成Telegram", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_3", "msg_id": "m002", "speaker": "Ivy", "msg": "长轮询延迟高，我倾向Webhook，实时性好。不过既然Alice说长轮询简单，那先听听具体方案。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m003", "speaker": "Diana", "msg": "用户对延迟敏感吗？如果只是通知类，长轮询够用。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m004", "speaker": "Jack", "msg": "长轮询实现成本低，初期先用，后面可以升级。我支持Alice。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m005", "speaker": "Alice", "msg": "好，那Telegram集成就用长轮询，Ivy你评估下轮询间隔，默认2秒。", "is_distractor": false, "expected_decision": true, "expected_topic": "Telegram集成", "expected_summary": "确认采用长轮询集成，默认轮询间隔2秒", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_3", "msg_id": "m006", "speaker": "Ivy", "msg": "OK，2秒可以，我下午开始写代码。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m007", "speaker": "Diana", "msg": "中午有人一起点奶茶吗？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m008", "speaker": "Jack", "msg": "我要一杯四季春。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m009", "speaker": "Alice", "msg": "接下来讨论飞书集成方案。飞书那边要求短轮询2秒，我觉得可以接受。", "is_distractor": false, "expected_decision": true, "expected_topic": "飞书集成方案", "expected_summary": "提出飞书集成采用短轮询2秒方案", "expected_status": "pending", "expected_impact": "minor", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_3", "msg_id": "m010", "speaker": "Ivy", "msg": "2秒轮询对服务器压力不大，但飞书API有频率限制，需要加退避逻辑。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m011", "speaker": "Diana", "msg": "产品角度，2秒延迟用户无感，没问题。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m012", "speaker": "Jack", "msg": "退避逻辑必须加，防止被封。另外建议做个开关，紧急时可调大间隔。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m013", "speaker": "Alice", "msg": "同意，飞书短轮询2秒+退避逻辑，Ivy你实现时加上可配置的间隔参数。", "is_distractor": false, "expected_decision": true, "expected_topic": "飞书集成方案", "expected_summary": "确认飞书集成采用短轮询2秒并增加退避逻辑和可配置间隔参数", "expected_status": "decided", "expected_impact": "minor", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_3", "msg_id": "m014", "speaker": "Ivy", "msg": "明白，我一起做。退避用指数退避，初始1秒，最大30秒。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m015", "speaker": "Diana", "msg": "对了，飞书那边有机器人还是用Webhook？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m016", "speaker": "Alice", "msg": "机器人，飞书开放平台建个应用就行。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m017", "speaker": "Jack", "msg": "那就两个方案都定了，我整理一下文档。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m018", "speaker": "Ivy", "msg": "文档我来写吧，Jack你帮review。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m019", "speaker": "Alice", "msg": "可以，今天下班前出初稿。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m020", "speaker": "Diana", "msg": "那我去跟飞书那边同步一下时间线。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m021", "speaker": "Jack", "msg": "茶颜悦色新出了个栀子花奶茶，有人试过吗？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m022", "speaker": "Ivy", "msg": "没喝过，好喝吗？", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m023", "speaker": "Diana", "msg": "一般般，我觉得太甜了。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m024", "speaker": "Alice", "msg": "回到正题，Telegram长轮询的异常处理，Ivy你有方案吗？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m025", "speaker": "Ivy", "msg": "连接断开自动重连，超时重置，错误日志打全。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m026", "speaker": "Alice", "msg": "加个健康检查接口，监控轮询状态。", "is_distractor": false, "expected_decision": true, "expected_topic": "Telegram集成", "expected_summary": "建议增加健康检查接口监控长轮询状态", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_3", "msg_id": "m027", "speaker": "Jack", "msg": "这个好，可以整合到现有的监控系统。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m028", "speaker": "Ivy", "msg": "没问题，加个/health端点。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m029", "speaker": "Alice", "msg": "那就定下来，健康检查加上。", "is_distractor": false, "expected_decision": true, "expected_topic": "Telegram集成", "expected_summary": "确认增加健康检查接口", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_3", "msg_id": "m030", "speaker": "Diana", "msg": "飞书那边有没有类似需求？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m031", "speaker": "Alice", "msg": "飞书也加一个，统一监控。", "is_distractor": false, "expected_decision": true, "expected_topic": "飞书集成方案", "expected_summary": "建议飞书集成也增加健康检查接口统一监控", "expected_status": "pending", "expected_impact": "minor", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_3", "msg_id": "m032", "speaker": "Ivy", "msg": "好，两个一起做。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m033", "speaker": "Jack", "msg": "确认一下，飞书健康检查也是/health吗？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m034", "speaker": "Alice", "msg": "对，统一路径，通过参数区分平台。", "is_distractor": false, "expected_decision": true, "expected_topic": "飞书集成方案", "expected_summary": "确认飞书健康检查使用统一/health路径，通过参数区分平台", "expected_status": "decided", "expected_impact": "minor", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_3", "msg_id": "m035", "speaker": "Ivy", "msg": "收到，我排一下优先级，先做Telegram再做飞书。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m036", "speaker": "Diana", "msg": "大概什么时候能上线？我约客户演示。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m037", "speaker": "Jack", "msg": "下周三前能完成开发和测试。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m038", "speaker": "Alice", "msg": "那就下周三上线，Diana你安排一下演示时间。", "is_distractor": false, "expected_decision": true, "expected_topic": "Telegram集成", "expected_summary": "确认下周三上线，安排客户演示", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_3", "msg_id": "m039", "speaker": "Diana", "msg": "好的，我去约。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_3", "msg_id": "m040", "speaker": "Ivy", "msg": "那我去干活了，大家有问题随时找我。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m001", "speaker": "Charlie", "msg": "关于stall检测阈值，我建议设置为500ms，这个值比较稳妥，不会误报。", "is_distractor": false, "expected_decision": true, "expected_topic": "Stall检测配置", "expected_summary": "Charlie建议stall检测阈值为500ms", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_4", "msg_id": "m002", "speaker": "Frank", "msg": "500ms会不会太长了？用户感知到的卡顿可能更敏感，我觉得300ms更合理。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m003", "speaker": "Grace", "msg": "我测试过类似场景，400ms左右用户体验还可以，但要看实际业务容忍度。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m004", "speaker": "Hank", "msg": "从数据看，过去一周平均网络延迟在200ms左右，阈值设为400ms能覆盖95%的正常波动。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m005", "speaker": "Charlie", "msg": "好，那基于Hank的数据，我调整为400ms作为建议值，大家觉得如何？", "is_distractor": false, "expected_decision": true, "expected_topic": "Stall检测配置", "expected_summary": "Charlie根据数据调整建议阈值为400ms", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_4", "msg_id": "m006", "speaker": "Frank", "msg": "400ms可以接受，但需要加上降级处理逻辑，不能直接判定为stall。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m007", "speaker": "Grace", "msg": "我这边先按400ms写测试用例，覆盖边界情况。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m008", "speaker": "Hank", "msg": "确认一下，阈值是连续超过400ms还是累积？建议用连续。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m009", "speaker": "Charlie", "msg": "连续超过400ms，持续1秒视为stall，这样更准确。", "is_distractor": false, "expected_decision": true, "expected_topic": "Stall检测配置", "expected_summary": "Charlie确认连续超过400ms持续1秒为stall", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_4", "msg_id": "m010", "speaker": "Frank", "msg": "好，那这个方案定了。接下来讨论invalid encrypted content恢复的问题。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m011", "speaker": "Grace", "msg": "今天食堂有红烧肉，好香。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m012", "speaker": "Hank", "msg": "我建议对于invalid encrypted content，直接丢弃并记录日志，不要尝试恢复。", "is_distractor": false, "expected_decision": true, "expected_topic": "错误恢复机制", "expected_summary": "Hank建议直接丢弃并记录日志", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_4", "msg_id": "m013", "speaker": "Charlie", "msg": "直接丢弃太暴力了，应该尝试重新拉取一次，如果还是invalid再丢弃。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m014", "speaker": "Frank", "msg": "重试有安全风险，万一攻击者故意发invalid数据，重试会放大压力。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m015", "speaker": "Grace", "msg": "我测试过类似场景，重试一次的成功率大概只有10%，意义不大。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m016", "speaker": "Hank", "msg": "从数据看，invalid encrypted content出现频率极低，不到0.01%，直接丢弃影响最小。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m017", "speaker": "Charlie", "msg": "那这样，我们折中：尝试重试一次，如果失败就丢弃，并告警。", "is_distractor": false, "expected_decision": true, "expected_topic": "错误恢复机制", "expected_summary": "Charlie建议重试一次后丢弃并告警", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_4", "msg_id": "m018", "speaker": "Frank", "msg": "重试一次可以，但必须限制在同一个节点，不能跨节点重试。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m019", "speaker": "Grace", "msg": "那告警级别怎么定？我建议设为warning。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m020", "speaker": "Hank", "msg": "warning可以，但如果是连续出现，应该升级为error。", "is_distractor": false, "expected_decision": true, "expected_topic": "错误恢复机制", "expected_summary": "Hank建议连续出现时升级为error", "expected_status": "pending", "expected_impact": "major", "difficulty": "medium", "is_suggestion": true}
+{"chat_id": "chat_4", "msg_id": "m021", "speaker": "Charlie", "msg": "好，那就这么定：重试一次，失败丢弃，单次warning，连续出现error。", "is_distractor": false, "expected_decision": true, "expected_topic": "错误恢复机制", "expected_summary": "Charlie确认重试一次、失败丢弃、连续error的恢复方案", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium", "is_suggestion": false}
+{"chat_id": "chat_4", "msg_id": "m022", "speaker": "Frank", "msg": "同意，这个方案兼顾了安全与可用性。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m023", "speaker": "Grace", "msg": "好的，我写测试用例覆盖重试和连续error场景。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m024", "speaker": "Hank", "msg": "需要我提供历史数据支撑吗？我有一些样本。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m025", "speaker": "Charlie", "msg": "可以，发给我一份，我顺便看看阈值需要不需要调整。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m026", "speaker": "Frank", "msg": "对了，stall检测的告警也记得加上。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m027", "speaker": "Grace", "msg": "午饭时间到了，大家先吃饭吧。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m028", "speaker": "Hank", "msg": "回来继续，关于stall检测的日志级别，我建议设为info。", "is_distractor": false, "expected_decision": true, "expected_topic": "Stall检测配置", "expected_summary": "Hank建议stall日志级别设为info", "expected_status": "pending", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": true}
+{"chat_id": "chat_4", "msg_id": "m029", "speaker": "Charlie", "msg": "info可以，但出现stall时应该同时记录上下文。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m030", "speaker": "Frank", "msg": "上下文包含哪些字段？建议只记录时间戳和会话ID，不记录内容。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m031", "speaker": "Grace", "msg": "那测试用例里需要验证日志字段完整性。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m032", "speaker": "Hank", "msg": "时间戳、会话ID、节点ID，这三个就够排查了。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m033", "speaker": "Charlie", "msg": "好，那就这三个字段，日志级别info，我更新一下配置。", "is_distractor": false, "expected_decision": true, "expected_topic": "Stall检测配置", "expected_summary": "Charlie确认日志字段为时间戳、会话ID、节点ID", "expected_status": "decided", "expected_impact": "minor", "difficulty": "easy", "is_suggestion": false}
+{"chat_id": "chat_4", "msg_id": "m034", "speaker": "Frank", "msg": "下午有安全审计，我先去准备了。", "is_distractor": true, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m035", "speaker": "Grace", "msg": "那invalid encrypted content的测试我明天提交。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m036", "speaker": "Hank", "msg": "数据样本我已经整理好了，稍后发到群里。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m037", "speaker": "Charlie", "msg": "感谢大家配合，今天两个话题都明确了。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m038", "speaker": "Frank", "msg": "等一下，invalid encrypted content的重试次数确认是1次对吧？", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m039", "speaker": "Charlie", "msg": "对，1次，确认。", "is_distractor": false, "expected_decision": false}
+{"chat_id": "chat_4", "msg_id": "m040", "speaker": "Grace", "msg": "好的，那我开始写测试计划了。", "is_distractor": false, "expected_decision": false}

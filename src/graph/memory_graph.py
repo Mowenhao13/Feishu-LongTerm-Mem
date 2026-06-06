@@ -289,14 +289,13 @@ class MemoryGraph:
             except Exception:
                 created_at_val = None
 
-        raw_version = data.get("version", 1)
-        if isinstance(raw_version, str):
-            try:
-                version = int(raw_version.lstrip("v").split(".")[0])
-            except (ValueError, IndexError):
-                version = 1
+        raw_version = data.get("version", "v1.0")
+        if isinstance(raw_version, int):
+            version = f"v{raw_version}.0"
+        elif isinstance(raw_version, str) and raw_version:
+            version = raw_version if raw_version.startswith("v") else f"v{raw_version}"
         else:
-            version = int(raw_version) if raw_version else 1
+            version = "v1.0"
 
         return DecisionNode(
             sid=sid,
@@ -309,7 +308,7 @@ class MemoryGraph:
             impact_level=impact,
             version=version,
             branch=data.get("branch", ""),
-            conflict_status=data.get("conflict_status", ""),
+            conflict_state=data.get("conflict_status", ""),
             conflict_with=data.get("conflict_with", ""),
             proposer=data.get("proposer", ""),
             authority=data.get("authority", "") or data.get("proposer", ""),
@@ -334,7 +333,7 @@ class MemoryGraph:
             "version": node.version,
             "branch": node.branch or f"decision/{node.sid}",
             "parent_id": node.parent_id,
-            "conflict_status": node.conflict_status,
+            "conflict_status": node.conflict_state,
             "conflict_with": node.conflict_with,
             "proposer": node.proposer,
             "authority": node.authority,
@@ -360,16 +359,9 @@ class MemoryGraph:
             ]
 
     def get_children_of(self, sid: str) -> List[DecisionNode]:
-        """获取指定决策的直接子决策列表（同时检查 parent_id 字段和 PARENT_OF 关系）"""
+        """获取指定决策的直接子决策列表（基于 parent_id 字段）"""
         with self._lock:
-            # 从 PARENT_OF 关系获取
-            parent = self._decisions.get(sid)
-            if parent is None:
-                return []
-            child_ids = set(
-                r.target_id for r in parent.relations if r.type == RelationType.PARENT_OF
-            )
-            # 从 parent_id 字段获取（当子节点直接设置了 parent_id 时）
+            child_ids = set()
             for node in self._decisions.values():
                 if node.parent_id == sid and node.sid != sid:
                     child_ids.add(node.sid)

@@ -72,11 +72,22 @@ class GitStorage:
         self._work_dir.mkdir(parents=True, exist_ok=True)
         git_dir = self._work_dir / ".git"
         if git_dir.exists():
+            logger.debug("[GitStorage] Git repo already exists at %s", self._work_dir)
             return
 
+        logger.info("[GitStorage] Initializing git repo at %s...", self._work_dir)
         self._cli.run("init")
         self._cli.run("config", "user.name", self._config.git_user_name)
         self._cli.run("config", "user.email", self._config.git_user_email)
+
+        # Verify git repo was created successfully
+        head_file = git_dir / "HEAD"
+        if not head_file.exists():
+            raise GitStorageError(
+                f"Git repo initialization failed: .git/HEAD not found at {git_dir}. "
+                f"Check that '{self._work_dir}' is writable and git is installed."
+            )
+        logger.info("[GitStorage] Git repo initialized at %s", self._work_dir)
 
         rules_path = self._work_dir / "L0_RULES.md"
         if not rules_path.exists():
@@ -100,40 +111,40 @@ class GitStorage:
     # ==================== Decision CRUD ====================
 
     def write_decision(self, decision: Dict[str, Any]) -> str:
+        project = decision.get("project", "default")
+        topic = decision.get("topic_id", "") or decision.get("topic", "general")
+        sid = decision.get("sid", "") or decision.get("id", "")
+        if not sid:
+            raise GitStorageError("decision must have 'sid' or 'id' field")
+
+        decision_dir = self._work_dir / "decisions" / project / topic
+        decision_dir.mkdir(parents=True, exist_ok=True)
+
+        path = decision_dir / f"{sid}.md"
+
+        original_branch = self.get_current_branch()
+        if original_branch != self._config.branch:
+            self._switch_to_branch(self._config.branch)
+
+        # Create decision branch if it doesn't exist (for list_decision_branches)
         branch = self._get_decision_branch(decision)
-        saved_branch = self.get_current_branch()
-
         self._ensure_decision_branch(branch)
-        if saved_branch != branch:
-            self._switch_to_branch(branch)
 
-        try:
-            project = decision.get("project", "default")
-            topic = decision.get("topic_id", "") or decision.get("topic", "general")
-            sid = decision.get("sid", "") or decision.get("id", "")
-            if not sid:
-                raise GitStorageError("decision must have 'sid' or 'id' field")
+        version = self._cli.rev_list_count(branch, self._config.branch)
+        decision["version"] = version + 1
 
-            decision_dir = self._work_dir / "decisions" / project / topic
-            decision_dir.mkdir(parents=True, exist_ok=True)
+        content = render_decision_file(decision)
+        path.write_text(content, encoding="utf-8")
 
-            path = decision_dir / f"{sid}.md"
+        rel_path = str(path.relative_to(self._work_dir))
+        msg = self._format_commit_message("decision", decision)
+        commit_hash = self._cli.commit(rel_path, msg)
 
-            version = self._cli.rev_list_count(branch, self._config.branch)
-            decision["version"] = version + 1
+        # Update decision branch to point to the same commit as main
+        self._cli.update_ref(branch, commit_hash)
 
-            content = render_decision_file(decision)
-            path.write_text(content, encoding="utf-8")
-
-            rel_path = str(path.relative_to(self._work_dir))
-            msg = self._format_commit_message("decision", decision)
-            commit_hash = self._cli.commit(rel_path, msg)
-
-            decision["git_commit_hash"] = commit_hash
-            self._run_post_commit_hooks(sid)
-        finally:
-            if saved_branch and saved_branch != branch:
-                self._switch_to_branch(saved_branch)
+        decision["git_commit_hash"] = commit_hash
+        self._run_post_commit_hooks(sid)
 
         if self._config.auto_push and self._config.remote:
             self._push()

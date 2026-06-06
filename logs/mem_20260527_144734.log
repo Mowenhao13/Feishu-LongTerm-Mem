@@ -1,0 +1,233 @@
+2026-05-27 14:47:34 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260527_144734.log
+2026-05-27 14:47:35 - src.eval_runner - INFO - MemoryGraph loaded: 21 decisions
+2026-05-27 14:47:35 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-27 14:47:35 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-27 14:47:35 - src.core.engine - INFO - Loaded 21 decisions, 3 topics
+2026-05-27 14:47:35 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=58 topics=1
+2026-05-27 14:47:35 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-27 14:47:35 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-27 14:47:35 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-27 14:47:35 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-27 14:47:35 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-27 14:47:35 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-27 14:47:35 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-27 14:47:35 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-05-27 14:47:35 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-27 14:47:35 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_79dbab1ee started with msg=eval_1
+2026-05-27 14:47:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+2026-05-27 14:47:35 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144735-6b510d0e.json
+2026-05-27 14:47:35 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:35 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=450 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:35 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=450)
+2026-05-27 14:47:36 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.20s
+2026-05-27 14:47:36 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:36 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少)
+2026-05-27 14:47:36 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.20s
+2026-05-27 14:47:36 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化肯定要上K8s，生产环境都这么用了
+2026-05-27 14:47:36 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144736-c3acbbe0.json
+2026-05-27 14:47:36 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:36 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=433 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:36 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=433)
+2026-05-27 14:47:37 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.77s
+2026-05-27 14:47:37 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:37 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化肯定要上K8s，生产环境都这么用了)
+2026-05-27 14:47:37 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.77s
+2026-05-27 14:47:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS
+2026-05-27 14:47:37 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144737-31ee8164.json
+2026-05-27 14:47:37 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:37 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=449 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:37 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=449)
+2026-05-27 14:47:38 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.19s
+2026-05-27 14:47:38 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:38 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS)
+2026-05-27 14:47:38 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.19s
+2026-05-27 14:47:38 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列我觉得Kafka更合适，高吞吐低延迟
+2026-05-27 14:47:38 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144738-8d082d76.json
+2026-05-27 14:47:38 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:38 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=435 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:38 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=435)
+2026-05-27 14:47:39 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.81s
+2026-05-27 14:47:39 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:39 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列我觉得Kafka更合适，高吞吐低延迟)
+2026-05-27 14:47:39 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.81s
+2026-05-27 14:47:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化方案就用K8s吧，生态最成熟
+2026-05-27 14:47:39 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144739-c9b977c7.json
+2026-05-27 14:47:39 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:39 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=430 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:39 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=430)
+2026-05-27 14:47:40 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.80s
+2026-05-27 14:47:40 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:40 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化方案就用K8s吧，生态最成熟)
+2026-05-27 14:47:40 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.80s
+2026-05-27 14:47:40 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型还是要看团队能力，PG学习成本高一些
+2026-05-27 14:47:40 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144740-39ffeb41.json
+2026-05-27 14:47:40 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:40 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=436 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:40 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=436)
+2026-05-27 14:47:41 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.82s
+2026-05-27 14:47:41 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:41 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型还是要看团队能力，PG学习成本高一些)
+2026-05-27 14:47:41 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.83s
+2026-05-27 14:47:41 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端可以考虑用React，社区资源丰富
+2026-05-27 14:47:41 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144741-be13151d.json
+2026-05-27 14:47:41 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:41 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=432 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:41 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=432)
+2026-05-27 14:47:42 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.06s
+2026-05-27 14:47:42 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:47:42 - src.core.engine - INFO - [Engine] No decision extracted from content (前端可以考虑用React，社区资源丰富)
+2026-05-27 14:47:42 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.06s
+2026-05-27 14:47:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器的监控用Prometheus+Grafana吧
+2026-05-27 14:47:42 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144742-83ff05ba.json
+2026-05-27 14:47:42 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:47:42 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=438 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:47:42 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=438)
+2026-05-27 14:47:43 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.44s
+2026-05-27 14:47:43 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:47:43 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=902263eeafe7 title=容器监控方案采用Prometheus+Grafana source=eval
+2026-05-27 14:47:43 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-27 14:47:43 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 14:47:43 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:45 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:49 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:57 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:13 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:13 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:48:14 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:16 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:20 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:28 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:44 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:44 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:48:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:48 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:16 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:16 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:49:20 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:22 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:26 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:34 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:50 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:49:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:12 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:28 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:28 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:50:44 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.14s
+2026-05-27 14:50:44 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:50:44 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=902263eeafe7 v1
+2026-05-27 14:50:45 - src.core.engine - INFO - Created decision: 902263eeafe7 v1 — 容器监控方案采用Prometheus+Grafana
+2026-05-27 14:50:45 - src.core.engine - INFO - [Mutation] CREATE applied: sid=902263eeafe7 v1
+2026-05-27 14:50:45 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:50:45 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:50:45 - src.view.client - ERROR - Failed to upsert record for 902263eeafe7: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:50:45 - src.view.syncer - INFO - [BaseView] Synced decision 902263eeafe7 v1
+2026-05-27 14:50:45 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=902263eeafe7
+2026-05-27 14:50:45 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=902263eeafe7
+2026-05-27 14:50:45 - src.core.engine - INFO - [Engine] <<< _process_detection done time=183.48s
+2026-05-27 14:50:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列选了Kafka，配合流处理引擎很强大
+2026-05-27 14:50:45 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145045-2f44b62d.json
+2026-05-27 14:50:45 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:45 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=464 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:45 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=464)
+2026-05-27 14:50:46 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.07s
+2026-05-27 14:50:46 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:46 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列选了Kafka，配合流处理引擎很强大)
+2026-05-27 14:50:46 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.07s
+2026-05-27 14:50:46 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库还是决定用PG，RDS托管省心省力
+2026-05-27 14:50:46 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145046-07ed4db6.json
+2026-05-27 14:50:46 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:46 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=462 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:46 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=462)
+2026-05-27 14:50:47 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.80s
+2026-05-27 14:50:47 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:47 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库还是决定用PG，RDS托管省心省力)
+2026-05-27 14:50:47 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.80s
+2026-05-27 14:50:47 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Sentry做错误监控很成熟，可以试试
+2026-05-27 14:50:47 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145047-12758cde.json
+2026-05-27 14:50:47 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:47 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=463 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:47 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=463)
+2026-05-27 14:50:48 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.75s
+2026-05-27 14:50:48 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:48 - src.core.engine - INFO - [Engine] No decision extracted from content (前端Sentry做错误监控很成熟，可以试试)
+2026-05-27 14:50:48 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.75s
+2026-05-27 14:50:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选PG了，大家没意见吧
+2026-05-27 14:50:48 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145048-85574ff0.json
+2026-05-27 14:50:48 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:48 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=456 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:48 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=456)
+2026-05-27 14:50:49 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.90s
+2026-05-27 14:50:49 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:49 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选PG了，大家没意见吧)
+2026-05-27 14:50:49 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.90s
+2026-05-27 14:50:49 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化用K8s，helm chart管理部署
+2026-05-27 14:50:49 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145049-6e05b8ca.json
+2026-05-27 14:50:49 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:49 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=464 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:49 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=464)
+2026-05-27 14:50:50 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.05s
+2026-05-27 14:50:50 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:50 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化用K8s，helm chart管理部署)
+2026-05-27 14:50:50 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.05s
+2026-05-27 14:50:50 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端性能优化可以用SSR和服务端组件
+2026-05-27 14:50:50 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145050-c707eb78.json
+2026-05-27 14:50:50 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:50 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=460 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:50 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=460)
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.78s
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:51 - src.core.engine - INFO - [Engine] No decision extracted from content (前端性能优化可以用SSR和服务端组件)
+2026-05-27 14:50:51 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.78s
+2026-05-27 14:50:51 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池用PgBouncer，支持事务池
+2026-05-27 14:50:51 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145051-5339b85f.json
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=464 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=464)
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.72s
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:50:51 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库连接池用PgBouncer，支持事务池)
+2026-05-27 14:50:51 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.72s
+2026-05-27 14:50:51 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器资源限制用resource quota和limit range
+2026-05-27 14:50:51 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145051-59820903.json
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=475 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:50:51 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=475)
+2026-05-27 14:50:53 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.51s
+2026-05-27 14:50:53 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:50:53 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=429768895560 title=容器资源限制方案 source=eval
+2026-05-27 14:50:53 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-05-27 14:50:53 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=决定使用Resource Quota和Limit Range来管理容器资源限制。
+2026-05-27 14:50:53 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:55 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:59 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:07 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:23 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:51:24 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:26 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:54 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:54 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:51:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:10 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:26 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:26 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:52:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:32 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:36 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:44 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:00 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:53:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:10 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:14 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:22 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:24 - __main__ - INFO - [Eval] Interrupted by user

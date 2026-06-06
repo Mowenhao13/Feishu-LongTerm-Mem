@@ -1,0 +1,392 @@
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: test-001 (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: test-002 (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: test-002 (doc_updated)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: test-003 (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: doc-a (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: doc-b (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - WARNING - Doc file not found: /var/folders/kj/5x_50zrd5fq47w8sqsbmj8080000gn/T/tmp4p27ky1c/nonexistent.md
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: decision-doc (doc_created)
+2026-06-05 21:03:17 - src.detect.doc_detector - INFO - [DocDetector] 1 document changes detected
+2026-06-05 21:03:17 - src.detect.doc_detector - INFO -   decision-doc: score=0.79 level=high is_decision=True doc_type=design_doc
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: arch-decision (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: doc1 (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: doc2 (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: doc3 (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: flow-doc (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: flow-doc (doc_updated)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: existing (doc_created)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: existing (doc_updated)
+2026-06-05 21:03:17 - src.adapter.doc_adapter - INFO - Doc change detected: new-doc (doc_created)
+2026-06-05 21:03:17 - llm.error_handling.recovery - WARNING - Operation failed (invalid_output): operation failed
+2026-06-05 21:03:36 - graph.snapshot - INFO - Snapshot saved: /private/var/folders/kj/5x_50zrd5fq47w8sqsbmj8080000gn/T/pytest-of-halllo/pytest-5/test_snapshot_manager_save_and0/snapshots/snap-20260605210336-7223ae9d.json
+2026-06-05 21:03:36 - graph.retrieval - WARNING - MemoryGraph not available, skipping retrieval
+2026-06-05 21:03:36 - src.adapter.lark_im - ERROR - send_message failed, code: 99999, msg: permission denied, log_id: log_err
+2026-06-05 21:03:36 - src.adapter.lark_im - ERROR - reply_message failed, code: 10003, msg: message not found, log_id: log_err
+2026-06-05 21:03:36 - src.adapter.lark_im - ERROR - recall_message failed, code: 10003, msg: message not found, log_id: log_err
+2026-06-05 21:03:36 - src.adapter.lark_im - ERROR - get_conversation_history failed, code: 99999, msg: internal error, log_id: log_err
+2026-06-05 21:03:36 - src.adapter.lark_im - ERROR - get_message_resource failed, code: 99999, msg: resource not found, log_id: log_err
+2026-06-05 21:03:36 - src.adapter.lark_im - INFO - Resource downloaded to /private/var/folders/kj/5x_50zrd5fq47w8sqsbmj8080000gn/T/pytest-of-halllo/pytest-5/test_download_message_resource0/dl_file_key
+2026-06-05 21:03:41 - src.adapter.lark_im - ERROR - get_group_announcement failed, code: 232097, msg: Unable to operate docx type chat announcement., log_id: 20260605210340477008B5562ECB116CD0
+2026-06-05 21:05:57 - mcp_server - INFO - [TaskView] Skipped (TASK_ENABLED=false)
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=qwen3-embedding-4b timeout=120 retries=5
+2026-06-05 21:05:57 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=qwen3-reranker-4b timeout=120 retries=10
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=qwen3-embedding-4b
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=nonexistent_keyword_xyz
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-0.0903, 0.0641] mean=-0.0003 std=0.0198
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=82 chars=1682 model=qwen3-embedding-4b
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[1/82] len=12 preview=两个方案都定了，整理文档
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[2/82] len=29 preview=Daemon模式有安全风险，建议默认关闭，仅在需要时启用。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[3/82] len=8 preview=今天下班前出初稿
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[4/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[5/82] len=44 preview=每条JSONL记录包含id, type, data, timestamp字段，标准格式。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[6/82] len=0 preview=
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[7/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[8/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[9/82] len=21 preview=Frank负责列出需要脱敏的敏感信息清单。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[10/82] len=0 preview=
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[11/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[12/82] len=16 preview=直接丢弃并记录日志，不尝试恢复。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[13/82] len=38 preview=关键操作（会话创建、销毁、权限变更）后立即写，非关键操作批量写，每5秒一次。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[14/82] len=19 preview=使用JSON时注意不要序列化循环引用。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[15/82] len=27 preview=Alice要求Diana安排演示时间，Diana同意。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[16/82] len=24 preview=测试时需要模拟并发读写两个文件，确保数据一致性。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[17/82] len=30 preview=明确stall判定为连续超过400ms且持续1秒，而非累积。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[18/82] len=32 preview=先做全量持久化，每N次操作写一次完整状态，后续再优化为增量快照。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[19/82] len=26 preview=CLI和Daemon共用一套核心逻辑，避免重复开发。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[20/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[21/82] len=0 preview=
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[22/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[23/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[24/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[25/82] len=19 preview=stall检测的日志级别使用info。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[26/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[27/82] len=52 preview=决定采用JSONL文件作为命令总线，daemon和child各自维护一个文件，实现读写隔离，避免锁竞争。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[28/82] len=19 preview=文档我来写吧，Jack你帮review
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[29/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[30/82] len=28 preview=测试时要验证文件损坏或写入一半的情况，确保恢复逻辑健壮。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[31/82] len=32 preview=建议在Codex CLI封装中添加白名单参数列表，以减少攻击面。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[32/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[33/82] len=36 preview=Daemon模式绑定127.0.0.1，端口使用随机高位端口以避免冲突。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[34/82] len=35 preview=Ivy排优先级，先做Telegram再做飞书，下周三前完成开发和测试。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[35/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[36/82] len=116 preview=文件路径和命名规范：每个session一个独立文件，命名使用session_id。  [补充] 文件路径和命名规范：每个
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[37/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[38/82] len=31 preview=决定日志输出格式统一为JSON格式，方便前端解析，统一字段名。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[39/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[40/82] len=29 preview=Daemon进程自己管理，保持轻量，不使用systemd。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[41/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[42/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[43/82] len=20 preview=有人承诺周一之前准备好前端mock接口。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[44/82] len=33 preview=有人承诺周末加班完成Daemon核心，周一上午开短会review。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[45/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[46/82] len=31 preview=有人提议点奶茶凑单满减，另一个人回应请大家喝下午茶，达成一致。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[47/82] len=26 preview=测试人员按400ms阈值编写测试用例，覆盖边界情况。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[48/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[49/82] len=27 preview=提议邀请Diana一同前往川菜馆。  [补充] 新来源
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[50/82] len=35 preview=封装CLI输入输出需要做参数校验，防止注入攻击，尤其是用户输入的部分。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[51/82] len=33 preview=单次stall触发warning告警，连续出现则升级为error。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[52/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[53/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[54/82] len=41 preview=过期时间随session元数据一起存，恢复时先校验过期时间，过期的直接丢弃并清理。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[55/82] len=44 preview=决定使用subprocess.Popen来封装Codex CLI，并加上超时和参数校验。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[56/82] len=21 preview=重试必须限制在同一个节点，不能跨节点重试。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[57/82] len=24 preview=遇到stall时重试一次，若仍失败则丢弃该请求。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[58/82] len=26 preview=Charlie建议加可配置间隔参数，Ivy表示明白。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[59/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[60/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[61/82] len=0 preview=
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[62/82] len=26 preview=批量写入时使用临时文件+rename方式保证原子性。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[63/82] len=37 preview=建议使用atexit和信号钩子来处理Daemon的进程管理，防止异常退出。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[64/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[65/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[66/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[67/82] len=20 preview=不能直接判定为stall，需要降级处理。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[68/82] len=54 preview=Ivy建议指数退避，初始1秒，最大30秒。  [补充] 建议飞书退避逻辑使用指数退避，初始1秒，最大30秒。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[69/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[70/82] len=24 preview=尝试重新拉取一次，如果还是invalid再丢弃。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[71/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[72/82] len=15 preview=Ivy评估轮询间隔，默认2秒。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[73/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[74/82] len=23 preview=写入后验证完整性，读取时检查，使用CRC32。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[75/82] len=0 preview=
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[76/82] len=31 preview=建议先实现CLI版本进行测试，稳定后再切换到Daemon模式。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[77/82] len=14 preview=我去跟飞书那边同步一下时间线
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[78/82] len=21 preview=连接断开自动重连，超时重置，错误日志打全。
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[79/82] len=11 preview=[TEST] 测试更新
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[80/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[81/82] len=0 preview=
+2026-06-05 21:05:57 - src.model.embedding_provider - INFO - [Embedding]     text[82/82] len=0 preview=
+2026-06-05 21:05:58 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=82 dim=2560 time=0.99s value_range=[-0.1833, 0.1274] mean=-0.0001 std=0.0198
+2026-06-05 21:05:58 - mcp_server - INFO - [search] Model unavailable, fallback to keyword
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=qwen3-embedding-4b timeout=120 retries=5
+2026-06-05 21:05:59 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=qwen3-reranker-4b timeout=120 retries=10
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=2 model=qwen3-embedding-4b
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=2 preview=测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-0.0781, 0.0850] mean=0.0000 std=0.0198
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=82 chars=1682 model=qwen3-embedding-4b
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[1/82] len=12 preview=两个方案都定了，整理文档
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[2/82] len=29 preview=Daemon模式有安全风险，建议默认关闭，仅在需要时启用。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[3/82] len=8 preview=今天下班前出初稿
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[4/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[5/82] len=44 preview=每条JSONL记录包含id, type, data, timestamp字段，标准格式。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[6/82] len=0 preview=
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[7/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[8/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[9/82] len=21 preview=Frank负责列出需要脱敏的敏感信息清单。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[10/82] len=0 preview=
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[11/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[12/82] len=16 preview=直接丢弃并记录日志，不尝试恢复。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[13/82] len=38 preview=关键操作（会话创建、销毁、权限变更）后立即写，非关键操作批量写，每5秒一次。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[14/82] len=19 preview=使用JSON时注意不要序列化循环引用。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[15/82] len=27 preview=Alice要求Diana安排演示时间，Diana同意。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[16/82] len=24 preview=测试时需要模拟并发读写两个文件，确保数据一致性。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[17/82] len=30 preview=明确stall判定为连续超过400ms且持续1秒，而非累积。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[18/82] len=32 preview=先做全量持久化，每N次操作写一次完整状态，后续再优化为增量快照。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[19/82] len=26 preview=CLI和Daemon共用一套核心逻辑，避免重复开发。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[20/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[21/82] len=0 preview=
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[22/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[23/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[24/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[25/82] len=19 preview=stall检测的日志级别使用info。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[26/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[27/82] len=52 preview=决定采用JSONL文件作为命令总线，daemon和child各自维护一个文件，实现读写隔离，避免锁竞争。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[28/82] len=19 preview=文档我来写吧，Jack你帮review
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[29/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[30/82] len=28 preview=测试时要验证文件损坏或写入一半的情况，确保恢复逻辑健壮。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[31/82] len=32 preview=建议在Codex CLI封装中添加白名单参数列表，以减少攻击面。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[32/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[33/82] len=36 preview=Daemon模式绑定127.0.0.1，端口使用随机高位端口以避免冲突。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[34/82] len=35 preview=Ivy排优先级，先做Telegram再做飞书，下周三前完成开发和测试。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[35/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[36/82] len=116 preview=文件路径和命名规范：每个session一个独立文件，命名使用session_id。  [补充] 文件路径和命名规范：每个
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[37/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[38/82] len=31 preview=决定日志输出格式统一为JSON格式，方便前端解析，统一字段名。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[39/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[40/82] len=29 preview=Daemon进程自己管理，保持轻量，不使用systemd。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[41/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[42/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[43/82] len=20 preview=有人承诺周一之前准备好前端mock接口。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[44/82] len=33 preview=有人承诺周末加班完成Daemon核心，周一上午开短会review。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[45/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[46/82] len=31 preview=有人提议点奶茶凑单满减，另一个人回应请大家喝下午茶，达成一致。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[47/82] len=26 preview=测试人员按400ms阈值编写测试用例，覆盖边界情况。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[48/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[49/82] len=27 preview=提议邀请Diana一同前往川菜馆。  [补充] 新来源
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[50/82] len=35 preview=封装CLI输入输出需要做参数校验，防止注入攻击，尤其是用户输入的部分。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[51/82] len=33 preview=单次stall触发warning告警，连续出现则升级为error。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[52/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[53/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[54/82] len=41 preview=过期时间随session元数据一起存，恢复时先校验过期时间，过期的直接丢弃并清理。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[55/82] len=44 preview=决定使用subprocess.Popen来封装Codex CLI，并加上超时和参数校验。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[56/82] len=21 preview=重试必须限制在同一个节点，不能跨节点重试。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[57/82] len=24 preview=遇到stall时重试一次，若仍失败则丢弃该请求。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[58/82] len=26 preview=Charlie建议加可配置间隔参数，Ivy表示明白。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[59/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[60/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[61/82] len=0 preview=
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[62/82] len=26 preview=批量写入时使用临时文件+rename方式保证原子性。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[63/82] len=37 preview=建议使用atexit和信号钩子来处理Daemon的进程管理，防止异常退出。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[64/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[65/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[66/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[67/82] len=20 preview=不能直接判定为stall，需要降级处理。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[68/82] len=54 preview=Ivy建议指数退避，初始1秒，最大30秒。  [补充] 建议飞书退避逻辑使用指数退避，初始1秒，最大30秒。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[69/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[70/82] len=24 preview=尝试重新拉取一次，如果还是invalid再丢弃。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[71/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[72/82] len=15 preview=Ivy评估轮询间隔，默认2秒。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[73/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[74/82] len=23 preview=写入后验证完整性，读取时检查，使用CRC32。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[75/82] len=0 preview=
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[76/82] len=31 preview=建议先实现CLI版本进行测试，稳定后再切换到Daemon模式。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[77/82] len=14 preview=我去跟飞书那边同步一下时间线
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[78/82] len=21 preview=连接断开自动重连，超时重置，错误日志打全。
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[79/82] len=11 preview=[TEST] 测试更新
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[80/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[81/82] len=0 preview=
+2026-06-05 21:05:59 - src.model.embedding_provider - INFO - [Embedding]     text[82/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=82 dim=2560 time=0.97s value_range=[-0.1833, 0.1274] mean=-0.0001 std=0.0198
+2026-06-05 21:06:00 - mcp_server - INFO - [search] Model unavailable, fallback to keyword
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=qwen3-embedding-4b timeout=120 retries=5
+2026-06-05 21:06:00 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=qwen3-reranker-4b timeout=120 retries=10
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=qwen3-embedding-4b
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=xyznonexistent123456
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-0.0808, 0.0725] mean=-0.0003 std=0.0198
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=82 chars=1682 model=qwen3-embedding-4b
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[1/82] len=12 preview=两个方案都定了，整理文档
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[2/82] len=29 preview=Daemon模式有安全风险，建议默认关闭，仅在需要时启用。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[3/82] len=8 preview=今天下班前出初稿
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[4/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[5/82] len=44 preview=每条JSONL记录包含id, type, data, timestamp字段，标准格式。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[6/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[7/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[8/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[9/82] len=21 preview=Frank负责列出需要脱敏的敏感信息清单。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[10/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[11/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[12/82] len=16 preview=直接丢弃并记录日志，不尝试恢复。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[13/82] len=38 preview=关键操作（会话创建、销毁、权限变更）后立即写，非关键操作批量写，每5秒一次。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[14/82] len=19 preview=使用JSON时注意不要序列化循环引用。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[15/82] len=27 preview=Alice要求Diana安排演示时间，Diana同意。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[16/82] len=24 preview=测试时需要模拟并发读写两个文件，确保数据一致性。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[17/82] len=30 preview=明确stall判定为连续超过400ms且持续1秒，而非累积。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[18/82] len=32 preview=先做全量持久化，每N次操作写一次完整状态，后续再优化为增量快照。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[19/82] len=26 preview=CLI和Daemon共用一套核心逻辑，避免重复开发。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[20/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[21/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[22/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[23/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[24/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[25/82] len=19 preview=stall检测的日志级别使用info。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[26/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[27/82] len=52 preview=决定采用JSONL文件作为命令总线，daemon和child各自维护一个文件，实现读写隔离，避免锁竞争。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[28/82] len=19 preview=文档我来写吧，Jack你帮review
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[29/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[30/82] len=28 preview=测试时要验证文件损坏或写入一半的情况，确保恢复逻辑健壮。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[31/82] len=32 preview=建议在Codex CLI封装中添加白名单参数列表，以减少攻击面。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[32/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[33/82] len=36 preview=Daemon模式绑定127.0.0.1，端口使用随机高位端口以避免冲突。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[34/82] len=35 preview=Ivy排优先级，先做Telegram再做飞书，下周三前完成开发和测试。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[35/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[36/82] len=116 preview=文件路径和命名规范：每个session一个独立文件，命名使用session_id。  [补充] 文件路径和命名规范：每个
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[37/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[38/82] len=31 preview=决定日志输出格式统一为JSON格式，方便前端解析，统一字段名。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[39/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[40/82] len=29 preview=Daemon进程自己管理，保持轻量，不使用systemd。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[41/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[42/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[43/82] len=20 preview=有人承诺周一之前准备好前端mock接口。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[44/82] len=33 preview=有人承诺周末加班完成Daemon核心，周一上午开短会review。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[45/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[46/82] len=31 preview=有人提议点奶茶凑单满减，另一个人回应请大家喝下午茶，达成一致。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[47/82] len=26 preview=测试人员按400ms阈值编写测试用例，覆盖边界情况。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[48/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[49/82] len=27 preview=提议邀请Diana一同前往川菜馆。  [补充] 新来源
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[50/82] len=35 preview=封装CLI输入输出需要做参数校验，防止注入攻击，尤其是用户输入的部分。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[51/82] len=33 preview=单次stall触发warning告警，连续出现则升级为error。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[52/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[53/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[54/82] len=41 preview=过期时间随session元数据一起存，恢复时先校验过期时间，过期的直接丢弃并清理。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[55/82] len=44 preview=决定使用subprocess.Popen来封装Codex CLI，并加上超时和参数校验。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[56/82] len=21 preview=重试必须限制在同一个节点，不能跨节点重试。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[57/82] len=24 preview=遇到stall时重试一次，若仍失败则丢弃该请求。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[58/82] len=26 preview=Charlie建议加可配置间隔参数，Ivy表示明白。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[59/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[60/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[61/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[62/82] len=26 preview=批量写入时使用临时文件+rename方式保证原子性。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[63/82] len=37 preview=建议使用atexit和信号钩子来处理Daemon的进程管理，防止异常退出。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[64/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[65/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[66/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[67/82] len=20 preview=不能直接判定为stall，需要降级处理。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[68/82] len=54 preview=Ivy建议指数退避，初始1秒，最大30秒。  [补充] 建议飞书退避逻辑使用指数退避，初始1秒，最大30秒。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[69/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[70/82] len=24 preview=尝试重新拉取一次，如果还是invalid再丢弃。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[71/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[72/82] len=15 preview=Ivy评估轮询间隔，默认2秒。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[73/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[74/82] len=23 preview=写入后验证完整性，读取时检查，使用CRC32。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[75/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[76/82] len=31 preview=建议先实现CLI版本进行测试，稳定后再切换到Daemon模式。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[77/82] len=14 preview=我去跟飞书那边同步一下时间线
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[78/82] len=21 preview=连接断开自动重连，超时重置，错误日志打全。
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[79/82] len=11 preview=[TEST] 测试更新
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[80/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[81/82] len=0 preview=
+2026-06-05 21:06:00 - src.model.embedding_provider - INFO - [Embedding]     text[82/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=82 dim=2560 time=0.99s value_range=[-0.1833, 0.1274] mean=-0.0001 std=0.0198
+2026-06-05 21:06:01 - mcp_server - INFO - [search] Model unavailable, fallback to keyword
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=qwen3-embedding-4b timeout=120 retries=5
+2026-06-05 21:06:01 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=qwen3-reranker-4b timeout=120 retries=10
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=2 model=qwen3-embedding-4b
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=2 preview=测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-0.0781, 0.0850] mean=0.0000 std=0.0198
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=82 chars=1682 model=qwen3-embedding-4b
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[1/82] len=12 preview=两个方案都定了，整理文档
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[2/82] len=29 preview=Daemon模式有安全风险，建议默认关闭，仅在需要时启用。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[3/82] len=8 preview=今天下班前出初稿
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[4/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[5/82] len=44 preview=每条JSONL记录包含id, type, data, timestamp字段，标准格式。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[6/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[7/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[8/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[9/82] len=21 preview=Frank负责列出需要脱敏的敏感信息清单。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[10/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[11/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[12/82] len=16 preview=直接丢弃并记录日志，不尝试恢复。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[13/82] len=38 preview=关键操作（会话创建、销毁、权限变更）后立即写，非关键操作批量写，每5秒一次。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[14/82] len=19 preview=使用JSON时注意不要序列化循环引用。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[15/82] len=27 preview=Alice要求Diana安排演示时间，Diana同意。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[16/82] len=24 preview=测试时需要模拟并发读写两个文件，确保数据一致性。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[17/82] len=30 preview=明确stall判定为连续超过400ms且持续1秒，而非累积。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[18/82] len=32 preview=先做全量持久化，每N次操作写一次完整状态，后续再优化为增量快照。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[19/82] len=26 preview=CLI和Daemon共用一套核心逻辑，避免重复开发。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[20/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[21/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[22/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[23/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[24/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[25/82] len=19 preview=stall检测的日志级别使用info。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[26/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[27/82] len=52 preview=决定采用JSONL文件作为命令总线，daemon和child各自维护一个文件，实现读写隔离，避免锁竞争。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[28/82] len=19 preview=文档我来写吧，Jack你帮review
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[29/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[30/82] len=28 preview=测试时要验证文件损坏或写入一半的情况，确保恢复逻辑健壮。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[31/82] len=32 preview=建议在Codex CLI封装中添加白名单参数列表，以减少攻击面。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[32/82] len=12 preview=[TEST] 冲突建议A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[33/82] len=36 preview=Daemon模式绑定127.0.0.1，端口使用随机高位端口以避免冲突。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[34/82] len=35 preview=Ivy排优先级，先做Telegram再做飞书，下周三前完成开发和测试。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[35/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[36/82] len=116 preview=文件路径和命名规范：每个session一个独立文件，命名使用session_id。  [补充] 文件路径和命名规范：每个
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[37/82] len=15 preview=[TEST] 测试更新-已修改
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[38/82] len=31 preview=决定日志输出格式统一为JSON格式，方便前端解析，统一字段名。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[39/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[40/82] len=29 preview=Daemon进程自己管理，保持轻量，不使用systemd。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[41/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[42/82] len=11 preview=[TEST] 测试决策
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[43/82] len=20 preview=有人承诺周一之前准备好前端mock接口。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[44/82] len=33 preview=有人承诺周末加班完成Daemon核心，周一上午开短会review。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[45/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[46/82] len=31 preview=有人提议点奶茶凑单满减，另一个人回应请大家喝下午茶，达成一致。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[47/82] len=26 preview=测试人员按400ms阈值编写测试用例，覆盖边界情况。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[48/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[49/82] len=27 preview=提议邀请Diana一同前往川菜馆。  [补充] 新来源
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[50/82] len=35 preview=封装CLI输入输出需要做参数校验，防止注入攻击，尤其是用户输入的部分。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[51/82] len=33 preview=单次stall触发warning告警，连续出现则升级为error。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[52/82] len=12 preview=[TEST] 冲突建议B
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[53/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[54/82] len=41 preview=过期时间随session元数据一起存，恢复时先校验过期时间，过期的直接丢弃并清理。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[55/82] len=44 preview=决定使用subprocess.Popen来封装Codex CLI，并加上超时和参数校验。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[56/82] len=21 preview=重试必须限制在同一个节点，不能跨节点重试。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[57/82] len=24 preview=遇到stall时重试一次，若仍失败则丢弃该请求。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[58/82] len=26 preview=Charlie建议加可配置间隔参数，Ivy表示明白。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[59/82] len=10 preview=[TEST] 冲突A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[60/82] len=11 preview=[TEST] 拒绝测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[61/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[62/82] len=26 preview=批量写入时使用临时文件+rename方式保证原子性。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[63/82] len=37 preview=建议使用atexit和信号钩子来处理Daemon的进程管理，防止异常退出。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[64/82] len=10 preview=[TEST] 去重A
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[65/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[66/82] len=10 preview=[TEST] 去重B
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[67/82] len=20 preview=不能直接判定为stall，需要降级处理。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[68/82] len=54 preview=Ivy建议指数退避，初始1秒，最大30秒。  [补充] 建议飞书退避逻辑使用指数退避，初始1秒，最大30秒。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[69/82] len=10 preview=[TEST] 冲突B
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[70/82] len=24 preview=尝试重新拉取一次，如果还是invalid再丢弃。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[71/82] len=11 preview=[TEST] 确认测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[72/82] len=15 preview=Ivy评估轮询间隔，默认2秒。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[73/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[74/82] len=23 preview=写入后验证完整性，读取时检查，使用CRC32。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[75/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[76/82] len=31 preview=建议先实现CLI版本进行测试，稳定后再切换到Daemon模式。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[77/82] len=14 preview=我去跟飞书那边同步一下时间线
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[78/82] len=21 preview=连接断开自动重连，超时重置，错误日志打全。
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[79/82] len=11 preview=[TEST] 测试更新
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[80/82] len=11 preview=[TEST] 归类测试
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[81/82] len=0 preview=
+2026-06-05 21:06:01 - src.model.embedding_provider - INFO - [Embedding]     text[82/82] len=0 preview=
+2026-06-05 21:06:02 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=82 dim=2560 time=0.94s value_range=[-0.1833, 0.1274] mean=-0.0001 std=0.0198
+2026-06-05 21:06:02 - mcp_server - INFO - [search] Model unavailable, fallback to keyword
+2026-06-05 21:06:16 - mcp_server - INFO - [TaskView] Skipped (TASK_ENABLED=false)
+2026-06-05 21:06:16 - src.card.pusher - WARNING - Decision nonexistent not found in graph

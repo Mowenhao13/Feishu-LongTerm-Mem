@@ -1,0 +1,482 @@
+2026-06-04 09:43:34 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260604_094334.log
+2026-06-04 09:43:34 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-06-04 09:43:35 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-04 09:43:35 - src.core.engine - INFO - GitStorage initialized at /Users/halllo/projects/local/feishu-mem/scripts/../mem-data
+2026-06-04 09:43:35 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-06-04 09:43:35 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-06-04 09:43:36 - src.view.tenant_token - INFO - [TenantToken] Refreshed token, expires in 4400s
+2026-06-04 09:43:36 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-04 09:43:36 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-04 09:43:36 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-06-04 09:43:36 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-06-04 09:43:36 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-04 09:43:36 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-04 09:43:36 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 20 episode(s) from data/suspend_pool.json
+2026-06-04 09:43:36 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=就PG吧，MySQL分区表坑太多 @Bob @Charlie
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_2d4f8ab81 started with msg=eval_1
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=49 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=49 preview=PG的窗口函数和CTE确实强，但MySQL的生态工具更成熟，比如binlog同步，迁移成本得算进去
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=53 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=53 preview=确定要全量迁移吗？现有业务很多用到了MySQL的JSON字段，PG的jsonb语法不完全兼容 @Alice
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=那就用PG，不兼容的地方改代码，别犹豫了
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=14 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=14 preview=今天下雨真烦，通勤堵了半小时
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=38 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=38 preview=如果迁移，建议先做半年的并行运行，用Debezium做实时同步，这样风险可控
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=并行运行的话，双写一致性问题怎么保证？再想想 @Bob
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=就双写，先写MySQL，再异步同步到PG，读PG，简单粗暴
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=其实可以考虑用Citus扩展PG做分布式，这样以后分库也方便 @Alice
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=大家都同意用PG的话就这么定了 @Alice @Bob
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.10s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=接下来聊Redis缓存key规范，就统一用冒号分隔，业务:模块:ID
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=还要加版本号吧，比如v1:user:123，方便以后升级迭代 @Alice
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=确定所有key都要设过期时间吗？有些配置数据可能是永久的，比如系统参数
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=就统一7天过期，永久的单独拎出来用另一个前缀，比如perm:开头的
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=14 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=14 preview=午饭吃啥，楼下新开了家川菜馆
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=建议热点key不设过期，用主动淘汰，避免缓存雪崩，比如user session
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=那key长度要不要限制？太长了占内存，比如某些业务key拼了20个字段
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=就限制在50字符以内，用缩写，比如user缩写u
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=我整理一份规范文档，大家review一下，包括命名、过期策略和限长
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=文档出来大家过一遍，没什么问题就按这个来 @Alice @Bob
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=分库分表方案，就ShardingSphere，社区活跃文档全
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=50 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=50 preview=ShardingSphere的JPA支持不太好，MyCAT对MySQL协议兼容更彻底，但维护状态堪忧
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=分片键确定用user_id吗？如果查询条件没有user_id会全路由，性能堪忧
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=就按user_id哈希，其他查询走ES，别纠结
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=45 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=45 preview=扩容时数据重分布，ShardingSphere支持自动迁移吗？还是得手动操作 @Alice
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=12 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=12 preview=今天好热，空调是不是坏了
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=先小规模试跑一个月再决定吧，别一上来就全量切 @Alice
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=就先用ShardingSphere，MyCAT停止维护了，别选个死项目
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=我写个POC对比报告，下周出结论，大家再投票决定
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=那等Bob的报告出来再定，先不急 @Alice
+2026-06-04 09:43:36 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-06-04 09:43:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=就切App Router，13.4已经稳定了，别拖了
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=77 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=77 preview=App Router的Server Component能减少客户端JS，但Pages Router的getServerS
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=确定所有页面都适合SSR吗？有些营销页静态化更好，比如首页
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=21 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=21 preview=就全量SSR，性能不够再加CDN，别想太多
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=建议增量迁移，先迁移一个路由模块看看效果，比如用户中心
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=layout.tsx和template.tsx的嵌套逻辑是不是和现有嵌套路由冲突？得验证一下 @Emma
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=就新建一个app目录，pages目录保留，慢慢切，共存方案
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=56 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=56 preview=我用新的路由组(route groups)来组织代码，避免URL结构变化，大家觉得呢 @David @Frank
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=那就先增量迁移一个模块，用route groups，没问题再扩大范围
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=25 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=25 preview=组件库选Antd还是Semi，就Antd，用的人多
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=48 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=48 preview=Semi的CSS变量主题定制更灵活，Antd的ConfigProvider太重量了，换主题得重启
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=42 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=42 preview=Semi的Table组件在大数据量下性能怎么样？Antd的虚拟滚动我们验证过，没问题
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=就Antd，现有代码全是Antd，迁移成本太高，别折腾
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=如果选Semi，可以用工具自动转换Antd的API，但有些自定义组件要重写，比如图表组件
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=38 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=38 preview=确定Semi的国际化支持完整吗？我们有日语和阿拉伯语需求，得确认 @Emma
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=16 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=16 preview=那就Antd，别折腾了，就这么定
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=我做个组件对比表格，大家投票，下周出结果
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=14 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=14 preview=今天食堂的鱼不错，你们去尝尝
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=那等Emma的对比表出来再定，别急着拍板 @David
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=行，那就先看对比表，但大概率还是Antd
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.00s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.detect.episode - INFO - [Episode] chat=eval MAX-MSG boundary: 50 >= 50, suspending episode=ep_2d4f8ab81
+2026-06-04 09:43:37 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_2d4f8ab81 (chat=eval, msgs=50, pool=21/20)
+2026-06-04 09:43:37 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_96e34cf72 (chat=eval, suspended_at=09:18:09)
+2026-06-04 09:43:37 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_1de05ccef started after max-msg suspend
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=构建工具切Vite，Webpack太慢了，就切
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.00s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=46 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=46 preview=Vite开发体验确实好，但生产构建Rollup的代码分割不如Webpack灵活，比如动态导入
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=49 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=49 preview=确定所有Webpack插件都有Vite替代吗？比如image-webpack-loader压缩图片
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.00s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=19 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=19 preview=就先用Vite，遇到问题再找替代，别怕
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=建议先迁移一个不重要的子项目，比如管理后台，验证可行性
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=38 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=38 preview=Vite的HMR在大型项目里会不会变慢？比如我们的项目有500+组件，再想想
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=就Vite，大不了加esbuild做预构建，提速
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=我写个迁移指南，包括polyfill和env变量的处理，大家先看看
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=那就先试点管理后台，没问题再推广 @David @Emma
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.00s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=22 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=22 preview=K8s版本升级，就升到1.28，跳过1.27
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=48 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=48 preview=1.26到1.28跨了两个大版本，kubeadm不支持跨版本升级，需要先升到1.27再升1.28
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=47 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=47 preview=确定所有第三方控制器都兼容1.28吗？比如cert-manager和ingress-nginx
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=就用kubeadm，Rancher太重了，别加复杂工具
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=建议先升级一个测试集群，运行一周的稳定性测试，再升生产
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=如果升级过程中etcd出问题，回滚方案是什么？得准备一下 @Henry
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.10s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=就先升测试集群，没问题再升生产，回滚方案Henry准备
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=我准备一个checklist，包括kubeadm config的变更点和回滚步骤
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=那按Henry的checklist来，先升测试集群 @Grace
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=Docker镜像体积优化，就用alpine，基础镜像小
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=alpine的glibc兼容性有问题，有些node包需要编译，比如sharp库
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=确定多阶段构建能减少多少体积？先测一下，别凭感觉
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=就多阶段构建，把编译依赖全放在builder里，最终镜像只留产物
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=41 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=41 preview=建议用distroless镜像，比alpine更安全，但调试困难，线上问题不好排查
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=如果用了distroless，线上问题怎么排查？没有shell和工具
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=就alpine加多阶段构建，别搞太复杂，简单可靠
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=我写个Dockerfile模板，统一各团队的构建方式，包括多阶段和alpine
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=46 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=46 preview=那就按Grace说的，alpine+多阶段构建，Henry出模板 @Grace @Henry
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=告警阈值调多少，就P99 500ms，超了就告警
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=不同接口差异大，登录接口500ms可以，但查询接口200ms就该告警，得差异化
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=确定CPU阈值设80%吗？还是看平均负载？不同场景不一样
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=19 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=19 preview=就CPU 80%，内存90%，简单粗暴
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=建议用动态阈值，基于历史数据自动调整，减少误报，比如用Prometheus的预测
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=动态阈值在业务突增时会不会漏报？比如双十一流量暴涨 @Henry
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=22 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=22 preview=就先静态阈值，跑一个月再调，别一开始就搞复杂
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=我按接口维度整理一份阈值建议表，大家review，下周定
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=那等Henry的表出来再定，先静态阈值跑着 @Grace
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=Grafana大盘重构，就全部用JSON模型，UI太慢了
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=JSON模型适合版本控制，但面板的坐标调整很麻烦，得手动写
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=确定要统一用Loki作为数据源吗？现有Prometheus的Panel要迁移，工作量不小
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=就统一用Prometheus，Loki只负责日志，别混用
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=建议按服务维度重新组织大盘，每个服务一个folder，方便查找
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=模板变量用标签还是用变量查询？标签性能更好，但灵活性差一些
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=17 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=17 preview=就用标签变量，别搞复杂查询，简单点
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=我先画一个大盘的草图，大家确认后再JSON化，避免返工
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=那按Kate的草图来，没问题就转JSON @Jack @Kate
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=15 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=15 preview=日志采样率，就全量采集，别采样
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=全量采集成本太高，Loki的存储虽然便宜但查询慢，尤其是大范围搜索
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=确定错误日志也要采样吗？错误日志应该全量，info可以采样 @Jack
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=21 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=21 preview=那就错误全量，info采样10%，折中方案
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=建议用动态采样，根据流量自动调整比例，低峰期全量，高峰期降采样
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.detect.episode - INFO - [Episode] chat=eval MAX-MSG boundary: 50 >= 50, suspending episode=ep_1de05ccef
+2026-06-04 09:43:37 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_1de05ccef (chat=eval, msgs=50, pool=21/20)
+2026-06-04 09:43:37 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_13997e067 (chat=eval, suspended_at=09:18:10)
+2026-06-04 09:43:37 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_a9ed1b15c started after max-msg suspend
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=动态采样会不会导致流量高峰时丢失重要日志？比如线上故障时
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=17 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=17 preview=就固定采样，简单可靠，别搞动态那套
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=我配置一个Logstash的采样filter，先试跑一周，看看效果
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=那就先试跑一周，错误全量info 10%，没问题就固化 @Jack @Kate
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=Kafka分区数调整，就扩到24分区，现在12不够用
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=分区数增加会导致重平衡时间变长，消费者组需要重新分配，可能影响在线服务
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=确定现有消费者能处理24分区的并行度吗？有些消费者是单线程的，比如日志消费
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=就分批扩，先扩到16，观察一周再扩到24，稳妥
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=建议先调整消息key的分布，避免数据倾斜，比如user_id哈希不均匀
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=扩分区后，旧数据还在旧分区吗？还是自动重分布？得搞清楚
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=16 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=16 preview=就只影响新数据，旧数据不管，简单
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=25 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=25 preview=我写个分区调整脚本，包含监控和回滚步骤，先扩到16
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=那按Kate的脚本先扩到16，观察一周再说 @Jack @Kate
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.03s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=RabbitMQ死信队列，就统一用死信队列处理失败消息
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=死信队列需要配合重试机制，建议指数退避加最大重试次数，比如3次
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=确定死信消息的TTL设多久？太长会堆积，太短可能来不及处理
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=16 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=16 preview=就重试3次，TTL 1小时，简单
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.10s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=建议用延迟队列插件代替死信+TTL，更精确，比如延迟10秒重试
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=延迟队列插件在集群模式下稳定吗？之前听说有bug @Noah
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=就死信+TTL，简单不依赖插件，稳定优先
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=25 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=25 preview=我画一个消息流转图，明确各队列的绑定关系，大家确认
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=那按Mia的方案，死信+TTL，Noah出流转图 @Mia @Noah
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=41 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=41 preview=Pulsar Topic管理，就按业务线创建租户，每个租户下多个namespace
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=租户隔离级别怎么设？建议用资源配额限制每个租户的吞吐，避免互相影响
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=48 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=48 preview=确定Topic命名规范吗？比如<tenant>/<namespace>/<topic>，统一格式
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=16 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=16 preview=就统一小写，用斜杠分隔，别搞花哨
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=43 model=Qwen3-Embedding-4B
+2026-06-04 09:43:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=43 preview=建议开启自动Topic创建，但限制namespace下的最大Topic数，比如100个
+2026-06-04 09:43:37 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:39 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_a9ed1b15c (chat=eval, msgs=27, pool=21/20)
+2026-06-04 09:43:39 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_5e3748d39 (chat=eval, suspended_at=09:18:12)
+2026-06-04 09:43:39 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 20 episode(s) to data/suspend_pool.json
+2026-06-04 09:43:39 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_a9ed1b15c (msgs=27)
+2026-06-04 09:43:39 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_a9ed1b15c chat=eval msgs=27 len=825
+2026-06-04 09:43:39 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=825 content=动态采样会不会导致流量高峰时丢失重要日志？比如线上故障时 就固定采样，简单可靠，别搞动态那套 我配置一个Logstash
+2026-06-04 09:43:39 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=825)
+2026-06-04 09:43:49 - src.core.engine - INFO - [LLM] <<< Extract result type=list time=9.29s
+2026-06-04 09:43:49 - src.core.engine - INFO - [LLM] Extracted 5 decisions
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=3a552b6f03c6 title=Log Sampling Strategy source=im
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Log Sampling Strategy', existing_count=0
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=3a552b6f03c6 v1
+2026-06-04 09:43:49 - src.core.engine - INFO - Created decision: 3a552b6f03c6 v1 — Log Sampling Strategy
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] CREATE applied: sid=3a552b6f03c6 v1
+2026-06-04 09:43:49 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=3a552b6f03c6
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=3a552b6f03c6
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=84bcb610c242 title=Kafka Partition Expansion source=im
+2026-06-04 09:43:49 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=247 model=Qwen3-Embedding-4B
+2026-06-04 09:43:49 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=247 preview=Expand Kafka partitions from 12 to 16 initially, with a plan
+2026-06-04 09:43:49 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:49 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 09:43:49 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Kafka Partition Expansion', existing_count=1
+2026-06-04 09:43:50 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策关于Kafka分区扩展，与已有决策的日志采样策略属于不同主题
+2026-06-04 09:43:50 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=84bcb610c242 v1
+2026-06-04 09:43:50 - src.core.engine - INFO - Created decision: 84bcb610c242 v1 — Kafka Partition Expansion
+2026-06-04 09:43:50 - src.core.engine - INFO - [Mutation] CREATE applied: sid=84bcb610c242 v1
+2026-06-04 09:43:50 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=84bcb610c242
+2026-06-04 09:43:50 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=84bcb610c242
+2026-06-04 09:43:50 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=df9724a88840 title=RabbitMQ Dead Letter Queue source=im
+2026-06-04 09:43:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=202 model=Qwen3-Embedding-4B
+2026-06-04 09:43:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=202 preview=Implement a dead letter queue with 3 retries using exponenti
+2026-06-04 09:43:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.07s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:50 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 09:43:50 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='RabbitMQ Dead Letter Queue', existing_count=2
+2026-06-04 09:43:51 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策关于RabbitMQ死信队列的实现方案，与已有决策的日志采样策略属于不同主题
+2026-06-04 09:43:52 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策关于RabbitMQ死信队列，与已有决策关于Kafka分区扩展属于不同主题
+2026-06-04 09:43:52 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=df9724a88840 v1
+2026-06-04 09:43:52 - src.core.engine - INFO - Created decision: df9724a88840 v1 — RabbitMQ Dead Letter Queue
+2026-06-04 09:43:52 - src.core.engine - INFO - [Mutation] CREATE applied: sid=df9724a88840 v1
+2026-06-04 09:43:52 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=df9724a88840
+2026-06-04 09:43:52 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=df9724a88840
+2026-06-04 09:43:52 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=678af99ff26e title=Pulsar Tenant and Namespace Structure source=im
+2026-06-04 09:43:52 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=238 model=Qwen3-Embedding-4B
+2026-06-04 09:43:52 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=238 preview=Create tenants per business line, with multiple namespaces u
+2026-06-04 09:43:52 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:52 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 09:43:52 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Pulsar Tenant and Namespace Structure', existing_count=3
+2026-06-04 09:43:53 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策涉及Pulsar租户和命名空间结构，与已有决策的日志采样策略属于不同主题
+2026-06-04 09:43:53 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策涉及Pulsar租户和命名空间结构，与已有Kafka分区扩展决策属于不同主题
+2026-06-04 09:43:54 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策涉及Pulsar的租户和命名空间结构，与已有RabbitMQ死信队列决策属于不同主题
+2026-06-04 09:43:54 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=678af99ff26e v1
+2026-06-04 09:43:54 - src.core.engine - INFO - Created decision: 678af99ff26e v1 — Pulsar Tenant and Namespace Structure
+2026-06-04 09:43:54 - src.core.engine - INFO - [Mutation] CREATE applied: sid=678af99ff26e v1
+2026-06-04 09:43:54 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=678af99ff26e
+2026-06-04 09:43:54 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=678af99ff26e
+2026-06-04 09:43:54 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=242132641a7c title=Message Flow Diagram source=im
+2026-06-04 09:43:54 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=144 model=Qwen3-Embedding-4B
+2026-06-04 09:43:54 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=144 preview=Create a message flow diagram to clarify the binding relatio
+2026-06-04 09:43:54 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 09:43:54 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 09:43:54 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Message Flow Diagram', existing_count=4
+2026-06-04 09:43:55 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策涉及消息流图示，与日志采样策略属于不同主题
+2026-06-04 09:43:56 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策涉及创建消息流图，与已有决策的Kafka分区扩展属于不同主题
+2026-06-04 09:43:57 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策关于创建消息流图，与已有决策的死信队列实现不同主题
+2026-06-04 09:43:57 - src.core.engine - INFO - [Dedup] LLM judge: action=create_new reason=新决策涉及创建消息流图谱以明确队列绑定关系，而已有决策涉及Pulsar租户和命名空间结构，主题不同且内容无关。
+2026-06-04 09:43:57 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=242132641a7c v1
+2026-06-04 09:43:58 - src.core.engine - INFO - Created decision: 242132641a7c v1 — Message Flow Diagram
+2026-06-04 09:43:58 - src.core.engine - INFO - [Mutation] CREATE applied: sid=242132641a7c v1
+2026-06-04 09:43:58 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=242132641a7c
+2026-06-04 09:43:58 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=242132641a7c
+2026-06-04 09:43:58 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-06-04 09:43:58 - src.core.engine - INFO - [Engine] <<< _process_episode done time=18.11s
+2026-06-04 09:43:58 - src.card.pusher - INFO - Push scheduler stopped
+2026-06-04 09:43:58 - src.core.engine - INFO - Hypergraph saved on stop
+2026-06-04 09:43:58 - src.core.engine - INFO - Synced 5 dirty decisions to storage
+2026-06-04 09:43:58 - src.core.engine - INFO - MemoryEngine stopped (applied=5, failed=0)

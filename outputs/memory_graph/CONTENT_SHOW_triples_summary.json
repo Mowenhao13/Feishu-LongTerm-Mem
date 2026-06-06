@@ -1,0 +1,1271 @@
+{
+  "triples": [
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-bcbe7b"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "Markdown 渲染器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-bcbe7b"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Markdown 渲染器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-bcbe7b"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "Markdown 渲染器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-bcbe7b"
+    },
+    {
+      "head": "Web端流式接收",
+      "relation": "uses",
+      "tail": "TanStack Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "Web端流式接收",
+      "relation": "uses",
+      "tail": "useQuery",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "Web端流式接收",
+      "relation": "uses",
+      "tail": "taskMessagesOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "Web端流式接收",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "Web端流式接收",
+      "relation": "uses",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "responsible_for",
+      "tail": "实时更新缓存",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "实时更新缓存",
+      "relation": "triggers",
+      "tail": "重新渲染",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "splitTimeline",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "splits",
+      "tail": "流式内容",
+      "schema": [
+        "TECHNOLOGY",
+        "splits",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "流式内容",
+      "relation": "composed_of",
+      "tail": "preface",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "流式内容",
+      "relation": "composed_of",
+      "tail": "middle",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "流式内容",
+      "relation": "composed_of",
+      "tail": "final",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "middle",
+      "relation": "related_to",
+      "tail": "思考/工具调用",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "流式时",
+      "relation": "default_expands",
+      "tail": "middle",
+      "schema": [
+        "CONCEPT",
+        "default_expands",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-da38eb"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "based_on",
+      "tail": "react-markdown",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "uses",
+      "tail": "GFM",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "uses",
+      "tail": "preprocessMentionShortcodes",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "uses",
+      "tail": "preprocessLinks",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "uses",
+      "tail": "preprocessFileCards",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "based_on",
+      "tail": "md4c",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "uses",
+      "tail": "expo-image",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "uses",
+      "tail": "lightbox",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "uses",
+      "tail": "marked.lexer",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "uses",
+      "tail": "splitMarkdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "uses",
+      "tail": "preprocessMobileMarkdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Markdown 组件",
+      "relation": "located_at",
+      "tail": "packages/views/common/markdown.tsx",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "located_at",
+      "tail": "apps/mobile/lib/markdown/markdown.tsx",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-d3ea39"
+    },
+    {
+      "head": "Claude CLI stdout (NDJSON)",
+      "relation": "input_to",
+      "tail": "handleAssistant",
+      "schema": [
+        "SYSTEM",
+        "input_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "handleAssistant",
+      "relation": "output_to",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "output_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "pushes",
+      "tail": "task:message event",
+      "schema": [
+        "TECHNOLOGY",
+        "pushes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "task:message event",
+      "relation": "consumed_by",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "CONCEPT",
+        "consumed_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "updates",
+      "tail": "taskMessages cache",
+      "schema": [
+        "SYSTEM",
+        "updates",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "taskMessages cache",
+      "relation": "input_to",
+      "tail": "ChatTimelineItem",
+      "schema": [
+        "SYSTEM",
+        "input_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "output_to",
+      "tail": "TimelineView",
+      "schema": [
+        "SYSTEM",
+        "output_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "splits",
+      "tail": "content",
+      "schema": [
+        "SYSTEM",
+        "splits",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "content",
+      "relation": "rendered_by",
+      "tail": "Markdown component",
+      "schema": [
+        "CONCEPT",
+        "rendered_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "Markdown component",
+      "relation": "uses",
+      "tail": "react-markdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "Markdown component",
+      "relation": "uses",
+      "tail": "hybrid",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-8c0f68"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "react-markdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "react-native-enriched-markdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "自定义组件",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "react-markdown",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "CodeBlock",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "HTML <img>",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "expo-image",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "lightbox",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "MemoizedMarkdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "FlashList",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "maintainVisibleContentPosition",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f0140d"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "渲染引擎",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "渲染引擎",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Web 端",
+      "relation": "related_to",
+      "tail": "Mobile 端",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Web 端",
+      "relation": "supports",
+      "tail": "Markdown 语法集",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "supports",
+      "tail": "Markdown 语法集",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "混合渲染器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "designed_for",
+      "tail": "React Native 嵌套 <Text> 限制",
+      "schema": [
+        "TECHNOLOGY",
+        "designed_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "混合渲染器",
+      "relation": "based_on",
+      "tail": "原生性能",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "流式输出",
+      "relation": "implemented_by",
+      "tail": "WebSocket",
+      "schema": [
+        "CONCEPT",
+        "implemented_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "流式输出",
+      "relation": "implemented_by",
+      "tail": "Query Cache",
+      "schema": [
+        "CONCEPT",
+        "implemented_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "used_by",
+      "tail": "Web 端",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "used_by",
+      "tail": "Mobile 端",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Query Cache",
+      "relation": "used_by",
+      "tail": "Web 端",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Query Cache",
+      "relation": "used_by",
+      "tail": "Mobile 端",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "splitTimeline",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "OuterProcessFold",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "Markdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "produces",
+      "tail": "preface",
+      "schema": [
+        "TECHNOLOGY",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "produces",
+      "tail": "middle",
+      "schema": [
+        "TECHNOLOGY",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "produces",
+      "tail": "final",
+      "schema": [
+        "TECHNOLOGY",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "wraps",
+      "tail": "middle",
+      "schema": [
+        "TECHNOLOGY",
+        "wraps",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "contains",
+      "tail": "ThinkingRow",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "contains",
+      "tail": "ToolCallRow",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "contains",
+      "tail": "ToolResultRow",
+      "schema": [
+        "TECHNOLOGY",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "extractCopyText",
+      "relation": "responsible_for",
+      "tail": "copy logic",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-bf2a90"
+    },
+    {
+      "head": "Markdown",
+      "relation": "uses",
+      "tail": "IssueMentionCard",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "Markdown",
+      "relation": "uses",
+      "tail": "cdnDomain",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "Markdown",
+      "relation": "uses",
+      "tail": "Attachment",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "Markdown",
+      "relation": "uses",
+      "tail": "AttachmentDownloadProvider",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "Markdown",
+      "relation": "based_on",
+      "tail": "MarkdownBase",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "Markdown",
+      "relation": "depends_on",
+      "tail": "useConfigStore",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "MemoizedMarkdown",
+      "relation": "based_on",
+      "tail": "Markdown",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "EnrichedMarkdownText",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "CodeBlock",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "MarkdownImage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "expo-image",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "preprocessMobileMarkdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "splitMarkdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "uses",
+      "tail": "marked.lexer",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "adopts",
+      "tail": "hybrid renderer",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "hybrid renderer",
+      "relation": "rejects",
+      "tail": "pure enriched renderer",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "EnrichedMarkdownText",
+      "relation": "based_on",
+      "tail": "react-native-enriched-markdown",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "react-native-enriched-markdown",
+      "relation": "based_on",
+      "tail": "md4c",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "CodeBlock",
+      "relation": "uses",
+      "tail": "Shiki",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "CodeBlock",
+      "relation": "uses",
+      "tail": "github-light theme",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "CodeBlock",
+      "relation": "uses",
+      "tail": "github-dark theme",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "MarkdownImage",
+      "relation": "uses",
+      "tail": "expo-image",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "MarkdownImage",
+      "relation": "uses",
+      "tail": "tap-to-lightbox",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "preprocessMobileMarkdown",
+      "relation": "responsible_for",
+      "tail": "legacy mention shortcode processing",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "preprocessMobileMarkdown",
+      "relation": "responsible_for",
+      "tail": "file card processing",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "preprocessMobileMarkdown",
+      "relation": "responsible_for",
+      "tail": "HTML strip with br conversion",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "related_to",
+      "tail": "web Markdown component",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    },
+    {
+      "head": "mobile Markdown component",
+      "relation": "compared_with",
+      "tail": "web Markdown component",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-4e4552"
+    }
+  ],
+  "stats": {
+    "total_chunks": 7,
+    "total_triples": 111,
+    "unique_schemas": 36,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 44,
+      "('SYSTEM', 'uses', 'STANDARD')": 2,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 5,
+      "('CONCEPT', 'triggers', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'splits', 'CONCEPT')": 1,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 3,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'default_expands', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'uses', 'CONCEPT')": 7,
+      "('SYSTEM', 'located_at', 'SYSTEM')": 2,
+      "('SYSTEM', 'input_to', 'SYSTEM')": 2,
+      "('SYSTEM', 'output_to', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'pushes', 'CONCEPT')": 1,
+      "('CONCEPT', 'consumed_by', 'SYSTEM')": 1,
+      "('SYSTEM', 'updates', 'SYSTEM')": 1,
+      "('SYSTEM', 'output_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'splits', 'CONCEPT')": 1,
+      "('CONCEPT', 'rendered_by', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 2,
+      "('SYSTEM', 'supports', 'STANDARD')": 2,
+      "('TECHNOLOGY', 'designed_for', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'implemented_by', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'used_by', 'SYSTEM')": 4,
+      "('TECHNOLOGY', 'produces', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'wraps', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'contains', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'depends_on', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'based_on', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 3,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 36,
+    "fact_layer_size": 110,
+    "passage_layer_size": 7
+  }
+}

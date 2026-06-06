@@ -462,7 +462,12 @@ class MemoryEngine:
             self._storage = GitStorage(
                 config=GitStorageConfig(work_dir=self._config.storage_path)
             )
-            logger.info("GitStorage initialized at %s", self._config.storage_path)
+            git_dir = Path(self._config.storage_path) / ".git"
+            if git_dir.exists() and (git_dir / "HEAD").exists():
+                logger.info("[Engine] Git repo verified at %s", self._config.storage_path)
+            else:
+                logger.warning("[Engine] Git repo not found at %s, some features disabled",
+                               self._config.storage_path)
         except Exception as e:
             logger.warning("GitStorage init failed (non-fatal): %s", e)
             self._storage = None

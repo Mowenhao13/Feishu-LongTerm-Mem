@@ -1,0 +1,1715 @@
+{
+  "triples": [
+    {
+      "head": "Repo2",
+      "relation": "recommends",
+      "tail": "Repo2 WS Hub",
+      "schema": [
+        "ORG",
+        "recommends",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-a473be"
+    },
+    {
+      "head": "Multica",
+      "relation": "recommends",
+      "tail": "Multica Chat Store",
+      "schema": [
+        "ORG",
+        "recommends",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-a473be"
+    },
+    {
+      "head": "Repo3",
+      "relation": "recommends",
+      "tail": "前端参考",
+      "schema": [
+        "ORG",
+        "recommends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-a473be"
+    },
+    {
+      "head": "群聊/单聊设计文档",
+      "relation": "based_on",
+      "tail": "Repo2 WS Hub",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-a473be"
+    },
+    {
+      "head": "群聊/单聊设计文档",
+      "relation": "based_on",
+      "tail": "Multica Chat Store",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-a473be"
+    },
+    {
+      "head": "群聊/单聊设计文档",
+      "relation": "based_on",
+      "tail": "前端参考",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-a473be"
+    },
+    {
+      "head": "repo2",
+      "relation": "implements",
+      "tail": "WebSocket Hub",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "repo2",
+      "relation": "implements",
+      "tail": "Room Management",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "WebSocket Hub",
+      "relation": "implemented_in",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "Room Management",
+      "relation": "implemented_in",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Chat Store",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Query/Mutation",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "Chat Store",
+      "relation": "implemented_in",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "Query/Mutation",
+      "relation": "implemented_in",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "WebSocket Protocol",
+      "schema": [
+        "ORG",
+        "implements",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "Domain Model",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "Mention Router",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "WebSocket Protocol",
+      "relation": "implemented_in",
+      "tail": "TypeScript",
+      "schema": [
+        "STANDARD",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "Domain Model",
+      "relation": "implemented_in",
+      "tail": "TypeScript",
+      "schema": [
+        "CONCEPT",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "Mention Router",
+      "relation": "implemented_in",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "repo2",
+      "relation": "implements",
+      "tail": "Multi-user Online Detection",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "repo2",
+      "relation": "implements",
+      "tail": "Group Chat Features",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-4236a6"
+    },
+    {
+      "head": "Repo2 WS Hub",
+      "relation": "based_on",
+      "tail": "消息总线",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Repo2 WS Hub",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Repo2 WS Hub",
+      "relation": "responsible_for",
+      "tail": "房间管理",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Repo2 WS Hub",
+      "relation": "responsible_for",
+      "tail": "私聊",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Repo2 WS Hub",
+      "relation": "responsible_for",
+      "tail": "广播",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Repo2 WS Hub",
+      "relation": "responsible_for",
+      "tail": "在线状态管理",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Hub",
+      "relation": "uses",
+      "tail": "sync.Map",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Hub",
+      "relation": "uses",
+      "tail": "sync.RWMutex",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Client",
+      "relation": "uses",
+      "tail": "atomic.Int64",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Client",
+      "relation": "uses",
+      "tail": "sync.Mutex",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Client",
+      "relation": "uses",
+      "tail": "sync.Once",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Client",
+      "relation": "uses",
+      "tail": "chan []byte",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Hub",
+      "relation": "uses",
+      "tail": "chan BusMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "写通道",
+      "relation": "related_to",
+      "tail": "消息总线",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "事件循环",
+      "relation": "related_to",
+      "tail": "消息总线",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "事件循环",
+      "relation": "responsible_for",
+      "tail": "dispatch",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusRegister",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusUnregister",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusBroadcast",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusRoomMsg",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusDirectMsg",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusJoinRoom",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusLeaveRoom",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusPersistedMsg",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "消息总线",
+      "relation": "related_to",
+      "tail": "BusCustomEvent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-3d00a8"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "adopts",
+      "tail": "单 goroutine 事件循环",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "单 goroutine 事件循环",
+      "relation": "based_on",
+      "tail": "无锁设计",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "uses",
+      "tail": "sync.Map",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "uses",
+      "tail": "channel 256 缓存",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "adopts",
+      "tail": "背压丢弃",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "uses",
+      "tail": "30s Ping + 60s Pong 超时",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "uses",
+      "tail": "map[string]map[*Client]bool",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "uses",
+      "tail": "BusPersistedMsg",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "adopts",
+      "tail": "maxConnsPerUser = 5",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "adopts",
+      "tail": "15s 间隔巡检",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo2 方案",
+      "relation": "adopts",
+      "tail": "优雅关闭",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "优雅关闭",
+      "relation": "uses",
+      "tail": "sync.Once",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "优雅关闭",
+      "relation": "uses",
+      "tail": "draining flag",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "优雅关闭",
+      "relation": "uses",
+      "tail": "2s drain",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Multica Chat Store",
+      "relation": "based_on",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Multica Chat Store",
+      "relation": "adopts",
+      "tail": "Proxy 模式",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Multica Chat Store",
+      "relation": "adopts",
+      "tail": "模块级单例",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Multica Chat Store",
+      "relation": "uses",
+      "tail": "createChatStore(options)",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "createChatStore(options)",
+      "relation": "produces",
+      "tail": "ChatStore",
+      "schema": [
+        "TECHNOLOGY",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "ChatStore",
+      "relation": "contains",
+      "tail": "sessions",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "ChatStore",
+      "relation": "contains",
+      "tail": "messages",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "ChatStore",
+      "relation": "contains",
+      "tail": "drafts",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Zustand",
+      "relation": "related_to",
+      "tail": "React Query",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo3 Mention Router",
+      "relation": "responsible_for",
+      "tail": "解析 @mention 并路由到 Agent",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo3 Mention Router",
+      "relation": "uses",
+      "tail": "@mention",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo3 Mention Router",
+      "relation": "uses",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Repo3 Mention Router",
+      "relation": "adopts",
+      "tail": "过滤规则",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "过滤规则",
+      "relation": "excludes",
+      "tail": "系统消息",
+      "schema": [
+        "CONCEPT",
+        "excludes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "过滤规则",
+      "relation": "excludes",
+      "tail": "自身",
+      "schema": [
+        "CONCEPT",
+        "excludes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "过滤规则",
+      "relation": "excludes",
+      "tail": "已删除 Agent",
+      "schema": [
+        "CONCEPT",
+        "excludes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-585076"
+    },
+    {
+      "head": "Chat 系统",
+      "relation": "adopts",
+      "tail": "WS Hub",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "based_on",
+      "tail": "Repo2",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "uses",
+      "tail": "单 goroutine 消息总线",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "单 goroutine 消息总线",
+      "relation": "related_to",
+      "tail": "无锁设计",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "uses",
+      "tail": "Room 模型",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room 模型",
+      "relation": "related_to",
+      "tail": "群聊/单聊统一抽象",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "uses",
+      "tail": "Client 管理",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Client 管理",
+      "relation": "related_to",
+      "tail": "多设备支持",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Client 管理",
+      "relation": "related_to",
+      "tail": "连接数限制",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "uses",
+      "tail": "8 种消息类型",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "uses",
+      "tail": "心跳检测",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "心跳检测",
+      "relation": "related_to",
+      "tail": "30s Ping",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "心跳检测",
+      "relation": "related_to",
+      "tail": "60s Pong",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "WS Hub",
+      "relation": "uses",
+      "tail": "优雅关闭",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "优雅关闭",
+      "relation": "related_to",
+      "tail": "draining",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "优雅关闭",
+      "relation": "related_to",
+      "tail": "排空",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room 类型",
+      "relation": "designed_by",
+      "tail": "AgentHub",
+      "schema": [
+        "CONCEPT",
+        "designed_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room 类型",
+      "relation": "related_to",
+      "tail": "direct_chat",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room 类型",
+      "relation": "related_to",
+      "tail": "session_room",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room 类型",
+      "relation": "related_to",
+      "tail": "topic_room",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Chat 系统",
+      "relation": "adopts",
+      "tail": "Chat Store",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Chat Store",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Chat Store",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Zustand",
+      "relation": "responsible_for",
+      "tail": "sessions/messages/drafts",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Chat Store",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "React Query",
+      "relation": "responsible_for",
+      "tail": "message list/mutations",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Chat Store",
+      "relation": "uses",
+      "tail": "Proxy 单例",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Proxy 单例",
+      "relation": "related_to",
+      "tail": "registerChatStore",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Proxy 单例",
+      "relation": "related_to",
+      "tail": "useChatStore",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Chat 系统",
+      "relation": "adopts",
+      "tail": "Mention Router",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Mention Router",
+      "relation": "based_on",
+      "tail": "Repo3",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Mention Router",
+      "relation": "uses",
+      "tail": "@agentName",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "@agentName",
+      "relation": "related_to",
+      "tail": "路由到目标 Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Mention Router",
+      "relation": "uses",
+      "tail": "@squadName",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "@squadName",
+      "relation": "related_to",
+      "tail": "Squad Leader 接收",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Mention Router",
+      "relation": "uses",
+      "tail": "@humanName",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "@humanName",
+      "relation": "related_to",
+      "tail": "路由到用户",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "based_on",
+      "tail": "Repo2",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "based_on",
+      "tail": "AgentHub",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "related_to",
+      "tail": "message.streaming",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "related_to",
+      "tail": "message.complete",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "related_to",
+      "tail": "agent.status",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "related_to",
+      "tail": "handoff.status",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "消息类型",
+      "relation": "related_to",
+      "tail": "inbox.new",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "RoomType",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "RoomType",
+      "relation": "related_to",
+      "tail": "RoomDirectChat",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "RoomType",
+      "relation": "related_to",
+      "tail": "RoomSession",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "RoomType",
+      "relation": "related_to",
+      "tail": "RoomTopic",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "ID",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "Type",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "WorkspaceID",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "IssueID",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "Members",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Members",
+      "relation": "related_to",
+      "tail": "ActorRef",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "Agents",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Agents",
+      "relation": "related_to",
+      "tail": "RuntimeAgent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Room",
+      "relation": "related_to",
+      "tail": "CreatedAt",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Hub.JoinRoom",
+      "relation": "related_to",
+      "tail": "Client 加入 Room",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Client 加入 Room",
+      "relation": "related_to",
+      "tail": "member_joined 事件",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Agent 被 @mention",
+      "relation": "related_to",
+      "tail": "Mention Router",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "Mention Router",
+      "relation": "related_to",
+      "tail": "Hub.SendToRoom",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "direct_chat",
+      "relation": "related_to",
+      "tail": "1 人 + N Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "session_room",
+      "relation": "related_to",
+      "tail": "M 人 + N Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "direct_chat",
+      "relation": "related_to",
+      "tail": "每个组合一个房间",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "session_room",
+      "relation": "related_to",
+      "tail": "每次 Session 一个房间",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "direct_chat",
+      "relation": "related_to",
+      "tail": "用户自由发言",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "session_room",
+      "relation": "related_to",
+      "tail": "用户自由发言，Agent 被 @ 才响应",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "direct_chat",
+      "relation": "related_to",
+      "tail": "隐式 Orchestrator",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "session_room",
+      "relation": "related_to",
+      "tail": "显式 @Orchestrator",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "direct_chat",
+      "relation": "related_to",
+      "tail": "所有消息通知",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "session_room",
+      "relation": "related_to",
+      "tail": "只有 @ 我 的消息通知",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "direct_chat",
+      "relation": "related_to",
+      "tail": "永久消息持久化",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    },
+    {
+      "head": "session_room",
+      "relation": "related_to",
+      "tail": "Session 结束后可选归档",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e811d4"
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 152,
+    "unique_schemas": 29,
+    "schema_distribution": {
+      "('ORG', 'recommends', 'SYSTEM')": 2,
+      "('ORG', 'recommends', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 3,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('ORG', 'implements', 'SYSTEM')": 7,
+      "('SYSTEM', 'implemented_in', 'TECHNOLOGY')": 5,
+      "('ORG', 'implements', 'STANDARD')": 1,
+      "('ORG', 'implements', 'CONCEPT')": 1,
+      "('STANDARD', 'implemented_in', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'implemented_in', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 16,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 6,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 3,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 57,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 8,
+      "('SYSTEM', 'uses', 'CONCEPT')": 14,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'produces', 'CONCEPT')": 1,
+      "('CONCEPT', 'contains', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'related_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'excludes', 'CONCEPT')": 3,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 3,
+      "('CONCEPT', 'designed_by', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 2,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 29,
+    "fact_layer_size": 152,
+    "passage_layer_size": 5
+  }
+}

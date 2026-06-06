@@ -428,6 +428,10 @@
           <span>🔗 github.com/Mowenhao13/Feishu-LongTerm-Mem</span>
           <span>⚡ Python + FastMCP + LLM</span>
         </div>
+        <div style="display:flex; gap:16px; color:var(--text2); font-size:0.7rem; opacity:0.5; margin-top:4px;">
+          <span>莫文豪</span>
+          <span>心态就是力量</span>
+        </div>
       </div>
     </div>
   </div>
@@ -502,8 +506,135 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 4: 飞书 IM 集成 ==================== -->
+<!-- ==================== SLIDE 4: HyperMem 超图结构 ==================== -->
   <div class="slide" data-index="3">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>HyperMem 超图记忆架构</h2>
+      <p class="subtitle">三层节点 + 超边关联，从粗到精的语义检索</p>
+      <div class="grid-2">
+        <div>
+          <h3>三层结构</h3>
+          <table class="compact-table">
+            <tr><th>层级</th><th>说明</th><th>粒度</th></tr>
+            <tr><td><span class="tag cyan">Topic</span></td><td>高层语义聚类（如"技术选型"）</td><td>最粗</td></tr>
+            <tr><td><span class="tag purple">Episode</span></td><td>叙事片段（一次话题的完整讨论）</td><td>中</td></tr>
+            <tr><td><span class="tag green">Fact/Decision</span></td><td>原子信息（具体决策内容）</td><td>最细</td></tr>
+          </table>
+          <h3 style="margin-top:20px;">超边（Hyperedge）</h3>
+          <ul>
+            <li>一条超边可连接多个节点（Topic → 所有相关 Episodes）</li>
+            <li>决策通过超边关联到所属 Episode 和 Topic</li>
+            <li>跨 Episode 的决策通过超边建立语义关联</li>
+          </ul>
+          <h3 style="margin-top:20px;">从粗到精检索</h3>
+          <div class="arch-flow" style="flex-direction:column;gap:8px;">
+            <div class="arch-box cyan"><div class="icon">🔍</div>Topic 层：向量搜索缩小范围</div>
+            <div class="arch-arrow" style="transform:rotate(90deg);">→</div>
+            <div class="arch-box purple"><div class="icon">📝</div>Episode 层：超边传播注意力权重</div>
+            <div class="arch-arrow" style="transform:rotate(90deg);">→</div>
+            <div class="arch-box green"><div class="icon">📋</div>Decision 层：精确提取原子事实</div>
+          </div>
+        </div>
+        <div>
+          <h3>架构图</h3>
+          <div class="terminal" style="font-size:0.72rem;">
+            <span class="comment"># HyperMem 结构示意</span><br>
+            <span class="cyan">Topic: "多智能体循环架构"</span><br>
+            │<br>
+            ├─ <span class="purple">Episode: ep_001 (四Agent协作讨论)</span><br>
+            │  ├─ <span class="green">Decision: 分层方案</span><br>
+            │  ├─ <span class="green">Decision: 结构化日志</span><br>
+            │  └─ <span class="green">Decision: 错误分类策略</span><br>
+            ├─ <span class="purple">Episode: ep_002 (通信协议选型)</span><br>
+            │  └─ <span class="green">Decision: gRPC通信协议</span><br>
+            └─ <span class="purple">Episode: ep_003 (Agent数量控制)</span><br>
+               └─ <span class="green">Decision: 固定10个智能体</span><br>
+            <br>
+            <span class="comment"># 超边连接同主题下所有 Episode</span><br>
+            hyperedge(Topic) → [ep_001, ep_002, ep_003]
+          </div>
+          <h3 style="margin-top:16px;">v2 数据集覆盖</h3>
+          <div style="margin-top:8px;">
+            <div class="stat-row">
+              <div class="stat-item">
+                <div class="stat-num" style="color:var(--cyan);">10</div>
+                <div class="stat-label">Topics</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" style="color:var(--purple);">183</div>
+                <div class="stat-label">Episodes</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" style="color:var(--green);">31</div>
+                <div class="stat-label">Decisions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 5: SuspendPool 挂起池 ==================== -->
+  <div class="slide" data-index="4">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>SuspendPool — Episode 挂起与恢复</h2>
+      <p class="subtitle">智能管理暂停的对话，实现话题切换与恢复</p>
+      <div class="grid-2">
+        <div>
+          <h3>为什么需要 SuspendPool？</h3>
+          <ul>
+            <li>群聊中话题经常切换，但旧话题可能稍后回归</li>
+            <li>直接丢弃 Episode 会丢失上下文，影响后续关联</li>
+            <li>SuspendPool 保留暂停 Episode 的完整消息和 embedding</li>
+            <li>新消息到达时，与池中所有暂停 Episode 做 Max-similarity 匹配</li>
+          </ul>
+          <h3 style="margin-top:20px;">三重边界检测</h3>
+          <table class="compact-table">
+            <tr><th>边界类型</th><th>阈值</th><th>触发</th></tr>
+            <tr><td>⏱ 时间间隔</td><td>1800s (30min)</td><td>超时 Suspend</td></tr>
+            <tr><td>🧠 语义切换</td><td>similarity &lt; 0.50</td><td>话题变化 Suspend</td></tr>
+            <tr><td>📊 容量上限</td><td>MAX_MSGS=50</td><td>超限强制 Suspend</td></tr>
+          </table>
+          <h3 style="margin-top:20px;">Reopen 条件</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            max_sim = max(sim(new_msg, ep))<br>
+            if max_sim &gt;= <span class="highlight">0.55</span> → <span class="green">REOPEN</span><br>
+            else → <span class="cyan">创建新 Episode</span>
+          </div>
+        </div>
+        <div>
+          <h3>生命周期</h3>
+          <div class="flow-row">
+            <span class="flow-step" style="border-color:var(--accent);color:var(--accent);">⚡ Active</span>
+            <span class="flow-arrow">→ 检测到边界</span>
+            <span class="flow-step" style="border-color:var(--yellow);color:var(--yellow);">⏸ Suspend</span>
+            <span class="flow-arrow">→ 新消息比对</span>
+            <span class="flow-step" style="border-color:var(--green);color:var(--green);">▶ Reopen</span>
+            <span class="flow-arrow">或</span>
+            <span class="flow-step" style="border-color:var(--red);color:var(--red);">🗑 LRU淘汰</span>
+          </div>
+          <h3 style="margin-top:20px;">v2 运行数据</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            <span class="comment"># eval_v2 真实数据</span><br>
+            处理消息: <span class="highlight">1,500</span><br>
+            Episode Suspend: <span class="warn">821</span> 次<br>
+            Episode Reopen: <span class="cyan">723</span> 次<br>
+            新创建 Episode: <span class="green">183</span> 次<br>
+            处理速率: <span class="highlight">30.0</span> msg/s<br>
+            <br>
+            <span class="comment"># 意味着平均每 2 条消息</span><br>
+            <span class="comment"># 就发生一次 Reopen 检查</span>
+          </div>
+          <h3 style="margin-top:12px;">LRU 淘汰</h3>
+          <p style="font-size:0.85rem;">池满 20 个时，淘汰最早暂停的 Episode，确保内存可控</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 6: 飞书 IM 集成 ==================== -->
+  <div class="slide" data-index="5">
     <div class="slide-content">
       <h2>飞书 IM 集成</h2>
       <p class="subtitle">实时消息监听与智能信号检测</p>
@@ -548,8 +679,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 5: Episode 管理 ==================== -->
-  <div class="slide" data-index="4">
+  <!-- ==================== SLIDE 7: Episode 管理 ==================== -->
+  <div class="slide" data-index="6">
     <div class="slide-content">
       <h2>Episode 管理</h2>
       <p class="subtitle">消息缓冲、边界检测、Suspend/Reopen 机制</p>
@@ -596,9 +727,9 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 6: LLM 决策提取 ==================== -->
-  <div class="slide" data-index="5">
-    <div class="slide-content">
+  <!-- ==================== SLIDE 8: LLM 决策提取 ==================== -->
+  <div class="slide" data-index="7">
+    <div class="slide-content" style="transform: translateY(32px);">
       <h2>LLM 决策提取</h2>
       <p class="subtitle">从对话到结构化决策的全自动流水线</p>
       <div class="grid-2">
@@ -644,8 +775,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 7: Git 存储展示 ==================== -->
-  <div class="slide" data-index="6">
+  <!-- ==================== SLIDE 9: Git 存储展示 ==================== -->
+  <div class="slide" data-index="8">
     <div class="slide-content">
       <h2>Git 版本化存储</h2>
       <p class="subtitle">Branch-per-Record 策略 · 每项决策独立分支管理</p>
@@ -704,8 +835,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 8: MCP 工具集 ==================== -->
-  <div class="slide" data-index="7">
+  <!-- ==================== SLIDE 10: MCP 工具集 ==================== -->
+  <div class="slide" data-index="9">
     <div class="slide-content">
       <h2>MCP 工具集</h2>
       <p class="subtitle">38 个工具 · 四大分类 · AI 客户端原生集成</p>
@@ -772,9 +903,9 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 9: 运行时日志 ==================== -->
-  <div class="slide" data-index="8">
-    <div class="slide-content">
+  <!-- ==================== SLIDE 11: 运行时日志 ==================== -->
+  <div class="slide" data-index="10">
+    <div class="slide-content" style="transform: translateY(32px);">
       <h2>运行时日志</h2>
       <p class="subtitle">Eval 模式下的全流程终端输出</p>
       <div class="grid-2">
@@ -829,8 +960,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 10: 评估数据 ==================== -->
-  <div class="slide" data-index="9">
+  <!-- ==================== SLIDE 12: 评估数据 ==================== -->
+  <div class="slide" data-index="11">
     <div class="slide-content">
       <h2>评估与测试</h2>
       <p class="subtitle">Precision/Recall/F1 精度评估 · Embedding 语义匹配</p>
@@ -851,13 +982,14 @@
             <li>chat_id 跨群隔离约束</li>
             <li>suggestion 同类型阈值 0.3，跨类型 0.45</li>
           </ul>
-          <h3 style="margin-top:16px;">改进对比</h3>
+          <h3 style="margin-top:20px;">指标含义</h3>
           <table class="compact-table">
-            <tr><th>指标</th><th>旧版字符</th><th>Embedding</th></tr>
-            <tr><td>single F1</td><td>45.6%</td><td style="color:var(--green);font-weight:700;">88.6%</td></tr>
-            <tr><td>multi F1</td><td>48.9%</td><td style="color:var(--green);font-weight:700;">84.5%</td></tr>
-            <tr><td>single Recall</td><td>46.2%</td><td style="color:var(--green);font-weight:700;">100.0%</td></tr>
+            <tr><th>指标</th><th>含义</th><th>你的数据</th></tr>
+            <tr><td><strong>Precision</strong></td><td>提取的决策中正确比例（不瞎报）</td><td style="color:var(--green);">100%</td></tr>
+            <tr><td><strong>Recall</strong></td><td>实际决策中被找出比例（不漏报）</td><td>75.6%</td></tr>
+            <tr><td><strong>F1</strong></td><td>P 与 R 的调和平均（综合表现）</td><td style="color:var(--green);">86.1%</td></tr>
           </table>
+          <p style="margin-top:8px;font-size:0.82rem;color:var(--text2);">特点：宁漏勿错，零误检（FP=0）</p>
         </div>
         <div>
           <h3>最新测试结果（2026-06-05）</h3>
@@ -865,31 +997,26 @@
             <tr><th>数据集</th><th>消息</th><th>期望</th><th>P</th><th>R</th><th>F1</th></tr>
             <tr><td>argusbot_single</td><td>200</td><td>39</td><td style="color:var(--green);font-weight:700;">79.6%</td><td style="color:var(--green);font-weight:700;">100.0%</td><td style="color:var(--green);font-weight:700;">88.6%</td></tr>
             <tr><td>argusbot_multi</td><td>320</td><td>69</td><td style="color:var(--green);font-weight:700;">96.3%</td><td>75.4%</td><td style="color:var(--green);font-weight:700;">84.5%</td></tr>
+            <tr style="background:rgba(74,222,128,0.08);"><td><strong>argusbot_multi_v2</strong></td><td><strong>1,500</strong></td><td><strong>41</strong></td><td style="color:var(--green);font-weight:700;"><strong>100%</strong></td><td style="color:var(--green);font-weight:700;"><strong>75.6%</strong></td><td style="color:var(--green);font-weight:700;"><strong>86.1%</strong></td></tr>
           </table>
           <div style="margin-top:16px;">
             <h4>关键发现</h4>
             <ul>
-              <li>single 所有 39 个期望决策全部匹配（FN=0）</li>
-              <li>multi 8 群跨群隔离 <span style="color:var(--green);font-weight:700;">100%</span></li>
-              <li>Precision 提升最大：multi +49pp</li>
-              <li>Recall 瓶颈在 LLM 提取环节</li>
+              <li>v2 Precision = 100%，零误检（FP=0）</li>
+              <li>v2 Recall = 75.6%，10个漏检（FN=10），瓶颈在 LLM 提取的保守策略</li>
+              <li>5个群聊间跨群隔离 <span style="color:var(--green);font-weight:700;">100%</span></li>
+              <li>v2 覆盖主题 10 个，全部 Precision/Recall/F1 = 100%</li>
             </ul>
           </div>
-          <div class="terminal" style="margin-top:12px;font-size:0.72rem;">
-            <span class="comment"># 运行评估</span><br>
-            python -m src.eval_runner \<br>
-            &nbsp;&nbsp;--eval \<br>
-            &nbsp;&nbsp;--input eval_dataset/argusbot_single/msgs.jsonl \<br>
-            &nbsp;&nbsp;--expected eval_dataset/argusbot_single/expected.jsonl
-          </div>
+
         </div>
       </div>
     </div>
   </div>
 
   <!-- ==================== SLIDE 10b: 评估流水线 ==================== -->
-  <div class="slide" data-index="10">
-    <div class="slide-content">
+  <div class="slide" data-index="12">
+    <div class="slide-content" style="transform: translateY(32px);">
       <h2>评估流水线架构</h2>
       <p class="subtitle">从消息输入到 Precision/Recall 全流程</p>
       <div class="grid-2">
@@ -919,6 +1046,19 @@
             <tr><td>EvalComparator</td><td>Embedding 语义匹配，计算 TP/FP/FN</td></tr>
             <tr><td>Embedding Provider</td><td>qwen3-embedding-4b，batch 向量化</td></tr>
           </table>
+          <h3 style="margin-top:24px;">v2 覆盖主题</h3>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag cyan">多智能体循环架构</span>
+            <span class="tag">会话持久化与恢复</span>
+            <span class="tag green">Daemon与CLI双模式</span>
+            <span class="tag">飞书集成方案</span>
+            <span class="tag purple">PlannerAgent策略</span>
+            <span class="tag">BTW Side-Agent集成</span>
+            <span class="tag yellow">Stall检测配置</span>
+            <span class="tag">Telegram集成</span>
+            <span class="tag">JSONL命令总线</span>
+            <span class="tag">模型fallback链</span>
+          </div>
         </div>
         <div>
           <h3>匹配逻辑</h3>
@@ -941,23 +1081,14 @@
             else → <span class="error">FN</span><br>
             unmatched actual → <span class="warn">FP</span>
           </div>
-          <h3 style="margin-top:16px;">Embedding 修复</h3>
-          <div class="terminal" style="font-size:0.72rem;">
-            <span class="comment"># 修复前：模型名大小写检查失败</span><br>
-            <span class="error">if 'Qwen3' not in self.model_name:</span><br>
-            &nbsp;&nbsp;raise ValueError()<br>
-            <br>
-            <span class="comment"># 修复后：大小写不敏感</span><br>
-            <span class="green">if 'qwen3' not in self.model_name.lower():</span><br>
-            &nbsp;&nbsp;raise ValueError()
-          </div>
+
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ==================== SLIDE 11: 决策推送 ==================== -->
-  <div class="slide" data-index="11">
+  <!-- ==================== SLIDE 13: 决策推送 ==================== -->
+  <div class="slide" data-index="13">
     <div class="slide-content">
       <h2>决策推送与通知</h2>
       <p class="subtitle">多通道推送 · 热点值管理 · 定时摘要</p>
@@ -997,8 +1128,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 12: 技术栈 ==================== -->
-  <div class="slide" data-index="12">
+  <!-- ==================== SLIDE 14: 技术栈 ==================== -->
+  <div class="slide" data-index="14">
     <div class="slide-content">
       <h2>技术栈</h2>
       <div class="grid-3">
@@ -1041,7 +1172,7 @@
         </div>
         <div class="card">
           <div class="label" style="color:var(--yellow);">集成</div>
-          <p>飞书 IM（WebSocket/Poll）<br>飞书多维表格同步<br>macOS 系统通知</p>
+          <p>飞书 IM（WebSocket/Poll）<br>飞书任务视图同步<br>Sleep 机制</p>
         </div>
         <div class="card">
           <div class="label" style="color:var(--pink);">评估</div>
@@ -1051,9 +1182,69 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 13: 决策层级结构 ==================== -->
-  <div class="slide" data-index="13">
+  <!-- ==================== SLIDE 15: Sleep 机制 ==================== -->
+  <div class="slide" data-index="15">
     <div class="slide-content">
+      <h2>Sleep 机制</h2>
+      <p class="subtitle">智能休眠策略，减少无效资源消耗</p>
+      <div class="grid-2">
+        <div>
+          <h3>工作原理</h3>
+          <ul style="margin-top:12px;">
+            <li>长时间无新消息时，引擎自动进入休眠状态</li>
+            <li>休眠期间暂停 LLM 调用和 Episode 边界检测</li>
+            <li>收到新消息时自动唤醒，恢复正常处理</li>
+          </ul>
+          <div class="terminal" style="margin-top:16px;font-size:0.78rem;">
+            <span class="comment"># SleepManager 配置</span><br>
+            auto-sleep ENABLED<br>
+            interval = <span class="highlight">3600s</span> (1小时)<br>
+            <br>
+            <span class="comment"># 运行时日志</span><br>
+            <span class="bold">INFO</span> SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+          </div>
+        </div>
+        <div>
+          <h3>状态流转</h3>
+          <div class="arch-flow" style="flex-direction:column;gap:12px;margin-top:16px;">
+            <div class="arch-flow">
+              <div class="arch-box accent"><div class="icon">⚡</div>活跃状态</div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box orange"><div class="icon">⏳</div>空闲计时<br><span style="font-size:0.7rem;color:var(--text2);">无新消息</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box purple"><div class="icon">😴</div>休眠状态<br><span style="font-size:0.7rem;color:var(--text2);">暂停检测</span></div>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-box purple"><div class="icon">😴</div>休眠中</div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box green"><div class="icon">📨</div>新消息到达</div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box accent"><div class="icon">⚡</div>自动唤醒</div>
+            </div>
+          </div>
+          <h3 style="margin-top:24px;">收益</h3>
+          <div class="grid-3" style="margin-top:12px;">
+            <div class="card" style="padding:12px;text-align:center;">
+              <div class="value" style="color:var(--green);">~80%</div>
+              <p style="font-size:0.8rem;">LLM API 调用节省</p>
+            </div>
+            <div class="card" style="padding:12px;text-align:center;">
+              <div class="value" style="color:var(--accent2);">低延迟</div>
+              <p style="font-size:0.8rem;">消息即时唤醒</p>
+            </div>
+            <div class="card" style="padding:12px;text-align:center;">
+              <div class="value" style="color:var(--purple);">零配置</div>
+              <p style="font-size:0.8rem;">自动启用无需干预</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 16: 决策层级结构 ==================== -->
+  <div class="slide" data-index="16">
+    <div class="slide-content" style="transform: translateY(32px);">
       <h2>决策层级结构</h2>
       <p class="subtitle">父决策 → 子决策 → 后代决策，完整树状追踪</p>
       <div class="grid-2">
@@ -1083,14 +1274,15 @@
           <h3>决策树示例</h3>
           <img src="images/image6.png" alt="决策树结构截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:8px;">
           <p style="margin-top:8px;">如：<strong>容器化方案</strong> → K8s → 容器网络(Calico) / 容器监控(Prometheus) / 容器安全(PSS)</p>
+          <img src="images/image7.png" alt="决策可视化" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:12px;">
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ==================== SLIDE 14: 冲突检测与解决 ==================== -->
-  <div class="slide" data-index="14">
-    <div class="slide-content">
+  <!-- ==================== SLIDE 17: 冲突检测与解决 ==================== -->
+  <div class="slide" data-index="17">
+    <div class="slide-content" style="transform: translateY(32px);">
       <h2>冲突检测与解决</h2>
       <p class="subtitle">多层次冲突检测 · 交互式冲突解决</p>
       <div class="grid-2">
@@ -1141,42 +1333,71 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 15: 项目路线图 ==================== -->
-  <div class="slide" data-index="15">
-    <div class="slide-content">
-      <h2>项目路线图</h2>
-      <p class="subtitle">从核心能力到生态拓展</p>
+  <!-- ==================== SLIDE 18: v2 决策链演示 ==================== -->
+  <div class="slide" data-index="18">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>v2 决策链演示 — 多智能体循环架构</h2>
+      <p class="subtitle">chat_0 中的完整决策链路：建议 → 拍板 → 细粒度子决策</p>
       <div class="grid-2">
-        <div class="card">
-          <div class="label" style="color:var(--green);">已完成</div>
-          <ul>
-            <li>飞书 IM 实时消息监听（WebSocket/Poll）</li>
-            <li>启发式信号检测与 Episode 管理</li>
-            <li>LLM 决策提取与去重流水线</li>
-            <li>Git Branch-per-Record 版本化存储</li>
-            <li>34 个 MCP 工具暴露</li>
-            <li>决策卡片推送与热点值管理</li>
-            <li>飞书多维表格同步（Base View）</li>
-            <li>决策层级关系追踪（父子树）</li>
-          </ul>
+        <div>
+          <h3>决策链时间线</h3>
+          <table class="compact-table">
+            <tr><th>#</th><th>角色</th><th>内容摘要</th><th>类型</th></tr>
+            <tr><td>1</td><td>Alice</td><td>发起讨论：四Agent协作方案</td><td>根决策</td></tr>
+            <tr><td>2</td><td>Bob</td><td>建议分层：执行层+协调层</td><td style="color:var(--yellow);">建议 L1</td></tr>
+            <tr><td>3</td><td>Charlie</td><td>状态同步关键，考虑异步队列</td><td>技术补充</td></tr>
+            <tr><td>4</td><td>Diana</td><td>明确Agent职责边界</td><td>用户视角</td></tr>
+            <tr><td>5</td><td>Eve</td><td>协调层暴露统一状态接口</td><td>前端视角</td></tr>
+            <tr style="background:rgba(74,222,128,0.08);"><td><b>6</b></td><td><b>Alice</b></td><td><b>拍板：分层+协调层设两个Agent</b></td><td style="color:var(--green);font-weight:700;">✅ 决定 L2</td></tr>
+            <tr><td>7</td><td>Bob</td><td>建议异常处理Agent监听错误事件</td><td style="color:var(--yellow);">建议 L3</td></tr>
+            <tr><td>8</td><td>Charlie</td><td>错误分三类：临时/永久/业务</td><td>技术建议</td></tr>
+            <tr style="background:rgba(74,222,128,0.08);"><td><b>9</b></td><td><b>Alice</b></td><td><b>拍板：三类错误对应处理策略</b></td><td style="color:var(--green);font-weight:700;">✅ 决定 L3</td></tr>
+          </table>
         </div>
-        <div class="card">
-          <div class="label" style="color:var(--yellow);">规划中</div>
-          <ul>
-            <li>飞书文档（Doc）决策提取</li>
-            <li>飞书会议纪要决策提取</li>
-            <li>Web 管理后台 Dashboard</li>
-            <li>多项目/多仓库支持</li>
-            <li>决策可视化知识图谱</li>
-            <li>飞书机器人主动问答</li>
-          </ul>
+        <div>
+          <h3>决策树结构</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            <span class="comment"># chat_0 多智能体循环架构</span><br>
+            m001: 确定四Agent协作方案 <span class="cyan">(根决策)</span><br>
+            └─ m002: Bob建议执行层/协调层分层 <span class="warn">(建议, L1)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└─ m006: Alice拍板分层方案 <span class="green">(决定, L2)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ m023: 结构化日志要求 <span class="green">(决定, L2)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ m028: 异常处理Agent建议 <span class="warn">(建议, L3)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ m030: 错误分类策略 <span class="green">(决定, L3)</span>
+          </div>
+          <h3 style="margin-top:20px;">置信度分析</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            <span class="comment"># m030 错误分类策略</span><br>
+            明确拍板词 "行，就按..." → <span class="highlight">+0.05</span><br>
+            指定了执行者 Bob → <span class="highlight">+0.05</span><br>
+            有明确技术分类 → <span class="highlight">+0.05</span><br>
+            基础置信度 → <span class="highlight">0.80</span><br>
+            ─────────────────────<br>
+            最终置信度 → <span class="green" style="font-weight:700;">~0.95 (高置信)</span>
+          </div>
+          <h3 style="margin-top:20px;">评估结果</h3>
+          <div class="stat-row">
+            <div class="stat-item">
+              <div class="stat-num" style="color:var(--green);">86.1%</div>
+              <div class="stat-label">F1 Score</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" style="color:var(--green);">100%</div>
+              <div class="stat-label">Precision</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" style="color:var(--green);">75.6%</div>
+              <div class="stat-label">Recall</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ==================== SLIDE 16: 快速开始 ==================== -->
-  <div class="slide" data-index="16">
+  
+  <!-- ==================== SLIDE 19: 快速开始 ==================== -->
+  <div class="slide" data-index="19">
     <div class="slide-content">
       <h2>快速开始</h2>
       <p class="subtitle">从克隆到运行，三步启动</p>
@@ -1225,42 +1446,8 @@
     </div>
   </div>
 
-  <!-- ==================== SLIDE 17: 扩展特性与展望 ==================== -->
-  <div class="slide" data-index="17">
-    <div class="slide-content">
-      <h2>扩展特性与展望</h2>
-      <p class="subtitle">持续进化的团队决策记忆系统</p>
-      <div class="grid-3">
-        <div class="card" style="padding:16px;">
-          <div class="label" style="color:var(--accent);">飞书文档接入</div>
-          <p>从飞书文档/Doc 中提取决策，与群聊决策融合，构建更完整的决策网络。支持多文档决策冲突检测。</p>
-        </div>
-        <div class="card" style="padding:16px;">
-          <div class="label" style="color:var(--accent2);">知识图谱可视化</div>
-          <p>基于决策层级关系和冲突关系生成交互式知识图谱，直观展示决策之间的关联网络。</p>
-        </div>
-        <div class="card" style="padding:16px;">
-          <div class="label" style="color:var(--green);">飞书多维表格</div>
-          <p>将决策自动同步到飞书多维表格，支持多维度筛选、排序和统计分析，便于团队查阅。</p>
-        </div>
-        <div class="card" style="padding:16px;">
-          <div class="label" style="color:var(--yellow);">主动问答</div>
-          <p>部署飞书机器人到群聊，支持自然语言问答："之前关于XX技术选型的决定是什么？"</p>
-        </div>
-        <div class="card" style="padding:16px;">
-          <div class="label" style="color:var(--purple);">Web Dashboard</div>
-          <p>Web 管理后台，可视化浏览所有决策、冲突关系、层级结构，支持手动干预和管理。</p>
-        </div>
-        <div class="card" style="padding:16px;">
-          <div class="label" style="color:var(--pink);">多项目支持</div>
-          <p>支持多项目/多仓库同时运行，每个项目独立存储和管理决策，互不干扰。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 18: Q&A ==================== -->
-  <div class="slide" data-index="18">
+  <!-- ==================== SLIDE 20: Q&A ==================== -->
+  <div class="slide" data-index="20">
     <div class="slide-content" style="text-align:center;">
       <h1 style="font-size:4rem;">Q & A</h1>
       <p class="subtitle" style="font-size:1.2rem; margin-top:20px;">感谢聆听 · 欢迎提问</p>
@@ -1277,7 +1464,7 @@
 
 <div class="nav-bar">
   <button class="nav-btn" id="prevSlide">◀</button>
-  <span class="page-indicator" id="pageIndicator">1 / 18</span>
+  <span class="page-indicator" id="pageIndicator">1 / 21</span>
   <button class="nav-btn" id="nextSlide">▶</button>
   <button class="nav-btn primary" id="gotoSlide" style="display:none;">跳转</button>
 </div>

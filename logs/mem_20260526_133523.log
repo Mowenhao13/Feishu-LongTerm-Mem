@@ -1,0 +1,62 @@
+2026-05-26 13:35:23 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260526_133523.log
+2026-05-26 13:35:23 - __main__ - INFO - ========================================
+2026-05-26 13:35:23 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-26 13:35:23 - __main__ - INFO - ========================================
+2026-05-26 13:35:23 - __main__ - INFO - Project: default
+2026-05-26 13:35:23 - __main__ - INFO - Storage: data
+2026-05-26 13:35:23 - __main__ - INFO - DocsDir: data/docs
+2026-05-26 13:35:23 - __main__ - INFO - [GitStorage] initialized
+2026-05-26 13:35:24 - __main__ - INFO - [MemoryGraph] loaded 24 decisions from Git
+2026-05-26 13:35:24 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-26 13:35:24 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-26 13:35:24 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-26 13:35:24 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-26 13:35:24 - src.core.engine - INFO - Loaded 24 decisions, 1 topics
+2026-05-26 13:35:24 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-26 13:35:24 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-26 13:35:24 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-26 13:35:24 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-26 13:35:24 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-26 13:35:24 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-26 13:35:24 - __main__ - INFO - [Engine] Embedding+Reranker injected for similarity search
+2026-05-26 13:35:24 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-26 13:35:24 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-26 13:35:24 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-26 13:35:24 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-26 13:35:24 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-26 13:35:24 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-26 13:35:24 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-26 13:35:24 - __main__ - INFO - [lark_im] EpisodeManager created: gap=60s max_msgs=4 max_dur=7200s semantic=0.45 reopen=0.65
+2026-05-26 13:35:24 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-26 13:35:24 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-26 13:35:24 - __main__ - INFO - [lark_im] EmbeddingProvider injected for episode boundary detection
+2026-05-26 13:35:24 - src.adapter.lark_im - INFO - WS listener started
+2026-05-26 13:35:24 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-26 13:35:24 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-26 13:35:24 - __main__ - INFO - [Episode] Check loop task created
+2026-05-26 13:35:24 - __main__ - INFO - [Detectors] Configuration:
+2026-05-26 13:35:24 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-26 13:35:24 - __main__ - INFO -   lark_doc: disabled
+2026-05-26 13:35:24 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-26 13:35:24 - __main__ - INFO - [Episode] Check loop started (interval=10s)
+2026-05-26 13:35:25 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644069918761225148&access_key=998e7c25e13fef18f6ed15718c8b1c95&service_id=33554678&ticket=bab7d20c-8294-4018-bf9f-21384eac51ce [conn_id=7644069918761225148]
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=19 content={"text":"采用蓝绿部署策略"}
+2026-05-26 13:35:34 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=oc_fde6be60e
+2026-05-26 13:35:34 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=19 model=Qwen3-Embedding-4B
+2026-05-26 13:35:34 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=19 preview={"text":"采用蓝绿部署策略"}
+2026-05-26 13:35:34 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:35:36 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:35:40 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:35:48 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:36:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:36:04 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-26 13:36:05 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:36:07 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-26 13:36:09 - __main__ - INFO - [System] Shutting down...
+2026-05-26 13:36:09 - src.adapter.lark_im - INFO - WS listener stopped
+2026-05-26 13:36:09 - __main__ - INFO - [lark_im] WS listener stopped
+2026-05-26 13:36:09 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 13:36:09 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 13:36:09 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)
+2026-05-26 13:36:09 - __main__ - INFO - [System] Shutdown complete

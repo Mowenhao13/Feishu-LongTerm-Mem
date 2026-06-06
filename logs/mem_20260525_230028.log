@@ -1,0 +1,48 @@
+2026-05-25 23:00:28 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260525_230028.log
+2026-05-25 23:00:28 - __main__ - INFO - ========================================
+2026-05-25 23:00:28 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-25 23:00:28 - __main__ - INFO - ========================================
+2026-05-25 23:00:28 - __main__ - INFO - Project: default
+2026-05-25 23:00:28 - __main__ - INFO - Storage: data
+2026-05-25 23:00:28 - __main__ - INFO - DocsDir: data/docs
+2026-05-25 23:00:28 - __main__ - INFO - [GitStorage] initialized
+2026-05-25 23:00:28 - __main__ - INFO - [MemoryGraph] loaded 0 decisions from Git
+2026-05-25 23:00:28 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-25 23:00:28 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-25 23:00:28 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 23:00:28 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-25 23:00:28 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 23:00:28 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-25 23:00:28 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-25 23:00:28 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-25 23:00:28 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-25 23:00:28 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-25 23:00:28 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-25 23:00:28 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-25 23:00:28 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-25 23:00:28 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-25 23:00:28 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-25 23:00:28 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-25 23:00:28 - src.adapter.lark_im - INFO - WS listener started
+2026-05-25 23:00:28 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-25 23:00:28 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-25 23:00:28 - __main__ - INFO - [Detectors] Configuration:
+2026-05-25 23:00:28 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-25 23:00:28 - __main__ - INFO -   lark_doc: disabled
+2026-05-25 23:00:28 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-25 23:00:31 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7643844440843930553&access_key=d1051c513369809321ac2fbb04296e14&service_id=33554678&ticket=710805d0-15fd-4251-9c46-26fecdb542a1 [conn_id=7643844440843930553]
+2026-05-25 23:00:39 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:00:39 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=39 content={"text":"需要将服务之间的通信换成http协议 不要用gRPC协议"}
+2026-05-25 23:00:39 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"需要将服务之间的通信换成http协议 不要用gRPC协议"}
+2026-05-25 23:00:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"需要将服务之间的通信换成http协议 不要用gRPC协议"}
+2026-05-25 23:00:39 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525230039-07a12a66.json
+2026-05-25 23:00:39 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=39 content={"text":"需要将服务之间的通信换成http协议 不要用gRPC协议"}
+2026-05-25 23:00:39 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=39)
+2026-05-25 23:00:41 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.22s
+2026-05-25 23:00:41 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 23:00:41 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=2c71cb2f3457 summary=服务间通信协议切换为HTTP source=lark_im
+2026-05-25 23:00:41 - src.core.engine - INFO - [Mutation] New decision: sid=2c71cb2f3457 status=decided impact=major
+2026-05-25 23:00:41 - src.core.engine - INFO - Created decision: 2c71cb2f3457 — 服务间通信协议切换为HTTP
+2026-05-25 23:00:41 - src.core.engine - INFO - [Mutation] CREATE applied: sid=2c71cb2f3457
+2026-05-25 23:00:41 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=2c71cb2f3457
+2026-05-25 23:00:41 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.35s

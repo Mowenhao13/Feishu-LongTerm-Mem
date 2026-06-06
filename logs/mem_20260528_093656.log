@@ -1,0 +1,57 @@
+2026-05-28 09:36:56 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_093656.log
+2026-05-28 09:36:56 - src.eval_runner - INFO - MemoryGraph loaded: 1 decisions
+2026-05-28 09:36:56 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-28 09:36:56 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-28 09:36:56 - src.core.engine - INFO - Loaded 1 decisions, 1 topics
+2026-05-28 09:36:56 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=1 topics=1
+2026-05-28 09:36:56 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-28 09:36:56 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-28 09:36:56 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-28 09:36:56 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-28 09:36:56 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-28 09:36:56 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-28 09:36:56 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-28 09:36:56 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 1 episode(s) from data/suspend_pool.json
+2026-05-28 09:36:56 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-28 09:36:56 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-28 09:36:56 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=讨论一下数据库选型，我先说结论：用MySQL 8.0
+2026-05-28 09:36:56 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.30s value_range=[-8.7578, 9.7266] mean=0.0054 std=2.5645
+2026-05-28 09:36:56 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_ef5126bad chat=eval sim=0.7748 >= 0.55 ✓
+2026-05-28 09:36:56 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_ef5126bad (chat=eval, msgs=8, pool=0/20)
+2026-05-28 09:36:56 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_ef5126bad (msgs=8)
+2026-05-28 09:36:56 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-05-28 09:36:56 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=我们团队全部是MySQL经验，项目周期这么紧，没有时间让大家重新学PG运维
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-10.7109, 9.4297] mean=0.0086 std=2.4335
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=43 model=Qwen3-Embedding-4B
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=43 preview=DBA团队也建议用MySQL，他们日常只维护MySQL集群，PG出了故障没人能快速处理
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-8.1562, 9.7188] mean=-0.0005 std=2.4478
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=47 model=Qwen3-Embedding-4B
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=47 preview=MySQL 8.0的InnoDB性能已经非常好了，而且和云厂商的RDS集成度最高，运维成本最低
+2026-05-28 09:36:57 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.0469, 8.9922] mean=0.0047 std=2.5414
+2026-05-28 09:36:58 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-05-28 09:36:58 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=我们已经确认了，数据库选MySQL，这是我们经过评估后的最终决定
+2026-05-28 09:36:58 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-8.7812, 10.9531] mean=0.0162 std=2.5636
+2026-05-28 09:36:58 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-05-28 09:36:58 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=公司的统一中间件层只支持MySQL，如果用PG要额外开发一套适配，成本太高
+2026-05-28 09:36:58 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-8.9297, 9.4609] mean=-0.0188 std=2.4302
+2026-05-28 09:36:59 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 09:36:59 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=短期没有切换计划，就用MySQL，后续再考虑是否引入PG做特定场景补充
+2026-05-28 09:36:59 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-8.0078, 10.1875] mean=0.0206 std=2.4425
+2026-05-28 09:36:59 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-28 09:36:59 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=最终决定：新项目数据库全部使用MySQL 8.0，立即开始搭建
+2026-05-28 09:36:59 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.30s value_range=[-9.2734, 9.5391] mean=0.0415 std=2.4495
+2026-05-28 09:37:02 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_ef5126bad (chat=eval, msgs=16, pool=1/20)
+2026-05-28 09:37:02 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-28 09:37:02 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_ef5126bad (msgs=16)
+2026-05-28 09:37:02 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_ef5126bad chat=eval msgs=16 len=659
+2026-05-28 09:37:02 - src.core.engine - INFO - [LLM] Injected 1 existing decisions as context
+2026-05-28 09:37:02 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=735 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 数据库选型为Postgre
+2026-05-28 09:37:02 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=735)
+2026-05-28 09:37:03 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.03s
+2026-05-28 09:37:03 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 数据库选型为Postgre)
+2026-05-28 09:37:03 - src.core.engine - INFO - [Engine] No decision extracted from episode ep_ef5126bad (len=659)
+2026-05-28 09:37:03 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-28 09:37:03 - src.core.engine - INFO - [Engine] <<< _process_episode done time=1.03s
+2026-05-28 09:37:03 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-28 09:37:03 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-28 09:37:03 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)

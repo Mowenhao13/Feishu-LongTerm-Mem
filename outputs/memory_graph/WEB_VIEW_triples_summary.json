@@ -1,0 +1,1455 @@
+{
+  "triples": [
+    {
+      "head": "Web View",
+      "relation": "related_to",
+      "tail": "设计文档",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-eb4b43"
+    },
+    {
+      "head": "web_view_documentation",
+      "relation": "based_on",
+      "tail": "multica_frontend_architecture",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "multica_frontend_architecture",
+      "relation": "uses",
+      "tail": "pnpm_monorepo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/web",
+      "relation": "uses",
+      "tail": "next_js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/desktop",
+      "relation": "uses",
+      "tail": "electron",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/mobile",
+      "relation": "uses",
+      "tail": "expo_react_native",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/desktop",
+      "relation": "depends_on",
+      "tail": "packages/core",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/desktop",
+      "relation": "depends_on",
+      "tail": "packages/ui",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/desktop",
+      "relation": "depends_on",
+      "tail": "packages/views",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "packages/core",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "packages/ui",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "packages/views",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/mobile",
+      "relation": "depends_on",
+      "tail": "packages/core",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/mobile",
+      "relation": "depends_on",
+      "tail": "packages/ui",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "apps/mobile",
+      "relation": "depends_on",
+      "tail": "packages/views",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "packages/core",
+      "relation": "related_to",
+      "tail": "business_logic_layer",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "packages/ui",
+      "relation": "based_on",
+      "tail": "radix_ui",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "packages/ui",
+      "relation": "based_on",
+      "tail": "tailwind",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "packages/views",
+      "relation": "related_to",
+      "tail": "cross_platform_views",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-619b37"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "Chi router",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "gorilla/websocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "TanStack Query",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "ApiClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "WSClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "WSProvider",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "React Context",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "TanStack Query",
+      "relation": "responsible_for",
+      "tail": "server_state_management",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "Zustand",
+      "relation": "responsible_for",
+      "tail": "client_local_state_management",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Bun",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Hono",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Drizzle",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Prisma",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "packages/core",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "WSClient",
+      "relation": "based_on",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "WSClient",
+      "relation": "supports",
+      "tail": "auth_workspace_isolation",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "WSClient",
+      "relation": "supports",
+      "tail": "auto_reconnect",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "WSClient",
+      "relation": "supports",
+      "tail": "event_subscription",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "uses",
+      "tail": "useSyncExternalStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "WSProvider",
+      "relation": "responsible_for",
+      "tail": "ws_client_lifecycle_management",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "responsible_for",
+      "tail": "通用事件",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "responsible_for",
+      "tail": "副作用事件",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "通用事件",
+      "relation": "related_to",
+      "tail": "Query 缓存失效",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "副作用事件",
+      "relation": "related_to",
+      "tail": "UI 行为",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "useRealtimeSync",
+      "relation": "uses",
+      "tail": "100ms 防抖",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "useWSEvent",
+      "relation": "related_to",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "useWSReconnect",
+      "relation": "related_to",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "CoreProvider",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "based_on",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "related_to",
+      "tail": "Next.js Router",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "related_to",
+      "tail": "react-router",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "related_to",
+      "tail": "Expo Router",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "NavigationProvider",
+      "relation": "uses",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "NavigationProvider",
+      "relation": "uses",
+      "tail": "useTransition",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "NavigationProvider",
+      "relation": "responsible_for",
+      "tail": "useIsNavigating",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "aggregates",
+      "tail": "API 基础 URL",
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "aggregates",
+      "tail": "WS URL",
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "aggregates",
+      "tail": "存储适配器",
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "aggregates",
+      "tail": "认证配置",
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "CoreProvider",
+      "relation": "aggregates",
+      "tail": "国际化配置",
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-034206"
+    },
+    {
+      "head": "AgentHub Web View",
+      "relation": "has_part",
+      "tail": "Landing Page",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "AgentHub Web View",
+      "relation": "has_part",
+      "tail": "登录",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "AgentHub Web View",
+      "relation": "has_part",
+      "tail": "Dashboard",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Dashboard",
+      "relation": "has_part",
+      "tail": "看板视图",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Dashboard",
+      "relation": "has_part",
+      "tail": "Agent 状态视图",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Dashboard",
+      "relation": "has_part",
+      "tail": "会话视图",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Dashboard",
+      "relation": "has_part",
+      "tail": "消息",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Dashboard",
+      "relation": "has_part",
+      "tail": "设置",
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "看板视图",
+      "relation": "visualizes",
+      "tail": "Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "visualizes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "看板视图",
+      "relation": "uses",
+      "tail": "拖拽操作",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Agent 状态视图",
+      "relation": "displays",
+      "tail": "Agent 状态",
+      "schema": [
+        "SYSTEM",
+        "displays",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "会话视图",
+      "relation": "displays",
+      "tail": "Worker Agent 执行过程",
+      "schema": [
+        "SYSTEM",
+        "displays",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "会话视图",
+      "relation": "supports",
+      "tail": "流式输出",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "时序图视图",
+      "relation": "visualizes",
+      "tail": "Handoff DAG 执行时间线",
+      "schema": [
+        "SYSTEM",
+        "visualizes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "看板状态",
+      "relation": "based_on",
+      "tail": "Event Store 投影",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Event Store",
+      "relation": "is",
+      "tail": "唯一真相源",
+      "schema": [
+        "SYSTEM",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Handoff 状态变化",
+      "relation": "stored_in",
+      "tail": "Event Store",
+      "schema": [
+        "CONCEPT",
+        "stored_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "看板状态",
+      "relation": "computed_from",
+      "tail": "事件流",
+      "schema": [
+        "CONCEPT",
+        "computed_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc"
+    },
+    {
+      "head": "Event Store",
+      "relation": "enables",
+      "tail": "time_travel",
+      "schema": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "time_travel",
+      "relation": "used_for",
+      "tail": "audit_and_troubleshooting",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "event_driven_architecture",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "produces",
+      "tail": "handoff_complete_event",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "produces",
+      "tail": "handoff_block_event",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "produces",
+      "tail": "handoff_show_event",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "Event Store",
+      "relation": "broadcasts",
+      "tail": "events",
+      "schema": [
+        "SYSTEM",
+        "broadcasts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "receives",
+      "tail": "events",
+      "schema": [
+        "TECHNOLOGY",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "updates",
+      "tail": "dashboard_card_status",
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "updates",
+      "tail": "agent_status_panel",
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "updates",
+      "tail": "session_view",
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "frontend_polling",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "manual_page_refresh",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "event_driven_cache_invalidation",
+      "relation": "ensures",
+      "tail": "view_state_consistency",
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Event Store",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "Event Store",
+      "relation": "based_on",
+      "tail": "事件日志",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "Event Store",
+      "relation": "related_to",
+      "tail": "唯一真相源",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "看板状态",
+      "relation": "based_on",
+      "tail": "Event Store",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "看板状态",
+      "relation": "related_to",
+      "tail": "投影",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "TanStack Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "TanStack Query",
+      "relation": "depends_on",
+      "tail": "WebSocket",
+      "schema": [
+        "TECHNOLOGY",
+        "depends_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "PostgreSQL",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "TanStack Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "REST API",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "五层前端架构",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "五层前端架构",
+      "relation": "composed_of",
+      "tail": "Store",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "五层前端架构",
+      "relation": "composed_of",
+      "tail": "API",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "五层前端架构",
+      "relation": "composed_of",
+      "tail": "WS",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "五层前端架构",
+      "relation": "composed_of",
+      "tail": "Views",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "五层前端架构",
+      "relation": "composed_of",
+      "tail": "UI",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "TanStack Query + REST API 缓存模式",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Event Store 投影模式",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "Query 层",
+      "relation": "based_on",
+      "tail": "投影服务",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "WSClient + WSProvider + useRealtimeSync 模式",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "WSClient + WSProvider + useRealtimeSync 模式",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "看板视图",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "DAG 可视化",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Agent 状态面板",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Session 执行过程面板",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313"
+    }
+  ],
+  "stats": {
+    "total_chunks": 8,
+    "total_triples": 127,
+    "unique_schemas": 44,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'CONCEPT')": 3,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 19,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 9,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'uses', 'SYSTEM')": 4,
+      "('SYSTEM', 'uses', 'CONCEPT')": 7,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'based_on', 'STANDARD')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 4,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'related_to', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'based_on', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'responsible_for', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'aggregates', 'CONCEPT')": 5,
+      "('SYSTEM', 'has_part', 'SYSTEM')": 8,
+      "('SYSTEM', 'visualizes', 'CONCEPT')": 2,
+      "('SYSTEM', 'displays', 'CONCEPT')": 2,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'is', 'CONCEPT')": 1,
+      "('CONCEPT', 'stored_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'computed_from', 'CONCEPT')": 1,
+      "('SYSTEM', 'enables', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'produces', 'CONCEPT')": 3,
+      "('SYSTEM', 'broadcasts', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'receives', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'updates', 'CONCEPT')": 3,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 3,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'depends_on', 'STANDARD')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1,
+      "('SYSTEM', 'uses', 'STANDARD')": 3,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 3,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 5,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 44,
+    "fact_layer_size": 127,
+    "passage_layer_size": 8
+  }
+}

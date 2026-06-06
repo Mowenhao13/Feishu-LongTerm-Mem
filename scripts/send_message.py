@@ -35,18 +35,46 @@ logger = get_logger(__name__)
 
 
 def get_chat_ids() -> list[str]:
+    """解析 GROUP_CHAT_IDS 格式: "chat_id1:群名1,chat_id2:群名2"，返回 chat_id 列表"""
     raw = os.environ.get("GROUP_CHAT_IDS", "")
-    return [cid.strip() for cid in raw.split(",") if cid.strip()]
+    result = []
+    for entry in raw.split(","):
+        entry = entry.strip()
+        if not entry:
+            continue
+        cid = entry.split(":", 1)[0].strip()
+        if cid:
+            result.append(cid)
+    return result
 
 
-def send_to_chat(client, chat_id: str) -> int:
+def get_group_map() -> dict[str, str]:
+    """解析 GROUP_CHAT_IDS 格式，返回 {chat_id: group_name} 映射"""
+    raw = os.environ.get("GROUP_CHAT_IDS", "")
+    mapping: dict[str, str] = {}
+    for entry in raw.split(","):
+        entry = entry.strip()
+        if not entry:
+            continue
+        if ":" in entry:
+            cid, gname = entry.split(":", 1)
+            cid, gname = cid.strip(), gname.strip()
+            mapping[cid] = gname
+        else:
+            cid = entry
+            mapping[cid] = cid[:16]
+    return mapping
+
+
+def send_to_chat(client, chat_id: str, group_name: str = "") -> int:
     """向单个群聊分批发送所有消息，返回发送成功数"""
     total = len(ALL_MESSAGES)
     batches = [ALL_MESSAGES[i:i + BATCH_SIZE] for i in range(0, total, BATCH_SIZE)]
     total_sent = 0
     start_time = time.time()
 
-    print(f"\n  ── 发送到群聊 {chat_id[:16]} ({total} 条, {len(batches)} 批) ──")
+    display_name = group_name if group_name else chat_id[:16]
+    print(f"\n  ── 发送到群聊 {display_name} ({total} 条, {len(batches)} 批) ──")
 
     for batch_idx, batch in enumerate(batches, 1):
         batch_start = time.time()
@@ -92,7 +120,8 @@ def main():
         print("  ❌ GROUP_CHAT_IDS 未配置")
         sys.exit(1)
 
-    print(f"  目标群聊: {chat_ids}")
+    group_map = get_group_map()
+    print(f"  目标群聊: {[group_map.get(cid, cid[:16]) for cid in chat_ids]}")
 
     try:
         client = create_client_from_env()
@@ -104,7 +133,7 @@ def main():
     overall_start = time.time()
     grand_total = 0
     for chat_id in chat_ids:
-        sent = send_to_chat(client, chat_id)
+        sent = send_to_chat(client, chat_id, group_name=group_map.get(chat_id, ""))
         grand_total += sent
 
     total_time = time.time() - overall_start

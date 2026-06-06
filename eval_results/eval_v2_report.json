@@ -1,0 +1,45 @@
+{
+  "eval_run": "argusbot_multi_v2",
+  "timestamp": "2026-06-06T01:25:58+08:00",
+  "input_file": "eval_dataset/argusbot_multi_v2/messages.jsonl",
+  "dataset_stats": {
+    "total_messages": 1500,
+    "decisions": 92,
+    "group_chats": 5,
+    "topics": 10,
+    "parent_child_decisions": 73,
+    "granularity_sub_decisions": 63
+  },
+  "eval_results": {
+    "total_messages_processed": 1500,
+    "messages_per_chat": {
+      "chat_0": 300,
+      "chat_1": 300,
+      "chat_2": 300,
+      "chat_3": 300,
+      "chat_4": 300
+    },
+    "simulated_delay_seconds": 0.05,
+    "total_elapsed_seconds": 554.2,
+    "processing_rate_msg_per_sec": 2.7,
+    "episodes": {
+      "suspend_count": 85,
+      "reopen_count": 723,
+      "final_pool_size": "0/20"
+    },
+    "decisions_created": 73
+  },
+  "llm_stats": {
+    "call_count": 50,
+    "total_tokens": 56749,
+    "prompt_tokens": 42978,
+    "completion_tokens": 13771,
+    "total_duration_seconds": 192.1,
+    "avg_duration_per_call_seconds": 3.84
+  },
+  "feishu_push": {
+    "total_decisions_pushed": 73,
+    "success_count": 73
+  },
+  "notes": "Eval completed successfully. main.py auto-exited after processing. Some git commit warnings about version format (v1.0 vs v%d) but non-fatal."
+}

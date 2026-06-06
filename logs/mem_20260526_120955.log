@@ -1,0 +1,97 @@
+2026-05-26 12:09:55 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260526_120955.log
+2026-05-26 12:09:55 - __main__ - INFO - ========================================
+2026-05-26 12:09:55 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-26 12:09:55 - __main__ - INFO - ========================================
+2026-05-26 12:09:55 - __main__ - INFO - Project: default
+2026-05-26 12:09:55 - __main__ - INFO - Storage: data
+2026-05-26 12:09:55 - __main__ - INFO - DocsDir: data/docs
+2026-05-26 12:09:55 - __main__ - INFO - [GitStorage] initialized
+2026-05-26 12:09:55 - __main__ - INFO - [MemoryGraph] loaded 14 decisions from Git
+2026-05-26 12:09:55 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-26 12:09:55 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-26 12:09:55 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-26 12:09:55 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-26 12:09:56 - src.core.engine - INFO - Loaded 14 decisions, 1 topics
+2026-05-26 12:09:56 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-26 12:09:56 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-26 12:09:56 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-26 12:09:56 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-26 12:09:56 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-26 12:09:56 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-26 12:09:56 - __main__ - INFO - [Engine] Embedding+Reranker injected for similarity search
+2026-05-26 12:09:56 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-26 12:09:56 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-26 12:09:56 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-26 12:09:56 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-26 12:09:56 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-26 12:09:56 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-26 12:09:56 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-26 12:09:56 - __main__ - INFO - [lark_im] EpisodeManager created: gap=30min max_msgs=100 max_dur=120min
+2026-05-26 12:09:56 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-26 12:09:56 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-26 12:09:56 - src.adapter.lark_im - INFO - WS listener started
+2026-05-26 12:09:56 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-26 12:09:56 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-26 12:09:56 - __main__ - INFO - [Episode] Check loop task created
+2026-05-26 12:09:56 - __main__ - INFO - [Detectors] Configuration:
+2026-05-26 12:09:56 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-26 12:09:56 - __main__ - INFO -   lark_doc: disabled
+2026-05-26 12:09:56 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-26 12:09:56 - __main__ - INFO - [Episode] Check loop started (interval=10s)
+2026-05-26 12:09:58 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644047879057804248&access_key=413ed21d2f91d4b46e05add44b3990b1&service_id=33554678&ticket=aedac564-5b57-4059-9682-5522449134a8 [conn_id=7644047879057804248]
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"ORM用Prisma"}
+2026-05-26 12:10:13 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=oc_fde6be60e
+2026-05-26 12:10:13 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e new episode=ep_c0508d6df started with msg=om_x100b6e65
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 12:10:14 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:14 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 12:10:14 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:14 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 12:10:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=13 content={"text":"收到"}
+2026-05-26 12:33:40 - Lark - ERROR - receive message loop exit, err: no close frame received or sent [conn_id=7644047879057804248]
+2026-05-26 12:33:40 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644047879057804248&access_key=413ed21d2f91d4b46e05add44b3990b1&service_id=33554678&ticket=aedac564-5b57-4059-9682-5522449134a8 [conn_id=7644047879057804248]
+2026-05-26 12:33:41 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 12:33:46 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NewConnectionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable"))
+2026-05-26 12:49:28 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e TIMEOUT: idle=38.8min >= 30min, closing episode=ep_c0508d6df (msgs=5)
+2026-05-26 12:49:28 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e FORCE-CLOSE episode=ep_c0508d6df (msgs=5, dur=24s)
+2026-05-26 12:49:28 - src.detect.episode - INFO - [EpisodeManager] Timeout check: 1 episode(s) closed
+2026-05-26 12:49:28 - __main__ - INFO - [Episode] >>> Timeout closed episode=ep_c0508d6df (msgs=5, dur=24s), dispatching to engine
+2026-05-26 12:49:28 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_c0508d6df chat=oc_fde6be60e msgs=5 len=107
+2026-05-26 12:49:28 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=107 content={"text":"ORM用Prisma"} {"text":"缓存层用Redis"} {"text":"消息队列用Rab
+2026-05-26 12:49:28 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=107)
+2026-05-26 13:06:03 - src.model.openai_provider - ERROR - aiohttp.ClientError: Cannot connect to host api.deepseek.com:443 ssl:default [nodename nor servname provided, or not known]
+2026-05-26 13:06:03 - src.model.openai_provider - ERROR -    [TIME] Duration: 8.63s
+2026-05-26 13:06:03 - src.model.openai_provider - ERROR -    [ERROR] Error message: Cannot connect to host api.deepseek.com:443 ssl:default [nodename nor servname provided, or not known]
+2026-05-26 13:06:03 - src.model.openai_provider - ERROR - retry_num: 0
+2026-05-26 13:06:05 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=997.13s
+2026-05-26 13:06:05 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:06:05 - src.core.engine - WARNING - Failed to convert dict to DecisionNode: 1 validation error for DecisionNode
+version
+  Input should be a valid string [type=string_type, input_value=1, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-05-26 13:06:05 - src.core.engine - INFO - [Engine] No decision extracted from episode ep_c0508d6df (len=107)
+2026-05-26 13:06:05 - src.core.engine - INFO - [Engine] Hypergraph built: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-26 13:06:05 - src.core.engine - INFO - [Engine] <<< _process_episode done time=997.14s
+2026-05-26 13:09:59 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 13:10:00 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644063361134791640&access_key=2d23af0a8f1ef35812c601c661a44c2e&service_id=33554678&ticket=d8f52de7-1c32-40b0-8180-0934128c7692 [conn_id=7644063361134791640]
+2026-05-26 13:13:18 - Lark - ERROR - receive message loop exit, err: sent 1011 (internal error) keepalive ping timeout; no close frame received [conn_id=7644063361134791640]
+2026-05-26 13:13:18 - Lark - WARNING - ping failed, err: sent 1011 (internal error) keepalive ping timeout; no close frame received [conn_id=7644063361134791640]
+2026-05-26 13:13:18 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644063361134791640&access_key=2d23af0a8f1ef35812c601c661a44c2e&service_id=33554678&ticket=d8f52de7-1c32-40b0-8180-0934128c7692 [conn_id=7644063361134791640]
+2026-05-26 13:13:50 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 13:14:20 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-26 13:16:15 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 13:16:18 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644064967587515353&access_key=abd2193731bb19a721ca6ad489508411&service_id=33554678&ticket=bb24544d-c8ac-4f66-a586-2a6500298b47 [conn_id=7644064967587515353]
+2026-05-26 13:17:02 - Lark - ERROR - receive message loop exit, err: no close frame received or sent [conn_id=7644064967587515353]
+2026-05-26 13:17:02 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644064967587515353&access_key=abd2193731bb19a721ca6ad489508411&service_id=33554678&ticket=bb24544d-c8ac-4f66-a586-2a6500298b47 [conn_id=7644064967587515353]
+2026-05-26 13:17:22 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 13:19:18 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644065751062285284&access_key=10bb98fca5c467a838f9fb092ecc5e7d&service_id=33554678&ticket=dfcd8f36-4d08-46eb-abf0-6a34907edc91 [conn_id=7644065751062285284]
+2026-05-26 13:28:40 - __main__ - INFO - [System] Shutting down...
+2026-05-26 13:28:40 - src.adapter.lark_im - INFO - WS listener stopped
+2026-05-26 13:28:40 - __main__ - INFO - [lark_im] WS listener stopped
+2026-05-26 13:28:40 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 13:28:40 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 13:28:40 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)
+2026-05-26 13:28:40 - __main__ - INFO - [System] Shutdown complete

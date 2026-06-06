@@ -1,0 +1,40 @@
+2026-05-25 22:04:06 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260525_220406.log
+2026-05-25 22:04:06 - __main__ - INFO - ========================================
+2026-05-25 22:04:06 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-25 22:04:06 - __main__ - INFO - ========================================
+2026-05-25 22:04:06 - __main__ - INFO - Project: default
+2026-05-25 22:04:06 - __main__ - INFO - Storage: data
+2026-05-25 22:04:06 - __main__ - INFO - DocsDir: data/docs
+2026-05-25 22:04:06 - __main__ - INFO - [GitStorage] initialized
+2026-05-25 22:04:06 - __main__ - INFO - [MemoryGraph] loaded 0 decisions from Git
+2026-05-25 22:04:06 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 22:04:06 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-25 22:04:06 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 22:04:06 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-25 22:04:06 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-25 22:04:06 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-25 22:04:06 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-25 22:04:06 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-25 22:04:06 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-25 22:04:06 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-25 22:04:06 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-25 22:04:06 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-25 22:04:06 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-25 22:04:06 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-25 22:04:06 - src.adapter.lark_im - INFO - WS listener started
+2026-05-25 22:04:06 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-25 22:04:06 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-25 22:04:06 - __main__ - INFO - [Detectors] Configuration:
+2026-05-25 22:04:06 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-25 22:04:06 - __main__ - INFO -   lark_doc: disabled
+2026-05-25 22:04:06 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-25 22:04:10 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7643829928904199100&access_key=97b372f0a16cf7c476180bc42e0033b6&service_id=33554678&ticket=f938ba44-aaa0-488c-841e-8d38074684e0 [conn_id=7643829928904199100]
+2026-05-25 22:08:40 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 22:08:40 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=15 content={"text":"1111"}
+2026-05-25 22:08:40 - __main__ - ERROR - [lark_im] WS handler error: DetectContext.__init__() got an unexpected keyword argument 'source'
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/main.py", line 349, in on_message
+    ctx = DetectContext(
+          ^^^^^^^^^^^^^^
+TypeError: DetectContext.__init__() got an unexpected keyword argument 'source'
+

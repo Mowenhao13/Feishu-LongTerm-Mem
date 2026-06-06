@@ -1,0 +1,111 @@
+{
+  "total_expected": 41,
+  "total_detected": 31,
+  "true_positives": 31,
+  "false_positives": 0,
+  "false_negatives": 10,
+  "precision": 1.0,
+  "recall": 0.7561,
+  "f1": 0.8611,
+  "decision_metrics": {
+    "decision_tp": 16,
+    "decision_fn": 4,
+    "decision_precision": 0.5161,
+    "decision_recall": 0.8,
+    "suggestion_tp": 15,
+    "suggestion_fn": 6,
+    "suggestion_recall": 0.7143
+  },
+  "dimension_accuracy": {
+    "topic": 0.0,
+    "status": 0.4516
+  },
+  "by_topic": {
+    "多智能体循环架构": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Daemon与CLI双模式": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "会话持久化与恢复": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "JSONL命令总线": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "飞书集成方案": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Telegram集成": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+    },
+    "PlannerAgent策略": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "BTW Side-Agent集成": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    "Stall检测配置": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "模型fallback链": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "by_chat": {
+    "chat_0": {
+      "expected": 11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chat_1": {
+      "expected": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chat_2": {
+      "expected": 8,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333
+    },
+    "chat_3": {
+      "expected": 5,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8889
+    },
+    "chat_4": {
+      "expected": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "_isolation": {
+      "issues": 0,
+      "score": 1.0
+    }
+  }
+}

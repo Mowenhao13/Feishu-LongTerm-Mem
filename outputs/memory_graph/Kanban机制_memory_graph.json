@@ -1,0 +1,2144 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 18,
+      "fact_indices": [
+        0,
+        8,
+        10,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        34,
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        1,
+        12,
+        56
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        2,
+        11
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 9,
+      "fact_indices": [
+        3,
+        5,
+        6,
+        7,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        9,
+        19
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        13,
+        57
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        29,
+        30,
+        31,
+        47
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        32,
+        33,
+        37
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        35
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        36,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        41
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "CONCEPT",
+        "solves",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        48
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        49
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "TECHNOLOGY",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        55
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        58
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        59
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        60
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        61
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "Kanban机制",
+        "related_to",
+        "Kanban"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "Vibe Kanban",
+        "based_on",
+        "看板机制"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "Vibe Kanban",
+        "compared_with",
+        "传统多 Agent 协作"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "Vibe Kanban",
+        "uses",
+        "项目管理"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "Vibe Kanban",
+        "uses",
+        "Workspace"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "Vibe Kanban",
+        "uses",
+        "结构化工作流"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "Vibe Kanban",
+        "uses",
+        "人工监督"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "Vibe Kanban",
+        "uses",
+        "AI 协作"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "看板机制",
+        "related_to",
+        "项目管理"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "Workspace",
+        "related_to",
+        "代理执行"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "传统多 Agent 协作",
+        "related_to",
+        "代理执行"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "compared_with",
+        "传统多 Agent 协作"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "based_on",
+        "Issue"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "Git worktree"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "差异审查"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "内联评论"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "预览测试"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "多会话"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "PR"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "Vibe Kanban 看板机制",
+        "related_to",
+        "工作流"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "工作流",
+        "related_to",
+        "规划"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "工作流",
+        "related_to",
+        "执行"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "工作流",
+        "related_to",
+        "审查"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "工作流",
+        "related_to",
+        "合并"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "传统多 Agent 协作",
+        "related_to",
+        "对话"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "传统多 Agent 协作",
+        "related_to",
+        "任务列表"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "传统多 Agent 协作",
+        "related_to",
+        "共享执行环境"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "传统多 Agent 协作",
+        "related_to",
+        "代理间直接通信"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "传统多 Agent 协作",
+        "related_to",
+        "线性执行"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "Vibe Kanban",
+        "adopts",
+        "Issue-Workspace 分离架构"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "Vibe Kanban",
+        "adopts",
+        "多会话机制"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "Vibe Kanban",
+        "adopts",
+        "审查和反馈循环"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "Issue-Workspace 分离架构",
+        "based_on",
+        "Issue"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "Issue-Workspace 分离架构",
+        "based_on",
+        "Workspace"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "Issue",
+        "related_to",
+        "Workspace"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "Workspace",
+        "uses",
+        "Git 分支"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "Workspace",
+        "uses",
+        "代理配置"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "多会话机制",
+        "based_on",
+        "Workspace"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "审查和反馈循环",
+        "uses",
+        "差异面板"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "审查和反馈循环",
+        "uses",
+        "内联评论"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "审查和反馈循环",
+        "uses",
+        "GitHub 集成"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "GitHub 集成",
+        "depends_on",
+        "PR"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "传统多 Agent 协作模式",
+        "related_to",
+        "直接协作模式"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "直接协作模式",
+        "related_to",
+        "缺乏人工监督"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "直接协作模式",
+        "related_to",
+        "共享执行环境"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "直接协作模式",
+        "related_to",
+        "缺乏结构化的项目管理层"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "直接协作模式",
+        "related_to",
+        "工作流线性"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "Vibe Kanban",
+        "adopts",
+        "看板机制"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "看板机制",
+        "solves",
+        "缺乏项目管理"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "Kanban board",
+        "provides",
+        "结构化 Issue 管理"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "Git worktree 隔离",
+        "solves",
+        "执行环境冲突"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "差异查看器",
+        "solves",
+        "难以审查变更"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "内联评论",
+        "solves",
+        "难以审查变更"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "内置浏览器预览",
+        "solves",
+        "测试需要切换上下文"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "统一的执行器抽象",
+        "solves",
+        "代理接口不统一"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "统一的执行器抽象",
+        "supports",
+        "10+ 代理"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "Vibe Kanban",
+        "based_on",
+        "人机协作框架"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "Vibe Kanban",
+        "uses",
+        "MCP 服务器"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "MCP 服务器",
+        "used_for",
+        "创建和管理 Issue"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "Vibe Kanban",
+        "supports",
+        "多仓库支持"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "多仓库支持",
+        "enables",
+        "在单个 Workspace 中处理多个代码库"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "Vibe Kanban",
+        "compared_with",
+        "传统多 agent 系统"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        5
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-8dc21a771aaac3ae",
+      "content": "# Kanban机制",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "content": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "fact_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "content": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "fact_indices": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "content": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "fact_indices": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "content": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "fact_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "idx": 5,
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "content": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "fact_indices": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "Kanban机制",
+        "related_to",
+        "Kanban"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-8dc21a771aaac3ae",
+      "passage": "# Kanban机制",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "based_on",
+        "看板机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "compared_with",
+        "传统多 Agent 协作"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "uses",
+        "项目管理"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "uses",
+        "Workspace"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "uses",
+        "结构化工作流"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "uses",
+        "人工监督"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "uses",
+        "AI 协作"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "看板机制",
+        "related_to",
+        "项目管理"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Workspace",
+        "related_to",
+        "代理执行"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作",
+        "related_to",
+        "代理执行"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "passage": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "compared_with",
+        "传统多 Agent 协作"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "based_on",
+        "Issue"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "Git worktree"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "差异审查"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "内联评论"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "预览测试"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "多会话"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "uses",
+        "PR"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban 看板机制",
+        "related_to",
+        "工作流"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "related_to",
+        "规划"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "related_to",
+        "执行"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "related_to",
+        "审查"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "related_to",
+        "合并"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作",
+        "related_to",
+        "对话"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作",
+        "related_to",
+        "任务列表"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作",
+        "related_to",
+        "共享执行环境"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作",
+        "related_to",
+        "代理间直接通信"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作",
+        "related_to",
+        "线性执行"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "passage": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "adopts",
+        "Issue-Workspace 分离架构"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "adopts",
+        "多会话机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "adopts",
+        "审查和反馈循环"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Issue-Workspace 分离架构",
+        "based_on",
+        "Issue"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Issue-Workspace 分离架构",
+        "based_on",
+        "Workspace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Issue",
+        "related_to",
+        "Workspace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Workspace",
+        "uses",
+        "Git 分支"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Workspace",
+        "uses",
+        "代理配置"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "多会话机制",
+        "based_on",
+        "Workspace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "审查和反馈循环",
+        "uses",
+        "差异面板"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "审查和反馈循环",
+        "uses",
+        "内联评论"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "审查和反馈循环",
+        "uses",
+        "GitHub 集成"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "GitHub 集成",
+        "depends_on",
+        "PR"
+      ],
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "passage": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "传统多 Agent 协作模式",
+        "related_to",
+        "直接协作模式"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "直接协作模式",
+        "related_to",
+        "缺乏人工监督"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "直接协作模式",
+        "related_to",
+        "共享执行环境"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "直接协作模式",
+        "related_to",
+        "缺乏结构化的项目管理层"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "直接协作模式",
+        "related_to",
+        "工作流线性"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "adopts",
+        "看板机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "看板机制",
+        "solves",
+        "缺乏项目管理"
+      ],
+      "schema": [
+        "CONCEPT",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Kanban board",
+        "provides",
+        "结构化 Issue 管理"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Git worktree 隔离",
+        "solves",
+        "执行环境冲突"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "差异查看器",
+        "solves",
+        "难以审查变更"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "内联评论",
+        "solves",
+        "难以审查变更"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "内置浏览器预览",
+        "solves",
+        "测试需要切换上下文"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "统一的执行器抽象",
+        "solves",
+        "代理接口不统一"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "统一的执行器抽象",
+        "supports",
+        "10+ 代理"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "passage": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "based_on",
+        "人机协作框架"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "passage": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "uses",
+        "MCP 服务器"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "passage": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "MCP 服务器",
+        "used_for",
+        "创建和管理 Issue"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "passage": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "supports",
+        "多仓库支持"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "passage": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "多仓库支持",
+        "enables",
+        "在单个 Workspace 中处理多个代码库"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "passage": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "compared_with",
+        "传统多 agent 系统"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "passage": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-8dc21a771aaac3ae",
+      "chunk_text": "# Kanban机制",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-498efa0082761c6b",
+      "chunk_text": "# Vibe Kanban 看板机制 vs 传统多 Agent 协作\n\n\n\nVibe Kanban 的看板机制与传统多 agent 协作的核心区别在于：Vibe Kanban 将项目管理（看板）与代理执行（Workspace）分离，通过结构化的工作流实现人工监督下的 AI 协作。",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-f4c1ec5e2e449909",
+      "chunk_text": "## 核心区别对比\n\n\n\n|维度|Vibe Kanban 看板机制|传统多 Agent 协作||---|---|---||工作组织|基于 Issue 的看板规划，支持状态、优先级、标签、父子关系 [2](#3-1)|通常基于对话或任务列表，缺乏结构化项目管理||执行隔离|每个 Workspace 使用独立的 Git worktree，提供分支、终端和开发服务器 [3](#3-2)|通常共享执行环境，可能相互干扰||人工监督|内置差异审查、内联评论、预览测试，人工在每个环节介入 [4](#3-3)|代理间直接协作，人工介入点较少||多代理协作|单个 Workspace 内支持多会话，可并行运行不同代理或审查代理 [5](#3-4)|代理间直接通信，缺乏会话隔离||工作流|规划（Issue）→ 执行（Workspace）→ 审查（Diff）→ 合并（PR） [6](#3-5)|通常线性执行，缺乏明确的阶段划分|",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-5624a2eb615bfe31",
+      "chunk_text": "## Vibe Kanban 的看板机制\n\n\n\n### Issue-Workspace 分离架构\n\n\n\n\n\n关键设计：\n\n\n\n- Issue 描述工作：Issue 代表要完成的功能或问题，包含标题、描述、优先级、标签等元数据 [7](#3-6)\n\n- Workspace 执行工作：Workspace 是隔离的执行环境，每个 Workspace 关联特定的 Git 分支和代理配置 [3](#3-2)\n\n- 一对多关系：单个 Issue 可以关联多个 Workspace，支持并行执行和审查 [8](#3-7)\n\n### 多会话机制\n\n\n\nVibe Kanban 支持在单个 Workspace 内创建多个代理对话会话，这是与传统多 agent 协作的重要区别： [5](#3-4)\n\n\n\n\n\n优势：\n\n\n\n- 绕过对话限制：不同会话独立管理上下文\n\n- 并行工作：同时运行不同代理处理不同方面\n\n- 隔离审查：在单独线程中启动审查代理，不影响主执行\n\n### 审查和反馈循环\n\n\n\nVibe Kanban 强调人工审查，与传统多 agent 协作的&#34;自动协作&#34;形成对比： [4](#3-3)\n\n\n\n审查机制：\n\n\n\n- 差异面板：显示文件树和代码变更\n\n- 内联评论：直接在差异上添加评论，反馈给代理\n\n- GitHub 集成：Workspace 链接到 PR 时可查看 GitHub 评论",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-c990f286d394865d",
+      "chunk_text": "## 传统多 Agent 协作模式\n\n\n\n传统多 agent 协作通常采用以下模式：\n\n\n\n### 直接协作模式\n\n\n\n\n\n特点：\n\n\n\n- 代理间直接通信，缺乏人工监督\n\n- 通常共享执行环境\n\n- 缺乏结构化的项目管理层\n\n- 工作流线性，难以并行和审查\n\n### Vibe Kanban 的改进\n\n\n\nVibe Kanban 通过看板机制解决了传统模式的痛点：\n\n\n\n|痛点|Vibe Kanban 解决方案||---|---||缺乏项目管理|Kanban board 提供结构化 Issue 管理 [9](#3-8)||执行环境冲突|Git worktree 隔离确保安全 [3](#3-2)||难以审查变更|集成差异查看器和内联评论 [4](#3-3)||测试需要切换上下文|内置浏览器预览 [10](#3-9)||代理接口不统一|统一的执行器抽象支持 10+ 代理 [11](#3-10)|",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "chunk_index": 4
+    },
+    {
+      "chunk_id": "chunk-005-38a27fdf9f1b3122",
+      "chunk_text": "## Notes\n\n\n\n- Vibe Kanban 的看板机制本质上是一个人机协作框架，而非纯粹的自动化多 agent 系统\n\n- 系统支持通过 MCP 服务器让代理创建和管理 Issue，实现半自动化的规划流程\n\n- 多仓库支持允许在单个 Workspace 中处理多个代码库，这是传统多 agent 系统通常不具备的能力",
+      "doc_path": "test_files/docs/references/Kanban机制.md",
+      "chunk_index": 5
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 62,
+    "unique_schemas": 20,
+    "schema_distribution": {
+      "('CONCEPT', 'related_to', 'CONCEPT')": 18,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 3,
+      "('SYSTEM', 'compared_with', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 9,
+      "('SYSTEM', 'uses', 'SYSTEM')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 4,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 4,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'solves', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'solves', 'CONCEPT')": 5,
+      "('TECHNOLOGY', 'supports', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 20,
+    "fact_layer_size": 62,
+    "passage_layer_size": 6
+  }
+}

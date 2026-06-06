@@ -1,0 +1,23 @@
+2026-05-25 22:34:52 - component_test - INFO - [LLM Test] >>> Sending prompt (len=217)
+2026-05-25 22:34:53 - component_test - INFO - [LLM Test] <<< Response time=1.61s len=173
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-25 22:34:54 - component_test - INFO - [Embedding Test] >>> Encoding 6 texts
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=6 chars=152 model=Qwen3-Embedding-4B
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding]     text[1/6] len=25 preview=前端使用React框架和Ant Design组件库
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding]     text[2/6] len=20 preview=后端使用Python FastAPI框架
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding]     text[3/6] len=15 preview=数据库使用PostgreSQL
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding]     text[4/6] len=12 preview=项目使用Docker部署
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding]     text[5/6] len=22 preview=前端使用Vue框架和Element Plus
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding]     text[6/6] len=58 preview=我决定前端使用React框架，组件库用Ant Design，构建工具用Vite，后端使用Python FastAPI
+2026-05-25 22:34:54 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=6 dim=2560 time=0.18s value_range=[-0.0849, 0.1008] mean=0.0001 std=0.0198
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-25 22:34:54 - component_test - INFO - [Reranker Test] >>> Reranking query='前端技术选型' with 5 docs
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=6 preview=前端技术选型
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=25 preview=前端使用React框架和Ant Design组件库
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=20 preview=后端使用Python FastAPI框架
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=15 preview=数据库使用PostgreSQL
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=12 preview=项目使用Docker部署
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=22 preview=前端使用Vue框架和Element Plus
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=前端技术选型 docs=5
+2026-05-25 22:34:54 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[0.8096, 0.8011, 0.6716, 0.8079, 0.6761] time=0.07s top3=[0]0.8096:前端使用React框架和Ant Design组件库; [3]0.8079:项目使用Docker部署; [1]0.8011:后端使用Python FastAPI框架

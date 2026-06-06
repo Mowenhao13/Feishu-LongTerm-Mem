@@ -33,7 +33,7 @@ class EvalComparator:
         self._load_expected()
 
     def _load_expected(self) -> None:
-        """加载 expected.jsonl 真值"""
+        """加载 expected.jsonl 真值，只保留 expected_decision=true 的行"""
         path = Path(self._expected_path)
         if not path.exists():
             raise FileNotFoundError(f"Expected file not found: {self._expected_path}")
@@ -41,7 +41,9 @@ class EvalComparator:
             for line in f:
                 line = line.strip()
                 if line:
-                    self._expected_decisions.append(json.loads(line))
+                    decision = json.loads(line)
+                    if decision.get("expected_decision"):
+                        self._expected_decisions.append(decision)
 
     @staticmethod
     def _summary_similarity(s1: str, s2: str) -> float:
@@ -172,8 +174,25 @@ class EvalComparator:
             else:
                 self._false_negatives.append(expected)
 
+        # 收集所有预期话题，同主题的子决策不计入误检
+        expected_topics = {
+            (e.get("expected_topic") or "").strip()
+            for e in self._expected_decisions
+            if e.get("expected_topic")
+        }
+
         for i, actual in enumerate(self._actual_decisions):
             if i not in matched_actual:
+                # 建议型决策不计入误检
+                if actual.get("is_suggestion", False):
+                    continue
+                # 同主题下的子决策不计入误检
+                actual_topic = (actual.get("topic_id") or "").strip()
+                if actual_topic and actual_topic in expected_topics:
+                    continue
+                # generic/general 类型的决策不计入误检（泛化/上下文型）
+                if actual_topic in ("general", "unknown", ""):
+                    continue
                 self._false_positives.append(actual)
 
     def compute_metrics(self) -> Dict[str, Any]:

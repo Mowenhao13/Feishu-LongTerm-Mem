@@ -1,0 +1,387 @@
+2026-05-26 15:18:08 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260526_151808.log
+2026-05-26 15:18:08 - __main__ - INFO - ========================================
+2026-05-26 15:18:08 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-26 15:18:08 - __main__ - INFO - ========================================
+2026-05-26 15:18:08 - __main__ - INFO - Project: default
+2026-05-26 15:18:08 - __main__ - INFO - Storage: data
+2026-05-26 15:18:08 - __main__ - INFO - DocsDir: data/docs
+2026-05-26 15:18:08 - __main__ - INFO - [GitStorage] initialized
+2026-05-26 15:18:09 - __main__ - INFO - [MemoryGraph] loaded 40 decisions from Git
+2026-05-26 15:18:09 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-26 15:18:09 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-26 15:18:09 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-26 15:18:09 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-26 15:18:10 - src.core.engine - INFO - Loaded 40 decisions, 2 topics
+2026-05-26 15:18:10 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-26 15:18:10 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-26 15:18:10 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-26 15:18:10 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-26 15:18:10 - src.model.embedding_provider - INFO - [Embedding] Connection check: OK (dim=2560)
+2026-05-26 15:18:10 - src.model.reranker_provider - INFO - [Reranker] Connection check: OK (score=-10.8750)
+2026-05-26 15:18:10 - __main__ - INFO - [Engine] Embedding+Reranker services both connected
+2026-05-26 15:18:10 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-26 15:18:10 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-26 15:18:10 - __main__ - INFO - [Engine] Embedding+Reranker injected for similarity search
+2026-05-26 15:18:10 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-26 15:18:10 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-26 15:18:10 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-26 15:18:10 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-26 15:18:10 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-26 15:18:10 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-26 15:18:10 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-26 15:18:10 - __main__ - INFO - [lark_im] EpisodeManager created: gap=1800s max_msgs=50 max_dur=7200s flush=30s semantic=0.45 reopen=0.65
+2026-05-26 15:18:10 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-26 15:18:10 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-26 15:18:10 - __main__ - INFO - [lark_im] EmbeddingProvider injected for episode boundary detection
+2026-05-26 15:18:10 - src.adapter.lark_im - INFO - WS listener started
+2026-05-26 15:18:10 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-26 15:18:10 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-26 15:18:10 - __main__ - INFO - [Episode] Check loop task created
+2026-05-26 15:18:10 - __main__ - INFO - [Detectors] Configuration:
+2026-05-26 15:18:10 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-26 15:18:10 - __main__ - INFO -   lark_doc: disabled
+2026-05-26 15:18:10 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-26 15:18:10 - __main__ - INFO - [Episode] Check loop started (interval=10s)
+2026-05-26 15:18:11 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644096379090750414&access_key=d50db34ccd553282c48a3920985c1a79&service_id=33554678&ticket=b157add5-ccc7-40c5-aaa4-d151fac4da7a [conn_id=7644096379090750414]
+2026-05-26 15:18:22 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:22 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"消息队列我推荐用RabbitMQ"}
+2026-05-26 15:18:22 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=oc_fde6be60e
+2026-05-26 15:18:22 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-05-26 15:18:22 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview={"text":"消息队列我推荐用RabbitMQ"}
+2026-05-26 15:18:22 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.14s value_range=[-10.6641, 10.1641] mean=0.0012 std=2.5650
+2026-05-26 15:18:22 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e new episode=ep_164474864 started with msg=om_x100b6e60
+2026-05-26 15:18:24 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:24 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"我再次确认一下，数据库就定PG了，不改了"}
+2026-05-26 15:18:24 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-26 15:18:24 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview={"text":"我再次确认一下，数据库就定PG了，不改了"}
+2026-05-26 15:18:24 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.4062, 13.1953] mean=-0.0049 std=2.5662
+2026-05-26 15:18:25 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:25 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"PG的JSONB数据类型和全文检索能力也很强"}
+2026-05-26 15:18:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-26 15:18:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview={"text":"PG的JSONB数据类型和全文检索能力也很强"}
+2026-05-26 15:18:25 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-8.4219, 11.4453] mean=-0.0094 std=2.5290
+2026-05-26 15:18:27 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:27 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"如果未来吞吐量上来RabbitMQ可能扛不住"}
+2026-05-26 15:18:27 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-26 15:18:27 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview={"text":"如果未来吞吐量上来RabbitMQ可能扛不住"}
+2026-05-26 15:18:27 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.4844, 11.2969] mean=0.0060 std=2.4257
+2026-05-26 15:18:28 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:28 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=39 content={"text":"Kafka的持久化机制和消息重放也比RabbitMQ可靠"}
+2026-05-26 15:18:28 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-05-26 15:18:28 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview={"text":"Kafka的持久化机制和消息重放也比RabbitMQ可靠"}
+2026-05-26 15:18:28 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-11.6562, 8.3828] mean=0.0204 std=2.4738
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"部署方案我建议用阿里云ACK托管集群"}
+2026-05-26 15:18:29 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-05-26 15:18:29 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview={"text":"部署方案我建议用阿里云ACK托管集群"}
+2026-05-26 15:18:29 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-8.6875, 8.6641] mean=-0.0354 std=2.5156
+2026-05-26 15:18:29 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e SEMANTIC-GAP boundary: sim=0.4410 < 0.45, closing episode=ep_164474864 (msgs=5)
+2026-05-26 15:18:29 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e new episode=ep_395e74ed8 started after semantic gap
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] Episode closed: id=ep_164474864 chat=oc_fde6be60e msgs=5, dispatching to LLM
+2026-05-26 15:18:29 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_164474864 chat=oc_fde6be60e msgs=5 len=167
+2026-05-26 15:18:29 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=167 content={"text":"消息队列我推荐用RabbitMQ"} {"text":"我再次确认一下，数据库就定PG了，不改了"} 
+2026-05-26 15:18:29 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=167)
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"自建K8s集群的维护成本实在太高了"}
+2026-05-26 15:18:29 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-05-26 15:18:29 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview={"text":"自建K8s集群的维护成本实在太高了"}
+2026-05-26 15:18:29 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.11s value_range=[-12.4688, 9.3125] mean=-0.0293 std=2.5111
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"其实混合部署也行，核心业务自建非核心上云"}
+2026-05-26 15:18:30 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-26 15:18:30 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview={"text":"其实混合部署也行，核心业务自建非核心上云"}
+2026-05-26 15:18:30 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-10.2656, 9.2109] mean=-0.0188 std=2.4518
+2026-05-26 15:18:32 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.59s
+2026-05-26 15:18:32 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 15:18:32 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=311f430a159e title=数据库选型确定为PostgreSQL source=im
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=经过讨论，数据库最终选定PostgreSQL，不再更改。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.9141, 13.2500] mean=0.0289 std=2.5947
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=38 chars=894 model=Qwen3-Embedding-4B
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[1/38] len=15 preview=将消息队列换成RabbitMQ
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[2/38] len=15 preview=决定将消息队列换成Kafka。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[3/38] len=19 preview=feature分支从develop拉取
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[4/38] len=14 preview=Git Flow分支策略确定
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[5/38] len=28 preview=需要将服务之间的通信换成http协议，不要用gRPC协议
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[6/38] len=12 preview=版本控制用URL路径方式
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[7/38] len=16 preview=生产环境使用阿里云ACK托管集群
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[8/38] len=20 preview=决定使用蓝绿部署策略，以实现零停机发布。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[9/38] len=15 preview=服务之间通信统一用gRPC协议
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[10/38] len=25 preview=使用互斥锁或永不过期加后台异步更新来防御缓存击穿。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[11/38] len=19 preview=将当前使用的消息队列替换为Kafka。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[12/38] len=51 preview=决定使用Helm Chart统一管理所有K8s部署，并通过ArgoCD实现GitOps持续交付自动化。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[13/38] len=10 preview=CDN用阿里云CDN
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[14/38] len=13 preview=消息队列用RabbitMQ
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[15/38] len=10 preview=静态资源走CDN加速
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[16/38] len=14 preview=决定加一层中间件来做数据分片
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[17/38] len=14 preview=服务之间通过gRPC进行通信
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[18/38] len=74 preview=团队决定采用裸金属服务器加Kubernetes的方案，认为这是综合考虑成本和灵活性的最优解，尽管弹性伸缩能力比云差，但可
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[19/38] len=76 preview=经过讨论，团队决定数据库选型为PostgreSQL，并配合PgBouncer连接池和主从复制；消息队列选型为Kafka，
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[20/38] len=11 preview=消息队列换成Kafka
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[21/38] len=9 preview=缓存层用Redis
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[22/38] len=42 preview=决定使用Prisma作为ORM，Redis作为缓存层，RabbitMQ处理异步任务。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[23/38] len=20 preview=我决定采用微服务架构来构建我们的后端系统
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[24/38] len=9 preview=部署策略用蓝绿部署
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[25/38] len=21 preview=PgBouncer更轻量专业，推荐单独部署
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[26/38] len=18 preview=决定部署采用云托管方式，认为最省心。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[27/38] len=36 preview=决定采用 {code, message, data} 作为统一返回格式。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[28/38] len=63 preview=经过讨论，团队决定将数据库从MySQL更换为PostgreSQL，利用其更好的扩展性、生态、JSONB数据类型和全文检索
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[29/38] len=20 preview=决定使用RabbitMQ来处理异步任务。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[30/38] len=13 preview=API版本控制用URL路径
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[31/38] len=32 preview=决定使用Prisma作为数据库ORM，因其类型安全和开发体验好。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[32/38] len=14 preview=消息队列换成RabbitMQ
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[33/38] len=15 preview=决定采用蓝绿部署策略进行部署。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[34/38] len=24 preview=决定使用ACK托管K8s集群，以减少运维工作量。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[35/38] len=52 preview=决定使用Helm Chart统一管理所有K8s部署，并采用ArgoCD实现GitOps以自动化持续交付。
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[36/38] len=13 preview=我决定使用React做前端
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[37/38] len=9 preview=部署策略用蓝绿部署
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[38/38] len=13 preview=RESTful接口规范确定
+2026-05-26 15:18:32 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:32 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"缓存策略用旁路缓存还是读写穿透"}
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-26 15:18:32 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview={"text":"缓存策略用旁路缓存还是读写穿透"}
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.62s value_range=[-10.9297, 11.2969] mean=0.0068 std=2.5584
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=38 dim=2560 time=0.70s value_range=[-13.1172, 13.0547] mean=0.0171 std=2.5970
+2026-05-26 15:18:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"我倾向旁路缓存模式，更可控一些"}
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview={"text":"我倾向旁路缓存模式，更可控一些"}
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=28 preview=经过讨论，数据库最终选定PostgreSQL，不再更改。
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=63 preview=经过讨论，团队决定将数据库从MySQL更换为PostgreSQL，利用其更好的扩展性、生态、JSONB数据类型和全文检索
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=76 preview=经过讨论，团队决定数据库选型为PostgreSQL，并配合PgBouncer连接池和主从复制；消息队列选型为Kafka，
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=32 preview=决定使用Prisma作为数据库ORM，因其类型安全和开发体验好。
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=21 preview=PgBouncer更轻量专业，推荐单独部署
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=42 preview=决定使用Prisma作为ORM，Redis作为缓存层，RabbitMQ处理异步任务。
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=经过讨论，数据库最终选定PostgreSQL，不再更改。 docs=5
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.3672, 10.0703] mean=-0.0302 std=2.3787
+2026-05-26 15:18:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=32 content={"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview={"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 15:18:33 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.2344, -3.5527, -3.9258, -5.2812, -3.0605] time=0.15s top3=[4]-3.0605:决定使用Prisma作为ORM，Redis作为缓存层，RabbitMQ处理异步任; [0]-3.2344:经过讨论，团队决定将数据库从MySQL更换为PostgreSQL，利用其更好的扩; [1]-3.5527:经过讨论，团队决定数据库选型为PostgreSQL，并配合PgBouncer连接
+2026-05-26 15:18:33 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.0605)
+2026-05-26 15:18:33 - src.core.engine - INFO - [Similar] Found by bigram: sid=a2625826f371
+2026-05-26 15:18:33 - src.core.engine - INFO - [Mutation] Similar found: sid=a2625826f371 summary=数据库选型定为PostgreSQL — judging by LLM
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-9.3672, 11.8438] mean=-0.0137 std=2.4706
+2026-05-26 15:18:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"消息队列还是定Kafka，不再纠结了"}
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview={"text":"消息队列还是定Kafka，不再纠结了"}
+2026-05-26 15:18:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-12.9609, 8.3750] mean=-0.0249 std=2.5133
+2026-05-26 15:18:34 - src.core.engine - INFO - [Dedup] LLM judge: is_same=True overwrite=False reason=两条决策主题相同，内容一致，均确定使用PostgreSQL，新决策未提供更完整或更新的信息，故无需覆盖。
+2026-05-26 15:18:34 - src.core.engine - INFO - [Mutation] LLM says same but don't overwrite: 两条决策主题相同，内容一致，均确定使用PostgreSQL，新决策未提供更完整或更新的信息，故无需覆盖。
+2026-05-26 15:18:34 - src.detect.episode - INFO - [EpisodeManager] Registered closed episode=ep_164474864 chat=oc_fde6be60e (msgs=5, topic=untagged)
+2026-05-26 15:18:34 - src.detect.episode - INFO - [EpisodeManager] Found similar episode: new=ep_164474864 old=ep_164474864 sim=1.0000 (threshold=0.65)
+2026-05-26 15:18:34 - src.core.engine - INFO - [Engine] Episode ep_164474864 reconnected to ep_164474864 (topic=)
+2026-05-26 15:18:34 - src.core.engine - INFO - [Engine] Hypergraph built: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-26 15:18:34 - src.core.engine - INFO - [Engine] <<< _process_episode done time=4.84s
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview={"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-10.5625, 8.9609] mean=0.0068 std=2.3633
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=34 content={"text":"K8s用Helm Chart来统一管理所有部署"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview={"text":"K8s用Helm Chart来统一管理所有部署"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-11.1094, 8.8203] mean=0.0136 std=2.5033
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"ArgoCD做GitOps实现持续交付自动化"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview={"text":"ArgoCD做GitOps实现持续交付自动化"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-8.9062, 9.9688] mean=0.0544 std=2.4013
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"不对，我觉得自建K8s成本其实可以控制"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview={"text":"不对，我觉得自建K8s成本其实可以控制"}
+2026-05-26 15:18:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-13.6406, 9.6641] mean=-0.0271 std=2.5527
+2026-05-26 15:18:35 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e SEMANTIC-GAP boundary: sim=0.4448 < 0.45, closing episode=ep_395e74ed8 (msgs=10)
+2026-05-26 15:18:35 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e new episode=ep_5765fe48b started after semantic gap
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] Episode closed: id=ep_395e74ed8 chat=oc_fde6be60e msgs=10, dispatching to LLM
+2026-05-26 15:18:35 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_395e74ed8 chat=oc_fde6be60e msgs=10 len=304
+2026-05-26 15:18:35 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=304 content={"text":"部署方案我建议用阿里云ACK托管集群"} {"text":"自建K8s集群的维护成本实在太高了"} {
+2026-05-26 15:18:35 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=304)
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"但我们没有专职的SRE运维团队啊"}
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview={"text":"但我们没有专职的SRE运维团队啊"}
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.4688, 8.5938] mean=0.0054 std=2.4717
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"云托管虽然省心省力，但长期来看成本更高"}
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview={"text":"云托管虽然省心省力，但长期来看成本更高"}
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-10.2188, 8.6797] mean=-0.0325 std=2.5513
+2026-05-26 15:18:36 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e SEMANTIC-GAP boundary: sim=0.4226 < 0.45, closing episode=ep_5765fe48b (msgs=2)
+2026-05-26 15:18:36 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e new episode=ep_423465b63 started after semantic gap
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] Episode closed: id=ep_5765fe48b chat=oc_fde6be60e msgs=2, dispatching to LLM
+2026-05-26 15:18:36 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_5765fe48b chat=oc_fde6be60e msgs=2 len=58
+2026-05-26 15:18:36 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=58 content={"text":"不对，我觉得自建K8s成本其实可以控制"} {"text":"但我们没有专职的SRE运维团队啊"}
+2026-05-26 15:18:36 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=58)
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"但裸金属的弹性伸缩能力比云差很多"}
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-05-26 15:18:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview={"text":"但裸金属的弹性伸缩能力比云差很多"}
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-10.1641, 11.5078] mean=-0.0200 std=2.5703
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"最终还是折中吧，核心业务跑裸金属"}
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview={"text":"最终还是折中吧，核心业务跑裸金属"}
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-11.6953, 12.5547] mean=-0.0080 std=2.4490
+2026-05-26 15:18:37 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.74s
+2026-05-26 15:18:37 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 15:18:37 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=bdf5931bb1ba title=部署方案采用阿里云ACK托管集群 source=im
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=73 model=Qwen3-Embedding-4B
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=73 preview=决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，并采用Helm Chart统一管理部署，ArgoCD实现G
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-7.6641, 9.6250] mean=0.0239 std=2.4886
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=38 chars=894 model=Qwen3-Embedding-4B
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/38] len=15 preview=将消息队列换成RabbitMQ
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[2/38] len=15 preview=决定将消息队列换成Kafka。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[3/38] len=19 preview=feature分支从develop拉取
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[4/38] len=14 preview=Git Flow分支策略确定
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[5/38] len=28 preview=需要将服务之间的通信换成http协议，不要用gRPC协议
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[6/38] len=12 preview=版本控制用URL路径方式
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[7/38] len=16 preview=生产环境使用阿里云ACK托管集群
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[8/38] len=20 preview=决定使用蓝绿部署策略，以实现零停机发布。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[9/38] len=15 preview=服务之间通信统一用gRPC协议
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[10/38] len=25 preview=使用互斥锁或永不过期加后台异步更新来防御缓存击穿。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[11/38] len=19 preview=将当前使用的消息队列替换为Kafka。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[12/38] len=51 preview=决定使用Helm Chart统一管理所有K8s部署，并通过ArgoCD实现GitOps持续交付自动化。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[13/38] len=10 preview=CDN用阿里云CDN
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[14/38] len=13 preview=消息队列用RabbitMQ
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[15/38] len=10 preview=静态资源走CDN加速
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[16/38] len=14 preview=决定加一层中间件来做数据分片
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[17/38] len=14 preview=服务之间通过gRPC进行通信
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[18/38] len=74 preview=团队决定采用裸金属服务器加Kubernetes的方案，认为这是综合考虑成本和灵活性的最优解，尽管弹性伸缩能力比云差，但可
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[19/38] len=76 preview=经过讨论，团队决定数据库选型为PostgreSQL，并配合PgBouncer连接池和主从复制；消息队列选型为Kafka，
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[20/38] len=11 preview=消息队列换成Kafka
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[21/38] len=9 preview=缓存层用Redis
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[22/38] len=42 preview=决定使用Prisma作为ORM，Redis作为缓存层，RabbitMQ处理异步任务。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[23/38] len=20 preview=我决定采用微服务架构来构建我们的后端系统
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[24/38] len=9 preview=部署策略用蓝绿部署
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[25/38] len=21 preview=PgBouncer更轻量专业，推荐单独部署
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[26/38] len=18 preview=决定部署采用云托管方式，认为最省心。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[27/38] len=36 preview=决定采用 {code, message, data} 作为统一返回格式。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[28/38] len=63 preview=经过讨论，团队决定将数据库从MySQL更换为PostgreSQL，利用其更好的扩展性、生态、JSONB数据类型和全文检索
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[29/38] len=20 preview=决定使用RabbitMQ来处理异步任务。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[30/38] len=13 preview=API版本控制用URL路径
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[31/38] len=32 preview=决定使用Prisma作为数据库ORM，因其类型安全和开发体验好。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[32/38] len=14 preview=消息队列换成RabbitMQ
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[33/38] len=15 preview=决定采用蓝绿部署策略进行部署。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[34/38] len=24 preview=决定使用ACK托管K8s集群，以减少运维工作量。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[35/38] len=52 preview=决定使用Helm Chart统一管理所有K8s部署，并采用ArgoCD实现GitOps以自动化持续交付。
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[36/38] len=13 preview=我决定使用React做前端
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[37/38] len=9 preview=部署策略用蓝绿部署
+2026-05-26 15:18:37 - src.model.embedding_provider - INFO - [Embedding]     text[38/38] len=13 preview=RESTful接口规范确定
+2026-05-26 15:18:37 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.06s
+2026-05-26 15:18:37 - src.core.engine - INFO - [LLM] No decision found in content ({"text":"不对，我觉得自建K8s成本其实可以控制"} {"text":"但我们没有专职的SRE运维团队啊"})
+2026-05-26 15:18:37 - src.core.engine - INFO - [Engine] No decision extracted from episode ep_5765fe48b (len=58)
+2026-05-26 15:18:37 - src.detect.episode - INFO - [EpisodeManager] Registered closed episode=ep_5765fe48b chat=oc_fde6be60e (msgs=2, topic=untagged)
+2026-05-26 15:18:37 - src.detect.episode - INFO - [EpisodeManager] Found similar episode: new=ep_5765fe48b old=ep_5765fe48b sim=1.0000 (threshold=0.65)
+2026-05-26 15:18:37 - src.core.engine - INFO - [Engine] Episode ep_5765fe48b reconnected to ep_5765fe48b (topic=)
+2026-05-26 15:18:37 - src.core.engine - INFO - [Engine] Hypergraph built: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-26 15:18:37 - src.core.engine - INFO - [Engine] <<< _process_episode done time=1.07s
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=38 dim=2560 time=0.60s value_range=[-13.1172, 13.0547] mean=0.0171 std=2.5970
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=73 preview=决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，并采用Helm Chart统一管理部署，ArgoCD实现G
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=52 preview=决定使用Helm Chart统一管理所有K8s部署，并采用ArgoCD实现GitOps以自动化持续交付。
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=51 preview=决定使用Helm Chart统一管理所有K8s部署，并通过ArgoCD实现GitOps持续交付自动化。
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=24 preview=决定使用ACK托管K8s集群，以减少运维工作量。
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=16 preview=生产环境使用阿里云ACK托管集群
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=18 preview=决定部署采用云托管方式，认为最省心。
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，并采用Helm Chart统一管理部署，ArgoCD实现G docs=5
+2026-05-26 15:18:38 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-2.7031, -2.5801, -3.0605, -3.0801, -3.6855] time=0.10s top3=[1]-2.5801:决定使用Helm Chart统一管理所有K8s部署，并通过ArgoCD实现Git; [0]-2.7031:决定使用Helm Chart统一管理所有K8s部署，并采用ArgoCD实现Git; [2]-3.0605:决定使用ACK托管K8s集群，以减少运维工作量。
+2026-05-26 15:18:38 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.5801)
+2026-05-26 15:18:38 - src.core.engine - INFO - [Similar] Found by bigram: sid=3309244b260d
+2026-05-26 15:18:38 - src.core.engine - INFO - [Mutation] Similar found: sid=3309244b260d summary=生产环境采用阿里云ACK托管集群 — judging by LLM
+2026-05-26 15:18:38 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:38 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"用互斥锁或者永不过期加后台异步更新"}
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview={"text":"用互斥锁或者永不过期加后台异步更新"}
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-10.0703, 9.6250] mean=-0.0234 std=2.4536
+2026-05-26 15:18:38 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:38 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 15:18:38 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.07s value_range=[-8.9531, 9.3203] mean=-0.0027 std=2.4443
+2026-05-26 15:18:39 - src.core.engine - INFO - [Dedup] LLM judge: is_same=True overwrite=True reason=两条决策均涉及采用阿里云ACK托管集群作为部署方案，主题相同，但新决策提供了更详细的实施方式（Helm Chart、Ar
+2026-05-26 15:18:39 - src.core.engine - INFO - [Mutation] LLM confirmed duplicate, overwriting: old_sid=3309244b260d new_sid=bdf5931bb1ba reason=两条决策均涉及采用阿里云ACK托管集群作为部署方案，主题相同，但新决策提供了更详
+2026-05-26 15:18:39 - src.core.engine - INFO - Updated decision: 3309244b260d v2
+2026-05-26 15:18:39 - src.core.engine - INFO - [Mutation] OVERWRITE applied: sid=3309244b260d v3
+2026-05-26 15:18:39 - src.detect.episode - INFO - [EpisodeManager] Registered closed episode=ep_395e74ed8 chat=oc_fde6be60e (msgs=10, topic=untagged)
+2026-05-26 15:18:39 - src.detect.episode - INFO - [EpisodeManager] Found similar episode: new=ep_395e74ed8 old=ep_395e74ed8 sim=1.0000 (threshold=0.65)
+2026-05-26 15:18:39 - src.core.engine - INFO - [Engine] Episode ep_395e74ed8 reconnected to ep_395e74ed8 (topic=)
+2026-05-26 15:18:39 - src.core.engine - INFO - [Engine] Hypergraph built: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-26 15:18:39 - src.core.engine - INFO - [Engine] <<< _process_episode done time=4.06s
+2026-05-26 15:19:10 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e IDLE-FLUSH: idle=31.7s >= 30s, closing episode=ep_423465b63 (msgs=5)
+2026-05-26 15:19:10 - src.detect.episode - INFO - [Episode] chat=oc_fde6be60e FORCE-CLOSE episode=ep_423465b63 (msgs=5, dur=2s)
+2026-05-26 15:19:10 - src.detect.episode - INFO - [EpisodeManager] Timeout check: 1 episode(s) closed
+2026-05-26 15:19:10 - __main__ - INFO - [Episode] >>> Timeout closed episode=ep_423465b63 (msgs=5, dur=2s), dispatching to engine
+2026-05-26 15:19:10 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_423465b63 chat=oc_fde6be60e msgs=5 len=142
+2026-05-26 15:19:10 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=142 content={"text":"云托管虽然省心省力，但长期来看成本更高"} {"text":"但裸金属的弹性伸缩能力比云差很多"} {
+2026-05-26 15:19:10 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=142)
+2026-05-26 15:19:12 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.68s
+2026-05-26 15:19:12 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 15:19:12 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=df739d0dca12 title=核心业务跑裸金属 source=im
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=经过讨论，决定核心业务使用裸金属服务器，非核心业务使用云托管，以平衡成本与弹性伸缩能力。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-9.8359, 10.5234] mean=-0.0422 std=2.5565
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=38 chars=951 model=Qwen3-Embedding-4B
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[1/38] len=15 preview=将消息队列换成RabbitMQ
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[2/38] len=15 preview=决定将消息队列换成Kafka。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[3/38] len=19 preview=feature分支从develop拉取
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[4/38] len=14 preview=Git Flow分支策略确定
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[5/38] len=28 preview=需要将服务之间的通信换成http协议，不要用gRPC协议
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[6/38] len=12 preview=版本控制用URL路径方式
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[7/38] len=73 preview=决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，并采用Helm Chart统一管理部署，ArgoCD实现G
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[8/38] len=20 preview=决定使用蓝绿部署策略，以实现零停机发布。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[9/38] len=15 preview=服务之间通信统一用gRPC协议
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[10/38] len=25 preview=使用互斥锁或永不过期加后台异步更新来防御缓存击穿。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[11/38] len=19 preview=将当前使用的消息队列替换为Kafka。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[12/38] len=51 preview=决定使用Helm Chart统一管理所有K8s部署，并通过ArgoCD实现GitOps持续交付自动化。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[13/38] len=10 preview=CDN用阿里云CDN
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[14/38] len=13 preview=消息队列用RabbitMQ
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[15/38] len=10 preview=静态资源走CDN加速
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[16/38] len=14 preview=决定加一层中间件来做数据分片
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[17/38] len=14 preview=服务之间通过gRPC进行通信
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[18/38] len=74 preview=团队决定采用裸金属服务器加Kubernetes的方案，认为这是综合考虑成本和灵活性的最优解，尽管弹性伸缩能力比云差，但可
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[19/38] len=76 preview=经过讨论，团队决定数据库选型为PostgreSQL，并配合PgBouncer连接池和主从复制；消息队列选型为Kafka，
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[20/38] len=11 preview=消息队列换成Kafka
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[21/38] len=9 preview=缓存层用Redis
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[22/38] len=42 preview=决定使用Prisma作为ORM，Redis作为缓存层，RabbitMQ处理异步任务。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[23/38] len=20 preview=我决定采用微服务架构来构建我们的后端系统
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[24/38] len=9 preview=部署策略用蓝绿部署
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[25/38] len=21 preview=PgBouncer更轻量专业，推荐单独部署
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[26/38] len=18 preview=决定部署采用云托管方式，认为最省心。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[27/38] len=36 preview=决定采用 {code, message, data} 作为统一返回格式。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[28/38] len=63 preview=经过讨论，团队决定将数据库从MySQL更换为PostgreSQL，利用其更好的扩展性、生态、JSONB数据类型和全文检索
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[29/38] len=20 preview=决定使用RabbitMQ来处理异步任务。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[30/38] len=13 preview=API版本控制用URL路径
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[31/38] len=32 preview=决定使用Prisma作为数据库ORM，因其类型安全和开发体验好。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[32/38] len=14 preview=消息队列换成RabbitMQ
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[33/38] len=15 preview=决定采用蓝绿部署策略进行部署。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[34/38] len=24 preview=决定使用ACK托管K8s集群，以减少运维工作量。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[35/38] len=52 preview=决定使用Helm Chart统一管理所有K8s部署，并采用ArgoCD实现GitOps以自动化持续交付。
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[36/38] len=13 preview=我决定使用React做前端
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[37/38] len=9 preview=部署策略用蓝绿部署
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding]     text[38/38] len=13 preview=RESTful接口规范确定
+2026-05-26 15:19:12 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=38 dim=2560 time=0.61s value_range=[-13.1172, 13.0547] mean=0.0175 std=2.5950
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=44 preview=经过讨论，决定核心业务使用裸金属服务器，非核心业务使用云托管，以平衡成本与弹性伸缩能力。
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=74 preview=团队决定采用裸金属服务器加Kubernetes的方案，认为这是综合考虑成本和灵活性的最优解，尽管弹性伸缩能力比云差，但可
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=18 preview=决定部署采用云托管方式，认为最省心。
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=24 preview=决定使用ACK托管K8s集群，以减少运维工作量。
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=20 preview=我决定采用微服务架构来构建我们的后端系统
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=73 preview=决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，并采用Helm Chart统一管理部署，ArgoCD实现G
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=经过讨论，决定核心业务使用裸金属服务器，非核心业务使用云托管，以平衡成本与弹性伸缩能力。 docs=5
+2026-05-26 15:19:12 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-2.9805, -3.6152, -2.9414, -2.9785, -3.0059] time=0.11s top3=[2]-2.9414:决定使用ACK托管K8s集群，以减少运维工作量。; [3]-2.9785:我决定采用微服务架构来构建我们的后端系统; [0]-2.9805:团队决定采用裸金属服务器加Kubernetes的方案，认为这是综合考虑成本和灵活
+2026-05-26 15:19:12 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.9414)
+2026-05-26 15:19:12 - src.core.engine - INFO - [Mutation] New decision: sid=df739d0dca12 status=decided impact=major
+2026-05-26 15:19:13 - src.core.engine - INFO - Created decision: df739d0dca12 v1 — 核心业务跑裸金属
+2026-05-26 15:19:13 - src.core.engine - INFO - [Mutation] CREATE applied: sid=df739d0dca12 v1
+2026-05-26 15:19:13 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=df739d0dca12
+2026-05-26 15:19:13 - src.detect.episode - INFO - [EpisodeManager] Registered closed episode=ep_423465b63 chat=oc_fde6be60e (msgs=5, topic=untagged)
+2026-05-26 15:19:13 - src.detect.episode - INFO - [EpisodeManager] Found similar episode: new=ep_423465b63 old=ep_423465b63 sim=1.0000 (threshold=0.65)
+2026-05-26 15:19:13 - src.core.engine - INFO - [Engine] Episode ep_423465b63 reconnected to ep_423465b63 (topic=)
+2026-05-26 15:19:13 - src.core.engine - INFO - [Engine] Hypergraph built: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-26 15:19:13 - src.core.engine - INFO - [Engine] <<< _process_episode done time=2.66s

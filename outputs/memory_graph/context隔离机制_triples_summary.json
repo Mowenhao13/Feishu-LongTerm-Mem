@@ -1,0 +1,792 @@
+{
+  "triples": [
+    {
+      "head": "agent",
+      "relation": "owns",
+      "tail": "provider_instance",
+      "schema": [
+        "SYSTEM",
+        "owns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session",
+      "relation": "owns",
+      "tail": "state_data",
+      "schema": [
+        "SYSTEM",
+        "owns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider_instance",
+      "relation": "shared_across",
+      "tail": "session",
+      "schema": [
+        "TECHNOLOGY",
+        "shared_across",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider_instance",
+      "relation": "uses",
+      "tail": "state_parameter",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "state_parameter",
+      "relation": "ensures",
+      "tail": "session_state_independence",
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "context_provider",
+      "relation": "provides",
+      "tail": "source_id",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "source_id",
+      "relation": "used_for",
+      "tail": "message_and_tool_attribution",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session_context",
+      "relation": "uses",
+      "tail": "dict_source_id_to_chat_messages",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session_context",
+      "relation": "created_by",
+      "tail": "agent_run_call",
+      "schema": [
+        "SYSTEM",
+        "created_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "modifies",
+      "tail": "session_context",
+      "schema": [
+        "TECHNOLOGY",
+        "modifies",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "uses",
+      "tail": "before_run_method",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "uses",
+      "tail": "after_run_method",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session_context",
+      "relation": "contains",
+      "tail": "input_messages",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session_context",
+      "relation": "contains",
+      "tail": "context_messages",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session_context",
+      "relation": "contains",
+      "tail": "instructions",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "session_context",
+      "relation": "contains",
+      "tail": "tools",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "input_messages",
+      "relation": "is",
+      "tail": "read_only",
+      "schema": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "framework",
+      "relation": "supports",
+      "tail": "message_filtering_by_source_id",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "uses",
+      "tail": "context_get_messages_with_sources",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "uses",
+      "tail": "context_get_messages_exclude_sources",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "agent_session",
+      "relation": "maintains",
+      "tail": "state_dict",
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "state_dict",
+      "relation": "requires",
+      "tail": "json_serializable_values",
+      "schema": [
+        "CONCEPT",
+        "requires",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "accesses",
+      "tail": "provider_scoped_state",
+      "schema": [
+        "TECHNOLOGY",
+        "accesses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider",
+      "relation": "accesses",
+      "tail": "cross_provider_state",
+      "schema": [
+        "TECHNOLOGY",
+        "accesses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "provider_scoped_state",
+      "relation": "accessed_via",
+      "tail": "state_parameter",
+      "schema": [
+        "CONCEPT",
+        "accessed_via",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "cross_provider_state",
+      "relation": "accessed_via",
+      "tail": "session_state",
+      "schema": [
+        "CONCEPT",
+        "accessed_via",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "jido_framework",
+      "relation": "implements",
+      "tail": "multi_layer_context_isolation",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182"
+    },
+    {
+      "head": "Plugin State Isolation",
+      "relation": "uses",
+      "tail": "state_key",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "state_key",
+      "relation": "provides",
+      "tail": "independent_namespace",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "independent_namespace",
+      "relation": "prevents",
+      "tail": "state_interference",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "ChatPlugin",
+      "relation": "has_state_key",
+      "tail": ":chat",
+      "schema": [
+        "TECHNOLOGY",
+        "has_state_key",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "DatabasePlugin",
+      "relation": "has_state_key",
+      "tail": ":database",
+      "schema": [
+        "TECHNOLOGY",
+        "has_state_key",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "agent.state",
+      "relation": "contains",
+      "tail": "chat_namespace",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "agent.state",
+      "relation": "contains",
+      "tail": "database_namespace",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "plugin",
+      "relation": "accesses",
+      "tail": "own_namespace",
+      "schema": [
+        "CONCEPT",
+        "accesses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "plugin",
+      "relation": "modifies",
+      "tail": "own_namespace",
+      "schema": [
+        "CONCEPT",
+        "modifies",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbe"
+    },
+    {
+      "head": "Jido 2.0",
+      "relation": "adopts",
+      "tail": "instance_scoped_architecture",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "Jido 2.0",
+      "relation": "rejects",
+      "tail": "global_singleton",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "instance_scoped_architecture",
+      "relation": "requires",
+      "tail": "explicit_jido_instance_module",
+      "schema": [
+        "CONCEPT",
+        "requires",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "explicit_jido_instance_module",
+      "relation": "added_to",
+      "tail": "supervision_tree",
+      "schema": [
+        "CONCEPT",
+        "added_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "jido_instance",
+      "relation": "has",
+      "tail": "independent_registry",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "jido_instance",
+      "relation": "has",
+      "tail": "independent_task_supervisor",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "jido_instance",
+      "relation": "has",
+      "tail": "independent_agent_supervisor",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "instance_scoped_architecture",
+      "relation": "enables",
+      "tail": "multiple_isolated_jido_instances",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "instance_scoped_architecture",
+      "relation": "enables",
+      "tail": "clear_ownership_and_supervision_boundaries",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "instance_scoped_architecture",
+      "relation": "enables",
+      "tail": "easier_test_isolation",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a"
+    },
+    {
+      "head": "Jido.Agent.InstanceManager",
+      "relation": "provides",
+      "tail": "键控单例注册表",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "键控单例注册表",
+      "relation": "manages",
+      "tail": "agent实例",
+      "schema": [
+        "CONCEPT",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "Jido.Agent.InstanceManager",
+      "relation": "supports",
+      "tail": "自动生命周期",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "自动生命周期",
+      "relation": "includes",
+      "tail": "空闲超时",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "自动生命周期",
+      "relation": "includes",
+      "tail": "附件跟踪",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "Jido.Agent.InstanceManager",
+      "relation": "supports",
+      "tail": "可选存储",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "可选存储",
+      "relation": "enables",
+      "tail": "休眠/恢复",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "休眠/恢复",
+      "relation": "uses",
+      "tail": "可插拔存储后端",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "Jido.Agent.InstanceManager",
+      "relation": "supports",
+      "tail": "多个注册表",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "多个注册表",
+      "relation": "allows",
+      "tail": "不同agent类型使用不同配置",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "持久化键",
+      "relation": "is_scoped_to",
+      "tail": "管理器作用域",
+      "schema": [
+        "CONCEPT",
+        "is_scoped_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "管理器作用域",
+      "relation": "consists_of",
+      "tail": "{manager_name, pool_key}",
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "多个管理器",
+      "relation": "can_share",
+      "tail": "同一个存储后端",
+      "schema": [
+        "CONCEPT",
+        "can_share",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "同一个存储后端",
+      "relation": "avoids",
+      "tail": "检查点冲突",
+      "schema": [
+        "CONCEPT",
+        "avoids",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a"
+    },
+    {
+      "head": "Signal Context",
+      "relation": "provides",
+      "tail": "context_isolation",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    },
+    {
+      "head": "Signal Context",
+      "relation": "contains",
+      "tail": "plugin_instance",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    },
+    {
+      "head": "handle_signal/2",
+      "relation": "receives",
+      "tail": "Signal Context",
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    },
+    {
+      "head": "handle_signal/2",
+      "relation": "defined_by",
+      "tail": "Jido.Plugin",
+      "schema": [
+        "CONCEPT",
+        "defined_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    },
+    {
+      "head": "plugin_instance",
+      "relation": "provides",
+      "tail": "instance_level_context_isolation",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    },
+    {
+      "head": "plugin_instance",
+      "relation": "has_attribute",
+      "tail": "module",
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    },
+    {
+      "head": "plugin_instance",
+      "relation": "has_attribute",
+      "tail": "state_key",
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f686"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 67,
+    "unique_schemas": 41,
+    "schema_distribution": {
+      "('SYSTEM', 'owns', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'owns', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'shared_across', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 5,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 1,
+      "('SYSTEM', 'created_by', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'modifies', 'SYSTEM')": 1,
+      "('SYSTEM', 'contains', 'CONCEPT')": 6,
+      "('CONCEPT', 'is', 'CONCEPT')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 4,
+      "('SYSTEM', 'maintains', 'CONCEPT')": 1,
+      "('CONCEPT', 'requires', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'accesses', 'CONCEPT')": 2,
+      "('CONCEPT', 'accessed_via', 'CONCEPT')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'provides', 'CONCEPT')": 3,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'has_state_key', 'CONCEPT')": 2,
+      "('CONCEPT', 'accesses', 'CONCEPT')": 1,
+      "('CONCEPT', 'modifies', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('CONCEPT', 'added_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'has', 'SYSTEM')": 3,
+      "('CONCEPT', 'enables', 'CONCEPT')": 4,
+      "('SYSTEM', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'manages', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 2,
+      "('CONCEPT', 'allows', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_scoped_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'consists_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'can_share', 'CONCEPT')": 1,
+      "('CONCEPT', 'avoids', 'CONCEPT')": 1,
+      "('CONCEPT', 'contains', 'CONCEPT')": 1,
+      "('CONCEPT', 'receives', 'CONCEPT')": 1,
+      "('CONCEPT', 'defined_by', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'has_attribute', 'CONCEPT')": 2
+    },
+    "schema_layer_size": 41,
+    "fact_layer_size": 67,
+    "passage_layer_size": 6
+  }
+}

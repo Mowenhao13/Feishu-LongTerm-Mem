@@ -1,0 +1,790 @@
+{
+  "triples": [
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "消息类型字段",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-12b882"
+    },
+    {
+      "head": "消息类型字段",
+      "relation": "used_for",
+      "tail": "区分模型回复的不同部分",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-12b882"
+    },
+    {
+      "head": "后端",
+      "relation": "uses",
+      "tail": "CLI 输出",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-12b882"
+    },
+    {
+      "head": "后端",
+      "relation": "responsible_for",
+      "tail": "解析为结构化的消息类型",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-12b882"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "类型",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-12b882"
+    },
+    {
+      "head": "类型",
+      "relation": "used_for",
+      "tail": "渲染不同的 UI 组件",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-12b882"
+    },
+    {
+      "head": "后端",
+      "relation": "uses",
+      "tail": "server/pkg/agent/",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "server/pkg/agent/",
+      "relation": "responsible_for",
+      "tail": "统一处理不同 provider 的输出",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "server/pkg/agent/",
+      "relation": "uses",
+      "tail": "Message 类型",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "Claude Provider",
+      "relation": "uses",
+      "tail": "NDJSON",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "Claude Provider",
+      "relation": "uses",
+      "tail": "handleAssistant 函数",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "handleAssistant 函数",
+      "relation": "responsible_for",
+      "tail": "解析 content block",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "handleAssistant 函数",
+      "relation": "related_to",
+      "tail": "发送不同消息",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "Copilot",
+      "relation": "uses",
+      "tail": "ReasoningText",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "ReasoningText",
+      "relation": "related_to",
+      "tail": "思考内容",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "Hermes",
+      "relation": "uses",
+      "tail": "handleAgentThought",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "handleAgentThought",
+      "relation": "responsible_for",
+      "tail": "发送思考内容",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-84ff43"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "used_by",
+      "tail": "前端",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-bc1589"
+    },
+    {
+      "head": "ToolCallRow",
+      "relation": "is_subtype_of",
+      "tail": "ChatTimelineItem",
+      "schema": [
+        "CONCEPT",
+        "is_subtype_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-bc1589"
+    },
+    {
+      "head": "ToolResultRow",
+      "relation": "is_subtype_of",
+      "tail": "ChatTimelineItem",
+      "schema": [
+        "CONCEPT",
+        "is_subtype_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-bc1589"
+    },
+    {
+      "head": "ErrorRow",
+      "relation": "is_subtype_of",
+      "tail": "ChatTimelineItem",
+      "schema": [
+        "CONCEPT",
+        "is_subtype_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-bc1589"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "splitTimeline",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-bc1589"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "splits",
+      "tail": "内容",
+      "schema": [
+        "CONCEPT",
+        "splits",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-bc1589"
+    },
+    {
+      "head": "CLI 输出 (NDJSON/JSON-RPC)",
+      "relation": "produces",
+      "tail": "NDJSON/JSON-RPC",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "Provider 解析 (claude.go, cursor.go, etc.)",
+      "relation": "parses",
+      "tail": "NDJSON/JSON-RPC",
+      "schema": [
+        "SYSTEM",
+        "parses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "Provider 解析 (claude.go, cursor.go, etc.)",
+      "relation": "produces",
+      "tail": "统一 Message 类型 (MessageText, MessageThinking, MessageToolUse)",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "统一 Message 类型 (MessageText, MessageThinking, MessageToolUse)",
+      "relation": "transmitted_via",
+      "tail": "WebSocket",
+      "schema": [
+        "CONCEPT",
+        "transmitted_via",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "pushes_to",
+      "tail": "前端",
+      "schema": [
+        "TECHNOLOGY",
+        "pushes_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "前端",
+      "relation": "converts_to",
+      "tail": "ChatTimelineItem",
+      "schema": [
+        "SYSTEM",
+        "converts_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "rendered_by",
+      "tail": "type",
+      "schema": [
+        "CONCEPT",
+        "rendered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "type",
+      "relation": "determines",
+      "tail": "UI 组件",
+      "schema": [
+        "CONCEPT",
+        "determines",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ae3319"
+    },
+    {
+      "head": "provider",
+      "relation": "follows",
+      "tail": "消息类型抽象",
+      "schema": [
+        "CONCEPT",
+        "follows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "消息类型抽象",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "消息类型抽象",
+      "relation": "hides",
+      "tail": "CLI协议差异",
+      "schema": [
+        "CONCEPT",
+        "hides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "思考内容",
+      "relation": "defaults_to",
+      "tail": "折叠",
+      "schema": [
+        "CONCEPT",
+        "defaults_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "用户",
+      "relation": "can_expand",
+      "tail": "思考内容",
+      "schema": [
+        "PERSON",
+        "can_expand",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "Web端",
+      "relation": "shares_rendering_logic_with",
+      "tail": "Mobile端",
+      "schema": [
+        "SYSTEM",
+        "shares_rendering_logic_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "Web端",
+      "relation": "differs_in",
+      "tail": "UI组件实现",
+      "schema": [
+        "SYSTEM",
+        "differs_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "Mobile端",
+      "relation": "differs_in",
+      "tail": "UI组件实现",
+      "schema": [
+        "SYSTEM",
+        "differs_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "claudeBackend",
+      "relation": "implements",
+      "tail": "handleAssistant",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAssistant",
+      "relation": "processes",
+      "tail": "claudeSDKMessage",
+      "schema": [
+        "CONCEPT",
+        "processes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAssistant",
+      "relation": "accumulates",
+      "tail": "TokenUsage",
+      "schema": [
+        "CONCEPT",
+        "accumulates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAssistant",
+      "relation": "sends",
+      "tail": "MessageText",
+      "schema": [
+        "CONCEPT",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAssistant",
+      "relation": "sends",
+      "tail": "MessageThinking",
+      "schema": [
+        "CONCEPT",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAssistant",
+      "relation": "sends",
+      "tail": "MessageToolUse",
+      "schema": [
+        "CONCEPT",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "defines_types",
+      "tail": "tool_use",
+      "schema": [
+        "CONCEPT",
+        "defines_types",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "defines_types",
+      "tail": "tool_result",
+      "schema": [
+        "CONCEPT",
+        "defines_types",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "defines_types",
+      "tail": "thinking",
+      "schema": [
+        "CONCEPT",
+        "defines_types",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "defines_types",
+      "tail": "text",
+      "schema": [
+        "CONCEPT",
+        "defines_types",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "ChatTimelineItem",
+      "relation": "defines_types",
+      "tail": "error",
+      "schema": [
+        "CONCEPT",
+        "defines_types",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "copilot.go",
+      "relation": "handles",
+      "tail": "ReasoningText",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "copilot.go",
+      "relation": "maps_to",
+      "tail": "MessageThinking",
+      "schema": [
+        "SYSTEM",
+        "maps_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "hermesClient",
+      "relation": "implements",
+      "tail": "handleAgentThought",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAgentThought",
+      "relation": "processes",
+      "tail": "agent_thought_event",
+      "schema": [
+        "CONCEPT",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "handleAgentThought",
+      "relation": "maps_to",
+      "tail": "MessageThinking",
+      "schema": [
+        "CONCEPT",
+        "maps_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-a25944"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "splitTimeline",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "OuterProcessFold",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "uses",
+      "tail": "Markdown",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "based_on",
+      "tail": "Conductor-style",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "responsible_for",
+      "tail": "preface",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "responsible_for",
+      "tail": "middle",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "splitTimeline",
+      "relation": "responsible_for",
+      "tail": "final",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "uses",
+      "tail": "ThinkingRow",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "uses",
+      "tail": "ToolCallRow",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "OuterProcessFold",
+      "relation": "uses",
+      "tail": "ToolResultRow",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "extractCopyText",
+      "relation": "responsible_for",
+      "tail": "copy logic",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-363794"
+    },
+    {
+      "head": "TimelineView",
+      "relation": "depends_on",
+      "tail": "@multica/core/types",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-005-363794"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 67,
+    "unique_schemas": 39,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'CONCEPT')": 4,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'SYSTEM')": 6,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'uses', 'STANDARD')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 3,
+      "('CONCEPT', 'responsible_for', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'used_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'is_subtype_of', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'splits', 'CONCEPT')": 1,
+      "('SYSTEM', 'produces', 'STANDARD')": 1,
+      "('SYSTEM', 'parses', 'STANDARD')": 1,
+      "('SYSTEM', 'produces', 'CONCEPT')": 1,
+      "('CONCEPT', 'transmitted_via', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'pushes_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'converts_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'rendered_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'determines', 'SYSTEM')": 1,
+      "('CONCEPT', 'follows', 'CONCEPT')": 1,
+      "('CONCEPT', 'hides', 'CONCEPT')": 1,
+      "('CONCEPT', 'defaults_to', 'CONCEPT')": 1,
+      "('PERSON', 'can_expand', 'CONCEPT')": 1,
+      "('SYSTEM', 'shares_rendering_logic_with', 'SYSTEM')": 1,
+      "('SYSTEM', 'differs_in', 'CONCEPT')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 2,
+      "('CONCEPT', 'processes', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'accumulates', 'CONCEPT')": 1,
+      "('CONCEPT', 'sends', 'CONCEPT')": 3,
+      "('CONCEPT', 'defines_types', 'CONCEPT')": 5,
+      "('SYSTEM', 'handles', 'CONCEPT')": 1,
+      "('SYSTEM', 'maps_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'processes', 'CONCEPT')": 1,
+      "('CONCEPT', 'maps_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'based_on', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'depends_on', 'ORG')": 1
+    },
+    "schema_layer_size": 39,
+    "fact_layer_size": 66,
+    "passage_layer_size": 6
+  }
+}

@@ -45,36 +45,40 @@ mcp = FastMCP(
 2. topic — 按议题查询决策
 3. search — 搜索决策
 4. decision — 获取单个决策详情
-5. timeline — 决策时间线
-6. list_topics — 列出所有议题
-7. get_relations — 获取决策关系网络
-8. stats — 系统统计
-9. hot_decisions — 热点决策排名
-10. forgotten_decisions — 被遗忘的决策
-11. related_decisions — 相关决策
-12. recent_decisions — 最近决策
-13. git_history — Git 提交历史
-14. git_search — Git 内容搜索
-15. git_blame — Git 追溯
-16. fulltext_search — 全文搜索
-17. conflict_list — 冲突列表
-18. objection_list — 异议列表
-19. decision_card — 决策卡片
-20. decision_history — 决策版本历史
-21. create_decision — 创建决策
-22. update_decision — 更新决策
-23. confirm_decision — 确认决策
-24. reject_decision — 拒绝决策
-25. revert_decision — 回滚决策
-26. resolve_conflict — 解决冲突
-27. resolve_conflict_action — 获取冲突解决建议
-28. evaluate_dedup — 去重/冲突评估
-29. extract_decision — 从文本提取决策
-30. classify_topic — 议题归类
-31. detect_crosstopic — 检测跨议题影响
-32. check_conflict — 检测冲突
-33. extract_and_create — 提取并创建决策
-34. refresh — 重新加载
+5. list_topics — 列出所有议题
+6. get_relations — 获取决策关系网络
+7. stats — 系统统计
+8. hot_decisions — 热点决策排名
+9. forgotten_decisions — 被遗忘的决策
+10. related_decisions — 相关决策
+11. recent_decisions — 最近决策
+12. git_history — Git 提交历史
+13. git_search — Git 内容搜索
+14. git_blame — Git 追溯
+15. fulltext_search — 全文搜索
+16. conflict_list — 冲突列表
+17. objection_list — 异议列表
+18. decision_card — 决策卡片
+19. decision_history — 决策版本历史
+20. decision_children — 子决策列表
+21. decision_descendants — 后代决策
+22. decision_ancestors — 祖先路径
+23. decision_tree — 完整层级树
+24. show_tree — 决策森林
+25. create_decision — 创建决策
+26. update_decision — 更新决策
+27. confirm_decision — 确认决策
+28. reject_decision — 拒绝决策
+29. revert_decision — 回滚决策
+30. resolve_conflict — 解决冲突
+31. resolve_conflict_action — 获取冲突解决建议
+32. evaluate_dedup — 去重/冲突评估
+33. extract_decision — 从文本提取决策
+34. classify_topic — 议题归类
+35. detect_crosstopic — 检测跨议题影响
+36. check_conflict — 检测冲突
+37. extract_and_create — 提取并创建决策
+38. refresh — 重新加载
 """,
     log_level="WARNING",
 )
@@ -135,10 +139,19 @@ class MemoryLoader:
         self.ensure_loaded()
         return self._storage
 
+    def _get_storage(self) -> GitStorage:
+        """Return the GitStorage instance (for test access)."""
+        self.ensure_loaded()
+        return self._storage
+
     @property
     def decisions(self) -> List[Any]:
         self.ensure_loaded()
         return self._decisions
+
+    @decisions.setter
+    def decisions(self, value: List[Any]) -> None:
+        self._decisions = value
 
     def reload(self) -> None:
         self._loaded = False
@@ -149,6 +162,11 @@ class MemoryLoader:
 
 
 _loader = MemoryLoader()
+
+
+def _get_storage() -> GitStorage:
+    """Return the GitStorage instance (for test access)."""
+    return _loader._get_storage()
 
 
 # ==================== 工具函数 ====================
@@ -275,17 +293,6 @@ def decision(sid: str) -> str:
     if d is None:
         return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
     return json.dumps({"result": _node_to_dict(d)}, ensure_ascii=False)
-
-
-@mcp.tool(
-    name="timeline",
-    description="获取所有决策的时间线（按创建时间排序）。",
-)
-def timeline(top_k: int = 50) -> str:
-    _loader.ensure_loaded()
-    nodes = sorted(_loader.decisions, key=lambda d: d.created_at or datetime.min, reverse=True)
-    results = [_node_to_dict(d) for d in nodes[:top_k]]
-    return json.dumps({"results": results, "total": len(results)}, ensure_ascii=False)
 
 
 @mcp.tool(

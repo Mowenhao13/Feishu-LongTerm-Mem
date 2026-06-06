@@ -165,21 +165,8 @@ OpenClaw 会自动拉起 MCP server 并调用对应工具。
   总耗时:     289.7s
 ```
 
-### 二、层级关系测试（hierarchy_test.txt）
 
-51 条层级化消息测试决策树父子关系提取能力：
-
-| 指标 | 数值 |
-|------|------|
-| 群聊数 | 3 |
-| 种子决策 | 11 条（4 根 + 7 子） |
-| 消息数 | 51 |
-| Suspend | 2 次 |
-| Reopen | 28 次 |
-| 决策提取 | 6 条 |
-| 层级关系 | 微服务→gRPC/Kong/Consul, 容器化→监控/网络 |
-
-### 三、启动 Eval 测试
+### 二、启动 Eval 测试
 
 ```bash
 # 基础运行（单群聊，默认1秒延迟）
@@ -204,3 +191,7 @@ uv run python scripts/show_decision_tree.py
 - [MCP 服务部署](docs/wiki/mcp_server/MCP%20Server%20Deployment.md)
 - [快速开始](docs/wiki/project_overiew/Getting%20Started%20%26%20Configuration.md)
 - [项目展示 PPT](docs/ppt/index.html)
+
+
+ssh -f -N -L 8000:localhost:8000 -L 8001:localhost:8001 ubuntu
+

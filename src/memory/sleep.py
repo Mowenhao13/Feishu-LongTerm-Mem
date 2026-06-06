@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import os
@@ -91,6 +92,36 @@ class SleepManager:
         self._prefilter_dice = 0.35
 
         self._cached_judgments: List[Tuple[str, str, str, str, str]] = []
+
+    def _llm_generate_sync(
+        self,
+        prompt: str,
+        temperature: float = 0.05,
+        response_format: Optional[dict] = None,
+    ) -> str:
+        """Synchronous wrapper around async LLMProvider.generate()
+
+        engine.sleep() is called from sync context, so we must bridge
+        to the async provider without blocking the event loop permanently.
+        """
+        if not self._llm or not hasattr(self._llm, "generate"):
+            return ""
+
+        try:
+            loop = asyncio.new_event_loop()
+            try:
+                return loop.run_until_complete(
+                    self._llm.generate(
+                        prompt,
+                        temperature=temperature,
+                        response_format=response_format,
+                    )
+                )
+            finally:
+                loop.close()
+        except Exception as e:
+            logger.warning("[Sleep] _llm_generate_sync failed: %s", e)
+            return ""
 
     def _load_decisions_from_path(self, path: str) -> List[DecisionNode]:
         """从备份目录加载决策文件
@@ -426,7 +457,7 @@ class SleepManager:
 
             prompt = DECISION_TREE_BUILD_PROMPT.format(decision_list=decision_list)
             _temp = float(os.getenv("MEMORY_DEDUP_TEMPERATURE", "0.05"))
-            resp = self._llm.generate(
+            resp = self._llm_generate_sync(
                 prompt,
                 temperature=_temp,
                 response_format={"type": "json_object"},
@@ -449,12 +480,12 @@ class SleepManager:
                 # 更新 child 的 parent_id
                 child_node.parent_id = parent_sid
                 child_node.add_relation(Relation(
-                    type=RelationType.CHILD_OF,
+                    type=RelationType.RELATES_TO,
                     target_id=parent_sid,
                     description=rel.get("reason", ""),
                 ))
                 parent_node.add_relation(Relation(
-                    type=RelationType.PARENT_OF,
+                    type=RelationType.RELATES_TO,
                     target_id=child_sid,
                     description=rel.get("reason", ""),
                 ))
@@ -630,7 +661,7 @@ class SleepManager:
             _dedup_temp = float(os.getenv("MEMORY_DEDUP_TEMPERATURE", "0.05"))
 
             try:
-                resp = self._llm.generate(
+                resp = self._llm_generate_sync(
                     prompt,
                     temperature=_dedup_temp,
                     response_format={"type": "json_object"},
@@ -696,7 +727,7 @@ class SleepManager:
             _temp = float(os.getenv("MEMORY_DEDUP_TEMPERATURE", "0.05"))
             
             try:
-                resp = self._llm.generate(
+                resp = self._llm_generate_sync(
                     prompt,
                     temperature=_temp,
                     response_format={"type": "json_object"},

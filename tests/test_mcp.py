@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import pytest
 
-from src.mcp_server.server import mcp, search, decision, list_topics, stats, timeline
+from src.mcp_server.server import mcp, search, decision, list_topics, stats
 
 
 class TestMCPToolDefinitions:
@@ -47,12 +47,6 @@ class TestMCPToolDefinitions:
         names = [t.name for t in tools]
         assert "stats" in names
 
-    def test_timeline_tool_registered(self):
-        tools = mcp._tool_manager.list_tools()
-        names = [t.name for t in tools]
-        assert "timeline" in names
-
-
 class TestMCPToolDescriptions:
     def test_search_description_contains_search(self):
         tools = mcp._tool_manager.list_tools()
@@ -73,22 +67,25 @@ class TestMCPToolInputSchema:
         assert "query" in props
         assert props["query"]["type"] == "string"
 
-    def test_decision_has_sdr_id_param(self):
+    def test_decision_has_sid_param(self):
         tools = mcp._tool_manager.list_tools()
         decision_tool = next(t for t in tools if t.name == "decision")
         props = decision_tool.parameters.get("properties", {})
-        assert "sdr_id" in props
-        assert props["sdr_id"]["type"] == "string"
+        assert "sid" in props
+        assert props["sid"]["type"] == "string"
 
 
 class TestMCPToolExecution:
-    def test_search_no_results(self):
+    def test_search_returns_json_string(self):
         result = search(query="nonexistent_keyword_xyz")
-        assert "未找到" in result or "搜索结果" in result
+        data = json.loads(result)
+        assert "results" in data
+        assert "total" in data
 
     def test_decision_not_found(self):
-        result = decision(sdr_id="nonexistent_sdr")
-        assert "未找到" in result or "not found" in result.lower()
+        result = decision(sid="nonexistent_sdr")
+        data = json.loads(result)
+        assert "error" in data
 
     def test_list_topics_returns_string(self):
         result = list_topics()
@@ -97,13 +94,8 @@ class TestMCPToolExecution:
 
     def test_stats_returns_string(self):
         result = stats()
-        assert isinstance(result, str)
-        assert "总决策数" in result
-
-    def test_timeline_returns_string(self):
-        result = timeline()
-        assert isinstance(result, str)
-        assert "决策时间线" in result or "暂无决策记录" in result
+        data = json.loads(result)
+        assert "total_decisions" in data
 
 
 class TestMCPServerInfo:
@@ -111,7 +103,7 @@ class TestMCPServerInfo:
         assert mcp.name == "Feishu Memory Agent"
 
     def test_server_instructions(self):
-        assert "Feishu Memory Agent" in mcp.instructions
+        assert "决策记忆" in mcp.instructions
 
 
 
