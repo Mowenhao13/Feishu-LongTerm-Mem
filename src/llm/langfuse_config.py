@@ -12,6 +12,11 @@ def is_langfuse_enabled() -> bool:
     return os.getenv("LANGFUSE_ENABLE", "false").lower() == "true"
 
 
+def _get_langfuse_host() -> str:
+    """获取 Langfuse host，兼容 LANGFUSE_HOST 和 LANGFUSE_BASE_URL 两种变量名"""
+    return os.getenv("LANGFUSE_HOST") or os.getenv("LANGFUSE_BASE_URL", "http://localhost:3000")
+
+
 def get_langfuse():
     """获取 Langfuse 客户端（单例，惰性初始化）"""
     global _langfuse_client, _langfuse_enabled
@@ -24,7 +29,7 @@ def get_langfuse():
         _langfuse_client = Langfuse(
             secret_key=os.getenv("LANGFUSE_SECRET_KEY", ""),
             public_key=os.getenv("LANGFUSE_PUBLIC_KEY", ""),
-            host=os.getenv("LANGFUSE_HOST", "http://localhost:3000"),
+            host=_get_langfuse_host(),
         )
         _langfuse_enabled = True
         return _langfuse_client
