@@ -5,6 +5,7 @@ import hashlib
 import os
 import signal
 import time
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
@@ -661,10 +662,12 @@ class MemoryEngine:
         3. 冲突检测 + 应用 Mutation
         4. 同步到 GitStorage
         """
+        # 生成 trace_id 贯穿整个检测流程
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
         content = getattr(detection_result, "content", "") or str(detection_result)
         source = getattr(detection_result, "source", "im")
         content_preview = content[:80].replace("\n", " ")
-        logger.info("[Engine] >>> _process_detection source=%s content=%.60s", source, content_preview)
+        logger.info("[Engine] >>> _process_detection source=%s content=%.60s trace_id=%s", source, content_preview, trace_id)
 
         proc_start = time.time()
 
@@ -712,6 +715,8 @@ class MemoryEngine:
             - episode.messages: EpisodeMessage 列表
             - episode.to_dict(): 序列化方法
         """
+        # 生成 trace_id 贯穿整个 episode 处理流程
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
         content = episode.full_text
         chat_id = episode.chat_id
         episode_id = episode.id
@@ -724,8 +729,8 @@ class MemoryEngine:
             return
         self._processed_episode_hashes.add(content_hash)
 
-        logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d",
-                    episode_id[:12], chat_id[:12], episode.message_count, len(content))
+        logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d trace_id=%s",
+                    episode_id[:12], chat_id[:12], episode.message_count, len(content), trace_id)
 
         if episode.message_count < 2 and len(content) < 100:
             logger.info("[Engine] Episode %s too short (msgs=%d, len=%d), skipping LLM extraction",

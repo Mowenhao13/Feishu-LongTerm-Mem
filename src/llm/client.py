@@ -7,6 +7,7 @@ from openai import OpenAI
 
 from src.llm.config import LLMConfig, get_llm_config
 from src.llm.error_handling import llm_call_with_retry
+from src.llm.langfuse_config import get_langfuse, should_sample
 from src.llm.token_tracker import TokenTracker, TokenUsage
 
 
@@ -37,6 +38,7 @@ class LLMClient:
         max_tokens: Optional[int] = None,
         temperature: Optional[float] = None,
         top_p: Optional[float] = None,
+        trace_id: Optional[str] = None,
     ) -> str:
         kwargs: dict[str, Any] = {
             "model": self.config.model_name,
@@ -55,13 +57,49 @@ class LLMClient:
         if response_format:
             kwargs["response_format"] = response_format
 
-        resp = self.client.chat.completions.create(**kwargs)
-        if resp.usage:
-            self._last_usage = self.token_tracker.track_from_response(
-                response_prompt_tokens=resp.usage.prompt_tokens or 0,
-                response_completion_tokens=resp.usage.completion_tokens or 0,
+        # Langfuse 埋点
+        langfuse = get_langfuse()
+        f_trace = None
+        f_span = None
+        if langfuse and should_sample():
+            f_trace = langfuse.trace(
+                name="llm_chat",
+                input={"messages": messages[-2:] if messages else []},
+                metadata={
+                    "model": self.config.model_name,
+                    "trace_id": trace_id or "",
+                },
             )
-        return resp.choices[0].message.content or ""
+            f_span = f_trace.span(name="openai_call")
+
+        try:
+            resp = self.client.chat.completions.create(**kwargs)
+
+            if f_span and f_trace:
+                usage = resp.usage
+                if usage:
+                    f_span.generation(
+                        model=self.config.model_name,
+                        input=messages,
+                        output=resp.choices[0].message.content,
+                        usage={"input": usage.prompt_tokens, "output": usage.completion_tokens},
+                    )
+                f_span.end(output={"status": "success", "tokens": ...})
+                f_trace.end()
+
+            if resp.usage:
+                self._last_usage = self.token_tracker.track_from_response(
+                    response_prompt_tokens=resp.usage.prompt_tokens or 0,
+                    response_completion_tokens=resp.usage.completion_tokens or 0,
+                )
+            return resp.choices[0].message.content or ""
+
+        except Exception as e:
+            if f_span:
+                f_span.end(output={"status": "error", "error": str(e)})
+            if f_trace:
+                f_trace.end()
+            raise
 
     def chat_with_retry(
         self,
@@ -70,9 +108,10 @@ class LLMClient:
         max_tokens: Optional[int] = None,
         temperature: Optional[float] = None,
         top_p: Optional[float] = None,
+        trace_id: Optional[str] = None,
     ) -> str:
         def _call() -> str:
-            return self.chat(messages, response_format, max_tokens, temperature, top_p)
+            return self.chat(messages, response_format, max_tokens, temperature, top_p, trace_id=trace_id)
 
         return llm_call_with_retry(_call)
 
