@@ -1,0 +1,13 @@
+{
+  "type": "cross_session_conflict",
+  "num_conflicts": 10,
+  "total_messages": 90,
+  "total_decisions": 20,
+  "conflict_types": {
+    "direct_overrule": 3,
+    "incremental_refine": 3,
+    "context_change": 2,
+    "revert": 2
+  },
+  "generated_at": "2026-08-01 15:20:54"
+}

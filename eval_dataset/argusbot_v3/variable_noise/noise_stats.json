@@ -1,0 +1,3522 @@
+[
+  {
+    "chat_id": "noise_10_00",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_01",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_02",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_03",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_04",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_05",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_06",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_07",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_08",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_09",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_10",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_11",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_12",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_13",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_14",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_15",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_16",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_17",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_18",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_19",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_20",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_21",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_22",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_23",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_24",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_25",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_26",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_27",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_28",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_29",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_30",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_31",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_32",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_33",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_34",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_35",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_36",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_37",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_38",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_39",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_40",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_41",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_42",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_43",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_44",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_45",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_46",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_47",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_48",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_49",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_50",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_51",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_52",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_53",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_10_54",
+    "noise_ratio": 0.1,
+    "total_messages": 13,
+    "core_messages": 12,
+    "noise_messages": 1,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_00",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_01",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_02",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_03",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_04",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_05",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_06",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_07",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_08",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_09",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_10",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_11",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_12",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_13",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_14",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_15",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_16",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_17",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_18",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_19",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_20",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_21",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_22",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_23",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_24",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_25",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_26",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_27",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_28",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_29",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_30",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_31",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_32",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_33",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_34",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_35",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_36",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_37",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_38",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_39",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_40",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_41",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_42",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_43",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_44",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_45",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_46",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_47",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_48",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_49",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_50",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_51",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_52",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_53",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_20_54",
+    "noise_ratio": 0.2,
+    "total_messages": 15,
+    "core_messages": 12,
+    "noise_messages": 3,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_00",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_01",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_02",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_03",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_04",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_05",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_06",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_07",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_08",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_09",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_10",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_11",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_12",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_13",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_14",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_15",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_16",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_17",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_18",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_19",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_20",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_21",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_22",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_23",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_24",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_25",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_26",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_27",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_28",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_29",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_30",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_31",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_32",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_33",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_34",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_35",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_36",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_37",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_38",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_39",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_40",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_41",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_42",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_43",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_44",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_45",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_46",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_47",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_48",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_49",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_50",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_51",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_52",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_53",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_30_54",
+    "noise_ratio": 0.3,
+    "total_messages": 17,
+    "core_messages": 12,
+    "noise_messages": 5,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_00",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_01",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_02",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_03",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_04",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_05",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_06",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_07",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_08",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_09",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_10",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_11",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_12",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_13",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_14",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_15",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_16",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_17",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_18",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_19",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_20",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_21",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_22",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_23",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_24",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_25",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_26",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_27",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_28",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_29",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_30",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_31",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_32",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_33",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_34",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_35",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_36",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_37",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_38",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_39",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_40",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_41",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_42",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_43",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_44",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_45",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_46",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_47",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_48",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_49",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_50",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_51",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_52",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_53",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_40_54",
+    "noise_ratio": 0.4,
+    "total_messages": 20,
+    "core_messages": 12,
+    "noise_messages": 8,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_00",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_01",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_02",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_03",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_04",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_05",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_06",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_07",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_08",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_09",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_10",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_11",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_12",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_13",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_14",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_15",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_16",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_17",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_18",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_19",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_20",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_21",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_22",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_23",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_24",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_25",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_26",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_27",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_28",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_29",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_30",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_31",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_32",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_33",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_34",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_35",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_36",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_37",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_38",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_39",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_40",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_41",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_42",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_43",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_44",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_45",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_46",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_47",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_48",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_49",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_50",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_51",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_52",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_53",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_50_54",
+    "noise_ratio": 0.5,
+    "total_messages": 24,
+    "core_messages": 12,
+    "noise_messages": 12,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_00",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_01",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_02",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_03",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_04",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_05",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_06",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_07",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_08",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_09",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_10",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_11",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_12",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_13",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_14",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_15",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_16",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_17",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_18",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_19",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_20",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_21",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_22",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_23",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_24",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_25",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_26",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_27",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_28",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_29",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_30",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_31",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_32",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_33",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_34",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_35",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_36",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_37",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_38",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_39",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_40",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_41",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_42",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_43",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_44",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_45",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_46",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_47",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_48",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_49",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_50",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_51",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_52",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_53",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_60_54",
+    "noise_ratio": 0.6,
+    "total_messages": 30,
+    "core_messages": 12,
+    "noise_messages": 18,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_00",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_01",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_02",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_03",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_04",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_05",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_06",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_07",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_08",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_09",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_10",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_11",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_12",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_13",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_14",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_15",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_16",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_17",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_18",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_19",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_20",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_21",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_22",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_23",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_24",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_25",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_26",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_27",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_28",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_29",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_30",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_31",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_32",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_33",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_34",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_35",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_36",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_37",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_38",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_39",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_40",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_41",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_42",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_43",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_44",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_45",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_46",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_47",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_48",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_49",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_50",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_51",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_52",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_53",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_70_54",
+    "noise_ratio": 0.7,
+    "total_messages": 30,
+    "core_messages": 9,
+    "noise_messages": 21,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_00",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_01",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_02",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_03",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_04",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_05",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_06",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_07",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_08",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_09",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_10",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_11",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_12",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_13",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_14",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_15",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_16",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_17",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_18",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_19",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_20",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_21",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_22",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_23",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_24",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_25",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_26",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_27",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_28",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_29",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_30",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_31",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_32",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_33",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_34",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_35",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_36",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_37",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_38",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_39",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_40",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_41",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_42",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_43",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_44",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_45",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_46",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_47",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_48",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_49",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_50",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_51",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_52",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_53",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  },
+  {
+    "chat_id": "noise_80_54",
+    "noise_ratio": 0.8,
+    "total_messages": 30,
+    "core_messages": 6,
+    "noise_messages": 24,
+    "decisions": 3
+  }
+]
