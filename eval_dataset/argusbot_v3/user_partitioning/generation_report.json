@@ -1,0 +1,12 @@
+{
+  "type": "user_partitioning",
+  "num_partitions": 8,
+  "total_messages": 52,
+  "total_decisions": 8,
+  "scenario_types": {
+    "user_polarized": 3,
+    "user_asymmetric": 3,
+    "user_scope": 2
+  },
+  "generated_at": "2026-08-01 15:20:54"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "temporal_queries",
+  "num_queries": 80,
+  "query_types": {
+    "event_anchor": 16,
+    "relative_recency": 16,
+    "absolute_time": 16,
+    "time_range": 16,
+    "before_after_seq": 16
+  },
+  "difficulty_distribution": {
+    "easy": 30,
+    "medium": 32,
+    "hard": 18
+  },
+  "generated_at": "2026-08-01 15:20:54"
+}

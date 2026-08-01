@@ -1,0 +1,112 @@
+[
+  {
+    "chat_id": "cross_conflict_00",
+    "topic": "容器运行时方案",
+    "type": "direct_overrule",
+    "session1_decision": "使用Docker作为容器运行时",
+    "session2_decision": "切换到containerd，放弃Docker",
+    "reason": "containerd更轻量，且K8s已弃用Docker Shim",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_01",
+    "topic": "服务间通信协议",
+    "type": "incremental_refine",
+    "session1_decision": "内部服务统一使用RESTful API",
+    "session2_decision": "改为gRPC作为主要内部通信协议",
+    "reason": "性能测试显示gRPC比REST快3倍",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_02",
+    "topic": "部署策略",
+    "type": "context_change",
+    "session1_decision": "使用蓝绿部署策略",
+    "session2_decision": "改为滚动更新策略以节约资源",
+    "reason": "基础设施预算缩减，需要更经济的部署方案",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_03",
+    "topic": "日志存储方案",
+    "type": "revert",
+    "session1_decision": "使用ELK Stack",
+    "session2_decision": "先改为Loki然后回退到ELK",
+    "reason": "Loki查询性能不满足需求，退回ELK",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_04",
+    "topic": "数据备份策略",
+    "type": "direct_overrule",
+    "session1_decision": "每天全量备份",
+    "session2_decision": "改为每天增量+每周全量",
+    "reason": "全量备份存储成本太高",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_05",
+    "topic": "认证方案",
+    "type": "incremental_refine",
+    "session1_decision": "使用Session认证",
+    "session2_decision": "迁移到JWT Token认证",
+    "reason": "微服务架构需要无状态认证",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_06",
+    "topic": "消息队列选型",
+    "type": "context_change",
+    "session1_decision": "使用RabbitMQ",
+    "session2_decision": "Kafka更适合高吞吐场景，改用Kafka",
+    "reason": "业务量增长10倍，RabbitMQ吞吐不够",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_07",
+    "topic": "监控告警工具",
+    "type": "revert",
+    "session1_decision": "使用Zabbix",
+    "session2_decision": "改为Prometheus然后回退",
+    "reason": "团队Prometheus运维经验不足，暂时回退",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_08",
+    "topic": "API文档方案",
+    "type": "incremental_refine",
+    "session1_decision": "手动维护Swagger文档",
+    "session2_decision": "采用OpenAPI + 代码自动生成",
+    "reason": "手动文档维护成本高且容易过时",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  },
+  {
+    "chat_id": "cross_conflict_09",
+    "topic": "代码仓库策略",
+    "type": "direct_overrule",
+    "session1_decision": "单仓库（Monorepo）",
+    "session2_decision": "多仓库（Multi-repo）",
+    "reason": "单仓库在CI/CD和权限控制上遇到瓶颈",
+    "session1_msg_id": "s1_m004",
+    "session2_msg_id": "s2_m005",
+    "s2_day_gap": 7
+  }
+]

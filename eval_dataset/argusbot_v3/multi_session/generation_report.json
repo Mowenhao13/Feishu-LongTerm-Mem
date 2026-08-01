@@ -1,0 +1,10 @@
+{
+  "type": "multi_session",
+  "num_topics": 10,
+  "sessions_per_topic": 3,
+  "total_messages": 240,
+  "total_decisions": 30,
+  "total_sessions": 30,
+  "session_boundaries_file": "session_boundaries.json",
+  "generated_at": "2026-08-01 15:20:54"
+}

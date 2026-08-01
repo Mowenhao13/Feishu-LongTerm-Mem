@@ -1,0 +1,242 @@
+[
+  {
+    "topic": "微服务架构拆分方案",
+    "chat_id": "multi_session_00",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "微服务架构拆分方案",
+    "chat_id": "multi_session_00",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "微服务架构拆分方案",
+    "chat_id": "multi_session_00",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "数据库统一选型",
+    "chat_id": "multi_session_01",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "数据库统一选型",
+    "chat_id": "multi_session_01",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "数据库统一选型",
+    "chat_id": "multi_session_01",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "前端框架标准化",
+    "chat_id": "multi_session_02",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "前端框架标准化",
+    "chat_id": "multi_session_02",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "前端框架标准化",
+    "chat_id": "multi_session_02",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "CI/CD流水线改造",
+    "chat_id": "multi_session_03",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "CI/CD流水线改造",
+    "chat_id": "multi_session_03",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "CI/CD流水线改造",
+    "chat_id": "multi_session_03",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "监控体系升级",
+    "chat_id": "multi_session_04",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "监控体系升级",
+    "chat_id": "multi_session_04",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "监控体系升级",
+    "chat_id": "multi_session_04",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "缓存策略设计",
+    "chat_id": "multi_session_05",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "缓存策略设计",
+    "chat_id": "multi_session_05",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "缓存策略设计",
+    "chat_id": "multi_session_05",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "容器编排平台选型",
+    "chat_id": "multi_session_06",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "容器编排平台选型",
+    "chat_id": "multi_session_06",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "容器编排平台选型",
+    "chat_id": "multi_session_06",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "API设计规范",
+    "chat_id": "multi_session_07",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "API设计规范",
+    "chat_id": "multi_session_07",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "API设计规范",
+    "chat_id": "multi_session_07",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "日志管理方案",
+    "chat_id": "multi_session_08",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "日志管理方案",
+    "chat_id": "multi_session_08",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "日志管理方案",
+    "chat_id": "multi_session_08",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  },
+  {
+    "topic": "安全认证体系",
+    "chat_id": "multi_session_09",
+    "session_id": 1,
+    "day_gap": 0,
+    "start_msg_id": "s1_m001",
+    "end_msg_id": "s1_m008"
+  },
+  {
+    "topic": "安全认证体系",
+    "chat_id": "multi_session_09",
+    "session_id": 2,
+    "day_gap": 3,
+    "start_msg_id": "s2_m001",
+    "end_msg_id": "s2_m008"
+  },
+  {
+    "topic": "安全认证体系",
+    "chat_id": "multi_session_09",
+    "session_id": 3,
+    "day_gap": 7,
+    "start_msg_id": "s3_m001",
+    "end_msg_id": "s3_m008"
+  }
+]

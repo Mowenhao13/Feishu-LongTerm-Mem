@@ -1,0 +1,19 @@
+{"q_id": "ambig_000", "query_type": "ambiguous", "context": "团队讨论了多个关于token的话题：安全token(JWT)、支付token、LLM token", "query": "token的过期时间是多少？", "gold_answer": "请明确您指的是哪种token：JWT认证token、支付token还是LLM token？", "difficulty": "medium", "clarification_needed": true}
+{"q_id": "ambig_001", "query_type": "ambiguous", "context": "有人提到了'agent'，但有的指LLM Agent，有的指运维Agent", "query": "agent的性能如何？", "gold_answer": "请明确是LLM对话Agent还是运维监控Agent？", "difficulty": "medium", "clarification_needed": true}
+{"q_id": "ambig_002", "query_type": "ambiguous", "context": "cache一词在架构讨论中既指Redis缓存也指浏览器缓存", "query": "cache的TTL应该设多少？", "gold_answer": "请问是指Redis缓存还是浏览器缓存？", "difficulty": "medium", "clarification_needed": true}
+{"q_id": "ambig_003", "query_type": "ambiguous", "context": "团队讨论了多个'gateway'：API Gateway、Payment Gateway、IoT Gateway", "query": "gateway的并发上限是多少？", "gold_answer": "请明确是API Gateway、Payment Gateway还是IoT Gateway？", "difficulty": "medium", "clarification_needed": true}
+{"q_id": "ambig_004", "query_type": "ambiguous", "context": "cluster既指Kubernetes集群也指Redis集群还指数据库集群", "query": "cluster的节点数应该配置多少？", "gold_answer": "请明确是K8s集群、Redis集群还是数据库集群？", "difficulty": "medium", "clarification_needed": true}
+{"q_id": "ambig_005", "query_type": "ambiguous", "context": "deployment既指K8s的Deployment资源也指代码部署流程", "query": "deployment的回滚策略是什么？", "gold_answer": "请明确是K8s Deployment资源的回滚还是代码部署的回滚策略？", "difficulty": "medium", "clarification_needed": true}
+{"q_id": "abstain_000", "query_type": "abstention", "context": "对话只讨论了技术架构，没有提及预算", "query": "项目的详细预算是多少？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_001", "query_type": "abstention", "context": "没有讨论过人员配置", "query": "谁负责这个项目的交付？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_002", "query_type": "abstention", "context": "对话中没有提到具体的时间安排", "query": "这个版本什么时候上线？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_003", "query_type": "abstention", "context": "团队只讨论了后端技术，没有提前端", "query": "前端用什么UI框架？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_004", "query_type": "abstention", "context": "没有谈论过客户信息", "query": "这个功能的客户反馈是什么？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_005", "query_type": "abstention", "context": "对话中没有涉及到测试", "query": "测试覆盖率要求是多少？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_006", "query_type": "abstention", "context": "没有讨论过运维排班", "query": "周末的on-call值班安排是怎样的？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_007", "query_type": "abstention", "context": "对话中没有提到外部供应商", "query": "合作的第三方厂商是哪家？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_008", "query_type": "abstention", "context": "没有讨论过法务合规", "query": "这个方案通过了法务审核吗？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "abstain_009", "query_type": "abstention", "context": "没有涉及具体版本号", "query": "现在使用的是哪个具体版本号？", "gold_answer": "refuse", "difficulty": "easy"}
+{"q_id": "crossctx_000", "query_type": "cross_context", "context_1": "在K8s集群扩容讨论中：'我们需要更多的节点来处理工作负载'", "context_2": "在图数据库讨论中：'每个节点的边不能超过1000条'", "query": "节点的限制是什么？", "gold_answer": "在K8s上下文中节点指计算节点，在图数据库上下文中节点指图节点。请明确问题上下文。", "difficulty": "hard"}
+{"q_id": "crossctx_001", "query_type": "cross_context", "context_1": "在成本讨论中：'这个功能的花费太高了'", "context_2": "在延迟讨论中：'这个操作的时间花费太大了'", "query": "花费是多少？", "gold_answer": "'花费'可能指金钱成本或时间成本，请明确。", "difficulty": "hard"}
+{"q_id": "crossctx_002", "query_type": "cross_context", "context_1": "在数据库迁移中：'需要做全量迁移'", "context_2": "在代码仓库迁移中：'需要做全量迁移'", "query": "迁移的进度如何？", "gold_answer": "请明确是数据库迁移还是代码仓库迁移？", "difficulty": "hard"}

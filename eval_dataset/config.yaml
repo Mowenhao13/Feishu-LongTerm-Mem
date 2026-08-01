@@ -48,6 +48,32 @@ multi_chat:
   overlap_ratio: 0.2
   total_messages: ~2500
 
+# argusbot_v3 — expanded benchmark dataset (Phase 2)
+argusbot_v3:
+  description: "扩增数据集，~12,600条消息 / ~1,510决策 / ~816查询，覆盖跨Session/冲突/噪声/用户分区等场景"
+  llm_domains: 7
+  llm_chats: 70
+  llm_messages: 2373
+  llm_decisions: 132
+  llm_queries: 717
+  multi_session_topics: 10
+  multi_session_messages: 240
+  multi_session_decisions: 30
+  user_partitioning_scenarios: 8
+  user_partitioning_messages: 52
+  user_partitioning_decisions: 8
+  cross_session_conflicts: 10
+  cross_session_messages: 90
+  cross_session_decisions: 20
+  variable_noise_ratios: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+  variable_noise_chats: 440
+  variable_noise_messages: 9845
+  variable_noise_decisions: 1320
+  temporal_queries: 80
+  ambiguous_queries: 19
+  total_messages: ~12600
+  total_decisions: ~1510
+
 speaker_styles:
   - name: "直接型"
     traits: "话少、结论前置、常用'就'字"
