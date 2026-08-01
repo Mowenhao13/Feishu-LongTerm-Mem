@@ -5,7 +5,7 @@
 ---
 
 ## 核心架构
-
+hi 
 ```
 飞书群聊消息 → WebSocket/Poll → 检测器(EnhancedDetector) → Episode Buffer → SuspendPool
                                                                           ↓
