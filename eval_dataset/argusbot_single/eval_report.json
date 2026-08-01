@@ -1,0 +1,116 @@
+{
+  "total_expected": 39,
+  "total_detected": 52,
+  "true_positives": 39,
+  "false_positives": 13,
+  "false_negatives": 0,
+  "precision": 0.75,
+  "recall": 1.0,
+  "f1": 0.8571,
+  "decision_metrics": {
+    "decision_tp": 20,
+    "decision_fn": 0,
+    "decision_precision": 0.3846,
+    "decision_recall": 1.0,
+    "suggestion_tp": 19,
+    "suggestion_fn": 0,
+    "suggestion_recall": 1.0
+  },
+  "dimension_accuracy": {
+    "topic": 0.0,
+    "status": 0.5128
+  },
+  "by_topic": {
+    "多智能体循环架构": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "PlannerAgent模式选择": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Daemon与CLI双模式": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Codex CLI封装": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "JSONL命令总线": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "会话持久化策略": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Telegram集成": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "飞书集成方案": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Stall检测配置": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "错误恢复机制": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "general": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "by_chat": {
+    "chat_0": {
+      "expected": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chat_1": {
+      "expected": 10,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chat_2": {
+      "expected": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chat_3": {
+      "expected": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chat_4": {
+      "expected": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "_isolation": {
+      "issues": 0,
+      "score": 1.0
+    }
+  }
+}

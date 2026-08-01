@@ -1,0 +1,11 @@
+{
+  "total_messages": 2373,
+  "total_decisions": 132,
+  "total_queries": 717,
+  "chat_count": 70,
+  "user_count": 29,
+  "distractor_count": 492,
+  "total_llm_calls": 147,
+  "domains": 7,
+  "generated_at": "2026-08-01 15:20:54"
+}

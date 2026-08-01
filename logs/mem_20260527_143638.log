@@ -1,0 +1,979 @@
+2026-05-27 14:36:38 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260527_143638.log
+2026-05-27 14:36:38 - src.eval_runner - INFO - MemoryGraph loaded: 19 decisions
+2026-05-27 14:36:38 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-27 14:36:38 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-27 14:36:39 - src.core.engine - INFO - Loaded 19 decisions, 3 topics
+2026-05-27 14:36:39 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=58 topics=1
+2026-05-27 14:36:39 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-27 14:36:39 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-27 14:36:39 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-27 14:36:39 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-27 14:36:39 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-27 14:36:39 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-27 14:36:39 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-27 14:36:39 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 3 episode(s) from data/suspend_pool.json
+2026-05-27 14:36:39 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-27 14:36:39 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_856f2ceb9 started with msg=eval_1
+2026-05-27 14:36:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+2026-05-27 14:36:39 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143639-364f1f2a.json
+2026-05-27 14:36:39 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:39 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=404 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:39 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=404)
+2026-05-27 14:36:40 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.34s
+2026-05-27 14:36:40 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:40 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少)
+2026-05-27 14:36:40 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.34s
+2026-05-27 14:36:40 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化肯定要上K8s，生产环境都这么用了
+2026-05-27 14:36:40 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143640-4622cfa0.json
+2026-05-27 14:36:40 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:40 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=387 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:40 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=387)
+2026-05-27 14:36:41 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.18s
+2026-05-27 14:36:41 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:41 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化肯定要上K8s，生产环境都这么用了)
+2026-05-27 14:36:41 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.19s
+2026-05-27 14:36:41 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS
+2026-05-27 14:36:41 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143641-f402117f.json
+2026-05-27 14:36:41 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:41 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=403 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:41 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=403)
+2026-05-27 14:36:42 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.71s
+2026-05-27 14:36:42 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:42 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS)
+2026-05-27 14:36:42 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.74s
+2026-05-27 14:36:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列我觉得Kafka更合适，高吞吐低延迟
+2026-05-27 14:36:42 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143642-556f12fb.json
+2026-05-27 14:36:42 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:42 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=389 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:42 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=389)
+2026-05-27 14:36:43 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.93s
+2026-05-27 14:36:43 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:43 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列我觉得Kafka更合适，高吞吐低延迟)
+2026-05-27 14:36:43 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.93s
+2026-05-27 14:36:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化方案就用K8s吧，生态最成熟
+2026-05-27 14:36:43 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143643-947621e2.json
+2026-05-27 14:36:43 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:43 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=384 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:43 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=384)
+2026-05-27 14:36:44 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.80s
+2026-05-27 14:36:44 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:44 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化方案就用K8s吧，生态最成熟)
+2026-05-27 14:36:44 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.80s
+2026-05-27 14:36:44 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型还是要看团队能力，PG学习成本高一些
+2026-05-27 14:36:44 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143644-b92b6c64.json
+2026-05-27 14:36:44 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:44 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=390 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:44 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=390)
+2026-05-27 14:36:45 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.84s
+2026-05-27 14:36:45 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:45 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型还是要看团队能力，PG学习成本高一些)
+2026-05-27 14:36:45 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.84s
+2026-05-27 14:36:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端可以考虑用React，社区资源丰富
+2026-05-27 14:36:45 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143645-4b167b48.json
+2026-05-27 14:36:45 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:45 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=386 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:45 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=386)
+2026-05-27 14:36:46 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.79s
+2026-05-27 14:36:46 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:46 - src.core.engine - INFO - [Engine] No decision extracted from content (前端可以考虑用React，社区资源丰富)
+2026-05-27 14:36:46 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.79s
+2026-05-27 14:36:46 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器的监控用Prometheus+Grafana吧
+2026-05-27 14:36:46 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143646-2e30d1b1.json
+2026-05-27 14:36:46 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:46 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=392 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:46 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=392)
+2026-05-27 14:36:47 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.95s
+2026-05-27 14:36:47 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:47 - src.core.engine - INFO - [Engine] No decision extracted from content (容器的监控用Prometheus+Grafana吧)
+2026-05-27 14:36:47 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.95s
+2026-05-27 14:36:47 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列选了Kafka，配合流处理引擎很强大
+2026-05-27 14:36:47 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143647-02af58de.json
+2026-05-27 14:36:47 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:47 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=389 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:47 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=389)
+2026-05-27 14:36:48 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.83s
+2026-05-27 14:36:48 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:36:48 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列选了Kafka，配合流处理引擎很强大)
+2026-05-27 14:36:48 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.83s
+2026-05-27 14:36:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库还是决定用PG，RDS托管省心省力
+2026-05-27 14:36:48 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143648-c64cefd0.json
+2026-05-27 14:36:48 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:36:48 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=387 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:36:48 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=387)
+2026-05-27 14:36:50 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.33s
+2026-05-27 14:36:50 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:36:50 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=2dd1eca341d3 title=数据库选型为PostgreSQL并采用RDS托管 source=eval
+2026-05-27 14:36:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-05-27 14:36:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:36:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:36:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:36:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:20 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:20 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:37:21 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:51 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:51 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:37:53 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:55 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:37:59 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:07 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:23 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:38:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:29 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:33 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:41 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:57 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:38:57 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:39:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:39:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:39:12 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:39:20 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:39:36 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:39:36 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:39:52 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.15s
+2026-05-27 14:39:52 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:39:52 - src.core.engine - INFO - [Similar] Found by bigram: sid=d89442758886 score=0.65
+2026-05-27 14:39:52 - src.core.engine - INFO - [Mutation] Similar found: sid=d89442758886 summary=数据库选型为PostgreSQL score=0.6522
+2026-05-27 14:39:52 - src.core.engine - INFO - [Mutation] HARD constraint: score=0.6522 >= 0.65, direct UPDATE
+2026-05-27 14:39:52 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=d89442758886 v1
+2026-05-27 14:39:52 - src.core.engine - INFO - Created decision: d89442758886 v1 — 数据库选型为PostgreSQL并采用RDS托管
+2026-05-27 14:39:52 - src.core.engine - INFO - [Mutation] CREATE applied: sid=d89442758886 v1
+2026-05-27 14:39:52 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:39:52 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:39:53 - src.view.client - ERROR - Failed to upsert record for d89442758886: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:39:53 - src.view.syncer - INFO - [BaseView] Synced decision d89442758886 v1
+2026-05-27 14:39:53 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=d89442758886
+2026-05-27 14:39:53 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d89442758886
+2026-05-27 14:39:53 - src.core.engine - INFO - [Engine] <<< _process_detection done time=184.57s
+2026-05-27 14:39:53 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Sentry做错误监控很成熟，可以试试
+2026-05-27 14:39:53 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143953-cc38eb81.json
+2026-05-27 14:39:53 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:39:53 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=396 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:39:53 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=396)
+2026-05-27 14:39:54 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.09s
+2026-05-27 14:39:54 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:39:54 - src.core.engine - INFO - [Engine] No decision extracted from content (前端Sentry做错误监控很成熟，可以试试)
+2026-05-27 14:39:54 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.09s
+2026-05-27 14:39:54 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选PG了，大家没意见吧
+2026-05-27 14:39:54 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143954-6dc0cee6.json
+2026-05-27 14:39:54 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:39:54 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=389 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:39:54 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=389)
+2026-05-27 14:39:55 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.09s
+2026-05-27 14:39:55 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:39:55 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选PG了，大家没意见吧)
+2026-05-27 14:39:55 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.10s
+2026-05-27 14:39:55 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化用K8s，helm chart管理部署
+2026-05-27 14:39:55 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143955-5ab50c68.json
+2026-05-27 14:39:55 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:39:55 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=397 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:39:55 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=397)
+2026-05-27 14:39:57 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.58s
+2026-05-27 14:39:57 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:39:57 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化用K8s，helm chart管理部署)
+2026-05-27 14:39:57 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.58s
+2026-05-27 14:39:57 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端性能优化可以用SSR和服务端组件
+2026-05-27 14:39:57 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143957-f6c74027.json
+2026-05-27 14:39:57 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:39:57 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=393 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:39:57 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=393)
+2026-05-27 14:39:58 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.09s
+2026-05-27 14:39:58 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:39:58 - src.core.engine - INFO - [Engine] No decision extracted from content (前端性能优化可以用SSR和服务端组件)
+2026-05-27 14:39:58 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.10s
+2026-05-27 14:39:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池用PgBouncer，支持事务池
+2026-05-27 14:39:58 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527143958-5f9eed0e.json
+2026-05-27 14:39:58 - src.core.engine - INFO - [LLM] Injected 18 existing decisions as context
+2026-05-27 14:39:58 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=397 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:39:58 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=397)
+2026-05-27 14:40:00 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.50s
+2026-05-27 14:40:00 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:40:00 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=f12c56bd4627 title=数据库连接池采用PgBouncer并支持事务池 source=eval
+2026-05-27 14:40:00 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-27 14:40:00 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:40:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:15 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:31 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:31 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:40:32 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:34 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:40:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:02 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:41:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:10 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:34 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:34 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:41:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:40 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:44 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:41:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:08 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:42:16 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:22 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:42:46 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:43:02 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.13s
+2026-05-27 14:43:02 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:43:02 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=f12c56bd4627 v1
+2026-05-27 14:43:02 - src.core.engine - INFO - Created decision: f12c56bd4627 v1 — 数据库连接池采用PgBouncer并支持事务池
+2026-05-27 14:43:02 - src.core.engine - INFO - [Mutation] CREATE applied: sid=f12c56bd4627 v1
+2026-05-27 14:43:02 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:43:02 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:43:03 - src.view.client - ERROR - Failed to upsert record for f12c56bd4627: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:43:03 - src.view.syncer - INFO - [BaseView] Synced decision f12c56bd4627 v1
+2026-05-27 14:43:03 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=f12c56bd4627
+2026-05-27 14:43:03 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=f12c56bd4627
+2026-05-27 14:43:03 - src.core.engine - INFO - [Engine] <<< _process_detection done time=184.55s
+2026-05-27 14:43:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器资源限制用resource quota和limit range
+2026-05-27 14:43:03 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144303-66982d93.json
+2026-05-27 14:43:03 - src.core.engine - INFO - [LLM] Injected 19 existing decisions as context
+2026-05-27 14:43:03 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=434 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:43:03 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=434)
+2026-05-27 14:43:04 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.99s
+2026-05-27 14:43:04 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:43:04 - src.core.engine - INFO - [Engine] No decision extracted from content (容器资源限制用resource quota和limit range)
+2026-05-27 14:43:04 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.00s
+2026-05-27 14:43:04 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端CDN缓存策略也得考虑，减少回源
+2026-05-27 14:43:04 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144304-dd96e821.json
+2026-05-27 14:43:04 - src.core.engine - INFO - [LLM] Injected 19 existing decisions as context
+2026-05-27 14:43:04 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=419 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:43:04 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=419)
+2026-05-27 14:43:05 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.01s
+2026-05-27 14:43:05 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 14:43:05 - src.core.engine - INFO - [Engine] No decision extracted from content (前端CDN缓存策略也得考虑，减少回源)
+2026-05-27 14:43:05 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.01s
+2026-05-27 14:43:05 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库迁移工具用golang-migrate
+2026-05-27 14:43:05 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144305-1c407dcf.json
+2026-05-27 14:43:05 - src.core.engine - INFO - [LLM] Injected 19 existing decisions as context
+2026-05-27 14:43:05 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=423 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:43:05 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=423)
+2026-05-27 14:43:06 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.04s
+2026-05-27 14:43:06 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:43:06 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d8c51ff2dc37 title=数据库迁移工具选型 source=eval
+2026-05-27 14:43:06 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-05-27 14:43:06 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:43:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:12 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:20 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:36 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:36 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:43:37 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:39 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:43 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:43:51 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:07 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:07 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:44:09 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:11 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:15 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:39 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:39 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:44:43 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:45 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:49 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:44:57 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:13 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:13 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:45:21 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:51 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:45:51 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:46:07 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.16s
+2026-05-27 14:46:07 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:46:07 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=d8c51ff2dc37 v1
+2026-05-27 14:46:07 - src.core.engine - INFO - Created decision: d8c51ff2dc37 v1 — 数据库迁移工具选型
+2026-05-27 14:46:07 - src.core.engine - INFO - [Mutation] CREATE applied: sid=d8c51ff2dc37 v1
+2026-05-27 14:46:07 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:46:08 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:46:08 - src.view.client - ERROR - Failed to upsert record for d8c51ff2dc37: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:46:08 - src.view.syncer - INFO - [BaseView] Synced decision d8c51ff2dc37 v1
+2026-05-27 14:46:08 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=d8c51ff2dc37
+2026-05-27 14:46:08 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d8c51ff2dc37
+2026-05-27 14:46:08 - src.core.engine - INFO - [Engine] <<< _process_detection done time=183.18s
+2026-05-27 14:46:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器网络插件用Calico，支持网络策略
+2026-05-27 14:46:08 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144608-06a73fe7.json
+2026-05-27 14:46:08 - src.core.engine - INFO - [LLM] Injected 20 existing decisions as context
+2026-05-27 14:46:08 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=433 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:46:08 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=433)
+2026-05-27 14:46:09 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.32s
+2026-05-27 14:46:09 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:46:09 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=1a1e020f68c7 title=容器网络插件选型为Calico source=eval
+2026-05-27 14:46:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-27 14:46:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:46:09 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:11 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:15 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:39 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:39 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:46:40 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:42 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:47 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:46:55 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:11 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:11 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:47:13 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:15 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:19 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:43 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:43 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:47:47 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:49 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:47:53 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:01 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:17 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:17 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:48:25 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:31 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:39 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:55 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:48:55 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:49:11 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.17s
+2026-05-27 14:49:11 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:49:11 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=1a1e020f68c7 v1
+2026-05-27 14:49:11 - src.core.engine - INFO - Created decision: 1a1e020f68c7 v1 — 容器网络插件选型为Calico
+2026-05-27 14:49:11 - src.core.engine - INFO - [Mutation] CREATE applied: sid=1a1e020f68c7 v1
+2026-05-27 14:49:11 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:49:11 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:49:11 - src.view.client - ERROR - Failed to upsert record for 1a1e020f68c7: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:49:11 - src.view.syncer - INFO - [BaseView] Synced decision 1a1e020f68c7 v1
+2026-05-27 14:49:11 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=1a1e020f68c7
+2026-05-27 14:49:11 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=1a1e020f68c7
+2026-05-27 14:49:11 - src.core.engine - INFO - [Engine] <<< _process_detection done time=183.35s
+2026-05-27 14:49:12 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端打包工具换成Vite，比Webpack快很多
+2026-05-27 14:49:12 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527144912-56b75ef8.json
+2026-05-27 14:49:12 - src.core.engine - INFO - [LLM] Injected 21 existing decisions as context
+2026-05-27 14:49:12 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=455 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:49:12 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=455)
+2026-05-27 14:49:13 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.33s
+2026-05-27 14:49:13 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:49:13 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=76a918e59733 title=前端打包工具切换为Vite source=eval
+2026-05-27 14:49:13 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-27 14:49:13 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:49:13 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:15 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:19 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:43 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:43 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:49:44 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:49:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:14 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:14 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:50:16 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:22 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:46 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:50:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:50:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:20 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:20 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:51:28 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:34 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:42 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:51:58 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:52:14 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.16s
+2026-05-27 14:52:14 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:52:14 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=76a918e59733 v1
+2026-05-27 14:52:14 - src.core.engine - INFO - Created decision: 76a918e59733 v1 — 前端打包工具切换为Vite
+2026-05-27 14:52:14 - src.core.engine - INFO - [Mutation] CREATE applied: sid=76a918e59733 v1
+2026-05-27 14:52:14 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:52:15 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:52:15 - src.view.client - ERROR - Failed to upsert record for 76a918e59733: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:52:15 - src.view.syncer - INFO - [BaseView] Synced decision 76a918e59733 v1
+2026-05-27 14:52:15 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=76a918e59733
+2026-05-27 14:52:15 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=76a918e59733
+2026-05-27 14:52:15 - src.core.engine - INFO - [Engine] <<< _process_detection done time=183.38s
+2026-05-27 14:52:15 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库备份用pg_dump加上WAL归档
+2026-05-27 14:52:15 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145215-cf73db78.json
+2026-05-27 14:52:15 - src.core.engine - INFO - [LLM] Injected 22 existing decisions as context
+2026-05-27 14:52:15 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=467 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:52:15 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=467)
+2026-05-27 14:52:16 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.35s
+2026-05-27 14:52:16 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:52:16 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=17c02d29b289 title=数据库备份方案：pg_dump + WAL归档 source=eval
+2026-05-27 14:52:16 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=25 model=Qwen3-Embedding-4B
+2026-05-27 14:52:16 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:52:16 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:22 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:46 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:52:47 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:49 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:52:53 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:01 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:17 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:17 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:53:19 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:21 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:25 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:33 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:49 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:49 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:53:53 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:53:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:24 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:24 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:54:32 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:34 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:54:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:02 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 5/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 16s
+2026-05-27 14:55:18 - src.model.embedding_provider - ERROR - [Embedding] All 5 retries exhausted after 181.14s
+2026-05-27 14:55:18 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries
+2026-05-27 14:55:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=17c02d29b289 v1
+2026-05-27 14:55:18 - src.core.engine - INFO - Created decision: 17c02d29b289 v1 — 数据库备份方案：pg_dump + WAL归档
+2026-05-27 14:55:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=17c02d29b289 v1
+2026-05-27 14:55:18 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:55:18 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:55:19 - src.view.client - ERROR - Failed to upsert record for 17c02d29b289: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:55:19 - src.view.syncer - INFO - [BaseView] Synced decision 17c02d29b289 v1
+2026-05-27 14:55:19 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=17c02d29b289
+2026-05-27 14:55:19 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=17c02d29b289
+2026-05-27 14:55:19 - src.core.engine - INFO - [Engine] <<< _process_detection done time=183.92s
+2026-05-27 14:55:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器安全要用Pod Security Standards
+2026-05-27 14:55:19 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145519-5746d926.json
+2026-05-27 14:55:19 - src.core.engine - INFO - [LLM] Injected 23 existing decisions as context
+2026-05-27 14:55:19 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=501 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:55:19 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=501)
+2026-05-27 14:55:21 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.49s
+2026-05-27 14:55:21 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:55:21 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=ef4c2c7bdf10 title=容器安全采用Pod Security Standards source=eval
+2026-05-27 14:55:21 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=42 model=Qwen3-Embedding-4B
+2026-05-27 14:55:21 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:55:21 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:23 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:27 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:51 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:51 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 1/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 1s
+2026-05-27 14:55:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:54 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:55:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:22 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:22 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 2/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 2s
+2026-05-27 14:56:24 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:26 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:30 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:54 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:56:54 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 3/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 4s
+2026-05-27 14:56:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:12 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:28 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:28 - src.model.embedding_provider - WARNING - [Embedding] Connection failed (attempt 4/5): HTTPConnectionPool(host='127.0.0.1', port=8000): M, retry in 8s
+2026-05-27 14:57:36 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:42 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:57:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:58:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused")': /v1/embeddings
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=165.34s value_range=[-9.8516, 11.7812] mean=-0.0612 std=2.7001
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=21 chars=1029 model=Qwen3-Embedding-4B
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[1/21] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[2/21] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[3/21] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[4/21] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[5/21] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[6/21] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[7/21] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[8/21] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[9/21] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[10/21] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[11/21] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[12/21] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[13/21] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[14/21] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[15/21] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[16/21] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[17/21] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[18/21] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[19/21] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[20/21] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:06 - src.model.embedding_provider - INFO - [Embedding]     text[21/21] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:07 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=21 dim=2560 time=0.70s value_range=[-12.2578, 11.8906] mean=-0.0076 std=2.6551
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定在容器安全方面采用Pod Security Standards作为安全策略标准。 docs=5
+2026-05-27 14:58:07 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.584, -3.2051, -4.8438, -3.7637, -3.4121] time=0.20s top3=[1]-3.2051:决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容; [4]-3.4121:经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏; [0]-3.5840:决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:07 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.2051)
+2026-05-27 14:58:07 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=ef4c2c7bdf10 v1
+2026-05-27 14:58:07 - src.core.engine - INFO - Created decision: ef4c2c7bdf10 v1 — 容器安全采用Pod Security Standards
+2026-05-27 14:58:07 - src.core.engine - INFO - [Mutation] CREATE applied: sid=ef4c2c7bdf10 v1
+2026-05-27 14:58:07 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:07 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:08 - src.view.client - ERROR - Failed to upsert record for ef4c2c7bdf10: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:08 - src.view.syncer - INFO - [BaseView] Synced decision ef4c2c7bdf10 v1
+2026-05-27 14:58:08 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=ef4c2c7bdf10
+2026-05-27 14:58:08 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=ef4c2c7bdf10
+2026-05-27 14:58:08 - src.core.engine - INFO - [Engine] <<< _process_detection done time=168.80s
+2026-05-27 14:58:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端状态管理用Zustand，轻量好用
+2026-05-27 14:58:08 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145808-03284040.json
+2026-05-27 14:58:08 - src.core.engine - INFO - [LLM] Injected 24 existing decisions as context
+2026-05-27 14:58:08 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=523 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:08 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=523)
+2026-05-27 14:58:09 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.38s
+2026-05-27 14:58:09 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:09 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=408390d7429a title=前端状态管理采用Zustand source=eval
+2026-05-27 14:58:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-05-27 14:58:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.36s value_range=[-9.4609, 8.4219] mean=-0.0298 std=2.4798
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=22 chars=1071 model=Qwen3-Embedding-4B
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/22] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[2/22] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[3/22] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[4/22] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[5/22] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[6/22] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[7/22] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[8/22] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[9/22] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[10/22] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[11/22] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[12/22] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[13/22] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[14/22] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[15/22] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[16/22] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[17/22] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[18/22] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[19/22] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[20/22] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[21/22] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:10 - src.model.embedding_provider - INFO - [Embedding]     text[22/22] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:11 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=22 dim=2560 time=1.54s value_range=[-12.2734, 13.7109] mean=-0.0095 std=2.6477
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=前端状态管理使用Zustand，因其轻量好用。 docs=5
+2026-05-27 14:58:11 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.1543, -3.7617, -4.3477, -2.9961, -4.3359] time=0.20s top3=[3]-2.9961:决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容; [0]-3.1543:将前端打包工具从Webpack切换到Vite，以提升构建速度。; [1]-3.7617:决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:11 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.9961)
+2026-05-27 14:58:11 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=408390d7429a v1
+2026-05-27 14:58:12 - src.core.engine - INFO - Created decision: 408390d7429a v1 — 前端状态管理采用Zustand
+2026-05-27 14:58:12 - src.core.engine - INFO - [Mutation] CREATE applied: sid=408390d7429a v1
+2026-05-27 14:58:12 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:12 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:13 - src.view.client - ERROR - Failed to upsert record for 408390d7429a: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:13 - src.view.syncer - INFO - [BaseView] Synced decision 408390d7429a v1
+2026-05-27 14:58:13 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=408390d7429a
+2026-05-27 14:58:13 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=408390d7429a
+2026-05-27 14:58:13 - src.core.engine - INFO - [Engine] <<< _process_detection done time=4.53s
+2026-05-27 14:58:13 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库读写分离用主从复制，异步模式
+2026-05-27 14:58:13 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145813-536a0461.json
+2026-05-27 14:58:13 - src.core.engine - INFO - [LLM] Injected 25 existing decisions as context
+2026-05-27 14:58:13 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=539 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:13 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=539)
+2026-05-27 14:58:14 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.53s
+2026-05-27 14:58:14 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:14 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=5a79ae268eda title=数据库读写分离采用主从复制异步模式 source=eval
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.20s value_range=[-9.0000, 8.6172] mean=0.0467 std=2.4332
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=23 chars=1094 model=Qwen3-Embedding-4B
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[1/23] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[2/23] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[3/23] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[4/23] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[5/23] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[6/23] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[7/23] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[8/23] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[9/23] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[10/23] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[11/23] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[12/23] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[13/23] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[14/23] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[15/23] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[16/23] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[17/23] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[18/23] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[19/23] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[20/23] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[21/23] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[22/23] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:14 - src.model.embedding_provider - INFO - [Embedding]     text[23/23] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:15 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=23 dim=2560 time=0.91s value_range=[-12.2344, 13.6875] mean=-0.0111 std=2.6474
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定数据库读写分离使用主从复制，并采用异步模式。 docs=5
+2026-05-27 14:58:15 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-4.1562, -3.3125, -2.8379, -3.8145, -4.5664] time=0.10s top3=[2]-2.8379:数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为R; [1]-3.3125:决定使用PgBouncer作为数据库连接池，并启用事务池模式。; [3]-3.8145:数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:15 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.8379)
+2026-05-27 14:58:15 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=5a79ae268eda v1
+2026-05-27 14:58:15 - src.core.engine - INFO - Created decision: 5a79ae268eda v1 — 数据库读写分离采用主从复制异步模式
+2026-05-27 14:58:15 - src.core.engine - INFO - [Mutation] CREATE applied: sid=5a79ae268eda v1
+2026-05-27 14:58:16 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:16 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:16 - src.view.client - ERROR - Failed to upsert record for 5a79ae268eda: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:16 - src.view.syncer - INFO - [BaseView] Synced decision 5a79ae268eda v1
+2026-05-27 14:58:16 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=5a79ae268eda
+2026-05-27 14:58:16 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=5a79ae268eda
+2026-05-27 14:58:16 - src.core.engine - INFO - [Engine] <<< _process_detection done time=3.47s
+2026-05-27 14:58:16 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器日志收集用Loki，轻量级方案
+2026-05-27 14:58:16 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145816-79952ab5.json
+2026-05-27 14:58:16 - src.core.engine - INFO - [LLM] Injected 26 existing decisions as context
+2026-05-27 14:58:16 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=559 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:16 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=559)
+2026-05-27 14:58:17 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.19s
+2026-05-27 14:58:17 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:17 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=49780d86dbe6 title=容器日志收集方案选型 source=eval
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=18 model=Qwen3-Embedding-4B
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-8.4062, 10.5469] mean=-0.0130 std=2.4656
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=24 chars=1118 model=Qwen3-Embedding-4B
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/24] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[2/24] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[3/24] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[4/24] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[5/24] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[6/24] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[7/24] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[8/24] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[9/24] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[10/24] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[11/24] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[12/24] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[13/24] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[14/24] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[15/24] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[16/24] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[17/24] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[18/24] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[19/24] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[20/24] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[21/24] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[22/24] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[23/24] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:17 - src.model.embedding_provider - INFO - [Embedding]     text[24/24] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:18 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=24 dim=2560 time=0.85s value_range=[-12.2578, 13.7031] mean=-0.0085 std=2.6481
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=容器日志收集采用Loki，轻量级方案 docs=5
+2026-05-27 14:58:18 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.0195, -4.4648, -3.791, -3.5098, -3.6855] time=0.09s top3=[0]-3.0195:决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容; [3]-3.5098:经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏; [4]-3.6855:决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:18 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.0195)
+2026-05-27 14:58:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=49780d86dbe6 v1
+2026-05-27 14:58:19 - src.core.engine - INFO - Created decision: 49780d86dbe6 v1 — 容器日志收集方案选型
+2026-05-27 14:58:19 - src.core.engine - INFO - [Mutation] CREATE applied: sid=49780d86dbe6 v1
+2026-05-27 14:58:19 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:19 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:19 - src.view.client - ERROR - Failed to upsert record for 49780d86dbe6: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:19 - src.view.syncer - INFO - [BaseView] Synced decision 49780d86dbe6 v1
+2026-05-27 14:58:19 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=49780d86dbe6
+2026-05-27 14:58:19 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=49780d86dbe6
+2026-05-27 14:58:19 - src.core.engine - INFO - [Engine] <<< _process_detection done time=3.13s
+2026-05-27 14:58:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库分表方案用Citus，支持分布式
+2026-05-27 14:58:19 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145819-35fef8db.json
+2026-05-27 14:58:19 - src.core.engine - INFO - [LLM] Injected 27 existing decisions as context
+2026-05-27 14:58:19 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=574 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:19 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=574)
+2026-05-27 14:58:21 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.33s
+2026-05-27 14:58:21 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:21 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=5351def108d7 title=数据库分表方案采用Citus source=eval
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=21 model=Qwen3-Embedding-4B
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-9.9375, 8.8516] mean=-0.0052 std=2.4234
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=25 chars=1136 model=Qwen3-Embedding-4B
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[1/25] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[2/25] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[3/25] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[4/25] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[5/25] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[6/25] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[7/25] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[8/25] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[9/25] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[10/25] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[11/25] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[12/25] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[13/25] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[14/25] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[15/25] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[16/25] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[17/25] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[18/25] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[19/25] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[20/25] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[21/25] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[22/25] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[23/25] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[24/25] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:21 - src.model.embedding_provider - INFO - [Embedding]     text[25/25] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:24 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=25 dim=2560 time=2.63s value_range=[-12.2500, 13.6875] mean=-0.0089 std=2.6463
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=数据库分表方案使用Citus，支持分布式。 docs=5
+2026-05-27 14:58:24 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-4.8203, -4.375, -4.3867, -3.209, -4.1875] time=0.15s top3=[3]-3.2090:数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为R; [4]-4.1875:决定使用PgBouncer作为数据库连接池，并启用事务池模式。; [1]-4.3750:数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:24 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.2090)
+2026-05-27 14:58:24 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=5351def108d7 v1
+2026-05-27 14:58:24 - src.core.engine - INFO - Created decision: 5351def108d7 v1 — 数据库分表方案采用Citus
+2026-05-27 14:58:24 - src.core.engine - INFO - [Mutation] CREATE applied: sid=5351def108d7 v1
+2026-05-27 14:58:24 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:24 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:25 - src.view.client - ERROR - Failed to upsert record for 5351def108d7: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:25 - src.view.syncer - INFO - [BaseView] Synced decision 5351def108d7 v1
+2026-05-27 14:58:25 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=5351def108d7
+2026-05-27 14:58:25 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=5351def108d7
+2026-05-27 14:58:25 - src.core.engine - INFO - [Engine] <<< _process_detection done time=5.32s
+2026-05-27 14:58:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端监控加上Web Vitals，关注用户体验
+2026-05-27 14:58:25 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145825-099e3585.json
+2026-05-27 14:58:25 - src.core.engine - INFO - [LLM] Injected 28 existing decisions as context
+2026-05-27 14:58:25 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=595 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:25 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=595)
+2026-05-27 14:58:26 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.33s
+2026-05-27 14:58:26 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:26 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=a1da1190f8f7 title=前端监控增加Web Vitals source=eval
+2026-05-27 14:58:26 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=a1da1190f8f7 v1
+2026-05-27 14:58:26 - src.core.engine - INFO - Created decision: a1da1190f8f7 v1 — 前端监控增加Web Vitals
+2026-05-27 14:58:26 - src.core.engine - INFO - [Mutation] CREATE applied: sid=a1da1190f8f7 v1
+2026-05-27 14:58:26 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:27 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:27 - src.view.client - ERROR - Failed to upsert record for a1da1190f8f7: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:27 - src.view.syncer - INFO - [BaseView] Synced decision a1da1190f8f7 v1
+2026-05-27 14:58:27 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=a1da1190f8f7
+2026-05-27 14:58:27 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=a1da1190f8f7
+2026-05-27 14:58:27 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.19s
+2026-05-27 14:58:27 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接用SSL加密，安全合规
+2026-05-27 14:58:27 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145827-1d676e1f.json
+2026-05-27 14:58:27 - src.core.engine - INFO - [LLM] Injected 29 existing decisions as context
+2026-05-27 14:58:27 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=607 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:27 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=607)
+2026-05-27 14:58:28 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.27s
+2026-05-27 14:58:28 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:28 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=c29fa473491b title=数据库连接采用SSL加密 source=eval
+2026-05-27 14:58:28 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=25 model=Qwen3-Embedding-4B
+2026-05-27 14:58:28 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-10.6719, 9.3906] mean=-0.0468 std=2.6364
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=26 chars=1157 model=Qwen3-Embedding-4B
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[1/26] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[2/26] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[3/26] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[4/26] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[5/26] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[6/26] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[7/26] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[8/26] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[9/26] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[10/26] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[11/26] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[12/26] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[13/26] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[14/26] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[15/26] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[16/26] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[17/26] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[18/26] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[19/26] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[20/26] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[21/26] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[22/26] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[23/26] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[24/26] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[25/26] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:29 - src.model.embedding_provider - INFO - [Embedding]     text[26/26] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 14:58:32 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=26 dim=2560 time=3.69s value_range=[-12.2500, 13.6797] mean=-0.0091 std=2.6446
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定数据库连接使用SSL加密，以满足安全合规要求。 docs=5
+2026-05-27 14:58:32 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.5527, -4.1953, -3.7578, -4.3672, -2.8867] time=0.19s top3=[4]-2.8867:数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为R; [0]-3.5527:决定使用PgBouncer作为数据库连接池，并启用事务池模式。; [2]-3.7578:决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:32 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.8867)
+2026-05-27 14:58:32 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=c29fa473491b v1
+2026-05-27 14:58:33 - src.core.engine - INFO - Created decision: c29fa473491b v1 — 数据库连接采用SSL加密
+2026-05-27 14:58:33 - src.core.engine - INFO - [Mutation] CREATE applied: sid=c29fa473491b v1
+2026-05-27 14:58:33 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:33 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:33 - src.view.client - ERROR - Failed to upsert record for c29fa473491b: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:33 - src.view.syncer - INFO - [BaseView] Synced decision c29fa473491b v1
+2026-05-27 14:58:33 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=c29fa473491b
+2026-05-27 14:58:33 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=c29fa473491b
+2026-05-27 14:58:33 - src.core.engine - INFO - [Engine] <<< _process_detection done time=6.14s
+2026-05-27 14:58:33 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器镜像仓库用Harbor，支持漏洞扫描
+2026-05-27 14:58:33 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145833-fffbe335.json
+2026-05-27 14:58:33 - src.core.engine - INFO - [LLM] Injected 30 existing decisions as context
+2026-05-27 14:58:33 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=626 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:33 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=626)
+2026-05-27 14:58:35 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.53s
+2026-05-27 14:58:35 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:35 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=313ff9667f11 title=容器镜像仓库选型为Harbor source=eval
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=29 model=Qwen3-Embedding-4B
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-9.5781, 9.8828] mean=-0.0215 std=2.4692
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=27 chars=1182 model=Qwen3-Embedding-4B
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/27] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[2/27] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[3/27] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[4/27] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[5/27] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[6/27] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[7/27] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[8/27] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[9/27] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[10/27] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[11/27] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[12/27] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[13/27] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[14/27] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[15/27] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[16/27] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[17/27] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[18/27] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[19/27] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[20/27] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[21/27] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[22/27] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[23/27] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[24/27] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[25/27] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[26/27] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 14:58:35 - src.model.embedding_provider - INFO - [Embedding]     text[27/27] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 14:58:36 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=27 dim=2560 time=0.61s value_range=[-12.2500, 13.6797] mean=-0.0104 std=2.6339
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。 docs=5
+2026-05-27 14:58:36 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-2.7441, -3.4395, -3.0137, -3.1074, -2.9805] time=0.12s top3=[0]-2.7441:决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容; [4]-2.9805:经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏; [2]-3.0137:决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:36 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.7441)
+2026-05-27 14:58:36 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=313ff9667f11 v1
+2026-05-27 14:58:36 - src.core.engine - INFO - Created decision: 313ff9667f11 v1 — 容器镜像仓库选型为Harbor
+2026-05-27 14:58:36 - src.core.engine - INFO - [Mutation] CREATE applied: sid=313ff9667f11 v1
+2026-05-27 14:58:36 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:36 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:37 - src.view.client - ERROR - Failed to upsert record for 313ff9667f11: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:37 - src.view.syncer - INFO - [BaseView] Synced decision 313ff9667f11 v1
+2026-05-27 14:58:37 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=313ff9667f11
+2026-05-27 14:58:37 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=313ff9667f11
+2026-05-27 14:58:37 - src.core.engine - INFO - [Engine] <<< _process_detection done time=3.47s
+2026-05-27 14:58:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端构建产物放OSS，CDN加速分发
+2026-05-27 14:58:37 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527145837-c1854e16.json
+2026-05-27 14:58:37 - src.core.engine - INFO - [LLM] Injected 31 existing decisions as context
+2026-05-27 14:58:37 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=642 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 14:58:37 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=642)
+2026-05-27 14:58:38 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.38s
+2026-05-27 14:58:38 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 14:58:38 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=dcee448e95b9 title=前端构建产物部署方案 source=eval
+2026-05-27 14:58:38 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-05-27 14:58:38 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=前端构建产物放到OSS，并通过CDN加速分发。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.26s value_range=[-9.1797, 9.0703] mean=0.0311 std=2.5125
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=28 chars=1211 model=Qwen3-Embedding-4B
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[1/28] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[2/28] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[3/28] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[4/28] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[5/28] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[6/28] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[7/28] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[8/28] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[9/28] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[10/28] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[11/28] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[12/28] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[13/28] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[14/28] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[15/28] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[16/28] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[17/28] len=31 preview=决定使用PgBouncer作为数据库连接池，并启用事务池模式。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[18/28] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[19/28] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[20/28] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[21/28] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[22/28] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[23/28] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[24/28] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[25/28] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[26/28] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[27/28] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 14:58:39 - src.model.embedding_provider - INFO - [Embedding]     text[28/28] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 14:58:40 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=28 dim=2560 time=1.01s value_range=[-12.2422, 13.6875] mean=-0.0103 std=2.6363
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=23 preview=前端构建产物放到OSS，并通过CDN加速分发。
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=前端构建产物放到OSS，并通过CDN加速分发。 docs=5
+2026-05-27 14:58:40 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.7578, -2.8828, -4.168, -2.8047, -3.5723] time=0.14s top3=[3]-2.8047:决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.; [1]-2.8828:将前端打包工具从Webpack切换到Vite，以提升构建速度。; [4]-3.5723:前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 14:58:40 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.8047)
+2026-05-27 14:58:40 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=dcee448e95b9 v1
+2026-05-27 14:58:40 - src.core.engine - INFO - Created decision: dcee448e95b9 v1 — 前端构建产物部署方案
+2026-05-27 14:58:40 - src.core.engine - INFO - [Mutation] CREATE applied: sid=dcee448e95b9 v1
+2026-05-27 14:58:40 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:40 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:41 - src.view.client - ERROR - Failed to upsert record for dcee448e95b9: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 14:58:41 - src.view.syncer - INFO - [BaseView] Synced decision dcee448e95b9 v1
+2026-05-27 14:58:41 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=dcee448e95b9
+2026-05-27 14:58:41 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=dcee448e95b9
+2026-05-27 14:58:41 - src.core.engine - INFO - [Engine] <<< _process_detection done time=3.59s
+2026-05-27 14:58:43 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_856f2ceb9 (chat=eval, msgs=30, pool=4/20)
+2026-05-27 14:58:43 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 4 episode(s) to data/suspend_pool.json
+2026-05-27 14:58:43 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-27 14:58:43 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-27 14:58:44 - src.core.engine - INFO - Synced 15 dirty decisions to storage
+2026-05-27 14:58:44 - src.core.engine - INFO - MemoryEngine stopped (applied=15, failed=0)

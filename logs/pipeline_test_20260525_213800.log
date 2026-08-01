@@ -1,0 +1,4 @@
+2026-05-25 21:38:00 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 21:38:00 - src.core.engine - INFO - GitStorage initialized at /Users/halllo/projects/local/feishu-mem/data
+2026-05-25 21:38:01 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 21:38:01 - src.core.engine - INFO - MemoryEngine initialized

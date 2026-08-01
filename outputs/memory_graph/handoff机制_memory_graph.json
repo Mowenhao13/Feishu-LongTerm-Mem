@@ -1,0 +1,2854 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "CONCEPT",
+        "is_core_design_pattern_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "CONCEPT",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "CONCEPT",
+        "introduced_by",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "CONCEPT",
+        "introduced_by",
+        "ORG"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "CONCEPT",
+        "is_a",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        6,
+        9
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "CONCEPT",
+        "delegates_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        8
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        10
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "CONCEPT",
+        "refers_to",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        15,
+        16
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "CONCEPT",
+        "can_be_converted_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        21
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        22
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "CONCEPT",
+        "is_property_of",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        23
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "CONCEPT",
+        "returns",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        24
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "TECHNOLOGY",
+        "takes_parameter",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        25
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "returns",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        26,
+        41
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "SYSTEM",
+        "configures",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        27
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        28,
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "CONCEPT",
+        "targets",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        29,
+        30
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        31
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        32
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "CONCEPT",
+        "processes",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        33,
+        46
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        34,
+        39,
+        40,
+        49
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        35
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "CONCEPT",
+        "collects",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "CONCEPT",
+        "builds",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        38
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "SYSTEM",
+        "receives",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        42
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "SYSTEM",
+        "adds",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        43
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "CONCEPT",
+        "added_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        44
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "CONCEPT",
+        "type_of",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        45
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "CONCEPT",
+        "iterates",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        47
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        48
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "CONCEPT",
+        "adds",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        50,
+        51
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "CONCEPT",
+        "converted_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        52
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        56
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "CONCEPT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        57,
+        58
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        59,
+        70
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        60,
+        61
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "SYSTEM",
+        "handoffs_to",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        62
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "SYSTEM",
+        "handoffs_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        63
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        64,
+        65
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "SYSTEM",
+        "generates",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        66
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "SYSTEM",
+        "takes_over",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        67
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "SYSTEM",
+        "shares",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        68
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "SYSTEM",
+        "processes",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        69
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        71,
+        72,
+        73
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "Handoff机制",
+        "is_core_design_pattern_for",
+        "多Agent协作"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "Handoff机制",
+        "implemented_in",
+        "AutoGen"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "Handoff机制",
+        "allows",
+        "动态任务委托"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "动态任务委托",
+        "enables",
+        "Agent间协作"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "Handoff",
+        "introduced_by",
+        "Swarm"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "Handoff",
+        "introduced_by",
+        "OpenAI"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "Handoff",
+        "is_a",
+        "multi_agent_design_pattern"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "Handoff",
+        "uses",
+        "tool_call"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "Handoff",
+        "delegates_to",
+        "Agent"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "HandoffMessage",
+        "is_a",
+        "message_type"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "HandoffMessage",
+        "used_for",
+        "handoff_signaling"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "HandoffMessage",
+        "has_field",
+        "target"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "HandoffMessage",
+        "has_field",
+        "content"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "HandoffMessage",
+        "has_field",
+        "source"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "HandoffMessage",
+        "has_field",
+        "context"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "target",
+        "refers_to",
+        "Agent"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "source",
+        "refers_to",
+        "Agent"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "Handoff类",
+        "has_property",
+        "target"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "Handoff类",
+        "has_property",
+        "description"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "Handoff类",
+        "has_property",
+        "name"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "Handoff类",
+        "has_property",
+        "message"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "Handoff配置",
+        "can_be_converted_to",
+        "工具函数"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "工具函数",
+        "used_by",
+        "Agent"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "handoff_tool",
+        "is_property_of",
+        "Handoff类"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "handoff_tool",
+        "returns",
+        "FunctionTool"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "FunctionTool",
+        "takes_parameter",
+        "_handoff_tool"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "_handoff_tool",
+        "returns",
+        "message"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "AssistantAgent",
+        "configures",
+        "handoffs"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "AssistantAgent",
+        "uses",
+        "handoffs"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "handoffs",
+        "targets",
+        "flights_refunder"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "handoffs",
+        "targets",
+        "user"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "AssistantAgent",
+        "implements",
+        "_check_and_handle_handoff"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "_check_and_handle_handoff",
+        "detects",
+        "handoff_request"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "_check_and_handle_handoff",
+        "processes",
+        "handoff_request"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "handoff_request",
+        "contains",
+        "function_call"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "function_call",
+        "includes",
+        "handoff_tool"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "_check_and_handle_handoff",
+        "collects",
+        "tool_calls"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "_check_and_handle_handoff",
+        "collects",
+        "execution_results"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "_check_and_handle_handoff",
+        "builds",
+        "handoff_context"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "handoff_context",
+        "contains",
+        "tool_calls"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "handoff_context",
+        "contains",
+        "execution_results"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "_check_and_handle_handoff",
+        "returns",
+        "HandoffMessage"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "Agent",
+        "receives",
+        "HandoffMessage"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "Agent",
+        "adds",
+        "context_information"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "context_information",
+        "added_to",
+        "model_context"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "model_context",
+        "type_of",
+        "ChatCompletionContext"
+      ],
+      "schema_idx": 32,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "_add_messages_to_context",
+        "processes",
+        "HandoffMessage"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "_add_messages_to_context",
+        "iterates",
+        "context"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "HandoffMessage",
+        "has",
+        "context"
+      ],
+      "schema_idx": 34,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "context",
+        "contains",
+        "llm_msg"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "_add_messages_to_context",
+        "adds",
+        "llm_msg"
+      ],
+      "schema_idx": 35,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "_add_messages_to_context",
+        "adds",
+        "msg"
+      ],
+      "schema_idx": 35,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "msg",
+        "converted_to",
+        "to_model_message"
+      ],
+      "schema_idx": 36,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "Swarm团队",
+        "uses",
+        "HandoffMessage"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "Swarm团队",
+        "uses",
+        "HandoffTermination"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "Swarm团队",
+        "uses",
+        "TextMentionTermination"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "Speaker选择",
+        "based_on",
+        "HandoffMessage"
+      ],
+      "schema_idx": 37,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "Speaker选择",
+        "compared_with",
+        "SelectorGroupChat"
+      ],
+      "schema_idx": 38,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "Speaker选择",
+        "compared_with",
+        "RoundRobinGroupChat"
+      ],
+      "schema_idx": 38,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "HandoffTermination",
+        "depends_on",
+        "HandoffMessage"
+      ],
+      "schema_idx": 39,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "Swarm团队",
+        "depends_on",
+        "HandoffTermination"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "Swarm团队",
+        "depends_on",
+        "TextMentionTermination"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "travel_agent",
+        "handoffs_to",
+        "flights_refunder"
+      ],
+      "schema_idx": 41,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "travel_agent",
+        "handoffs_to",
+        "user"
+      ],
+      "schema_idx": 42,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "travel_agent",
+        "uses",
+        "AssistantAgent"
+      ],
+      "schema_idx": 43,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 65,
+      "content": [
+        "travel_agent",
+        "uses",
+        "model_client"
+      ],
+      "schema_idx": 43,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 66,
+      "content": [
+        "travel_agent",
+        "generates",
+        "HandoffMessage"
+      ],
+      "schema_idx": 44,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 67,
+      "content": [
+        "flights_refunder",
+        "takes_over",
+        "task"
+      ],
+      "schema_idx": 45,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 68,
+      "content": [
+        "flights_refunder",
+        "shares",
+        "message_context"
+      ],
+      "schema_idx": 46,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 69,
+      "content": [
+        "flights_refunder",
+        "processes",
+        "refund_request"
+      ],
+      "schema_idx": 47,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 70,
+      "content": [
+        "handoff功能",
+        "depends_on",
+        "工具调用"
+      ],
+      "schema_idx": 39,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 71,
+      "content": [
+        "handoff功能",
+        "related_to",
+        "并行工具调用"
+      ],
+      "schema_idx": 48,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 72,
+      "content": [
+        "handoff功能",
+        "related_to",
+        "Handoff名称唯一性"
+      ],
+      "schema_idx": 48,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 73,
+      "content": [
+        "Handoff名称",
+        "related_to",
+        "工具名称"
+      ],
+      "schema_idx": 48,
+      "passage_indices": [
+        6
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-2d2c784961f05162",
+      "content": "# 多Agent协作的Handoff机制解释\n\n\n\nHandoff机制是AutoGen中实现多Agent协作的核心设计模式，允许Agent将任务动态委托给其他Agent。 1",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "content": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "content": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "content": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "content": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    },
+    {
+      "idx": 5,
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "content": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ]
+    },
+    {
+      "idx": 6,
+      "chunk_id": "chunk-006-3663fd68575bbc13",
+      "content": "## 注意事项\n\n\n\n- 模型要求: 使用handoff功能需要模型支持工具调用\n\n- 并行工具调用: 如果模型支持并行工具调用，可能会同时生成多个handoff，建议禁用并行工具调用\n\n- Handoff名称唯一性: Handoff名称必须与工具名称唯一 14",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "fact_indices": [
+        70,
+        71,
+        72,
+        73
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "Handoff机制",
+        "is_core_design_pattern_for",
+        "多Agent协作"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is_core_design_pattern_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2d2c784961f05162",
+      "passage": "# 多Agent协作的Handoff机制解释\n\n\n\nHandoff机制是AutoGen中实现多Agent协作的核心设计模式，允许Agent将任务动态委托给其他Agent。 1",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff机制",
+        "implemented_in",
+        "AutoGen"
+      ],
+      "schema": [
+        "CONCEPT",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2d2c784961f05162",
+      "passage": "# 多Agent协作的Handoff机制解释\n\n\n\nHandoff机制是AutoGen中实现多Agent协作的核心设计模式，允许Agent将任务动态委托给其他Agent。 1",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff机制",
+        "allows",
+        "动态任务委托"
+      ],
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2d2c784961f05162",
+      "passage": "# 多Agent协作的Handoff机制解释\n\n\n\nHandoff机制是AutoGen中实现多Agent协作的核心设计模式，允许Agent将任务动态委托给其他Agent。 1",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "动态任务委托",
+        "enables",
+        "Agent间协作"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2d2c784961f05162",
+      "passage": "# 多Agent协作的Handoff机制解释\n\n\n\nHandoff机制是AutoGen中实现多Agent协作的核心设计模式，允许Agent将任务动态委托给其他Agent。 1",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "introduced_by",
+        "Swarm"
+      ],
+      "schema": [
+        "CONCEPT",
+        "introduced_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "introduced_by",
+        "OpenAI"
+      ],
+      "schema": [
+        "CONCEPT",
+        "introduced_by",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "is_a",
+        "multi_agent_design_pattern"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is_a",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "uses",
+        "tool_call"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "delegates_to",
+        "Agent"
+      ],
+      "schema": [
+        "CONCEPT",
+        "delegates_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "is_a",
+        "message_type"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is_a",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "used_for",
+        "handoff_signaling"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "has_field",
+        "target"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "has_field",
+        "content"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "has_field",
+        "source"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "has_field",
+        "context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "target",
+        "refers_to",
+        "Agent"
+      ],
+      "schema": [
+        "CONCEPT",
+        "refers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "source",
+        "refers_to",
+        "Agent"
+      ],
+      "schema": [
+        "CONCEPT",
+        "refers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "passage": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff类",
+        "has_property",
+        "target"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff类",
+        "has_property",
+        "description"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff类",
+        "has_property",
+        "name"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff类",
+        "has_property",
+        "message"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff配置",
+        "can_be_converted_to",
+        "工具函数"
+      ],
+      "schema": [
+        "CONCEPT",
+        "can_be_converted_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "工具函数",
+        "used_by",
+        "Agent"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff_tool",
+        "is_property_of",
+        "Handoff类"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is_property_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff_tool",
+        "returns",
+        "FunctionTool"
+      ],
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "FunctionTool",
+        "takes_parameter",
+        "_handoff_tool"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "takes_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_handoff_tool",
+        "returns",
+        "message"
+      ],
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "passage": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "AssistantAgent",
+        "configures",
+        "handoffs"
+      ],
+      "schema": [
+        "SYSTEM",
+        "configures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "AssistantAgent",
+        "uses",
+        "handoffs"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoffs",
+        "targets",
+        "flights_refunder"
+      ],
+      "schema": [
+        "CONCEPT",
+        "targets",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoffs",
+        "targets",
+        "user"
+      ],
+      "schema": [
+        "CONCEPT",
+        "targets",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "AssistantAgent",
+        "implements",
+        "_check_and_handle_handoff"
+      ],
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_check_and_handle_handoff",
+        "detects",
+        "handoff_request"
+      ],
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_check_and_handle_handoff",
+        "processes",
+        "handoff_request"
+      ],
+      "schema": [
+        "CONCEPT",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff_request",
+        "contains",
+        "function_call"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "function_call",
+        "includes",
+        "handoff_tool"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_check_and_handle_handoff",
+        "collects",
+        "tool_calls"
+      ],
+      "schema": [
+        "CONCEPT",
+        "collects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_check_and_handle_handoff",
+        "collects",
+        "execution_results"
+      ],
+      "schema": [
+        "CONCEPT",
+        "collects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_check_and_handle_handoff",
+        "builds",
+        "handoff_context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "builds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff_context",
+        "contains",
+        "tool_calls"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff_context",
+        "contains",
+        "execution_results"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_check_and_handle_handoff",
+        "returns",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Agent",
+        "receives",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "SYSTEM",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Agent",
+        "adds",
+        "context_information"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "context_information",
+        "added_to",
+        "model_context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "added_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "model_context",
+        "type_of",
+        "ChatCompletionContext"
+      ],
+      "schema": [
+        "CONCEPT",
+        "type_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_add_messages_to_context",
+        "processes",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_add_messages_to_context",
+        "iterates",
+        "context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "iterates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffMessage",
+        "has",
+        "context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "context",
+        "contains",
+        "llm_msg"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_add_messages_to_context",
+        "adds",
+        "llm_msg"
+      ],
+      "schema": [
+        "CONCEPT",
+        "adds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "_add_messages_to_context",
+        "adds",
+        "msg"
+      ],
+      "schema": [
+        "CONCEPT",
+        "adds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "msg",
+        "converted_to",
+        "to_model_message"
+      ],
+      "schema": [
+        "CONCEPT",
+        "converted_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "passage": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Swarm团队",
+        "uses",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Swarm团队",
+        "uses",
+        "HandoffTermination"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Swarm团队",
+        "uses",
+        "TextMentionTermination"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Speaker选择",
+        "based_on",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Speaker选择",
+        "compared_with",
+        "SelectorGroupChat"
+      ],
+      "schema": [
+        "CONCEPT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Speaker选择",
+        "compared_with",
+        "RoundRobinGroupChat"
+      ],
+      "schema": [
+        "CONCEPT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "HandoffTermination",
+        "depends_on",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Swarm团队",
+        "depends_on",
+        "HandoffTermination"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Swarm团队",
+        "depends_on",
+        "TextMentionTermination"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "passage": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "travel_agent",
+        "handoffs_to",
+        "flights_refunder"
+      ],
+      "schema": [
+        "SYSTEM",
+        "handoffs_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "travel_agent",
+        "handoffs_to",
+        "user"
+      ],
+      "schema": [
+        "SYSTEM",
+        "handoffs_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "travel_agent",
+        "uses",
+        "AssistantAgent"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "travel_agent",
+        "uses",
+        "model_client"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "travel_agent",
+        "generates",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "SYSTEM",
+        "generates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "flights_refunder",
+        "takes_over",
+        "task"
+      ],
+      "schema": [
+        "SYSTEM",
+        "takes_over",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "flights_refunder",
+        "shares",
+        "message_context"
+      ],
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "flights_refunder",
+        "processes",
+        "refund_request"
+      ],
+      "schema": [
+        "SYSTEM",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "passage": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff功能",
+        "depends_on",
+        "工具调用"
+      ],
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd68575bbc13",
+      "passage": "## 注意事项\n\n\n\n- 模型要求: 使用handoff功能需要模型支持工具调用\n\n- 并行工具调用: 如果模型支持并行工具调用，可能会同时生成多个handoff，建议禁用并行工具调用\n\n- Handoff名称唯一性: Handoff名称必须与工具名称唯一 14",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff功能",
+        "related_to",
+        "并行工具调用"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd68575bbc13",
+      "passage": "## 注意事项\n\n\n\n- 模型要求: 使用handoff功能需要模型支持工具调用\n\n- 并行工具调用: 如果模型支持并行工具调用，可能会同时生成多个handoff，建议禁用并行工具调用\n\n- Handoff名称唯一性: Handoff名称必须与工具名称唯一 14",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "handoff功能",
+        "related_to",
+        "Handoff名称唯一性"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd68575bbc13",
+      "passage": "## 注意事项\n\n\n\n- 模型要求: 使用handoff功能需要模型支持工具调用\n\n- 并行工具调用: 如果模型支持并行工具调用，可能会同时生成多个handoff，建议禁用并行工具调用\n\n- Handoff名称唯一性: Handoff名称必须与工具名称唯一 14",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    },
+    {
+      "triple": [
+        "Handoff名称",
+        "related_to",
+        "工具名称"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd68575bbc13",
+      "passage": "## 注意事项\n\n\n\n- 模型要求: 使用handoff功能需要模型支持工具调用\n\n- 并行工具调用: 如果模型支持并行工具调用，可能会同时生成多个handoff，建议禁用并行工具调用\n\n- Handoff名称唯一性: Handoff名称必须与工具名称唯一 14",
+      "doc_path": "test_files/docs/references/handoff机制.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-2d2c784961f05162",
+      "chunk_text": "# 多Agent协作的Handoff机制解释\n\n\n\nHandoff机制是AutoGen中实现多Agent协作的核心设计模式，允许Agent将任务动态委托给其他Agent。 1",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-62ba7c43941c1389",
+      "chunk_text": "## 核心概念\n\n\n\n### Handoff设计模式\n\nHandoff是OpenAI在Swarm项目中引入的多Agent设计模式，其核心思想是让Agent通过特殊的工具调用来将任务委托给其他Agent。 2\n\n\n\n### HandoffMessage\n\nHandoffMessage是用于信号交接的特殊消息类型，包含以下关键字段：\n\n- target: 目标Agent的名称\n\n- content: 交接消息内容\n\n- source: 源Agent名称\n\n- context: 上下文信息（可选） 3",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-5e8d028407c96228",
+      "chunk_text": "## Handoff配置\n\n\n\n### Handoff类\n\nHandoff类用于配置交接行为，主要属性包括：\n\n- target: 目标Agent名称\n\n- description: 交接条件描述\n\n- name: 交接配置名称（默认生成格式：transfer_to_{target}）\n\n- message: 传递给目标Agent的消息 4\n\n### 工具转换\n\nHandoff配置可以转换为工具函数，供Agent调用：\n\n```\n@property\ndef handoff_tool(self) -> BaseTool[BaseModel, BaseModel]:\n    def _handoff_tool() -> str:\n        return self.message\n    return FunctionTool(_handoff_tool, name=self.name, description=self.description, strict=True)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-f8450219b555e785",
+      "chunk_text": "## AssistantAgent中的Handoff处理\n\n\n\n### 配置Handoffs\n\nAssistantAgent通过handoffs参数配置可交接的目标Agent：\n\n```\nagent = AssistantAgent(\n    name=\"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"...\"\n)\n\n```\n\n\n\n### Handoff检测与处理\n\nAssistantAgent在_check_and_handle_handoff方法中检测和处理handoff请求：\n\n- 检查模型结果中的函数调用是否包含handoff工具\n\n- 如果检测到handoff，收集相关的工具调用和执行结果\n\n- 构建handoff上下文（包含工具调用和执行结果）\n\n- 返回包含HandoffMessage的响应\n\n### 上下文传递\n\n当接收到HandoffMessage时，Agent会将上下文信息添加到模型上下文中：\n\n```\nasync def _add_messages_to_context(\n    model_context: ChatCompletionContext,\n    messages: Sequence[BaseChatMessage],\n) -> None:\n    for msg in messages:\n        if isinstance(msg, HandoffMessage):\n            for llm_msg in msg.context:\n                await model_context.add_message(llm_msg)\n        await model_context.add_message(msg.to_model_message())\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-34b3aa4d864a06c9",
+      "chunk_text": "## Swarm团队中的Handoff机制\n\n\n\n### Speaker选择\n\n在Swarm团队中，speaker Agent的选择基于最近的HandoffMessage，这与SelectorGroupChat和RoundRobinGroupChat的轮询机制不同。\n\n\n\n### 工作流程\n\n- 每个Agent可以生成HandoffMessage来信号交接\n\n- 当Agent生成HandoffMessage时，接收Agent接管任务并共享相同的消息上下文\n\n- 过程持续直到满足终止条件\n\n### 终止条件\n\n使用HandoffTermination来检测特定的handoff消息并终止团队运行：\n\n```\ntermination = HandoffTermination(target=\"user\") | TextMentionTermination(\"TERMINATE\")\nteam = Swarm([travel_agent, flights_refunder], termination_condition=termination)\n\n```",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 4
+    },
+    {
+      "chunk_id": "chunk-005-0834d292f0c406aa",
+      "chunk_text": "## 实际示例\n\n\n\n### 客户支持场景\n\n在客户支持场景中，Travel Agent可以将任务交接给Flights Refunder：\n\n```\ntravel_agent = AssistantAgent(\n    \"travel_agent\",\n    model_client=model_client,\n    handoffs=[\"flights_refunder\", \"user\"],\n    system_message=\"The flights_refunder is in charge of refunding flights...\"\n)\n\n```\n\n\n\n### 执行流程\n\n当Travel Agent调用transfer_to_flights_refunder工具时：\n\n- 生成HandoffMessage\n\n- Flights Refunder接管任务\n\n- 共享相同的消息上下文\n\n- Flights Refunder处理退款请求 13",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 5
+    },
+    {
+      "chunk_id": "chunk-006-3663fd68575bbc13",
+      "chunk_text": "## 注意事项\n\n\n\n- 模型要求: 使用handoff功能需要模型支持工具调用\n\n- 并行工具调用: 如果模型支持并行工具调用，可能会同时生成多个handoff，建议禁用并行工具调用\n\n- Handoff名称唯一性: Handoff名称必须与工具名称唯一 14",
+      "doc_path": "test_files/docs/references/handoff机制.md",
+      "chunk_index": 6
+    }
+  ],
+  "stats": {
+    "total_chunks": 7,
+    "total_triples": 74,
+    "unique_schemas": 49,
+    "schema_distribution": {
+      "('CONCEPT', 'is_core_design_pattern_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'implemented_in', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'allows', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('CONCEPT', 'introduced_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'introduced_by', 'ORG')": 1,
+      "('CONCEPT', 'is_a', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'delegates_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_field', 'CONCEPT')": 4,
+      "('CONCEPT', 'refers_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 4,
+      "('CONCEPT', 'can_be_converted_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_property_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'takes_parameter', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'CONCEPT')": 2,
+      "('SYSTEM', 'configures', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 4,
+      "('CONCEPT', 'targets', 'SYSTEM')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'detects', 'CONCEPT')": 1,
+      "('CONCEPT', 'processes', 'CONCEPT')": 2,
+      "('CONCEPT', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'includes', 'CONCEPT')": 1,
+      "('CONCEPT', 'collects', 'CONCEPT')": 2,
+      "('CONCEPT', 'builds', 'CONCEPT')": 1,
+      "('SYSTEM', 'receives', 'CONCEPT')": 1,
+      "('SYSTEM', 'adds', 'CONCEPT')": 1,
+      "('CONCEPT', 'added_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'type_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'iterates', 'CONCEPT')": 1,
+      "('CONCEPT', 'has', 'CONCEPT')": 1,
+      "('CONCEPT', 'adds', 'CONCEPT')": 2,
+      "('CONCEPT', 'converted_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'compared_with', 'SYSTEM')": 2,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'depends_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'handoffs_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'handoffs_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'generates', 'CONCEPT')": 1,
+      "('SYSTEM', 'takes_over', 'CONCEPT')": 1,
+      "('SYSTEM', 'shares', 'CONCEPT')": 1,
+      "('SYSTEM', 'processes', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3
+    },
+    "schema_layer_size": 49,
+    "fact_layer_size": 74,
+    "passage_layer_size": 7
+  }
+}

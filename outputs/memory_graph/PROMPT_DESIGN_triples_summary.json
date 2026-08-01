@@ -1,0 +1,1168 @@
+{
+  "triples": [
+    {
+      "head": "System Prompts",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-58c130"
+    },
+    {
+      "head": "System Prompts",
+      "relation": "based_on",
+      "tail": "Repo3",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-58c130"
+    },
+    {
+      "head": "System Prompts",
+      "relation": "based_on",
+      "tail": "Repo1",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-58c130"
+    },
+    {
+      "head": "System Prompts",
+      "relation": "adopts",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-58c130"
+    },
+    {
+      "head": "System Prompts",
+      "relation": "uses",
+      "tail": "Repo3 PromptRole 模板引擎",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-58c130"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "BuildPrompt",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "supports",
+      "tail": "4 种任务类型",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "PromptRole",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "PromptRole",
+      "relation": "uses",
+      "tail": "renderTemplate",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "repo3",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "repo1",
+      "relation": "implements",
+      "tail": "system-agents prompt",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "repo1",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-9a097a"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "BuildPrompt",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "uses",
+      "tail": "execenv",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "adopts",
+      "tail": "task_type_based_prompt_construction",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "has",
+      "tail": "chat_prompt",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "has",
+      "tail": "comment_prompt",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "has",
+      "tail": "quick_create_prompt",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "has",
+      "tail": "autopilot_prompt",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "BuildPrompt",
+      "relation": "has",
+      "tail": "default_prompt",
+      "schema": [
+        "SYSTEM",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "chat_prompt",
+      "relation": "triggered_by",
+      "tail": "ChatSessionID",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "chat_prompt",
+      "relation": "uses",
+      "tail": "ChatMessage",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "chat_prompt",
+      "relation": "uses",
+      "tail": "attachment_list",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "triggered_by",
+      "tail": "TriggerCommentID",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "uses",
+      "tail": "trigger_comment_content",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "uses",
+      "tail": "author_type",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "uses",
+      "tail": "squad_leader_no_action_rule",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "uses",
+      "tail": "comment_reading_strategy",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "uses",
+      "tail": "reply_instructions",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_prompt",
+      "relation": "implements",
+      "tail": "agent_loop_prevention",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "agent_loop_prevention",
+      "relation": "includes",
+      "tail": "no_reply_on_acknowledgment",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "agent_loop_prevention",
+      "relation": "includes",
+      "tail": "no_mention_on_reply",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "squad_leader_no_action_rule",
+      "relation": "triggered_by",
+      "tail": "Squad_Operating_Protocol_instruction",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_reading_strategy",
+      "relation": "has",
+      "tail": "incremental_reading",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_reading_strategy",
+      "relation": "has",
+      "tail": "session_recovery_reading",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "comment_reading_strategy",
+      "relation": "has",
+      "tail": "cold_start_reading",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "incremental_reading",
+      "relation": "triggered_by",
+      "tail": "BuildNewCommentsHint",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "session_recovery_reading",
+      "relation": "triggered_by",
+      "tail": "PriorSessionID",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "quick_create_prompt",
+      "relation": "triggered_by",
+      "tail": "QuickCreatePrompt",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "quick_create_prompt",
+      "relation": "uses",
+      "tail": "issue_creation_guide",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "autopilot_prompt",
+      "relation": "triggered_by",
+      "tail": "AutopilotRunID",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "autopilot_prompt",
+      "relation": "uses",
+      "tail": "autopilot_configuration",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "autopilot_prompt",
+      "relation": "uses",
+      "tail": "trigger_payload",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "default_prompt",
+      "relation": "uses",
+      "tail": "issue_get",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "default_prompt",
+      "relation": "uses",
+      "tail": "comment_list",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "reply_instructions",
+      "relation": "injected_by",
+      "tail": "execenv",
+      "schema": [
+        "CONCEPT",
+        "injected_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "reply_instructions",
+      "relation": "designed_for",
+      "tail": "session_residue_prevention",
+      "schema": [
+        "CONCEPT",
+        "designed_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c13590"
+    },
+    {
+      "head": "Agent",
+      "relation": "responsible_for",
+      "tail": "快速创建 Issue 的助手",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "multica issue create",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "workspace member/agent/squad list",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Agent",
+      "relation": "rejects",
+      "tail": "issue get",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Agent",
+      "relation": "rejects",
+      "tail": "comment add",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Agent",
+      "relation": "rejects",
+      "tail": "重试 create",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Repo3 PromptRole 模板引擎",
+      "relation": "based_on",
+      "tail": "PromptRole",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "PromptRole",
+      "relation": "has_property",
+      "tail": "systemPrompt",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "PromptRole",
+      "relation": "has_property",
+      "tail": "fewShots",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "renderTemplate",
+      "relation": "uses",
+      "tail": "{{var}} 插值",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Repo1 System Agents",
+      "relation": "has_property",
+      "tail": "systemPrompt",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Repo1 System Agents",
+      "relation": "uses",
+      "tail": "Zod schema",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Repo1 System Agents",
+      "relation": "has_property",
+      "tail": "beforeRun",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "Repo1 System Agents",
+      "relation": "has_property",
+      "tail": "afterRun",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "architect",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "frontend",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "backend",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "devops",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "reviewer",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "planner",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "builtinRoles",
+      "relation": "includes",
+      "tail": "critic",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-95bacd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Repo3 PromptRole 模板引擎",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Prompt Builder",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Prompt Builder",
+      "relation": "contains",
+      "tail": "任务类型 Prompt",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Prompt Builder",
+      "relation": "contains",
+      "tail": "角色 Prompt 模板",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Prompt Builder",
+      "relation": "contains",
+      "tail": "注入层",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Prompt Builder",
+      "relation": "contains",
+      "tail": "模板渲染",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "任务类型 Prompt",
+      "relation": "adopts",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "角色 Prompt 模板",
+      "relation": "adopts",
+      "tail": "Repo3",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "模板渲染",
+      "relation": "adopts",
+      "tail": "Repo3",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "注入层",
+      "relation": "based_on",
+      "tail": "execenv",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "注入层",
+      "relation": "contains",
+      "tail": "Squad Operating Protocol",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "注入层",
+      "relation": "contains",
+      "tail": "Skill 文件注入",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "注入层",
+      "relation": "contains",
+      "tail": "评论阅读策略",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "注入层",
+      "relation": "contains",
+      "tail": "评论回复指令",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Squad Operating Protocol",
+      "relation": "depends_on",
+      "tail": "Agent.Instructions",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Skill 文件注入",
+      "relation": "depends_on",
+      "tail": "Agent.Skills",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "BuildPrompt() 按 task 类型路由",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "防循环规则",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Squad no_action",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "评论阅读策略",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "PromptRole 接口 + renderTemplate",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "回复指令 (每个 turn)",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "快速创建 Prompt",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Agent 注册/SystemPrompt",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "execenv.InjectRuntimeConfig",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica prompt 设计哲学",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Multica prompt 设计哲学",
+      "relation": "states",
+      "tail": "BuildPrompt 应保持简洁，详细指令通过 Skill 文件注入",
+      "schema": [
+        "CONCEPT",
+        "states",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "每 turn 注入回复指令",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "防 Agent 互发循环",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Reporter 风格与直接 Agent 场景分离",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "Multica",
+      "relation": "implements",
+      "tail": "quick-create prompt 与执行 prompt 分离",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    },
+    {
+      "head": "quick-create 的 Agent",
+      "relation": "is",
+      "tail": "CLI 命令构造器",
+      "schema": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-f970ff"
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 102,
+    "unique_schemas": 32,
+    "schema_distribution": {
+      "('CONCEPT', 'based_on', 'SYSTEM')": 4,
+      "('CONCEPT', 'adopts', 'SYSTEM')": 4,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('ORG', 'implements', 'SYSTEM')": 4,
+      "('SYSTEM', 'supports', 'CONCEPT')": 1,
+      "('ORG', 'uses', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 5,
+      "('SYSTEM', 'uses', 'SYSTEM')": 2,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 12,
+      "('SYSTEM', 'has', 'CONCEPT')": 5,
+      "('CONCEPT', 'triggered_by', 'CONCEPT')": 7,
+      "('CONCEPT', 'uses', 'CONCEPT')": 12,
+      "('CONCEPT', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 9,
+      "('CONCEPT', 'has', 'CONCEPT')": 3,
+      "('CONCEPT', 'injected_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'designed_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'rejects', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 2,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('SYSTEM', 'has_property', 'CONCEPT')": 3,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 1,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 2,
+      "('CONCEPT', 'states', 'CONCEPT')": 1,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'is', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 32,
+    "fact_layer_size": 101,
+    "passage_layer_size": 5
+  }
+}

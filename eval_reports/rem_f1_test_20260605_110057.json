@@ -1,0 +1,60 @@
+[
+  {
+    "dataset": "single_chat",
+    "before": {
+      "n_expected": 21,
+      "n_extracted": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 20,
+      "precision": 1.0,
+      "recall": 0.047619047619047616,
+      "f1": 0.0909090909090909
+    },
+    "after": {
+      "n_expected": 21,
+      "n_extracted": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 20,
+      "precision": 1.0,
+      "recall": 0.047619047619047616,
+      "f1": 0.0909090909090909
+    },
+    "sleep": {
+      "fp_found": 0,
+      "fp_shelved": 0,
+      "duplicates_found": 0,
+      "duplicates_merged": 0
+    }
+  },
+  {
+    "dataset": "multi_chat",
+    "before": {
+      "n_expected": 36,
+      "n_extracted": 4,
+      "true_positives": 0,
+      "false_positives": 4,
+      "false_negatives": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    "after": {
+      "n_expected": 36,
+      "n_extracted": 4,
+      "true_positives": 0,
+      "false_positives": 4,
+      "false_negatives": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    "sleep": {
+      "fp_found": 0,
+      "fp_shelved": 0,
+      "duplicates_found": 0,
+      "duplicates_merged": 0
+    }
+  }
+]

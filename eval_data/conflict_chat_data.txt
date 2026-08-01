@@ -1,0 +1,40 @@
+前端框架选型讨论一下，新项目马上要开始了
+我建议用React 19 + Next.js，生态最成熟，招人也容易
+React的生态确实没话说，但Next.js太重了，我们业务没那么复杂
+Vue 3 + Nuxt也可以考虑，上手快，国内社区也很活跃
+React的JSX写起来真的很爽，组件组合模式比模板语法灵活太多了
+其实Vue 3的Composition API已经不输React Hooks了，而且ref/reactive的响应式设计更符合直觉，不用操心依赖数组
+要不看看Svelte？编译型框架，打包体积小，性能巨好，而且代码最简洁
+Svelte我觉得太新了，团队里没人用过，招聘也是个问题，不敢冒险
+说回来React的Server Component确实是趋势，Next.js在这方面走得很前面，数据获取和渲染策略一套搞定
+Vue 3的defineProps和defineEmits在TS支持上已经很强了，而且Vapor Mode也在往编译优化方向走，React能做到的Vue都能做
+你们考虑过维护成本吗？React十年了，社区沉淀了多少现成的库和解决方案，出了问题StackOverflow一搜就有
+维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好维护得多
+Svelte的代码量只有React的30%，同样的功能Svelte写起来少一半代码，bug也就少一半
+React的useEffect确实容易滥用到爆炸
+对对对，我们之前那个项目就是useEffect依赖搞了一堆bug，排查起来很痛苦
+但React现在有Suspense和Server Components，很多以前用useEffect的场景现在不需要了，Next.js已经在实践了
+Nuxt 3也不差，Nitro引擎处理服务端逻辑很优雅，而且Vue的Transition组件做动画比React舒服太多
+Svelte的stores和reactive声明真的优雅，写起来有种丝滑感，$:语法直接声明依赖，开发体验很爽
+我觉得选型还要看后端团队的技术栈，如果后端用Node.js，那React + Next.js前后端统一语言，可以减少上下文切换
+后端是Java团队啊，哪来的Node.js
+那更倾向Vue了，Java和Javascript的边界本来就清晰，Vue的设计理念对从Java转前端的开发者更友好
+选React也不冲突吧，TypeScript加持下，React项目结构清晰，Java转过来也不难
+TypeScript确实是加分项，React + TypeScript的泛型组件写起来类型安全很高
+Vue 3 + TypeScript配合Volar插件，类型推导完全不输React，defineComponent + generic components在类型体验上已经跟齐了
+还有打包体积的问题，同样一个页面，Svelte打包后的js只有React的1/3左右，首屏加载差距很明显
+首屏加载可以用SSR啊，Next.js渲染出来直接就HTML了，体积不是问题
+Nuxt也能SSR，这个点拉不开差距
+性能方面Svelte确实有点东西，没有虚拟DOM，直接编译成原生DOM操作，benchmark一直很靠前
+但React的并发模式和Fiber架构在处理复杂交互时优势还是有的，特别是在需要高优先级更新的场景
+现在是2025年了，Vue 3的性能已经不差了，而且Vapor Mode直接跳过虚拟DOM，到时候性能差距会更小
+我觉得还有一个关键点：组件库和模板市场。React有MUI、Ant Design、Shadcn/ui，Vue有Element Plus、Naive UI，Svelte的选择就很少
+Element Plus确实好用，中文文档完善，而且跟Element UI一脉相承，我们从Vue 2升级到Vue 3很平滑
+Shadcn/ui虽然不是传统组件库，但它的设计理念太先进了，直接copy代码到项目里，完全掌控样式，自定义程度最高
+每次一到选型就纠结，上次也是讨论了好久最后换人了才定下来
+要不这样，先拿一个小模块用不同框架做个POC，对比下开发效率、性能、打包体积，用数据说话
+做POC可以，但时间成本也要算进去，而且POC做出来的效果跟正式项目差距挺大的
+我坚持React，生态优势摆在那里，以后加功能、找外包、招人都方便
+我还是倾向Vue，开发效率确实是三种里最高的，而且这个项目周期紧，Vue上手快能快速出活
+Svelte虽然我用着爽，但它要面对的不仅是技术选型，还有人才和团队接受度的现实问题
+算了今天定不了，先各自整理一份选型报告，下周再讨论，暂定React和Vue两个候选方案，Svelte作为调研方向先跟进

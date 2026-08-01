@@ -1,0 +1,79 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Getting Started & Configuration",
+      "purpose": "Setup instructions, environment variables (.env), dependency management (pyproject.toml / uv.lock), MCP client configuration (mcp-claude-config.json), and how to run the system for the first time.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "System Architecture & Data Flow",
+      "purpose": "End-to-end data flow from Feishu IM/Docs ingestion through detection, episode management, LLM extraction, memory graph storage, and MCP exposure. Describes the detector-engine-storage pattern and key design decisions.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "Feishu IM Detector",
+      "purpose": "Details the LarkIMDetector and its two modes (polling and WebSocket), the EnhancedDetector heuristic scoring pipeline, anti-signal filtering, and burst-mode polling logic.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "Episode Management",
+      "purpose": "Explains how individual messages are buffered into Episodes by EpisodeManager, the time-gap and semantic-threshold boundary detection, the run_episode_check_loop reaper, and how episodes are dispatched to the MemoryEngine.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "MemoryGraph (In-Memory Index)",
+      "purpose": "Deep dive into MemoryGraph: five internal indices, DecisionNode schema, hot score algorithm, conflict detection via CONFLICTS_WITH relations, dirty-node tracking, and the GitReader protocol.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "Git Storage Backend",
+      "purpose": "Explains GitStorage CRUD operations, the decision branch-per-record strategy, file format (YAML frontmatter + Markdown body), commit message conventions, GitCLI wrapper, git_format serialization, and auto-push configuration.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "Hypergraph Structure & Retrieval",
+      "purpose": "Covers the four-layer hypergraph (Decision L0, Fact L1, Episode L2, Topic L3), HypergraphBuilder, HierarchicalRetriever (BM25 + vector fusion), and the graph/builder and graph/retrieval modules.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "MemoryEngine Lifecycle",
+      "purpose": "Details MemoryEngine initialization, the detector loop, sync loop (dirty-node flushing), semantic reconnection of episodes, deduplication via embedding+reranker+LLM judge, conflict detection, and graceful shutdown.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "DecisionNode & Mutation Model",
+      "purpose": "Documents the DecisionNode Pydantic schema (all fields, roles, status state machine), DecisionMutation command types, and PipelineEngine.apply_mutation dispatch logic.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "MCP Tool Reference",
+      "purpose": "Comprehensive reference for all 39 MCP tools grouped by category: Query tools, Writing tools, LLM-assisted tools, and Git/system tools.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "MCP Server Deployment",
+      "purpose": "Explains how to launch the MCP server via `uv run`, configure it in Claude Desktop or OpenClaw, required environment variables, and the stdio transport protocol.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "PushEngine & Scheduling",
+      "purpose": "Details PushEngine triggers (CREATE, CONFLICT, DECISION_UPDATE, SCHEDULED_DAILY, etc.), the hot score decay/increment system, daily/weekly summary loops, multi-channel dispatch, and error degradation.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "Card Renderer",
+      "purpose": "Covers CardRenderer output formats (Feishu interactive card JSON, Markdown), decision card layout, conflict card comparative view, and daily summary format.",
+      "page_notes": [{"content": ""}]
+    },
+    {
+      "title": "Evaluator & Scenarios",
+      "purpose": "Documents the EvalRunner simulation mode, test data format, multi-chat round-robin evaluation, and hierarchy test scenarios.",
+      "page_notes": [{"content": ""}]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+2026-05-25 22:09:59 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260525_220959.log
+2026-05-25 22:09:59 - __main__ - INFO - ========================================
+2026-05-25 22:09:59 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-25 22:09:59 - __main__ - INFO - ========================================
+2026-05-25 22:09:59 - __main__ - INFO - Project: default
+2026-05-25 22:09:59 - __main__ - INFO - Storage: data
+2026-05-25 22:09:59 - __main__ - INFO - DocsDir: data/docs
+2026-05-25 22:09:59 - __main__ - INFO - [GitStorage] initialized
+2026-05-25 22:09:59 - __main__ - INFO - [MemoryGraph] loaded 0 decisions from Git
+2026-05-25 22:09:59 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 22:09:59 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-25 22:09:59 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 22:09:59 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-25 22:09:59 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-25 22:09:59 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-25 22:09:59 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-25 22:09:59 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-25 22:09:59 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-25 22:09:59 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-25 22:09:59 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-25 22:09:59 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-25 22:09:59 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-25 22:09:59 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-25 22:09:59 - src.adapter.lark_im - INFO - WS listener started
+2026-05-25 22:09:59 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-25 22:09:59 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-25 22:09:59 - __main__ - INFO - [Detectors] Configuration:
+2026-05-25 22:09:59 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-25 22:09:59 - __main__ - INFO -   lark_doc: disabled
+2026-05-25 22:09:59 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-25 22:10:02 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7643831433648475066&access_key=01c95504bbe2dd2f1ac509e886372bbe&service_id=33554678&ticket=57a9418a-aa5e-4908-9090-b1a693f743f9 [conn_id=7643831433648475066]

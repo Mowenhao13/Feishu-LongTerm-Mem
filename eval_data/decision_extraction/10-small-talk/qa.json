@@ -1,0 +1,104 @@
+{
+  "qars": [
+    {
+      "id": "de_10_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_10_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是闲聊"
+      },
+      "dimension": "detection"
+    }
+  ]
+}

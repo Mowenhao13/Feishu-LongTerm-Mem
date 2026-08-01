@@ -1,0 +1,799 @@
+{
+  "triples": [
+    {
+      "head": "Hermes agent Kanban",
+      "relation": "related_to",
+      "tail": "Hermes",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-b1b88e"
+    },
+    {
+      "head": "Kanban",
+      "relation": "based_on",
+      "tail": "SQLite",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-97e282"
+    },
+    {
+      "head": "Kanban",
+      "relation": "used_by",
+      "tail": "Hermes Agent",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-97e282"
+    },
+    {
+      "head": "Kanban",
+      "relation": "responsible_for",
+      "tail": "persistent_task_coordination",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-97e282"
+    },
+    {
+      "head": "Kanban",
+      "relation": "used_by",
+      "tail": "Hermes profile",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-97e282"
+    },
+    {
+      "head": "kanban",
+      "relation": "compared_with",
+      "tail": "delegate_task",
+      "schema": [
+        "CONCEPT",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "kanban",
+      "relation": "based_on",
+      "tail": "persistent_message_queue",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "kanban",
+      "relation": "based_on",
+      "tail": "state_machine",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "delegate_task",
+      "relation": "based_on",
+      "tail": "rpc_call",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "board",
+      "relation": "uses",
+      "tail": "sqlite_database",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "board",
+      "relation": "uses",
+      "tail": "workspaces_directory",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "board",
+      "relation": "uses",
+      "tail": "dispatcher_loop",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "task",
+      "relation": "stored_in",
+      "tail": "board",
+      "schema": [
+        "CONCEPT",
+        "stored_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "dispatcher",
+      "relation": "responsible_for",
+      "tail": "reclaiming_expired_claims",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "dispatcher",
+      "relation": "responsible_for",
+      "tail": "promoting_ready_tasks",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "dispatcher",
+      "relation": "responsible_for",
+      "tail": "atomically_claiming_tasks",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "dispatcher",
+      "relation": "responsible_for",
+      "tail": "spawning_specified_profiles",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "dispatcher",
+      "relation": "runs_in",
+      "tail": "gateway",
+      "schema": [
+        "CONCEPT",
+        "runs_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "worker",
+      "relation": "spawned_by",
+      "tail": "dispatcher",
+      "schema": [
+        "CONCEPT",
+        "spawned_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "worker",
+      "relation": "has",
+      "tail": "persistent_memory",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5056a1"
+    },
+    {
+      "head": "kanban_db",
+      "relation": "used_by",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "kanban_db",
+      "relation": "used_by",
+      "tail": "CLI",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_show",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_complete",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_block",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_heartbeat",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_comment",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_create",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "kanban_link",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Dispatcher",
+      "relation": "adds_to_schema",
+      "tail": "kanban_tools",
+      "schema": [
+        "SYSTEM",
+        "adds_to_schema",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "CLI",
+      "relation": "uses",
+      "tail": "hermes kanban",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "CLI",
+      "relation": "uses",
+      "tail": "/kanban",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "COMMAND"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "CLI",
+      "relation": "uses",
+      "tail": "dashboard",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "triage",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "todo",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "ready",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "running",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "blocked",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "done",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task",
+      "relation": "has_state",
+      "tail": "archived",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "triage",
+      "relation": "triggers",
+      "tail": "decomposer",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "decomposer",
+      "relation": "performs",
+      "tail": "task_decomposition",
+      "schema": [
+        "SYSTEM",
+        "performs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Dispatcher",
+      "relation": "claims",
+      "tail": "ready_task",
+      "schema": [
+        "SYSTEM",
+        "claims",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "worker",
+      "relation": "executes",
+      "tail": "running_task",
+      "schema": [
+        "SYSTEM",
+        "executes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "task_links",
+      "relation": "records",
+      "tail": "parent_child_dependency",
+      "schema": [
+        "SYSTEM",
+        "records",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Dispatcher",
+      "relation": "promotes",
+      "tail": "child_task",
+      "schema": [
+        "SYSTEM",
+        "promotes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "child_task",
+      "relation": "depends_on",
+      "tail": "parent_task",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-4cab05"
+    },
+    {
+      "head": "Hermes agent Kanban",
+      "relation": "uses",
+      "tail": "SQLite",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "Hermes agent Kanban",
+      "relation": "has_feature",
+      "tail": "持久化和审计",
+      "schema": [
+        "SYSTEM",
+        "has_feature",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "持久化和审计",
+      "relation": "based_on",
+      "tail": "SQLite",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "Hermes agent Kanban",
+      "relation": "has_feature",
+      "tail": "熔断器和崩溃恢复",
+      "schema": [
+        "SYSTEM",
+        "has_feature",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "熔断器和崩溃恢复",
+      "relation": "implemented_by",
+      "tail": "Dispatcher",
+      "schema": [
+        "CONCEPT",
+        "implemented_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "Dispatcher",
+      "relation": "has_component",
+      "tail": "熔断器",
+      "schema": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "Dispatcher",
+      "relation": "has_component",
+      "tail": "崩溃检测",
+      "schema": [
+        "SYSTEM",
+        "has_component",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "熔断器",
+      "relation": "prevents",
+      "tail": "无限重试",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "崩溃检测",
+      "relation": "detects",
+      "tail": "worker PID消失",
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "Hermes agent Kanban",
+      "relation": "has_feature",
+      "tail": "结构化handoff",
+      "schema": [
+        "SYSTEM",
+        "has_feature",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "结构化handoff",
+      "relation": "uses",
+      "tail": "kanban_complete",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "kanban_complete",
+      "relation": "provides",
+      "tail": "handoff通道",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "下游worker",
+      "relation": "uses",
+      "tail": "kanban_show",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "kanban_show",
+      "relation": "reads",
+      "tail": "父任务的summary和metadata",
+      "schema": [
+        "TECHNOLOGY",
+        "reads",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d6b27e"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "designed_for",
+      "tail": "delegate_task无法覆盖的工作负载",
+      "schema": [
+        "SYSTEM",
+        "designed_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "handles",
+      "tail": "研究triage",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "handles",
+      "tail": "定时运维",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "handles",
+      "tail": "数字孪生",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "handles",
+      "tail": "工程管道",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "handles",
+      "tail": "fleet工作",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    },
+    {
+      "head": "Kanban系统",
+      "relation": "based_on",
+      "tail": "docs/hermes-kanban-v1-spec.pdf",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-80c2c9"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 68,
+    "unique_schemas": 37,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'used_by', 'SYSTEM')": 3,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'used_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'compared_with', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'stored_in', 'CONCEPT')": 1,
+      "('CONCEPT', 'responsible_for', 'CONCEPT')": 4,
+      "('CONCEPT', 'runs_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'spawned_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'has', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 9,
+      "('SYSTEM', 'adds_to_schema', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'COMMAND')": 2,
+      "('SYSTEM', 'uses', 'SYSTEM')": 1,
+      "('CONCEPT', 'has_state', 'CONCEPT')": 7,
+      "('CONCEPT', 'triggers', 'SYSTEM')": 1,
+      "('SYSTEM', 'performs', 'CONCEPT')": 1,
+      "('SYSTEM', 'claims', 'CONCEPT')": 1,
+      "('SYSTEM', 'executes', 'CONCEPT')": 1,
+      "('SYSTEM', 'records', 'CONCEPT')": 1,
+      "('SYSTEM', 'promotes', 'CONCEPT')": 1,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'has_feature', 'CONCEPT')": 3,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'implemented_by', 'SYSTEM')": 1,
+      "('SYSTEM', 'has_component', 'CONCEPT')": 2,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 1,
+      "('CONCEPT', 'detects', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'provides', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'reads', 'CONCEPT')": 1,
+      "('SYSTEM', 'designed_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'handles', 'CONCEPT')": 5,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 37,
+    "fact_layer_size": 68,
+    "passage_layer_size": 6
+  }
+}

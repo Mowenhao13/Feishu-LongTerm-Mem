@@ -1,0 +1,1450 @@
+{
+  "triples": [
+    {
+      "head": "Sandbox",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-27f2a7"
+    },
+    {
+      "head": "Sandbox",
+      "relation": "based_on",
+      "tail": "Repo3 沙箱抽象层",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-27f2a7"
+    },
+    {
+      "head": "Multica",
+      "relation": "related_to",
+      "tail": "ref/multica",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-27f2a7"
+    },
+    {
+      "head": "Repo3 沙箱抽象层",
+      "relation": "related_to",
+      "tail": "ref/repo3",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-27f2a7"
+    },
+    {
+      "head": "Sandbox",
+      "relation": "related_to",
+      "tail": "ref/repo1",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-27f2a7"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "GC",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "work_dir 隔离",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "路径锁",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "沙箱抽象接口",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "repo1",
+      "relation": "implements",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "repo1",
+      "relation": "implements",
+      "tail": "workspace sandbox",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "repo1",
+      "relation": "implements",
+      "tail": "policy",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-d33612"
+    },
+    {
+      "head": "multica",
+      "relation": "adopts",
+      "tail": "每任务独立 work_dir",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "adopts",
+      "tail": "垃圾回收",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "adopts",
+      "tail": "local_directory 路径锁",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "sync.Mutex",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "map[string]*sync.Mutex",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "垃圾回收",
+      "relation": "related_to",
+      "tail": "gcLoop",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "垃圾回收",
+      "relation": "related_to",
+      "tail": "gcStats",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "垃圾回收",
+      "relation": "related_to",
+      "tail": "shouldCleanTaskDir",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "每任务独立 work_dir",
+      "relation": "related_to",
+      "tail": "workspace_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "每任务独立 work_dir",
+      "relation": "related_to",
+      "tail": "task_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "每任务独立 work_dir",
+      "relation": "related_to",
+      "tail": ".multica.meta",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "每任务独立 work_dir",
+      "relation": "related_to",
+      "tail": ".session_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "每任务独立 work_dir",
+      "relation": "related_to",
+      "tail": ".repos",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "local_directory 路径锁",
+      "relation": "related_to",
+      "tail": "waiting_local_directory",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "Repo3 沙箱抽象层",
+      "relation": "adopts",
+      "tail": "SandboxProvider",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "Repo3 沙箱抽象层",
+      "relation": "adopts",
+      "tail": "SandboxService",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxProvider",
+      "relation": "related_to",
+      "tail": "mock",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxProvider",
+      "relation": "related_to",
+      "tail": "e2b",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxProvider",
+      "relation": "related_to",
+      "tail": "docker",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxProvider",
+      "relation": "related_to",
+      "tail": "webcontainer",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "Repo1 Workspace Sandbox",
+      "relation": "adopts",
+      "tail": "SandboxPolicy",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "Repo1 Workspace Sandbox",
+      "relation": "adopts",
+      "tail": "workspace-tools",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxPolicy",
+      "relation": "related_to",
+      "tail": "allowedCommands",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxPolicy",
+      "relation": "related_to",
+      "tail": "allowedPaths",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxPolicy",
+      "relation": "related_to",
+      "tail": "readOnlyPaths",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxPolicy",
+      "relation": "related_to",
+      "tail": "maxFileSize",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "SandboxPolicy",
+      "relation": "related_to",
+      "tail": "maxProcessCount",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "ls",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "read_file",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "write_file",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "edit_file",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "search",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "glob",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "workspace-tools",
+      "relation": "related_to",
+      "tail": "grep",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "compared_with",
+      "tail": "Repo3 沙箱抽象层",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "multica",
+      "relation": "compared_with",
+      "tail": "Repo1 Workspace Sandbox",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-dc8788"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "contains",
+      "tail": "WorkDir Isolation",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "contains",
+      "tail": "GC Loop",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "contains",
+      "tail": "Policy Control",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "contains",
+      "tail": "Provider Abstraction",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "WorkDir Isolation",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "WorkDir Isolation",
+      "relation": "based_on",
+      "tail": "DeerFlow",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "GC Loop",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "Policy Control",
+      "relation": "based_on",
+      "tail": "Repo1",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "Provider Abstraction",
+      "relation": "based_on",
+      "tail": "Repo3",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "每任务独立目录",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "调整 GC 间隔 + 可配置 TTL",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "local_directory 并发保护",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "可选启用",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "命令/路径白名单",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "支持 local/docker 切换",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "容器化沙箱",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "每任务独立目录",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "调整 GC 间隔 + 可配置 TTL",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "local_directory 并发保护",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "可选启用",
+      "relation": "based_on",
+      "tail": "DeerFlow",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "命令/路径白名单",
+      "relation": "based_on",
+      "tail": "Repo1",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "支持 local/docker 切换",
+      "relation": "based_on",
+      "tail": "Repo3",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "容器化沙箱",
+      "relation": "based_on",
+      "tail": "DeerFlow",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-9d6135"
+    },
+    {
+      "head": "Claude Code",
+      "relation": "provides",
+      "tail": "内置沙箱化 Bash 工具",
+      "schema": [
+        "PRODUCT",
+        "provides",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "内置沙箱化 Bash 工具",
+      "relation": "part_of",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "内置沙箱化 Bash 工具",
+      "relation": "acts_as",
+      "tail": "Layer 2 安全增强层",
+      "schema": [
+        "SYSTEM",
+        "acts_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "macOS",
+      "relation": "based_on",
+      "tail": "Seatbelt framework",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "Linux",
+      "relation": "depends_on",
+      "tail": "bubblewrap",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "Linux",
+      "relation": "depends_on",
+      "tail": "socat",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "WSL2",
+      "relation": "depends_on",
+      "tail": "bubblewrap",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "WSL2",
+      "relation": "depends_on",
+      "tail": "socat",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "原生 Windows",
+      "relation": "rejects",
+      "tail": "沙箱模式",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "原生 Windows",
+      "relation": "requires",
+      "tail": "WSL2",
+      "schema": [
+        "SYSTEM",
+        "requires",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "内置沙箱化 Bash 工具",
+      "relation": "complements",
+      "tail": "Multica 工作目录隔离方案",
+      "schema": [
+        "SYSTEM",
+        "complements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "内置沙箱化 Bash 工具",
+      "relation": "provides",
+      "tail": "操作系统级强制安全边界",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱边界",
+      "relation": "enforced_by",
+      "tail": "操作系统",
+      "schema": [
+        "CONCEPT",
+        "enforced_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "uses",
+      "tail": "allowWrite 配置",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "uses",
+      "tail": "denyRead 配置",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "uses",
+      "tail": "allowRead 配置",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "uses",
+      "tail": "allowedDomains 预配置",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "supports",
+      "tail": "Auto-allow 模式",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "supports",
+      "tail": "Regular permissions 模式",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱",
+      "relation": "supports",
+      "tail": "Strict 模式",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "Strict 模式",
+      "relation": "sets",
+      "tail": "failIfUnavailable=true",
+      "schema": [
+        "CONCEPT",
+        "sets",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "Claude Code",
+      "relation": "controls",
+      "tail": "沙箱模式",
+      "schema": [
+        "PRODUCT",
+        "controls",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "沙箱模式",
+      "relation": "controlled_by",
+      "tail": "--sandbox 参数",
+      "schema": [
+        "CONCEPT",
+        "controlled_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-be5ddf"
+    },
+    {
+      "head": "@anthropic-ai/sandbox-runtime",
+      "relation": "provides",
+      "tail": "全进程沙箱化",
+      "schema": [
+        "PRODUCT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "@anthropic-ai/sandbox-runtime",
+      "relation": "compared_with",
+      "tail": "内置 Bash 沙箱",
+      "schema": [
+        "PRODUCT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Claude Code 内置沙箱",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Claude Code 内置沙箱",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "路径权限限制",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "路径权限限制",
+      "relation": "includes",
+      "tail": "allowedPaths",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "路径权限限制",
+      "relation": "includes",
+      "tail": "denyRead",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "implements",
+      "tail": "双重隔离",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "双重隔离",
+      "relation": "based_on",
+      "tail": "Worktree 隔离",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "双重隔离",
+      "relation": "based_on",
+      "tail": "内置沙箱",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Worktree 隔离",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "@anthropic-ai/sandbox-runtime",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "@anthropic-ai/sandbox-runtime",
+      "relation": "used_for",
+      "tail": "Coordinator Agent",
+      "schema": [
+        "PRODUCT",
+        "used_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "@anthropic-ai/sandbox-runtime",
+      "relation": "used_for",
+      "tail": "全进程沙箱化高风险任务",
+      "schema": [
+        "PRODUCT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "配置组合",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "配置组合",
+      "relation": "includes",
+      "tail": "--allowedTools",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "配置组合",
+      "relation": "includes",
+      "tail": "--disallowedTools",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "配置组合",
+      "relation": "includes",
+      "tail": "allowRead",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "配置组合",
+      "relation": "includes",
+      "tail": "denyRead",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "配置组合",
+      "relation": "includes",
+      "tail": "allowedDomains",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Multica GC",
+      "relation": "compared_with",
+      "tail": "Repo3 沙箱",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Multica GC",
+      "relation": "compared_with",
+      "tail": "Claude Code 内置沙箱",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Repo3 沙箱",
+      "relation": "compared_with",
+      "tail": "Claude Code 内置沙箱",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Multica GC",
+      "relation": "has_property",
+      "tail": "隔离粒度: 目录级别",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Repo3 沙箱",
+      "relation": "has_property",
+      "tail": "隔离粒度: 进程级别",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Claude Code 内置沙箱",
+      "relation": "has_property",
+      "tail": "隔离粒度: OS 级别",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Claude Code 内置沙箱",
+      "relation": "has_property",
+      "tail": "网络控制: 域名白名单 + 代理",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Claude Code 内置沙箱",
+      "relation": "has_property",
+      "tail": "子进程覆盖: 全部",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Claude Code 内置沙箱",
+      "relation": "has_property",
+      "tail": "实现成本: 零成本",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    },
+    {
+      "head": "Claude Code 内置沙箱",
+      "relation": "has_property",
+      "tail": "适用场景: 安全沙箱",
+      "schema": [
+        "SYSTEM",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbd890"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 127,
+    "unique_schemas": 39,
+    "schema_distribution": {
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'related_to', 'ORG')": 1,
+      "('CONCEPT', 'related_to', 'ORG')": 1,
+      "('SYSTEM', 'related_to', 'ORG')": 1,
+      "('SYSTEM', 'implements', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'uses', 'CONCEPT')": 9,
+      "('SYSTEM', 'implements', 'CONCEPT')": 4,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 11,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 3,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 25,
+      "('CONCEPT', 'adopts', 'SYSTEM')": 2,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 5,
+      "('SYSTEM', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 8,
+      "('CONCEPT', 'based_on', 'ORG')": 4,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 2,
+      "('PRODUCT', 'provides', 'SYSTEM')": 1,
+      "('SYSTEM', 'part_of', 'SYSTEM')": 1,
+      "('SYSTEM', 'acts_as', 'CONCEPT')": 1,
+      "('SYSTEM', 'depends_on', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'requires', 'SYSTEM')": 1,
+      "('SYSTEM', 'complements', 'SYSTEM')": 1,
+      "('SYSTEM', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'enforced_by', 'SYSTEM')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 3,
+      "('CONCEPT', 'sets', 'CONCEPT')": 1,
+      "('PRODUCT', 'controls', 'CONCEPT')": 1,
+      "('CONCEPT', 'controlled_by', 'CONCEPT')": 1,
+      "('PRODUCT', 'provides', 'CONCEPT')": 1,
+      "('PRODUCT', 'compared_with', 'SYSTEM')": 1,
+      "('SYSTEM', 'uses', 'SYSTEM')": 2,
+      "('CONCEPT', 'includes', 'CONCEPT')": 7,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'uses', 'PRODUCT')": 1,
+      "('PRODUCT', 'used_for', 'SYSTEM')": 1,
+      "('PRODUCT', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'has_property', 'CONCEPT')": 7
+    },
+    "schema_layer_size": 39,
+    "fact_layer_size": 127,
+    "passage_layer_size": 6
+  }
+}

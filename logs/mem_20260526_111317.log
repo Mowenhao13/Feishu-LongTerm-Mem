@@ -1,0 +1,95 @@
+2026-05-26 11:13:17 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260526_111317.log
+2026-05-26 11:13:17 - __main__ - INFO - ========================================
+2026-05-26 11:13:17 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-26 11:13:17 - __main__ - INFO - ========================================
+2026-05-26 11:13:17 - __main__ - INFO - Project: default
+2026-05-26 11:13:17 - __main__ - INFO - Storage: data
+2026-05-26 11:13:17 - __main__ - INFO - DocsDir: data/docs
+2026-05-26 11:13:17 - __main__ - INFO - [GitStorage] initialized
+2026-05-26 11:13:17 - __main__ - INFO - [MemoryGraph] loaded 9 decisions from Git
+2026-05-26 11:13:17 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-26 11:13:17 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-26 11:13:17 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-26 11:13:17 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-26 11:13:18 - src.core.engine - INFO - Loaded 9 decisions, 1 topics
+2026-05-26 11:13:18 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-26 11:13:18 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-26 11:13:18 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-26 11:13:18 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-26 11:13:18 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-26 11:13:18 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-26 11:13:18 - __main__ - INFO - [Engine] Embedding+Reranker injected for similarity search
+2026-05-26 11:13:18 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-26 11:13:18 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-26 11:13:18 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-26 11:13:18 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-26 11:13:18 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-26 11:13:18 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-26 11:13:18 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-26 11:13:18 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-26 11:13:18 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-26 11:13:18 - src.adapter.lark_im - INFO - WS listener started
+2026-05-26 11:13:18 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-26 11:13:18 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-26 11:13:18 - __main__ - INFO - [Detectors] Configuration:
+2026-05-26 11:13:18 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-26 11:13:18 - __main__ - INFO -   lark_doc: disabled
+2026-05-26 11:13:18 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-26 11:13:18 - __main__ - INFO - [lark_im] Debounce check loop started (window=10s)
+2026-05-26 11:13:22 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644033290631039941&access_key=32a1a0bb5539e3b64eaef1bf039f77cb&service_id=33554678&ticket=b0904379-2199-4787-ac32-7423a7eab007 [conn_id=7644033290631039941]
+2026-05-26 11:14:05 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:14:05 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:05 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:05 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:14:16 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:14:16 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:16 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526111416-5aea57b2.json
+2026-05-26 11:14:16 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:16 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 11:14:17 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.29s
+2026-05-26 11:14:17 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 11:14:17 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=11aa2a55324f title=消息队列技术选型 source=lark_im
+2026-05-26 11:14:17 - src.core.engine - INFO - [Mutation] Existing by sid: sid=11aa2a55324f v2
+2026-05-26 11:14:17 - src.core.engine - INFO - Updated decision: 11aa2a55324f v3
+2026-05-26 11:14:17 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=11aa2a55324f v4
+2026-05-26 11:14:17 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.42s
+2026-05-26 11:15:42 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:15:42 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=22 content={"text":"消息队列换成Kafka"}
+2026-05-26 11:15:42 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成Kafka"}
+2026-05-26 11:15:42 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:15:52 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:15:52 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成Kafka"}
+2026-05-26 11:15:52 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526111552-f15c63eb.json
+2026-05-26 11:15:52 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=22 content={"text":"消息队列换成Kafka"}
+2026-05-26 11:15:52 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=22)
+2026-05-26 11:15:54 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.71s
+2026-05-26 11:15:54 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 11:15:54 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=1c6428015aec title=消息队列更换为Kafka source=lark_im
+2026-05-26 11:15:54 - src.core.engine - INFO - [Mutation] Existing by sid: sid=1c6428015aec v1
+2026-05-26 11:15:54 - src.core.engine - INFO - Updated decision: 1c6428015aec v2
+2026-05-26 11:15:54 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=1c6428015aec v3
+2026-05-26 11:15:54 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.85s
+2026-05-26 11:17:59 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:17:59 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:17:59 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:17:59 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:18:10 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:18:10 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:18:10 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526111810-d0b3d413.json
+2026-05-26 11:18:10 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:18:10 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 11:18:12 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.94s
+2026-05-26 11:18:12 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 11:18:12 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=11aa2a55324f title=消息队列技术选型 source=lark_im
+2026-05-26 11:18:12 - src.core.engine - INFO - [Mutation] Existing by sid: sid=11aa2a55324f v3
+2026-05-26 11:18:12 - src.core.engine - INFO - Updated decision: 11aa2a55324f v4
+2026-05-26 11:18:12 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=11aa2a55324f v5
+2026-05-26 11:18:12 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.10s
+2026-05-26 11:54:39 - __main__ - INFO - [System] Shutting down...
+2026-05-26 11:54:40 - src.adapter.lark_im - INFO - WS listener stopped
+2026-05-26 11:54:40 - __main__ - INFO - [lark_im] WS listener stopped
+2026-05-26 11:54:40 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 11:54:40 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 11:54:40 - src.core.engine - INFO - Synced 2 dirty decisions to storage
+2026-05-26 11:54:40 - src.core.engine - INFO - MemoryEngine stopped (applied=3, failed=0)
+2026-05-26 11:54:40 - __main__ - INFO - [System] Shutdown complete

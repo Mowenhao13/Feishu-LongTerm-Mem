@@ -1,0 +1,1935 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "CONCEPT",
+        "transfers_to",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        3,
+        4
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "CONCEPT",
+        "implemented_by",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "TECHNOLOGY",
+        "has_parameter",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        6,
+        7
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        8,
+        9
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "frequency": 20,
+      "fact_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        42,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        15
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "TECHNOLOGY",
+        "reads",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        16
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        25,
+        26,
+        44,
+        45
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        27
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        28,
+        29
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "CONCEPT",
+        "stored_in",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        38
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "SYSTEM",
+        "stores",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        39
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        40
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "SYSTEM",
+        "sends",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        41
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "CONCEPT",
+        "sent_to",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        43
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        46
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "Hermes handoff 机制",
+        "related_to",
+        "Hermes"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "Handoff",
+        "part_of",
+        "Kanban系统"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "Handoff",
+        "used_by",
+        "worker"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "Handoff",
+        "transfers_to",
+        "下游worker"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "Handoff",
+        "transfers_to",
+        "人类"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "Handoff",
+        "implemented_by",
+        "kanban_complete"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "kanban_complete",
+        "has_parameter",
+        "summary"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "kanban_complete",
+        "has_parameter",
+        "metadata"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "Hermes handoff 机制",
+        "related_to",
+        "Summary"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "Hermes handoff 机制",
+        "related_to",
+        "Metadata"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "Metadata",
+        "contains",
+        "changed_files"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "Metadata",
+        "contains",
+        "tests_run"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "Metadata",
+        "contains",
+        "decisions"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "Metadata",
+        "contains",
+        "findings"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "Metadata",
+        "contains",
+        "verification"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "downstream_worker",
+        "uses",
+        "kanban_show"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "kanban_show",
+        "reads",
+        "handoff_information"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "handoff_information",
+        "contains",
+        "prior_attempts"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "handoff_information",
+        "contains",
+        "parent_task_results"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "prior_attempts",
+        "contains",
+        "outcome"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "prior_attempts",
+        "contains",
+        "summary"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "prior_attempts",
+        "contains",
+        "error"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "prior_attempts",
+        "contains",
+        "metadata"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "parent_task_results",
+        "contains",
+        "summary"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "parent_task_results",
+        "contains",
+        "metadata"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "prior_attempts",
+        "related_to",
+        "avoid_repeated_failure_paths"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "parent_task_results",
+        "related_to",
+        "understand_upstream_work_completion"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "rate_limiter",
+        "adopts",
+        "token_bucket"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "rate_limiter",
+        "uses",
+        "user_id"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "rate_limiter",
+        "uses",
+        "IP_fallback"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "vLLM",
+        "compared_with",
+        "SGLang"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "vLLM",
+        "compared_with",
+        "Tensorrt-LLM"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "SGLang",
+        "compared_with",
+        "Tensorrt-LLM"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "vLLM",
+        "adopts",
+        "throughput_optimization"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "SGLang",
+        "adopts",
+        "latency_optimization"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "Tensorrt-LLM",
+        "adopts",
+        "memory_efficiency"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "review_required_mode",
+        "uses",
+        "kanban_block"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "review_required_mode",
+        "uses",
+        "kanban_comment"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "handoff_data",
+        "stored_in",
+        "task_runs_table"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "task_runs_table",
+        "stores",
+        "task_attempt_history"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "task_attempt_history",
+        "enables",
+        "postmortem_analysis"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "gateway notifier",
+        "sends",
+        "notification"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "notification",
+        "contains",
+        "summary"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "notification",
+        "sent_to",
+        "chat"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "Handoff",
+        "related_to",
+        "Kanban"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "Handoff",
+        "related_to",
+        "TODO系统"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "Handoff",
+        "uses",
+        "metadata"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "metadata",
+        "contains",
+        "changed_files"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "metadata",
+        "contains",
+        "verification"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "metadata",
+        "contains",
+        "dependencies"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "metadata",
+        "contains",
+        "blocked_reason"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "metadata",
+        "contains",
+        "retry_notes"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "metadata",
+        "contains",
+        "residual_risk"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-50d107b5c2b8ee50",
+      "content": "# Hermes handoff 机制",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "content": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "content": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "content": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "content": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    {
+      "idx": 5,
+      "chunk_id": "chunk-005-be4c52ebc23a1255",
+      "content": "## 数据持久化\n\n\n\nHandoff数据存储在task\\_runs表中，每次任务尝试都会创建新的run行 [8](#1-7) 。这确保了完整的尝试历史，便于postmortem分析。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "idx": 6,
+      "chunk_id": "chunk-006-19913775641bd262",
+      "content": "## Gateway通知\n\n\n\n当任务完成时，gateway notifier会发送包含summary的通知到订阅的chat [9](#1-8) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "idx": 7,
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "content": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "fact_indices": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "Hermes handoff 机制",
+        "related_to",
+        "Hermes"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-50d107b5c2b8ee50",
+      "passage": "# Hermes handoff 机制",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "part_of",
+        "Kanban系统"
+      ],
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "used_by",
+        "worker"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "transfers_to",
+        "下游worker"
+      ],
+      "schema": [
+        "CONCEPT",
+        "transfers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "transfers_to",
+        "人类"
+      ],
+      "schema": [
+        "CONCEPT",
+        "transfers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "implemented_by",
+        "kanban_complete"
+      ],
+      "schema": [
+        "CONCEPT",
+        "implemented_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "kanban_complete",
+        "has_parameter",
+        "summary"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "has_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "kanban_complete",
+        "has_parameter",
+        "metadata"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "has_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "passage": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Hermes handoff 机制",
+        "related_to",
+        "Summary"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Hermes handoff 机制",
+        "related_to",
+        "Metadata"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Metadata",
+        "contains",
+        "changed_files"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Metadata",
+        "contains",
+        "tests_run"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Metadata",
+        "contains",
+        "decisions"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Metadata",
+        "contains",
+        "findings"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Metadata",
+        "contains",
+        "verification"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "passage": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "downstream_worker",
+        "uses",
+        "kanban_show"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "kanban_show",
+        "reads",
+        "handoff_information"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "reads",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "handoff_information",
+        "contains",
+        "prior_attempts"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "handoff_information",
+        "contains",
+        "parent_task_results"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "prior_attempts",
+        "contains",
+        "outcome"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "prior_attempts",
+        "contains",
+        "summary"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "prior_attempts",
+        "contains",
+        "error"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "prior_attempts",
+        "contains",
+        "metadata"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "parent_task_results",
+        "contains",
+        "summary"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "parent_task_results",
+        "contains",
+        "metadata"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "prior_attempts",
+        "related_to",
+        "avoid_repeated_failure_paths"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "parent_task_results",
+        "related_to",
+        "understand_upstream_work_completion"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "passage": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "rate_limiter",
+        "adopts",
+        "token_bucket"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "rate_limiter",
+        "uses",
+        "user_id"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "rate_limiter",
+        "uses",
+        "IP_fallback"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "vLLM",
+        "compared_with",
+        "SGLang"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "vLLM",
+        "compared_with",
+        "Tensorrt-LLM"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "SGLang",
+        "compared_with",
+        "Tensorrt-LLM"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "vLLM",
+        "adopts",
+        "throughput_optimization"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "SGLang",
+        "adopts",
+        "latency_optimization"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Tensorrt-LLM",
+        "adopts",
+        "memory_efficiency"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "review_required_mode",
+        "uses",
+        "kanban_block"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "review_required_mode",
+        "uses",
+        "kanban_comment"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "passage": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "handoff_data",
+        "stored_in",
+        "task_runs_table"
+      ],
+      "schema": [
+        "CONCEPT",
+        "stored_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-be4c52ebc23a1255",
+      "passage": "## 数据持久化\n\n\n\nHandoff数据存储在task\\_runs表中，每次任务尝试都会创建新的run行 [8](#1-7) 。这确保了完整的尝试历史，便于postmortem分析。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "task_runs_table",
+        "stores",
+        "task_attempt_history"
+      ],
+      "schema": [
+        "SYSTEM",
+        "stores",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-be4c52ebc23a1255",
+      "passage": "## 数据持久化\n\n\n\nHandoff数据存储在task\\_runs表中，每次任务尝试都会创建新的run行 [8](#1-7) 。这确保了完整的尝试历史，便于postmortem分析。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "task_attempt_history",
+        "enables",
+        "postmortem_analysis"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-be4c52ebc23a1255",
+      "passage": "## 数据持久化\n\n\n\nHandoff数据存储在task\\_runs表中，每次任务尝试都会创建新的run行 [8](#1-7) 。这确保了完整的尝试历史，便于postmortem分析。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "gateway notifier",
+        "sends",
+        "notification"
+      ],
+      "schema": [
+        "SYSTEM",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-19913775641bd262",
+      "passage": "## Gateway通知\n\n\n\n当任务完成时，gateway notifier会发送包含summary的通知到订阅的chat [9](#1-8) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "notification",
+        "contains",
+        "summary"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-19913775641bd262",
+      "passage": "## Gateway通知\n\n\n\n当任务完成时，gateway notifier会发送包含summary的通知到订阅的chat [9](#1-8) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "notification",
+        "sent_to",
+        "chat"
+      ],
+      "schema": [
+        "CONCEPT",
+        "sent_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-19913775641bd262",
+      "passage": "## Gateway通知\n\n\n\n当任务完成时，gateway notifier会发送包含summary的通知到订阅的chat [9](#1-8) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "related_to",
+        "Kanban"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "related_to",
+        "TODO系统"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "Handoff",
+        "uses",
+        "metadata"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "metadata",
+        "contains",
+        "changed_files"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "metadata",
+        "contains",
+        "verification"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "metadata",
+        "contains",
+        "dependencies"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "metadata",
+        "contains",
+        "blocked_reason"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "metadata",
+        "contains",
+        "retry_notes"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    },
+    {
+      "triple": [
+        "metadata",
+        "contains",
+        "residual_risk"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "passage": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-50d107b5c2b8ee50",
+      "chunk_text": "# Hermes handoff 机制",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-de432bd012647d7a",
+      "chunk_text": "# Handoff机制解释\n\n\n\nHandoff是Kanban系统中worker完成任务时向下游worker或人类传递工作结果的核心机制，通过kanban\\_complete\\(summary=\\.\\.\\., metadata=\\.\\.\\.\\)实现 [1](#1-0) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-e88b257b7c61715b",
+      "chunk_text": "## 核心组成\n\n\n\n### Summary\n\n\n\n人类可读的1-3句话描述，说明具体完成了什么 [2](#1-1) 。例如：\n\n\n\n```\n\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\"\n\n```\n\n\n\n### Metadata\n\n\n\n机器可读的结构化JSON字典，包含具体的事实数据 [3](#1-2) ：\n\n\n\n- changed\\_files: 修改的文件列表\n\n- tests\\_run: 运行的测试数量\n\n- decisions: 做出的技术决策\n\n- findings: 研究发现\n\n- verification: 验证步骤",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-d6adc003cb1c58fc",
+      "chunk_text": "## 工作流程\n\n\n\n下游worker通过kanban\\_show\\(\\)读取handoff信息 [4](#1-3) ：\n\n\n\n- Prior attempts: 当前任务的历史尝试（outcome、summary、error、metadata），避免重复失败路径\n\n- Parent task results: 每个父任务最近一次完成运行的summary和metadata，了解上游工作如何完成",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-d1d7266c79a12496",
+      "chunk_text": "## 典型示例\n\n\n\n### 编码任务\n\n\n\n```\nkanban_complete(\n    summary=\"shipped rate limiter — token bucket, keys on user_id with IP fallback, 14 tests pass\",\n    metadata={\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    },\n)\n``` [5](#1-4) \n\n### 研究任务\n```python\nkanban_complete(\n    summary=\"3 competing libraries reviewed; vLLM wins on throughput, SGLang on latency, Tensorrt-LLM on memory efficiency\",\n    metadata={\n        \"sources_read\": 12,\n        \"recommendation\": \"vLLM\",\n        \"benchmarks\": {\"vllm\": 1.0, \"sglang\": 0.87, \"trtllm\": 0.72},\n    },\n)\n``` [6](#1-5) \n\n## Review-required模式\n\n对于需要人工审查的代码变更，使用block而非complete [7](#1-6) ：\n\n```python\nkanban_comment(\n    body=\"review-required handoff:\\n\" + json.dumps({\n        \"changed_files\": [\"rate_limiter.py\", \"tests/test_rate_limiter.py\"],\n        \"tests_run\": 14,\n        \"tests_passed\": 14,\n        \"diff_path\": \"/path/to/worktree\",\n        \"decisions\": [\"user_id primary, IP fallback for unauthenticated requests\"],\n    }, indent=2),\n)\nkanban_block(\n    reason=\"review-required: rate limiter shipped, 14/14 tests pass — needs eyes on the user_id/IP fallback choice before merging\",\n)\n\n```",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 4
+    },
+    {
+      "chunk_id": "chunk-005-be4c52ebc23a1255",
+      "chunk_text": "## 数据持久化\n\n\n\nHandoff数据存储在task\\_runs表中，每次任务尝试都会创建新的run行 [8](#1-7) 。这确保了完整的尝试历史，便于postmortem分析。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 5
+    },
+    {
+      "chunk_id": "chunk-006-19913775641bd262",
+      "chunk_text": "## Gateway通知\n\n\n\n当任务完成时，gateway notifier会发送包含summary的通知到订阅的chat [9](#1-8) 。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 6
+    },
+    {
+      "chunk_id": "chunk-007-d9cd906ecca5e6c8",
+      "chunk_text": "## Notes\n\n\n\nHandoff是Kanban区别于传统TODO系统的关键特性，它使下游worker能够结构化地获取上游工作结果，而不需要翻阅评论和工作输出 [1](#1-0) 。推荐在metadata中包含changed_files、verification、dependencies、blocked_reason、retry_notes、residual_risk等字段。",
+      "doc_path": "test_files/docs/references/Hermes handoff 机制.md",
+      "chunk_index": 7
+    }
+  ],
+  "stats": {
+    "total_chunks": 8,
+    "total_triples": 53,
+    "unique_schemas": 22,
+    "schema_distribution": {
+      "('CONCEPT', 'related_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'part_of', 'SYSTEM')": 1,
+      "('CONCEPT', 'used_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'transfers_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'implemented_by', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'has_parameter', 'CONCEPT')": 2,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'contains', 'CONCEPT')": 20,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'reads', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 4,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'compared_with', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'adopts', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'stored_in', 'SYSTEM')": 1,
+      "('SYSTEM', 'stores', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('SYSTEM', 'sends', 'CONCEPT')": 1,
+      "('CONCEPT', 'sent_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 22,
+    "fact_layer_size": 53,
+    "passage_layer_size": 8
+  }
+}

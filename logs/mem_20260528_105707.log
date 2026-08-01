@@ -1,0 +1,89 @@
+2026-05-28 10:57:07 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_105707.log
+2026-05-28 10:57:07 - src.eval_runner - INFO - MemoryGraph loaded: 2 decisions
+2026-05-28 10:57:07 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-28 10:57:07 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-28 10:57:07 - src.core.engine - INFO - Loaded 2 decisions, 1 topics
+2026-05-28 10:57:07 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=0 topics=0
+2026-05-28 10:57:07 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-28 10:57:07 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-28 10:57:07 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-28 10:57:07 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-28 10:57:07 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-28 10:57:07 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-28 10:57:07 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-28 10:57:07 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 0 episode(s) from data/suspend_pool.json
+2026-05-28 10:57:07 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-28 10:57:07 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-05-28 10:57:07 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=技术选型：新项目认证方案选择使用Session-Cookie，最简单最稳定
+2026-05-28 10:57:07 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.28s value_range=[-11.3672, 9.1719] mean=-0.0374 std=2.5550
+2026-05-28 10:57:07 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_0098308cf started with msg=eval_1
+2026-05-28 10:57:08 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-05-28 10:57:08 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=技术选型：新项目认证方案选择使用Session-Cookie，团队最熟悉
+2026-05-28 10:57:08 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.22s value_range=[-12.4844, 9.0391] mean=-0.0158 std=2.4961
+2026-05-28 10:57:08 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-05-28 10:57:08 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=技术选型：新项目认证方案选择使用Session-Cookie，兼容性最好
+2026-05-28 10:57:08 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.18s value_range=[-11.6250, 9.0547] mean=-0.0234 std=2.5506
+2026-05-28 10:57:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-05-28 10:57:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=经过评估，技术选型认证方案选择使用Session-Cookie，最终决定
+2026-05-28 10:57:09 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-12.1406, 11.1562] mean=-0.0307 std=2.5956
+2026-05-28 10:57:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 10:57:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=技术选型认证方案选择使用Session-Cookie，无需额外学习成本
+2026-05-28 10:57:09 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.14s value_range=[-11.7422, 9.8203] mean=-0.0430 std=2.6224
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=确认了，技术选型认证方案选择使用Session-Cookie，马上开始
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-12.7344, 10.0391] mean=-0.0492 std=2.5986
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=技术选型认证方案选择使用Session-Cookie，之前的方案都太复杂
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.9141, 10.1875] mean=-0.0557 std=2.5768
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 10:57:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=好，技术选型认证方案选择使用Session-Cookie，开始推进
+2026-05-28 10:57:11 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.21s value_range=[-12.6172, 9.2656] mean=-0.0485 std=2.5840
+2026-05-28 10:57:13 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_0098308cf (chat=eval, msgs=8, pool=1/20)
+2026-05-28 10:57:13 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-28 10:57:13 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_0098308cf (msgs=8)
+2026-05-28 10:57:13 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_0098308cf chat=eval msgs=8 len=291
+2026-05-28 10:57:13 - src.core.engine - INFO - [LLM] Injected 2 existing decisions as context
+2026-05-28 10:57:13 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=402 content=⚠️ 以下决策已存在于系统中（仅作参考，不要因此跳过提取）。请分析新对话是否与已有决策冲突或需要更新，如有请正常提取新的
+2026-05-28 10:57:13 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=402)
+2026-05-28 10:57:15 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.80s
+2026-05-28 10:57:15 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-28 10:57:15 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=34eb75c4822d title=新项目认证方案采用Session-Cookie source=im
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=71 model=Qwen3-Embedding-4B
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=71 preview=经过评估，新项目认证方案选择使用Session-Cookie，认为其最简单、最稳定、团队最熟悉、兼容性最好，无需额外学习
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.19s value_range=[-12.1406, 10.2969] mean=-0.0130 std=2.5967
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=2 chars=130 model=Qwen3-Embedding-4B
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding]     text[1/2] len=73 preview=经过评估，技术选型认证方案改用OAuth 2.0，推翻之前JWT方案，认为OAuth 2.0在第三方集成、安全性和扩展性
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding]     text[2/2] len=57 preview=技术选型认证方案决定采用JWT实现，全体通过，适用于前后端分离和微服务场景，不依赖服务端Session，开始开发。
+2026-05-28 10:57:15 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=2 dim=2560 time=0.36s value_range=[-10.0469, 11.2266] mean=-0.0163 std=2.6655
+2026-05-28 10:57:15 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=2 model=Qwen3-Reranker-4B
+2026-05-28 10:57:15 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=71 preview=经过评估，新项目认证方案选择使用Session-Cookie，认为其最简单、最稳定、团队最熟悉、兼容性最好，无需额外学习
+2026-05-28 10:57:15 - src.model.reranker_provider - INFO - [Reranker]     doc[1/2] len=73 preview=经过评估，技术选型认证方案改用OAuth 2.0，推翻之前JWT方案，认为OAuth 2.0在第三方集成、安全性和扩展性
+2026-05-28 10:57:15 - src.model.reranker_provider - INFO - [Reranker]     doc[2/2] len=57 preview=技术选型认证方案决定采用JWT实现，全体通过，适用于前后端分离和微服务场景，不依赖服务端Session，开始开发。
+2026-05-28 10:57:15 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=经过评估，新项目认证方案选择使用Session-Cookie，认为其最简单、最稳定、团队最熟悉、兼容性最好，无需额外学习 docs=2
+2026-05-28 10:57:15 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.2012, -3.9082] time=0.24s top3=[0]-3.2012:经过评估，技术选型认证方案改用OAuth 2.0，推翻之前JWT方案，认为OAu; [1]-3.9082:技术选型认证方案决定采用JWT实现，全体通过，适用于前后端分离和微服务场景，不依
+2026-05-28 10:57:15 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.2012)
+2026-05-28 10:57:15 - src.core.engine - INFO - [Similar] Found by bigram: sid=ddb493f449d8 score=0.32
+2026-05-28 10:57:15 - src.core.engine - INFO - [Mutation] Similar found: sid=ddb493f449d8 summary=新项目认证方案采用JWT score=0.3200
+2026-05-28 10:57:17 - src.core.engine - INFO - [Dedup] LLM judge: action=conflict reason=新决策采用Session-Cookie，已有决策采用JWT，两者认证方案不同，构成冲突。
+2026-05-28 10:57:17 - src.core.engine - INFO - [Mutation] CONFLICT: new=34eb75c4822d vs similar=ddb493f449d8 reason=新决策采用Session-Cookie，已有决策采用JWT，两者认证方案不同，构成冲突。
+2026-05-28 10:57:17 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=技术选型 new_summary='新项目认证方案采用Session-Cookie', existing_count=2
+2026-05-28 10:57:17 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=技术选型 vs 技术选型, dice=0.182(dice_ft=0.099), existing_summary='新项目认证方案改用OAuth 2.0'
+2026-05-28 10:57:17 - src.core.engine - INFO - [Mutation] Prefilter skip: already checked in similar path, sid=ddb493f449d8
+2026-05-28 10:57:17 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=34eb75c4822d v1
+2026-05-28 10:57:17 - src.core.engine - INFO - Created decision: 34eb75c4822d v1 — 新项目认证方案采用Session-Cookie
+2026-05-28 10:57:17 - src.core.engine - INFO - [Mutation] CREATE applied: sid=34eb75c4822d v1
+2026-05-28 10:57:17 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 10:57:17 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 10:57:18 - src.view.client - ERROR - Failed to upsert record for 34eb75c4822d: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 10:57:18 - src.view.syncer - INFO - [BaseView] Synced decision 34eb75c4822d v1
+2026-05-28 10:57:18 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=34eb75c4822d
+2026-05-28 10:57:18 - src.core.engine - INFO - [Mutation] Detected 1 conflict(s) for sid=34eb75c4822d
+2026-05-28 10:57:18 - src.core.engine - INFO - [Mutation] Conflict: ddb493f449d8 ↔ 34eb75c4822d — Conflict between '新项目认证方案采用JWT' and '新项目认证方案采用Sess
+2026-05-28 10:57:18 - src.core.engine - INFO - Conflict kept both: ddb493f449d8 <-> 34eb75c4822d
+2026-05-28 10:57:18 - src.core.engine - INFO - [Mutation] CONFLICT resolved: ddb493f449d8
+2026-05-28 10:57:18 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-28 10:57:18 - src.core.engine - INFO - [Engine] <<< _process_episode done time=5.20s
+2026-05-28 10:57:18 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-28 10:57:18 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-28 10:57:18 - src.core.engine - INFO - Synced 2 dirty decisions to storage
+2026-05-28 10:57:18 - src.core.engine - INFO - MemoryEngine stopped (applied=2, failed=0)

@@ -1,0 +1,1024 @@
+{
+  "qars": [
+    {
+      "id": "de_02_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_000_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由陈七负责数据库迁移",
+        "C": "数据库迁移"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_000_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_000_executor",
+      "Q": "谁负责数据库迁移？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "王五",
+        "D": "陈七"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_000_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_000_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_001_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由李四负责API改造",
+        "C": "API改造"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_001_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_001_executor",
+      "Q": "谁负责API改造？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "王五",
+        "D": "李四"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_001_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_001_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_002_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由张三负责前端重构",
+        "C": "前端重构"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_002_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "张三",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_002_executor",
+      "Q": "谁负责前端重构？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "张三"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_002_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_002_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_003_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由王五负责性能优化",
+        "C": "性能优化"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_003_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "李四",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_003_executor",
+      "Q": "谁负责性能优化？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "王五"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_003_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_003_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_004_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由张三负责文档编写",
+        "C": "文档编写"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_004_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "张三",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_004_executor",
+      "Q": "谁负责文档编写？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "张三"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_004_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_004_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_005_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由王五负责测试用例",
+        "C": "测试用例"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_005_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "王五",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_005_executor",
+      "Q": "谁负责测试用例？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "王五"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_005_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_005_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_006_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由陈七负责部署配置",
+        "C": "部署配置"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_006_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_006_executor",
+      "Q": "谁负责部署配置？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "王五",
+        "D": "陈七"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_006_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_006_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_007_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由李四负责数据库迁移",
+        "C": "数据库迁移"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_007_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_007_executor",
+      "Q": "谁负责数据库迁移？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "王五",
+        "D": "李四"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_007_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_007_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_008_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由陈七负责API改造",
+        "C": "API改造"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_008_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "陈七",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_008_executor",
+      "Q": "谁负责API改造？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "李四",
+        "C": "王五",
+        "D": "陈七"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_008_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_008_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_009_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由王五负责前端重构",
+        "C": "前端重构"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_009_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "王五",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_009_executor",
+      "Q": "谁负责前端重构？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "王五"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_009_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_009_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_010_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_010_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由前端团队负责性能优化",
+        "C": "性能优化"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_010_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "前端团队",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_010_executor",
+      "Q": "谁负责性能优化？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "前端团队"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_010_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_010_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_011_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_011_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由前端团队负责文档编写",
+        "C": "文档编写"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_011_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "赵六",
+        "B": "前端团队",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_011_executor",
+      "Q": "谁负责文档编写？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "前端团队"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_011_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_011_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_012_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_012_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由前端团队负责测试用例",
+        "C": "测试用例"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_012_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "前端团队",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_012_executor",
+      "Q": "谁负责测试用例？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "前端团队"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_012_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_012_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_013_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_013_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由前端团队负责部署配置",
+        "C": "部署配置"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_013_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "前端团队",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_013_executor",
+      "Q": "谁负责部署配置？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "前端团队"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_013_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_013_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_02_014_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，分配了任务",
+        "B": "否，只是在讨论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_02_014_content",
+      "Q": "决策内容是什么？",
+      "A": "B",
+      "options": {
+        "A": "不做这个任务",
+        "B": "由前端团队负责数据库迁移",
+        "C": "数据库迁移"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_02_014_proposer",
+      "Q": "这个任务是谁分配的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "前端团队",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_02_014_executor",
+      "Q": "谁负责数据库迁移？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "陈七",
+        "C": "李四",
+        "D": "前端团队"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_02_014_impact",
+      "Q": "这个决策的影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_02_014_status",
+      "Q": "这个决策的当前状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "in_progress",
+        "C": "completed",
+        "D": "pending_confirmation"
+      },
+      "dimension": "status"
+    }
+  ]
+}

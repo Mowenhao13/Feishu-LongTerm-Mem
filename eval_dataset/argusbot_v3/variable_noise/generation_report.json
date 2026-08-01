@@ -1,0 +1,18 @@
+{
+  "type": "variable_noise",
+  "num_chats_per_ratio": 55,
+  "noise_ratios": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8
+  ],
+  "total_messages": 9845,
+  "total_decisions": 1320,
+  "distractor_count": 5060,
+  "generated_at": "2026-08-01 15:20:54"
+}

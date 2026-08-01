@@ -1,0 +1,1328 @@
+{
+  "triples": [
+    {
+      "head": "Multi-Session 设计文档",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-8839cd"
+    },
+    {
+      "head": "Multi-Session 设计文档",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-8839cd"
+    },
+    {
+      "head": "Multi-Session 设计文档",
+      "relation": "based_on",
+      "tail": "Repo1",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-8839cd"
+    },
+    {
+      "head": "Multica Session Resumption",
+      "relation": "adopts",
+      "tail": "Multi-Session 设计文档",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-8839cd"
+    },
+    {
+      "head": "Repo4 Accessory Sessions",
+      "relation": "related_to",
+      "tail": "Multi-Session 设计文档",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-8839cd"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Session Resumption",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Session Poisoning",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "并发送话",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "AccessorySessions",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "WorktreeOrchestrationTool",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "repo4",
+      "relation": "uses",
+      "tail": "Swift",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "WorktreeOrchestrationTool",
+      "relation": "related_to",
+      "tail": "并行会话编排",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "repo1",
+      "relation": "implements",
+      "tail": "运行时会话管理",
+      "schema": [
+        "ORG",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "repo1",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-a715f5"
+    },
+    {
+      "head": "Multica Session Resumption",
+      "relation": "based_on",
+      "tail": "session_id",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Multica Session Resumption",
+      "relation": "related_to",
+      "tail": "Session Poisoning",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session Poisoning",
+      "relation": "related_to",
+      "tail": "防循环恢复",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session",
+      "relation": "has",
+      "tail": "Messages",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session",
+      "relation": "has",
+      "tail": "Result",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Result",
+      "relation": "has",
+      "tail": "SessionID",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Result",
+      "relation": "has",
+      "tail": "Status",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Result",
+      "relation": "has",
+      "tail": "WorkDir",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "ExecOptions",
+      "relation": "has",
+      "tail": "ResumeSessionID",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "ExecOptions",
+      "relation": "has",
+      "tail": "MaxTurns",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "PriorSessionID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "ResumeSessionID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "CLI",
+      "relation": "uses",
+      "tail": "session",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session Poisoning",
+      "relation": "detects",
+      "tail": "PoisonOutput",
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session Poisoning",
+      "relation": "detects",
+      "tail": "PoisonError",
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session Poisoning",
+      "relation": "detects",
+      "tail": "PoisonTimeout",
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "PoisonOutput",
+      "relation": "related_to",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "PoisonError",
+      "relation": "related_to",
+      "tail": "LLM API 400",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "PoisonTimeout",
+      "relation": "related_to",
+      "tail": "语义不活跃超时",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "GetLastTaskSession",
+      "relation": "uses",
+      "tail": "session_id",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "GetLastTaskSession",
+      "relation": "uses",
+      "tail": "work_dir",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "InsertTaskSession",
+      "relation": "uses",
+      "tail": "session_id",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "InsertTaskSession",
+      "relation": "uses",
+      "tail": "work_dir",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session",
+      "relation": "has",
+      "tail": "is_poisoned",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "Session",
+      "relation": "has",
+      "tail": "status",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "execenv",
+      "relation": "related_to",
+      "tail": "执行环境",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-0089dc"
+    },
+    {
+      "head": "execenv.go",
+      "relation": "responsible_for",
+      "tail": "work_dir_creation",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "execenv.go",
+      "relation": "responsible_for",
+      "tail": "work_dir_restoration",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "execenv.go",
+      "relation": "responsible_for",
+      "tail": "session_id_persistence",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "execenv.go",
+      "relation": "responsible_for",
+      "tail": "gc_metadata_writing",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "execenv.go",
+      "relation": "responsible_for",
+      "tail": "artifact_cleanup",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "AccessorySessions",
+      "relation": "based_on",
+      "tail": "Worktree",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "AccessorySessions",
+      "relation": "uses",
+      "tail": "parallel_session_orchestration",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "OrchestrationSession",
+      "relation": "related_to",
+      "tail": "AccessorySessions",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "OrchestrationSession",
+      "relation": "has_property",
+      "tail": "branchName",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "OrchestrationSession",
+      "relation": "has_property",
+      "tail": "sessionType",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "Orchestrator",
+      "relation": "responsible_for",
+      "tail": "OrchestrationPlan",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "Orchestrator",
+      "relation": "uses",
+      "tail": "worktree_creation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "Orchestrator",
+      "relation": "uses",
+      "tail": "branch_creation",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "runtime.ts",
+      "relation": "responsible_for",
+      "tail": "session_lifecycle_management",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "runtime.ts",
+      "relation": "responsible_for",
+      "tail": "session_context_creation",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "runtime.ts",
+      "relation": "responsible_for",
+      "tail": "state_management",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "runtime.ts",
+      "relation": "responsible_for",
+      "tail": "resource_cleanup",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-c86685"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Session 生命周期",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "并行 Session",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Session 隔离",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Session Poisoning 检测",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "并发控制",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session 生命周期",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并行 Session",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session 隔离",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session Poisoning 检测",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并发控制",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session 生命周期",
+      "relation": "uses",
+      "tail": "session_id",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session 生命周期",
+      "relation": "uses",
+      "tail": "ResumeSessionID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session 生命周期",
+      "relation": "uses",
+      "tail": "PriorSessionID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session 生命周期",
+      "relation": "uses",
+      "tail": "work_dir",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并行 Session",
+      "relation": "uses",
+      "tail": "Orchestrator",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并行 Session",
+      "relation": "uses",
+      "tail": "OrchestrationPlan",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并行 Session",
+      "relation": "uses",
+      "tail": "worktree",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并行 Session",
+      "relation": "uses",
+      "tail": "CLI",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session Poisoning 检测",
+      "relation": "uses",
+      "tail": "Output-side 检测",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session Poisoning 检测",
+      "relation": "uses",
+      "tail": "Error-side 检测",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session Poisoning 检测",
+      "relation": "uses",
+      "tail": "Timeout-side 检测",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "Session Poisoning 检测",
+      "relation": "uses",
+      "tail": "GetLastTaskSession",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并发控制",
+      "relation": "uses",
+      "tail": "slot-before-claim",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并发控制",
+      "relation": "uses",
+      "tail": "maxConcurrentTasks",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "并发控制",
+      "relation": "uses",
+      "tail": "local_directory 路径互斥锁",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "混合模式",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "混合模式",
+      "relation": "uses",
+      "tail": "串行恢复上下文",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "混合模式",
+      "relation": "uses",
+      "tail": "并行独立",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "session_id",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "branchName",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "ResumeSessionID",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "resolveSessionID",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "三侧 poisoned 检测",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "slot-before-claim",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "worktree orchestration",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "worktree",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "work_dir",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "maxConcurrentTasks=20",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "local_directory 锁",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-33c3c3"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "SessionID",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "PriorID",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "WorkDir",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "BranchName",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "IsPoisoned",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "TokenUsage",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "StartedAt",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "SessionInfo",
+      "relation": "contains",
+      "tail": "CompletedAt",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "slot-before-claim",
+      "relation": "adopts",
+      "tail": "并发槽位",
+      "schema": [
+        "CONCEPT",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "slot-before-claim",
+      "relation": "prevents",
+      "tail": "任务已dispatch但客户端满负载状态",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "并发槽位",
+      "relation": "limits",
+      "tail": "同一Daemon同时执行的CLI实例数",
+      "schema": [
+        "CONCEPT",
+        "limits",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "并发槽位",
+      "relation": "default_value",
+      "tail": "20",
+      "schema": [
+        "CONCEPT",
+        "default_value",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "每个CLI实例",
+      "relation": "binds_to",
+      "tail": "一个session",
+      "schema": [
+        "CONCEPT",
+        "binds_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "超出限制",
+      "relation": "triggers",
+      "tail": "poll循环等待",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "路径互斥锁",
+      "relation": "supplements",
+      "tail": "并发槽位",
+      "schema": [
+        "CONCEPT",
+        "supplements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "路径互斥锁",
+      "relation": "ensures",
+      "tail": "同一local_directory的任务串行执行",
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    },
+    {
+      "head": "路径互斥锁",
+      "relation": "prevents",
+      "tail": "多个Agent同时修改同一文件",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b5bac1"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 117,
+    "unique_schemas": 27,
+    "schema_distribution": {
+      "('CONCEPT', 'based_on', 'ORG')": 3,
+      "('CONCEPT', 'adopts', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 6,
+      "('ORG', 'implements', 'CONCEPT')": 6,
+      "('ORG', 'uses', 'TECHNOLOGY')": 3,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'has', 'CONCEPT')": 9,
+      "('SYSTEM', 'uses', 'CONCEPT')": 13,
+      "('CONCEPT', 'detects', 'CONCEPT')": 3,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 2,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 20,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 10,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 2,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 2,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 5,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 11,
+      "('CONCEPT', 'contains', 'CONCEPT')": 8,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 2,
+      "('CONCEPT', 'limits', 'CONCEPT')": 1,
+      "('CONCEPT', 'default_value', 'CONCEPT')": 1,
+      "('CONCEPT', 'binds_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'triggers', 'CONCEPT')": 1,
+      "('CONCEPT', 'supplements', 'CONCEPT')": 1,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 27,
+    "fact_layer_size": 117,
+    "passage_layer_size": 6
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "feishu-mem": {
+      "command": "/Users/halllo/projects/local/feishu-mem/.venv/bin/python3",
+      "args": ["/Users/halllo/projects/local/feishu-mem/src/mcp_server/server.py"],
+      "env": {
+        "PYTHONPATH": "/Users/halllo/projects/local/feishu-mem",
+        "MODEL_NAME": "gpt-4o",
+        "BASE_URL": "https://api.openai.com/v1",
+        "API_KEY": ""
+      }
+    }
+  }
+}

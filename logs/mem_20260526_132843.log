@@ -1,0 +1,49 @@
+2026-05-26 13:28:43 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260526_132843.log
+2026-05-26 13:28:43 - __main__ - INFO - ========================================
+2026-05-26 13:28:43 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-26 13:28:43 - __main__ - INFO - ========================================
+2026-05-26 13:28:43 - __main__ - INFO - Project: default
+2026-05-26 13:28:43 - __main__ - INFO - Storage: data
+2026-05-26 13:28:43 - __main__ - INFO - DocsDir: data/docs
+2026-05-26 13:28:43 - __main__ - INFO - [GitStorage] initialized
+2026-05-26 13:28:44 - __main__ - INFO - [MemoryGraph] loaded 24 decisions from Git
+2026-05-26 13:28:44 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-26 13:28:44 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-26 13:28:44 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-26 13:28:44 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-26 13:28:44 - src.core.engine - INFO - Loaded 24 decisions, 1 topics
+2026-05-26 13:28:44 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-26 13:28:44 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-26 13:28:44 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-26 13:28:44 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-26 13:28:44 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-26 13:28:44 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-26 13:28:44 - __main__ - INFO - [Engine] Embedding+Reranker injected for similarity search
+2026-05-26 13:28:44 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-26 13:28:44 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-26 13:28:44 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-26 13:28:44 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-26 13:28:44 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-26 13:28:44 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-26 13:28:44 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-26 13:28:44 - __main__ - INFO - [lark_im] EpisodeManager created: gap=30min max_msgs=100 max_dur=120min
+2026-05-26 13:28:44 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-26 13:28:44 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-26 13:28:44 - __main__ - INFO - [lark_im] EmbeddingProvider injected for episode boundary detection
+2026-05-26 13:28:44 - src.adapter.lark_im - INFO - WS listener started
+2026-05-26 13:28:44 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-26 13:28:44 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-26 13:28:44 - __main__ - INFO - [Episode] Check loop task created
+2026-05-26 13:28:44 - __main__ - INFO - [Detectors] Configuration:
+2026-05-26 13:28:44 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-26 13:28:44 - __main__ - INFO -   lark_doc: disabled
+2026-05-26 13:28:44 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-26 13:28:44 - __main__ - INFO - [Episode] Check loop started (interval=10s)
+2026-05-26 13:28:47 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644068213931707350&access_key=3a94f82836873671d90f056db90f9b2c&service_id=33554678&ticket=e6348b5b-6fc3-4a17-a2cc-d54cc522b3ab [conn_id=7644068213931707350]
+2026-05-26 13:28:51 - __main__ - INFO - [System] Shutting down...
+2026-05-26 13:28:51 - src.adapter.lark_im - INFO - WS listener stopped
+2026-05-26 13:28:51 - __main__ - INFO - [lark_im] WS listener stopped
+2026-05-26 13:28:51 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 13:28:51 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-26 13:28:51 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)
+2026-05-26 13:28:51 - __main__ - INFO - [System] Shutdown complete

@@ -1,0 +1,66 @@
+2026-05-28 10:45:43 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_104543.log
+2026-05-28 10:45:43 - src.eval_runner - INFO - MemoryGraph loaded: 2 decisions
+2026-05-28 10:45:43 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-28 10:45:43 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-28 10:45:43 - src.core.engine - INFO - Loaded 2 decisions, 1 topics
+2026-05-28 10:45:43 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=1 topics=1
+2026-05-28 10:45:43 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-28 10:45:43 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-28 10:45:43 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-28 10:45:43 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-28 10:45:43 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-28 10:45:43 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-28 10:45:43 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-28 10:45:43 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 1 episode(s) from data/suspend_pool.json
+2026-05-28 10:45:43 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-28 10:45:43 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-05-28 10:45:43 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=技术选型：新项目认证方案决定采用JWT，无状态架构最适合
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.22s value_range=[-10.1172, 9.0703] mean=0.0043 std=2.5048
+2026-05-28 10:45:44 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_a9f8a81f6 chat=eval sim=1.0000 >= 0.55 ✓
+2026-05-28 10:45:44 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_a9f8a81f6 (chat=eval, msgs=8, pool=0/20)
+2026-05-28 10:45:44 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_a9f8a81f6 (msgs=8)
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=技术选型：新项目认证方案决定采用JWT，因为我们需要前后端分离
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-10.9141, 8.1484] mean=0.0248 std=2.4561
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=技术选型：新项目认证方案决定采用JWT，不依赖服务端Session
+2026-05-28 10:45:44 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-10.7031, 10.0078] mean=-0.0203 std=2.5637
+2026-05-28 10:45:45 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-05-28 10:45:45 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=经过评估，技术选型认证方案决定采用JWT实现，全体通过
+2026-05-28 10:45:45 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.9609, 10.1641] mean=-0.0168 std=2.5951
+2026-05-28 10:45:45 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-28 10:45:45 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=技术选型认证方案决定采用JWT实现，微服务场景最合适
+2026-05-28 10:45:45 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-8.6328, 9.9375] mean=-0.0109 std=2.5737
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=确认了，技术选型认证方案决定采用JWT实现，开始开发
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-9.5234, 9.8906] mean=0.0206 std=2.5527
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=23 model=Qwen3-Embedding-4B
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=23 preview=技术选型认证方案决定采用JWT实现，就这么定了
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-10.5781, 10.4453] mean=-0.0235 std=2.5810
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-05-28 10:45:46 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=好，技术选型认证方案决定采用JWT实现，立刻推进
+2026-05-28 10:45:47 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.4219, 9.7656] mean=-0.0143 std=2.5785
+2026-05-28 10:45:49 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_a9f8a81f6 (chat=eval, msgs=16, pool=1/20)
+2026-05-28 10:45:49 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-28 10:45:49 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_a9f8a81f6 (msgs=16)
+2026-05-28 10:45:49 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_a9f8a81f6 chat=eval msgs=16 len=451
+2026-05-28 10:45:49 - src.core.engine - INFO - [LLM] Injected 2 existing decisions as context
+2026-05-28 10:45:49 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=562 content=⚠️ 以下决策已存在于系统中（仅作参考，不要因此跳过提取）。请分析新对话是否与已有决策冲突或需要更新，如有请正常提取新的
+2026-05-28 10:45:49 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=562)
+2026-05-28 10:45:51 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.61s
+2026-05-28 10:45:51 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-28 10:45:51 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=ddb493f449d8 title=新项目认证方案采用JWT source=im
+2026-05-28 10:45:51 - src.core.engine - INFO - [Mutation] Existing by sid: sid=ddb493f449d8 v7
+2026-05-28 10:45:51 - src.core.engine - INFO - Updated decision: ddb493f449d8 v8
+2026-05-28 10:45:51 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=ddb493f449d8 v9
+2026-05-28 10:45:51 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 10:45:51 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 10:45:52 - src.view.client - ERROR - Failed to upsert record for ddb493f449d8: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 10:45:52 - src.view.syncer - INFO - [BaseView] Synced decision ddb493f449d8 v8
+2026-05-28 10:45:52 - src.core.engine - INFO - [Mutation] Base sync triggered for UPDATE: sid=ddb493f449d8
+2026-05-28 10:45:52 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-28 10:45:52 - src.core.engine - INFO - [Engine] <<< _process_episode done time=2.86s
+2026-05-28 10:45:52 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-28 10:45:52 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-28 10:45:52 - src.core.engine - INFO - Synced 1 dirty decisions to storage
+2026-05-28 10:45:52 - src.core.engine - INFO - MemoryEngine stopped (applied=1, failed=0)

@@ -1,0 +1,11 @@
+2026-05-25 21:42:18 - component_test - INFO - [LLM Test] >>> Sending prompt (len=217)
+2026-05-25 21:42:20 - component_test - INFO - [LLM Test] <<< Response time=2.65s len=172
+2026-05-25 21:42:20 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-25 21:42:20 - component_test - INFO - [Embedding Test] >>> Encoding 6 texts
+2026-05-25 21:42:20 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=6 chars=152 model=Qwen3-Embedding-4B
+2026-05-25 21:42:21 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=6 dim=2560 time=0.25s
+2026-05-25 21:42:21 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-25 21:42:21 - component_test - INFO - [Reranker Test] >>> Reranking query='前端技术选型' with 5 docs
+2026-05-25 21:42:21 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-25 21:42:21 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=前端技术选型 docs=5
+2026-05-25 21:42:21 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[0.8073, 0.8007, 0.6739, 0.8075, 0.6752] time=0.12s

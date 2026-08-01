@@ -1,0 +1,3292 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        0,
+        63,
+        64
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        1,
+        5
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "TECHNOLOGY",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 10,
+      "fact_indices": [
+        3,
+        20,
+        35,
+        49,
+        50,
+        51,
+        52,
+        57,
+        58,
+        62
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        4,
+        14
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "TECHNOLOGY",
+        "implements",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        7,
+        54,
+        55
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        8,
+        13
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 16,
+      "fact_indices": [
+        9,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        94
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 9,
+      "fact_indices": [
+        10,
+        16,
+        39,
+        43,
+        44,
+        45,
+        46,
+        48,
+        53
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        11,
+        12
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "TECHNOLOGY",
+        "named_as",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        15
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        17,
+        18
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "SYSTEM",
+        "extends",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        19
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        36,
+        93
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        37,
+        38,
+        85,
+        86
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        40,
+        47
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 6,
+      "fact_indices": [
+        41,
+        73,
+        76,
+        77,
+        84,
+        87
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        42,
+        89
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        56
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        59,
+        90,
+        91,
+        92
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "PRODUCT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        60
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "PRODUCT",
+        "implemented_by",
+        "ORG"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        61
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "PRODUCT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        65
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "PRODUCT",
+        "based_on",
+        "ORG"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        66
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "PRODUCT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        67,
+        78
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 10,
+      "fact_indices": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        79,
+        80,
+        81,
+        82,
+        95
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        74,
+        75,
+        83
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        88
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "AgentHub",
+        "related_to",
+        "多人协作"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "LightAgent",
+        "adopts",
+        "思维树（ToT）模块"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "思维树（ToT）模块",
+        "supports",
+        "复杂任务分解和多步推理"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "LightAgent",
+        "uses",
+        "自适应工具过滤"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "自适应工具过滤",
+        "uses",
+        "ToolRegistry.filter_tools"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "LightAgent",
+        "adopts",
+        "LightSwarm"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "LightSwarm",
+        "implements",
+        "意图判断和任务转移"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "LightAgent",
+        "compared_with",
+        "Swarm"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "LightAgent",
+        "supports",
+        "持久化记忆（Memory）"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "openai-agents-python",
+        "uses",
+        "REPL"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "openai-agents-python",
+        "adopts",
+        "上下文策略"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "上下文策略",
+        "includes",
+        "本地上下文"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "上下文策略",
+        "includes",
+        "llm上下文"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "openai-agents-python",
+        "supports",
+        "agent控制权交接"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "agent控制权交接",
+        "uses",
+        "handoff工具"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "handoff工具",
+        "named_as",
+        "transfer_to_<agent_name>"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "Deerflow",
+        "adopts",
+        "Harness与app分离"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "Harness",
+        "responsible_for",
+        "智能体编排、工具集、沙箱环境、模型工厂、记忆管理"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "app",
+        "responsible_for",
+        "API接口封装、身份验证、第三方平台集成"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "Deerflow",
+        "extends",
+        "LangGraph的AgentState"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "Deerflow",
+        "uses",
+        "中间件链"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "AgentHub",
+        "uses",
+        "ThreadData"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Uploads"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Sandbox"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "AgentHub",
+        "uses",
+        "DanglingToolCall"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "AgentHub",
+        "uses",
+        "LLMErrorHandling"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Guardrail"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "AgentHub",
+        "uses",
+        "SandboxAudit"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Summarization"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "AgentHub",
+        "uses",
+        "TodoList"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Memory"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "AgentHub",
+        "uses",
+        "ViewImage"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "AgentHub",
+        "uses",
+        "SubagentLimit"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "AgentHub",
+        "uses",
+        "LoopDetection"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Clarification"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "AgentHub",
+        "uses",
+        "沙箱机制"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "沙箱机制",
+        "based_on",
+        "shared thread_id"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "SummarizationMiddleware",
+        "responsible_for",
+        "压缩历史对话"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "Memory Middleware",
+        "responsible_for",
+        "注入持久化记忆"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "AI-Scientist-v2",
+        "adopts",
+        "Agentic Tree Search"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "AI-Scientist-v2",
+        "rejects",
+        "DAG工作流"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "LangGraph",
+        "uses",
+        "DAG工作流"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "Agentic Tree Search",
+        "related_to",
+        "AI-Scientist-v2"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "AgentHub 多人协作",
+        "adopts",
+        "并行探索"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "AgentHub 多人协作",
+        "adopts",
+        "回溯"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "AgentHub 多人协作",
+        "adopts",
+        "蒙特卡洛式路径评估"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "AgentHub 多人协作",
+        "adopts",
+        "树状决策分叉"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "AI Scientist-v2",
+        "rejects",
+        "代码模板依赖"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "AI Scientist-v2",
+        "adopts",
+        "端到端多阶段实验闭环"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "初始实现"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "基线调优"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "创新研究"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "AI Scientist-v2",
+        "uses",
+        "消融实验"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "AI Scientist-v2",
+        "adopts",
+        "VLM反馈循环"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "AI Scientist-v2",
+        "compared_with",
+        "ChatDev"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "AI Scientist-v2",
+        "compared_with",
+        "AutoGen"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "ChatDev",
+        "depends_on",
+        "代码模板"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "AutoGen",
+        "uses",
+        "纯文本报错反馈"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "AutoGen",
+        "uses",
+        "JSON数据对齐"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "Kanban",
+        "related_to",
+        "多Agent调度"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "Vibe Kanban",
+        "based_on",
+        "Kanban"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "Vibe Kanban",
+        "implemented_by",
+        "BloopAI"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Kanban机制"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "Hermess Kanban",
+        "related_to",
+        "Kanban机制"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "Hermess Kanban",
+        "related_to",
+        "Hermes handoff 机制"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 65,
+      "content": [
+        "Microsoft AutoGen",
+        "related_to",
+        "Agentic AI 沟通框架"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 66,
+      "content": [
+        "Microsoft AutoGen",
+        "based_on",
+        "https://github.com/microsoft/autogen"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 67,
+      "content": [
+        "Multi-Agent Team",
+        "related_to",
+        "Microsoft AutoGen"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 68,
+      "content": [
+        "RoundRobinGroupChat",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 69,
+      "content": [
+        "SelectorGroupChat",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 70,
+      "content": [
+        "Swarm",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 71,
+      "content": [
+        "MagenticOneGroupChat",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 72,
+      "content": [
+        "GraphFlow",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 73,
+      "content": [
+        "RoundRobinGroupChat",
+        "uses",
+        "轮询顺序"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 74,
+      "content": [
+        "SelectorGroupChat",
+        "uses",
+        "LLM"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 75,
+      "content": [
+        "Swarm",
+        "uses",
+        "HandoffMessage"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 76,
+      "content": [
+        "MagenticOneGroupChat",
+        "uses",
+        "账本协调"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 77,
+      "content": [
+        "GraphFlow",
+        "uses",
+        "有向图"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 78,
+      "content": [
+        "AgentChat",
+        "related_to",
+        "Microsoft AutoGen"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 79,
+      "content": [
+        "AssistantAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 80,
+      "content": [
+        "CodeExecutorAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 81,
+      "content": [
+        "UserProxyAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 82,
+      "content": [
+        "SocietyOfMindAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 83,
+      "content": [
+        "AssistantAgent",
+        "uses",
+        "语言模型"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 84,
+      "content": [
+        "AssistantAgent",
+        "uses",
+        "工具调用"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 85,
+      "content": [
+        "CodeExecutorAgent",
+        "responsible_for",
+        "代码生成和执行"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 86,
+      "content": [
+        "UserProxyAgent",
+        "responsible_for",
+        "人工交互"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 87,
+      "content": [
+        "SocietyOfMindAgent",
+        "uses",
+        "团队包装"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 88,
+      "content": [
+        "microsoft/agent-framework",
+        "implements",
+        "context隔离"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 89,
+      "content": [
+        "context隔离",
+        "related_to",
+        "AgentHub 多人协作"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 90,
+      "content": [
+        "EverMemBench",
+        "related_to",
+        "Memory"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 91,
+      "content": [
+        "EvoAgentBench",
+        "related_to",
+        "Memory"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 92,
+      "content": [
+        "HyperMem",
+        "related_to",
+        "Memory"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 93,
+      "content": [
+        "HyperMem",
+        "based_on",
+        "超图记忆构建"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 94,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Mcp-ssh-manager"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        9
+      ]
+    },
+    {
+      "idx": 95,
+      "content": [
+        "Mcp-ssh-manager",
+        "related_to",
+        "https://deepwiki.com/search/_a0c1208c-2152-4a74-9469-749bff409326?mode=fast"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        9
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-3093ec5e76123d52",
+      "content": "# AgentHub 多人协作",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-f67386ba8a495d8e",
+      "content": "## TODO\n\n\n\nTODO",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": []
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "content": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "content": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "content": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    },
+    {
+      "idx": 5,
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "content": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ]
+    },
+    {
+      "idx": 6,
+      "chunk_id": "chunk-006-b59c1316537c3070",
+      "content": "## Context隔离\n\n\n\n### microsoft/agent-framework\n\n\n\n框架通过以下机制实现context隔离：\n\n\n\ncontext隔离机制",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        88,
+        89
+      ]
+    },
+    {
+      "idx": 7,
+      "chunk_id": "chunk-007-9380246375552198",
+      "content": "## Memory\n\n\n\n### Benchmarks\n\n\n\n- EverMemBench(评估记忆质量)\n\n- EvoAgentBench(评估智能体自我进化能力)\n\n### Memory结构\n\n\n\n#### HyperMem（超图记忆构建）",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        90,
+        91,
+        92,
+        93
+      ]
+    },
+    {
+      "idx": 8,
+      "chunk_id": "chunk-008-27d616818380851a",
+      "content": "## AI Observability",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": []
+    },
+    {
+      "idx": 9,
+      "chunk_id": "chunk-009-0a6af169005f3b3b",
+      "content": "## 插件\n\n\n\n### Mcp-ssh-manager\n\n\n\nhttps://deepwiki.com/search/_a0c1208c-2152-4a74-9469-749bff409326?mode=fast",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "fact_indices": [
+        94,
+        95
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "AgentHub",
+        "related_to",
+        "多人协作"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-3093ec5e76123d52",
+      "passage": "# AgentHub 多人协作",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LightAgent",
+        "adopts",
+        "思维树（ToT）模块"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "思维树（ToT）模块",
+        "supports",
+        "复杂任务分解和多步推理"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LightAgent",
+        "uses",
+        "自适应工具过滤"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "自适应工具过滤",
+        "uses",
+        "ToolRegistry.filter_tools"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LightAgent",
+        "adopts",
+        "LightSwarm"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LightSwarm",
+        "implements",
+        "意图判断和任务转移"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LightAgent",
+        "compared_with",
+        "Swarm"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LightAgent",
+        "supports",
+        "持久化记忆（Memory）"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "openai-agents-python",
+        "uses",
+        "REPL"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "openai-agents-python",
+        "adopts",
+        "上下文策略"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "上下文策略",
+        "includes",
+        "本地上下文"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "上下文策略",
+        "includes",
+        "llm上下文"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "openai-agents-python",
+        "supports",
+        "agent控制权交接"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "agent控制权交接",
+        "uses",
+        "handoff工具"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "handoff工具",
+        "named_as",
+        "transfer_to_<agent_name>"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "named_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Deerflow",
+        "adopts",
+        "Harness与app分离"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Harness",
+        "responsible_for",
+        "智能体编排、工具集、沙箱环境、模型工厂、记忆管理"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "app",
+        "responsible_for",
+        "API接口封装、身份验证、第三方平台集成"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Deerflow",
+        "extends",
+        "LangGraph的AgentState"
+      ],
+      "schema": [
+        "SYSTEM",
+        "extends",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Deerflow",
+        "uses",
+        "中间件链"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "passage": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "ThreadData"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Uploads"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Sandbox"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "DanglingToolCall"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "LLMErrorHandling"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Guardrail"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "SandboxAudit"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Summarization"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "TodoList"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Memory"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "ViewImage"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "SubagentLimit"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "LoopDetection"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Clarification"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "沙箱机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "沙箱机制",
+        "based_on",
+        "shared thread_id"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "SummarizationMiddleware",
+        "responsible_for",
+        "压缩历史对话"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Memory Middleware",
+        "responsible_for",
+        "注入持久化记忆"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI-Scientist-v2",
+        "adopts",
+        "Agentic Tree Search"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI-Scientist-v2",
+        "rejects",
+        "DAG工作流"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "LangGraph",
+        "uses",
+        "DAG工作流"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Agentic Tree Search",
+        "related_to",
+        "AI-Scientist-v2"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "passage": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub 多人协作",
+        "adopts",
+        "并行探索"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub 多人协作",
+        "adopts",
+        "回溯"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub 多人协作",
+        "adopts",
+        "蒙特卡洛式路径评估"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub 多人协作",
+        "adopts",
+        "树状决策分叉"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "rejects",
+        "代码模板依赖"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "adopts",
+        "端到端多阶段实验闭环"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "初始实现"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "基线调优"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "创新研究"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "uses",
+        "消融实验"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "adopts",
+        "VLM反馈循环"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "compared_with",
+        "ChatDev"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AI Scientist-v2",
+        "compared_with",
+        "AutoGen"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "ChatDev",
+        "depends_on",
+        "代码模板"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AutoGen",
+        "uses",
+        "纯文本报错反馈"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AutoGen",
+        "uses",
+        "JSON数据对齐"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Kanban",
+        "related_to",
+        "多Agent调度"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "based_on",
+        "Kanban"
+      ],
+      "schema": [
+        "PRODUCT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Vibe Kanban",
+        "implemented_by",
+        "BloopAI"
+      ],
+      "schema": [
+        "PRODUCT",
+        "implemented_by",
+        "ORG"
+      ],
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "passage": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Kanban机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Hermess Kanban",
+        "related_to",
+        "Kanban机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Hermess Kanban",
+        "related_to",
+        "Hermes handoff 机制"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Microsoft AutoGen",
+        "related_to",
+        "Agentic AI 沟通框架"
+      ],
+      "schema": [
+        "PRODUCT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Microsoft AutoGen",
+        "based_on",
+        "https://github.com/microsoft/autogen"
+      ],
+      "schema": [
+        "PRODUCT",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Multi-Agent Team",
+        "related_to",
+        "Microsoft AutoGen"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "RoundRobinGroupChat",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "SelectorGroupChat",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Swarm",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "MagenticOneGroupChat",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "GraphFlow",
+        "related_to",
+        "Multi-Agent Team"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "RoundRobinGroupChat",
+        "uses",
+        "轮询顺序"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "SelectorGroupChat",
+        "uses",
+        "LLM"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Swarm",
+        "uses",
+        "HandoffMessage"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "MagenticOneGroupChat",
+        "uses",
+        "账本协调"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "GraphFlow",
+        "uses",
+        "有向图"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentChat",
+        "related_to",
+        "Microsoft AutoGen"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AssistantAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "CodeExecutorAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "UserProxyAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "SocietyOfMindAgent",
+        "related_to",
+        "AgentChat"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AssistantAgent",
+        "uses",
+        "语言模型"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AssistantAgent",
+        "uses",
+        "工具调用"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "CodeExecutorAgent",
+        "responsible_for",
+        "代码生成和执行"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "UserProxyAgent",
+        "responsible_for",
+        "人工交互"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "SocietyOfMindAgent",
+        "uses",
+        "团队包装"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "passage": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "microsoft/agent-framework",
+        "implements",
+        "context隔离"
+      ],
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-b59c1316537c3070",
+      "passage": "## Context隔离\n\n\n\n### microsoft/agent-framework\n\n\n\n框架通过以下机制实现context隔离：\n\n\n\ncontext隔离机制",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "context隔离",
+        "related_to",
+        "AgentHub 多人协作"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-b59c1316537c3070",
+      "passage": "## Context隔离\n\n\n\n### microsoft/agent-framework\n\n\n\n框架通过以下机制实现context隔离：\n\n\n\ncontext隔离机制",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "EverMemBench",
+        "related_to",
+        "Memory"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-9380246375552198",
+      "passage": "## Memory\n\n\n\n### Benchmarks\n\n\n\n- EverMemBench(评估记忆质量)\n\n- EvoAgentBench(评估智能体自我进化能力)\n\n### Memory结构\n\n\n\n#### HyperMem（超图记忆构建）",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "EvoAgentBench",
+        "related_to",
+        "Memory"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-9380246375552198",
+      "passage": "## Memory\n\n\n\n### Benchmarks\n\n\n\n- EverMemBench(评估记忆质量)\n\n- EvoAgentBench(评估智能体自我进化能力)\n\n### Memory结构\n\n\n\n#### HyperMem（超图记忆构建）",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "HyperMem",
+        "related_to",
+        "Memory"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-9380246375552198",
+      "passage": "## Memory\n\n\n\n### Benchmarks\n\n\n\n- EverMemBench(评估记忆质量)\n\n- EvoAgentBench(评估智能体自我进化能力)\n\n### Memory结构\n\n\n\n#### HyperMem（超图记忆构建）",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "HyperMem",
+        "based_on",
+        "超图记忆构建"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-9380246375552198",
+      "passage": "## Memory\n\n\n\n### Benchmarks\n\n\n\n- EverMemBench(评估记忆质量)\n\n- EvoAgentBench(评估智能体自我进化能力)\n\n### Memory结构\n\n\n\n#### HyperMem（超图记忆构建）",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Mcp-ssh-manager"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-009-0a6af169005f3b3b",
+      "passage": "## 插件\n\n\n\n### Mcp-ssh-manager\n\n\n\nhttps://deepwiki.com/search/_a0c1208c-2152-4a74-9469-749bff409326?mode=fast",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    },
+    {
+      "triple": [
+        "Mcp-ssh-manager",
+        "related_to",
+        "https://deepwiki.com/search/_a0c1208c-2152-4a74-9469-749bff409326?mode=fast"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-0a6af169005f3b3b",
+      "passage": "## 插件\n\n\n\n### Mcp-ssh-manager\n\n\n\nhttps://deepwiki.com/search/_a0c1208c-2152-4a74-9469-749bff409326?mode=fast",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-3093ec5e76123d52",
+      "chunk_text": "# AgentHub 多人协作",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-f67386ba8a495d8e",
+      "chunk_text": "## TODO\n\n\n\nTODO",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-4929b61c87c6a76c",
+      "chunk_text": "## 协作\n\n\n\n### Light-agent\n\n\n\nLightAgent/README.zh-CN.md at main\n\n\n\n特点：\n\n\n\n- 内置带反思的思维树（ToT）模块，支持复杂任务分解和多步推理，提升任务处理能力。阶段1：初始规划\n\n使用 ToT 模型生成初始的工具使用计划\n\n\n\nsystem_prompt 包含工具列表和当前时间信息\n\n\n\n- 阶段2：反思优化\n\n\n\n要求模型反思初始回答，严格按照工具列表重新规划\n\n\n\n不可以创造新的工具，只输出新的任务规划\n\n\n\n- 阶段3：工具提取\n\n\n\n强制 JSON 格式输出，仅提取工具名称\n\n\n\n使用 response_format={&#34;type&#34;: &#34;json_object&#34;} 确保结构化输出\n\n\n\n- 自适应工具过滤：如果启用 filter_tools，使用 ToolRegistry.filter_tools 过滤工具 支持从大量工具中智能筛选相关工具，降低 Token 消耗\n\n\n\n- 比Swarm更简单的多智能体协同，内置的LightSwarm实现意图判断和任务转移功能，能够更智能地处理用户输入，并根据需要将任务转移给其他代理。\n\n- 清晰地展示了如何为 Agent 注入“持久化记忆（Memory）\n\n### Openai-agents-python\n\n\n\nhttps://github.com/openai/openai-agents-python\n\n\n\n- REPL 快速验证智能体行为 用于调试\n\n- 上下文策略：本地上下文，llm上下文 OpenAI-agent-python上下文策略\n\n- agent控制权交接：当 LLM 决定将任务委派给另一个智能体时，它会调用相应的 handoff 工具（默认命名为 transfer_to_&lt;agent_name&gt;），控制权随即转移到目标智能体\n\n### Deerflow\n\n\n\nhttps://github.com/bytedance/deer-flow/blob/main/README_zh.md\n\n\n\n- Harness与app分离 Harness负责智能体编排、工具集、沙箱环境、模型工厂、记忆管理 app负责API 接口封装、身份验证、第三方平台（飞书/Slack等）集成\n\n- 状态管理：扩展了 LangGraph 的 AgentState，增加了 sandbox（沙箱信息）、artifacts（制品路径）、todos（任务清单）等字段，用于在节点间传递复杂上下文\n\n- 中间件链：\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-d6c0e61eb451dc86",
+      "chunk_text": "|顺序|中间件名称|核心职责||---|---|---||1-3|基础基础设施|ThreadData 初始化线程目录，Uploads 注入上传文件，Sandbox 分配执行环境 CLAUDE\\.md:158\\-160。||4-5|错误处理|DanglingToolCall 补全缺失的工具响应，LLMErrorHandling 规范化模型调用失败 CLAUDE\\.md:161\\-162。||6-8|安全与审计|Guardrail 进行工具调用鉴权，SandboxAudit 记录安全日志 CLAUDE\\.md:163\\-164。||9-11|上下文管理|Summarization 进行长文本摘要，TodoList 管理规划模式任务，Memory 异步更新持久化记忆 CLAUDE\\.md:166\\-170。||12-14|视觉与限制|ViewImage 注入图片数据，SubagentLimit 限制并行子智能体数量 CLAUDE\\.md:171\\-173。||15-18|循环与拦截|LoopDetection 阻断死循环，Clarification 拦截澄清请求并中断执行（必须最后） CLAUDE\\.md:174\\-175。|\n\n\n\n- 沙箱机制：多智能体协作通过共享 thread_id 来实现对同一个沙箱实例的并发访问和状态同步。DeerFlow沙箱机制\n\n- 上下文工程流：上下文过长时，SummarizationMiddleware 会压缩历史对话记忆注入: Memory Middleware 将跨会话的持久化记忆注入到系统提示词中文件卸载: 中间结果被写入沙箱文件系统，而非保留在上下文窗口中\n\n### AI-Scientist-v2\n\n\n\nAI-scientist-v2\n\n\n\n#### 核心协作范式的飞跃：从“工作流”到“代理树搜索 (Agentic Tree Search)”\n\n\n\n传统的项目（如 LangGraph）极其依赖人类预设的有向无环图（DAG）或状态机。Agent 该怎么走第一步、报错了怎么退回，全靠人类工程师在代码里写死。\n\n\n\n- AI Scientist-v2 的突破：它抛弃了死板的工作流，引入了 Agentic Tree Search（代理树搜索） 算法。\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-0b3ddd8f60c6decf",
+      "chunk_text": "- 它是怎么做的：系统在面对“提出科学假设并验证”这种长周期、高模糊度的任务时，会将每一步决策（比如：选择方案 A 还是方案 B？代码这样改还是那样改？）看作树的一个分叉。Agent 团队会进行并行探索、回溯（Backtracking）和蒙特卡洛式的路径评估。它允许 Agent 自己发现死胡同、自己斩断错误分支并主动调头，具有极高的探索自由度。\n\n#### 代码生成的本质改变：脱离“模板依赖”，实现真正的“代码泛化”\n\n\n\n在旧版本（v1）或 ChatDev 等传统的多 Agent 编码项目中，Agent 之所以能写出代码，很大程度上依赖于人类提前喂给它的“代码模板”（Code Templates）和严格的脚手架限制。一旦脱离这个特定领域，Agent 就会抓瞎。\n\n\n\n- AI Scientist-v2 的突破：实现了端到端的多阶段实验闭环。它不需要人类给模板，而是分为四个严密的科学实验阶段：初始实现（自主搭建基础代码与验证）基线调优（超参数多维搜索与测试）创新研究（探索新方法）消融实验（评估各组件贡献度）\n\n- 亮点：它能有效泛化到完全不同的机器学习和科学领域。Agent 不仅仅是在“写代码”，而是在“通过写代码和跑实验来验证它自己提出的科学假设”。\n\n#### 闭环评测的进化：集成“视觉-语言模型（VLM）反馈循环”\n\n\n\n普通的多 Agent 框架（如 AutoGen），Agent 之间的反馈局限于“纯文本的报错（Traceback）”或 “JSON 数据对齐”。\n\n\n\n- AI Scientist-v2 的突破：深度集成了 VLM（视觉-语言模型）反馈循环。\n\n### Kanban\n\n\n\n#### Kanban 多 agent 调度\n\n\n\nhttps://www.xiaohongshu.com/discovery/item/69f9a0df0000000038037336?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABAOVvZlJ_SyGqUTFNIY6_7jLRi76L5WRLNilBmDl6wo8=&amp;xsec_source=pc_share\n\n\n\n#### Vibe Kanban\n\n\n\nhttps://github.com/BloopAI/vibe-kanban\n\n\n\n### Kanban描述\n\n\n",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 4
+    },
+    {
+      "chunk_id": "chunk-005-df027bfb695042ed",
+      "chunk_text": "https://www.xiaohongshu.com/discovery/item/69fe7bdd0000000035031997?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABcGfUuNatlaUGKyK-9Y9hU3EX4DUYKwKWj5wZYZcdVN4=&amp;xsec_source=pc_share\n\n\n\n### Kanban机制\n\n\n\nKanban机制\n\n\n\n#### Hermess Kanban\n\n\n\nHermes agent Kanban\n\n\n\nHermes handoff 机制\n\n\n\n### Microsoft AutoGen\n\n\n\nhttps://github.com/microsoft/autogen\n\n\n\nAgentic AI 沟通框架\n\n\n\n#### Multi-Agent Team\n\n\n\n##### 预定义的多智能体团队模式：\n\n\n\n|团队类型|描述|使用场景||---|---|---||RoundRobinGroupChat|代理按轮询顺序轮流发言|简单的协作任务，如反思模式||SelectorGroupChat|使用 LLM 根据上下文动态选择下一个发言者|需要动态协调的复杂任务||Swarm|代理通过 HandoffMessage 主动移交任务控制权|基于工具调用的本地决策||MagenticOneGroupChat|基于账本协调的通用多智能体系统|复杂的网页和文件任务||GraphFlow|基于有向图的结构化工作流|需要严格执行顺序的任务|\n\n\n\n- 共享上下文：参与者通过向所有其他参与者广播消息来共享上下文\n\n- 发言者选择：不同团队使用不同策略选择下一个发言者（轮询、LLM选择、工具调用等）\n\n#### AgentChat\n\n\n\n- AssistantAgent: 使用语言模型并具有工具调用内置代理，主要用于原型设计和教育目的\n\n- CodeExecutorAgent: 专门用于代码生成和执行的代理\n\n- UserProxyAgent: 用于人工交互的代理\n\n- SocietyOfMindAgent: 将团队包装为单个代理",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 5
+    },
+    {
+      "chunk_id": "chunk-006-b59c1316537c3070",
+      "chunk_text": "## Context隔离\n\n\n\n### microsoft/agent-framework\n\n\n\n框架通过以下机制实现context隔离：\n\n\n\ncontext隔离机制",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 6
+    },
+    {
+      "chunk_id": "chunk-007-9380246375552198",
+      "chunk_text": "## Memory\n\n\n\n### Benchmarks\n\n\n\n- EverMemBench(评估记忆质量)\n\n- EvoAgentBench(评估智能体自我进化能力)\n\n### Memory结构\n\n\n\n#### HyperMem（超图记忆构建）",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 7
+    },
+    {
+      "chunk_id": "chunk-008-27d616818380851a",
+      "chunk_text": "## AI Observability",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 8
+    },
+    {
+      "chunk_id": "chunk-009-0a6af169005f3b3b",
+      "chunk_text": "## 插件\n\n\n\n### Mcp-ssh-manager\n\n\n\nhttps://deepwiki.com/search/_a0c1208c-2152-4a74-9469-749bff409326?mode=fast",
+      "doc_path": "test_files/docs/references/AgentHub 多人协作.md",
+      "chunk_index": 9
+    }
+  ],
+  "stats": {
+    "total_chunks": 10,
+    "total_triples": 96,
+    "unique_schemas": 29,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'CONCEPT')": 3,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'supports', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 10,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'implements', 'CONCEPT')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 3,
+      "('SYSTEM', 'supports', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 16,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 9,
+      "('CONCEPT', 'includes', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'named_as', 'CONCEPT')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 2,
+      "('SYSTEM', 'extends', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 6,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 2,
+      "('SYSTEM', 'depends_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 4,
+      "('PRODUCT', 'based_on', 'CONCEPT')": 1,
+      "('PRODUCT', 'implemented_by', 'ORG')": 1,
+      "('PRODUCT', 'related_to', 'CONCEPT')": 1,
+      "('PRODUCT', 'based_on', 'ORG')": 1,
+      "('CONCEPT', 'related_to', 'PRODUCT')": 2,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 10,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 29,
+    "fact_layer_size": 96,
+    "passage_layer_size": 10
+  }
+}

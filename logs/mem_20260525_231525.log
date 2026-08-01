@@ -1,0 +1,1118 @@
+2026-05-25 23:15:25 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260525_231525.log
+2026-05-25 23:15:25 - __main__ - INFO - ========================================
+2026-05-25 23:15:25 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-05-25 23:15:25 - __main__ - INFO - ========================================
+2026-05-25 23:15:25 - __main__ - INFO - Project: default
+2026-05-25 23:15:25 - __main__ - INFO - Storage: data
+2026-05-25 23:15:25 - __main__ - INFO - DocsDir: data/docs
+2026-05-25 23:15:25 - __main__ - INFO - [GitStorage] initialized
+2026-05-25 23:15:25 - __main__ - INFO - [MemoryGraph] loaded 0 decisions from Git
+2026-05-25 23:15:25 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-05-25 23:15:25 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-05-25 23:15:25 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-25 23:15:25 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-25 23:15:25 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-25 23:15:25 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-25 23:15:25 - __main__ - INFO - [MemoryEngine] initialized
+2026-05-25 23:15:25 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-05-25 23:15:25 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-05-25 23:15:25 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-05-25 23:15:25 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-05-25 23:15:25 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-05-25 23:15:25 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-05-25 23:15:25 - __main__ - INFO - [PushEngine] scheduler started
+2026-05-25 23:15:25 - __main__ - INFO - [lark_im] Initialized: 1 chat(s) monitored: ['oc_fde6be60ece21cb6f6c5b06ddb2a163b']
+2026-05-25 23:15:25 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-05-25 23:15:25 - src.adapter.lark_im - INFO - WS listener started
+2026-05-25 23:15:25 - __main__ - INFO - [lark_im] WS listener started for 1 chat(s)
+2026-05-25 23:15:25 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-05-25 23:15:25 - __main__ - INFO - [Detectors] Configuration:
+2026-05-25 23:15:25 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-05-25 23:15:25 - __main__ - INFO -   lark_doc: disabled
+2026-05-25 23:15:25 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-05-25 23:15:25 - __main__ - INFO - [lark_im] Debounce check loop started (window=10s)
+2026-05-25 23:15:29 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7643848311866969055&access_key=88ec9779e146d121b48213959a8e4f9b&service_id=33554678&ticket=1a0091ec-b624-4daa-8df9-5dbd4f6219c7 [conn_id=7643848311866969055]
+2026-05-25 23:17:02 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:02 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=36 content={"text":"微服务的好处是独立部署、独立扩展，团队可以并行开发"}
+2026-05-25 23:17:02 - __main__ - INFO - [lark_im] WS >>> detector score=0.12 level=none is_decision=False: {"text":"微服务的好处是独立部署、独立扩展，团队可以并行开发"}
+2026-05-25 23:17:02 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:03 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:03 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"我决定采用微服务架构来构建我们的后端系统"}
+2026-05-25 23:17:03 - __main__ - INFO - [lark_im] WS >>> detector score=0.78 level=high is_decision=True: {"text":"我决定采用微服务架构来构建我们的后端系统"}
+2026-05-25 23:17:03 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:04 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:04 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"每个微服务使用独立的数据库，避免耦合"}
+2026-05-25 23:17:04 - __main__ - INFO - [lark_im] WS >>> detector score=0.32 level=low is_decision=False: {"text":"每个微服务使用独立的数据库，避免耦合"}
+2026-05-25 23:17:04 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:05 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:05 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"服务注册与发现用Consul来实现"}
+2026-05-25 23:17:05 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"服务注册与发现用Consul来实现"}
+2026-05-25 23:17:05 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:07 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:07 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=36 content={"text":"微服务的好处是独立部署、独立扩展，团队可以并行开发"}
+2026-05-25 23:17:07 - __main__ - INFO - [lark_im] WS >>> detector score=0.12 level=none is_decision=False: {"text":"微服务的好处是独立部署、独立扩展，团队可以并行开发"}
+2026-05-25 23:17:07 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:08 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:08 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=35 content={"text":"而且微服务之间通过API通信，技术栈可以灵活选择"}
+2026-05-25 23:17:08 - __main__ - INFO - [lark_im] WS >>> detector score=0.48 level=low is_decision=False: {"text":"而且微服务之间通过API通信，技术栈可以灵活选择"}
+2026-05-25 23:17:08 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:09 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:09 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"每个微服务使用独立的数据库，避免耦合"}
+2026-05-25 23:17:09 - __main__ - INFO - [lark_im] WS >>> detector score=0.32 level=low is_decision=False: {"text":"每个微服务使用独立的数据库，避免耦合"}
+2026-05-25 23:17:09 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"API网关使用Kong作为入口统一管理"}
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS >>> detector score=0.32 level=low is_decision=False: {"text":"API网关使用Kong作为入口统一管理"}
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"服务注册与发现用Consul来实现"}
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"服务注册与发现用Consul来实现"}
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"服务之间通信统一用gRPC协议"}
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"服务之间通信统一用gRPC协议"}
+2026-05-25 23:17:11 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:17:22 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-25 23:17:22 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"服务之间通信统一用gRPC协议"}
+2026-05-25 23:17:22 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525231722-3f489cf0.json
+2026-05-25 23:17:22 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=26 content={"text":"服务之间通信统一用gRPC协议"}
+2026-05-25 23:17:22 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=26)
+2026-05-25 23:17:23 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.07s
+2026-05-25 23:17:23 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 23:17:23 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=523ddd0e6d33 summary=统一服务间通信协议为gRPC source=lark_im
+2026-05-25 23:17:23 - src.core.engine - INFO - [Mutation] New decision: sid=523ddd0e6d33 status=decided impact=major
+2026-05-25 23:17:23 - src.core.engine - INFO - Created decision: 523ddd0e6d33 — 统一服务间通信协议为gRPC
+2026-05-25 23:17:23 - src.core.engine - INFO - [Mutation] CREATE applied: sid=523ddd0e6d33
+2026-05-25 23:17:23 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=523ddd0e6d33
+2026-05-25 23:17:23 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.18s
+2026-05-25 23:30:25 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:30:25 - __main__ - INFO - [lark_im] WS received: chat=oc_8377b7a0c sender= len=30 content={"text":"feature分支从develop拉取"}
+2026-05-25 23:30:25 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"feature分支从develop拉取"}
+2026-05-25 23:30:25 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_8377b7a0c, will process after 10s silence
+2026-05-25 23:30:36 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_8377b7a0c, dispatching to LLM
+2026-05-25 23:30:36 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"feature分支从develop拉取"}
+2026-05-25 23:30:36 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525233036-4f29000d.json
+2026-05-25 23:30:36 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=30 content={"text":"feature分支从develop拉取"}
+2026-05-25 23:30:36 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=30)
+2026-05-25 23:30:38 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.65s
+2026-05-25 23:30:38 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 23:30:38 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=29059f7f2cf5 summary=分支策略：feature分支从develop拉取 source=lark_im
+2026-05-25 23:30:38 - src.core.engine - INFO - [Mutation] New decision: sid=29059f7f2cf5 status=decided impact=minor
+2026-05-25 23:30:38 - src.core.engine - INFO - Created decision: 29059f7f2cf5 — 分支策略：feature分支从develop拉取
+2026-05-25 23:30:38 - src.core.engine - INFO - [Mutation] CREATE applied: sid=29059f7f2cf5
+2026-05-25 23:30:38 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=29059f7f2cf5
+2026-05-25 23:30:38 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.78s
+2026-05-25 23:30:54 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:30:54 - __main__ - INFO - [lark_im] WS received: chat=oc_8377b7a0c sender= len=22 content={"text":"蓝绿部署可以零停机发布"}
+2026-05-25 23:30:54 - __main__ - INFO - [lark_im] WS >>> detector score=0.12 level=none is_decision=False: {"text":"蓝绿部署可以零停机发布"}
+2026-05-25 23:30:54 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_8377b7a0c, will process after 10s silence
+2026-05-25 23:30:58 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:30:58 - __main__ - INFO - [lark_im] WS received: chat=oc_8377b7a0c sender= len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-25 23:30:58 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"部署策略用蓝绿部署"}
+2026-05-25 23:30:58 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_8377b7a0c, will process after 10s silence
+2026-05-25 23:31:08 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_8377b7a0c, dispatching to LLM
+2026-05-25 23:31:08 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"部署策略用蓝绿部署"}
+2026-05-25 23:31:08 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525233108-87779313.json
+2026-05-25 23:31:08 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-25 23:31:08 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=20)
+2026-05-25 23:31:09 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.84s
+2026-05-25 23:31:09 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 23:31:09 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=fbed52d02051 summary=部署策略选择 source=lark_im
+2026-05-25 23:31:09 - src.core.engine - INFO - [Mutation] New decision: sid=fbed52d02051 status=decided impact=major
+2026-05-25 23:31:09 - src.core.engine - INFO - Created decision: fbed52d02051 — 部署策略选择
+2026-05-25 23:31:09 - src.core.engine - INFO - [Mutation] CREATE applied: sid=fbed52d02051
+2026-05-25 23:31:09 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=fbed52d02051
+2026-05-25 23:31:09 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.94s
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"部署方案也要讨论一下"}
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] WS >>> detector score=0.22 level=low is_decision=False: {"text":"部署方案也要讨论一下"}
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=19 content={"text":"采用蓝绿部署策略"}
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] WS >>> detector score=0.32 level=low is_decision=False: {"text":"采用蓝绿部署策略"}
+2026-05-25 23:31:10 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:31:22 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-25 23:31:22 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"采用蓝绿部署策略"}
+2026-05-25 23:31:22 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525233122-e07fc88a.json
+2026-05-25 23:31:22 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=19 content={"text":"采用蓝绿部署策略"}
+2026-05-25 23:31:22 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=19)
+2026-05-25 23:31:23 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.20s
+2026-05-25 23:31:23 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 23:31:23 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d78dd2793cd4 summary=采用蓝绿部署策略 source=lark_im
+2026-05-25 23:31:23 - src.core.engine - INFO - [Mutation] New decision: sid=d78dd2793cd4 status=decided impact=major
+2026-05-25 23:31:23 - src.core.engine - INFO - Created decision: d78dd2793cd4 — 采用蓝绿部署策略
+2026-05-25 23:31:23 - src.core.engine - INFO - [Mutation] CREATE applied: sid=d78dd2793cd4
+2026-05-25 23:31:23 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d78dd2793cd4
+2026-05-25 23:31:23 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.29s
+2026-05-25 23:31:45 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:31:45 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=22 content={"text":"生产环境用阿里云ACK"}
+2026-05-25 23:31:45 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"生产环境用阿里云ACK"}
+2026-05-25 23:31:45 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:31:50 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-25 23:31:50 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-25 23:31:50 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-25 23:31:50 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-25 23:32:00 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-25 23:32:00 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-25 23:32:00 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260525233200-a6cef2b5.json
+2026-05-25 23:32:00 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=29 content={"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-25 23:32:00 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=29)
+2026-05-25 23:32:02 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.99s
+2026-05-25 23:32:02 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-25 23:32:02 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=dce9fe662a53 summary=采用ACK托管K8s集群 source=lark_im
+2026-05-25 23:32:02 - src.core.engine - INFO - [Mutation] New decision: sid=dce9fe662a53 status=decided impact=major
+2026-05-25 23:32:02 - src.core.engine - INFO - Created decision: dce9fe662a53 — 采用ACK托管K8s集群
+2026-05-25 23:32:02 - src.core.engine - INFO - [Mutation] CREATE applied: sid=dce9fe662a53
+2026-05-25 23:32:02 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=dce9fe662a53
+2026-05-25 23:32:02 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.10s
+2026-05-26 00:44:03 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:03 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"晚上加个班，把接口设计做完"}
+2026-05-26 00:44:03 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"晚上加个班，把接口设计做完"}
+2026-05-26 00:44:03 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:07 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:07 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"接口设计遵循RESTful规范"}
+2026-05-26 00:44:07 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"接口设计遵循RESTful规范"}
+2026-05-26 00:44:07 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:15 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:15 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"对了，版本控制用URL路径方式"}
+2026-05-26 00:44:15 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"对了，版本控制用URL路径方式"}
+2026-05-26 00:44:15 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:25 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 00:44:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"对了，版本控制用URL路径方式"}
+2026-05-26 00:44:25 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526004425-4dba2633.json
+2026-05-26 00:44:25 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=26 content={"text":"对了，版本控制用URL路径方式"}
+2026-05-26 00:44:25 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=26)
+2026-05-26 00:44:26 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.96s
+2026-05-26 00:44:26 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 00:44:26 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=2e00a3bca4db summary=版本控制方式确定 source=lark_im
+2026-05-26 00:44:26 - src.core.engine - INFO - [Mutation] New decision: sid=2e00a3bca4db status=decided impact=minor
+2026-05-26 00:44:26 - src.core.engine - INFO - Created decision: 2e00a3bca4db — 版本控制方式确定
+2026-05-26 00:44:26 - src.core.engine - INFO - [Mutation] CREATE applied: sid=2e00a3bca4db
+2026-05-26 00:44:26 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=2e00a3bca4db
+2026-05-26 00:44:26 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.07s
+2026-05-26 00:44:27 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:27 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"API版本控制用URL路径"}
+2026-05-26 00:44:27 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"API版本控制用URL路径"}
+2026-05-26 00:44:27 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:39 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 00:44:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"API版本控制用URL路径"}
+2026-05-26 00:44:39 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526004439-d19b87c3.json
+2026-05-26 00:44:39 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=24 content={"text":"API版本控制用URL路径"}
+2026-05-26 00:44:39 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=24)
+2026-05-26 00:44:40 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:40 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=17 content={"text":"统一分页标准"}
+2026-05-26 00:44:40 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"统一分页标准"}
+2026-05-26 00:44:40 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:40 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.89s
+2026-05-26 00:44:40 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 00:44:40 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=cb2ac8d22751 summary=API版本控制方式 source=lark_im
+2026-05-26 00:44:40 - src.core.engine - INFO - [Mutation] New decision: sid=cb2ac8d22751 status=decided impact=major
+2026-05-26 00:44:40 - src.core.engine - INFO - Created decision: cb2ac8d22751 — API版本控制方式
+2026-05-26 00:44:40 - src.core.engine - INFO - [Mutation] CREATE applied: sid=cb2ac8d22751
+2026-05-26 00:44:40 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=cb2ac8d22751
+2026-05-26 00:44:40 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.99s
+2026-05-26 00:44:43 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:43 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=17 content={"text":"返回格式统一"}
+2026-05-26 00:44:43 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"返回格式统一"}
+2026-05-26 00:44:43 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:48 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 00:44:48 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=38 content={"text":"{code, message, data}统一返回格式"}
+2026-05-26 00:44:48 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"{code, message, data}统一返回格式"}
+2026-05-26 00:44:48 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 00:44:59 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 00:44:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"{code, message, data}统一返回格式"}
+2026-05-26 00:44:59 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526004459-4d255a94.json
+2026-05-26 00:44:59 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=38 content={"text":"{code, message, data}统一返回格式"}
+2026-05-26 00:44:59 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=38)
+2026-05-26 00:45:00 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.13s
+2026-05-26 00:45:00 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 00:45:00 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=9d4ab5c44e81 summary=统一返回格式 source=lark_im
+2026-05-26 00:45:00 - src.core.engine - INFO - [Mutation] New decision: sid=9d4ab5c44e81 status=decided impact=major
+2026-05-26 00:45:00 - src.core.engine - INFO - Created decision: 9d4ab5c44e81 — 统一返回格式
+2026-05-26 00:45:00 - src.core.engine - INFO - [Mutation] CREATE applied: sid=9d4ab5c44e81
+2026-05-26 00:45:00 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=9d4ab5c44e81
+2026-05-26 00:45:00 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.24s
+2026-05-26 04:58:11 - Lark - ERROR - handle message failed, message_type: event, message_id: d43ee96e-e889-4989-82a9-026de2e97f28, trace_id: e4607bc74db1b7e8fef1e58ef924e4d4, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7643848311866969055]
+2026-05-26 10:01:27 - Lark - ERROR - receive message loop exit, err: no close frame received or sent [conn_id=7643848311866969055]
+2026-05-26 10:01:27 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7643848311866969055&access_key=88ec9779e146d121b48213959a8e4f9b&service_id=33554678&ticket=1a0091ec-b624-4daa-8df9-5dbd4f6219c7 [conn_id=7643848311866969055]
+2026-05-26 10:01:29 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 10:03:22 - Lark - ERROR - connect failed, err: timed out during opening handshake
+2026-05-26 10:06:52 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 10:06:57 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NewConnectionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable"))
+2026-05-26 10:10:03 - Lark - INFO - trying to reconnect for the 3rd time
+2026-05-26 10:10:03 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NewConnectionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable"))
+2026-05-26 10:12:11 - Lark - INFO - trying to reconnect for the 4th time
+2026-05-26 10:12:12 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644017541019847632&access_key=4079cd8fb48cb58bee7a3911ac0ff0d2&service_id=33554678&ticket=5735c41d-dfe5-4623-b36f-2348f48ebb1c [conn_id=7644017541019847632]
+2026-05-26 10:15:28 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:15:28 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"ORM用Prisma"}
+2026-05-26 10:15:28 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ORM用Prisma"}
+2026-05-26 10:15:28 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:15:32 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:15:32 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 10:15:32 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存层用Redis"}
+2026-05-26 10:15:32 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:15:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:15:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=23 content={"text":"Redis做热点数据缓存"}
+2026-05-26 10:15:37 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis做热点数据缓存"}
+2026-05-26 10:15:37 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:15:46 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:15:46 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 10:15:46 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列用RabbitMQ"}
+2026-05-26 10:15:46 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:15:56 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 10:15:56 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列用RabbitMQ"}
+2026-05-26 10:15:56 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526101556-4100e1f5.json
+2026-05-26 10:15:56 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 10:15:56 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=24)
+2026-05-26 10:15:57 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.28s
+2026-05-26 10:15:57 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 10:15:57 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6fd1f65b99bf summary=消息队列选型为RabbitMQ source=lark_im
+2026-05-26 10:15:57 - src.core.engine - INFO - [Mutation] New decision: sid=6fd1f65b99bf status=decided impact=major
+2026-05-26 10:15:58 - src.core.engine - INFO - Created decision: 6fd1f65b99bf — 消息队列选型为RabbitMQ
+2026-05-26 10:15:58 - src.core.engine - INFO - [Mutation] CREATE applied: sid=6fd1f65b99bf
+2026-05-26 10:15:58 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6fd1f65b99bf
+2026-05-26 10:15:58 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.38s
+2026-05-26 10:25:46 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:25:46 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"Prisma类型安全、开发体验好"}
+2026-05-26 10:25:46 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Prisma类型安全、开发体验好"}
+2026-05-26 10:25:46 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"ORM用Prisma"}
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ORM用Prisma"}
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存层用Redis"}
+2026-05-26 10:25:47 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:25:48 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:25:48 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 10:25:48 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"RabbitMQ处理异步任务"}
+2026-05-26 10:25:48 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:25:59 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 10:25:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 10:25:59 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526102559-c137ad04.json
+2026-05-26 10:25:59 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 10:25:59 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 10:26:00 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.57s
+2026-05-26 10:26:00 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 10:26:00 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=a61486c72cb0 summary=使用RabbitMQ处理异步任务 source=lark_im
+2026-05-26 10:26:00 - src.core.engine - INFO - [Mutation] New decision: sid=a61486c72cb0 status=decided impact=major
+2026-05-26 10:26:00 - src.core.engine - ERROR - Mutation failed: MutationType.CREATE — git add decisions/feishu-mem/技术选型/a61486c72cb0.md failed: fatal: pathspec 'decisions/feishu-mem/技术选型/a61486c72cb0.md' did not match any files
+2026-05-26 10:26:00 - src.core.engine - WARNING - [Mutation] CREATE FAILED: sid=a61486c72cb0
+2026-05-26 10:26:00 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=a61486c72cb0
+2026-05-26 10:26:00 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.64s
+2026-05-26 10:27:57 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:27:57 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"数据库ORM用Prisma"}
+2026-05-26 10:27:57 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"数据库ORM用Prisma"}
+2026-05-26 10:27:57 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:27:58 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:27:58 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 10:27:58 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存层用Redis"}
+2026-05-26 10:27:58 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:27:59 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:27:59 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 10:27:59 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列用RabbitMQ"}
+2026-05-26 10:27:59 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:28:11 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 10:28:11 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列用RabbitMQ"}
+2026-05-26 10:28:11 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526102811-e855a1ce.json
+2026-05-26 10:28:11 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 10:28:11 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=24)
+2026-05-26 10:28:12 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.03s
+2026-05-26 10:28:12 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 10:28:12 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6fd1f65b99bf summary=消息队列选型为RabbitMQ source=lark_im
+2026-05-26 10:28:12 - src.core.engine - INFO - [Mutation] Existing decision found: sid=6fd1f65b99bf status=decided→decided
+2026-05-26 10:28:12 - src.core.engine - INFO - Updated decision: 6fd1f65b99bf
+2026-05-26 10:28:12 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=6fd1f65b99bf
+2026-05-26 10:28:12 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6fd1f65b99bf
+2026-05-26 10:28:12 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.14s
+2026-05-26 10:29:06 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:29:06 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=22 content={"text":"消息队列换成Kafka"}
+2026-05-26 10:29:06 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成Kafka"}
+2026-05-26 10:29:06 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:29:17 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 10:29:17 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成Kafka"}
+2026-05-26 10:29:17 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526102917-2d258819.json
+2026-05-26 10:29:17 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=22 content={"text":"消息队列换成Kafka"}
+2026-05-26 10:29:17 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=22)
+2026-05-26 10:29:18 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.93s
+2026-05-26 10:29:18 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 10:29:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=8a90851510c5 summary=消息队列迁移至Kafka source=lark_im
+2026-05-26 10:29:18 - src.core.engine - INFO - [Mutation] New decision: sid=8a90851510c5 status=decided impact=major
+2026-05-26 10:29:18 - src.core.engine - INFO - Created decision: 8a90851510c5 — 消息队列迁移至Kafka
+2026-05-26 10:29:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=8a90851510c5
+2026-05-26 10:29:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=8a90851510c5
+2026-05-26 10:29:18 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.07s
+2026-05-26 10:52:51 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 10:52:51 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 10:52:51 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 10:52:51 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 10:53:01 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 10:53:01 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 10:53:01 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526105301-d0376999.json
+2026-05-26 10:53:01 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 10:53:01 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 10:53:03 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.83s
+2026-05-26 10:53:03 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 10:53:03 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=11aa2a55324f summary=消息队列技术选型 source=lark_im
+2026-05-26 10:53:03 - src.core.engine - INFO - [Mutation] New decision: sid=11aa2a55324f status=decided impact=major
+2026-05-26 10:53:03 - src.core.engine - INFO - Created decision: 11aa2a55324f — 消息队列技术选型
+2026-05-26 10:53:03 - src.core.engine - INFO - [Mutation] CREATE applied: sid=11aa2a55324f
+2026-05-26 10:53:03 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=11aa2a55324f
+2026-05-26 10:53:03 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.98s
+2026-05-26 11:13:28 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:13:28 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:28 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:28 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:13:39 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:13:39 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:39 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:39 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:13:46 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:13:46 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:46 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:46 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:13:58 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:13:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:58 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526111358-7ffff1cb.json
+2026-05-26 11:13:58 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:13:58 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 11:14:01 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.35s
+2026-05-26 11:14:01 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 11:14:01 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d28f7ba023f1 summary=消息队列更换为RabbitMQ source=lark_im
+2026-05-26 11:14:01 - src.core.engine - INFO - [Mutation] New decision: sid=d28f7ba023f1 status=decided impact=major
+2026-05-26 11:14:01 - src.core.engine - INFO - Created decision: d28f7ba023f1 — 消息队列更换为RabbitMQ
+2026-05-26 11:14:01 - src.core.engine - INFO - [Mutation] CREATE applied: sid=d28f7ba023f1
+2026-05-26 11:14:01 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d28f7ba023f1
+2026-05-26 11:14:01 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.47s
+2026-05-26 11:14:02 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:14:02 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:02 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:02 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:14:14 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:14:14 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:14 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526111414-a7954298.json
+2026-05-26 11:14:14 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"消息队列换成RabbitMQ"}
+2026-05-26 11:14:14 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 11:14:15 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.99s
+2026-05-26 11:14:15 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 11:14:15 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6fd1f65b99bf summary=消息队列选型为RabbitMQ source=lark_im
+2026-05-26 11:14:15 - src.core.engine - INFO - [Mutation] Existing decision found: sid=6fd1f65b99bf status=decided→decided
+2026-05-26 11:14:15 - src.core.engine - INFO - Updated decision: 6fd1f65b99bf
+2026-05-26 11:14:15 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=6fd1f65b99bf
+2026-05-26 11:14:15 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6fd1f65b99bf
+2026-05-26 11:14:15 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.09s
+2026-05-26 11:14:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:14:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=22 content={"text":"消息队列换成Kafka"}
+2026-05-26 11:14:33 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列换成Kafka"}
+2026-05-26 11:14:33 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:14:44 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:14:44 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列换成Kafka"}
+2026-05-26 11:14:44 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526111444-42d4237a.json
+2026-05-26 11:14:44 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=22 content={"text":"消息队列换成Kafka"}
+2026-05-26 11:14:44 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=22)
+2026-05-26 11:14:45 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.26s
+2026-05-26 11:14:45 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 11:14:45 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6081ce7fc6c0 summary=消息队列替换为Kafka source=lark_im
+2026-05-26 11:14:45 - src.core.engine - INFO - [Mutation] New decision: sid=6081ce7fc6c0 status=decided impact=major
+2026-05-26 11:14:46 - src.core.engine - INFO - Created decision: 6081ce7fc6c0 — 消息队列替换为Kafka
+2026-05-26 11:14:46 - src.core.engine - INFO - [Mutation] CREATE applied: sid=6081ce7fc6c0
+2026-05-26 11:14:46 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6081ce7fc6c0
+2026-05-26 11:14:46 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.38s
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"ORM用Prisma"}
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ORM用Prisma"}
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=23 content={"text":"Redis做热点数据缓存"}
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis做热点数据缓存"}
+2026-05-26 11:56:40 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列用RabbitMQ"}
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"RabbitMQ处理异步任务"}
+2026-05-26 11:56:41 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 11:56:52 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 11:56:52 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 11:56:52 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526115652-e7393037.json
+2026-05-26 11:56:52 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=25 content={"text":"RabbitMQ处理异步任务"}
+2026-05-26 11:56:52 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=25)
+2026-05-26 11:56:53 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.50s
+2026-05-26 11:56:53 - src.core.engine - INFO - [LLM] No decision found in content ({"text":"RabbitMQ处理异步任务"})
+2026-05-26 11:56:53 - src.core.engine - INFO - [Engine] No decision extracted from content ({"text":"RabbitMQ处理异步任务"})
+2026-05-26 11:56:53 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.50s
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"数据库ORM用Prisma"}
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"数据库ORM用Prisma"}
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"ORM用Prisma"}
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ORM用Prisma"}
+2026-05-26 12:03:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=23 content={"text":"Redis做热点数据缓存"}
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis做热点数据缓存"}
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存层用Redis"}
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列用RabbitMQ"}
+2026-05-26 12:03:14 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:03:26 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 12:03:26 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列用RabbitMQ"}
+2026-05-26 12:03:26 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526120326-7db52356.json
+2026-05-26 12:03:26 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 12:03:26 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=24)
+2026-05-26 12:03:27 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.47s
+2026-05-26 12:03:27 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 12:03:27 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6fd1f65b99bf summary=消息队列选型为RabbitMQ source=lark_im
+2026-05-26 12:03:27 - src.core.engine - INFO - [Mutation] Existing decision found: sid=6fd1f65b99bf status=decided→decided
+2026-05-26 12:03:27 - src.core.engine - INFO - Updated decision: 6fd1f65b99bf
+2026-05-26 12:03:27 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=6fd1f65b99bf
+2026-05-26 12:03:27 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6fd1f65b99bf
+2026-05-26 12:03:27 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.59s
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"数据库ORM用Prisma"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"数据库ORM用Prisma"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"Prisma类型安全、开发体验好"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Prisma类型安全、开发体验好"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=23 content={"text":"Redis做热点数据缓存"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis做热点数据缓存"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存层用Redis"}
+2026-05-26 12:10:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 12:10:24 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 12:10:24 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"缓存层用Redis"}
+2026-05-26 12:10:24 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526121024-bd7ea5ef.json
+2026-05-26 12:10:24 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=20 content={"text":"缓存层用Redis"}
+2026-05-26 12:10:24 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=20)
+2026-05-26 12:10:26 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.08s
+2026-05-26 12:10:26 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 12:10:26 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=8cd9daa806b6 summary=缓存层技术选型 source=lark_im
+2026-05-26 12:10:26 - src.core.engine - INFO - [Mutation] New decision: sid=8cd9daa806b6 status=decided impact=major
+2026-05-26 12:10:26 - src.core.engine - INFO - Created decision: 8cd9daa806b6 — 缓存层技术选型
+2026-05-26 12:10:26 - src.core.engine - INFO - [Mutation] CREATE applied: sid=8cd9daa806b6
+2026-05-26 12:10:26 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=8cd9daa806b6
+2026-05-26 12:10:26 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.19s
+2026-05-26 12:33:38 - Lark - ERROR - receive message loop exit, err: no close frame received or sent [conn_id=7644017541019847632]
+2026-05-26 12:33:38 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644017541019847632&access_key=4079cd8fb48cb58bee7a3911ac0ff0d2&service_id=33554678&ticket=5735c41d-dfe5-4623-b36f-2348f48ebb1c [conn_id=7644017541019847632]
+2026-05-26 13:06:08 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 13:06:23 - Lark - ERROR - connect failed, err: timed out during opening handshake
+2026-05-26 13:11:14 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 13:11:14 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644063693327600574&access_key=8e9c8068060a7e929bfed4cab116b044&service_id=33554678&ticket=04837e0b-3ff3-44fc-9d83-65f29aa4bab7 [conn_id=7644063693327600574]
+2026-05-26 13:13:26 - Lark - ERROR - receive message loop exit, err: sent 1011 (internal error) keepalive ping timeout; no close frame received [conn_id=7644063693327600574]
+2026-05-26 13:13:26 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644063693327600574&access_key=8e9c8068060a7e929bfed4cab116b044&service_id=33554678&ticket=04837e0b-3ff3-44fc-9d83-65f29aa4bab7 [conn_id=7644063693327600574]
+2026-05-26 13:13:53 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 13:14:23 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-26 13:16:17 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 13:16:18 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644064990655597526&access_key=5513c070938ba05cc1f07c857474a4d7&service_id=33554678&ticket=d0175ab1-4e77-4f00-8cb2-664ec2dc1e8d [conn_id=7644064990655597526]
+2026-05-26 13:17:02 - Lark - ERROR - receive message loop exit, err: no close frame received or sent [conn_id=7644064990655597526]
+2026-05-26 13:17:02 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644064990655597526&access_key=5513c070938ba05cc1f07c857474a4d7&service_id=33554678&ticket=d0175ab1-4e77-4f00-8cb2-664ec2dc1e8d [conn_id=7644064990655597526]
+2026-05-26 13:17:10 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 13:17:22 - Lark - ERROR - connect failed, err: timed out during opening handshake
+2026-05-26 13:19:38 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 13:19:39 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644065834231745489&access_key=b125976ff4df82aa433335992d830055&service_id=33554678&ticket=0d36146a-a87a-48eb-9308-2d6fe1fe8c38 [conn_id=7644065834231745489]
+2026-05-26 13:34:56 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:34:56 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=21 content={"text":"部署方案也要讨论一下"}
+2026-05-26 13:34:56 - __main__ - INFO - [lark_im] WS >>> detector score=0.22 level=low is_decision=False: {"text":"部署方案也要讨论一下"}
+2026-05-26 13:34:56 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:35:01 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:01 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=19 content={"text":"采用蓝绿部署策略"}
+2026-05-26 13:35:01 - __main__ - INFO - [lark_im] WS >>> detector score=0.32 level=low is_decision=False: {"text":"采用蓝绿部署策略"}
+2026-05-26 13:35:01 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:35:05 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:05 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=22 content={"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:35:05 - __main__ - INFO - [lark_im] WS >>> detector score=0.12 level=none is_decision=False: {"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:35:05 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:35:09 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:09 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:09 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:09 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:35:21 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fbf3f0d35, dispatching to LLM
+2026-05-26 13:35:21 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:21 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526133521-97fe9e08.json
+2026-05-26 13:35:21 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:21 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=20)
+2026-05-26 13:35:22 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.70s
+2026-05-26 13:35:22 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:35:22 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d78dd2793cd4 summary=采用蓝绿部署策略 source=lark_im
+2026-05-26 13:35:22 - src.core.engine - INFO - [Mutation] Existing decision found: sid=d78dd2793cd4 status=decided→decided
+2026-05-26 13:35:23 - src.core.engine - INFO - Updated decision: d78dd2793cd4
+2026-05-26 13:35:23 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=d78dd2793cd4
+2026-05-26 13:35:23 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d78dd2793cd4
+2026-05-26 13:35:23 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.84s
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"部署方案也要讨论一下"}
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS >>> detector score=0.22 level=low is_decision=False: {"text":"部署方案也要讨论一下"}
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:34 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:35:45 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:35:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:45 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526133545-3e81a16b.json
+2026-05-26 13:35:45 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:35:45 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=20)
+2026-05-26 13:35:46 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.99s
+2026-05-26 13:35:46 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:35:46 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d78dd2793cd4 summary=采用蓝绿部署策略 source=lark_im
+2026-05-26 13:35:46 - src.core.engine - INFO - [Mutation] Existing decision found: sid=d78dd2793cd4 status=decided→decided
+2026-05-26 13:35:46 - src.core.engine - INFO - Updated decision: d78dd2793cd4
+2026-05-26 13:35:46 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=d78dd2793cd4
+2026-05-26 13:35:46 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d78dd2793cd4
+2026-05-26 13:35:46 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.10s
+2026-05-26 13:35:53 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:35:53 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=19 content={"text":"采用蓝绿部署策略"}
+2026-05-26 13:35:53 - __main__ - INFO - [lark_im] WS >>> detector score=0.32 level=low is_decision=False: {"text":"采用蓝绿部署策略"}
+2026-05-26 13:35:53 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:36:05 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:36:05 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"采用蓝绿部署策略"}
+2026-05-26 13:36:05 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526133605-6c96f6e2.json
+2026-05-26 13:36:05 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=19 content={"text":"采用蓝绿部署策略"}
+2026-05-26 13:36:05 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=19)
+2026-05-26 13:36:06 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=0.96s
+2026-05-26 13:36:06 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:36:06 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d78dd2793cd4 summary=采用蓝绿部署策略 source=lark_im
+2026-05-26 13:36:06 - src.core.engine - INFO - [Mutation] Existing decision found: sid=d78dd2793cd4 status=decided→decided
+2026-05-26 13:36:06 - src.core.engine - INFO - Updated decision: d78dd2793cd4
+2026-05-26 13:36:06 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=d78dd2793cd4
+2026-05-26 13:36:06 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d78dd2793cd4
+2026-05-26 13:36:06 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.05s
+2026-05-26 13:40:57 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:40:57 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=22 content={"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:40:57 - __main__ - INFO - [lark_im] WS >>> detector score=0.12 level=none is_decision=False: {"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:40:57 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:41:09 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:41:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:41:09 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526134109-50b24cff.json
+2026-05-26 13:41:09 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=22 content={"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:41:09 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=22)
+2026-05-26 13:41:11 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.85s
+2026-05-26 13:41:11 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:41:11 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=3d5321e3a17c summary=采用蓝绿部署实现零停机发布 source=lark_im
+2026-05-26 13:41:11 - src.core.engine - INFO - [Mutation] New decision: sid=3d5321e3a17c status=decided impact=major
+2026-05-26 13:41:11 - src.core.engine - INFO - Created decision: 3d5321e3a17c — 采用蓝绿部署实现零停机发布
+2026-05-26 13:41:11 - src.core.engine - INFO - [Mutation] CREATE applied: sid=3d5321e3a17c
+2026-05-26 13:41:11 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=3d5321e3a17c
+2026-05-26 13:41:11 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.96s
+2026-05-26 13:41:31 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:41:31 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=22 content={"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:41:31 - __main__ - INFO - [lark_im] WS >>> detector score=0.12 level=none is_decision=False: {"text":"蓝绿部署可以零停机发布"}
+2026-05-26 13:41:31 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:41:31 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:41:31 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:41:32 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"部署策略用蓝绿部署"}
+2026-05-26 13:41:32 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:41:43 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:41:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:41:43 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526134143-5dff8f4e.json
+2026-05-26 13:41:43 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=20 content={"text":"部署策略用蓝绿部署"}
+2026-05-26 13:41:43 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=20)
+2026-05-26 13:41:44 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.11s
+2026-05-26 13:41:44 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:41:44 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=923252a4452d summary=部署策略选择蓝绿部署 source=lark_im
+2026-05-26 13:41:44 - src.core.engine - INFO - [Mutation] New decision: sid=923252a4452d status=decided impact=major
+2026-05-26 13:41:44 - src.core.engine - INFO - Created decision: 923252a4452d — 部署策略选择蓝绿部署
+2026-05-26 13:41:44 - src.core.engine - INFO - [Mutation] CREATE applied: sid=923252a4452d
+2026-05-26 13:41:44 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=923252a4452d
+2026-05-26 13:41:44 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.22s
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=20 content={"text":"缓存层用Redis"}
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存层用Redis"}
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=23 content={"text":"Redis做热点数据缓存"}
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis做热点数据缓存"}
+2026-05-26 13:42:51 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:42:52 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:42:52 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 13:42:52 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"消息队列用RabbitMQ"}
+2026-05-26 13:42:52 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:43:03 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:43:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"消息队列用RabbitMQ"}
+2026-05-26 13:43:03 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526134303-2f8daf04.json
+2026-05-26 13:43:03 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=24 content={"text":"消息队列用RabbitMQ"}
+2026-05-26 13:43:03 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=24)
+2026-05-26 13:43:05 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.91s
+2026-05-26 13:43:05 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:43:05 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6fd1f65b99bf summary=消息队列选型为RabbitMQ source=lark_im
+2026-05-26 13:43:05 - src.core.engine - INFO - [Mutation] Existing decision found: sid=6fd1f65b99bf status=decided→decided
+2026-05-26 13:43:05 - src.core.engine - INFO - Updated decision: 6fd1f65b99bf
+2026-05-26 13:43:05 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=6fd1f65b99bf
+2026-05-26 13:43:05 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6fd1f65b99bf
+2026-05-26 13:43:05 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.03s
+2026-05-26 13:44:29 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:44:29 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=22 content={"text":"生产环境用阿里云ACK"}
+2026-05-26 13:44:29 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"生产环境用阿里云ACK"}
+2026-05-26 13:44:29 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:44:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:44:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=29 content={"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-26 13:44:33 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-26 13:44:33 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:44:40 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:44:40 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=26 content={"text":"生产环境用阿里云ACK托管集群"}
+2026-05-26 13:44:40 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"生产环境用阿里云ACK托管集群"}
+2026-05-26 13:44:40 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:44:44 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:44:44 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=21 content={"text":"CDN用阿里云CDN"}
+2026-05-26 13:44:44 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"CDN用阿里云CDN"}
+2026-05-26 13:44:44 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:44:55 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fbf3f0d35, dispatching to LLM
+2026-05-26 13:44:55 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"CDN用阿里云CDN"}
+2026-05-26 13:44:55 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526134455-0436eaa4.json
+2026-05-26 13:44:55 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=21 content={"text":"CDN用阿里云CDN"}
+2026-05-26 13:44:55 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=21)
+2026-05-26 13:44:57 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.65s
+2026-05-26 13:44:57 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:44:57 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6d2c6bed705c summary=CDN服务商选择 source=lark_im
+2026-05-26 13:44:57 - src.core.engine - INFO - [Mutation] New decision: sid=6d2c6bed705c status=decided impact=major
+2026-05-26 13:44:57 - src.core.engine - INFO - Created decision: 6d2c6bed705c — CDN服务商选择
+2026-05-26 13:44:57 - src.core.engine - INFO - [Mutation] CREATE applied: sid=6d2c6bed705c
+2026-05-26 13:44:57 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=6d2c6bed705c
+2026-05-26 13:44:57 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.78s
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"ACK托管K8s集群，减少运维工作量"}
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"生产环境用阿里云ACK托管集群"}
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"生产环境用阿里云ACK托管集群"}
+2026-05-26 13:45:05 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:45:06 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:45:06 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"CDN用阿里云CDN"}
+2026-05-26 13:45:06 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"CDN用阿里云CDN"}
+2026-05-26 13:45:06 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:45:07 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:45:07 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=21 content={"text":"静态资源走CDN加速"}
+2026-05-26 13:45:07 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"静态资源走CDN加速"}
+2026-05-26 13:45:07 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:45:17 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:45:17 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"静态资源走CDN加速"}
+2026-05-26 13:45:17 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526134517-ed435d99.json
+2026-05-26 13:45:17 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=21 content={"text":"静态资源走CDN加速"}
+2026-05-26 13:45:17 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=21)
+2026-05-26 13:45:18 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.10s
+2026-05-26 13:45:18 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:45:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=769bd9a95cb0 summary=静态资源走CDN加速 source=lark_im
+2026-05-26 13:45:18 - src.core.engine - INFO - [Mutation] New decision: sid=769bd9a95cb0 status=decided impact=major
+2026-05-26 13:45:18 - src.core.engine - INFO - Created decision: 769bd9a95cb0 — 静态资源走CDN加速
+2026-05-26 13:45:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=769bd9a95cb0
+2026-05-26 13:45:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=769bd9a95cb0
+2026-05-26 13:45:18 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.21s
+2026-05-26 13:52:08 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:08 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=26 content={"text":"大家讨论一下后端架构升级的事吧"}
+2026-05-26 13:52:08 - __main__ - INFO - [lark_im] WS >>> detector score=0.02 level=none is_decision=False: {"text":"大家讨论一下后端架构升级的事吧"}
+2026-05-26 13:52:08 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:13 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:13 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=33 content={"text":"我觉得数据库可以考虑换成PostgreSQL"}
+2026-05-26 13:52:13 - __main__ - INFO - [lark_im] WS >>> detector score=0.14 level=none is_decision=False: {"text":"我觉得数据库可以考虑换成PostgreSQL"}
+2026-05-26 13:52:13 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=33 content={"text":"RabbitMQ对分布式事务的支持很成熟稳定"}
+2026-05-26 13:52:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"RabbitMQ对分布式事务的支持很成熟稳定"}
+2026-05-26 13:52:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:26 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:27 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=32 content={"text":"缓存层必须上Redis，这个没什么好争议的"}
+2026-05-26 13:52:27 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"缓存层必须上Redis，这个没什么好争议的"}
+2026-05-26 13:52:27 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=31 content={"text":"我再次确认一下，数据库就定PG了，不改了"}
+2026-05-26 13:52:35 - __main__ - INFO - [lark_im] WS >>> detector score=0.69 level=high is_decision=True: {"text":"我再次确认一下，数据库就定PG了，不改了"}
+2026-05-26 13:52:35 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:38 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:38 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=33 content={"text":"PG的JSONB数据类型和全文检索能力也很强"}
+2026-05-26 13:52:38 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"PG的JSONB数据类型和全文检索能力也很强"}
+2026-05-26 13:52:38 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:42 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:42 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=30 content={"text":"容器化肯定要上K8s，方便统一管理编排"}
+2026-05-26 13:52:42 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"容器化肯定要上K8s，方便统一管理编排"}
+2026-05-26 13:52:42 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:49 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:49 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=24 content={"text":"不过消息队列我重新想了一下"}
+2026-05-26 13:52:49 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"不过消息队列我重新想了一下"}
+2026-05-26 13:52:49 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:53 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:53 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=33 content={"text":"如果未来吞吐量上来RabbitMQ可能扛不住"}
+2026-05-26 13:52:53 - __main__ - INFO - [lark_im] WS >>> detector score=0.02 level=none is_decision=False: {"text":"如果未来吞吐量上来RabbitMQ可能扛不住"}
+2026-05-26 13:52:53 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:52:59 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:52:59 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=39 content={"text":"Kafka的持久化机制和消息重放也比RabbitMQ可靠"}
+2026-05-26 13:52:59 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Kafka的持久化机制和消息重放也比RabbitMQ可靠"}
+2026-05-26 13:52:59 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:04 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:04 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=29 content={"text":"部署方案我建议用阿里云ACK托管集群"}
+2026-05-26 13:53:04 - __main__ - INFO - [lark_im] WS >>> detector score=0.49 level=low is_decision=False: {"text":"部署方案我建议用阿里云ACK托管集群"}
+2026-05-26 13:53:04 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:08 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:08 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=28 content={"text":"自建K8s集群的维护成本实在太高了"}
+2026-05-26 13:53:08 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"自建K8s集群的维护成本实在太高了"}
+2026-05-26 13:53:08 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:12 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:12 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=29 content={"text":"但用云厂商会被绑定，以后迁移会很麻烦"}
+2026-05-26 13:53:12 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"但用云厂商会被绑定，以后迁移会很麻烦"}
+2026-05-26 13:53:12 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:18 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:18 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=31 content={"text":"其实混合部署也行，核心业务自建非核心上云"}
+2026-05-26 13:53:18 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"其实混合部署也行，核心业务自建非核心上云"}
+2026-05-26 13:53:18 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:26 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:26 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=24 content={"text":"主从同步延迟的问题怎么处理"}
+2026-05-26 13:53:26 - __main__ - INFO - [lark_im] WS >>> detector score=0.17 level=none is_decision=False: {"text":"主从同步延迟的问题怎么处理"}
+2026-05-26 13:53:26 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:33 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:33 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=26 content={"text":"缓存策略用旁路缓存还是读写穿透"}
+2026-05-26 13:53:33 - __main__ - INFO - [lark_im] WS >>> detector score=0.34 level=low is_decision=False: {"text":"缓存策略用旁路缓存还是读写穿透"}
+2026-05-26 13:53:33 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:36 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:36 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=26 content={"text":"我倾向旁路缓存模式，更可控一些"}
+2026-05-26 13:53:36 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"我倾向旁路缓存模式，更可控一些"}
+2026-05-26 13:53:36 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:40 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:40 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=32 content={"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 13:53:40 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 13:53:40 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:53:51 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fbf3f0d35, dispatching to LLM
+2026-05-26 13:53:51 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 13:53:51 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526135351-8f4afe2d.json
+2026-05-26 13:53:51 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=32 content={"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 13:53:51 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=32)
+2026-05-26 13:53:53 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.55s
+2026-05-26 13:53:53 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:53:53 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=951ea199863d summary=推荐单独部署PgBouncer source=lark_im
+2026-05-26 13:53:53 - src.core.engine - INFO - [Mutation] New decision: sid=951ea199863d status=decided impact=major
+2026-05-26 13:53:53 - src.core.engine - INFO - Created decision: 951ea199863d — 推荐单独部署PgBouncer
+2026-05-26 13:53:53 - src.core.engine - INFO - [Mutation] CREATE applied: sid=951ea199863d
+2026-05-26 13:53:53 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=951ea199863d
+2026-05-26 13:53:53 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.66s
+2026-05-26 13:53:57 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:53:57 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=27 content={"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 13:53:57 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 13:53:57 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:09 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fbf3f0d35, dispatching to LLM
+2026-05-26 13:54:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 13:54:09 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526135409-7e5f2d50.json
+2026-05-26 13:54:09 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=27 content={"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 13:54:09 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=27)
+2026-05-26 13:54:10 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.00s
+2026-05-26 13:54:10 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:54:10 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=78a836f55385 summary=增加中间件进行数据分片 source=lark_im
+2026-05-26 13:54:10 - src.core.engine - INFO - [Mutation] New decision: sid=78a836f55385 status=decided impact=major
+2026-05-26 13:54:10 - src.core.engine - INFO - Created decision: 78a836f55385 — 增加中间件进行数据分片
+2026-05-26 13:54:10 - src.core.engine - INFO - [Mutation] CREATE applied: sid=78a836f55385
+2026-05-26 13:54:10 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=78a836f55385
+2026-05-26 13:54:10 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.12s
+2026-05-26 13:54:14 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:14 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=29 content={"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 13:54:14 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 13:54:14 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:25 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fbf3f0d35, dispatching to LLM
+2026-05-26 13:54:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 13:54:25 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526135425-5ce364a4.json
+2026-05-26 13:54:25 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=29 content={"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 13:54:25 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=29)
+2026-05-26 13:54:26 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.06s
+2026-05-26 13:54:26 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:54:26 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=9682bfb0e97c summary=部署方式选择云托管 source=lark_im
+2026-05-26 13:54:26 - src.core.engine - INFO - [Mutation] New decision: sid=9682bfb0e97c status=decided impact=major
+2026-05-26 13:54:27 - src.core.engine - INFO - Created decision: 9682bfb0e97c — 部署方式选择云托管
+2026-05-26 13:54:27 - src.core.engine - INFO - [Mutation] CREATE applied: sid=9682bfb0e97c
+2026-05-26 13:54:27 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=9682bfb0e97c
+2026-05-26 13:54:27 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.17s
+2026-05-26 13:54:27 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:27 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=30 content={"text":"云托管虽然省心省力，但长期来看成本更高"}
+2026-05-26 13:54:27 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"云托管虽然省心省力，但长期来看成本更高"}
+2026-05-26 13:54:27 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:31 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:31 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=30 content={"text":"我们能不能用裸金属服务器加K8s的方案"}
+2026-05-26 13:54:31 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"我们能不能用裸金属服务器加K8s的方案"}
+2026-05-26 13:54:31 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=31 content={"text":"这样性能最好，而且完全没有供应商锁定问题"}
+2026-05-26 13:54:35 - __main__ - INFO - [lark_im] WS >>> detector score=0.17 level=none is_decision=False: {"text":"这样性能最好，而且完全没有供应商锁定问题"}
+2026-05-26 13:54:35 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:38 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:38 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=27 content={"text":"但裸金属的弹性伸缩能力比云差很多"}
+2026-05-26 13:54:38 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"但裸金属的弹性伸缩能力比云差很多"}
+2026-05-26 13:54:38 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:41 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:41 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=27 content={"text":"最终还是折中吧，核心业务跑裸金属"}
+2026-05-26 13:54:41 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"最终还是折中吧，核心业务跑裸金属"}
+2026-05-26 13:54:41 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:44 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:44 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=25 content={"text":"非核心业务上云托管，混合架构"}
+2026-05-26 13:54:44 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"非核心业务上云托管，混合架构"}
+2026-05-26 13:54:44 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:49 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:49 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=26 content={"text":"这跟上回说的部署方案又不一样了"}
+2026-05-26 13:54:49 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"这跟上回说的部署方案又不一样了"}
+2026-05-26 13:54:49 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:54:55 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:54:55 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=28 content={"text":"缓存预热策略也要提前设计好防止雪崩"}
+2026-05-26 13:54:55 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存预热策略也要提前设计好防止雪崩"}
+2026-05-26 13:54:55 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:55:04 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:55:04 - __main__ - INFO - [lark_im] WS received: chat=oc_fbf3f0d35 sender= len=26 content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:55:04 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:55:04 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fbf3f0d35, will process after 10s silence
+2026-05-26 13:55:15 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fbf3f0d35, dispatching to LLM
+2026-05-26 13:55:15 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:55:15 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526135515-258ceada.json
+2026-05-26 13:55:15 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=26 content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:55:15 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=26)
+2026-05-26 13:55:17 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.50s
+2026-05-26 13:55:17 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:55:17 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=a9075d11adb5 summary=架构升级分三期推进 source=lark_im
+2026-05-26 13:55:17 - src.core.engine - INFO - [Mutation] New decision: sid=a9075d11adb5 status=decided impact=major
+2026-05-26 13:55:17 - src.core.engine - INFO - Created decision: a9075d11adb5 — 架构升级分三期推进
+2026-05-26 13:55:17 - src.core.engine - INFO - [Mutation] CREATE applied: sid=a9075d11adb5
+2026-05-26 13:55:17 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=a9075d11adb5
+2026-05-26 13:55:17 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.61s
+2026-05-26 13:56:07 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:07 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"大家讨论一下后端架构升级的事吧"}
+2026-05-26 13:56:07 - __main__ - INFO - [lark_im] WS >>> detector score=0.02 level=none is_decision=False: {"text":"大家讨论一下后端架构升级的事吧"}
+2026-05-26 13:56:07 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:09 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:09 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"消息队列我推荐用RabbitMQ"}
+2026-05-26 13:56:09 - __main__ - INFO - [lark_im] WS >>> detector score=0.46 level=low is_decision=False: {"text":"消息队列我推荐用RabbitMQ"}
+2026-05-26 13:56:09 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"RabbitMQ对分布式事务的支持很成熟稳定"}
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"RabbitMQ对分布式事务的支持很成熟稳定"}
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=32 content={"text":"缓存层必须上Redis，这个没什么好争议的"}
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"缓存层必须上Redis，这个没什么好争议的"}
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"Redis集群模式能轻松扛住高并发场景"}
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis集群模式能轻松扛住高并发场景"}
+2026-05-26 13:56:10 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"容器化肯定要上K8s，方便统一管理编排"}
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"容器化肯定要上K8s，方便统一管理编排"}
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"K8s的自动扩缩容能省掉大量运维成本"}
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"K8s的自动扩缩容能省掉大量运维成本"}
+2026-05-26 13:56:12 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"部署方案我建议用阿里云ACK托管集群"}
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS >>> detector score=0.49 level=low is_decision=False: {"text":"部署方案我建议用阿里云ACK托管集群"}
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"自建K8s集群的维护成本实在太高了"}
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"自建K8s集群的维护成本实在太高了"}
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"其实混合部署也行，核心业务自建非核心上云"}
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"其实混合部署也行，核心业务自建非核心上云"}
+2026-05-26 13:56:16 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"我倾向旁路缓存模式，更可控一些"}
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"我倾向旁路缓存模式，更可控一些"}
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=32 content={"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"PgBouncer更轻量专业，推荐单独部署"}
+2026-05-26 13:56:19 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:20 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:20 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"消息队列还是定Kafka，不再纠结了"}
+2026-05-26 13:56:20 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"消息队列还是定Kafka，不再纠结了"}
+2026-05-26 13:56:20 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"我推翻一下之前的说法，PG分区表性能其实有限"}
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"我推翻一下之前的说法，PG分区表性能其实有限"}
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"还是加一层中间件做数据分片比较好"}
+2026-05-26 13:56:21 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"但我们没有专职的SRE运维团队啊"}
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"但我们没有专职的SRE运维团队啊"}
+2026-05-26 13:56:22 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=27 content={"text":"最终还是折中吧，核心业务跑裸金属"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"最终还是折中吧，核心业务跑裸金属"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"这跟上回说的部署方案又不一样了"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"这跟上回说的部署方案又不一样了"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"非核心业务上云托管，混合架构"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"非核心业务上云托管，混合架构"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"缓存预热策略也要提前设计好防止雪崩"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存预热策略也要提前设计好防止雪崩"}
+2026-05-26 13:56:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"用互斥锁或者永不过期加后台异步更新"}
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] WS >>> detector score=0.34 level=low is_decision=False: {"text":"用互斥锁或者永不过期加后台异步更新"}
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:56:24 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 13:56:35 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 13:56:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:56:35 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526135635-ded9da41.json
+2026-05-26 13:56:35 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=26 content={"text":"整体架构升级分三期推进稳步上线"}
+2026-05-26 13:56:35 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=26)
+2026-05-26 13:56:37 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.74s
+2026-05-26 13:56:37 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-26 13:56:37 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=804e94798e3e summary=整体架构升级分三期推进 source=lark_im
+2026-05-26 13:56:37 - src.core.engine - INFO - [Mutation] New decision: sid=804e94798e3e status=decided impact=major
+2026-05-26 13:56:37 - src.core.engine - INFO - Created decision: 804e94798e3e — 整体架构升级分三期推进
+2026-05-26 13:56:37 - src.core.engine - INFO - [Mutation] CREATE applied: sid=804e94798e3e
+2026-05-26 13:56:37 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=804e94798e3e
+2026-05-26 13:56:37 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.83s
+2026-05-26 14:10:02 - Lark - ERROR - receive message loop exit, err: no close frame received or sent [conn_id=7644065834231745489]
+2026-05-26 14:10:02 - Lark - INFO - disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644065834231745489&access_key=b125976ff4df82aa433335992d830055&service_id=33554678&ticket=0d36146a-a87a-48eb-9308-2d6fe1fe8c38 [conn_id=7644065834231745489]
+2026-05-26 14:10:11 - Lark - INFO - trying to reconnect for the 1st time
+2026-05-26 14:10:26 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NewConnectionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable"))
+2026-05-26 14:13:36 - Lark - INFO - trying to reconnect for the 2nd time
+2026-05-26 14:15:34 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-26 14:18:39 - Lark - INFO - trying to reconnect for the 3rd time
+2026-05-26 14:18:39 - Lark - ERROR - connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NewConnectionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable"))
+2026-05-26 14:21:41 - Lark - INFO - trying to reconnect for the 4th time
+2026-05-26 14:21:41 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644081822511418305&access_key=edf4d29399562cfa7f310aff09afe530&service_id=33554678&ticket=8cac69f0-eb47-41d6-a125-ffc9614d5396 [conn_id=7644081822511418305]
+2026-05-26 15:18:20 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:20 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"大家讨论一下后端架构升级的事吧"}
+2026-05-26 15:18:20 - __main__ - INFO - [lark_im] WS >>> detector score=0.02 level=none is_decision=False: {"text":"大家讨论一下后端架构升级的事吧"}
+2026-05-26 15:18:20 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:21 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:21 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"我觉得数据库可以考虑换成PostgreSQL"}
+2026-05-26 15:18:21 - __main__ - INFO - [lark_im] WS >>> detector score=0.14 level=none is_decision=False: {"text":"我觉得数据库可以考虑换成PostgreSQL"}
+2026-05-26 15:18:21 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:22 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:22 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"PG的扩展性和生态比MySQL好太多了"}
+2026-05-26 15:18:22 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"PG的扩展性和生态比MySQL好太多了"}
+2026-05-26 15:18:22 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"RabbitMQ对分布式事务的支持很成熟稳定"}
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"RabbitMQ对分布式事务的支持很成熟稳定"}
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=32 content={"text":"缓存层必须上Redis，这个没什么好争议的"}
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"缓存层必须上Redis，这个没什么好争议的"}
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"Redis集群模式能轻松扛住高并发场景"}
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"Redis集群模式能轻松扛住高并发场景"}
+2026-05-26 15:18:23 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"容器化肯定要上K8s，方便统一管理编排"}
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"容器化肯定要上K8s，方便统一管理编排"}
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"K8s的自动扩缩容能省掉大量运维成本"}
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"K8s的自动扩缩容能省掉大量运维成本"}
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"不过消息队列我重新想了一下"}
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"不过消息队列我重新想了一下"}
+2026-05-26 15:18:26 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:28 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:28 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"还是换成Kafka吧，流处理能力更强"}
+2026-05-26 15:18:28 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"还是换成Kafka吧，流处理能力更强"}
+2026-05-26 15:18:28 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"但用云厂商会被绑定，以后迁移会很麻烦"}
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"但用云厂商会被绑定，以后迁移会很麻烦"}
+2026-05-26 15:18:29 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"我还是觉得自建更灵活，虽然运维累一点"}
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS >>> detector score=0.19 level=none is_decision=False: {"text":"我还是觉得自建更灵活，虽然运维累一点"}
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"数据库选型还是PG对吧，我再确认一次"}
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] WS >>> detector score=0.64 level=medium is_decision=True: {"text":"数据库选型还是PG对吧，我再确认一次"}
+2026-05-26 15:18:30 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"PG配好连接池和主从复制，性能完全没问题"}
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] WS >>> detector score=0.17 level=none is_decision=False: {"text":"PG配好连接池和主从复制，性能完全没问题"}
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=24 content={"text":"主从同步延迟的问题怎么处理"}
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] WS >>> detector score=0.17 level=none is_decision=False: {"text":"主从同步延迟的问题怎么处理"}
+2026-05-26 15:18:31 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:32 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:32 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=37 content={"text":"可以用PgBouncer做连接池，延迟问题靠监控告警"}
+2026-05-26 15:18:32 - __main__ - INFO - [lark_im] WS >>> detector score=0.17 level=none is_decision=False: {"text":"可以用PgBouncer做连接池，延迟问题靠监控告警"}
+2026-05-26 15:18:32 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=34 content={"text":"Kafka的Topic分区策略需要提前设计清楚"}
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] WS >>> detector score=0.26 level=low is_decision=False: {"text":"Kafka的Topic分区策略需要提前设计清楚"}
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"分区数直接决定消费者的并发处理能力"}
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] WS >>> detector score=0.48 level=low is_decision=False: {"text":"分区数直接决定消费者的并发处理能力"}
+2026-05-26 15:18:34 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=33 content={"text":"我推翻一下之前的说法，PG分区表性能其实有限"}
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"我推翻一下之前的说法，PG分区表性能其实有限"}
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=36 content={"text":"监控体系用Prometheus加Grafana组合"}
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"监控体系用Prometheus加Grafana组合"}
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"算了不纠结了，部署还是选云托管最省心"}
+2026-05-26 15:18:35 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=31 content={"text":"这样性能最好，而且完全没有供应商锁定问题"}
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> detector score=0.17 level=none is_decision=False: {"text":"这样性能最好，而且完全没有供应商锁定问题"}
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=30 content={"text":"我们能不能用裸金属服务器加K8s的方案"}
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"我们能不能用裸金属服务器加K8s的方案"}
+2026-05-26 15:18:36 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=25 content={"text":"非核心业务上云托管，混合架构"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"非核心业务上云托管，混合架构"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=26 content={"text":"这跟上回说的部署方案又不一样了"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> detector score=0.28 level=low is_decision=False: {"text":"这跟上回说的部署方案又不一样了"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=29 content={"text":"但这是综合考虑成本和灵活性的最优解了"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"但这是综合考虑成本和灵活性的最优解了"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=28 content={"text":"缓存预热策略也要提前设计好防止雪崩"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"缓存预热策略也要提前设计好防止雪崩"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> on_message called, event type=P2ImMessageReceiveV1
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS received: chat=oc_fde6be60e sender= len=23 content={"text":"大促期间缓存击穿怎么防御"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] WS >>> detector score=0.03 level=none is_decision=False: {"text":"大促期间缓存击穿怎么防御"}
+2026-05-26 15:18:37 - __main__ - INFO - [lark_im] Debounce recorded: chat=oc_fde6be60e, will process after 10s silence
+2026-05-26 15:18:47 - __main__ - INFO - [lark_im] Debounce triggered: chat=oc_fde6be60e, dispatching to LLM
+2026-05-26 15:18:47 - src.core.engine - INFO - [Engine] >>> _process_detection source=lark_im content={"text":"大促期间缓存击穿怎么防御"}
+2026-05-26 15:18:47 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260526151847-2e87cf3e.json
+2026-05-26 15:18:47 - src.core.engine - INFO - [LLM] >>> _extract_decision source=lark_im len=23 content={"text":"大促期间缓存击穿怎么防御"}
+2026-05-26 15:18:47 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=23)
+2026-05-26 15:18:48 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.70s
+2026-05-26 15:18:48 - src.core.engine - INFO - [LLM] No decision found in content ({"text":"大促期间缓存击穿怎么防御"})
+2026-05-26 15:18:48 - src.core.engine - INFO - [Engine] No decision extracted from content ({"text":"大促期间缓存击穿怎么防御"})
+2026-05-26 15:18:48 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.71s

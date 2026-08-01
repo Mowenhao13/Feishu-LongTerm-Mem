@@ -1,0 +1,758 @@
+2026-05-27 15:54:38 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260527_155438.log
+2026-05-27 15:54:40 - src.eval_runner - INFO - MemoryGraph loaded: 91 decisions
+2026-05-27 15:54:40 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-27 15:54:40 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-27 15:54:42 - src.core.engine - INFO - Loaded 91 decisions, 12 topics
+2026-05-27 15:54:42 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=58 topics=1
+2026-05-27 15:54:42 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-27 15:54:42 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-27 15:54:42 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-27 15:54:42 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-27 15:54:42 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-27 15:54:42 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-27 15:54:42 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-27 15:54:42 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-05-27 15:54:42 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-27 15:54:42 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_02d39f2ec started with msg=eval_1
+2026-05-27 15:54:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+2026-05-27 15:54:42 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155442-2fa51bbb.json
+2026-05-27 15:54:42 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:42 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=963 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:42 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=963)
+2026-05-27 15:54:44 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.40s
+2026-05-27 15:54:44 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:54:44 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d89442758886 title=数据库选型为PostgreSQL source=eval
+2026-05-27 15:54:44 - src.core.engine - INFO - [Mutation] Existing by sid: sid=d89442758886 v23
+2026-05-27 15:54:44 - src.core.engine - INFO - Updated decision: d89442758886 v24
+2026-05-27 15:54:44 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=d89442758886 v25
+2026-05-27 15:54:44 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:54:44 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:54:45 - src.view.client - ERROR - Failed to upsert record for d89442758886: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:54:45 - src.view.syncer - INFO - [BaseView] Synced decision d89442758886 v24
+2026-05-27 15:54:45 - src.core.engine - INFO - [Mutation] Base sync triggered for UPDATE: sid=d89442758886
+2026-05-27 15:54:45 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.21s
+2026-05-27 15:54:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化肯定要上K8s，生产环境都这么用了
+2026-05-27 15:54:45 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155445-3d4951eb.json
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=946 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=946)
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.73s
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:45 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化肯定要上K8s，生产环境都这么用了)
+2026-05-27 15:54:45 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.73s
+2026-05-27 15:54:45 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '话说回来，数据库选型的话，PostgreSQL的扩展性更强，', suspend episode=ep_02d39f2ec (msgs=2)
+2026-05-27 15:54:45 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_02d39f2ec (chat=eval, msgs=2, pool=1/20)
+2026-05-27 15:54:45 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_8642b3923 started after keyword suspend
+2026-05-27 15:54:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=话说回来，数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS，而且还有timescaledb这样的
+2026-05-27 15:54:45 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155445-34eee6cf.json
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1009 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:45 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1009)
+2026-05-27 15:54:46 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.81s
+2026-05-27 15:54:46 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:46 - src.core.engine - INFO - [Engine] No decision extracted from content (话说回来，数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS，而且还有timescaledb这样的)
+2026-05-27 15:54:46 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.81s
+2026-05-27 15:54:46 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列
+2026-05-27 15:54:46 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155446-4d9430e5.json
+2026-05-27 15:54:46 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:46 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=930 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:46 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=930)
+2026-05-27 15:54:47 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.91s
+2026-05-27 15:54:47 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:47 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列)
+2026-05-27 15:54:47 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.92s
+2026-05-27 15:54:47 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化方案就用K8s吧，生态最成熟
+2026-05-27 15:54:47 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155447-bf9cb53e.json
+2026-05-27 15:54:47 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:47 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=943 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:47 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=943)
+2026-05-27 15:54:48 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.98s
+2026-05-27 15:54:48 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:48 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化方案就用K8s吧，生态最成熟)
+2026-05-27 15:54:48 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.98s
+2026-05-27 15:54:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型还是要看团队能力，PG学习成本高一些，不过长期来看值得投资
+2026-05-27 15:54:48 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155448-d91562e5.json
+2026-05-27 15:54:48 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:48 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=960 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:48 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=960)
+2026-05-27 15:54:49 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.08s
+2026-05-27 15:54:49 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:49 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型还是要看团队能力，PG学习成本高一些，不过长期来看值得投资)
+2026-05-27 15:54:49 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.08s
+2026-05-27 15:54:49 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端可以考虑用React
+2026-05-27 15:54:49 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155449-a7d9f88a.json
+2026-05-27 15:54:49 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:49 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=938 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:49 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=938)
+2026-05-27 15:54:50 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.85s
+2026-05-27 15:54:50 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:50 - src.core.engine - INFO - [Engine] No decision extracted from content (前端可以考虑用React)
+2026-05-27 15:54:50 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.85s
+2026-05-27 15:54:50 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器的监控用Prometheus+Grafana吧
+2026-05-27 15:54:50 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155450-b72a8965.json
+2026-05-27 15:54:50 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:50 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=951 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:50 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=951)
+2026-05-27 15:54:51 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.13s
+2026-05-27 15:54:51 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:51 - src.core.engine - INFO - [Engine] No decision extracted from content (容器的监控用Prometheus+Grafana吧)
+2026-05-27 15:54:51 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.13s
+2026-05-27 15:54:51 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '对了，消息队列选了Kafka，配合流处理引擎很强大，而且Ka', suspend episode=ep_8642b3923 (msgs=6)
+2026-05-27 15:54:51 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_8642b3923 (chat=eval, msgs=6, pool=2/20)
+2026-05-27 15:54:51 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_41074d2d3 started after keyword suspend
+2026-05-27 15:54:51 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=对了，消息队列选了Kafka，配合流处理引擎很强大，而且Kafka的生态非常完善，从连接器到流处理一应俱全
+2026-05-27 15:54:51 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155451-02223b57.json
+2026-05-27 15:54:51 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:51 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=979 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:51 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=979)
+2026-05-27 15:54:52 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.97s
+2026-05-27 15:54:52 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:52 - src.core.engine - INFO - [Engine] No decision extracted from content (对了，消息队列选了Kafka，配合流处理引擎很强大，而且Kafka的生态非常完善，从连接器到流处理一应俱全)
+2026-05-27 15:54:52 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.98s
+2026-05-27 15:54:52 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库还是决定用PG，RDS托管省心省力，阿里云RDS for PG的性价比还不错，自动备份和监控都自带
+2026-05-27 15:54:52 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155452-5fd7658c.json
+2026-05-27 15:54:52 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:52 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=978 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:52 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=978)
+2026-05-27 15:54:53 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.09s
+2026-05-27 15:54:53 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:53 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库还是决定用PG，RDS托管省心省力，阿里云RDS for PG的性价比还不错，自动备份和监控都自带)
+2026-05-27 15:54:53 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.09s
+2026-05-27 15:54:53 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Sentry做错误监控
+2026-05-27 15:54:53 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155453-8697d44a.json
+2026-05-27 15:54:53 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:53 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=939 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:53 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=939)
+2026-05-27 15:54:54 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.19s
+2026-05-27 15:54:54 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:54:54 - src.core.engine - INFO - [Engine] No decision extracted from content (前端Sentry做错误监控)
+2026-05-27 15:54:54 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.19s
+2026-05-27 15:54:54 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '另外还有一个事，前端性能优化可以用SSR和服务端组件，Nex', suspend episode=ep_41074d2d3 (msgs=3)
+2026-05-27 15:54:54 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_41074d2d3 (chat=eval, msgs=3, pool=3/20)
+2026-05-27 15:54:54 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_18f44299a started after keyword suspend
+2026-05-27 15:54:54 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=另外还有一个事，前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少
+2026-05-27 15:54:54 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155454-fc5e4f69.json
+2026-05-27 15:54:54 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:54:54 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=981 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:54:54 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=981)
+2026-05-27 15:54:56 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.57s
+2026-05-27 15:54:56 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:54:56 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=8a1e4494dc5c title=前端性能优化采用SSR和服务端组件 source=eval
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=48 model=Qwen3-Embedding-4B
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=48 preview=前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.14s value_range=[-9.2734, 9.0391] mean=0.0203 std=2.5835
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=72 chars=2784 model=Qwen3-Embedding-4B
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[1/72] len=44 preview=决定使用Kafka MirrorMaker实现跨集群数据同步，用于灾备或多区域部署场景。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[2/72] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[3/72] len=25 preview=前端AB测试方案采用Feature Flag实现。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[4/72] len=23 preview=决定为消息队列设置消息保留策略，具体配置待定。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[5/72] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[6/72] len=54 preview=现有系统使用RabbitMQ，需要构建消息桥接层实现从RabbitMQ到Kafka的平滑迁移，避免直接切换。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[7/72] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[8/72] len=28 preview=决定为消息队列配置死信队列，用于处理无法正常消费的消息。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[9/72] len=40 preview=确定消息队列的Topic设计方案，包括Topic命名规范、分区策略、消息格式等。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[10/72] len=22 preview=容器网络插件采用Calico，支持网络策略。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[11/72] len=66 preview=将前端业务组件抽离成独立npm包，实现跨项目复用和清晰版本管理，并使用Changeset进行自动版本号管理和Change
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[12/72] len=61 preview=将不变的依赖层放在Dockerfile前面，经常变的业务代码放在后面，以利用Docker的layer缓存机制减少构建时间
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[13/72] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[14/72] len=26 preview=前端路由权限控制方案已确定，具体实现细节待后续讨论。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[15/72] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[16/72] len=36 preview=决定采用WebWorker处理前端大数据渲染，以提升页面性能和用户体验。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[17/72] len=35 preview=决定使用TimescaleDB的自动分区功能来管理时间序列数据的分区。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[18/72] len=31 preview=确定消息队列的幂等处理方案，确保消息重复消费时不会产生副作用。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[19/72] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[20/72] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[21/72] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[22/72] len=53 preview=决定将前端E2E测试工具从Cypress切换为Playwright，以利用其跨浏览器支持和更快的执行速度。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[23/72] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[24/72] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[25/72] len=28 preview=针对Kafka消费者组重平衡问题进行优化，具体方案待定。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[26/72] len=19 preview=决定采用Loki作为容器日志收集方案。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[27/72] len=35 preview=容器Ingress采用Nginx Ingress Controller
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[28/72] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[29/72] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[30/72] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[31/72] len=62 preview=容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[32/72] len=72 preview=消息队列引入Schema Registry来管理数据格式，解决生产和消费者之间数据格式不一致问题，并通过Schema兼容
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[33/72] len=50 preview=前端浏览器兼容性列表只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[34/72] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[35/72] len=26 preview=讨论Kafka升级方案，确保无损迁移，具体细节待定。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[36/72] len=6 preview=前端灰度发布
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[37/72] len=28 preview=决定采用Istio作为容器Service Mesh方案。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[38/72] len=12 preview=容器GitOps方案选型
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[39/72] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[40/72] len=25 preview=决定消息队列Schema兼容性策略，具体方案待定。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[41/72] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[42/72] len=42 preview=决定采用Bytebase进行SQL审核，以规范数据库变更流程，提升代码质量和安全性。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[43/72] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[44/72] len=40 preview=前端采用Next.js实现服务端渲染（SSR），以提升首屏加载性能和SEO效果。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[45/72] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[46/72] len=18 preview=将数据库迁移工具更换为Sqitch。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[47/72] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[48/72] len=35 preview=前端技术栈整体采用React，包括核心框架、状态管理、路由等全套方案。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[49/72] len=16 preview=容器使用PV/PVC做持久化存储
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[50/72] len=52 preview=讨论Kafka集群的高可用配置，包括副本因子、ISR设置、acks参数等，确保消息不丢失且服务持续可用。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[51/72] len=23 preview=决定使用Burrow作为Kafka的监控工具。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[52/72] len=28 preview=确定容器化方案使用Kubernetes，因其生态最成熟。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[53/72] len=29 preview=确定容器K8s的namespace规划方案，具体细节待定。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[54/72] len=43 preview=决定采用Kafka KRaft模式，替代ZooKeeper依赖，以简化架构并提升性能。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[55/72] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[56/72] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[57/72] len=28 preview=数据库PostgreSQL高可用方案采用Patroni。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[58/72] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[59/72] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[60/72] len=80 preview=决定在容器架构中采用Sidecar模式，将辅助功能（如日志收集、监控代理、服务网格等）以独立容器的方式与主应用容器部署在
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[61/72] len=30 preview=决定将前端静态资源部署到对象存储（OSS）并使用CDN加速。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[62/72] len=30 preview=决定采用GitHub Actions作为容器CI/CD工具。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[63/72] len=58 preview=决定采用容器Pod Anti-Affinity策略，确保关键服务的高可用性，避免同一节点上运行多个相同服务的Pod。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[64/72] len=38 preview=在OLTP场景下，倾向于选择PostgreSQL，认为其性能优于MySQL。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[65/72] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[66/72] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[67/72] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[68/72] len=55 preview=容器结合Istio做灰度发布，可以在不修改应用代码的情况下实现流量管理，并且利用Istio的mTLS加密通信。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[69/72] len=62 preview=容器安全方案决定采用Pod Security Standards，该标准在Kubernetes 1.25之后已成为默认行
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[70/72] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[71/72] len=30 preview=决定使用PgBouncer的事务池模式作为数据库连接池方案。
+2026-05-27 15:54:56 - src.model.embedding_provider - INFO - [Embedding]     text[72/72] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 15:55:00 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=72 dim=2560 time=3.50s value_range=[-13.1016, 15.8906] mean=0.0049 std=2.5934
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=48 preview=前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少。
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=40 preview=前端采用Next.js实现服务端渲染（SSR），以提升首屏加载性能和SEO效果。
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=35 preview=前端技术栈整体采用React，包括核心框架、状态管理、路由等全套方案。
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少。 docs=5
+2026-05-27 15:55:00 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.375, -4.4258, -3.0977, -3.9082, -3.5605] time=0.15s top3=[2]-3.0977:决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.; [0]-3.3750:前端采用Next.js实现服务端渲染（SSR），以提升首屏加载性能和SEO效果。; [4]-3.5605:将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:55:00 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.0977)
+2026-05-27 15:55:00 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=8a1e4494dc5c v1
+2026-05-27 15:55:00 - src.core.engine - INFO - Created decision: 8a1e4494dc5c v1 — 前端性能优化采用SSR和服务端组件
+2026-05-27 15:55:00 - src.core.engine - INFO - [Mutation] CREATE applied: sid=8a1e4494dc5c v1
+2026-05-27 15:55:01 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:01 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:03 - src.view.client - ERROR - Failed to upsert record for 8a1e4494dc5c: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:03 - src.view.syncer - INFO - [BaseView] Synced decision 8a1e4494dc5c v1
+2026-05-27 15:55:03 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=8a1e4494dc5c
+2026-05-27 15:55:03 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=8a1e4494dc5c
+2026-05-27 15:55:03 - src.core.engine - INFO - [Engine] <<< _process_detection done time=8.55s
+2026-05-27 15:55:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池用PgBouncer
+2026-05-27 15:55:03 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155503-da1d10b8.json
+2026-05-27 15:55:03 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:03 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=942 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:03 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=942)
+2026-05-27 15:55:05 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.74s
+2026-05-27 15:55:05 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:55:05 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=421515612463 title=数据库连接池采用PgBouncer source=eval
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=50 model=Qwen3-Embedding-4B
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=50 preview=决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，提高连接效率和性能。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-9.7812, 9.9922] mean=0.0052 std=2.5449
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=73 chars=2832 model=Qwen3-Embedding-4B
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[1/73] len=44 preview=决定使用Kafka MirrorMaker实现跨集群数据同步，用于灾备或多区域部署场景。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[2/73] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[3/73] len=25 preview=前端AB测试方案采用Feature Flag实现。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[4/73] len=23 preview=决定为消息队列设置消息保留策略，具体配置待定。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[5/73] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[6/73] len=54 preview=现有系统使用RabbitMQ，需要构建消息桥接层实现从RabbitMQ到Kafka的平滑迁移，避免直接切换。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[7/73] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[8/73] len=28 preview=决定为消息队列配置死信队列，用于处理无法正常消费的消息。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[9/73] len=40 preview=确定消息队列的Topic设计方案，包括Topic命名规范、分区策略、消息格式等。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[10/73] len=22 preview=容器网络插件采用Calico，支持网络策略。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[11/73] len=66 preview=将前端业务组件抽离成独立npm包，实现跨项目复用和清晰版本管理，并使用Changeset进行自动版本号管理和Change
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[12/73] len=61 preview=将不变的依赖层放在Dockerfile前面，经常变的业务代码放在后面，以利用Docker的layer缓存机制减少构建时间
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[13/73] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[14/73] len=26 preview=前端路由权限控制方案已确定，具体实现细节待后续讨论。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[15/73] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[16/73] len=36 preview=决定采用WebWorker处理前端大数据渲染，以提升页面性能和用户体验。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[17/73] len=35 preview=决定使用TimescaleDB的自动分区功能来管理时间序列数据的分区。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[18/73] len=31 preview=确定消息队列的幂等处理方案，确保消息重复消费时不会产生副作用。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[19/73] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[20/73] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[21/73] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[22/73] len=53 preview=决定将前端E2E测试工具从Cypress切换为Playwright，以利用其跨浏览器支持和更快的执行速度。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[23/73] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[24/73] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[25/73] len=28 preview=针对Kafka消费者组重平衡问题进行优化，具体方案待定。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[26/73] len=19 preview=决定采用Loki作为容器日志收集方案。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[27/73] len=35 preview=容器Ingress采用Nginx Ingress Controller
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[28/73] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[29/73] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[30/73] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[31/73] len=62 preview=容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[32/73] len=72 preview=消息队列引入Schema Registry来管理数据格式，解决生产和消费者之间数据格式不一致问题，并通过Schema兼容
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[33/73] len=50 preview=前端浏览器兼容性列表只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[34/73] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[35/73] len=26 preview=讨论Kafka升级方案，确保无损迁移，具体细节待定。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[36/73] len=6 preview=前端灰度发布
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[37/73] len=28 preview=决定采用Istio作为容器Service Mesh方案。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[38/73] len=12 preview=容器GitOps方案选型
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[39/73] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[40/73] len=25 preview=决定消息队列Schema兼容性策略，具体方案待定。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[41/73] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[42/73] len=42 preview=决定采用Bytebase进行SQL审核，以规范数据库变更流程，提升代码质量和安全性。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[43/73] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[44/73] len=40 preview=前端采用Next.js实现服务端渲染（SSR），以提升首屏加载性能和SEO效果。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[45/73] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[46/73] len=18 preview=将数据库迁移工具更换为Sqitch。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[47/73] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[48/73] len=35 preview=前端技术栈整体采用React，包括核心框架、状态管理、路由等全套方案。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[49/73] len=16 preview=容器使用PV/PVC做持久化存储
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[50/73] len=52 preview=讨论Kafka集群的高可用配置，包括副本因子、ISR设置、acks参数等，确保消息不丢失且服务持续可用。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[51/73] len=23 preview=决定使用Burrow作为Kafka的监控工具。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[52/73] len=28 preview=确定容器化方案使用Kubernetes，因其生态最成熟。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[53/73] len=29 preview=确定容器K8s的namespace规划方案，具体细节待定。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[54/73] len=43 preview=决定采用Kafka KRaft模式，替代ZooKeeper依赖，以简化架构并提升性能。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[55/73] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[56/73] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[57/73] len=28 preview=数据库PostgreSQL高可用方案采用Patroni。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[58/73] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[59/73] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[60/73] len=80 preview=决定在容器架构中采用Sidecar模式，将辅助功能（如日志收集、监控代理、服务网格等）以独立容器的方式与主应用容器部署在
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[61/73] len=30 preview=决定将前端静态资源部署到对象存储（OSS）并使用CDN加速。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[62/73] len=30 preview=决定采用GitHub Actions作为容器CI/CD工具。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[63/73] len=58 preview=决定采用容器Pod Anti-Affinity策略，确保关键服务的高可用性，避免同一节点上运行多个相同服务的Pod。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[64/73] len=38 preview=在OLTP场景下，倾向于选择PostgreSQL，认为其性能优于MySQL。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[65/73] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[66/73] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[67/73] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[68/73] len=55 preview=容器结合Istio做灰度发布，可以在不修改应用代码的情况下实现流量管理，并且利用Istio的mTLS加密通信。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[69/73] len=62 preview=容器安全方案决定采用Pod Security Standards，该标准在Kubernetes 1.25之后已成为默认行
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[70/73] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[71/73] len=30 preview=决定使用PgBouncer的事务池模式作为数据库连接池方案。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[72/73] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 15:55:05 - src.model.embedding_provider - INFO - [Embedding]     text[73/73] len=48 preview=前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少。
+2026-05-27 15:55:07 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=73 dim=2560 time=2.74s value_range=[-13.1172, 15.9062] mean=0.0051 std=2.5943
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=50 preview=决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，提高连接效率和性能。
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=30 preview=决定使用PgBouncer的事务池模式作为数据库连接池方案。
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=28 preview=数据库PostgreSQL高可用方案采用Patroni。
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=38 preview=在OLTP场景下，倾向于选择PostgreSQL，认为其性能优于MySQL。
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 15:55:07 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，提高连接效率和性能。 docs=5
+2026-05-27 15:55:08 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-2.7852, -3.2812, -2.4023, -2.9062, -3.2188] time=0.14s top3=[2]-2.4023:数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为R; [0]-2.7852:决定使用PgBouncer的事务池模式作为数据库连接池方案。; [3]-2.9062:在OLTP场景下，倾向于选择PostgreSQL，认为其性能优于MySQL。
+2026-05-27 15:55:08 - src.core.engine - INFO - [Similar] Embedding search no match (top=-2.4023)
+2026-05-27 15:55:08 - src.core.engine - INFO - [Similar] Found by bigram: sid=f12c56bd4627 score=0.76
+2026-05-27 15:55:08 - src.core.engine - INFO - [Mutation] Similar found: sid=f12c56bd4627 summary=数据库连接池采用PgBouncer事务池模式 score=0.7619
+2026-05-27 15:55:08 - src.core.engine - INFO - [Mutation] HARD constraint: score=0.7619 >= 0.65, direct UPDATE
+2026-05-27 15:55:08 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=f12c56bd4627 v1
+2026-05-27 15:55:08 - src.core.engine - INFO - Created decision: f12c56bd4627 v1 — 数据库连接池采用PgBouncer
+2026-05-27 15:55:08 - src.core.engine - INFO - [Mutation] CREATE applied: sid=f12c56bd4627 v1
+2026-05-27 15:55:08 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:08 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:09 - src.view.client - ERROR - Failed to upsert record for f12c56bd4627: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:09 - src.view.syncer - INFO - [BaseView] Synced decision f12c56bd4627 v1
+2026-05-27 15:55:09 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=f12c56bd4627
+2026-05-27 15:55:09 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=f12c56bd4627
+2026-05-27 15:55:09 - src.core.engine - INFO - [Engine] <<< _process_detection done time=5.66s
+2026-05-27 15:55:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器资源限制用resource quota和limit range，这两个配合使用可以很好地控制命名空间级别的资源分配，
+2026-05-27 15:55:09 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155509-ba36c5a9.json
+2026-05-27 15:55:09 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:09 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1000 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:09 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1000)
+2026-05-27 15:55:10 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.00s
+2026-05-27 15:55:10 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:10 - src.core.engine - INFO - [Engine] No decision extracted from content (容器资源限制用resource quota和limit range，这两个配合使用可以很好地控制命名空间级别的资源分配，)
+2026-05-27 15:55:10 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.01s
+2026-05-27 15:55:10 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端CDN缓存策略也得考虑
+2026-05-27 15:55:10 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155510-e0fc5f21.json
+2026-05-27 15:55:10 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:10 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=939 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:10 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=939)
+2026-05-27 15:55:11 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.41s
+2026-05-27 15:55:11 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:55:11 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=b1f9477e1cff title=前端CDN缓存策略 source=eval
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=18 model=Qwen3-Embedding-4B
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=18 preview=前端CDN缓存策略需要被考虑和制定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.7344, 8.7422] mean=0.0575 std=2.4958
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=73 chars=2852 model=Qwen3-Embedding-4B
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[1/73] len=44 preview=决定使用Kafka MirrorMaker实现跨集群数据同步，用于灾备或多区域部署场景。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[2/73] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[3/73] len=25 preview=前端AB测试方案采用Feature Flag实现。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[4/73] len=23 preview=决定为消息队列设置消息保留策略，具体配置待定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[5/73] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[6/73] len=54 preview=现有系统使用RabbitMQ，需要构建消息桥接层实现从RabbitMQ到Kafka的平滑迁移，避免直接切换。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[7/73] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[8/73] len=28 preview=决定为消息队列配置死信队列，用于处理无法正常消费的消息。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[9/73] len=40 preview=确定消息队列的Topic设计方案，包括Topic命名规范、分区策略、消息格式等。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[10/73] len=22 preview=容器网络插件采用Calico，支持网络策略。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[11/73] len=66 preview=将前端业务组件抽离成独立npm包，实现跨项目复用和清晰版本管理，并使用Changeset进行自动版本号管理和Change
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[12/73] len=61 preview=将不变的依赖层放在Dockerfile前面，经常变的业务代码放在后面，以利用Docker的layer缓存机制减少构建时间
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[13/73] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[14/73] len=26 preview=前端路由权限控制方案已确定，具体实现细节待后续讨论。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[15/73] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[16/73] len=36 preview=决定采用WebWorker处理前端大数据渲染，以提升页面性能和用户体验。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[17/73] len=35 preview=决定使用TimescaleDB的自动分区功能来管理时间序列数据的分区。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[18/73] len=31 preview=确定消息队列的幂等处理方案，确保消息重复消费时不会产生副作用。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[19/73] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[20/73] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[21/73] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[22/73] len=53 preview=决定将前端E2E测试工具从Cypress切换为Playwright，以利用其跨浏览器支持和更快的执行速度。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[23/73] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[24/73] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[25/73] len=28 preview=针对Kafka消费者组重平衡问题进行优化，具体方案待定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[26/73] len=19 preview=决定采用Loki作为容器日志收集方案。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[27/73] len=35 preview=容器Ingress采用Nginx Ingress Controller
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[28/73] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[29/73] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[30/73] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[31/73] len=62 preview=容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[32/73] len=72 preview=消息队列引入Schema Registry来管理数据格式，解决生产和消费者之间数据格式不一致问题，并通过Schema兼容
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[33/73] len=50 preview=前端浏览器兼容性列表只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[34/73] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[35/73] len=26 preview=讨论Kafka升级方案，确保无损迁移，具体细节待定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[36/73] len=6 preview=前端灰度发布
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[37/73] len=28 preview=决定采用Istio作为容器Service Mesh方案。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[38/73] len=12 preview=容器GitOps方案选型
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[39/73] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[40/73] len=25 preview=决定消息队列Schema兼容性策略，具体方案待定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[41/73] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[42/73] len=42 preview=决定采用Bytebase进行SQL审核，以规范数据库变更流程，提升代码质量和安全性。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[43/73] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[44/73] len=40 preview=前端采用Next.js实现服务端渲染（SSR），以提升首屏加载性能和SEO效果。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[45/73] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[46/73] len=18 preview=将数据库迁移工具更换为Sqitch。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[47/73] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[48/73] len=35 preview=前端技术栈整体采用React，包括核心框架、状态管理、路由等全套方案。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[49/73] len=16 preview=容器使用PV/PVC做持久化存储
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[50/73] len=52 preview=讨论Kafka集群的高可用配置，包括副本因子、ISR设置、acks参数等，确保消息不丢失且服务持续可用。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[51/73] len=23 preview=决定使用Burrow作为Kafka的监控工具。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[52/73] len=28 preview=确定容器化方案使用Kubernetes，因其生态最成熟。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[53/73] len=29 preview=确定容器K8s的namespace规划方案，具体细节待定。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[54/73] len=43 preview=决定采用Kafka KRaft模式，替代ZooKeeper依赖，以简化架构并提升性能。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[55/73] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[56/73] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[57/73] len=28 preview=数据库PostgreSQL高可用方案采用Patroni。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[58/73] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[59/73] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[60/73] len=80 preview=决定在容器架构中采用Sidecar模式，将辅助功能（如日志收集、监控代理、服务网格等）以独立容器的方式与主应用容器部署在
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[61/73] len=30 preview=决定将前端静态资源部署到对象存储（OSS）并使用CDN加速。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[62/73] len=30 preview=决定采用GitHub Actions作为容器CI/CD工具。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[63/73] len=58 preview=决定采用容器Pod Anti-Affinity策略，确保关键服务的高可用性，避免同一节点上运行多个相同服务的Pod。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[64/73] len=38 preview=在OLTP场景下，倾向于选择PostgreSQL，认为其性能优于MySQL。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[65/73] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[66/73] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[67/73] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[68/73] len=55 preview=容器结合Istio做灰度发布，可以在不修改应用代码的情况下实现流量管理，并且利用Istio的mTLS加密通信。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[69/73] len=62 preview=容器安全方案决定采用Pod Security Standards，该标准在Kubernetes 1.25之后已成为默认行
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[70/73] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[71/73] len=50 preview=决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，提高连接效率和性能。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[72/73] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 15:55:11 - src.model.embedding_provider - INFO - [Embedding]     text[73/73] len=48 preview=前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少。
+2026-05-27 15:55:14 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=73 dim=2560 time=2.85s value_range=[-13.1172, 15.9062] mean=0.0055 std=2.5967
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=18 preview=前端CDN缓存策略需要被考虑和制定。
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=30 preview=决定将前端静态资源部署到对象存储（OSS）并使用CDN加速。
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=前端CDN缓存策略需要被考虑和制定。 docs=5
+2026-05-27 15:55:14 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.0039, -3.8887, -3.4824, -4.1172, -3.4102] time=0.23s top3=[0]-3.0039:决定将前端静态资源部署到对象存储（OSS）并使用CDN加速。; [4]-3.4102:将前端打包工具从Webpack切换到Vite，以提升构建速度。; [2]-3.4824:决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-27 15:55:14 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.0039)
+2026-05-27 15:55:14 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=b1f9477e1cff v1
+2026-05-27 15:55:14 - src.core.engine - INFO - Created decision: b1f9477e1cff v1 — 前端CDN缓存策略
+2026-05-27 15:55:14 - src.core.engine - INFO - [Mutation] CREATE applied: sid=b1f9477e1cff v1
+2026-05-27 15:55:15 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:15 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:16 - src.view.client - ERROR - Failed to upsert record for b1f9477e1cff: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:16 - src.view.syncer - INFO - [BaseView] Synced decision b1f9477e1cff v1
+2026-05-27 15:55:16 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=b1f9477e1cff
+2026-05-27 15:55:16 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=b1f9477e1cff
+2026-05-27 15:55:16 - src.core.engine - INFO - [Engine] <<< _process_detection done time=6.09s
+2026-05-27 15:55:16 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库迁移工具用golang-migrate
+2026-05-27 15:55:16 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155516-6d895b55.json
+2026-05-27 15:55:16 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:16 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=948 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:16 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=948)
+2026-05-27 15:55:17 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.14s
+2026-05-27 15:55:17 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:55:17 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d8c51ff2dc37 title=数据库迁移工具选型 source=eval
+2026-05-27 15:55:17 - src.core.engine - INFO - [Mutation] Existing by sid: sid=d8c51ff2dc37 v5
+2026-05-27 15:55:17 - src.core.engine - INFO - Updated decision: d8c51ff2dc37 v6
+2026-05-27 15:55:17 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=d8c51ff2dc37 v7
+2026-05-27 15:55:17 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:18 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:18 - src.view.client - ERROR - Failed to upsert record for d8c51ff2dc37: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:18 - src.view.syncer - INFO - [BaseView] Synced decision d8c51ff2dc37 v6
+2026-05-27 15:55:18 - src.core.engine - INFO - [Mutation] Base sync triggered for UPDATE: sid=d8c51ff2dc37
+2026-05-27 15:55:18 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.40s
+2026-05-27 15:55:18 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '换个话题，容器网络插件用Calico，支持网络策略，而且性能', suspend episode=ep_18f44299a (msgs=5)
+2026-05-27 15:55:18 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_18f44299a (chat=eval, msgs=5, pool=4/20)
+2026-05-27 15:55:18 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_c8106df58 started after keyword suspend
+2026-05-27 15:55:18 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=换个话题，容器网络插件用Calico，支持网络策略，而且性能比Flannel好，还支持NetworkPolicy
+2026-05-27 15:55:18 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155518-897c549f.json
+2026-05-27 15:55:18 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:18 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=982 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:18 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=982)
+2026-05-27 15:55:19 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.91s
+2026-05-27 15:55:19 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:19 - src.core.engine - INFO - [Engine] No decision extracted from content (换个话题，容器网络插件用Calico，支持网络策略，而且性能比Flannel好，还支持NetworkPolicy)
+2026-05-27 15:55:19 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.91s
+2026-05-27 15:55:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端打包工具换成Vite
+2026-05-27 15:55:19 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155519-0af979cf.json
+2026-05-27 15:55:19 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:19 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=938 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:19 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=938)
+2026-05-27 15:55:20 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.18s
+2026-05-27 15:55:20 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:20 - src.core.engine - INFO - [Engine] No decision extracted from content (前端打包工具换成Vite)
+2026-05-27 15:55:20 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.19s
+2026-05-27 15:55:20 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库备份用pg_dump加上WAL归档，可以实现任意时间点的恢复，RPO可以控制在几分钟以内
+2026-05-27 15:55:20 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155520-1a9fa4b4.json
+2026-05-27 15:55:20 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:20 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=973 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:20 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=973)
+2026-05-27 15:55:21 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.27s
+2026-05-27 15:55:21 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:21 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库备份用pg_dump加上WAL归档，可以实现任意时间点的恢复，RPO可以控制在几分钟以内)
+2026-05-27 15:55:21 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.27s
+2026-05-27 15:55:21 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器安全要用Pod Security Standards，这个在K8s 1.25之后已经是默认行为
+2026-05-27 15:55:21 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155521-9efa262b.json
+2026-05-27 15:55:21 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:21 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=975 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:21 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=975)
+2026-05-27 15:55:23 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.46s
+2026-05-27 15:55:23 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:55:23 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=640baa020605 title=容器Pod Security落地 source=eval
+2026-05-27 15:55:23 - src.core.engine - INFO - [Mutation] Existing by sid: sid=640baa020605 v2
+2026-05-27 15:55:23 - src.core.engine - INFO - Updated decision: 640baa020605 v3
+2026-05-27 15:55:23 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=640baa020605 v4
+2026-05-27 15:55:23 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:23 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:24 - src.core.engine - ERROR - [Engine] _process_detection FAILED after 2.18s: Expecting value: line 1 column 1 (char 0)
+2026-05-27 15:55:24 - src.core.engine - ERROR - [Engine] Traceback:
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 681, in _process_detection
+    await self._apply_decision_mutations(node, source)
+  File "/Users/halllo/projects/local/feishu-mem/src/core/engine.py", line 1091, in _apply_decision_mutations
+    await asyncio.to_thread(self._base_view_syncer.sync_decision, node.sid)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/view/syncer.py", line 58, in sync_decision
+    self._client.upsert_record(record)
+  File "/Users/halllo/projects/local/feishu-mem/src/view/client.py", line 279, in upsert_record
+    existing = self.search_record(sid) if sid else None
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/view/client.py", line 258, in search_record
+    response = client.bitable.v1.app_table_record.search(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/.venv/lib/python3.12/site-packages/lark_oapi/api/bitable/v1/resource/app_table_record.py", line 366, in search
+    response: SearchAppTableRecordResponse = JSON.unmarshal(str(resp.content, UTF_8), SearchAppTableRecordResponse)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/.venv/lib/python3.12/site-packages/lark_oapi/core/json.py", line 22, in unmarshal
+    dict_obj = loads(json_str)
+               ^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2026-05-27 15:55:24 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '回到前端话题，状态管理用Zustand，轻量好用，API设计', suspend episode=ep_c8106df58 (msgs=4)
+2026-05-27 15:55:24 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_c8106df58 (chat=eval, msgs=4, pool=5/20)
+2026-05-27 15:55:24 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_450e88a17 started after keyword suspend
+2026-05-27 15:55:24 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=回到前端话题，状态管理用Zustand，轻量好用，API设计比Redux简洁得多，和React hooks配合也很好
+2026-05-27 15:55:24 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155524-b638b399.json
+2026-05-27 15:55:24 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:24 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=984 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:24 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=984)
+2026-05-27 15:55:25 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.98s
+2026-05-27 15:55:25 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:25 - src.core.engine - INFO - [Engine] No decision extracted from content (回到前端话题，状态管理用Zustand，轻量好用，API设计比Redux简洁得多，和React hooks配合也很好)
+2026-05-27 15:55:25 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.98s
+2026-05-27 15:55:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库读写分离用主从复制
+2026-05-27 15:55:25 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155525-f68ae371.json
+2026-05-27 15:55:25 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:25 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=938 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:25 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=938)
+2026-05-27 15:55:26 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.13s
+2026-05-27 15:55:26 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:26 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库读写分离用主从复制)
+2026-05-27 15:55:26 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.13s
+2026-05-27 15:55:26 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器日志收集用Loki
+2026-05-27 15:55:26 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155526-56c43be3.json
+2026-05-27 15:55:26 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:26 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=937 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:26 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=937)
+2026-05-27 15:55:27 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.97s
+2026-05-27 15:55:27 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:27 - src.core.engine - INFO - [Engine] No decision extracted from content (容器日志收集用Loki)
+2026-05-27 15:55:27 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.97s
+2026-05-27 15:55:27 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端监控加上Web Vitals
+2026-05-27 15:55:27 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155527-9fe00f98.json
+2026-05-27 15:55:27 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:27 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=942 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:27 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=942)
+2026-05-27 15:55:28 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.06s
+2026-05-27 15:55:28 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:28 - src.core.engine - INFO - [Engine] No decision extracted from content (前端监控加上Web Vitals)
+2026-05-27 15:55:28 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.07s
+2026-05-27 15:55:28 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库用PG
+2026-05-27 15:55:28 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155528-072decda.json
+2026-05-27 15:55:28 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:28 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=932 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:28 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=932)
+2026-05-27 15:55:29 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.08s
+2026-05-27 15:55:29 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:29 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库用PG)
+2026-05-27 15:55:29 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.08s
+2026-05-27 15:55:29 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=说了这么多，数据库连接用SSL加密
+2026-05-27 15:55:29 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155529-316ec1dd.json
+2026-05-27 15:55:29 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:29 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=943 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:29 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=943)
+2026-05-27 15:55:30 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.64s
+2026-05-27 15:55:30 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:55:30 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=6454b2b71913 title=数据库连接使用SSL加密 source=eval
+2026-05-27 15:55:30 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=15 model=Qwen3-Embedding-4B
+2026-05-27 15:55:30 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=15 preview=决定数据库连接采用SSL加密。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.38s value_range=[-9.1953, 10.1562] mean=-0.0642 std=2.6626
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=74 chars=2874 model=Qwen3-Embedding-4B
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[1/74] len=44 preview=决定使用Kafka MirrorMaker实现跨集群数据同步，用于灾备或多区域部署场景。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[2/74] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[3/74] len=25 preview=前端AB测试方案采用Feature Flag实现。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[4/74] len=23 preview=决定为消息队列设置消息保留策略，具体配置待定。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[5/74] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[6/74] len=54 preview=现有系统使用RabbitMQ，需要构建消息桥接层实现从RabbitMQ到Kafka的平滑迁移，避免直接切换。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[7/74] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[8/74] len=28 preview=决定为消息队列配置死信队列，用于处理无法正常消费的消息。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[9/74] len=40 preview=确定消息队列的Topic设计方案，包括Topic命名规范、分区策略、消息格式等。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[10/74] len=22 preview=容器网络插件采用Calico，支持网络策略。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[11/74] len=66 preview=将前端业务组件抽离成独立npm包，实现跨项目复用和清晰版本管理，并使用Changeset进行自动版本号管理和Change
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[12/74] len=61 preview=将不变的依赖层放在Dockerfile前面，经常变的业务代码放在后面，以利用Docker的layer缓存机制减少构建时间
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[13/74] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[14/74] len=26 preview=前端路由权限控制方案已确定，具体实现细节待后续讨论。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[15/74] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[16/74] len=36 preview=决定采用WebWorker处理前端大数据渲染，以提升页面性能和用户体验。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[17/74] len=35 preview=决定使用TimescaleDB的自动分区功能来管理时间序列数据的分区。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[18/74] len=31 preview=确定消息队列的幂等处理方案，确保消息重复消费时不会产生副作用。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[19/74] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[20/74] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[21/74] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[22/74] len=53 preview=决定将前端E2E测试工具从Cypress切换为Playwright，以利用其跨浏览器支持和更快的执行速度。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[23/74] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[24/74] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[25/74] len=28 preview=针对Kafka消费者组重平衡问题进行优化，具体方案待定。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[26/74] len=19 preview=决定采用Loki作为容器日志收集方案。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[27/74] len=35 preview=容器Ingress采用Nginx Ingress Controller
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[28/74] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[29/74] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[30/74] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[31/74] len=62 preview=容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[32/74] len=72 preview=消息队列引入Schema Registry来管理数据格式，解决生产和消费者之间数据格式不一致问题，并通过Schema兼容
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[33/74] len=50 preview=前端浏览器兼容性列表只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[34/74] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[35/74] len=26 preview=讨论Kafka升级方案，确保无损迁移，具体细节待定。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[36/74] len=6 preview=前端灰度发布
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[37/74] len=28 preview=决定采用Istio作为容器Service Mesh方案。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[38/74] len=12 preview=容器GitOps方案选型
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[39/74] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[40/74] len=25 preview=决定消息队列Schema兼容性策略，具体方案待定。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[41/74] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[42/74] len=42 preview=决定采用Bytebase进行SQL审核，以规范数据库变更流程，提升代码质量和安全性。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[43/74] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[44/74] len=40 preview=前端采用Next.js实现服务端渲染（SSR），以提升首屏加载性能和SEO效果。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[45/74] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[46/74] len=18 preview=将数据库迁移工具更换为Sqitch。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[47/74] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[48/74] len=35 preview=前端技术栈整体采用React，包括核心框架、状态管理、路由等全套方案。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[49/74] len=16 preview=容器使用PV/PVC做持久化存储
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[50/74] len=52 preview=讨论Kafka集群的高可用配置，包括副本因子、ISR设置、acks参数等，确保消息不丢失且服务持续可用。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[51/74] len=23 preview=决定使用Burrow作为Kafka的监控工具。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[52/74] len=28 preview=确定容器化方案使用Kubernetes，因其生态最成熟。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[53/74] len=29 preview=确定容器K8s的namespace规划方案，具体细节待定。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[54/74] len=43 preview=决定采用Kafka KRaft模式，替代ZooKeeper依赖，以简化架构并提升性能。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[55/74] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[56/74] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[57/74] len=28 preview=数据库PostgreSQL高可用方案采用Patroni。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[58/74] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[59/74] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[60/74] len=80 preview=决定在容器架构中采用Sidecar模式，将辅助功能（如日志收集、监控代理、服务网格等）以独立容器的方式与主应用容器部署在
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[61/74] len=30 preview=决定将前端静态资源部署到对象存储（OSS）并使用CDN加速。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[62/74] len=30 preview=决定采用GitHub Actions作为容器CI/CD工具。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[63/74] len=58 preview=决定采用容器Pod Anti-Affinity策略，确保关键服务的高可用性，避免同一节点上运行多个相同服务的Pod。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[64/74] len=38 preview=在OLTP场景下，倾向于选择PostgreSQL，认为其性能优于MySQL。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[65/74] len=27 preview=决定使用golang-migrate作为数据库迁移工具
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[66/74] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[67/74] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[68/74] len=55 preview=容器结合Istio做灰度发布，可以在不修改应用代码的情况下实现流量管理，并且利用Istio的mTLS加密通信。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[69/74] len=62 preview=容器安全方案决定采用Pod Security Standards，该标准在Kubernetes 1.25之后已成为默认行
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[70/74] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[71/74] len=50 preview=决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，提高连接效率和性能。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[72/74] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[73/74] len=48 preview=前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少。
+2026-05-27 15:55:31 - src.model.embedding_provider - INFO - [Embedding]     text[74/74] len=18 preview=前端CDN缓存策略需要被考虑和制定。
+2026-05-27 15:55:41 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=74 dim=2560 time=9.76s value_range=[-13.1172, 15.9062] mean=0.0061 std=2.5958
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=15 preview=决定数据库连接采用SSL加密。
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=27 preview=决定使用golang-migrate作为数据库迁移工具
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=50 preview=决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，提高连接效率和性能。
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=决定数据库连接采用SSL加密。 docs=5
+2026-05-27 15:55:41 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.8086, -4.0625, -4.4102, -4.8008, -3.3301] time=0.20s top3=[4]-3.3301:决定使用PgBouncer作为数据库连接池工具，以管理PostgreSQL连接，; [0]-3.8086:决定数据库连接使用SSL加密，以满足安全合规要求。; [1]-4.0625:决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-27 15:55:41 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.3301)
+2026-05-27 15:55:41 - src.core.engine - INFO - [Similar] Found by bigram: sid=c29fa473491b score=0.69
+2026-05-27 15:55:41 - src.core.engine - INFO - [Mutation] Similar found: sid=c29fa473491b summary=数据库连接采用SSL加密 score=0.6923
+2026-05-27 15:55:41 - src.core.engine - INFO - [Mutation] HARD constraint: score=0.6923 >= 0.65, direct UPDATE
+2026-05-27 15:55:41 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=c29fa473491b v1
+2026-05-27 15:55:41 - src.core.engine - INFO - Created decision: c29fa473491b v1 — 数据库连接使用SSL加密
+2026-05-27 15:55:41 - src.core.engine - INFO - [Mutation] CREATE applied: sid=c29fa473491b v1
+2026-05-27 15:55:41 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:41 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:42 - src.view.client - ERROR - Failed to upsert record for c29fa473491b: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:55:42 - src.view.syncer - INFO - [BaseView] Synced decision c29fa473491b v1
+2026-05-27 15:55:42 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=c29fa473491b
+2026-05-27 15:55:42 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=c29fa473491b
+2026-05-27 15:55:42 - src.core.engine - INFO - [Engine] <<< _process_detection done time=13.04s
+2026-05-27 15:55:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器镜像仓库用Harbor
+2026-05-27 15:55:42 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155542-4d9188b1.json
+2026-05-27 15:55:42 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:42 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=939 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:42 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=939)
+2026-05-27 15:55:43 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.91s
+2026-05-27 15:55:43 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:43 - src.core.engine - INFO - [Engine] No decision extracted from content (容器镜像仓库用Harbor)
+2026-05-27 15:55:43 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.91s
+2026-05-27 15:55:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端构建产物放OSS
+2026-05-27 15:55:43 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155543-fc87d245.json
+2026-05-27 15:55:43 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:43 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=936 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:43 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=936)
+2026-05-27 15:55:44 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.02s
+2026-05-27 15:55:44 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:44 - src.core.engine - INFO - [Engine] No decision extracted from content (前端构建产物放OSS)
+2026-05-27 15:55:44 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.02s
+2026-05-27 15:55:44 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=好像还有个数据库死锁检测的问题
+2026-05-27 15:55:44 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155544-c366c0cd.json
+2026-05-27 15:55:44 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:44 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=941 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:44 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=941)
+2026-05-27 15:55:45 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.00s
+2026-05-27 15:55:45 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:45 - src.core.engine - INFO - [Engine] No decision extracted from content (好像还有个数据库死锁检测的问题)
+2026-05-27 15:55:45 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.01s
+2026-05-27 15:55:45 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器滚动更新
+2026-05-27 15:55:45 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527155545-ba759f4a.json
+2026-05-27 15:55:45 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-27 15:55:45 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=932 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-27 15:55:45 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=932)
+2026-05-27 15:55:46 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.98s
+2026-05-27 15:55:46 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-27 15:55:46 - src.core.engine - INFO - [Engine] No decision extracted from content (容器滚动更新)
+2026-05-27 15:55:46 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.98s
+2026-05-27 15:55:48 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_450e88a17 (chat=eval, msgs=10, pool=6/20)
+2026-05-27 15:55:48 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 6 episode(s) to data/suspend_pool.json
+2026-05-27 15:55:48 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-27 15:55:48 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-27 15:55:49 - src.core.engine - INFO - Synced 7 dirty decisions to storage
+2026-05-27 15:55:49 - src.core.engine - INFO - MemoryEngine stopped (applied=7, failed=0)

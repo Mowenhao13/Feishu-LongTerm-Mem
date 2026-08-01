@@ -1,0 +1,5552 @@
+{
+  "triples": [
+    {
+      "head": "前端多 agent 会话",
+      "relation": "uses",
+      "tail": "会话与 agent 的 1:1 绑定关系",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-58f782"
+    },
+    {
+      "head": "Web",
+      "relation": "uses",
+      "tail": "不同的布局和状态管理策略",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-58f782"
+    },
+    {
+      "head": "Mobile",
+      "relation": "uses",
+      "tail": "不同的布局和状态管理策略",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-58f782"
+    },
+    {
+      "head": "chat_session",
+      "relation": "related_to",
+      "tail": "agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "chat_session",
+      "relation": "based_on",
+      "tail": "1:1_binding",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "chat_session",
+      "relation": "uses",
+      "tail": "active_status",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "chat_session",
+      "relation": "uses",
+      "tail": "archived_status",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "Web端",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "Web端",
+      "relation": "uses",
+      "tail": "useChatStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useChatStore",
+      "relation": "manages",
+      "tail": "activeSessionId",
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useChatStore",
+      "relation": "manages",
+      "tail": "selectedAgentId",
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useChatStore",
+      "relation": "manages",
+      "tail": "inputDrafts",
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useChatStore",
+      "relation": "persists_to",
+      "tail": "localStorage",
+      "schema": [
+        "TECHNOLOGY",
+        "persists_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "Mobile端",
+      "relation": "uses",
+      "tail": "useState",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "Mobile端",
+      "relation": "uses",
+      "tail": "useChatSessionPickerStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useState",
+      "relation": "manages",
+      "tail": "activeSessionId",
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useState",
+      "relation": "manages",
+      "tail": "selectedAgentId",
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "useChatSessionPickerStore",
+      "relation": "transfers",
+      "tail": "selection_result",
+      "schema": [
+        "TECHNOLOGY",
+        "transfers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-2a964c"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "contains",
+      "tail": "Header",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "contains",
+      "tail": "ChatMessageList",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "contains",
+      "tail": "EmptyState",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "contains",
+      "tail": "StatusBanner",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "contains",
+      "tail": "ChatInput",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "Header",
+      "relation": "contains",
+      "tail": "NewChatButton",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "Header",
+      "relation": "contains",
+      "tail": "SessionDropdown",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "Header",
+      "relation": "contains",
+      "tail": "WindowControls",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "StatusBanner",
+      "relation": "includes",
+      "tail": "NoAgentBanner",
+      "schema": [
+        "SYSTEM",
+        "includes",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "StatusBanner",
+      "relation": "includes",
+      "tail": "OfflineBanner",
+      "schema": [
+        "SYSTEM",
+        "includes",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "groups_by",
+      "tail": "active",
+      "schema": [
+        "SYSTEM",
+        "groups_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "groups_by",
+      "tail": "archived",
+      "schema": [
+        "SYSTEM",
+        "groups_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "triggers",
+      "tail": "selectedAgentId",
+      "schema": [
+        "SYSTEM",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "groups_by",
+      "tail": "MyAgents",
+      "schema": [
+        "SYSTEM",
+        "groups_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "groups_by",
+      "tail": "Others",
+      "schema": [
+        "SYSTEM",
+        "groups_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "clears",
+      "tail": "activeSessionId",
+      "schema": [
+        "SYSTEM",
+        "clears",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-c6440e"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "contains",
+      "tail": "Header",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "contains",
+      "tail": "NoAgentBanner",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "contains",
+      "tail": "ChatMessageList",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "contains",
+      "tail": "OfflineBanner",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "contains",
+      "tail": "ChatComposer",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "Header",
+      "relation": "contains",
+      "tail": "ChatTitleButton",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "Header",
+      "relation": "contains",
+      "tail": "ChatSessionActions",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "ChatTitleButton",
+      "relation": "navigates_to",
+      "tail": "chat-sessions_route",
+      "schema": [
+        "SYSTEM",
+        "navigates_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "chat-sessions_route",
+      "relation": "uses",
+      "tail": "useChatSessionPickerStore",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "useChatSessionPickerStore",
+      "relation": "responsible_for",
+      "tail": "session_selection_result",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "New_Chat_action",
+      "relation": "triggers",
+      "tail": "AgentPickerSheet",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "AgentPickerSheet",
+      "relation": "uses",
+      "tail": "agent_selection",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "agent_selection",
+      "relation": "clears",
+      "tail": "activeSessionId",
+      "schema": [
+        "CONCEPT",
+        "clears",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-cb5386"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "浮动窗口布局",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "全屏 Tab 布局",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Header 内嵌 Dropdown 会话选择",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "独立路由页面会话选择",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Header 内嵌 Dropdown Agent 选择",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "底部 Sheet Modal Agent 选择",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Zustand 全局 store",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "本地 useState + 专用 store",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "首次打开为空状态自动激活",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "自动跳转到最近会话自动激活",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-703a5f"
+    },
+    {
+      "head": "Web 端",
+      "relation": "shares",
+      "tail": "后端 API",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "shares",
+      "tail": "后端 API",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "Web 端",
+      "relation": "shares",
+      "tail": "数据模型",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "shares",
+      "tail": "数据模型",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "数据模型",
+      "relation": "includes",
+      "tail": "chat_session",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "数据模型",
+      "relation": "includes",
+      "tail": "chat_message",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "useChatSessionPickerStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "useChatSessionPickerStore",
+      "relation": "designed_for",
+      "tail": "跨路由状态传递",
+      "schema": [
+        "TECHNOLOGY",
+        "designed_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "Web 端",
+      "relation": "uses",
+      "tail": "Zustand store",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "会话列表",
+      "relation": "supports",
+      "tail": "运行状态显示",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "运行状态显示",
+      "relation": "based_on",
+      "tail": "pendingChatTasksOptions",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "会话列表",
+      "relation": "supports",
+      "tail": "未读标记",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "chat_session",
+      "relation": "bound_to",
+      "tail": "agent",
+      "schema": [
+        "CONCEPT",
+        "bound_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "handleSelectSession",
+      "relation": "implements",
+      "tail": "跨 agent 切换",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "跨 agent 切换",
+      "relation": "triggers",
+      "tail": "setSelectedAgentId",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "跨 agent 切换",
+      "relation": "triggers",
+      "tail": "setActiveSession",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "Agent dropdown",
+      "relation": "triggers",
+      "tail": "agent 切换",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "agent 切换",
+      "relation": "triggers",
+      "tail": "新会话创建",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "useChatResize",
+      "relation": "provides",
+      "tail": "窗口尺寸控制",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "ChatResizeHandles",
+      "relation": "triggers",
+      "tail": "startDrag",
+      "schema": [
+        "TECHNOLOGY",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0b4a58"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "uses",
+      "tail": "useT",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "uses",
+      "tail": "useMemo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "based_on",
+      "tail": "AgentSelector",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "AgentDropdown",
+      "relation": "uses",
+      "tail": "agent_ownership_split",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "uses",
+      "tail": "useT",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "uses",
+      "tail": "useWorkspaceId",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "uses",
+      "tail": "useMemo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "SessionDropdown",
+      "relation": "uses",
+      "tail": "session_status_split",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "pendingChatTasksOptions",
+      "relation": "used_by",
+      "tail": "useQuery",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "useQuery",
+      "relation": "depends_on",
+      "tail": "TanStack",
+      "schema": [
+        "TECHNOLOGY",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "TanStack",
+      "relation": "provides",
+      "tail": "query_deduplication",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "inFlightSessionIds",
+      "relation": "derived_from",
+      "tail": "pendingChatTasksOptions",
+      "schema": [
+        "CONCEPT",
+        "derived_from",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "otherSessionRunning",
+      "relation": "based_on",
+      "tail": "inFlightSessionIds",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "otherSessionUnread",
+      "relation": "based_on",
+      "tail": "has_unread",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "StatusPill",
+      "relation": "related_to",
+      "tail": "session_state_display",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "row_pips",
+      "relation": "related_to",
+      "tail": "priority_rule",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "priority_rule",
+      "relation": "defines",
+      "tail": "running_over_unread",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-79b159"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatTitleButton",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatSessionActions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "KeyboardAvoidingView",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatMessageList",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "OfflineBanner",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatComposer",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "NoAgentBanner",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "Modal sheets",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "adopts",
+      "tail": "single-screen IA",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "rejects",
+      "tail": "/chat/[id] sub-route",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "local state",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "rejects",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "useChatSessionRealtime",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "WebSocket events",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "optimistic send burst",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "based_on",
+      "tail": "web's chat-window.tsx",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatSessionPickerStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "activeSessionId",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "selectedAgentId",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "agentPickerOpen",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "sessionSheetOpen",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "adopts",
+      "tail": "auto-hydrate active session",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "compared_with",
+      "tail": "web's chat-window",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "handleNewChat",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "handlePickAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatTitleButton",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "ChatSessionActions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "router.push",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "Chat Tab",
+      "relation": "uses",
+      "tail": "chat-sessions route",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-28ba3b"
+    },
+    {
+      "head": "chat-sessions.tsx",
+      "relation": "implements",
+      "tail": "Chat session-switch sheet",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "Chat session-switch sheet",
+      "relation": "presented_as",
+      "tail": "formSheet",
+      "schema": [
+        "CONCEPT",
+        "presented_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "Chat session-switch sheet",
+      "relation": "reads_from",
+      "tail": "chat cache",
+      "schema": [
+        "CONCEPT",
+        "reads_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "Chat session-switch sheet",
+      "relation": "writes_to",
+      "tail": "active session store",
+      "schema": [
+        "CONCEPT",
+        "writes_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "active session store",
+      "relation": "used_by",
+      "tail": "chat tab",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "activeSessionId",
+      "relation": "moved_from",
+      "tail": "useState inside chat.tsx",
+      "schema": [
+        "CONCEPT",
+        "moved_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "activeSessionId",
+      "relation": "moved_to",
+      "tail": "active session store",
+      "schema": [
+        "CONCEPT",
+        "moved_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "active session store",
+      "relation": "based_on",
+      "tail": "useNewIssueDraftStore pattern",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "deleteSession.mutate",
+      "relation": "triggers",
+      "tail": "session deletion",
+      "schema": [
+        "TECHNOLOGY",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "requestSelect(null)",
+      "relation": "clears",
+      "tail": "activeSessionId",
+      "schema": [
+        "TECHNOLOGY",
+        "clears",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "session deletion",
+      "relation": "triggers",
+      "tail": "requestSelect(null)",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-009-68175d"
+    },
+    {
+      "head": "chat-window.tsx",
+      "relation": "part_of",
+      "tail": "Web 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat-window.tsx",
+      "relation": "located_at",
+      "tail": "packages/views/chat/components/chat-window.tsx",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "store.ts",
+      "relation": "part_of",
+      "tail": "Web 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "store.ts",
+      "relation": "located_at",
+      "tail": "packages/core/chat/store.ts",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "store.ts",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "queries.ts",
+      "relation": "part_of",
+      "tail": "Web 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "queries.ts",
+      "relation": "located_at",
+      "tail": "packages/core/chat/queries.ts",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "queries.ts",
+      "relation": "uses",
+      "tail": "TanStack Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "mutations.ts",
+      "relation": "part_of",
+      "tail": "Web 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "mutations.ts",
+      "relation": "located_at",
+      "tail": "packages/core/chat/mutations.ts",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "client.ts",
+      "relation": "part_of",
+      "tail": "Web 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "client.ts",
+      "relation": "located_at",
+      "tail": "packages/core/api/client.ts",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat.tsx",
+      "relation": "part_of",
+      "tail": "Mobile 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat.tsx",
+      "relation": "located_at",
+      "tail": "apps/mobile/app/(app)/[workspace]/(tabs)/chat.tsx",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat.tsx",
+      "relation": "uses",
+      "tail": "useState",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat-sessions.tsx",
+      "relation": "part_of",
+      "tail": "Mobile 端",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat-sessions.tsx",
+      "relation": "located_at",
+      "tail": "apps/mobile/app/(app)/[workspace]/chat-sessions.tsx",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-ce3545"
+    },
+    {
+      "head": "chat.go",
+      "relation": "located_at",
+      "tail": "server/internal/handler/chat.go",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "CreateChatSession",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "ListChatSessions",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "UpdateChatSession",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "DeleteChatSession",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "SendChatMessage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "ListChatMessages",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "MarkChatSessionRead",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "contains",
+      "tail": "ListPendingChatTasks",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.sql",
+      "relation": "located_at",
+      "tail": "server/pkg/db/queries/chat.sql",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.sql.go",
+      "relation": "located_at",
+      "tail": "server/pkg/db/generated/chat.sql.go",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.sql.go",
+      "relation": "generated_by",
+      "tail": "sqlc",
+      "schema": [
+        "SYSTEM",
+        "generated_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.sql.go",
+      "relation": "based_on",
+      "tail": "chat.sql",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "router.go",
+      "relation": "located_at",
+      "tail": "server/cmd/server/router.go",
+      "schema": [
+        "SYSTEM",
+        "located_at",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "router.go",
+      "relation": "defines_routes_for",
+      "tail": "chat.go",
+      "schema": [
+        "SYSTEM",
+        "defines_routes_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "depends_on",
+      "tail": "chat.sql.go",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "chat.go",
+      "relation": "depends_on",
+      "tail": "chat.sql",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-d449c1"
+    },
+    {
+      "head": "前端 Web",
+      "relation": "uses",
+      "tail": "后端 API",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "uses",
+      "tail": "后端 API",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "前端 Web",
+      "relation": "adopts",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "Mobile 端",
+      "relation": "adopts",
+      "tail": "useState",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "后端",
+      "relation": "uses",
+      "tail": "sqlc",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "sqlc",
+      "relation": "based_on",
+      "tail": "SQL 文件",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "sqlc",
+      "relation": "responsible_for",
+      "tail": "类型安全的数据库访问代码",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "类型安全的数据库访问代码",
+      "relation": "related_to",
+      "tail": "数据层",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-fe51a4"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useChatStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useAuthStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useQuery",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useQueryClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useCreateChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useMarkChatSessionRead",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useWorkspaceAgentAvailability",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useAgentPresenceDetail",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "uiLogger",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useEffect",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useT",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "useWorkspaceId",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "depends_on",
+      "tail": "agentListOptions",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "depends_on",
+      "tail": "memberListOptions",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "depends_on",
+      "tail": "chatSessionsOptions",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "depends_on",
+      "tail": "chatMessagesOptions",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "depends_on",
+      "tail": "pendingChatTaskOptions",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "adopts",
+      "tail": "single_sessions_cache",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "single_sessions_cache",
+      "relation": "rejects",
+      "tail": "separate_active_archived_queries",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "single_sessions_cache",
+      "relation": "based_on",
+      "tail": "useQuery",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "pendingChatTaskOptions",
+      "relation": "based_on",
+      "tail": "Query_cache",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "pendingTaskId",
+      "relation": "based_on",
+      "tail": "pendingChatTaskOptions",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "pendingTaskId",
+      "relation": "rejects",
+      "tail": "store_mirror",
+      "schema": [
+        "CONCEPT",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "pendingTaskId",
+      "relation": "related_to",
+      "tail": "server_authoritative_pending_task",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "server_authoritative_pending_task",
+      "relation": "survives",
+      "tail": "refresh",
+      "schema": [
+        "CONCEPT",
+        "survives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "server_authoritative_pending_task",
+      "relation": "survives",
+      "tail": "reopen",
+      "schema": [
+        "CONCEPT",
+        "survives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "server_authoritative_pending_task",
+      "relation": "survives",
+      "tail": "session_switch",
+      "schema": [
+        "CONCEPT",
+        "survives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "server_authoritative_pending_task",
+      "relation": "depends_on",
+      "tail": "WS_events",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "WS_events",
+      "relation": "includes",
+      "tail": "chat:message",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "WS_events",
+      "relation": "includes",
+      "tail": "chat:done",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "WS_events",
+      "relation": "includes",
+      "tail": "task:*",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "legacy_archived_sessions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "legacy_archived_sessions",
+      "relation": "related_to",
+      "tail": "soft_archive_feature",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "soft_archive_feature",
+      "relation": "related_to",
+      "tail": "removed",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "three_state_agent_availability",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "three_state_agent_availability",
+      "relation": "includes",
+      "tail": "loading",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "three_state_agent_availability",
+      "relation": "includes",
+      "tail": "none",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "three_state_agent_availability",
+      "relation": "includes",
+      "tail": "available",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "presence_detail_loading_handling",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "presence_detail_loading_handling",
+      "relation": "based_on",
+      "tail": "useAgentPresenceDetail",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "uses",
+      "tail": "mount_unmount_logging",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "mount_unmount_logging",
+      "relation": "uses",
+      "tail": "uiLogger",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "lives_in",
+      "tail": "DashboardLayout",
+      "schema": [
+        "SYSTEM",
+        "lives_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-013-f8741b"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "depends_on",
+      "tail": "StorageAdapter",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "getCurrentSlug",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "readDrafts",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "writeDrafts",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "logger",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "adopts",
+      "tail": "three_state_read_pattern",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "three_state_read_pattern",
+      "relation": "enables",
+      "tail": "new_user_open_default",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "three_state_read_pattern",
+      "relation": "enables",
+      "tail": "persistent_close_choice",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "OPEN_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "SESSION_STORAGE_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "AGENT_STORAGE_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "DRAFTS_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "FOCUS_MODE_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "CHAT_WIDTH_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "CHAT_HEIGHT_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "CHAT_EXPANDED_KEY",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "CHAT_DEFAULT_W",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "CHAT_DEFAULT_H",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "createChatStore",
+      "relation": "uses",
+      "tail": "wsKey",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "wsKey",
+      "relation": "depends_on",
+      "tail": "getCurrentSlug",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "setChatSize",
+      "relation": "triggers",
+      "tail": "exit_expanded_mode",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "exit_expanded_mode",
+      "relation": "based_on",
+      "tail": "manual_size_choice",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-c63833"
+    },
+    {
+      "head": "packages/core/chat/queries.ts",
+      "relation": "related_to",
+      "tail": "chat_system",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-06d8ed"
+    },
+    {
+      "head": "packages/core/chat/queries.ts",
+      "relation": "part_of",
+      "tail": "core_package",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-015-06d8ed"
+    },
+    {
+      "head": "chatKeys",
+      "relation": "uses",
+      "tail": "queryOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatKeys",
+      "relation": "uses",
+      "tail": "api",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatSessionsOptions",
+      "relation": "uses",
+      "tail": "chatKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatSessionOptions",
+      "relation": "uses",
+      "tail": "chatKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatMessagesOptions",
+      "relation": "uses",
+      "tail": "chatKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "pendingChatTaskOptions",
+      "relation": "uses",
+      "tail": "chatKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "taskMessagesOptions",
+      "relation": "uses",
+      "tail": "chatKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "pendingChatTasksOptions",
+      "relation": "uses",
+      "tail": "chatKeys",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatSessionsOptions",
+      "relation": "uses",
+      "tail": "api.listChatSessions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatSessionOptions",
+      "relation": "uses",
+      "tail": "api.getChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatMessagesOptions",
+      "relation": "uses",
+      "tail": "api.listChatMessages",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "pendingChatTaskOptions",
+      "relation": "uses",
+      "tail": "api.getPendingChatTask",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "taskMessagesOptions",
+      "relation": "uses",
+      "tail": "api.listTaskMessages",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "pendingChatTasksOptions",
+      "relation": "uses",
+      "tail": "api.listPendingChatTasks",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "chatKeys",
+      "relation": "based_on",
+      "tail": "workspace_scoping",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "workspace_scoping",
+      "relation": "uses",
+      "tail": "wsId",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "workspace_scoping",
+      "relation": "uses",
+      "tail": "X-Workspace-Slug_header",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "X-Workspace-Slug_header",
+      "relation": "set_by",
+      "tail": "workspaceSlug_layout",
+      "schema": [
+        "CONCEPT",
+        "set_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "pendingChatTaskOptions",
+      "relation": "related_to",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "taskMessagesOptions",
+      "relation": "related_to",
+      "tail": "useRealtimeSync",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "pendingChatTasksOptions",
+      "relation": "drives",
+      "tail": "FAB_running_indicator",
+      "schema": [
+        "SYSTEM",
+        "drives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "taskMessagesOptions",
+      "relation": "used_by",
+      "tail": "live_chat_view",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "taskMessagesOptions",
+      "relation": "used_by",
+      "tail": "AssistantMessage",
+      "schema": [
+        "SYSTEM",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "isTaskMessageTaskId",
+      "relation": "validates",
+      "tail": "taskId",
+      "schema": [
+        "SYSTEM",
+        "validates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "isTaskMessageTaskId",
+      "relation": "uses",
+      "tail": "UUID_PATTERN",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-0f7c3c"
+    },
+    {
+      "head": "useCreateChatSession",
+      "relation": "uses",
+      "tail": "useMutation",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useCreateChatSession",
+      "relation": "uses",
+      "tail": "useQueryClient",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useCreateChatSession",
+      "relation": "uses",
+      "tail": "useWorkspaceId",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useCreateChatSession",
+      "relation": "calls",
+      "tail": "api.createChatSession",
+      "schema": [
+        "TECHNOLOGY",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "uses",
+      "tail": "useMutation",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "uses",
+      "tail": "useQueryClient",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "uses",
+      "tail": "useWorkspaceId",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "calls",
+      "tail": "api.deleteChatSession",
+      "schema": [
+        "TECHNOLOGY",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "implements",
+      "tail": "optimistic_update",
+      "schema": [
+        "TECHNOLOGY",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "api.createChatSession",
+      "relation": "sends_request_to",
+      "tail": "/api/chat/sessions",
+      "schema": [
+        "TECHNOLOGY",
+        "sends_request_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "api.deleteChatSession",
+      "relation": "sends_request_to",
+      "tail": "/api/chat/sessions/{id}",
+      "schema": [
+        "TECHNOLOGY",
+        "sends_request_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "api.listChatSessions",
+      "relation": "sends_request_to",
+      "tail": "/api/chat/sessions",
+      "schema": [
+        "TECHNOLOGY",
+        "sends_request_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "api.getChatSession",
+      "relation": "sends_request_to",
+      "tail": "/api/chat/sessions/{id}",
+      "schema": [
+        "TECHNOLOGY",
+        "sends_request_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "api.updateChatSession",
+      "relation": "sends_request_to",
+      "tail": "/api/chat/sessions/{id}",
+      "schema": [
+        "TECHNOLOGY",
+        "sends_request_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "api.listChatMessages",
+      "relation": "sends_request_to",
+      "tail": "/api/chat/sessions/{sessionId}/messages",
+      "schema": [
+        "TECHNOLOGY",
+        "sends_request_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useCreateChatSession",
+      "relation": "invalidates",
+      "tail": "chatKeys.sessions",
+      "schema": [
+        "TECHNOLOGY",
+        "invalidates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "invalidates",
+      "tail": "chatKeys.sessions",
+      "schema": [
+        "TECHNOLOGY",
+        "invalidates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "useDeleteChatSession",
+      "relation": "rolls_back_on_error",
+      "tail": "prevSessions",
+      "schema": [
+        "TECHNOLOGY",
+        "rolls_back_on_error",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "logger",
+      "relation": "used_by",
+      "tail": "useCreateChatSession",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "logger",
+      "relation": "used_by",
+      "tail": "useDeleteChatSession",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-017-efb2aa"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useQueryClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useWorkspaceStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useAuthStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useChatSessionPickerStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useQuery",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "chatSessionsOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "agentListOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "memberListOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useEffect",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useState",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "uses",
+      "tail": "useRef",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "based_on",
+      "tail": "React",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "adopts",
+      "tail": "one-shot hydration per workspace",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "adopts",
+      "tail": "auto-hydrate to most recent session on mobile",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatTab",
+      "relation": "compared_with",
+      "tail": "web chat-window empty state",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "uses",
+      "tail": "useWorkspaceStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "uses",
+      "tail": "useQuery",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "uses",
+      "tail": "chatSessionsOptions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "uses",
+      "tail": "useChatSessionPickerStore",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "uses",
+      "tail": "useDeleteChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "uses",
+      "tail": "Alert",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "based_on",
+      "tail": "React",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "adopts",
+      "tail": "delete confirmation via Alert",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "ChatSessionsRoute",
+      "relation": "adopts",
+      "tail": "picker-store request pattern for clearing active session",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "useChatSessionPickerStore",
+      "relation": "responsible_for",
+      "tail": "activeSessionId state synchronization",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "useChatSessionPickerStore",
+      "relation": "responsible_for",
+      "tail": "selectRequest/consumeSelect pattern",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "useChatSessionPickerStore",
+      "relation": "responsible_for",
+      "tail": "requestSelect mechanism",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "chat-sessions formSheet route",
+      "relation": "related_to",
+      "tail": "ChatTab",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "chat-sessions formSheet route",
+      "relation": "related_to",
+      "tail": "ChatSessionsRoute",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "mobile app",
+      "relation": "adopts",
+      "tail": "auto-hydrate to most recent session on mobile",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "web app",
+      "relation": "adopts",
+      "tail": "empty state when no activeSessionId",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "server/internal/handler/chat.go",
+      "relation": "related_to",
+      "tail": "chat session management",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-ee8ba8"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "requireUserID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "ctxWorkspaceID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "json.NewDecoder",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "parseUUIDOrBadRequest",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "GetAgentInWorkspace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "resolveActor",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "canAccessPrivateAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "CreateChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "chatSessionToResponse",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "depends_on",
+      "tail": "Handler",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "depends_on",
+      "tail": "Queries",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "validates",
+      "tail": "AgentID",
+      "schema": [
+        "SYSTEM",
+        "validates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "validates",
+      "tail": "WorkspaceID",
+      "schema": [
+        "SYSTEM",
+        "validates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "enforces",
+      "tail": "private_agent_gate",
+      "schema": [
+        "SYSTEM",
+        "enforces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "private_agent_gate",
+      "relation": "bypasses",
+      "tail": "agent_to_agent_chat",
+      "schema": [
+        "CONCEPT",
+        "bypasses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "checks",
+      "tail": "agent_archived_status",
+      "schema": [
+        "SYSTEM",
+        "checks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "checks",
+      "tail": "agent_workspace_membership",
+      "schema": [
+        "SYSTEM",
+        "checks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "returns",
+      "tail": "chat_session_response",
+      "schema": [
+        "SYSTEM",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "requires",
+      "tail": "user_authentication",
+      "schema": [
+        "SYSTEM",
+        "requires",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "requires",
+      "tail": "agent_id",
+      "schema": [
+        "SYSTEM",
+        "requires",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-019-28e6cf"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "Handler",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "requireUserID",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "ctxWorkspaceID",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "workspaceMember",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "resolveActor",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "accessibleAgentIDs",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "ListAllChatSessionsByCreator",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "depends_on",
+      "tail": "ListChatSessionsByCreator",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "accessibleAgentIDs",
+      "relation": "based_on",
+      "tail": "member.Role",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "accessibleAgentIDs",
+      "relation": "based_on",
+      "tail": "actorType",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "accessibleAgentIDs",
+      "relation": "based_on",
+      "tail": "actorID",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "ChatSessionResponse",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "writeJSON",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "writeError",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "parseUUID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "uuidToString",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "ListChatSessions",
+      "relation": "uses",
+      "tail": "timestampToString",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "accessibleAgentIDs",
+      "relation": "responsible_for",
+      "tail": "agent_access_control",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "agent_access_control",
+      "relation": "related_to",
+      "tail": "role_downgrade_scenario",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-020-bb62eb"
+    },
+    {
+      "head": "Handler",
+      "relation": "implements",
+      "tail": "UpdateChatSession",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "requireUserID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "ctxWorkspaceID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "chi.URLParam",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "json.NewDecoder",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "gateChatSessionForUser",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "UpdateChatSessionTitle",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "publishChat",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "uses",
+      "tail": "writeJSON",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "validates",
+      "tail": "title",
+      "schema": [
+        "CONCEPT",
+        "validates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "validates",
+      "tail": "chatSessionTitleMaxLen",
+      "schema": [
+        "CONCEPT",
+        "validates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSession",
+      "relation": "publishes",
+      "tail": "EventChatSessionUpdated",
+      "schema": [
+        "CONCEPT",
+        "publishes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "publishChat",
+      "relation": "uses",
+      "tail": "protocol",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "UpdateChatSessionTitle",
+      "relation": "depends_on",
+      "tail": "db",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "Handler",
+      "relation": "located_in",
+      "tail": "server/internal/handler/chat.go",
+      "schema": [
+        "SYSTEM",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-021-f47fe0"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "uses",
+      "tail": "LockChatSessionForDelete",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "uses",
+      "tail": "CancelAgentTasksByChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "uses",
+      "tail": "DeleteChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "uses",
+      "tail": "BroadcastCancelledTasks",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "uses",
+      "tail": "publishChat",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "LockChatSessionForDelete",
+      "relation": "based_on",
+      "tail": "FOR UPDATE",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "FOR UPDATE",
+      "relation": "prevents",
+      "tail": "orphaned_agent_tasks",
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "uses",
+      "tail": "transaction",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "transaction",
+      "relation": "ensures",
+      "tail": "atomicity",
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "BroadcastCancelledTasks",
+      "relation": "depends_on",
+      "tail": "TaskService",
+      "schema": [
+        "TECHNOLOGY",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "publishChat",
+      "relation": "uses",
+      "tail": "protocol.EventChatSessionDeleted",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "publishChat",
+      "relation": "uses",
+      "tail": "protocol.EventChatMessage",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "SendChatMessage",
+      "relation": "uses",
+      "tail": "publishChat",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "SendChatMessage",
+      "relation": "uses",
+      "tail": "writeJSON",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "Handler",
+      "relation": "contains",
+      "tail": "DeleteChatSession",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "Handler",
+      "relation": "contains",
+      "tail": "SendChatMessage",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "depends_on",
+      "tail": "TxStarter",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "depends_on",
+      "tail": "Queries",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "depends_on",
+      "tail": "TaskService",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-022-063b0d"
+    },
+    {
+      "head": "Handler",
+      "relation": "implements",
+      "tail": "ListChatMessages",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "Handler",
+      "relation": "implements",
+      "tail": "MarkChatSessionRead",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "requireUserID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "ctxWorkspaceID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "chi.URLParam",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "gateChatSessionForUser",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "Queries.ListChatMessages",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "groupChatMessageAttachments",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "chatMessageToResponse",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListChatMessages",
+      "relation": "uses",
+      "tail": "writeJSON",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "requireUserID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "ctxWorkspaceID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "chi.URLParam",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "gateChatSessionForUser",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "Queries.MarkChatSessionRead",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "publishChat",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "protocol.EventChatSessionRead",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "MarkChatSessionRead",
+      "relation": "uses",
+      "tail": "protocol.ChatSessionReadPayload",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "publishChat",
+      "relation": "publishes",
+      "tail": "protocol.EventChatSessionRead",
+      "schema": [
+        "CONCEPT",
+        "publishes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "chi",
+      "relation": "provides",
+      "tail": "URLParam",
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "Queries",
+      "relation": "provides",
+      "tail": "ListChatMessages",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "Queries",
+      "relation": "provides",
+      "tail": "MarkChatSessionRead",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "protocol",
+      "relation": "defines",
+      "tail": "EventChatSessionRead",
+      "schema": [
+        "SYSTEM",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "protocol",
+      "relation": "defines",
+      "tail": "ChatSessionReadPayload",
+      "schema": [
+        "SYSTEM",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-023-a39571"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "Handler",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "depends_on",
+      "tail": "ListPendingChatTasksByCreator",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "depends_on",
+      "tail": "ListAllChatSessionsByCreator",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "sessionAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "sessionAgent",
+      "relation": "based_on",
+      "tail": "map",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "PendingChatTaskItem",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "PendingChatTasksResponse",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "accessibleAgentIDs",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "resolveActor",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "workspaceMember",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "requireUserID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "ctxWorkspaceID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "writeJSON",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "writeError",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "parseUUID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "uses",
+      "tail": "uuidToString",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "Handler",
+      "relation": "uses",
+      "tail": "Queries",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasksByCreator",
+      "relation": "depends_on",
+      "tail": "db",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListAllChatSessionsByCreator",
+      "relation": "depends_on",
+      "tail": "db",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "ListPendingChatTasks",
+      "relation": "related_to",
+      "tail": "chat.sql",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-024-9d6261"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "CreateChatSession",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "GetChatSession",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "GetChatSessionInWorkspace",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "ListChatSessionsByCreator",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "ListAllChatSessionsByCreator",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "UpdateChatSessionTitle",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "UpdateChatSessionSession",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "LockChatSessionForDelete",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "DeleteChatSession",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "has_query",
+      "tail": "TouchChatSession",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_message",
+      "relation": "has_query",
+      "tail": "CreateChatMessage",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_message",
+      "relation": "has_query",
+      "tail": "ListChatMessages",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_message",
+      "relation": "has_query",
+      "tail": "GetChatMessage",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "has_query",
+      "tail": "CreateChatTask",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "has_query",
+      "tail": "GetLastChatTaskSession",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "has_query",
+      "tail": "GetPendingChatTask",
+      "schema": [
+        "SYSTEM",
+        "has_query",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "depends_on",
+      "tail": "agent",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_session",
+      "relation": "depends_on",
+      "tail": "workspace",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_message",
+      "relation": "depends_on",
+      "tail": "chat_session",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "depends_on",
+      "tail": "chat_session",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "depends_on",
+      "tail": "agent",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "depends_on",
+      "tail": "runtime",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "UpdateChatSessionSession",
+      "relation": "uses",
+      "tail": "COALESCE",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "LockChatSessionForDelete",
+      "relation": "uses",
+      "tail": "FOR UPDATE",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "depends_on",
+      "tail": "LockChatSessionForDelete",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "DeleteChatSession",
+      "relation": "depends_on",
+      "tail": "CancelAgentTasksByChatSession",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "chat_message",
+      "relation": "uses",
+      "tail": "ON DELETE CASCADE",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "agent_task_queue",
+      "relation": "uses",
+      "tail": "KEY SHARE",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "GetLastChatTaskSession",
+      "relation": "implements",
+      "tail": "resume_pointer_fallback",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "resume_pointer_fallback",
+      "relation": "related_to",
+      "tail": "chat_memory_robustness",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "ListChatSessionsByCreator",
+      "relation": "uses",
+      "tail": "unread_flag",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "unread_flag",
+      "relation": "based_on",
+      "tail": "unread_since",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "workspace_id",
+      "relation": "implements",
+      "tail": "tenant_guard",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-025-bce4b8"
+    },
+    {
+      "head": "CreateChatMessage",
+      "relation": "uses",
+      "tail": "ChatMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "ChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "depends_on",
+      "tail": "agent",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "CreateChatSession",
+      "relation": "uses",
+      "tail": "CreateChatSessionParams",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "CreateChatMessage",
+      "relation": "uses",
+      "tail": "CreateChatMessageParams",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "based_on",
+      "tail": "chi",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "CreateChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "ListChatSessions",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "GetChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "UpdateChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "DeleteChatSession",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "SendChatMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "ListChatMessages",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "GetPendingChatTask",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "MarkChatSessionRead",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "Chat Session API",
+      "relation": "uses",
+      "tail": "ListPendingChatTasks",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatSession",
+      "relation": "related_to",
+      "tail": "workspace_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatSession",
+      "relation": "related_to",
+      "tail": "agent_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatSession",
+      "relation": "related_to",
+      "tail": "creator_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatSession",
+      "relation": "related_to",
+      "tail": "runtime_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatMessage",
+      "relation": "related_to",
+      "tail": "chat_session_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatMessage",
+      "relation": "related_to",
+      "tail": "task_id",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatMessage",
+      "relation": "related_to",
+      "tail": "role",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatMessage",
+      "relation": "related_to",
+      "tail": "failure_reason",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    },
+    {
+      "head": "ChatMessage",
+      "relation": "related_to",
+      "tail": "elapsed_ms",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-026-dd2bde"
+    }
+  ],
+  "stats": {
+    "total_chunks": 27,
+    "total_triples": 495,
+    "unique_schemas": 93,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'CONCEPT')": 51,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 17,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 6,
+      "('CONCEPT', 'uses', 'CONCEPT')": 25,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 79,
+      "('TECHNOLOGY', 'manages', 'CONCEPT')": 5,
+      "('TECHNOLOGY', 'persists_to', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'transfers', 'CONCEPT')": 1,
+      "('SYSTEM', 'contains', 'SYSTEM')": 17,
+      "('SYSTEM', 'includes', 'SYSTEM')": 2,
+      "('SYSTEM', 'groups_by', 'CONCEPT')": 4,
+      "('SYSTEM', 'triggers', 'CONCEPT')": 1,
+      "('SYSTEM', 'clears', 'CONCEPT')": 1,
+      "('SYSTEM', 'navigates_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 9,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 5,
+      "('CONCEPT', 'triggers', 'SYSTEM')": 1,
+      "('CONCEPT', 'clears', 'CONCEPT')": 1,
+      "('SYSTEM', 'shares', 'SYSTEM')": 2,
+      "('SYSTEM', 'shares', 'CONCEPT')": 2,
+      "('CONCEPT', 'includes', 'CONCEPT')": 8,
+      "('TECHNOLOGY', 'designed_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'supports', 'CONCEPT')": 2,
+      "('CONCEPT', 'bound_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'implements', 'CONCEPT')": 3,
+      "('CONCEPT', 'triggers', 'CONCEPT')": 5,
+      "('TECHNOLOGY', 'provides', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'triggers', 'CONCEPT')": 2,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 3,
+      "('TECHNOLOGY', 'used_by', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'depends_on', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'derived_from', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'defines', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 10,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('SYSTEM', 'rejects', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1,
+      "('SYSTEM', 'implements', 'CONCEPT')": 4,
+      "('CONCEPT', 'presented_as', 'CONCEPT')": 1,
+      "('CONCEPT', 'reads_from', 'SYSTEM')": 1,
+      "('CONCEPT', 'writes_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'used_by', 'SYSTEM')": 3,
+      "('CONCEPT', 'moved_from', 'CONCEPT')": 1,
+      "('CONCEPT', 'moved_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 5,
+      "('TECHNOLOGY', 'clears', 'CONCEPT')": 1,
+      "('CONCEPT', 'triggers', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'part_of', 'SYSTEM')": 8,
+      "('SYSTEM', 'located_at', 'SYSTEM')": 11,
+      "('SYSTEM', 'contains', 'CONCEPT')": 8,
+      "('SYSTEM', 'generated_by', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'defines_routes_for', 'SYSTEM')": 1,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 23,
+      "('SYSTEM', 'uses', 'SYSTEM')": 43,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'based_on', 'CONCEPT')": 3,
+      "('SYSTEM', 'depends_on', 'TECHNOLOGY')": 8,
+      "('CONCEPT', 'rejects', 'CONCEPT')": 2,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 4,
+      "('CONCEPT', 'survives', 'CONCEPT')": 3,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 4,
+      "('SYSTEM', 'lives_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 2,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 6,
+      "('CONCEPT', 'set_by', 'SYSTEM')": 1,
+      "('SYSTEM', 'drives', 'CONCEPT')": 1,
+      "('SYSTEM', 'validates', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 6,
+      "('TECHNOLOGY', 'calls', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'implements', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'sends_request_to', 'STANDARD')": 6,
+      "('TECHNOLOGY', 'invalidates', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'rolls_back_on_error', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'compared_with', 'CONCEPT')": 1,
+      "('SYSTEM', 'enforces', 'CONCEPT')": 1,
+      "('CONCEPT', 'bypasses', 'CONCEPT')": 1,
+      "('SYSTEM', 'checks', 'CONCEPT')": 2,
+      "('SYSTEM', 'returns', 'CONCEPT')": 1,
+      "('SYSTEM', 'requires', 'CONCEPT')": 2,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'validates', 'CONCEPT')": 2,
+      "('CONCEPT', 'publishes', 'CONCEPT')": 2,
+      "('CONCEPT', 'depends_on', 'SYSTEM')": 1,
+      "('SYSTEM', 'located_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 1,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'depends_on', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'uses', 'STANDARD')": 2,
+      "('SYSTEM', 'provides', 'CONCEPT')": 2,
+      "('SYSTEM', 'defines', 'CONCEPT')": 2,
+      "('SYSTEM', 'has_query', 'CONCEPT')": 16
+    },
+    "schema_layer_size": 93,
+    "fact_layer_size": 493,
+    "passage_layer_size": 27
+  }
+}

@@ -1,0 +1,169 @@
+2026-06-05 01:02:15 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260605_010215.log
+2026-06-05 01:02:15 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-06-05 01:02:15 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-05 01:02:15 - src.core.engine - INFO - GitStorage initialized at /Users/halllo/projects/local/feishu-mem/scripts/../mem-data
+2026-06-05 01:02:15 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-06-05 01:02:15 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-06-05 01:02:17 - src.view.tenant_token - INFO - [TenantToken] Refreshed token, expires in 5216s
+2026-06-05 01:02:17 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-05 01:02:17 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-05 01:02:17 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-06-05 01:02:17 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-06-05 01:02:17 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-05 01:02:17 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-05 01:02:17 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 0 episode(s) from data/suspend_pool.json
+2026-06-05 01:02:17 - src.eval_runner - INFO - [Eval] Idle flush disabled (simulated timestamps)
+2026-06-05 01:02:17 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=chat_0
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=用PG还是MySQL，之前项目用的PG感觉还不错
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_0 new episode=ep_7a7ef50ec started with msg=eval_1
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=PG的扩展性确实好，而且社区活跃，但MySQL我们团队更熟，上手成本低
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=确定吗？PG的学习曲线可不低，线上万一出问题能搞定吗
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=长期看PG更值得投入，文档也全，周边生态像PostGIS这些后面可能用得上
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=要不这样，核心业务用PG，历史数据还是放MySQL读库，两边不耽误
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=行，那就PG吧，MySQL先保留着做读库
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.19s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_0 TIME-GAP boundary: gap=34.2min >= 30min, suspend episode=ep_7a7ef50ec (msgs=5)
+2026-06-05 01:02:17 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_7a7ef50ec (chat=chat_0, msgs=5, pool=1/20)
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_0 new episode=ep_111ef9504 started after time-gap suspend
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=App Router迁移了吗？新项目要不要直接用
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=66 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=66 preview=App Router的streaming和server components挺香的，但Pages Router的项目迁过
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=Pages Router用得好好的，迁移出问题谁负责，再说吧
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=昨天试了下，路由定义更直观，loading.tsx直接丢目录就行，不用手动配了
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.14s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=那就迁吧，早迁早享受，新项目直接上App Router
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_0 TIME-GAP boundary: gap=38.3min >= 30min, suspend episode=ep_111ef9504 (msgs=5)
+2026-06-05 01:02:17 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_111ef9504 (chat=chat_0, msgs=5, pool=2/20)
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_0 new episode=ep_dd93a055d started after time-gap suspend
+2026-06-05 01:02:17 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=chat_1
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=K8s版本升级策略大家有什么想法？现在集群还是1.24
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_1 new episode=ep_46369966e started with msg=eval_12
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=1.24快EOL了，至少升到1.26，但跨版本升级要一个个来，不能跳
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=16 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=16 preview=今天食堂的鱼香肉丝不错，比上周好
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.13s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=先用kubeadm升到1.26，跑一个月稳定了再上1.28，这样风险可控
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-05 01:02:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=那就按这个节奏来，先1.26再1.28，中间留够观察期
+2026-06-05 01:02:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_1 TIME-GAP boundary: gap=36.4min >= 30min, suspend episode=ep_46369966e (msgs=4)
+2026-06-05 01:02:17 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_46369966e (chat=chat_1, msgs=4, pool=3/20)
+2026-06-05 01:02:17 - src.detect.episode - INFO - [Episode] chat=chat_1 new episode=ep_4f60f20ba started after time-gap suspend
+2026-06-05 01:02:19 - src.detect.episode - INFO - [Episode] chat=chat_0 IDLE-FLUSH: idle=80587500.0s >= 30s, suspending episode=ep_dd93a055d (msgs=1)
+2026-06-05 01:02:19 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_dd93a055d (chat=chat_0, msgs=1, pool=4/20)
+2026-06-05 01:02:19 - src.detect.episode - INFO - [Episode] chat=chat_1 IDLE-FLUSH: idle=80590057.0s >= 30s, suspending episode=ep_4f60f20ba (msgs=1)
+2026-06-05 01:02:19 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_4f60f20ba (chat=chat_1, msgs=1, pool=5/20)
+2026-06-05 01:02:19 - src.eval_runner - INFO - [Eval] Processing timed-out episode=ep_dd93a055d (msgs=1)
+2026-06-05 01:02:19 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_dd93a055d chat=chat_0 msgs=1 len=27
+2026-06-05 01:02:19 - src.core.engine - INFO - [Engine] Episode ep_dd93a055d too short (msgs=1, len=27), skipping LLM extraction
+2026-06-05 01:02:19 - src.eval_runner - INFO - [Eval] Processing timed-out episode=ep_4f60f20ba (msgs=1)
+2026-06-05 01:02:19 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_4f60f20ba chat=chat_1 msgs=1 len=27
+2026-06-05 01:02:19 - src.core.engine - INFO - [Engine] Episode ep_4f60f20ba too short (msgs=1, len=27), skipping LLM extraction
+2026-06-05 01:02:19 - src.detect.suspend_pool - INFO - [SuspendPool] Drained 5 episodes
+2026-06-05 01:02:19 - src.detect.episode - INFO - [EpisodeManager] Drained episode=ep_7a7ef50ec (chat=chat_0, msgs=5)
+2026-06-05 01:02:19 - src.detect.episode - INFO - [EpisodeManager] Drained episode=ep_111ef9504 (chat=chat_0, msgs=5)
+2026-06-05 01:02:19 - src.detect.episode - INFO - [EpisodeManager] Drained episode=ep_46369966e (chat=chat_1, msgs=4)
+2026-06-05 01:02:19 - src.detect.episode - INFO - [EpisodeManager] Drained episode=ep_dd93a055d (chat=chat_0, msgs=1)
+2026-06-05 01:02:19 - src.detect.episode - INFO - [EpisodeManager] Drained episode=ep_4f60f20ba (chat=chat_1, msgs=1)
+2026-06-05 01:02:19 - src.eval_runner - INFO - [Eval] Processing suspended episode=ep_7a7ef50ec chat=chat_0 (msgs=5)
+2026-06-05 01:02:19 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_7a7ef50ec chat=chat_0 msgs=5 len=159
+2026-06-05 01:02:19 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=159 content=用PG还是MySQL，之前项目用的PG感觉还不错 PG的扩展性确实好，而且社区活跃，但MySQL我们团队更熟，上手成本低
+2026-06-05 01:02:19 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=159)
+2026-06-05 01:02:22 - src.core.engine - INFO - [LLM] <<< Extract result type=list time=2.89s
+2026-06-05 01:02:22 - src.core.engine - INFO - [LLM] Extracted 1 decisions
+2026-06-05 01:02:22 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=d71e1369160e title=核心业务用PG，历史数据用MySQL读库 source=im
+2026-06-05 01:02:22 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='核心业务用PG，历史数据用MySQL读库', existing_count=0
+2026-06-05 01:02:22 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=d71e1369160e v1
+2026-06-05 01:02:23 - src.core.engine - INFO - Created decision: d71e1369160e v1 — 核心业务用PG，历史数据用MySQL读库
+2026-06-05 01:02:23 - src.core.engine - INFO - [Mutation] CREATE applied: sid=d71e1369160e v1
+2026-06-05 01:02:23 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=d71e1369160e
+2026-06-05 01:02:23 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=d71e1369160e
+2026-06-05 01:02:23 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-06-05 01:02:23 - src.core.engine - INFO - [Engine] <<< _process_episode done time=3.06s
+2026-06-05 01:02:23 - src.eval_runner - INFO - [Eval] Processing suspended episode=ep_111ef9504 chat=chat_0 (msgs=5)
+2026-06-05 01:02:23 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_111ef9504 chat=chat_0 msgs=5 len=183
+2026-06-05 01:02:23 - src.core.engine - INFO - [LLM] Injected 1 existing decisions as context
+2026-06-05 01:02:23 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=281 content=⚠️ 以下决策已存在于系统中（仅作参考，不要因此跳过提取）。请分析新对话是否与已有决策冲突或需要更新，如有请正常提取新的
+2026-06-05 01:02:23 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=281)
+2026-06-05 01:02:26 - src.core.engine - INFO - [LLM] <<< Extract result type=list time=2.98s
+2026-06-05 01:02:26 - src.core.engine - INFO - [LLM] Extracted 2 decisions
+2026-06-05 01:02:26 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=3c952c121f5f title=核心业务使用PostgreSQL，MySQL保留为读库 source=im
+2026-06-05 01:02:26 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-05 01:02:26 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=确认核心业务使用PostgreSQL，MySQL保留作为历史数据读库。
+2026-06-05 01:02:26 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.03s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:26 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-05 01:02:26 - src.core.engine - INFO - [Similar] Found by bigram: sid=d71e1369160e score=0.26
+2026-06-05 01:02:26 - src.core.engine - INFO - [Mutation] Similar found: sid=d71e1369160e summary=核心业务用PG，历史数据用MySQL读库 score=0.2647
+2026-06-05 01:02:27 - src.core.engine - INFO - [Dedup] LLM judge: action=skip reason=两条决策事实完全一致，仅措辞略有不同，新决策未提供额外信息。
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] SKIP: new=3c952c121f5f similar=d71e1369160e reason=两条决策事实完全一致，仅措辞略有不同，新决策未提供额外信息。
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=298e2623f0b6 title=新项目暂不迁移App Router source=im
+2026-06-05 01:02:27 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-06-05 01:02:27 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=决定新项目不直接使用App Router，因为Pages Router运行良好，迁移工作量大且存在风险。
+2026-06-05 01:02:27 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:27 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='新项目暂不迁移App Router', existing_count=1
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.026), existing_summary='核心业务用PG，历史数据用MySQL读库'
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=298e2623f0b6 v1
+2026-06-05 01:02:27 - src.core.engine - INFO - Created decision: 298e2623f0b6 v1 — 新项目暂不迁移App Router
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] CREATE applied: sid=298e2623f0b6 v1
+2026-06-05 01:02:27 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=298e2623f0b6
+2026-06-05 01:02:27 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=298e2623f0b6
+2026-06-05 01:02:27 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 2, 'episode_hyperedges': 1, 'topics': 1}
+2026-06-05 01:02:27 - src.core.engine - INFO - [Engine] <<< _process_episode done time=4.22s
+2026-06-05 01:02:27 - src.eval_runner - INFO - [Eval] Processing suspended episode=ep_46369966e chat=chat_1 (msgs=4)
+2026-06-05 01:02:27 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_46369966e chat=chat_1 msgs=4 len=116
+2026-06-05 01:02:27 - src.core.engine - INFO - [LLM] Injected 2 existing decisions as context
+2026-06-05 01:02:27 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=234 content=⚠️ 以下决策已存在于系统中（仅作参考，不要因此跳过提取）。请分析新对话是否与已有决策冲突或需要更新，如有请正常提取新的
+2026-06-05 01:02:27 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=234)
+2026-06-05 01:02:29 - src.core.engine - INFO - [LLM] <<< Extract result type=list time=2.47s
+2026-06-05 01:02:29 - src.core.engine - INFO - [LLM] Extracted 1 decisions
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=7bd27827b40d title=K8s版本升级策略：先升到1.26，稳定后再升1.28 source=im
+2026-06-05 01:02:29 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=47 model=Qwen3-Embedding-4B
+2026-06-05 01:02:29 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=47 preview=集群当前版本1.24，计划先用kubeadm升级到1.26，运行一个月稳定后再升级到1.28。
+2026-06-05 01:02:29 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-05 01:02:29 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='K8s版本升级策略：先升到1.26，稳定后再升1.28', existing_count=2
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='核心业务用PG，历史数据用MySQL读库'
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.012), existing_summary='新项目暂不迁移App Router'
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=7bd27827b40d v1
+2026-06-05 01:02:29 - src.core.engine - INFO - Created decision: 7bd27827b40d v1 — K8s版本升级策略：先升到1.26，稳定后再升1.28
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] CREATE applied: sid=7bd27827b40d v1
+2026-06-05 01:02:29 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=7bd27827b40d
+2026-06-05 01:02:29 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=7bd27827b40d
+2026-06-05 01:02:29 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 3, 'episode_hyperedges': 2, 'topics': 2}
+2026-06-05 01:02:29 - src.core.engine - INFO - [Engine] <<< _process_episode done time=2.65s
+2026-06-05 01:02:29 - src.eval_runner - INFO - [Eval] Processing suspended episode=ep_dd93a055d chat=chat_0 (msgs=1)
+2026-06-05 01:02:29 - src.core.engine - INFO - [Engine] Episode ep_dd93a055d content hash 0c1c80af4d94f7cb already processed, skipping duplicate
+2026-06-05 01:02:29 - src.eval_runner - INFO - [Eval] Processing suspended episode=ep_4f60f20ba chat=chat_1 (msgs=1)
+2026-06-05 01:02:29 - src.core.engine - INFO - [Engine] Episode ep_4f60f20ba content hash 9c26c97f43bf23ce already processed, skipping duplicate
+2026-06-05 01:02:29 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 0 episode(s) to data/suspend_pool.json
+2026-06-05 01:02:29 - src.card.pusher - INFO - Push scheduler stopped
+2026-06-05 01:02:29 - src.core.engine - INFO - Hypergraph saved on stop
+2026-06-05 01:02:30 - src.core.engine - INFO - Synced 3 dirty decisions to storage
+2026-06-05 01:02:30 - src.core.engine - INFO - MemoryEngine stopped (applied=3, failed=0)

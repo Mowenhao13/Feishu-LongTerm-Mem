@@ -1,0 +1,4345 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        0,
+        15,
+        18
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        1,
+        111
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 19,
+      "fact_indices": [
+        2,
+        3,
+        4,
+        5,
+        19,
+        20,
+        21,
+        28,
+        31,
+        32,
+        33,
+        34,
+        35,
+        41,
+        51,
+        102,
+        104,
+        106,
+        107
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "frequency": 9,
+      "fact_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        16,
+        17
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        22,
+        23,
+        97
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        24,
+        25,
+        26,
+        36
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 7,
+      "fact_indices": [
+        27,
+        52,
+        74,
+        123,
+        124,
+        125,
+        126
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        29,
+        30,
+        44,
+        45
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "STANDARD"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        37
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        38,
+        39,
+        40,
+        77
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        42
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        43,
+        58
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        46,
+        47,
+        101
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        48,
+        57
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        49,
+        50
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        53,
+        98
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        59
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "frequency": 8,
+      "fact_indices": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "SYSTEM",
+        "visualizes",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        73,
+        78
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "SYSTEM",
+        "displays",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        75,
+        76
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        79,
+        120
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "SYSTEM",
+        "is",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        80
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "CONCEPT",
+        "stored_in",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        81
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "CONCEPT",
+        "computed_from",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        82
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        83
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        84
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        85
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "SYSTEM",
+        "broadcasts",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        89
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "TECHNOLOGY",
+        "receives",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        90
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        91,
+        92,
+        93
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        94,
+        95,
+        118
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        96
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        99
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        100
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "TECHNOLOGY",
+        "depends_on",
+        "STANDARD"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        103
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        105
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        108,
+        109,
+        110
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        112,
+        119,
+        121
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        113,
+        114,
+        115,
+        116,
+        117
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        122
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "Web View",
+        "related_to",
+        "设计文档"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "web_view_documentation",
+        "based_on",
+        "multica_frontend_architecture"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "multica_frontend_architecture",
+        "uses",
+        "pnpm_monorepo"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "apps/web",
+        "uses",
+        "next_js"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "apps/desktop",
+        "uses",
+        "electron"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "apps/mobile",
+        "uses",
+        "expo_react_native"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "apps/desktop",
+        "depends_on",
+        "packages/core"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "apps/desktop",
+        "depends_on",
+        "packages/ui"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "apps/desktop",
+        "depends_on",
+        "packages/views"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "apps/web",
+        "depends_on",
+        "packages/core"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "apps/web",
+        "depends_on",
+        "packages/ui"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "apps/web",
+        "depends_on",
+        "packages/views"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "apps/mobile",
+        "depends_on",
+        "packages/core"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "apps/mobile",
+        "depends_on",
+        "packages/ui"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "apps/mobile",
+        "depends_on",
+        "packages/views"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "packages/core",
+        "related_to",
+        "business_logic_layer"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "packages/ui",
+        "based_on",
+        "radix_ui"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "packages/ui",
+        "based_on",
+        "tailwind"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "packages/views",
+        "related_to",
+        "cross_platform_views"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "Multica",
+        "uses",
+        "Go"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "Multica",
+        "uses",
+        "Chi router"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "Multica",
+        "uses",
+        "gorilla/websocket"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "Multica",
+        "adopts",
+        "TanStack Query"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "Multica",
+        "adopts",
+        "Zustand"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "Multica",
+        "uses",
+        "ApiClient"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "Multica",
+        "uses",
+        "WSClient"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "Multica",
+        "uses",
+        "WSProvider"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "Multica",
+        "uses",
+        "useRealtimeSync"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "Multica",
+        "uses",
+        "React Context"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "TanStack Query",
+        "responsible_for",
+        "server_state_management"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "Zustand",
+        "responsible_for",
+        "client_local_state_management"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "AgentHub",
+        "uses",
+        "TypeScript"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Bun"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Hono"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Drizzle"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Prisma"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "AgentHub",
+        "uses",
+        "packages/core"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "WSClient",
+        "based_on",
+        "WebSocket"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "WSClient",
+        "supports",
+        "auth_workspace_isolation"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "WSClient",
+        "supports",
+        "auto_reconnect"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "WSClient",
+        "supports",
+        "event_subscription"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "WSProvider",
+        "uses",
+        "useSyncExternalStore"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "WSProvider",
+        "responsible_for",
+        "ws_client_lifecycle_management"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "useRealtimeSync",
+        "uses",
+        "WebSocket"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "useRealtimeSync",
+        "responsible_for",
+        "通用事件"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "useRealtimeSync",
+        "responsible_for",
+        "副作用事件"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "通用事件",
+        "related_to",
+        "Query 缓存失效"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "副作用事件",
+        "related_to",
+        "UI 行为"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "useRealtimeSync",
+        "uses",
+        "100ms 防抖"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "useWSEvent",
+        "related_to",
+        "useRealtimeSync"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "useWSReconnect",
+        "related_to",
+        "useRealtimeSync"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "Multica",
+        "uses",
+        "CoreProvider"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "Multica",
+        "uses",
+        "NavigationAdapter"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "CoreProvider",
+        "based_on",
+        "NavigationAdapter"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "NavigationAdapter",
+        "related_to",
+        "Next.js Router"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "NavigationAdapter",
+        "related_to",
+        "react-router"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "NavigationAdapter",
+        "related_to",
+        "Expo Router"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "NavigationProvider",
+        "uses",
+        "NavigationAdapter"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "NavigationProvider",
+        "uses",
+        "useTransition"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "NavigationProvider",
+        "responsible_for",
+        "useIsNavigating"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "CoreProvider",
+        "aggregates",
+        "API 基础 URL"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "CoreProvider",
+        "aggregates",
+        "WS URL"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "CoreProvider",
+        "aggregates",
+        "存储适配器"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "CoreProvider",
+        "aggregates",
+        "认证配置"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "CoreProvider",
+        "aggregates",
+        "国际化配置"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 65,
+      "content": [
+        "AgentHub Web View",
+        "has_part",
+        "Landing Page"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 66,
+      "content": [
+        "AgentHub Web View",
+        "has_part",
+        "登录"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 67,
+      "content": [
+        "AgentHub Web View",
+        "has_part",
+        "Dashboard"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 68,
+      "content": [
+        "Dashboard",
+        "has_part",
+        "看板视图"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 69,
+      "content": [
+        "Dashboard",
+        "has_part",
+        "Agent 状态视图"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 70,
+      "content": [
+        "Dashboard",
+        "has_part",
+        "会话视图"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 71,
+      "content": [
+        "Dashboard",
+        "has_part",
+        "消息"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 72,
+      "content": [
+        "Dashboard",
+        "has_part",
+        "设置"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 73,
+      "content": [
+        "看板视图",
+        "visualizes",
+        "Handoff DAG"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 74,
+      "content": [
+        "看板视图",
+        "uses",
+        "拖拽操作"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 75,
+      "content": [
+        "Agent 状态视图",
+        "displays",
+        "Agent 状态"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 76,
+      "content": [
+        "会话视图",
+        "displays",
+        "Worker Agent 执行过程"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 77,
+      "content": [
+        "会话视图",
+        "supports",
+        "流式输出"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 78,
+      "content": [
+        "时序图视图",
+        "visualizes",
+        "Handoff DAG 执行时间线"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 79,
+      "content": [
+        "看板状态",
+        "based_on",
+        "Event Store 投影"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 80,
+      "content": [
+        "Event Store",
+        "is",
+        "唯一真相源"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 81,
+      "content": [
+        "Handoff 状态变化",
+        "stored_in",
+        "Event Store"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 82,
+      "content": [
+        "看板状态",
+        "computed_from",
+        "事件流"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 83,
+      "content": [
+        "Event Store",
+        "enables",
+        "time_travel"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 84,
+      "content": [
+        "time_travel",
+        "used_for",
+        "audit_and_troubleshooting"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 85,
+      "content": [
+        "AgentHub",
+        "based_on",
+        "event_driven_architecture"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 86,
+      "content": [
+        "Worker Agent",
+        "produces",
+        "handoff_complete_event"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 87,
+      "content": [
+        "Worker Agent",
+        "produces",
+        "handoff_block_event"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 88,
+      "content": [
+        "Worker Agent",
+        "produces",
+        "handoff_show_event"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 89,
+      "content": [
+        "Event Store",
+        "broadcasts",
+        "events"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 90,
+      "content": [
+        "WebSocket",
+        "receives",
+        "events"
+      ],
+      "schema_idx": 32,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 91,
+      "content": [
+        "WebSocket",
+        "updates",
+        "dashboard_card_status"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 92,
+      "content": [
+        "WebSocket",
+        "updates",
+        "agent_status_panel"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 93,
+      "content": [
+        "WebSocket",
+        "updates",
+        "session_view"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 94,
+      "content": [
+        "AgentHub",
+        "rejects",
+        "frontend_polling"
+      ],
+      "schema_idx": 34,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 95,
+      "content": [
+        "AgentHub",
+        "rejects",
+        "manual_page_refresh"
+      ],
+      "schema_idx": 34,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 96,
+      "content": [
+        "event_driven_cache_invalidation",
+        "ensures",
+        "view_state_consistency"
+      ],
+      "schema_idx": 35,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 97,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "Event Store"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 98,
+      "content": [
+        "Event Store",
+        "based_on",
+        "事件日志"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 99,
+      "content": [
+        "Event Store",
+        "related_to",
+        "唯一真相源"
+      ],
+      "schema_idx": 36,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 100,
+      "content": [
+        "看板状态",
+        "based_on",
+        "Event Store"
+      ],
+      "schema_idx": 37,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 101,
+      "content": [
+        "看板状态",
+        "related_to",
+        "投影"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 102,
+      "content": [
+        "前端",
+        "uses",
+        "TanStack Query"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 103,
+      "content": [
+        "TanStack Query",
+        "depends_on",
+        "WebSocket"
+      ],
+      "schema_idx": 38,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 104,
+      "content": [
+        "前端",
+        "uses",
+        "Zustand"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 105,
+      "content": [
+        "AgentHub",
+        "compared_with",
+        "Multica"
+      ],
+      "schema_idx": 39,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 106,
+      "content": [
+        "Multica",
+        "uses",
+        "PostgreSQL"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 107,
+      "content": [
+        "Multica",
+        "uses",
+        "TanStack Query"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 108,
+      "content": [
+        "Multica",
+        "uses",
+        "WebSocket"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 109,
+      "content": [
+        "Multica",
+        "uses",
+        "REST API"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 110,
+      "content": [
+        "AgentHub",
+        "uses",
+        "WebSocket"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 111,
+      "content": [
+        "AgentHub",
+        "based_on",
+        "Multica"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 112,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "五层前端架构"
+      ],
+      "schema_idx": 41,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 113,
+      "content": [
+        "五层前端架构",
+        "composed_of",
+        "Store"
+      ],
+      "schema_idx": 42,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 114,
+      "content": [
+        "五层前端架构",
+        "composed_of",
+        "API"
+      ],
+      "schema_idx": 42,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 115,
+      "content": [
+        "五层前端架构",
+        "composed_of",
+        "WS"
+      ],
+      "schema_idx": 42,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 116,
+      "content": [
+        "五层前端架构",
+        "composed_of",
+        "Views"
+      ],
+      "schema_idx": 42,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 117,
+      "content": [
+        "五层前端架构",
+        "composed_of",
+        "UI"
+      ],
+      "schema_idx": 42,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 118,
+      "content": [
+        "AgentHub",
+        "rejects",
+        "TanStack Query + REST API 缓存模式"
+      ],
+      "schema_idx": 34,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 119,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "Event Store 投影模式"
+      ],
+      "schema_idx": 41,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 120,
+      "content": [
+        "Query 层",
+        "based_on",
+        "投影服务"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 121,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "WSClient + WSProvider + useRealtimeSync 模式"
+      ],
+      "schema_idx": 41,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 122,
+      "content": [
+        "WSClient + WSProvider + useRealtimeSync 模式",
+        "based_on",
+        "Multica"
+      ],
+      "schema_idx": 43,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 123,
+      "content": [
+        "AgentHub",
+        "uses",
+        "看板视图"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 124,
+      "content": [
+        "AgentHub",
+        "uses",
+        "DAG 可视化"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 125,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Agent 状态面板"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 126,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Session 执行过程面板"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        7
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-eb4b43e09d37d8a1",
+      "content": "# Web View 设计文档",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "content": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "content": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "content": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "content": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ]
+    },
+    {
+      "idx": 5,
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "content": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    {
+      "idx": 6,
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "content": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ]
+    },
+    {
+      "idx": 7,
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "content": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "fact_indices": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "Web View",
+        "related_to",
+        "设计文档"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-eb4b43e09d37d8a1",
+      "passage": "# Web View 设计文档",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "web_view_documentation",
+        "based_on",
+        "multica_frontend_architecture"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "multica_frontend_architecture",
+        "uses",
+        "pnpm_monorepo"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/web",
+        "uses",
+        "next_js"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/desktop",
+        "uses",
+        "electron"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/mobile",
+        "uses",
+        "expo_react_native"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/desktop",
+        "depends_on",
+        "packages/core"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/desktop",
+        "depends_on",
+        "packages/ui"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/desktop",
+        "depends_on",
+        "packages/views"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/web",
+        "depends_on",
+        "packages/core"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/web",
+        "depends_on",
+        "packages/ui"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/web",
+        "depends_on",
+        "packages/views"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/mobile",
+        "depends_on",
+        "packages/core"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/mobile",
+        "depends_on",
+        "packages/ui"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "apps/mobile",
+        "depends_on",
+        "packages/views"
+      ],
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "packages/core",
+        "related_to",
+        "business_logic_layer"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "packages/ui",
+        "based_on",
+        "radix_ui"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "packages/ui",
+        "based_on",
+        "tailwind"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "packages/views",
+        "related_to",
+        "cross_platform_views"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "passage": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "Go"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "Chi router"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "gorilla/websocket"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "adopts",
+        "TanStack Query"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "adopts",
+        "Zustand"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "ApiClient"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "WSClient"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "WSProvider"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "useRealtimeSync"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "React Context"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "TanStack Query",
+        "responsible_for",
+        "server_state_management"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Zustand",
+        "responsible_for",
+        "client_local_state_management"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "TypeScript"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Bun"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Hono"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Drizzle"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Prisma"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "packages/core"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSClient",
+        "based_on",
+        "WebSocket"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSClient",
+        "supports",
+        "auth_workspace_isolation"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSClient",
+        "supports",
+        "auto_reconnect"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSClient",
+        "supports",
+        "event_subscription"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSProvider",
+        "uses",
+        "useSyncExternalStore"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSProvider",
+        "responsible_for",
+        "ws_client_lifecycle_management"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "passage": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "useRealtimeSync",
+        "uses",
+        "WebSocket"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "useRealtimeSync",
+        "responsible_for",
+        "通用事件"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "useRealtimeSync",
+        "responsible_for",
+        "副作用事件"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "通用事件",
+        "related_to",
+        "Query 缓存失效"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "副作用事件",
+        "related_to",
+        "UI 行为"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "useRealtimeSync",
+        "uses",
+        "100ms 防抖"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "useWSEvent",
+        "related_to",
+        "useRealtimeSync"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "useWSReconnect",
+        "related_to",
+        "useRealtimeSync"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "CoreProvider"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "NavigationAdapter"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "CoreProvider",
+        "based_on",
+        "NavigationAdapter"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "NavigationAdapter",
+        "related_to",
+        "Next.js Router"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "NavigationAdapter",
+        "related_to",
+        "react-router"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "NavigationAdapter",
+        "related_to",
+        "Expo Router"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "NavigationProvider",
+        "uses",
+        "NavigationAdapter"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "NavigationProvider",
+        "uses",
+        "useTransition"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "NavigationProvider",
+        "responsible_for",
+        "useIsNavigating"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "CoreProvider",
+        "aggregates",
+        "API 基础 URL"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "CoreProvider",
+        "aggregates",
+        "WS URL"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "CoreProvider",
+        "aggregates",
+        "存储适配器"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "CoreProvider",
+        "aggregates",
+        "认证配置"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "CoreProvider",
+        "aggregates",
+        "国际化配置"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "aggregates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "passage": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub Web View",
+        "has_part",
+        "Landing Page"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub Web View",
+        "has_part",
+        "登录"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub Web View",
+        "has_part",
+        "Dashboard"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Dashboard",
+        "has_part",
+        "看板视图"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Dashboard",
+        "has_part",
+        "Agent 状态视图"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Dashboard",
+        "has_part",
+        "会话视图"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Dashboard",
+        "has_part",
+        "消息"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Dashboard",
+        "has_part",
+        "设置"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has_part",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "看板视图",
+        "visualizes",
+        "Handoff DAG"
+      ],
+      "schema": [
+        "SYSTEM",
+        "visualizes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "看板视图",
+        "uses",
+        "拖拽操作"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Agent 状态视图",
+        "displays",
+        "Agent 状态"
+      ],
+      "schema": [
+        "SYSTEM",
+        "displays",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "会话视图",
+        "displays",
+        "Worker Agent 执行过程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "displays",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "会话视图",
+        "supports",
+        "流式输出"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "时序图视图",
+        "visualizes",
+        "Handoff DAG 执行时间线"
+      ],
+      "schema": [
+        "SYSTEM",
+        "visualizes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "看板状态",
+        "based_on",
+        "Event Store 投影"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Event Store",
+        "is",
+        "唯一真相源"
+      ],
+      "schema": [
+        "SYSTEM",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Handoff 状态变化",
+        "stored_in",
+        "Event Store"
+      ],
+      "schema": [
+        "CONCEPT",
+        "stored_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "看板状态",
+        "computed_from",
+        "事件流"
+      ],
+      "schema": [
+        "CONCEPT",
+        "computed_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "passage": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Event Store",
+        "enables",
+        "time_travel"
+      ],
+      "schema": [
+        "SYSTEM",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "time_travel",
+        "used_for",
+        "audit_and_troubleshooting"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "based_on",
+        "event_driven_architecture"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Worker Agent",
+        "produces",
+        "handoff_complete_event"
+      ],
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Worker Agent",
+        "produces",
+        "handoff_block_event"
+      ],
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Worker Agent",
+        "produces",
+        "handoff_show_event"
+      ],
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Event Store",
+        "broadcasts",
+        "events"
+      ],
+      "schema": [
+        "SYSTEM",
+        "broadcasts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WebSocket",
+        "receives",
+        "events"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WebSocket",
+        "updates",
+        "dashboard_card_status"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WebSocket",
+        "updates",
+        "agent_status_panel"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WebSocket",
+        "updates",
+        "session_view"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "updates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "rejects",
+        "frontend_polling"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "rejects",
+        "manual_page_refresh"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "event_driven_cache_invalidation",
+        "ensures",
+        "view_state_consistency"
+      ],
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "passage": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "Event Store"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Event Store",
+        "based_on",
+        "事件日志"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Event Store",
+        "related_to",
+        "唯一真相源"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "看板状态",
+        "based_on",
+        "Event Store"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "看板状态",
+        "related_to",
+        "投影"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "前端",
+        "uses",
+        "TanStack Query"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "TanStack Query",
+        "depends_on",
+        "WebSocket"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "depends_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "前端",
+        "uses",
+        "Zustand"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "compared_with",
+        "Multica"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "PostgreSQL"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "TanStack Query"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "WebSocket"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Multica",
+        "uses",
+        "REST API"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "WebSocket"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "passage": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "based_on",
+        "Multica"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "五层前端架构"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "五层前端架构",
+        "composed_of",
+        "Store"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "五层前端架构",
+        "composed_of",
+        "API"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "五层前端架构",
+        "composed_of",
+        "WS"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "五层前端架构",
+        "composed_of",
+        "Views"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "五层前端架构",
+        "composed_of",
+        "UI"
+      ],
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "rejects",
+        "TanStack Query + REST API 缓存模式"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "Event Store 投影模式"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "Query 层",
+        "based_on",
+        "投影服务"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "WSClient + WSProvider + useRealtimeSync 模式"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "WSClient + WSProvider + useRealtimeSync 模式",
+        "based_on",
+        "Multica"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "看板视图"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "DAG 可视化"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Agent 状态面板"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Session 执行过程面板"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "passage": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-eb4b43e09d37d8a1",
+      "chunk_text": "# Web View 设计文档",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-619b377a1dff0652",
+      "chunk_text": "## 1. 分析范围\n\n\n\n本文档参考 Multica 前端架构进行设计。Multica 是一个多平台协作工具，其前端代码组织为 pnpm monorepo，核心源码位于以下包中：\n\n\n\n- apps/web — Next.js Web 应用，包含页面路由、布局、平台适配层\n\n- apps/desktop — Electron 桌面应用，共享 core/ui/views 包\n\n- apps/mobile — Expo React Native 移动应用\n\n- packages/core — 无 UI 依赖的业务逻辑层：API 客户端、WebSocket 客户端、认证、状态管理、实时同步、查询定义\n\n- packages/ui — 原子 UI 组件库（基于 Radix UI + Tailwind）\n\n- packages/views — 跨平台共享页面视图（看板、收件箱、聊天等）",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-97cacf55dd1b0e18",
+      "chunk_text": "## 2. 架构概览\n\n\n\n### 2.1 整体架构\n\n\n\nMultica 采用 Go 后端（Chi router + gorilla/websocket）提供 REST API 和 WebSocket 实时推送。前端采用五层架构：\n\n\n\n- Store 层（状态管理）: TanStack Query 管理服务端缓存，Zustand 管理客户端本地状态，两者严格分离\n\n- API 层（网络通信）: ApiClient（HTTP REST）+ WSClient（WebSocket 长连接）\n\n- WS 层（实时事件）: WSProvider 通过 React Context 分发事件，useRealtimeSync 将事件映射为 Query 缓存失效\n\n- Views 层（页面视图）: 跨平台共享页面组件（packages/views），根据平台注入不同的导航适配器\n\n- UI 层（原子组件）: 无业务逻辑的基础组件库（packages/ui）\n\nAgentHub 的选择: 与 Multica 不同，AgentHub 后端采用 TypeScript（Bun 运行时），与前端共享同一语言。后端使用 Hono 处理 HTTP/WS，Drizzle/Prisma 管理数据库。packages/core/ 中的类型定义（Handoff DAG、Event Store、Actor 等）由前后端共同引用，实现零重复的类型定义共享。\n\n\n\n状态管理的核心原则：\n\n\n\n- TanStack Query 是服务端状态的唯一信源，所有 API 返回的数据都通过 Query 缓存管理\n\n- Zustand 仅管理客户端本地状态（如导航记录、聊天活跃会话、Modal 开关）\n\n- 两者之间不存在数据镜像——避免缓存不一致\n\n### 2.2 实时通信\n\n\n\nMultica 的实时通信架构围绕 WebSocket 长连接构建，核心组件包括：\n\n\n\n- WSClient (packages/core/api/ws-client.ts): 轻量级 WebSocket 客户端，支持 auth/workspace 隔离、自动重连、事件订阅。连接建立后先发送 auth 消息完成身份认证，再订阅当前 workspace。断开后 3 秒自动重连，重连后重新执行完整订阅流程\n\n- WSProvider (packages/core/realtime/provider.tsx): React Context Provider，监听认证状态和当前 workspace slug 变化。当 workspace 切换时，自动销毁旧 WSClient 实例并创建新实例绑定到新的 workspace。通过 React 的 useSyncExternalStore 响应式读取 workspace slug（URL 驱动的单例）\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-0342066b44fbd78d",
+      "chunk_text": "- useRealtimeSync (packages/core/realtime/use-realtime-sync.ts): 核心实时同步 Hook。将 WebSocket 事件分为两类处理：通用事件（如 issue:updated、inbox:new 等）→ 触发对应 Query 缓存失效，驱动自动重新获取副作用事件（如 workspace:deleted、member:removed）→ 触发导航跳转、Toast 通知等 UI 行为通过 100ms 防抖避免高频事件（如批量更新）导致过多请求\n\n- useWSEvent / useWSReconnect (packages/core/realtime/hooks.ts): 面向组件的轻量 Hook，用于订阅特定事件或在重连后执行回调\n\n### 2.3 平台适配\n\n\n\nMultica 通过 CoreProvider + NavigationAdapter 模式实现跨平台桥接：\n\n\n\n- NavigationAdapter (packages/views/navigation/types.ts): 定义 push、replace、back、pathname、searchParams、getShareableUrl、prefetch、openInNewTab 等接口。Web 平台对接 Next.js Router，Desktop 对接 react-router，Mobile 对接 Expo Router\n\n- NavigationProvider (packages/views/navigation/context.tsx): React Context 包装器，将 NavigationAdapter 注入组件树，并通过 useTransition 提供导航加载状态（useIsNavigating）\n\n- CoreProvider (packages/core/platform/types.ts): 聚合 API 基础 URL、WS URL、存储适配器、认证配置、国际化配置等平台差异点，作为根组件一次性注入",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-b047dc69e8d8cc4b",
+      "chunk_text": "## 3. AgentHub Web View 设计\n\n\n\n### 3.1 页面结构\n\n\n\n从用户视角出发的页面导航结构如下：\n\n\n\n\n```\nLanding Page → 登录 → Dashboard\n                          ├── 看板 (Kanban View)\n                          ├── Agent 状态 (Agent Status)\n                          ├── 会话视图 (Session View)\n                          ├── 消息 (Inbox)\n                          └── 设置 (Settings)\n\n```\n\n\n\n\n- Landing Page: 产品介绍页，未登录用户的入口\n\n- 登录: 认证流程，支持多种登录方式\n\n- Dashboard: 登录后的主界面，包含以下子视图\n\n- 看板视图: AgentHub 的核心视图，可视化展示 Handoff DAG 的状态\n\n- Agent 状态视图: 各 Agent 的实时运行状态\n\n- 会话视图: Worker Agent 在 Worktree 内的执行过程展示\n\n- 消息: 系统通知和 Agent 推送的消息\n\n- 设置: 用户偏好和系统配置\n\n### 3.2 核心视图\n\n\n\n看板视图: 可视化 Handoff DAG 的执行状态。每个 Issue 卡片展示 handoff 的标题、状态（待处理/运行中/已完成/失败）、分配的 Agent 以及执行摘要。看板列按 Handoff 状态划分，支持拖拽操作改变状态\n\n\n\nAgent 状态视图: 实时显示各 Agent 的当前状态（空闲/忙碌/故障），所在 Worktree，以及正在执行的 Handoff 信息。支持按状态、Worktree 过滤\n\n\n\n会话视图: 展示 Worker Agent 在 Worktree 内的执行过程。支持可选的流式输出，实时展示 Agent 的思考过程和执行步骤\n\n\n\n时序图视图: Handoff DAG 执行过程的时间线可视化。展示并行分支的执行时间线、依赖链的阻塞关系、各 Agent 的执行耗时\n\n\n\n### 3.3 状态投射\n\n\n\n看板状态不是直接读取数据库的产物，而是 Event Store 的投影：\n\n\n\n- 事件日志是唯一真相源: 所有 Handoff 状态变化（创建、分配、开始、完成、失败）都以事件形式写入 Event Store\n\n- 看板状态 = 投影: 看板显示的 Issue 卡片列表、状态分布、分配关系，都是从 Event Store 的事件流经过投影计算得到\n",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 4
+    },
+    {
+      "chunk_id": "chunk-005-c8832d6075e2f607",
+      "chunk_text": "- 支持时间旅行: 可以通过回放 Event Store 的事件流，重建任意时间点的看板状态快照，用于审计和问题排查\n\n### 3.4 实时推送\n\n\n\nAgentHub 的实时更新完全基于事件驱动：\n\n\n\n- Worker Agent 在执行过程中产生的 handoff_complete、handoff_block（阻塞等待）、handoff_show（输出中间结果）等事件，通过 Event Store 广播\n\n- 前端 WebSocket 连接接收这些事件推送，自动更新看板卡片状态、Agent 状态面板和会话视图\n\n- 无需前端轮询，无需用户手动刷新页面\n\n- 事件驱动缓存失效机制确保多窗口/多用户间视图状态一致",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 5
+    },
+    {
+      "chunk_id": "chunk-006-091496d1a76c8be6",
+      "chunk_text": "## 4. 关键设计决策\n\n\n\n### 4.1 状态管理策略\n\n\n\nAgentHub 采用以 Event Store 为中心的架构：\n\n\n\n- 事件日志（Event Store） 是系统的唯一真相源。所有状态变化都以不可变事件的形式追加存储\n\n- 看板状态是投影：从 Event Store 事件流通过投影计算得出，随时可以重建\n\n- 前端不直接缓存服务端投影结果：前端 Query 缓存（如 TanStack Query）仅缓存最近一次投影结果，通过 WebSocket 事件驱动自动失效\n\n- 客户端本地状态（如当前选中看板列、筛选条件等）使用轻量级状态管理工具（如 Zustand）管理\n\n### 4.2 与 Multica 的差异\n\n\n\n| 维度 | Multica | AgentHub ||------|---------|----------|| 服务端状态源 | PostgreSQL 数据库 | Event Store（事件日志） || 前端缓存策略 | TanStack Query 管理 API 缓存，WS 事件驱动缓存失效 | Event Store 投影取代 Query 缓存，WS 事件驱动前端直接更新 || 状态可回溯性 | 有限（基于数据库快照） | 原生支持（Event Store 时间旅行） || 实时更新范围 | REST API + WebSocket 双向 | WebSocket 单向事件推送为主 || 页面复杂度 | 多实体 CRUD（Issue、Inbox、Chat、Project） | 聚焦看板 DAG 可视化和 Agent 状态监控 || 跨平台需求 | Web / Desktop / Mobile 三端 | 初期以 Web 为主 |",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 6
+    },
+    {
+      "chunk_id": "chunk-007-8f0313b1eecaac1c",
+      "chunk_text": "## 5. 推荐方案\n\n\n\n基于 Multica 的五层前端架构（Store → API → WS → Views → UI），针对 AgentHub 的业务特点进行调整：\n\n\n\n- 保留五层架构: 保持 Store / API / WS / Views / UI 的分层结构，确保关注点分离\n\n- 替换状态管理层: 将 Multica 的 TanStack Query + REST API 缓存模式，替换为 Event Store 投影模式。Query 层不再直接读取 API，而是从投影服务获取数据\n\n- 强化 WebSocket 层: 采用 Multica 的 WSClient + WSProvider + useRealtimeSync 模式，但事件处理逻辑从\"失效 Query 缓存\"调整为\"直接更新投影状态\"\n\n- 精简视图范围: 以看板视图和 DAG 可视化作为核心交互界面，Agent 状态和 Session 执行过程作为辅助面板\n\n前端页面渲染以看板和 DAG 可视化为主，Agent 的运行状态和执行日志流为辅。整体设计强调事件的实时性、状态的可追溯性，以及架构的简洁性。",
+      "doc_path": "test_files/docs/web_view/WEB_VIEW.md",
+      "chunk_index": 7
+    }
+  ],
+  "stats": {
+    "total_chunks": 8,
+    "total_triples": 127,
+    "unique_schemas": 44,
+    "schema_distribution": {
+      "('SYSTEM', 'related_to', 'CONCEPT')": 3,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 19,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 9,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'uses', 'SYSTEM')": 4,
+      "('SYSTEM', 'uses', 'CONCEPT')": 7,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'based_on', 'STANDARD')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 4,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'related_to', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'based_on', 'CONCEPT')": 2,
+      "('CONCEPT', 'related_to', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'responsible_for', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'aggregates', 'CONCEPT')": 5,
+      "('SYSTEM', 'has_part', 'SYSTEM')": 8,
+      "('SYSTEM', 'visualizes', 'CONCEPT')": 2,
+      "('SYSTEM', 'displays', 'CONCEPT')": 2,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'is', 'CONCEPT')": 1,
+      "('CONCEPT', 'stored_in', 'SYSTEM')": 1,
+      "('CONCEPT', 'computed_from', 'CONCEPT')": 1,
+      "('SYSTEM', 'enables', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'produces', 'CONCEPT')": 3,
+      "('SYSTEM', 'broadcasts', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'receives', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'updates', 'CONCEPT')": 3,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 3,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'depends_on', 'STANDARD')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1,
+      "('SYSTEM', 'uses', 'STANDARD')": 3,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 3,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 5,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 44,
+    "fact_layer_size": 127,
+    "passage_layer_size": 8
+  }
+}

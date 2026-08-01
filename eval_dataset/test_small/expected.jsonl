@@ -1,0 +1,3 @@
+{"chat_id": "chat_0", "msg_id": "m006", "expected_topic": "用PG还是MySQL", "expected_summary": "核心业务采用PostgreSQL，历史数据保留MySQL作为读库", "expected_status": "decided", "expected_impact": "major", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m011", "expected_topic": "Next.js App Router迁移", "expected_summary": "新项目直接采用App Router，存量Pages Router项目逐步迁移", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}
+{"chat_id": "chat_1", "msg_id": "m016", "expected_topic": "K8s版本升级策略", "expected_summary": "先用kubeadm升级到1.26，稳定运行一个月后再升级到1.28", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}

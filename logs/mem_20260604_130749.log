@@ -1,0 +1,110 @@
+2026-06-04 13:07:49 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260604_130749.log
+2026-06-04 13:07:49 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-06-04 13:07:49 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-04 13:07:49 - src.core.engine - INFO - GitStorage initialized at /Users/halllo/projects/local/feishu-mem/scripts/../mem-data
+2026-06-04 13:07:49 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-06-04 13:07:49 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-06-04 13:07:50 - src.view.tenant_token - INFO - [TenantToken] Refreshed token, expires in 4569s
+2026-06-04 13:07:50 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-04 13:07:50 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-04 13:07:50 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-06-04 13:07:50 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-06-04 13:07:50 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-04 13:07:50 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-04 13:07:50 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-06-04 13:07:50 - src.eval_runner - INFO - [Eval] Idle flush disabled (simulated timestamps)
+2026-06-04 13:07:50 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=chat_0
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=用PG还是MySQL，之前项目用的PG感觉还不错
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.15s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_0 new episode=ep_7f8ad58d0 started with msg=eval_1
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=PG的扩展性确实好，而且社区活跃，但MySQL我们团队更熟，上手成本低
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=26 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=26 preview=确定吗？PG的学习曲线可不低，线上万一出问题能搞定吗
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=长期看PG更值得投入，文档也全，周边生态像PostGIS这些后面可能用得上
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=要不这样，核心业务用PG，历史数据还是放MySQL读库，两边不耽误
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=行，那就PG吧，MySQL先保留着做读库
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_0 TIME-GAP boundary: gap=34.2min >= 30min, suspend episode=ep_7f8ad58d0 (msgs=5)
+2026-06-04 13:07:50 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_7f8ad58d0 (chat=chat_0, msgs=5, pool=1/20)
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_0 new episode=ep_cbfc29aee started after time-gap suspend
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=App Router迁移了吗？新项目要不要直接用
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=66 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=66 preview=App Router的streaming和server components挺香的，但Pages Router的项目迁过
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=Pages Router用得好好的，迁移出问题谁负责，再说吧
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=昨天试了下，路由定义更直观，loading.tsx直接丢目录就行，不用手动配了
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=那就迁吧，早迁早享受，新项目直接上App Router
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_0 TIME-GAP boundary: gap=38.3min >= 30min, suspend episode=ep_cbfc29aee (msgs=5)
+2026-06-04 13:07:50 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_cbfc29aee (chat=chat_0, msgs=5, pool=2/20)
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_0 new episode=ep_d99a88894 started after time-gap suspend
+2026-06-04 13:07:50 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=chat_1
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=K8s版本升级策略大家有什么想法？现在集群还是1.24
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_1 new episode=ep_aae8a18a5 started with msg=eval_12
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=1.24快EOL了，至少升到1.26，但跨版本升级要一个个来，不能跳
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=16 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=16 preview=今天食堂的鱼香肉丝不错，比上周好
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=先用kubeadm升到1.26，跑一个月稳定了再上1.28，这样风险可控
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=27 model=Qwen3-Embedding-4B
+2026-06-04 13:07:50 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=27 preview=那就按这个节奏来，先1.26再1.28，中间留够观察期
+2026-06-04 13:07:50 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_1 TIME-GAP boundary: gap=36.4min >= 30min, suspend episode=ep_aae8a18a5 (msgs=4)
+2026-06-04 13:07:50 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_aae8a18a5 (chat=chat_1, msgs=4, pool=3/20)
+2026-06-04 13:07:50 - src.detect.episode - INFO - [Episode] chat=chat_1 new episode=ep_0f95f7fc6 started after time-gap suspend
+2026-06-04 13:07:52 - src.detect.episode - INFO - [Episode] chat=chat_0 IDLE-FLUSH: idle=80544632.6s >= 30s, suspending episode=ep_d99a88894 (msgs=1)
+2026-06-04 13:07:52 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_d99a88894 (chat=chat_0, msgs=1, pool=4/20)
+2026-06-04 13:07:52 - src.detect.episode - INFO - [Episode] chat=chat_1 IDLE-FLUSH: idle=80547189.6s >= 30s, suspending episode=ep_0f95f7fc6 (msgs=1)
+2026-06-04 13:07:52 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_0f95f7fc6 (chat=chat_1, msgs=1, pool=5/20)
+2026-06-04 13:07:52 - src.eval_runner - INFO - [Eval] Processing timed-out episode=ep_d99a88894 (msgs=1)
+2026-06-04 13:07:52 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_d99a88894 chat=chat_0 msgs=1 len=27
+2026-06-04 13:07:52 - src.core.engine - INFO - [Engine] Episode ep_d99a88894 too short (msgs=1, len=27), skipping LLM extraction
+2026-06-04 13:07:52 - src.eval_runner - INFO - [Eval] Processing timed-out episode=ep_0f95f7fc6 (msgs=1)
+2026-06-04 13:07:52 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_0f95f7fc6 chat=chat_1 msgs=1 len=27
+2026-06-04 13:07:52 - src.core.engine - INFO - [Engine] Episode ep_0f95f7fc6 too short (msgs=1, len=27), skipping LLM extraction
+2026-06-04 13:07:52 - src.detect.suspend_pool - INFO - [SuspendPool] Drained 5 episodes
+2026-06-04 13:07:52 - __main__ - ERROR - [Eval] Error: Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/scripts/../main.py", line 757, in main
+    asyncio.run(run_eval())
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/eval_runner.py", line 465, in run_eval
+    await runner.run()
+  File "/Users/halllo/projects/local/feishu-mem/src/eval_runner.py", line 143, in run
+    drained = self._episode_manager.drain_suspended_episodes()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/detect/episode.py", line 499, in drain_suspended_episodes
+    content=m["msg"],
+            ~^^^^^^^
+KeyError: 'msg'
+

@@ -1,0 +1,2327 @@
+{
+  "triples": [
+    {
+      "head": "Vibe-Kanban",
+      "relation": "recommended_by",
+      "tail": "ref/vibe-kanban",
+      "schema": [
+        "SYSTEM",
+        "recommended_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Multica",
+      "relation": "recommended_by",
+      "tail": "ref/multica",
+      "schema": [
+        "SYSTEM",
+        "recommended_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "Rust",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "MCP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "Git Worktree",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "based_on",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "Polymorphic Actor",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "implements",
+      "tail": "Polymorphic Actor",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "implements",
+      "tail": "Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-4691fe"
+    },
+    {
+      "head": "vibe-kanban",
+      "relation": "uses",
+      "tail": "Rust",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "vibe-kanban",
+      "relation": "uses",
+      "tail": "Git Worktree",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "vibe-kanban",
+      "relation": "uses",
+      "tail": "MCP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Issue Board",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Squad",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Polymorphic Actor",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-8161af"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "based_on",
+      "tail": "Rust",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "axum",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "ts-rs",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "ElectricSQL",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "MCP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "Fractional Indexing",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "Git Worktree",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "chrono",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "serde",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "uuid",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "api-types",
+      "relation": "responsible_for",
+      "tail": "Issue",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "api-types",
+      "relation": "responsible_for",
+      "tail": "Project",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "api-types",
+      "relation": "responsible_for",
+      "tail": "Tag",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "api-types",
+      "relation": "responsible_for",
+      "tail": "Status",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "api-types",
+      "relation": "uses",
+      "tail": "ts-rs",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "db",
+      "relation": "uses",
+      "tail": "KV storage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "axum",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "mcp",
+      "relation": "implements",
+      "tail": "MCP",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "MCP",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "executors",
+      "relation": "supports",
+      "tail": "Claude",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "executors",
+      "relation": "supports",
+      "tail": "Codex",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "executors",
+      "relation": "supports",
+      "tail": "Cursor",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "executors",
+      "relation": "supports",
+      "tail": "Gemini",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "worktree-manager",
+      "relation": "uses",
+      "tail": "Git Worktree",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "remote",
+      "relation": "uses",
+      "tail": "ElectricSQL",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Issue",
+      "relation": "uses",
+      "tail": "Fractional Indexing",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Issue",
+      "relation": "uses",
+      "tail": "executor name",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Issue",
+      "relation": "has",
+      "tail": "parent_issue",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Issue",
+      "relation": "has",
+      "tail": "labels",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Issue",
+      "relation": "has",
+      "tail": "last_accessed_at",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Issue",
+      "relation": "has",
+      "tail": "last_accessed_repo_path",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "IssueStatus",
+      "relation": "has",
+      "tail": "Backlog",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "IssueStatus",
+      "relation": "has",
+      "tail": "Todo",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "IssueStatus",
+      "relation": "has",
+      "tail": "InProgress",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "IssueStatus",
+      "relation": "has",
+      "tail": "InReview",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "IssueStatus",
+      "relation": "has",
+      "tail": "Done",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "IssueStatus",
+      "relation": "has",
+      "tail": "Cancelled",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "Fractional Indexing",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "executor name",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "parent_issue",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "labels",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "last_accessed_at",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "adopts",
+      "tail": "last_accessed_repo_path",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1ec57b"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "id",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "organization_id",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "name",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "color",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "sort_order",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "created_at",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "has_field",
+      "tail": "updated_at",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "CreateProjectRequest",
+      "relation": "has_field",
+      "tail": "id",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "CreateProjectRequest",
+      "relation": "has_field",
+      "tail": "organization_id",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "CreateProjectRequest",
+      "relation": "has_field",
+      "tail": "name",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "CreateProjectRequest",
+      "relation": "has_field",
+      "tail": "color",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "客户端生成 ID",
+      "relation": "enables",
+      "tail": "乐观更新",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Issue",
+      "relation": "supports",
+      "tail": "客户端生成 ID",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Project",
+      "relation": "supports",
+      "tail": "客户端生成 ID",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "乐观更新",
+      "relation": "allows",
+      "tail": "客户端创建立即显示",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "is_designated_as",
+      "tail": "核心创新",
+      "schema": [
+        "SYSTEM",
+        "is_designated_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "MCP 协议",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "PROTOCOL"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent",
+      "relation": "operates",
+      "tail": "看板",
+      "schema": [
+        "CONCEPT",
+        "operates",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_kv_get",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_kv_list",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_create",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_get",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_start",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_complete",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_pause",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_cancel",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_add_comment",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_get_comments",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_get_messages",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_task_update_issue_number",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_project_get",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_project_list",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 看板服务",
+      "relation": "provides",
+      "tail": "mcp_get_prompt",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "handler.rs",
+      "relation": "injects",
+      "tail": "Agent 执行上下文",
+      "schema": [
+        "SYSTEM",
+        "injects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent 执行上下文",
+      "relation": "includes",
+      "tail": "issue",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent 执行上下文",
+      "relation": "includes",
+      "tail": "history",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent 执行上下文",
+      "relation": "includes",
+      "tail": "worktree",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent",
+      "relation": "calls",
+      "tail": "mcp_task_get",
+      "schema": [
+        "CONCEPT",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent",
+      "relation": "calls",
+      "tail": "mcp_task_create",
+      "schema": [
+        "CONCEPT",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent",
+      "relation": "calls",
+      "tail": "mcp_task_start",
+      "schema": [
+        "CONCEPT",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Agent",
+      "relation": "calls",
+      "tail": "mcp_task_complete",
+      "schema": [
+        "CONCEPT",
+        "calls",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 服务器",
+      "relation": "operates",
+      "tail": "本地数据库",
+      "schema": [
+        "SYSTEM",
+        "operates",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "handler.rs",
+      "relation": "parses",
+      "tail": "工具调用",
+      "schema": [
+        "SYSTEM",
+        "parses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "handler.rs",
+      "relation": "calls",
+      "tail": "db/lib.rs",
+      "schema": [
+        "SYSTEM",
+        "calls",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "db/lib.rs",
+      "relation": "provides",
+      "tail": "CRUD 方法",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "MCP 服务器",
+      "relation": "returns",
+      "tail": "结果",
+      "schema": [
+        "SYSTEM",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "结果",
+      "relation": "sent_to",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "sent_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e95853"
+    },
+    {
+      "head": "Git Worktree + 看板联动",
+      "relation": "related_to",
+      "tail": "看板状态",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Issue",
+      "relation": "related_to",
+      "tail": "工作树",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "工作树",
+      "relation": "based_on",
+      "tail": "Git Worktree",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Agent",
+      "relation": "works_in",
+      "tail": "工作树",
+      "schema": [
+        "CONCEPT",
+        "works_in",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "InProgress",
+      "relation": "triggers",
+      "tail": "工作树创建",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Done",
+      "relation": "triggers",
+      "tail": "Agent push",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Agent push",
+      "relation": "triggers",
+      "tail": "PR创建",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Cancelled",
+      "relation": "triggers",
+      "tail": "工作树清理",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Backlog",
+      "relation": "related_to",
+      "tail": "无工作树",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Todo",
+      "relation": "related_to",
+      "tail": "无工作树",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "InProgress",
+      "relation": "related_to",
+      "tail": "工作树创建",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "InReview",
+      "relation": "related_to",
+      "tail": "Agent push",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "InReview",
+      "relation": "related_to",
+      "tail": "PR创建",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Done",
+      "relation": "related_to",
+      "tail": "工作树清理",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Done",
+      "relation": "related_to",
+      "tail": "PR合并",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Cancelled",
+      "relation": "related_to",
+      "tail": "工作树清理",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "ClaudeCode",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "Codex",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "CursorAgent",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "QwenCode",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "Copilot",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "OpenCode",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "Gemini",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "执行器体系",
+      "relation": "includes",
+      "tail": "Amp",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "BaseAgentCapability",
+      "relation": "includes",
+      "tail": "SessionFork",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "BaseAgentCapability",
+      "relation": "includes",
+      "tail": "SetupHelper",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "BaseAgentCapability",
+      "relation": "includes",
+      "tail": "ContextUsage",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Multica Issue Board",
+      "relation": "provides",
+      "tail": "Polymorphic Actor",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Multica Issue Board",
+      "relation": "provides",
+      "tail": "Squad分配能力",
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Multica Issue Board",
+      "relation": "compatible_with",
+      "tail": "vibe-kanban",
+      "schema": [
+        "SYSTEM",
+        "compatible_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_attribute",
+      "tail": "assignee_type",
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_attribute",
+      "tail": "assignee_id",
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_attribute",
+      "tail": "creator_type",
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_attribute",
+      "tail": "creator_id",
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "assignee_type",
+      "relation": "can_be",
+      "tail": "member",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "assignee_type",
+      "relation": "can_be",
+      "tail": "agent",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "assignee_type",
+      "relation": "can_be",
+      "tail": "squad",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-14cea4"
+    },
+    {
+      "head": "AgentHub Kanban 体系",
+      "relation": "adopts",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "AgentHub Kanban 体系",
+      "relation": "adopts",
+      "tail": "Multica Actor 模型",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "AgentHub Kanban 体系",
+      "relation": "adopts",
+      "tail": "AgentHub Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "核心数据模型",
+      "relation": "based_on",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "核心数据模型",
+      "relation": "includes",
+      "tail": "Issue",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "核心数据模型",
+      "relation": "includes",
+      "tail": "Project",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "核心数据模型",
+      "relation": "includes",
+      "tail": "Status 流转",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "核心数据模型",
+      "relation": "includes",
+      "tail": "Fractional Indexing",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Polymorphic Actor",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "MCP 看板操作",
+      "relation": "based_on",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Agent",
+      "relation": "uses",
+      "tail": "MCP 看板操作",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Worktree 联动",
+      "relation": "based_on",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue InProgress",
+      "relation": "triggers",
+      "tail": "创建 worktree",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue InReview",
+      "relation": "triggers",
+      "tail": "Agent push",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue InReview",
+      "relation": "triggers",
+      "tail": "创建 PR",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "父子层级",
+      "relation": "based_on",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "父子层级",
+      "relation": "based_on",
+      "tail": "AgentHub Handoff DAG",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "parent_issue",
+      "relation": "related_to",
+      "tail": "Handoff DELEGATE",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "乐观更新 + Client ID",
+      "relation": "based_on",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "看板与 Handoff DAG 的联动",
+      "relation": "related_to",
+      "tail": "AgentHub Handoff DAG",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Goal",
+      "relation": "triggers",
+      "tail": "Coordinator Agent Handoff DAG",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Coordinator Agent Handoff DAG",
+      "relation": "creates",
+      "tail": "Issue#1",
+      "schema": [
+        "CONCEPT",
+        "creates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Handoff DELEGATE(A,B)",
+      "relation": "triggers",
+      "tail": "Issue#1 → InProgress",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue#1 → InProgress",
+      "relation": "triggers",
+      "tail": "Worktree 创建",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Agent",
+      "relation": "executes",
+      "tail": "Worktree 创建",
+      "schema": [
+        "CONCEPT",
+        "executes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Agent 完成",
+      "relation": "triggers",
+      "tail": "Issue#1 → InReview",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue#1 → InReview",
+      "relation": "triggers",
+      "tail": "PR 创建",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "审查通过",
+      "relation": "triggers",
+      "tail": "Issue#1 → Done",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue#1 → Done",
+      "relation": "triggers",
+      "tail": "Worktree 清理",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Issue#1 → Done",
+      "relation": "triggers",
+      "tail": "PR 合并",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "看板状态机 + Daemon 协同",
+      "relation": "defines",
+      "tail": "状态变化",
+      "schema": [
+        "CONCEPT",
+        "defines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "状态变化",
+      "relation": "triggers",
+      "tail": "Daemon 动作",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "状态变化",
+      "relation": "triggers",
+      "tail": "Agent 动作",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "InProgress",
+      "relation": "triggers",
+      "tail": "创建 worktree",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "InProgress",
+      "relation": "triggers",
+      "tail": "spawn agent CLI",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "InProgress",
+      "relation": "triggers",
+      "tail": "mcp_task_start",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "InReview",
+      "relation": "triggers",
+      "tail": "保留 worktree",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "InReview",
+      "relation": "triggers",
+      "tail": "git push",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "InReview",
+      "relation": "triggers",
+      "tail": "gh pr create",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Done",
+      "relation": "triggers",
+      "tail": "清理 worktree",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "Cancelled",
+      "relation": "triggers",
+      "tail": "清理 worktree",
+      "schema": [
+        "CONCEPT",
+        "triggers",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-3b51f0"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Rust",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Vibe-Kanban Data Model",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Polymorphic Actor",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Fractional Indexing",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Recursive Parent-Child Hierarchy",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Client-generated UUID",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Vibe-Kanban MCP",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Blocked Status",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Worktree Auto-creation/Cleanup",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multica Polymorphic Assignment",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "AgentHub Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multica Daemon",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "Rust",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "Vibe-Kanban",
+      "relation": "uses",
+      "tail": "MCP Protocol",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "Daemon",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Vibe-Kanban",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-e74708"
+    }
+  ],
+  "stats": {
+    "total_chunks": 7,
+    "total_triples": 206,
+    "unique_schemas": 47,
+    "schema_distribution": {
+      "('SYSTEM', 'recommended_by', 'CONCEPT')": 2,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'uses', 'STANDARD')": 4,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 17,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 3,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 19,
+      "('SYSTEM', 'implements', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 7,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'implements', 'STANDARD')": 1,
+      "('CONCEPT', 'uses', 'STANDARD')": 1,
+      "('SYSTEM', 'supports', 'PRODUCT')": 4,
+      "('CONCEPT', 'uses', 'CONCEPT')": 3,
+      "('CONCEPT', 'has', 'CONCEPT')": 10,
+      "('CONCEPT', 'has_field', 'CONCEPT')": 11,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('CONCEPT', 'supports', 'CONCEPT')": 2,
+      "('CONCEPT', 'allows', 'CONCEPT')": 1,
+      "('SYSTEM', 'is_designated_as', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'PROTOCOL')": 1,
+      "('CONCEPT', 'operates', 'SYSTEM')": 1,
+      "('SYSTEM', 'provides', 'TECHNOLOGY')": 15,
+      "('SYSTEM', 'injects', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 10,
+      "('CONCEPT', 'calls', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'operates', 'SYSTEM')": 1,
+      "('SYSTEM', 'parses', 'CONCEPT')": 1,
+      "('SYSTEM', 'calls', 'SYSTEM')": 1,
+      "('SYSTEM', 'provides', 'CONCEPT')": 3,
+      "('SYSTEM', 'returns', 'CONCEPT')": 1,
+      "('CONCEPT', 'sent_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 11,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 7,
+      "('CONCEPT', 'works_in', 'CONCEPT')": 1,
+      "('CONCEPT', 'triggers', 'CONCEPT')": 25,
+      "('CONCEPT', 'includes', 'TECHNOLOGY')": 8,
+      "('SYSTEM', 'compatible_with', 'SYSTEM')": 1,
+      "('CONCEPT', 'has_attribute', 'CONCEPT')": 4,
+      "('CONCEPT', 'can_be', 'CONCEPT')": 3,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 1,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 1,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'creates', 'CONCEPT')": 1,
+      "('CONCEPT', 'executes', 'CONCEPT')": 1,
+      "('CONCEPT', 'defines', 'CONCEPT')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 2
+    },
+    "schema_layer_size": 47,
+    "fact_layer_size": 204,
+    "passage_layer_size": 7
+  }
+}

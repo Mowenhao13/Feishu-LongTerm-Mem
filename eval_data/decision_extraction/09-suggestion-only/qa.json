@@ -1,0 +1,154 @@
+{
+  "qars": [
+    {
+      "id": "de_09_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_010_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_011_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_012_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_013_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_09_014_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是建议未落地"
+      },
+      "dimension": "detection"
+    }
+  ]
+}

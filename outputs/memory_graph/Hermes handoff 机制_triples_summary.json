@@ -1,0 +1,619 @@
+{
+  "triples": [
+    {
+      "head": "Hermes handoff 机制",
+      "relation": "related_to",
+      "tail": "Hermes",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-50d107"
+    },
+    {
+      "head": "Handoff",
+      "relation": "part_of",
+      "tail": "Kanban系统",
+      "schema": [
+        "CONCEPT",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "Handoff",
+      "relation": "used_by",
+      "tail": "worker",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "Handoff",
+      "relation": "transfers_to",
+      "tail": "下游worker",
+      "schema": [
+        "CONCEPT",
+        "transfers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "Handoff",
+      "relation": "transfers_to",
+      "tail": "人类",
+      "schema": [
+        "CONCEPT",
+        "transfers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "Handoff",
+      "relation": "implemented_by",
+      "tail": "kanban_complete",
+      "schema": [
+        "CONCEPT",
+        "implemented_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "kanban_complete",
+      "relation": "has_parameter",
+      "tail": "summary",
+      "schema": [
+        "TECHNOLOGY",
+        "has_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "kanban_complete",
+      "relation": "has_parameter",
+      "tail": "metadata",
+      "schema": [
+        "TECHNOLOGY",
+        "has_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-de432b"
+    },
+    {
+      "head": "Hermes handoff 机制",
+      "relation": "related_to",
+      "tail": "Summary",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "Hermes handoff 机制",
+      "relation": "related_to",
+      "tail": "Metadata",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "Metadata",
+      "relation": "contains",
+      "tail": "changed_files",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "Metadata",
+      "relation": "contains",
+      "tail": "tests_run",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "Metadata",
+      "relation": "contains",
+      "tail": "decisions",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "Metadata",
+      "relation": "contains",
+      "tail": "findings",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "Metadata",
+      "relation": "contains",
+      "tail": "verification",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-e88b25"
+    },
+    {
+      "head": "downstream_worker",
+      "relation": "uses",
+      "tail": "kanban_show",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "kanban_show",
+      "relation": "reads",
+      "tail": "handoff_information",
+      "schema": [
+        "TECHNOLOGY",
+        "reads",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "handoff_information",
+      "relation": "contains",
+      "tail": "prior_attempts",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "handoff_information",
+      "relation": "contains",
+      "tail": "parent_task_results",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "prior_attempts",
+      "relation": "contains",
+      "tail": "outcome",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "prior_attempts",
+      "relation": "contains",
+      "tail": "summary",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "prior_attempts",
+      "relation": "contains",
+      "tail": "error",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "prior_attempts",
+      "relation": "contains",
+      "tail": "metadata",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "parent_task_results",
+      "relation": "contains",
+      "tail": "summary",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "parent_task_results",
+      "relation": "contains",
+      "tail": "metadata",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "prior_attempts",
+      "relation": "related_to",
+      "tail": "avoid_repeated_failure_paths",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "parent_task_results",
+      "relation": "related_to",
+      "tail": "understand_upstream_work_completion",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-d6adc0"
+    },
+    {
+      "head": "rate_limiter",
+      "relation": "adopts",
+      "tail": "token_bucket",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "rate_limiter",
+      "relation": "uses",
+      "tail": "user_id",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "rate_limiter",
+      "relation": "uses",
+      "tail": "IP_fallback",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "vLLM",
+      "relation": "compared_with",
+      "tail": "SGLang",
+      "schema": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "vLLM",
+      "relation": "compared_with",
+      "tail": "Tensorrt-LLM",
+      "schema": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "SGLang",
+      "relation": "compared_with",
+      "tail": "Tensorrt-LLM",
+      "schema": [
+        "TECHNOLOGY",
+        "compared_with",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "vLLM",
+      "relation": "adopts",
+      "tail": "throughput_optimization",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "SGLang",
+      "relation": "adopts",
+      "tail": "latency_optimization",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "Tensorrt-LLM",
+      "relation": "adopts",
+      "tail": "memory_efficiency",
+      "schema": [
+        "TECHNOLOGY",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "review_required_mode",
+      "relation": "uses",
+      "tail": "kanban_block",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "review_required_mode",
+      "relation": "uses",
+      "tail": "kanban_comment",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-d1d726"
+    },
+    {
+      "head": "handoff_data",
+      "relation": "stored_in",
+      "tail": "task_runs_table",
+      "schema": [
+        "CONCEPT",
+        "stored_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-be4c52"
+    },
+    {
+      "head": "task_runs_table",
+      "relation": "stores",
+      "tail": "task_attempt_history",
+      "schema": [
+        "SYSTEM",
+        "stores",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-be4c52"
+    },
+    {
+      "head": "task_attempt_history",
+      "relation": "enables",
+      "tail": "postmortem_analysis",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-be4c52"
+    },
+    {
+      "head": "gateway notifier",
+      "relation": "sends",
+      "tail": "notification",
+      "schema": [
+        "SYSTEM",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-199137"
+    },
+    {
+      "head": "notification",
+      "relation": "contains",
+      "tail": "summary",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-199137"
+    },
+    {
+      "head": "notification",
+      "relation": "sent_to",
+      "tail": "chat",
+      "schema": [
+        "CONCEPT",
+        "sent_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-199137"
+    },
+    {
+      "head": "Handoff",
+      "relation": "related_to",
+      "tail": "Kanban",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "Handoff",
+      "relation": "related_to",
+      "tail": "TODO系统",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "Handoff",
+      "relation": "uses",
+      "tail": "metadata",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "metadata",
+      "relation": "contains",
+      "tail": "changed_files",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "metadata",
+      "relation": "contains",
+      "tail": "verification",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "metadata",
+      "relation": "contains",
+      "tail": "dependencies",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "metadata",
+      "relation": "contains",
+      "tail": "blocked_reason",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "metadata",
+      "relation": "contains",
+      "tail": "retry_notes",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    },
+    {
+      "head": "metadata",
+      "relation": "contains",
+      "tail": "residual_risk",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-d9cd90"
+    }
+  ],
+  "stats": {
+    "total_chunks": 8,
+    "total_triples": 53,
+    "unique_schemas": 22,
+    "schema_distribution": {
+      "('CONCEPT', 'related_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'part_of', 'SYSTEM')": 1,
+      "('CONCEPT', 'used_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'transfers_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'implemented_by', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'has_parameter', 'CONCEPT')": 2,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'contains', 'CONCEPT')": 20,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'reads', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 4,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'compared_with', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'adopts', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'stored_in', 'SYSTEM')": 1,
+      "('SYSTEM', 'stores', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('SYSTEM', 'sends', 'CONCEPT')": 1,
+      "('CONCEPT', 'sent_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 22,
+    "fact_layer_size": 53,
+    "passage_layer_size": 8
+  }
+}

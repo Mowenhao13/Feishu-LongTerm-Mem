@@ -1,0 +1,2540 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "SYSTEM",
+        "owns",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "SYSTEM",
+        "owns",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "TECHNOLOGY",
+        "shared_across",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        3,
+        10,
+        11,
+        18,
+        19
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        6
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        7
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "SYSTEM",
+        "created_by",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        8
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "TECHNOLOGY",
+        "modifies",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        9
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "frequency": 6,
+      "fact_indices": [
+        12,
+        13,
+        14,
+        15,
+        32,
+        33
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        16
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        17,
+        48,
+        51,
+        54
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        20
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "CONCEPT",
+        "requires",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        21,
+        38
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "TECHNOLOGY",
+        "accesses",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        22,
+        23
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "CONCEPT",
+        "accessed_via",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        24,
+        25
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        26
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        27,
+        53
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        28,
+        60,
+        64
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        29
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "TECHNOLOGY",
+        "has_state_key",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        30,
+        31
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "CONCEPT",
+        "accesses",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        34
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "CONCEPT",
+        "modifies",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        35
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        36
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        37
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "CONCEPT",
+        "added_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        39
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        43,
+        44,
+        45,
+        52
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        46
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "CONCEPT",
+        "manages",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        47
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        49,
+        50
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        55
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "CONCEPT",
+        "is_scoped_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        56
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        57
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "CONCEPT",
+        "can_share",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        58
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "CONCEPT",
+        "avoids",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        59
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        61
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        62
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "CONCEPT",
+        "defined_by",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        63
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        65,
+        66
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "agent",
+        "owns",
+        "provider_instance"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "session",
+        "owns",
+        "state_data"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "provider_instance",
+        "shared_across",
+        "session"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "provider_instance",
+        "uses",
+        "state_parameter"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "state_parameter",
+        "ensures",
+        "session_state_independence"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "context_provider",
+        "provides",
+        "source_id"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "source_id",
+        "used_for",
+        "message_and_tool_attribution"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "session_context",
+        "uses",
+        "dict_source_id_to_chat_messages"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "session_context",
+        "created_by",
+        "agent_run_call"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "provider",
+        "modifies",
+        "session_context"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "provider",
+        "uses",
+        "before_run_method"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "provider",
+        "uses",
+        "after_run_method"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "session_context",
+        "contains",
+        "input_messages"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "session_context",
+        "contains",
+        "context_messages"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "session_context",
+        "contains",
+        "instructions"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "session_context",
+        "contains",
+        "tools"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "input_messages",
+        "is",
+        "read_only"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "framework",
+        "supports",
+        "message_filtering_by_source_id"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "provider",
+        "uses",
+        "context_get_messages_with_sources"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "provider",
+        "uses",
+        "context_get_messages_exclude_sources"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "agent_session",
+        "maintains",
+        "state_dict"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "state_dict",
+        "requires",
+        "json_serializable_values"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "provider",
+        "accesses",
+        "provider_scoped_state"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "provider",
+        "accesses",
+        "cross_provider_state"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "provider_scoped_state",
+        "accessed_via",
+        "state_parameter"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "cross_provider_state",
+        "accessed_via",
+        "session_state"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "jido_framework",
+        "implements",
+        "multi_layer_context_isolation"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "Plugin State Isolation",
+        "uses",
+        "state_key"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "state_key",
+        "provides",
+        "independent_namespace"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "independent_namespace",
+        "prevents",
+        "state_interference"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "ChatPlugin",
+        "has_state_key",
+        ":chat"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "DatabasePlugin",
+        "has_state_key",
+        ":database"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "agent.state",
+        "contains",
+        "chat_namespace"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "agent.state",
+        "contains",
+        "database_namespace"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "plugin",
+        "accesses",
+        "own_namespace"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "plugin",
+        "modifies",
+        "own_namespace"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "Jido 2.0",
+        "adopts",
+        "instance_scoped_architecture"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "Jido 2.0",
+        "rejects",
+        "global_singleton"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "instance_scoped_architecture",
+        "requires",
+        "explicit_jido_instance_module"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "explicit_jido_instance_module",
+        "added_to",
+        "supervision_tree"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "jido_instance",
+        "has",
+        "independent_registry"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "jido_instance",
+        "has",
+        "independent_task_supervisor"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "jido_instance",
+        "has",
+        "independent_agent_supervisor"
+      ],
+      "schema_idx": 27,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "instance_scoped_architecture",
+        "enables",
+        "multiple_isolated_jido_instances"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "instance_scoped_architecture",
+        "enables",
+        "clear_ownership_and_supervision_boundaries"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "instance_scoped_architecture",
+        "enables",
+        "easier_test_isolation"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "Jido.Agent.InstanceManager",
+        "provides",
+        "键控单例注册表"
+      ],
+      "schema_idx": 29,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "键控单例注册表",
+        "manages",
+        "agent实例"
+      ],
+      "schema_idx": 30,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "Jido.Agent.InstanceManager",
+        "supports",
+        "自动生命周期"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "自动生命周期",
+        "includes",
+        "空闲超时"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "自动生命周期",
+        "includes",
+        "附件跟踪"
+      ],
+      "schema_idx": 31,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "Jido.Agent.InstanceManager",
+        "supports",
+        "可选存储"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "可选存储",
+        "enables",
+        "休眠/恢复"
+      ],
+      "schema_idx": 28,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "休眠/恢复",
+        "uses",
+        "可插拔存储后端"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "Jido.Agent.InstanceManager",
+        "supports",
+        "多个注册表"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "多个注册表",
+        "allows",
+        "不同agent类型使用不同配置"
+      ],
+      "schema_idx": 32,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "持久化键",
+        "is_scoped_to",
+        "管理器作用域"
+      ],
+      "schema_idx": 33,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "管理器作用域",
+        "consists_of",
+        "{manager_name, pool_key}"
+      ],
+      "schema_idx": 34,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "多个管理器",
+        "can_share",
+        "同一个存储后端"
+      ],
+      "schema_idx": 35,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "同一个存储后端",
+        "avoids",
+        "检查点冲突"
+      ],
+      "schema_idx": 36,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "Signal Context",
+        "provides",
+        "context_isolation"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "Signal Context",
+        "contains",
+        "plugin_instance"
+      ],
+      "schema_idx": 37,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "handle_signal/2",
+        "receives",
+        "Signal Context"
+      ],
+      "schema_idx": 38,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "handle_signal/2",
+        "defined_by",
+        "Jido.Plugin"
+      ],
+      "schema_idx": 39,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "plugin_instance",
+        "provides",
+        "instance_level_context_isolation"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 65,
+      "content": [
+        "plugin_instance",
+        "has_attribute",
+        "module"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        5
+      ]
+    },
+    {
+      "idx": 66,
+      "content": [
+        "plugin_instance",
+        "has_attribute",
+        "state_key"
+      ],
+      "schema_idx": 40,
+      "passage_indices": [
+        5
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-3d53a171827cf599",
+      "content": "# context隔离机制",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "fact_indices": []
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "content": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "fact_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "content": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "fact_indices": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "content": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "fact_indices": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "content": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "fact_indices": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "idx": 5,
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "content": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "fact_indices": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "agent",
+        "owns",
+        "provider_instance"
+      ],
+      "schema": [
+        "SYSTEM",
+        "owns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session",
+        "owns",
+        "state_data"
+      ],
+      "schema": [
+        "SYSTEM",
+        "owns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider_instance",
+        "shared_across",
+        "session"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "shared_across",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider_instance",
+        "uses",
+        "state_parameter"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "state_parameter",
+        "ensures",
+        "session_state_independence"
+      ],
+      "schema": [
+        "CONCEPT",
+        "ensures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "context_provider",
+        "provides",
+        "source_id"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "source_id",
+        "used_for",
+        "message_and_tool_attribution"
+      ],
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session_context",
+        "uses",
+        "dict_source_id_to_chat_messages"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session_context",
+        "created_by",
+        "agent_run_call"
+      ],
+      "schema": [
+        "SYSTEM",
+        "created_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "modifies",
+        "session_context"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "modifies",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "uses",
+        "before_run_method"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "uses",
+        "after_run_method"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session_context",
+        "contains",
+        "input_messages"
+      ],
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session_context",
+        "contains",
+        "context_messages"
+      ],
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session_context",
+        "contains",
+        "instructions"
+      ],
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "session_context",
+        "contains",
+        "tools"
+      ],
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "input_messages",
+        "is",
+        "read_only"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "framework",
+        "supports",
+        "message_filtering_by_source_id"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "uses",
+        "context_get_messages_with_sources"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "uses",
+        "context_get_messages_exclude_sources"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "agent_session",
+        "maintains",
+        "state_dict"
+      ],
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "state_dict",
+        "requires",
+        "json_serializable_values"
+      ],
+      "schema": [
+        "CONCEPT",
+        "requires",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "accesses",
+        "provider_scoped_state"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "accesses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider",
+        "accesses",
+        "cross_provider_state"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "accesses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "provider_scoped_state",
+        "accessed_via",
+        "state_parameter"
+      ],
+      "schema": [
+        "CONCEPT",
+        "accessed_via",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "cross_provider_state",
+        "accessed_via",
+        "session_state"
+      ],
+      "schema": [
+        "CONCEPT",
+        "accessed_via",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "jido_framework",
+        "implements",
+        "multi_layer_context_isolation"
+      ],
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "passage": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Plugin State Isolation",
+        "uses",
+        "state_key"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "state_key",
+        "provides",
+        "independent_namespace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "independent_namespace",
+        "prevents",
+        "state_interference"
+      ],
+      "schema": [
+        "CONCEPT",
+        "prevents",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "ChatPlugin",
+        "has_state_key",
+        ":chat"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "has_state_key",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "DatabasePlugin",
+        "has_state_key",
+        ":database"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "has_state_key",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "agent.state",
+        "contains",
+        "chat_namespace"
+      ],
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "agent.state",
+        "contains",
+        "database_namespace"
+      ],
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "plugin",
+        "accesses",
+        "own_namespace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "accesses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "plugin",
+        "modifies",
+        "own_namespace"
+      ],
+      "schema": [
+        "CONCEPT",
+        "modifies",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "passage": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Jido 2.0",
+        "adopts",
+        "instance_scoped_architecture"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Jido 2.0",
+        "rejects",
+        "global_singleton"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "instance_scoped_architecture",
+        "requires",
+        "explicit_jido_instance_module"
+      ],
+      "schema": [
+        "CONCEPT",
+        "requires",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "explicit_jido_instance_module",
+        "added_to",
+        "supervision_tree"
+      ],
+      "schema": [
+        "CONCEPT",
+        "added_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "jido_instance",
+        "has",
+        "independent_registry"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "jido_instance",
+        "has",
+        "independent_task_supervisor"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "jido_instance",
+        "has",
+        "independent_agent_supervisor"
+      ],
+      "schema": [
+        "SYSTEM",
+        "has",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "instance_scoped_architecture",
+        "enables",
+        "multiple_isolated_jido_instances"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "instance_scoped_architecture",
+        "enables",
+        "clear_ownership_and_supervision_boundaries"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "instance_scoped_architecture",
+        "enables",
+        "easier_test_isolation"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "passage": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Jido.Agent.InstanceManager",
+        "provides",
+        "键控单例注册表"
+      ],
+      "schema": [
+        "SYSTEM",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "键控单例注册表",
+        "manages",
+        "agent实例"
+      ],
+      "schema": [
+        "CONCEPT",
+        "manages",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Jido.Agent.InstanceManager",
+        "supports",
+        "自动生命周期"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "自动生命周期",
+        "includes",
+        "空闲超时"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "自动生命周期",
+        "includes",
+        "附件跟踪"
+      ],
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Jido.Agent.InstanceManager",
+        "supports",
+        "可选存储"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "可选存储",
+        "enables",
+        "休眠/恢复"
+      ],
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "休眠/恢复",
+        "uses",
+        "可插拔存储后端"
+      ],
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Jido.Agent.InstanceManager",
+        "supports",
+        "多个注册表"
+      ],
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "多个注册表",
+        "allows",
+        "不同agent类型使用不同配置"
+      ],
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "持久化键",
+        "is_scoped_to",
+        "管理器作用域"
+      ],
+      "schema": [
+        "CONCEPT",
+        "is_scoped_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "管理器作用域",
+        "consists_of",
+        "{manager_name, pool_key}"
+      ],
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "多个管理器",
+        "can_share",
+        "同一个存储后端"
+      ],
+      "schema": [
+        "CONCEPT",
+        "can_share",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "同一个存储后端",
+        "avoids",
+        "检查点冲突"
+      ],
+      "schema": [
+        "CONCEPT",
+        "avoids",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "passage": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Signal Context",
+        "provides",
+        "context_isolation"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "Signal Context",
+        "contains",
+        "plugin_instance"
+      ],
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "handle_signal/2",
+        "receives",
+        "Signal Context"
+      ],
+      "schema": [
+        "CONCEPT",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "handle_signal/2",
+        "defined_by",
+        "Jido.Plugin"
+      ],
+      "schema": [
+        "CONCEPT",
+        "defined_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "plugin_instance",
+        "provides",
+        "instance_level_context_isolation"
+      ],
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "plugin_instance",
+        "has_attribute",
+        "module"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    },
+    {
+      "triple": [
+        "plugin_instance",
+        "has_attribute",
+        "state_key"
+      ],
+      "schema": [
+        "CONCEPT",
+        "has_attribute",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "passage": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-3d53a171827cf599",
+      "chunk_text": "# context隔离机制",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-7fa182a262b7b22e",
+      "chunk_text": "## 核心隔离机制\n\n\n\n### 1. Agent vs Session 所有权模型\n\n\n\nAgent拥有provider实例，所有session共享这些实例；Session拥有状态数据，每个session的状态完全隔离 [1](#0-0) 。Provider实例在session间共享，但通过state参数传递provider-scoped的mutable state dict，确保每个session的状态独立 [2](#0-1) 。\n\n\n\n### 2. source_id 归属机制\n\n\n\n每个ContextProvider必须提供唯一的source\\_id，用于消息和工具的归属标记 [3](#0-2) 。SessionContext\\.context\\_messages使用dict\\[str, list\\[ChatMessage\\]\\]结构，以source\\_id为键存储各provider添加的消息 [4](#0-3) 。\n\n\n\n### 3. SessionContext 隔离\n\n\n\n每次agent\\.run\\(\\)调用都会创建新的SessionContext实例，provider通过before\\_run和after\\_run方法修改这个context对象 [5](#0-4) 。context包含：\n\n\n\n- input\\_messages: 只读的输入消息\n\n- context\\_messages: 按source_id键入的消息字典\n\n- instructions和tools: provider可追加的列表\n\n### 4. 消息过滤能力\n\n\n\n框架支持按source_id过滤消息，provider可以：\n\n\n\n- 使用context\\.get\\_messages\\(sources=\\[\\.\\.\\.\\]\\)获取特定来源的消息\n\n- 使用context\\.get\\_messages\\(exclude\\_sources=\\[\\.\\.\\.\\]\\)排除特定来源的消息 [6](#0-5)\n\n### 5. 状态管理隔离\n\n\n\n每个AgentSession维护一个state: dict\\[str, Any\\]，provider写入的值必须是JSON可序列化的 [7](#0-6) 。Provider通过state参数访问provider-scoped状态，通过session\\.state访问跨provider状态 [8](#0-7) 。\n\n\n\nJido框架在多agent协作中实现了多层context隔离机制，主要包括以下几个方面：",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-236cbebe9fac2d6e",
+      "chunk_text": "## Plugin State Isolation（插件状态隔离）\n\n\n\n每个插件通过state_key选项在agent的状态中获得独立的命名空间，防止插件之间互相干扰状态 1 。\n\n\n\n```\n# ChatPlugin with state_key: :chat\nagent.state = %{\n  chat: %{messages: [], model: \"gpt-4\"},  # ChatPlugin state\n  database: %{pool_size: 5}               # DatabasePlugin state\n}\n\n```\n\n\n\n这种设计确保了插件只能访问和修改自己命名空间下的状态 2 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-23429a51b1f4662d",
+      "chunk_text": "## Instance-Scoped Architecture（实例作用域架构）\n\n\n\nJido 2.0引入了实例作用域架构，不再使用全局单例，而是要求用户显式定义Jido实例模块并添加到监督树中 3 。\n\n\n\n```\ndefmodule MyApp.Jido do\n  use Jido, otp_app: :my_app\nend\n\nchildren = [\n  MyApp.Jido\n]\n\n```\n\n\n\n每个Jido实例拥有独立的Registry、TaskSupervisor和AgentSupervisor，实现了：\n\n- 多个隔离的Jido实例可以在同一应用中运行\n\n- 清晰的所有权和监督边界\n\n- 更容易的测试隔离 4 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-d78f1a07490e1ded",
+      "chunk_text": "## InstanceManager（实例管理器）\n\n\n\nJido.Agent.InstanceManager提供键控单例注册表，用于管理每个逻辑上下文（用户会话、游戏房间、连接、对话）的一个agent实例 5 。\n\n\n\n关键特性：\n\n- 键控单例：每个键对应一个agent实例，按需查找或启动\n\n- 自动生命周期：空闲超时和附件跟踪\n\n- 可选存储：支持可插拔存储后端的休眠/恢复\n\n- 多个注册表：不同的agent类型可以使用不同的配置 6 。\n\n持久化键是管理器作用域的（{manager_name, pool_key}），因此多个管理器可以安全地共享同一个存储后端而不会发生检查点冲突 7 。",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "chunk_index": 4
+    },
+    {
+      "chunk_id": "chunk-005-50f68640dd1124bf",
+      "chunk_text": "## Signal Context（信号上下文）\n\n\n\n在信号处理过程中，插件的handle_signal/2回调接收一个context参数，包含:plugin_instance等信息，提供了插件实例级别的上下文隔离 8 。\n\n\n\n```\n@impl Jido.Plugin\ndef handle_signal(signal, context) do\n  if signal.type == \"check.context\" do\n    has_instance = Map.has_key?(context, :plugin_instance)\n    # 可以访问 context.plugin_instance.module 和 context.plugin_instance.state_key\n  end\nend\n\n```",
+      "doc_path": "test_files/docs/references/context隔离机制.md",
+      "chunk_index": 5
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 67,
+    "unique_schemas": 41,
+    "schema_distribution": {
+      "('SYSTEM', 'owns', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'owns', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'shared_across', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 5,
+      "('CONCEPT', 'ensures', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 1,
+      "('SYSTEM', 'created_by', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'modifies', 'SYSTEM')": 1,
+      "('SYSTEM', 'contains', 'CONCEPT')": 6,
+      "('CONCEPT', 'is', 'CONCEPT')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 4,
+      "('SYSTEM', 'maintains', 'CONCEPT')": 1,
+      "('CONCEPT', 'requires', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'accesses', 'CONCEPT')": 2,
+      "('CONCEPT', 'accessed_via', 'CONCEPT')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'provides', 'CONCEPT')": 3,
+      "('CONCEPT', 'prevents', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'has_state_key', 'CONCEPT')": 2,
+      "('CONCEPT', 'accesses', 'CONCEPT')": 1,
+      "('CONCEPT', 'modifies', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('CONCEPT', 'added_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'has', 'SYSTEM')": 3,
+      "('CONCEPT', 'enables', 'CONCEPT')": 4,
+      "('SYSTEM', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'manages', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 2,
+      "('CONCEPT', 'allows', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_scoped_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'consists_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'can_share', 'CONCEPT')": 1,
+      "('CONCEPT', 'avoids', 'CONCEPT')": 1,
+      "('CONCEPT', 'contains', 'CONCEPT')": 1,
+      "('CONCEPT', 'receives', 'CONCEPT')": 1,
+      "('CONCEPT', 'defined_by', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'has_attribute', 'CONCEPT')": 2
+    },
+    "schema_layer_size": 41,
+    "fact_layer_size": 67,
+    "passage_layer_size": 6
+  }
+}

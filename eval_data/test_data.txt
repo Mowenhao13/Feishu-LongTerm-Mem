@@ -1,0 +1,250 @@
+数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+容器化肯定要上K8s，生产环境都这么用了
+话说回来，数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS，而且还有timescaledb这样的扩展可以做时序数据，对于混合负载的场景非常合适
+消息队列
+容器化方案就用K8s吧，生态最成熟
+数据库选型还是要看团队能力，PG学习成本高一些，不过长期来看值得投资
+前端可以考虑用React
+容器的监控用Prometheus+Grafana吧
+对了，消息队列选了Kafka，配合流处理引擎很强大，而且Kafka的生态非常完善，从连接器到流处理一应俱全
+数据库还是决定用PG，RDS托管省心省力，阿里云RDS for PG的性价比还不错，自动备份和监控都自带
+前端Sentry做错误监控
+另外还有一个事，前端性能优化可以用SSR和服务端组件，Next.js在这方面做得比较好，首屏加载速度能提升不少
+数据库连接池用PgBouncer
+容器的监控有了，但是业务监控呢？业务指标怎么采集上报
+容器资源限制用resource quota和limit range，这两个配合使用可以很好地控制命名空间级别的资源分配，防止某个团队过度占用集群资源
+前端CDN缓存策略也得考虑
+数据库迁移工具用golang-migrate
+换个话题，容器网络插件用Calico，支持网络策略，而且性能比Flannel好，还支持NetworkPolicy
+前端打包工具换成Vite
+数据库备份用pg_dump加上WAL归档，可以实现任意时间点的恢复，RPO可以控制在几分钟以内
+业务监控可以通过OpenTelemetry采集，然后上报到自建的后端，最后用Grafana展示
+容器安全要用Pod Security Standards，这个在K8s 1.25之后已经是默认行为
+回到前端话题，状态管理用Zustand，轻量好用，API设计比Redux简洁得多，和React hooks配合也很好
+数据库读写分离用主从复制
+监控告警这块，告警规则要怎么设计，阈值设多少才合理
+容器日志收集用Loki
+前端监控加上Web Vitals
+数据库用PG
+说了这么多，数据库连接用SSL加密
+告警规则可以按严重级别分，P0立即通知，P1 5分钟内通知，P2走日报
+容器镜像仓库用Harbor
+前端构建产物放OSS
+好像还有个数据库死锁检测的问题
+容器滚动更新
+前端灰度发布
+数据库冷热数据
+容器sidecar模式
+前端Ant Design
+数据库用PG就定了吧
+消息队列还是用Kafka
+对了，容器化用K8s集群，先搭测试环境
+如果要把所有服务的日志统一管理，除了Loki之外还要配合什么
+前端性能基线要建立
+另外消息队列可以引入Schema Registry来管理数据格式，这样生产和消费者之间就不用担心数据格式不一致的问题了，而且Schema的兼容性检查可以在上线前就发现问题
+容器使用PV/PVC做持久化存储
+前端用Next.js做SSR
+日志统一管理可以用Loki + Promtail + Grafana三件套，再加个Minio做日志存储
+说回消息队列，Kafka的Partition策略会影响顺序消费，同一个key的消息要保证发送到同一个partition，这样才能保证局部有序
+容器结合Istio做灰度发布，这样可以在不修改应用代码的情况下实现流量管理，而且Istio的mTLS加密通信也很方便
+前端微前端方案
+消息队列设置消息保留策略
+容器资源预留
+前端Bundle分析
+消息队列Topic设计
+话说，容器利用Operator模式自动化运维
+前端主题定制
+消息队列配置死信队列
+容器Node节点的污点和容忍度配置很关键，特别是对于混合负载的集群，需要把不同的工作负载调度到合适的节点上
+前端WebWorker处理大数据渲染
+服务可用性监控除了黑盒探测还要做白盒监控，黑盒就是从外部探测端口和接口，白盒是采集内部指标
+对了，消息队列Kafka和现有系统的集成方案需要考虑，现有系统用的是RabbitMQ，需要做一个消息桥接层来做平滑迁移，不能直接一刀切
+容器认证和RBAC权限管理
+前端无障碍支持
+消息队列还是Kafka好
+容器选K8s就对了
+前端React+TypeScript
+消息队列Topic命名规范
+容器先搭1主2从
+前端React Router v6
+Kafka的监控用Burrow
+容器日志采集用Fluentd
+前端组件测试用Vitest
+消息队列幂等处理
+容器GitOps
+前端Sentry分组
+消息队列Rebalance
+容器Kustomize
+前端React Query
+消息队列消息体大小限制
+容器CICD用GitHub Actions
+前端i18n
+消息队列Schema兼容性
+容器HPA+VPA
+首屏加载控制在2秒内
+Kafka高可用
+300个Pod规模
+前端骨架屏
+数据库迁移工具换成sqitch
+容器网络策略默认拒绝
+前端日志采集
+数据库EXPLAIN ANALYZE
+容器健康检查liveness+readiness
+前端ESLint+Prettier
+数据库连接池动态调整
+容器ConfigMap和Secret
+前端Storybook
+数据库索引整理
+容器Linux capabilities
+前端Renovate
+数据库timescaledb自动分区
+啊对了，之前讨论过容器LimitRange的事情，刚才说到Default资源限制，这个其实应该跟ResourceQuota配合使用，先配LimitRange设置默认值，再用ResourceQuota做总量控制，两层保险
+前端业务组件抽离成独立npm包，这样可以跨项目复用，而且版本管理也更清晰，用Changeset来做自动版本号管理和Changelog生成
+数据库Bytebase SQL审核
+容器Pod Anti-Affinity
+换个话题聊聊，前端浏览器兼容性列表，只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11了
+数据库PG的Vacuum机制
+容器KEDA
+前端Sentry Performance
+数据库用PG，方案都考虑过了，没有什么遗漏的
+容器化用K8s，这就是最终决定
+前端用React+Next.js+Sentry，这套体系已经够了
+数据库连接池PgBouncer事务池模式
+容器Ingress用Nginx Ingress Controller
+APM选型，我们用SkyWalking还是Jaeger，还是自建
+前端react-intl之前说过了
+数据库Citus分布式方案
+话说容器镜像分层优化这块，要减少构建时间，可以把不变的依赖层放在前面，经常变的业务代码放在后面，利用Docker的layer缓存机制
+前端SSR用Next.js，之前评估过没问题
+数据库全量+增量备份
+APM推荐用SkyWalking，因为对Java生态支持最好，而且无侵入，如果业务主要是Java的话
+容器PodDisruptionBudget
+前端静态资源放OSS+CDN
+数据库扩展机制
+容器就K8s了
+前端React全套
+消息队列Kafka
+好了，数据库PG方案定稿
+前端性能汇总出文档
+容器K8s写RFC
+消息队列Kafka方案评审
+数据库方案确认
+前端监控Sentry接入
+容器集群搭建
+消息队列Topic定稿
+数据库PG部署方案
+前端Next.js SSG测试通过
+说起来，容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸缩
+消息队列Kafka消息压缩
+数据库PG高可用用Patroni
+前端路由权限控制
+SLA和SLO怎么定，比如核心链路四个九，非核心三个九
+容器Pod Security落地
+Kafka MirrorMaker跨集群
+数据库PG扩容方案
+前端AB测试用Feature Flag
+容器Gateway API
+Kafka升级方案无损迁移
+数据库查询计划缓存
+SLA按服务重要性分级，核心支付链路99.99%，一般业务99.9%，内部工具99%
+容器Kubebuilder
+前端流式SSR
+消费者组重平衡优化
+数据库校验工具
+容器Velero备份恢复
+前端preload/prefetch
+Kafka kraft模式
+数据库慢查询分析
+容器Service Mesh用Istio
+前端用Playwright替代Cypress
+数据库PG的分区表用法
+容器K8s的namespace规划方案
+说到监控，自定义业务指标怎么采集，是SDK埋点还是日志采集
+监控体系分层：基础设施层用Node Exporter，容器层用cAdvisor，业务层用OpenTelemetry SDK埋点
+容器审计日志怎么处理，K8s的审计日志要保存多久
+前端性能指标LCP控制在2.5秒以内，FID控制在100ms以内
+对了，数据库连接池大小要怎么算，PG的默认连接数100，连接池一般设多少合适
+容器镜像安全扫描用Trivy还是Clair
+前端首屏优化，除了SSR还有哪些手段
+监控数据存储周期，指标数据存30天，日志存90天，链路数据存15天
+数据库连接池大小可以按(核数*2+磁盘数)来估算，但也要看业务类型
+容器Operator用Kubebuilder还是Operator SDK
+前端字体文件优化，woff2格式，字体按需加载
+告警静默时间，晚上非工作时间可以静默P2以下的告警
+PG连接池推荐用PgBonder，事务模式可以复用连接
+容器Pod的requests和limits怎么配，配太小容易OOMKill，配太大资源浪费
+前端图片优化，WebP格式，懒加载，CDN加速
+监控大盘用Grafana，每个业务线有自己的Dashboard
+数据库索引使用应该注意避免过多索引导致写入变慢
+容器的ResourceQuota配合LimitRange一起用，先设置默认LimitRange再设置ResourceQuota
+前端Webpack做分包加载，vendors包单独拆出来
+中间件监控，Redis、Kafka、PG各自有 exporter，集成到Prometheus
+PG的vacuum要定期执行，autovacuum的阈值设置也要看表大小
+容器Pod的topologySpreadConstraints可以实现跨可用区调度
+前端构建产物要做Tree Shaking和Code Splitting
+链路追踪，Trace的采样率设多少合适，全量采集还是采样采集
+数据库慢查询分析用pg_stat_statements加上explain analyze
+容器服务发现用CoreDNS，K8s默认的DNS方案
+前端测试覆盖率达到80%以上，核心组件100%
+Trace采样率建议头部采集全量，尾部采样10%，这样既能保证关键路径的完整性，又能控制存储成本
+PG的主从延迟监控，如果延迟超过阈值要告警
+容器用Velero做备份，包含PV快照
+前端安全管理，XSS、CSRF防护，CSP策略配置
+监控告警通知渠道，P0电话+钉钉，P1钉钉，P2飞书群
+数据库的autovacuum参数调优，尤其是大表的清理策略
+容器网络策略默认拒绝所有入站，只允许必要的端口
+前端CI加Prettier检查和ESLint检查
+关键业务指标要设Dashboard，每天自动发送日报
+PG的复制槽管理，避免WAL堆积导致磁盘满
+容器用Helm管理应用部署，模板化配置
+前端用Husky做git hooks，提交前自动lint
+监控覆盖度检查哪些服务还没接入Prometheus
+数据库字段类型选择bigint还是int取决于预估数据量，大表用bigint
+容器PV回收策略用Retain还是Delete，生产环境建议Retain
+前端Bundle分析用webpack-bundle-analyzer定期检查
+自定义指标采集统一用OpenTelemetry Collector做网关
+PG的分区表用native partitioning，继承分区性能不够好
+容器Pod的优先级类和抢占策略，保证核心业务优先调度
+前端微前端用Module Federation，qiankun太重了
+业务告警阈值先用3-sigma动态基线，等数据积累后再手动调整
+数据库连接池用完时要排队等待还是直接报错，用PgBouncer的话可以设置池大小
+容器用Kyverno做策略管理，比OPA Gatekeeper更易用
+前端用Vitest替代Jest，速度快而且兼容性好
+APM接入后要关注错误率和响应时间P99，如果P99超过500ms需要优化
+数据库表结构变更用sqitch做版本控制，回滚很方便
+容器用Nginx Ingress加modsecurity做WAF防护
+前端msw做接口Mock，开发环境和测试环境统一
+告警抑制规则，比如某个服务挂了导致下游都挂，只发一条根因告警
+PG的并行查询配置，max_parallel_workers_per_gather设多少
+容器Prometheus Operator管理监控，自动发现目标
+前端hydration错误处理，SSR和CSR不一致时的降级策略
+Redis缓存监控，命中率低于80%要报警
+数据库pg_stat_activity定期检查慢查询和锁等待
+容器HPA配置多个指标，CPU超过70%或者内存超过80%都触发扩容
+前端使用Service Worker做离线缓存和PWA支持
+监控系统自身的高可用，Prometheus用Thanos做全局视图和长期存储
+PG的full_page_writes建议开启，虽然影响写入性能但保证崩溃恢复的安全性
+容器Node节点自动扩容用Cluster Autoscaler
+前端错误边界用ErrorBoundary包裹，避免白屏
+日志系统用Loki，配合LogQL做查询分析，比ELK轻量
+数据库逻辑复制，用于实时数据同步到数仓
+容器多集群管理用Rancher还是KubeSphere
+前端微前端落地，Module Federation，共享组件库
+监控覆盖范围需要覆盖所有线上服务，包括内部服务和中间件
+PG的auto_explain模块可以记录慢查询的执行计划
+容器Pod的requests和limits配比建议CPU超卖1:2，内存不超卖
+前端Monorepo用Turborepo还是Nx
+告警疲劳问题，减少不必要的告警，合并同类告警
+数据库连接池监控连接使用率，超过80%告警
+容器使用K8s Events做告警，NodeNotReady和PodCrashLoopBackOff
+前端浏览器兼容性降级方案，polyfill策略
+全链路压测时的监控方案，业务指标和系统指标分开看
+PG的temp_file_limit限制临时文件大小，避免临时文件撑爆磁盘
+容器Pod的preStop hook做优雅退出，给业务留出清理时间
+前端pnpm替代npm，速度快而且节省磁盘空间
+监控数据降采样策略，近期数据保留原始粒度，远期数据聚合存储
+数据库的work_mem配置影响排序和哈希操作的性能
+容器用ArgoCD做GitOps，声明式部署更可控
+前端用changesets管理版本和changelog
+业务监控需要关注核心转化率，比如注册转化率、下单转化率
+业务SLA看板，每天自动发送给技术负责人

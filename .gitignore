@@ -1,0 +1,8 @@
+# Memory stores (each is its own git repo)
+memory_stores/
+data/
+mem-data/
+src/data/
+ref/
+# Image files at root
+image*.png

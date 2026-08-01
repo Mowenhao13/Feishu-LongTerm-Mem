@@ -1,0 +1,180 @@
+2026-05-28 09:31:25 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_093125.log
+2026-05-28 09:31:25 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-05-28 09:31:25 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-28 09:31:25 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-28 09:31:25 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-28 09:31:25 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-05-28 09:31:25 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-28 09:31:25 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-28 09:31:25 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-28 09:31:25 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-28 09:31:25 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-28 09:31:25 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-28 09:31:25 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-28 09:31:25 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 0 episode(s) from data/suspend_pool.json
+2026-05-28 09:31:25 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-28 09:31:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-05-28 09:31:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=前端框架选型讨论一下，新项目马上要开始了
+2026-05-28 09:31:25 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-11.1641, 10.5078] mean=0.0300 std=2.5038
+2026-05-28 09:31:25 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_e86bd4b59 started with msg=eval_1
+2026-05-28 09:31:26 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-05-28 09:31:26 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=我建议用React 19 + Next.js，生态最成熟，招人也容易
+2026-05-28 09:31:26 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-9.7031, 9.1250] mean=0.0480 std=2.4571
+2026-05-28 09:31:26 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 09:31:26 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=React的生态确实没话说，但Next.js太重了，我们业务没那么复杂
+2026-05-28 09:31:26 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.4453, 9.5469] mean=0.0185 std=2.4789
+2026-05-28 09:31:27 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-05-28 09:31:27 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=Vue 3 + Nuxt也可以考虑，上手快，国内社区也很活跃
+2026-05-28 09:31:27 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.1953, 8.9375] mean=0.0195 std=2.4945
+2026-05-28 09:31:28 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:31:28 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=React的JSX写起来真的很爽，组件组合模式比模板语法灵活太多了
+2026-05-28 09:31:28 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-13.1094, 8.9219] mean=-0.0086 std=2.5827
+2026-05-28 09:31:28 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=74 model=Qwen3-Embedding-4B
+2026-05-28 09:31:28 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=74 preview=其实Vue 3的Composition API已经不输React Hooks了，而且ref/reactive的响应式设计
+2026-05-28 09:31:28 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.19s value_range=[-13.1328, 9.0703] mean=0.0166 std=2.5712
+2026-05-28 09:31:29 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 09:31:29 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=要不看看Svelte？编译型框架，打包体积小，性能巨好，而且代码最简洁
+2026-05-28 09:31:29 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-12.2734, 10.9531] mean=0.0313 std=2.6340
+2026-05-28 09:31:29 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:31:29 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=Svelte我觉得太新了，团队里没人用过，招聘也是个问题，不敢冒险
+2026-05-28 09:31:30 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.0469, 10.3281] mean=0.0186 std=2.4829
+2026-05-28 09:31:30 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=61 model=Qwen3-Embedding-4B
+2026-05-28 09:31:30 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=61 preview=说回来React的Server Component确实是趋势，Next.js在这方面走得很前面，数据获取和渲染策略一套搞
+2026-05-28 09:31:30 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-12.7031, 9.4141] mean=0.0109 std=2.5293
+2026-05-28 09:31:30 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '说回来React的Server Component确实是趋势', suspend episode=ep_e86bd4b59 (msgs=8)
+2026-05-28 09:31:30 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_e86bd4b59 (chat=eval, msgs=8, pool=1/20)
+2026-05-28 09:31:30 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_e86bd4b59 chat=eval sim=0.6765 >= 0.55 ✓
+2026-05-28 09:31:30 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_e86bd4b59 (chat=eval, msgs=8, pool=0/20)
+2026-05-28 09:31:30 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_e86bd4b59 (msgs=8)
+2026-05-28 09:31:31 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=79 model=Qwen3-Embedding-4B
+2026-05-28 09:31:31 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=79 preview=Vue 3的defineProps和defineEmits在TS支持上已经很强了，而且Vapor Mode也在往编译优化
+2026-05-28 09:31:31 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-14.3125, 9.0469] mean=-0.0230 std=2.4570
+2026-05-28 09:31:31 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=58 model=Qwen3-Embedding-4B
+2026-05-28 09:31:31 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=58 preview=你们考虑过维护成本吗？React十年了，社区沉淀了多少现成的库和解决方案，出了问题StackOverflow一搜就有
+2026-05-28 09:31:31 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.9141, 8.1875] mean=0.0422 std=2.4178
+2026-05-28 09:31:32 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=64 model=Qwen3-Embedding-4B
+2026-05-28 09:31:32 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=64 preview=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:31:32 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-11.2031, 8.5000] mean=0.0220 std=2.5617
+2026-05-28 09:31:33 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=50 model=Qwen3-Embedding-4B
+2026-05-28 09:31:33 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=50 preview=Svelte的代码量只有React的30%，同样的功能Svelte写起来少一半代码，bug也就少一半
+2026-05-28 09:31:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.2188, 9.1016] mean=0.0018 std=2.5908
+2026-05-28 09:31:33 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-05-28 09:31:33 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=React的useEffect确实容易滥用到爆炸
+2026-05-28 09:31:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-10.8828, 8.4609] mean=0.0617 std=2.5708
+2026-05-28 09:31:34 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-05-28 09:31:34 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=对对对，我们之前那个项目就是useEffect依赖搞了一堆bug，排查起来很痛苦
+2026-05-28 09:31:34 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.1484, 8.3125] mean=-0.0066 std=2.5009
+2026-05-28 09:31:34 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=73 model=Qwen3-Embedding-4B
+2026-05-28 09:31:34 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=73 preview=但React现在有Suspense和Server Components，很多以前用useEffect的场景现在不需要了，
+2026-05-28 09:31:34 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.8594, 10.8750] mean=0.0130 std=2.5817
+2026-05-28 09:31:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=59 model=Qwen3-Embedding-4B
+2026-05-28 09:31:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=59 preview=Nuxt 3也不差，Nitro引擎处理服务端逻辑很优雅，而且Vue的Transition组件做动画比React舒服太多
+2026-05-28 09:31:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.8438, 10.9531] mean=0.0265 std=2.5426
+2026-05-28 09:31:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=55 model=Qwen3-Embedding-4B
+2026-05-28 09:31:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=55 preview=Svelte的stores和reactive声明真的优雅，写起来有种丝滑感，$:语法直接声明依赖，开发体验很爽
+2026-05-28 09:31:36 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.23s value_range=[-10.1250, 10.0547] mean=-0.0859 std=2.5779
+2026-05-28 09:31:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=63 model=Qwen3-Embedding-4B
+2026-05-28 09:31:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=63 preview=我觉得选型还要看后端团队的技术栈，如果后端用Node.js，那React + Next.js前后端统一语言，可以减少上下
+2026-05-28 09:31:36 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-10.3984, 10.8047] mean=0.0443 std=2.3965
+2026-05-28 09:31:36 - src.detect.episode - INFO - [Episode] chat=eval SEMANTIC-GAP boundary: sim=0.4877 < 0.50, suspend episode=ep_e86bd4b59 (msgs=18)
+2026-05-28 09:31:36 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_e86bd4b59 (chat=eval, msgs=18, pool=1/20)
+2026-05-28 09:31:36 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_e86bd4b59 chat=eval sim=0.8289 >= 0.55 ✓
+2026-05-28 09:31:36 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_e86bd4b59 (chat=eval, msgs=18, pool=0/20)
+2026-05-28 09:31:36 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_e86bd4b59 (msgs=18)
+2026-05-28 09:31:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=21 model=Qwen3-Embedding-4B
+2026-05-28 09:31:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=21 preview=后端是Java团队啊，哪来的Node.js
+2026-05-28 09:31:37 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-8.9453, 8.8125] mean=0.0074 std=2.4863
+2026-05-28 09:31:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=57 model=Qwen3-Embedding-4B
+2026-05-28 09:31:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=57 preview=那更倾向Vue了，Java和Javascript的边界本来就清晰，Vue的设计理念对从Java转前端的开发者更友好
+2026-05-28 09:31:38 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-15.9688, 11.7031] mean=0.0540 std=2.5891
+2026-05-28 09:31:38 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=48 model=Qwen3-Embedding-4B
+2026-05-28 09:31:38 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=48 preview=选React也不冲突吧，TypeScript加持下，React项目结构清晰，Java转过来也不难
+2026-05-28 09:31:38 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-13.6484, 9.0078] mean=0.0569 std=2.4283
+2026-05-28 09:31:39 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=49 model=Qwen3-Embedding-4B
+2026-05-28 09:31:39 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=49 preview=TypeScript确实是加分项，React + TypeScript的泛型组件写起来类型安全很高
+2026-05-28 09:31:39 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.16s value_range=[-12.3984, 9.5625] mean=0.0276 std=2.4355
+2026-05-28 09:31:39 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=89 model=Qwen3-Embedding-4B
+2026-05-28 09:31:39 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=89 preview=Vue 3 + TypeScript配合Volar插件，类型推导完全不输React，defineComponent + 
+2026-05-28 09:31:39 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-13.3203, 8.6328] mean=0.0035 std=2.5204
+2026-05-28 09:31:40 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-05-28 09:31:40 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=还有打包体积的问题，同样一个页面，Svelte打包后的js只有React的1/3左右，首屏加载差距很明显
+2026-05-28 09:31:40 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-13.7578, 10.0391] mean=0.0192 std=2.6235
+2026-05-28 09:31:41 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=38 model=Qwen3-Embedding-4B
+2026-05-28 09:31:41 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=38 preview=首屏加载可以用SSR啊，Next.js渲染出来直接就HTML了，体积不是问题
+2026-05-28 09:31:41 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.20s value_range=[-11.7656, 8.5312] mean=-0.0265 std=2.5334
+2026-05-28 09:31:41 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=18 model=Qwen3-Embedding-4B
+2026-05-28 09:31:41 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=18 preview=Nuxt也能SSR，这个点拉不开差距
+2026-05-28 09:31:41 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.9219, 9.7812] mean=0.0155 std=2.5992
+2026-05-28 09:31:42 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-05-28 09:31:42 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=性能方面Svelte确实有点东西，没有虚拟DOM，直接编译成原生DOM操作，benchmark一直很靠前
+2026-05-28 09:31:42 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-12.2734, 9.4141] mean=0.0420 std=2.6053
+2026-05-28 09:31:42 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=49 model=Qwen3-Embedding-4B
+2026-05-28 09:31:42 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=49 preview=但React的并发模式和Fiber架构在处理复杂交互时优势还是有的，特别是在需要高优先级更新的场景
+2026-05-28 09:31:43 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-10.5938, 10.0859] mean=0.0578 std=2.4766
+2026-05-28 09:31:43 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=56 model=Qwen3-Embedding-4B
+2026-05-28 09:31:43 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=56 preview=现在是2025年了，Vue 3的性能已经不差了，而且Vapor Mode直接跳过虚拟DOM，到时候性能差距会更小
+2026-05-28 09:31:43 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-13.3203, 10.6094] mean=0.0230 std=2.5643
+2026-05-28 09:31:44 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=89 model=Qwen3-Embedding-4B
+2026-05-28 09:31:44 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=89 preview=我觉得还有一个关键点：组件库和模板市场。React有MUI、Ant Design、Shadcn/ui，Vue有Eleme
+2026-05-28 09:31:44 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-12.9453, 9.5312] mean=0.0171 std=2.6199
+2026-05-28 09:31:44 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=61 model=Qwen3-Embedding-4B
+2026-05-28 09:31:44 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=61 preview=Element Plus确实好用，中文文档完善，而且跟Element UI一脉相承，我们从Vue 2升级到Vue 3很平
+2026-05-28 09:31:44 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-12.3281, 9.1328] mean=0.0155 std=2.5565
+2026-05-28 09:31:45 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=58 model=Qwen3-Embedding-4B
+2026-05-28 09:31:45 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=58 preview=Shadcn/ui虽然不是传统组件库，但它的设计理念太先进了，直接copy代码到项目里，完全掌控样式，自定义程度最高
+2026-05-28 09:31:45 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-8.8438, 12.6172] mean=-0.0204 std=2.5649
+2026-05-28 09:31:45 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-05-28 09:31:45 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=每次一到选型就纠结，上次也是讨论了好久最后换人了才定下来
+2026-05-28 09:31:46 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.19s value_range=[-11.0156, 9.9219] mean=0.0185 std=2.4351
+2026-05-28 09:31:46 - src.detect.episode - INFO - [Episode] chat=eval SEMANTIC-GAP boundary: sim=0.4097 < 0.50, suspend episode=ep_e86bd4b59 (msgs=33)
+2026-05-28 09:31:46 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_e86bd4b59 (chat=eval, msgs=33, pool=1/20)
+2026-05-28 09:31:46 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_e86bd4b59 chat=eval sim=0.5801 >= 0.55 ✓
+2026-05-28 09:31:46 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_e86bd4b59 (chat=eval, msgs=33, pool=0/20)
+2026-05-28 09:31:46 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_e86bd4b59 (msgs=33)
+2026-05-28 09:31:46 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-05-28 09:31:46 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=要不这样，先拿一个小模块用不同框架做个POC，对比下开发效率、性能、打包体积，用数据说话
+2026-05-28 09:31:46 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.4141, 10.9766] mean=0.0758 std=2.5536
+2026-05-28 09:31:47 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-05-28 09:31:47 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=做POC可以，但时间成本也要算进去，而且POC做出来的效果跟正式项目差距挺大的
+2026-05-28 09:31:47 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-11.0938, 9.3047] mean=0.0612 std=2.4934
+2026-05-28 09:31:47 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:31:47 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=我坚持React，生态优势摆在那里，以后加功能、找外包、招人都方便
+2026-05-28 09:31:47 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-12.6641, 11.4062] mean=0.0552 std=2.4278
+2026-05-28 09:31:47 - src.detect.episode - INFO - [Episode] chat=eval SEMANTIC-GAP boundary: sim=0.4617 < 0.50, suspend episode=ep_e86bd4b59 (msgs=36)
+2026-05-28 09:31:47 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_e86bd4b59 (chat=eval, msgs=36, pool=1/20)
+2026-05-28 09:31:47 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_e86bd4b59 chat=eval sim=0.8007 >= 0.55 ✓
+2026-05-28 09:31:47 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_e86bd4b59 (chat=eval, msgs=36, pool=0/20)
+2026-05-28 09:31:47 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_e86bd4b59 (msgs=36)
+2026-05-28 09:31:48 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-05-28 09:31:48 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=我还是倾向Vue，开发效率确实是三种里最高的，而且这个项目周期紧，Vue上手快能快速出活
+2026-05-28 09:31:48 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-12.3516, 11.0469] mean=0.0712 std=2.6014
+2026-05-28 09:31:49 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=42 model=Qwen3-Embedding-4B
+2026-05-28 09:31:49 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=42 preview=Svelte虽然我用着爽，但它要面对的不仅是技术选型，还有人才和团队接受度的现实问题
+2026-05-28 09:31:49 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.11s value_range=[-11.0781, 8.9844] mean=0.0020 std=2.4647
+2026-05-28 09:31:49 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=59 model=Qwen3-Embedding-4B
+2026-05-28 09:31:49 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=59 preview=算了今天定不了，先各自整理一份选型报告，下周再讨论，暂定React和Vue两个候选方案，Svelte作为调研方向先跟进
+2026-05-28 09:31:49 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-12.1953, 9.7578] mean=0.0214 std=2.5032
+2026-05-28 09:31:52 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_e86bd4b59 (chat=eval, msgs=40, pool=1/20)
+2026-05-28 09:31:52 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-28 09:31:52 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_e86bd4b59 (msgs=40)
+2026-05-28 09:31:52 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_e86bd4b59 chat=eval msgs=40 len=1985
+2026-05-28 09:31:52 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=1985 content=前端框架选型讨论一下，新项目马上要开始了 我建议用React 19 + Next.js，生态最成熟，招人也容易 Reac
+2026-05-28 09:31:52 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1985)
+2026-05-28 09:31:55 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=2.77s
+2026-05-28 09:31:55 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-28 09:31:55 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=fc02a6ea6342 title=前端框架选型暂定React和Vue，Svelte作为调研方向 source=im
+2026-05-28 09:31:55 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=fc02a6ea6342 v1
+2026-05-28 09:31:55 - src.core.engine - INFO - Created decision: fc02a6ea6342 v1 — 前端框架选型暂定React和Vue，Svelte作为调研方向
+2026-05-28 09:31:55 - src.core.engine - INFO - [Mutation] CREATE applied: sid=fc02a6ea6342 v1
+2026-05-28 09:31:55 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:31:55 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:31:55 - src.view.client - ERROR - Failed to upsert record for fc02a6ea6342: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:31:55 - src.view.syncer - INFO - [BaseView] Synced decision fc02a6ea6342 v1
+2026-05-28 09:31:55 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=fc02a6ea6342
+2026-05-28 09:31:55 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=fc02a6ea6342
+2026-05-28 09:31:55 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-28 09:31:55 - src.core.engine - INFO - [Engine] <<< _process_episode done time=3.52s
+2026-05-28 09:31:55 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-28 09:31:55 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-28 09:31:56 - src.core.engine - INFO - Synced 1 dirty decisions to storage
+2026-05-28 09:31:56 - src.core.engine - INFO - MemoryEngine stopped (applied=1, failed=0)

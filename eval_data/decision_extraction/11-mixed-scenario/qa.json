@@ -1,0 +1,784 @@
+{
+  "qars": [
+    {
+      "id": "de_11_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_000_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_000_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_000_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "李四",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_000_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "李四",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_000_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_001_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_001_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_001_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "王五",
+        "B": "陈七",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_001_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "王五",
+        "B": "陈七",
+        "C": "赵六",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_001_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_002_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_002_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_002_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_002_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "赵六",
+        "B": "王五",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_002_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_003_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_003_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_003_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "王五",
+        "B": "李四",
+        "C": "陈七",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_003_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "王五",
+        "B": "李四",
+        "C": "陈七",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_003_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_004_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_004_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_004_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "王五",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_004_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "王五",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_004_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_005_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_005_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_005_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "王五",
+        "B": "陈七",
+        "C": "李四",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_005_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "王五",
+        "B": "陈七",
+        "C": "李四",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_005_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_006_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_006_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_006_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "李四",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_006_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "李四",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_006_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_007_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_007_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_007_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "李四",
+        "B": "王五",
+        "C": "张三",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_007_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "李四",
+        "B": "王五",
+        "C": "张三",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_007_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_008_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_008_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_008_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_008_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "赵六",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_008_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，部分议题有决策",
+        "B": "否"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_009_content",
+      "Q": "哪个议题形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "数据库选型",
+        "B": "部署方案",
+        "C": "测试策略",
+        "D": "都没有"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_11_009_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_11_009_proposer",
+      "Q": "谁提出的？",
+      "A": "B",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "赵六",
+        "D": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_11_009_executor",
+      "Q": "谁执行？",
+      "A": "D",
+      "options": {
+        "A": "张三",
+        "B": "王五",
+        "C": "赵六",
+        "D": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_11_009_impact",
+      "Q": "影响级别是？",
+      "A": "A",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_11_010_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_011_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_012_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_013_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_014_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_015_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_016_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_017_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_018_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_11_019_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，没有形成任何决策"
+      },
+      "dimension": "detection"
+    }
+  ]
+}

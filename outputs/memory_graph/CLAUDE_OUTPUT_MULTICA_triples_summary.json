@@ -1,0 +1,903 @@
+{
+  "triples": [
+    {
+      "head": "前端",
+      "relation": "sends_to",
+      "tail": "本地 Claude CLI",
+      "schema": [
+        "SYSTEM",
+        "sends_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-62f67e"
+    },
+    {
+      "head": "前端",
+      "relation": "uses",
+      "tail": "输入文本",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-62f67e"
+    },
+    {
+      "head": "本地 Claude CLI",
+      "relation": "receives_from",
+      "tail": "前端",
+      "schema": [
+        "SYSTEM",
+        "receives_from",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-62f67e"
+    },
+    {
+      "head": "前端输入",
+      "relation": "flows_to",
+      "tail": "HTTP API",
+      "schema": [
+        "SYSTEM",
+        "flows_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-18dec6"
+    },
+    {
+      "head": "HTTP API",
+      "relation": "flows_to",
+      "tail": "任务队列",
+      "schema": [
+        "SYSTEM",
+        "flows_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-18dec6"
+    },
+    {
+      "head": "任务队列",
+      "relation": "flows_to",
+      "tail": "Daemon 轮询认领",
+      "schema": [
+        "SYSTEM",
+        "flows_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-18dec6"
+    },
+    {
+      "head": "Daemon 轮询认领",
+      "relation": "flows_to",
+      "tail": "启动 Claude CLI 子进程",
+      "schema": [
+        "SYSTEM",
+        "flows_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-18dec6"
+    },
+    {
+      "head": "启动 Claude CLI 子进程",
+      "relation": "flows_to",
+      "tail": "写入 stdin",
+      "schema": [
+        "SYSTEM",
+        "flows_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-18dec6"
+    },
+    {
+      "head": "前端输入",
+      "relation": "passes_to",
+      "tail": "本地 Claude CLI",
+      "schema": [
+        "SYSTEM",
+        "passes_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-18dec6"
+    },
+    {
+      "head": "ChatInput",
+      "relation": "uses",
+      "tail": "onSend",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "onSend",
+      "relation": "sends",
+      "tail": "text",
+      "schema": [
+        "CONCEPT",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "onSend",
+      "relation": "sends",
+      "tail": "attachment_id",
+      "schema": [
+        "CONCEPT",
+        "sends",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "后端",
+      "relation": "uses",
+      "tail": "EnqueueTaskForIssue",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "EnqueueTaskForIssue",
+      "relation": "writes_to",
+      "tail": "agent_task_queue",
+      "schema": [
+        "CONCEPT",
+        "writes_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "ClaimTask",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "ClaimTask",
+      "relation": "uses",
+      "tail": "FOR UPDATE SKIP LOCKED",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "Daemon",
+      "relation": "polls",
+      "tail": "服务器",
+      "schema": [
+        "SYSTEM",
+        "polls",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "Daemon",
+      "relation": "calls",
+      "tail": "agent.Backend.Execute",
+      "schema": [
+        "SYSTEM",
+        "calls",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "agent.Backend.Execute",
+      "relation": "accepts",
+      "tail": "prompt",
+      "schema": [
+        "CONCEPT",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "agent.Backend.Execute",
+      "relation": "accepts",
+      "tail": "执行选项",
+      "schema": [
+        "CONCEPT",
+        "accepts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "claudeBackend.Execute",
+      "relation": "uses",
+      "tail": "exec.CommandContext",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "exec.CommandContext",
+      "relation": "starts",
+      "tail": "claude 进程",
+      "schema": [
+        "TECHNOLOGY",
+        "starts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "claude 进程",
+      "relation": "configured_by",
+      "tail": "buildClaudeArgs",
+      "schema": [
+        "SYSTEM",
+        "configured_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "buildClaudeArgs",
+      "relation": "includes",
+      "tail": "--output-format stream-json",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "claudeBackend.Execute",
+      "relation": "uses",
+      "tail": "writeClaudeInput",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "writeClaudeInput",
+      "relation": "writes_to",
+      "tail": "stdin",
+      "schema": [
+        "CONCEPT",
+        "writes_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "buildClaudeInput",
+      "relation": "formats",
+      "tail": "prompt",
+      "schema": [
+        "CONCEPT",
+        "formats",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "buildClaudeInput",
+      "relation": "produces",
+      "tail": "JSON 格式",
+      "schema": [
+        "CONCEPT",
+        "produces",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "Claude CLI",
+      "relation": "outputs_to",
+      "tail": "stdout",
+      "schema": [
+        "SYSTEM",
+        "outputs_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "stdout",
+      "relation": "read_by",
+      "tail": "scanner",
+      "schema": [
+        "CONCEPT",
+        "read_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "scanner",
+      "relation": "parses",
+      "tail": "NDJSON 消息",
+      "schema": [
+        "TECHNOLOGY",
+        "parses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "NDJSON 消息",
+      "relation": "pushed_via",
+      "tail": "WebSocket",
+      "schema": [
+        "STANDARD",
+        "pushed_via",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "delivers_to",
+      "tail": "前端",
+      "schema": [
+        "TECHNOLOGY",
+        "delivers_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7c5b95"
+    },
+    {
+      "head": "ChatInput.onSend",
+      "relation": "part_of",
+      "tail": "chat-input.tsx",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "EnqueueTaskForIssue",
+      "relation": "part_of",
+      "tail": "task.go",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "ClaimTask",
+      "relation": "part_of",
+      "tail": "task.go",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "claudeBackend.Execute",
+      "relation": "part_of",
+      "tail": "claude.go",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "writeClaudeInput",
+      "relation": "part_of",
+      "tail": "claude.go",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "buildClaudeArgs",
+      "relation": "part_of",
+      "tail": "claude.go",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "ChatInput.onSend",
+      "relation": "related_to",
+      "tail": "EnqueueTaskForIssue",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "EnqueueTaskForIssue",
+      "relation": "related_to",
+      "tail": "ClaimTask",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "ClaimTask",
+      "relation": "related_to",
+      "tail": "claudeBackend.Execute",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "claudeBackend.Execute",
+      "relation": "uses",
+      "tail": "writeClaudeInput",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "claudeBackend.Execute",
+      "relation": "uses",
+      "tail": "buildClaudeArgs",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-ac985e"
+    },
+    {
+      "head": "Daemon",
+      "relation": "acts_as",
+      "tail": "local_proxy",
+      "schema": [
+        "SYSTEM",
+        "acts_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "Daemon",
+      "relation": "responsible_for",
+      "tail": "converting_server_tasks_to_local_cli_processes",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "stdin",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "JSON",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "stream-json",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "Claude CLI",
+      "relation": "receives_input_via",
+      "tail": "stdin",
+      "schema": [
+        "PRODUCT",
+        "receives_input_via",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "Claude CLI",
+      "relation": "uses",
+      "tail": "JSON",
+      "schema": [
+        "PRODUCT",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "stream-json",
+      "relation": "requires",
+      "tail": "JSON_format",
+      "schema": [
+        "TECHNOLOGY",
+        "requires",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "ChatInputProps",
+      "relation": "has_property",
+      "tail": "onSend",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "ChatInputProps",
+      "relation": "has_property",
+      "tail": "onUploadFile",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "responsible_for",
+      "tail": "creating_chat_session",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "ChatWindow",
+      "relation": "forwards",
+      "tail": "chatSessionId",
+      "schema": [
+        "SYSTEM",
+        "forwards",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "chat_input",
+      "relation": "depends_on",
+      "tail": "upload_result",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "exec.CommandContext",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "claude.go",
+      "relation": "implements",
+      "tail": "agent_command_execution",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "writeClaudeInput",
+      "relation": "writes_to",
+      "tail": "stdin",
+      "schema": [
+        "CONCEPT",
+        "writes_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "cmd.Wait",
+      "relation": "flushes",
+      "tail": "stderr",
+      "schema": [
+        "CONCEPT",
+        "flushes",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "stderrBuf.Tail",
+      "relation": "provides",
+      "tail": "agent_stderr_output",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-063704"
+    },
+    {
+      "head": "claude.go",
+      "relation": "uses",
+      "tail": "bufio.Scanner",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "uses",
+      "tail": "json.Unmarshal",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "uses",
+      "tail": "claudeSDKMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "implements",
+      "tail": "buildClaudeInput",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "buildClaudeInput",
+      "relation": "uses",
+      "tail": "json.Marshal",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "buildClaudeInput",
+      "relation": "produces",
+      "tail": "JSON payload",
+      "schema": [
+        "CONCEPT",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "handles",
+      "tail": "assistant message type",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "handles",
+      "tail": "user message type",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "handles",
+      "tail": "system message type",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "handles",
+      "tail": "result message type",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "handles",
+      "tail": "log message type",
+      "schema": [
+        "SYSTEM",
+        "handles",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "uses",
+      "tail": "Message",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "uses",
+      "tail": "sessionID",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    },
+    {
+      "head": "claude.go",
+      "relation": "uses",
+      "tail": "usage tracking",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-7c2e94"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 77,
+    "unique_schemas": 42,
+    "schema_distribution": {
+      "('SYSTEM', 'sends_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 8,
+      "('SYSTEM', 'receives_from', 'SYSTEM')": 1,
+      "('SYSTEM', 'flows_to', 'SYSTEM')": 5,
+      "('SYSTEM', 'passes_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'sends', 'CONCEPT')": 2,
+      "('CONCEPT', 'writes_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('SYSTEM', 'polls', 'SYSTEM')": 1,
+      "('SYSTEM', 'calls', 'CONCEPT')": 1,
+      "('CONCEPT', 'accepts', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'starts', 'SYSTEM')": 1,
+      "('SYSTEM', 'configured_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'STANDARD')": 1,
+      "('CONCEPT', 'writes_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'formats', 'CONCEPT')": 1,
+      "('CONCEPT', 'produces', 'STANDARD')": 1,
+      "('SYSTEM', 'outputs_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'read_by', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'parses', 'STANDARD')": 1,
+      "('STANDARD', 'pushed_via', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'delivers_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'part_of', 'SYSTEM')": 6,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 3,
+      "('SYSTEM', 'uses', 'SYSTEM')": 2,
+      "('SYSTEM', 'acts_as', 'CONCEPT')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'STANDARD')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 5,
+      "('PRODUCT', 'receives_input_via', 'STANDARD')": 1,
+      "('PRODUCT', 'uses', 'STANDARD')": 1,
+      "('TECHNOLOGY', 'requires', 'STANDARD')": 1,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 2,
+      "('SYSTEM', 'forwards', 'CONCEPT')": 1,
+      "('SYSTEM', 'depends_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'implements', 'CONCEPT')": 2,
+      "('CONCEPT', 'writes_to', 'STANDARD')": 1,
+      "('CONCEPT', 'flushes', 'STANDARD')": 1,
+      "('CONCEPT', 'provides', 'CONCEPT')": 1,
+      "('CONCEPT', 'produces', 'CONCEPT')": 1,
+      "('SYSTEM', 'handles', 'CONCEPT')": 5
+    },
+    "schema_layer_size": 42,
+    "fact_layer_size": 75,
+    "passage_layer_size": 6
+  }
+}

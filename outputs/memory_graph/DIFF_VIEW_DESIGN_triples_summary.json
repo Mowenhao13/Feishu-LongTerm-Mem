@@ -1,0 +1,932 @@
+{
+  "triples": [
+    {
+      "head": "Diff 视图设计文档",
+      "relation": "based_on",
+      "tail": "Repo4 GitHub Diff 体系",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-d63fd4"
+    },
+    {
+      "head": "Diff 视图设计文档",
+      "relation": "based_on",
+      "tail": "Vibe Kanban Review 流程",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-d63fd4"
+    },
+    {
+      "head": "Repo4 GitHub Diff 体系",
+      "relation": "related_to",
+      "tail": "Vibe Kanban Review 流程",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-d63fd4"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "GitHubDiffRenderAdapter",
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "GitHubCLIService",
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "GitHubViewModel",
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "repo4",
+      "relation": "implements",
+      "tail": "GitHubPRObservationService",
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubCLIService",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubViewModel",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubPRObservationService",
+      "relation": "implemented_in",
+      "tail": "Swift",
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "located_in",
+      "tail": "AgentHubGitHub/Services/GitHubCLIService.swift",
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "located_in",
+      "tail": "Utils/GitHubDiffRenderAdapter.swift",
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "located_in",
+      "tail": "ViewModels/GitHubViewModel.swift",
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "located_in",
+      "tail": "Models/GitHubModels.swift",
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubPRObservationService",
+      "relation": "located_in",
+      "tail": "ViewModels/GitHubViewModel.swift",
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "based_on",
+      "tail": "GitHub统一补丁文本",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "uses",
+      "tail": "统一diff文本",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "produces",
+      "tail": "旧/新缓冲区",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubCLIService",
+      "relation": "responsible_for",
+      "tail": "PR生命周期管理",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubCLIService",
+      "relation": "uses",
+      "tail": "GitHubPullRequest",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubCLIService",
+      "relation": "uses",
+      "tail": "GitHubPRFile",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubCLIService",
+      "relation": "uses",
+      "tail": "GitHubComment",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubCLIService",
+      "relation": "uses",
+      "tail": "GitHubCheckRun",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubViewModel",
+      "relation": "responsible_for",
+      "tail": "PR列表状态管理",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubViewModel",
+      "relation": "uses",
+      "tail": "GitHubPRFilter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "GitHubViewModel",
+      "relation": "uses",
+      "tail": "GitHubPRObservationState",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "PR观察服务",
+      "relation": "uses",
+      "tail": "Swift async序列模式",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "PR观察服务",
+      "relation": "responsible_for",
+      "tail": "自动轮询当前分支PR状态",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "Repo4 Diff体系",
+      "relation": "adopts",
+      "tail": "GitHubDiffRenderAdapter",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "Repo4 Diff体系",
+      "relation": "adopts",
+      "tail": "GitHubCLIService",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "Repo4 Diff体系",
+      "relation": "adopts",
+      "tail": "GitHubViewModel",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "Repo4 Diff体系",
+      "relation": "adopts",
+      "tail": "PR观察服务",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "Repo4 Diff体系",
+      "relation": "compared_with",
+      "tail": "Vibe Kanban审查流程",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "Repo4 Diff体系",
+      "relation": "related_to",
+      "tail": "方案对比",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5"
+    },
+    {
+      "head": "审查机制",
+      "relation": "related_to",
+      "tail": "人工审查",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "工作流",
+      "relation": "consists_of",
+      "tail": "规划 (Issue)",
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "工作流",
+      "relation": "consists_of",
+      "tail": "执行 (Workspace)",
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "工作流",
+      "relation": "consists_of",
+      "tail": "审查 (Diff)",
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "工作流",
+      "relation": "consists_of",
+      "tail": "合并 (PR)",
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "Git Worktree",
+      "relation": "used_for",
+      "tail": "代码隔离",
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "Agent",
+      "relation": "produces",
+      "tail": "代码",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "代码",
+      "relation": "reviewed_via",
+      "tail": "Diff 对比",
+      "schema": [
+        "CONCEPT",
+        "reviewed_via",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "人类",
+      "relation": "performs",
+      "tail": "审查",
+      "schema": [
+        "PERSON",
+        "performs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "人类",
+      "relation": "performs",
+      "tail": "内联评论",
+      "schema": [
+        "PERSON",
+        "performs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "审查",
+      "relation": "occurs_before",
+      "tail": "合并",
+      "schema": [
+        "CONCEPT",
+        "occurs_before",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "GitHubDiffRenderAdapter",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Vibe Kanban Review 流程",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Diff 渲染引擎",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "PR 审查流程",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Review 工作流",
+      "relation": "based_on",
+      "tail": "Vibe Kanban Review 流程",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "自动观察",
+      "relation": "based_on",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "uses",
+      "tail": "统一 diff → 旧/新缓冲区",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "uses",
+      "tail": "行级变化定位",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "uses",
+      "tail": "文件列表",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "GitHubDiffRenderAdapter",
+      "relation": "uses",
+      "tail": "完整 diff 文本渲染",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "PR 审查流程",
+      "relation": "uses",
+      "tail": "PR 列表",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "PR 审查流程",
+      "relation": "uses",
+      "tail": "PR 详情",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "PR 审查流程",
+      "relation": "uses",
+      "tail": "审查评论 CRUD",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "PR 审查流程",
+      "relation": "uses",
+      "tail": "CI 检查展示",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "PR 审查流程",
+      "relation": "uses",
+      "tail": "PR CRUD",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Review 工作流",
+      "relation": "uses",
+      "tail": "内联评论系统",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Review 工作流",
+      "relation": "uses",
+      "tail": "审批门禁",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "自动观察",
+      "relation": "uses",
+      "tail": "当前分支 PR 自动轮询",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "自动观察",
+      "relation": "uses",
+      "tail": "CI 状态变化推送",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "自动观察",
+      "relation": "uses",
+      "tail": "审查评论实时更新",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "WS 实时推送模式",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Vibe Kanban Review 流程",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "gh CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Swift async 序列",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Board Issue",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Worktree",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Diff 视图系统",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Diff 视图系统",
+      "relation": "composed_of",
+      "tail": "Diff 渲染引擎",
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Diff 视图系统",
+      "relation": "composed_of",
+      "tail": "PR 审查流程",
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Diff 视图系统",
+      "relation": "composed_of",
+      "tail": "Review 工作流",
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "Diff 视图系统",
+      "relation": "composed_of",
+      "tail": "自动观察",
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "Repo4 工作流",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Repo4",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Vibe Kanban Review 流程",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541"
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 81,
+    "unique_schemas": 27,
+    "schema_distribution": {
+      "('CONCEPT', 'based_on', 'SYSTEM')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('ORG', 'implements', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'implemented_in', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'located_in', 'SYSTEM')": 5,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 21,
+      "('SYSTEM', 'produces', 'CONCEPT')": 2,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 3,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 5,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'consists_of', 'CONCEPT')": 4,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'reviewed_via', 'CONCEPT')": 1,
+      "('PERSON', 'performs', 'CONCEPT')": 2,
+      "('CONCEPT', 'occurs_before', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 3,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 4,
+      "('SYSTEM', 'uses', 'SYSTEM')": 1,
+      "('SYSTEM', 'composed_of', 'SYSTEM')": 4,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('SYSTEM', 'compared_with', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 27,
+    "fact_layer_size": 81,
+    "passage_layer_size": 5
+  }
+}

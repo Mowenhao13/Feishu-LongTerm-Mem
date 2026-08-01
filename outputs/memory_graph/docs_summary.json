@@ -1,0 +1,189 @@
+{
+  "files_processed": 30,
+  "total_schemas": 1386,
+  "total_facts": 4624,
+  "total_passages": 257,
+  "total_triples": 4689,
+  "per_file": {
+    "test_files/docs/adapter/CLI_ADAPTER_DESIGN.md": {
+      "schemas": 38,
+      "facts": 110,
+      "passages": 6,
+      "triples": 110
+    },
+    "test_files/docs/chat/CHAT_DESIGN.md": {
+      "schemas": 29,
+      "facts": 152,
+      "passages": 5,
+      "triples": 152
+    },
+    "test_files/docs/context/CONTEXT_DESIGN.md": {
+      "schemas": 67,
+      "facts": 192,
+      "passages": 10,
+      "triples": 195
+    },
+    "test_files/docs/development/phase1-streaming-architecture.md": {
+      "schemas": 56,
+      "facts": 196,
+      "passages": 13,
+      "triples": 196
+    },
+    "test_files/docs/diff/DIFF_VIEW_DESIGN.md": {
+      "schemas": 27,
+      "facts": 81,
+      "passages": 5,
+      "triples": 81
+    },
+    "test_files/docs/handoff/HANDOFF_DESIGN.md": {
+      "schemas": 76,
+      "facts": 198,
+      "passages": 11,
+      "triples": 199
+    },
+    "test_files/docs/kanban/KANBAN_DESIGN.md": {
+      "schemas": 47,
+      "facts": 204,
+      "passages": 7,
+      "triples": 206
+    },
+    "test_files/docs/multi-session/MULTI_SESSION_DESIGN.md": {
+      "schemas": 27,
+      "facts": 117,
+      "passages": 6,
+      "triples": 117
+    },
+    "test_files/docs/orchestrator/ORCHESTRATOR_DESIGN.md": {
+      "schemas": 59,
+      "facts": 276,
+      "passages": 10,
+      "triples": 276
+    },
+    "test_files/docs/prompts/PROMPT_DESIGN.md": {
+      "schemas": 32,
+      "facts": 101,
+      "passages": 5,
+      "triples": 102
+    },
+    "test_files/docs/references/AI-scientist-v2.md": {
+      "schemas": 34,
+      "facts": 65,
+      "passages": 5,
+      "triples": 65
+    },
+    "test_files/docs/references/AgentHub 多人协作.md": {
+      "schemas": 29,
+      "facts": 96,
+      "passages": 10,
+      "triples": 96
+    },
+    "test_files/docs/references/DeerFlow沙箱机制.md": {
+      "schemas": 32,
+      "facts": 47,
+      "passages": 4,
+      "triples": 47
+    },
+    "test_files/docs/references/Hermes agent Kanban.md": {
+      "schemas": 37,
+      "facts": 68,
+      "passages": 6,
+      "triples": 68
+    },
+    "test_files/docs/references/Hermes handoff 机制.md": {
+      "schemas": 22,
+      "facts": 53,
+      "passages": 8,
+      "triples": 53
+    },
+    "test_files/docs/references/Kanban机制.md": {
+      "schemas": 20,
+      "facts": 62,
+      "passages": 6,
+      "triples": 62
+    },
+    "test_files/docs/references/OpenAI-agent-python上下文策略.md": {
+      "schemas": 40,
+      "facts": 77,
+      "passages": 4,
+      "triples": 77
+    },
+    "test_files/docs/references/agenthub.md": {
+      "schemas": 60,
+      "facts": 119,
+      "passages": 5,
+      "triples": 120
+    },
+    "test_files/docs/references/context隔离机制.md": {
+      "schemas": 41,
+      "facts": 67,
+      "passages": 6,
+      "triples": 67
+    },
+    "test_files/docs/references/handoff机制.md": {
+      "schemas": 49,
+      "facts": 74,
+      "passages": 7,
+      "triples": 74
+    },
+    "test_files/docs/router/ROUTER.md": {
+      "schemas": 114,
+      "facts": 448,
+      "passages": 24,
+      "triples": 452
+    },
+    "test_files/docs/sandbox/SANDBOX_DESIGN.md": {
+      "schemas": 39,
+      "facts": 127,
+      "passages": 6,
+      "triples": 127
+    },
+    "test_files/docs/superpowers/specs/2026-06-01-agenthub-multi-agent-collaboration-design.md": {
+      "schemas": 84,
+      "facts": 476,
+      "passages": 19,
+      "triples": 484
+    },
+    "test_files/docs/tools/CLAUDE_TOOLS.md": {
+      "schemas": 41,
+      "facts": 258,
+      "passages": 10,
+      "triples": 297
+    },
+    "test_files/docs/web_view/CLAUDE_CHAT_SESSIONS.md": {
+      "schemas": 93,
+      "facts": 493,
+      "passages": 27,
+      "triples": 495
+    },
+    "test_files/docs/web_view/CLAUDE_MESSAGES_TYPES.md": {
+      "schemas": 39,
+      "facts": 66,
+      "passages": 6,
+      "triples": 67
+    },
+    "test_files/docs/web_view/CLAUDE_OUTPUT_MULTICA.md": {
+      "schemas": 42,
+      "facts": 75,
+      "passages": 6,
+      "triples": 77
+    },
+    "test_files/docs/web_view/CONTENT_SHOW.md": {
+      "schemas": 36,
+      "facts": 110,
+      "passages": 7,
+      "triples": 111
+    },
+    "test_files/docs/web_view/WEB_VIEW.md": {
+      "schemas": 44,
+      "facts": 127,
+      "passages": 8,
+      "triples": 127
+    },
+    "test_files/docs/worktree/WORKTREE_DESIGN.md": {
+      "schemas": 32,
+      "facts": 89,
+      "passages": 5,
+      "triples": 89
+    }
+  }
+}

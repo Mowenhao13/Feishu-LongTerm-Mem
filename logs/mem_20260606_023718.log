@@ -1,0 +1,57 @@
+2026-06-06 02:37:18 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260606_023718.log
+2026-06-06 02:37:18 - __main__ - INFO - ========================================
+2026-06-06 02:37:18 - __main__ - INFO -   飞书协作记忆系统 v1 (Python)
+2026-06-06 02:37:18 - __main__ - INFO - ========================================
+2026-06-06 02:37:18 - __main__ - INFO - Project: default
+2026-06-06 02:37:18 - __main__ - INFO - Storage: memory_stores/argusbot-eval-v2
+2026-06-06 02:37:18 - __main__ - INFO - DocsDir: data/docs
+2026-06-06 02:37:18 - __main__ - INFO - [GitStorage] Git repo verified at memory_stores/argusbot-eval-v2
+2026-06-06 02:37:20 - __main__ - INFO - [MemoryGraph] loaded 81 decisions from Git
+2026-06-06 02:37:20 - __main__ - INFO - [LLM] LLMProvider created: https://api.deepseek.com model=deepseek-chat
+2026-06-06 02:37:20 - __main__ - INFO - [LLM] Decision extractor enabled
+2026-06-06 02:37:20 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-06 02:37:20 - src.core.engine - INFO - [Engine] Git repo verified at memory_stores/argusbot-eval-v2
+2026-06-06 02:37:22 - src.core.engine - INFO - Loaded 81 decisions, 1 topics
+2026-06-06 02:37:22 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=32 topics=1
+2026-06-06 02:37:22 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-06 02:37:22 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-06 02:37:22 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-06 02:37:22 - __main__ - INFO - [MemoryEngine] initialized
+2026-06-06 02:37:22 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=qwen3-embedding-4b timeout=120 retries=5
+2026-06-06 02:37:22 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=qwen3-reranker-4b timeout=120 retries=10
+2026-06-06 02:37:22 - src.model.embedding_provider - INFO - [Embedding] Connection check: OK (dim=2560)
+2026-06-06 02:37:22 - src.model.reranker_provider - WARNING - [Reranker] Connection check FAILED: 404 Client Error: Not Found for url: http://127.0.0.1:8001/v1/rerank
+2026-06-06 02:37:22 - __main__ - WARNING - [Engine] Reranker service unreachable — embedding only, no rerank
+2026-06-06 02:37:22 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-06 02:37:22 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-06 02:37:22 - __main__ - INFO - [Engine] Embedding+Reranker injected for similarity search
+2026-06-06 02:37:22 - src.card.pusher - INFO - Push scheduler: conflict trigger enabled
+2026-06-06 02:37:22 - src.card.pusher - INFO - Push scheduler: update trigger enabled
+2026-06-06 02:37:22 - src.card.pusher - INFO - Push scheduler: hot score scan enabled (interval=600s)
+2026-06-06 02:37:22 - src.card.pusher - INFO - Push scheduler: daily summary enabled (time=08:00)
+2026-06-06 02:37:22 - src.card.pusher - INFO - Push scheduler: weekly summary enabled (day=6, time=21:00)
+2026-06-06 02:37:22 - src.card.pusher - INFO - Push scheduler started with 3 background tasks
+2026-06-06 02:37:22 - __main__ - INFO - [PushEngine] scheduler started
+2026-06-06 02:37:22 - __main__ - INFO - [lark_im] EpisodeManager created: gap=1800s max_msgs=50 max_dur=7200s flush=30s semantic=0.50 reopen=0.55
+2026-06-06 02:37:22 - __main__ - INFO - [lark_im] Initialized: 5 chat(s) monitored: oc_d341c...(Group1), oc_e65e8...(Group2), oc_cf90c...(Group3), oc_5d1bc...(Group4), oc_770fd...(Group5)
+2026-06-06 02:37:22 - __main__ - INFO - [lark_im] IM detector ready (mode=websocket)
+2026-06-06 02:37:22 - __main__ - INFO - [lark_im] EmbeddingProvider injected for episode boundary detection
+2026-06-06 02:37:22 - src.adapter.lark_im - INFO - WS listener started
+2026-06-06 02:37:22 - __main__ - INFO - [lark_im] WS listener started for 5 chat(s)
+2026-06-06 02:37:22 - __main__ - INFO - [lark_im] WS listener started (mode=websocket)
+2026-06-06 02:37:22 - __main__ - INFO - [Episode] Check loop task created
+2026-06-06 02:37:22 - __main__ - INFO - [Detectors] Configuration:
+2026-06-06 02:37:22 - __main__ - INFO -   lark_im: interval=10s, burst=5s, timeout=120s mode=websocket
+2026-06-06 02:37:22 - __main__ - INFO -   lark_doc: disabled
+2026-06-06 02:37:22 - __main__ - INFO - [System] All detectors started, waiting for signals...
+2026-06-06 02:37:22 - __main__ - INFO - [Episode] Check loop started (interval=10s)
+2026-06-06 02:37:25 - Lark - INFO - connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7647982280057621486&access_key=158ee08fdb9023fbda9da173f0d34969&service_id=33554678&ticket=57c4b180-a0bc-4380-aca7-62a5249d0097 [conn_id=7647982280057621486]
+2026-06-06 03:07:23 - __main__ - INFO - [System] Shutting down...
+2026-06-06 03:07:23 - src.adapter.lark_im - INFO - WS listener stopped
+2026-06-06 03:07:23 - __main__ - INFO - [lark_im] WS listener stopped
+2026-06-06 03:07:23 - src.card.pusher - INFO - Push scheduler stopped
+2026-06-06 03:07:23 - src.card.pusher - INFO - Push scheduler stopped
+2026-06-06 03:07:23 - src.core.engine - INFO - Hypergraph saved on stop
+2026-06-06 03:07:23 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)
+2026-06-06 03:07:23 - __main__ - INFO - [LLM Stats] No LLM calls recorded in this session
+2026-06-06 03:07:23 - __main__ - INFO - [System] Shutdown complete

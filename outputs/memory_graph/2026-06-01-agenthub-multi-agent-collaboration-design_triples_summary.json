@@ -1,0 +1,5422 @@
+{
+  "triples": [
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "OpenMultiAgent",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Hermes",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "AI Scientist v2",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "DeerFlow",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "OpenAI Agents Python",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "MS Agent Framework",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub Team",
+      "relation": "responsible_for",
+      "tail": "AgentHub",
+      "schema": [
+        "ORG",
+        "responsible_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "Multica",
+      "relation": "related_to",
+      "tail": "multica-ai/multica",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "related_to",
+      "tail": "open-multi-agent/open-multi-agent",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-4583eb"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "五棵树",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "设计哲学",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "核心问题解答",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "代码组织架构",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "Package 边界与依赖规则",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "关键数据模型",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "核心工作流",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "API 设计概览",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "与参考项目的差异",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-5cb2ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Structured Handoff Protocol",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Goal-First Coordinator",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Claude CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Codex CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Goal-First 任务分解",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "结构化 Agent 间通信",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Agent 是一等公民",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "不造 Agent 轮子",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "Goal-First 任务分解",
+      "relation": "based_on",
+      "tail": "OpenMultiAgent",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "Goal-First 任务分解",
+      "relation": "uses",
+      "tail": "Coordinator Agent",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "Goal-First 任务分解",
+      "relation": "uses",
+      "tail": "Squad Leader",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "Handoff DAG",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "任务管理平台",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-1935ff"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "@mention",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Multica",
+      "relation": "uses",
+      "tail": "自然语言评论",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "@mention",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "自然语言评论",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Handoff Packet",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff Packet",
+      "relation": "based_on",
+      "tail": "HandoffType",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff Packet",
+      "relation": "based_on",
+      "tail": "HandoffStatus",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff Packet",
+      "relation": "based_on",
+      "tail": "ActorRef",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff Packet",
+      "relation": "uses",
+      "tail": "DAG",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff Packet",
+      "relation": "uses",
+      "tail": "parent_handoff",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff Packet",
+      "relation": "uses",
+      "tail": "dependencies",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "based_on",
+      "tail": "Handoff Packet",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "compared_with",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "related_to",
+      "tail": "并行协作",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "related_to",
+      "tail": "可验证性",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "related_to",
+      "tail": "结构化任务描述",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Agent-Architect",
+      "relation": "responsible_for",
+      "tail": "设计支付 API 契约",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Agent-Backend",
+      "relation": "responsible_for",
+      "tail": "实现支付网关",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Agent-Frontend",
+      "relation": "responsible_for",
+      "tail": "实现前端支付页",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Agent-Review",
+      "relation": "responsible_for",
+      "tail": "支付安全审查",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff#2",
+      "relation": "depends_on",
+      "tail": "Handoff#1",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff#3",
+      "relation": "depends_on",
+      "tail": "Handoff#1",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff#4",
+      "relation": "depends_on",
+      "tail": "Handoff#2",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "Handoff#4",
+      "relation": "depends_on",
+      "tail": "Handoff#3",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-210194"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "DELEGATE",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "DAG dependencies",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "并行调度",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "REVIEW Handoff",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Dispatcher",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "acceptance_criteria",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "status 追踪",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Event Store",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "@mention",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "Dispatcher",
+      "relation": "responsible_for",
+      "tail": "依赖自动等待",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "Event Store",
+      "relation": "responsible_for",
+      "tail": "回溯可视化",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-e9ac83"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "五棵树架构",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "part_of",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "part_of",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "共享状态",
+      "relation": "part_of",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Room 交互",
+      "relation": "part_of",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "part_of",
+      "tail": "AgentHub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "uses",
+      "tail": "协作核心",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "uses",
+      "tail": "共享状态",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "uses",
+      "tail": "共享状态",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "uses",
+      "tail": "Room 交互",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Room 交互",
+      "relation": "uses",
+      "tail": "协作核心",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "depends_on",
+      "tail": "Agent 运行时",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "depends_on",
+      "tail": "共享状态",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "contains",
+      "tail": "Coordinator Agent",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "contains",
+      "tail": "Handoff DAG Engine",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "contains",
+      "tail": "Squad Engine",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "协作核心",
+      "relation": "contains",
+      "tail": "Loop Guard",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "contains",
+      "tail": "Daemon",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "contains",
+      "tail": "CLI Adaptor",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "contains",
+      "tail": "Session Manager",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Agent 运行时",
+      "relation": "contains",
+      "tail": "Sandbox Manager",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "共享状态",
+      "relation": "contains",
+      "tail": "Event Store",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "共享状态",
+      "relation": "contains",
+      "tail": "Board State",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "共享状态",
+      "relation": "contains",
+      "tail": "Agent Memory",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "共享状态",
+      "relation": "contains",
+      "tail": "Actor Model",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Room 交互",
+      "relation": "contains",
+      "tail": "Multi-Mode Room",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Room 交互",
+      "relation": "contains",
+      "tail": "Chat Layer",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Room 交互",
+      "relation": "contains",
+      "tail": "Board Layer",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Room 交互",
+      "relation": "contains",
+      "tail": "Inbox",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "contains",
+      "tail": "Persistence",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "contains",
+      "tail": "WebSocket Hub",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "contains",
+      "tail": "CLI",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "基础设施",
+      "relation": "contains",
+      "tail": "Plugin",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "CLI Adaptor",
+      "relation": "adapts",
+      "tail": "Claude",
+      "schema": [
+        "TECHNOLOGY",
+        "adapts",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "CLI Adaptor",
+      "relation": "adapts",
+      "tail": "Codex",
+      "schema": [
+        "TECHNOLOGY",
+        "adapts",
+        "PRODUCT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Persistence",
+      "relation": "uses",
+      "tail": "SQLite",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Persistence",
+      "relation": "uses",
+      "tail": "Postgres",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Plugin",
+      "relation": "uses",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "responsible_for",
+      "tail": "任务分解",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Handoff DAG Engine",
+      "relation": "responsible_for",
+      "tail": "结构化Agent间通信",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Squad Engine",
+      "relation": "responsible_for",
+      "tail": "小队管理",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Loop Guard",
+      "relation": "responsible_for",
+      "tail": "安全防护",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-cbf32c"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "based_on",
+      "tail": "OpenMultiAgent Coordinator",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "responsible_for",
+      "tail": "接收 Goal → 调用 LLM 生成 Handoff DAG → 识别依赖/并行 → 人类审查(planOnly)",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Handoff DAG Engine",
+      "relation": "responsible_for",
+      "tail": "Handoff 状态机路由、依赖解析、并行调度、结果合成",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Squad Engine",
+      "relation": "based_on",
+      "tail": "Multica Squad",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Squad Engine",
+      "relation": "responsible_for",
+      "tail": "Squad 组建/解散、Leader 委派、Role Pool → Task Dispatch",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Loop Guard",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Loop Guard",
+      "relation": "based_on",
+      "tail": "Hermes",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Loop Guard",
+      "relation": "responsible_for",
+      "tail": "自触发循环检测、连续失败熔断、dispatched/running 超时回收",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Daemon",
+      "relation": "based_on",
+      "tail": "Multica Daemon",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Daemon",
+      "relation": "responsible_for",
+      "tail": "CLI 探测/注册、3s 轮询认领任务、双心跳(WS+HTTP)、崩溃恢复",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "CLI Adaptor",
+      "relation": "based_on",
+      "tail": "Multica CLI Adaptor",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "CLI Adaptor",
+      "relation": "responsible_for",
+      "tail": "统一 AgentInterface(spawn/stream/kill)、Claude CLI 适配器、Codex CLI 适配器",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Session Manager",
+      "relation": "based_on",
+      "tail": "Multica Session Resumption",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Session Manager",
+      "relation": "responsible_for",
+      "tail": "session_id+work_dir 持久化、上下文快照中断恢复、Session Poisoning 检测",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "based_on",
+      "tail": "DeerFlow",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Sandbox Manager",
+      "relation": "responsible_for",
+      "tail": "每任务独立 work_dir、虚拟路径映射、环境变量过滤、仓库白名单、GC",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Event Store",
+      "relation": "uses",
+      "tail": "Event Sourcing 架构",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Event Store",
+      "relation": "responsible_for",
+      "tail": "所有操作记录为不可变事件，当前状态 = replay(events)",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Board State",
+      "relation": "responsible_for",
+      "tail": "Issue CRUD、status 流转 (backlog→todo→in_progress→in_review→done)、多态 assignee",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Agent Memory",
+      "relation": "responsible_for",
+      "tail": "图记忆系统（跨 Agent 关系网络）、Skill 技能库、Agent Profile(capability_tags)",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Actor Model",
+      "relation": "related_to",
+      "tail": "member/agent/squad 三级 Actor 类型、平权身份映射",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Event Store",
+      "relation": "depends_on",
+      "tail": "Board View",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Event Store",
+      "relation": "depends_on",
+      "tail": "Handoff View",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Event Store",
+      "relation": "depends_on",
+      "tail": "Agent View",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "adopts",
+      "tail": "dependency-first",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "adopts",
+      "tail": "round-robin",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "adopts",
+      "tail": "least-busy",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "adopts",
+      "tail": "capability-match",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-424a85"
+    },
+    {
+      "head": "Multi-Mode Room",
+      "relation": "has_type",
+      "tail": "direct_chat",
+      "schema": [
+        "SYSTEM",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Multi-Mode Room",
+      "relation": "has_type",
+      "tail": "session_room",
+      "schema": [
+        "SYSTEM",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Multi-Mode Room",
+      "relation": "has_type",
+      "tail": "topic_room",
+      "schema": [
+        "SYSTEM",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Chat Layer",
+      "relation": "responsible_for",
+      "tail": "消息流",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Chat Layer",
+      "relation": "responsible_for",
+      "tail": "@mention",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Chat Layer",
+      "relation": "responsible_for",
+      "tail": "Handoff 结构化卡片",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Chat Layer",
+      "relation": "responsible_for",
+      "tail": "Agent 思考过程流式展示",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Board Layer",
+      "relation": "responsible_for",
+      "tail": "Kanban 视图",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Board Layer",
+      "relation": "responsible_for",
+      "tail": "DAG 视图",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Board Layer",
+      "relation": "responsible_for",
+      "tail": "Agent 活动日志",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Inbox",
+      "relation": "responsible_for",
+      "tail": "通知",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Inbox",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Session Room",
+      "relation": "contains",
+      "tail": "Agent-Orchestrator",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Session Room",
+      "relation": "contains",
+      "tail": "Agent-Review",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Agent-Orchestrator",
+      "relation": "responsible_for",
+      "tail": "Squad",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Squad",
+      "relation": "contains",
+      "tail": "Agent-Architect",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Squad",
+      "relation": "contains",
+      "tail": "Agent-Backend",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Squad",
+      "relation": "contains",
+      "tail": "Agent-Frontend",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Session Room",
+      "relation": "anchored_by",
+      "tail": "Issue#42",
+      "schema": [
+        "SYSTEM",
+        "anchored_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Agent-Orchestrator",
+      "relation": "exposed_as",
+      "tail": "对外门面",
+      "schema": [
+        "SYSTEM",
+        "exposed_as",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Persistence",
+      "relation": "uses",
+      "tail": "SQLite",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Persistence",
+      "relation": "uses",
+      "tail": "PostgreSQL",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Persistence",
+      "relation": "based_on",
+      "tail": "Multica 28 表体系",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "WebSocket Hub",
+      "relation": "responsible_for",
+      "tail": "按 Room 广播",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "WebSocket Hub",
+      "relation": "responsible_for",
+      "tail": "个人定向推送",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "WebSocket Hub",
+      "relation": "supports",
+      "tail": "60+ 事件类型",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "agenthub CLI",
+      "relation": "based_on",
+      "tail": "multica CLI",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Plugin System",
+      "relation": "integrates",
+      "tail": "MCP Server",
+      "schema": [
+        "SYSTEM",
+        "integrates",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "Plugin System",
+      "relation": "responsible_for",
+      "tail": "自定义 Agent 能力扩展",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-157df9"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "三层通信体系",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "三层通信体系",
+      "relation": "includes",
+      "tail": "L1: Human-Visible",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "三层通信体系",
+      "relation": "includes",
+      "tail": "L2: Agent-Agent",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "三层通信体系",
+      "relation": "includes",
+      "tail": "L3: Passive Sync",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "L1: Human-Visible",
+      "relation": "uses",
+      "tail": "@mention + Comment",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "L2: Agent-Agent",
+      "relation": "uses",
+      "tail": "Structured Handoff Packet",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Structured Handoff Packet",
+      "relation": "includes",
+      "tail": "DELEGATE",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Structured Handoff Packet",
+      "relation": "includes",
+      "tail": "REVIEW",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Structured Handoff Packet",
+      "relation": "includes",
+      "tail": "QUERY",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "L3: Passive Sync",
+      "relation": "uses",
+      "tail": "Board State",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "L2 用 @mention",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Event Sourcing + 分层投影",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Event Sourcing + 分层投影",
+      "relation": "includes",
+      "tail": "Event Store",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Event Sourcing + 分层投影",
+      "relation": "includes",
+      "tail": "Projection Engine",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Projection Engine",
+      "relation": "produces",
+      "tail": "Board View",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Projection Engine",
+      "relation": "produces",
+      "tail": "Handoff View",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Projection Engine",
+      "relation": "produces",
+      "tail": "Agent View",
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Session Room 设计",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Session Room 设计",
+      "relation": "based_on",
+      "tail": "任务 (Issue) 为锚点",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "Session Room 设计",
+      "relation": "uses",
+      "tail": "Orchestrator 门面",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "混合方案",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "混合方案",
+      "relation": "includes",
+      "tail": "Role Pool",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "混合方案",
+      "relation": "includes",
+      "tail": "Capability Tags",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "混合方案",
+      "relation": "includes",
+      "tail": "Task Dispatch",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-6e4775"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-0a1f31"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Monorepo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-0a1f31"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Bun",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "pnpm",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Turborepo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "shadcn",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Prisma",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Drizzle",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "Zod",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "part_of",
+      "tail": "agenthub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "Bun",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "HTTP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "coordinator",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "handoff",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "squad",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "eventstore",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "room",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "memory",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "guard",
+      "relation": "part_of",
+      "tail": "server",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "packages",
+      "relation": "part_of",
+      "tail": "agenthub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "core",
+      "relation": "part_of",
+      "tail": "packages",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "ui",
+      "relation": "part_of",
+      "tail": "packages",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "views",
+      "relation": "part_of",
+      "tail": "packages",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "apps",
+      "relation": "part_of",
+      "tail": "agenthub",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "web",
+      "relation": "part_of",
+      "tail": "apps",
+      "schema": [
+        "SYSTEM",
+        "part_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "web",
+      "relation": "uses",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "core",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "core",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "core",
+      "relation": "uses",
+      "tail": "Zod",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "ui",
+      "relation": "uses",
+      "tail": "shadcn",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "Prisma",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "server",
+      "relation": "uses",
+      "tail": "Drizzle",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "coordinator",
+      "relation": "implements",
+      "tail": "Goal → Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "coordinator",
+      "relation": "implements",
+      "tail": "DAG 依赖解析",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "coordinator",
+      "relation": "implements",
+      "tail": "4 种调度策略",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "handoff",
+      "relation": "implements",
+      "tail": "Handoff 状态机",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "handoff",
+      "relation": "implements",
+      "tail": "Handoff 分发 & 依赖解锁",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "handoff",
+      "relation": "implements",
+      "tail": "Actor 路由 & 能力匹配",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "handoff",
+      "relation": "implements",
+      "tail": "结果合成 & 级联失败处理",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "squad",
+      "relation": "implements",
+      "tail": "组建/解散/扩缩",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "squad",
+      "relation": "implements",
+      "tail": "Role Pool → Task Dispatch",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "eventstore",
+      "relation": "implements",
+      "tail": "Event Sourcing",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "eventstore",
+      "relation": "implements",
+      "tail": "事件追加 & 查询",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "eventstore",
+      "relation": "implements",
+      "tail": "Board/Handoff/Agent View 投影",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "room",
+      "relation": "implements",
+      "tail": "Room CRUD",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "room",
+      "relation": "implements",
+      "tail": "成员 & Agent 加入/离开",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "room",
+      "relation": "implements",
+      "tail": "Cross-Room 桥接",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "memory",
+      "relation": "implements",
+      "tail": "图记忆系统",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "memory",
+      "relation": "implements",
+      "tail": "图存储 & 查询",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "memory",
+      "relation": "implements",
+      "tail": "Handoff 完成 → 自动建节点",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "guard",
+      "relation": "implements",
+      "tail": "循环检测",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "guard",
+      "relation": "implements",
+      "tail": "熔断器",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "任务轮询 & 认领",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "双心跳 (WS + HTTP)",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "CLI 子进程管理",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "会话恢复",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "工作区隔离",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "Prompt 构造",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "daemon",
+      "relation": "implements",
+      "tail": "失败分类 & 坏会话检测",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "pnpm workspace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "monorepo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-010-10063d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Bun",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Hono",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Drizzle",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Prisma",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "React 19",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Next.js",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "TanStack Query",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "shadcn/ui",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Zod",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "pnpm workspaces",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Turborepo",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "用户自研图记忆系统",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "Next.js",
+      "relation": "uses",
+      "tail": "App Router",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "shadcn/ui",
+      "relation": "based_on",
+      "tail": "Base UI",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "TanStack Query",
+      "relation": "responsible_for",
+      "tail": "服务端状态",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "Zustand",
+      "relation": "responsible_for",
+      "tail": "客户端状态",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "Zod",
+      "relation": "responsible_for",
+      "tail": "API 响应边界防护",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-011-9b2231"
+    },
+    {
+      "head": "views",
+      "relation": "depends_on",
+      "tail": "core",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "views",
+      "relation": "depends_on",
+      "tail": "ui",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "views",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "core",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "ui",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "rejects",
+      "tail": "react-dom",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "rejects",
+      "tail": "localStorage",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "rejects",
+      "tail": "process.env",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "rejects",
+      "tail": "UI 库",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "adopts",
+      "tail": "Zustand",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "adopts",
+      "tail": "React Query",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "adopts",
+      "tail": "TanStack Table",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/core",
+      "relation": "adopts",
+      "tail": "Zod",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/ui",
+      "relation": "rejects",
+      "tail": "@agenthub/core",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/ui",
+      "relation": "adopts",
+      "tail": "React",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/ui",
+      "relation": "adopts",
+      "tail": "shadcn",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/views",
+      "relation": "rejects",
+      "tail": "next/*",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/views",
+      "relation": "rejects",
+      "tail": "react-router-dom",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/views",
+      "relation": "rejects",
+      "tail": "Zustand stores 定义",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/views",
+      "relation": "depends_on",
+      "tail": "@agenthub/core",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/views",
+      "relation": "depends_on",
+      "tail": "@agenthub/ui",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "@agenthub/views",
+      "relation": "depends_on",
+      "tail": "NavigationAdapter",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "apps/web/platform/",
+      "relation": "adopts",
+      "tail": "next/navigation",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "React Query",
+      "relation": "responsible_for",
+      "tail": "服务端状态",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "Zustand",
+      "relation": "responsible_for",
+      "tail": "客户端状态",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "WS events",
+      "relation": "uses",
+      "tail": "React Query",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "Zustand stores",
+      "relation": "based_on",
+      "tail": "@agenthub/core",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "apps/web",
+      "relation": "related_to",
+      "tail": "Desktop 版本",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "apps/web",
+      "relation": "depends_on",
+      "tail": "packages/*",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "Desktop 版本",
+      "relation": "depends_on",
+      "tail": "packages/*",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "NavigationAdapter",
+      "relation": "related_to",
+      "tail": "platform/ 层",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "Multica",
+      "relation": "related_to",
+      "tail": "The No-Duplication Rule",
+      "schema": [
+        "ORG",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-012-4b986f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "Member",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "Squad",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "Room",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "Issue",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "HandoffPacket",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Workspace",
+      "relation": "contains",
+      "tail": "Event",
+      "schema": [
+        "SYSTEM",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Squad",
+      "relation": "has_leader",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "has_leader",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Squad",
+      "relation": "has_members",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "has_members",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_assignee",
+      "tail": "ActorRef",
+      "schema": [
+        "CONCEPT",
+        "has_assignee",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_parent",
+      "tail": "Issue",
+      "schema": [
+        "CONCEPT",
+        "has_parent",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Issue",
+      "relation": "has_comments",
+      "tail": "Comments",
+      "schema": [
+        "CONCEPT",
+        "has_comments",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffPacket",
+      "relation": "has_from",
+      "tail": "ActorRef",
+      "schema": [
+        "CONCEPT",
+        "has_from",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffPacket",
+      "relation": "has_to",
+      "tail": "ActorRef",
+      "schema": [
+        "CONCEPT",
+        "has_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffPacket",
+      "relation": "has_dependencies",
+      "tail": "HandoffPacket",
+      "schema": [
+        "CONCEPT",
+        "has_dependencies",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffPacket",
+      "relation": "has_parent",
+      "tail": "HandoffPacket",
+      "schema": [
+        "CONCEPT",
+        "has_parent",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "ActorRef",
+      "relation": "has_type",
+      "tail": "ActorType",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "ActorType",
+      "relation": "includes",
+      "tail": "member",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "ActorType",
+      "relation": "includes",
+      "tail": "agent",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "ActorType",
+      "relation": "includes",
+      "tail": "squad",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffPacket",
+      "relation": "has_state_machine",
+      "tail": "HandoffStateMachine",
+      "schema": [
+        "CONCEPT",
+        "has_state_machine",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "pending",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "accepted",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "rejected",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "cancelled",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "running",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "completed",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "HandoffStateMachine",
+      "relation": "has_state",
+      "tail": "failed",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "Task",
+      "relation": "has_lifecycle",
+      "tail": "TaskLifecycle",
+      "schema": [
+        "CONCEPT",
+        "has_lifecycle",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_state",
+      "tail": "queued",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_state",
+      "tail": "dispatched",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_state",
+      "tail": "running",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_state",
+      "tail": "completed",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_state",
+      "tail": "failed",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_state",
+      "tail": "cancelled",
+      "schema": [
+        "CONCEPT",
+        "has_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "TaskLifecycle",
+      "relation": "has_intermediate_state",
+      "tail": "waiting_local_directory",
+      "schema": [
+        "CONCEPT",
+        "has_intermediate_state",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "waiting_local_directory",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-013-87d75f"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Goal-First 任务分解 & 执行",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Daemon 任务执行",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "人类介入工作流",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Goal-First 任务分解 & 执行",
+      "relation": "based_on",
+      "tail": "OMA",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Goal-First 任务分解 & 执行",
+      "relation": "uses",
+      "tail": "Squad Leader",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Goal-First 任务分解 & 执行",
+      "relation": "uses",
+      "tail": "Handoff Dispatcher",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Goal-First 任务分解 & 执行",
+      "relation": "uses",
+      "tail": "Agent Runtime",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "uses",
+      "tail": "LLM",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "任务分解",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "DAG 生成",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "合成结果",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Handoff Dispatcher",
+      "relation": "responsible_for",
+      "tail": "依赖驱动并行调度",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Handoff Dispatcher",
+      "relation": "uses",
+      "tail": "Daemon",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "responsible_for",
+      "tail": "任务执行",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "Claude CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "codex",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "Skills",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "Agent Context",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "session_id",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "work_dir",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "人类介入工作流",
+      "relation": "includes",
+      "tail": "planOnly 模式",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "人类介入工作流",
+      "relation": "includes",
+      "tail": "onPlanReady 回调",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "人类介入工作流",
+      "relation": "includes",
+      "tail": "运行时介入",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "人类介入工作流",
+      "relation": "includes",
+      "tail": "运行时调整",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "planOnly 模式",
+      "relation": "related_to",
+      "tail": "Coordinator",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "运行时介入",
+      "relation": "uses",
+      "tail": "Room",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "运行时调整",
+      "relation": "uses",
+      "tail": "Orchestrator",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-014-6737b3"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "REST API",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "WebSocket",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Workspace",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Auth",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Room",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Issue",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Handoff",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Squad",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "REST API",
+      "relation": "related_to",
+      "tail": "Daemon",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "related_to",
+      "tail": "Room",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "related_to",
+      "tail": "Handoff",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "related_to",
+      "tail": "Task",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "related_to",
+      "tail": "Inbox",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "WebSocket",
+      "relation": "related_to",
+      "tail": "Personal Event",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "Handoff",
+      "relation": "related_to",
+      "tail": "DAG",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "Coordinator",
+      "relation": "related_to",
+      "tail": "Goal",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "Coordinator",
+      "relation": "related_to",
+      "tail": "DAG",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "Daemon",
+      "relation": "related_to",
+      "tail": "Runtime",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "Daemon",
+      "relation": "related_to",
+      "tail": "Task",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-015-5859a4"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "compared_with",
+      "tail": "OpenMultiAgent",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Coordinator Agent + planOnly",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Structured Handoff Protocol",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "统一 Handoff DAG",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Event Sourcing + 分层投影",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multi-Mode Room",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "图记忆系统",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Role Pool + Capability Tags",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Daemon → CLI 子进程",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Event Store 完整审计 + DAG 可视化",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "Daemon → CLI 子进程",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "Activity Log + 时间线",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "直接 DB CRUD",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "Squad (纯 Role)",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "@mention + 自然语言",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Multica",
+      "relation": "adopts",
+      "tail": "Skill 文件 + Session 恢复",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "Coordinator Agent (Goal → DAG)",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "agent.run(prompt)",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "内存 Task DAG",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "内存",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "可选 sharedMemory",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "按 Agent name 匹配",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "直接 LLM API 调用",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "OpenMultiAgent",
+      "relation": "adopts",
+      "tail": "HTML Dashboard",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-016-bbdcdd"
+    },
+    {
+      "head": "Agent",
+      "relation": "has_profile",
+      "tail": "profile",
+      "schema": [
+        "CONCEPT",
+        "has_profile",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Agent",
+      "relation": "has_instructions",
+      "tail": "instructions",
+      "schema": [
+        "CONCEPT",
+        "has_instructions",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Agent",
+      "relation": "has_skills",
+      "tail": "skills",
+      "schema": [
+        "CONCEPT",
+        "has_skills",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Agent",
+      "relation": "has_runtime",
+      "tail": "Runtime",
+      "schema": [
+        "CONCEPT",
+        "has_runtime",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Squad",
+      "relation": "contains",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Squad",
+      "relation": "has_leader",
+      "tail": "Squad Leader",
+      "schema": [
+        "CONCEPT",
+        "has_leader",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "equivalent_to",
+      "tail": "Coordinator",
+      "schema": [
+        "CONCEPT",
+        "equivalent_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Coordinator",
+      "relation": "based_on",
+      "tail": "OpenMultiAgent",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "Goal 分解",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Squad Leader",
+      "relation": "responsible_for",
+      "tail": "Handoff 委派",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Handoff",
+      "relation": "is_unit_of",
+      "tail": "结构化通信",
+      "schema": [
+        "CONCEPT",
+        "is_unit_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Handoff",
+      "relation": "has_type",
+      "tail": "DELEGATE",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Handoff",
+      "relation": "has_type",
+      "tail": "REVIEW",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "composed_of",
+      "tail": "Handoff",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "uses",
+      "tail": "dependencies",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Room",
+      "relation": "is_interaction_space_for",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "is_interaction_space_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Room",
+      "relation": "is_interaction_space_for",
+      "tail": "人",
+      "schema": [
+        "CONCEPT",
+        "is_interaction_space_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Room",
+      "relation": "has_type",
+      "tail": "direct_chat",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Room",
+      "relation": "has_type",
+      "tail": "session_room",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Room",
+      "relation": "has_type",
+      "tail": "topic_room",
+      "schema": [
+        "CONCEPT",
+        "has_type",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Daemon",
+      "relation": "runs_on",
+      "tail": "用户本地",
+      "schema": [
+        "CONCEPT",
+        "runs_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Daemon",
+      "relation": "responsible_for",
+      "tail": "探测 CLI",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Daemon",
+      "relation": "responsible_for",
+      "tail": "轮询认领任务",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Daemon",
+      "relation": "responsible_for",
+      "tail": "执行",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Runtime",
+      "relation": "is_execution_environment_for",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "is_execution_environment_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Runtime",
+      "relation": "is_instance_of",
+      "tail": "CLI 实例",
+      "schema": [
+        "CONCEPT",
+        "is_instance_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Actor",
+      "relation": "can_be",
+      "tail": "member",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Actor",
+      "relation": "can_be",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Actor",
+      "relation": "can_be",
+      "tail": "Squad",
+      "schema": [
+        "CONCEPT",
+        "can_be",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Event Store",
+      "relation": "is_core_storage_for",
+      "tail": "Event Sourcing",
+      "schema": [
+        "CONCEPT",
+        "is_core_storage_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "Event Store",
+      "relation": "stores",
+      "tail": "不可变事件日志",
+      "schema": [
+        "CONCEPT",
+        "stores",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-017-036532"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "TypeScript",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "based_on",
+      "tail": "Bun",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "SQLite",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Daemon",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Handoff Protocol",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Handoff DAG Engine",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Squad Engine",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Goal-First 任务分解",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "4 种调度策略",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "planOnly",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Multi-Mode Room",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Chat",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Board",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Inbox",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Web UI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "图记忆系统",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Event Store",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "DAG 可视化",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Session Pool",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "崩溃恢复",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "GC",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "熔断",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "Handoff DAG Engine",
+      "relation": "depends_on",
+      "tail": "Handoff Protocol",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "Squad Engine",
+      "relation": "depends_on",
+      "tail": "Handoff DAG Engine",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "Coordinator",
+      "relation": "uses",
+      "tail": "Goal-First 任务分解",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "Coordinator",
+      "relation": "uses",
+      "tail": "4 种调度策略",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "Coordinator",
+      "relation": "uses",
+      "tail": "planOnly",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "Daemon",
+      "relation": "uses",
+      "tail": "基础轮询",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "单 Agent Issue 执行",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-018-b1536c"
+    }
+  ],
+  "stats": {
+    "total_chunks": 19,
+    "total_triples": 484,
+    "unique_schemas": 84,
+    "schema_distribution": {
+      "('SYSTEM', 'based_on', 'SYSTEM')": 18,
+      "('SYSTEM', 'based_on', 'PRODUCT')": 2,
+      "('ORG', 'responsible_for', 'SYSTEM')": 1,
+      "('SYSTEM', 'related_to', 'ORG')": 2,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 6,
+      "('SYSTEM', 'based_on', 'ORG')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 10,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 45,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 41,
+      "('CONCEPT', 'based_on', 'SYSTEM')": 3,
+      "('CONCEPT', 'uses', 'CONCEPT')": 9,
+      "('CONCEPT', 'responsible_for', 'CONCEPT')": 6,
+      "('SYSTEM', 'uses', 'CONCEPT')": 25,
+      "('SYSTEM', 'rejects', 'TECHNOLOGY')": 6,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 4,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 6,
+      "('CONCEPT', 'compared_with', 'SYSTEM')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 10,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 34,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 4,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 2,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 3,
+      "('SYSTEM', 'part_of', 'SYSTEM')": 20,
+      "('SYSTEM', 'uses', 'SYSTEM')": 18,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 15,
+      "('SYSTEM', 'contains', 'TECHNOLOGY')": 19,
+      "('SYSTEM', 'contains', 'CONCEPT')": 8,
+      "('TECHNOLOGY', 'adapts', 'PRODUCT')": 2,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 3,
+      "('TECHNOLOGY', 'uses', 'STANDARD')": 1,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 9,
+      "('SYSTEM', 'has_type', 'CONCEPT')": 3,
+      "('SYSTEM', 'contains', 'SYSTEM')": 2,
+      "('CONCEPT', 'contains', 'SYSTEM')": 3,
+      "('SYSTEM', 'anchored_by', 'CONCEPT')": 1,
+      "('SYSTEM', 'exposed_as', 'CONCEPT')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 1,
+      "('SYSTEM', 'integrates', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 16,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'includes', 'SYSTEM')": 2,
+      "('SYSTEM', 'produces', 'CONCEPT')": 3,
+      "('SYSTEM', 'uses', 'STANDARD')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 27,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'based_on', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 8,
+      "('SYSTEM', 'rejects', 'SYSTEM')": 1,
+      "('SYSTEM', 'depends_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 1,
+      "('ORG', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_leader', 'CONCEPT')": 2,
+      "('CONCEPT', 'has_members', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_assignee', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_parent', 'CONCEPT')": 2,
+      "('CONCEPT', 'has_comments', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_from', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_dependencies', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_type', 'CONCEPT')": 6,
+      "('CONCEPT', 'has_state_machine', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_state', 'CONCEPT')": 13,
+      "('CONCEPT', 'has_lifecycle', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_intermediate_state', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'uses', 'SYSTEM')": 5,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 13,
+      "('CONCEPT', 'has_profile', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_instructions', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_skills', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_runtime', 'CONCEPT')": 1,
+      "('CONCEPT', 'contains', 'CONCEPT')": 1,
+      "('CONCEPT', 'equivalent_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_unit_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_interaction_space_for', 'CONCEPT')": 2,
+      "('CONCEPT', 'runs_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_execution_environment_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_instance_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'can_be', 'CONCEPT')": 3,
+      "('CONCEPT', 'is_core_storage_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'stores', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'TECHNOLOGY')": 2
+    },
+    "schema_layer_size": 84,
+    "fact_layer_size": 476,
+    "passage_layer_size": 19
+  }
+}

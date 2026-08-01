@@ -1,0 +1,64 @@
+2026-05-28 09:42:09 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_094209.log
+2026-05-28 09:42:09 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-05-28 09:42:09 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-28 09:42:09 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-28 09:42:09 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-05-28 09:42:09 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-05-28 09:42:09 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-28 09:42:09 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-28 09:42:09 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-28 09:42:09 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-28 09:42:09 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-28 09:42:09 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-28 09:42:09 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-05-28 09:42:09 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=讨论新项目数据库选型，我调研了PostgreSQL 16，功能非常全面
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-8.4922, 9.8281] mean=0.0677 std=2.4367
+2026-05-28 09:42:09 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_016805746 started with msg=eval_1
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=42 model=Qwen3-Embedding-4B
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=42 preview=PostgreSQL的JSONB和CTE递归查询很适合我们这种数据模型频繁变化的场景
+2026-05-28 09:42:09 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-11.6250, 9.9297] mean=-0.0165 std=2.5056
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=43 model=Qwen3-Embedding-4B
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=43 preview=而且PostgreSQL 16的并发读写性能在TB级数据量下明显优于MySQL 8.0
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-8.0781, 10.5000] mean=0.0653 std=2.4832
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=31 model=Qwen3-Embedding-4B
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=31 preview=项目数据库选型决定使用PostgreSQL 16，全体一致通过
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-7.9531, 10.7578] mean=0.0614 std=2.4774
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=PG生态也很完善了，TimescaleDB做时序、PostGIS做地理空间都支持
+2026-05-28 09:42:10 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.09s value_range=[-9.3750, 8.7734] mean=0.0471 std=2.4638
+2026-05-28 09:42:11 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-05-28 09:42:11 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=确认了，数据库选型用PostgreSQL 16，开始准备搭建测试环境
+2026-05-28 09:42:11 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.08s value_range=[-7.8320, 12.4922] mean=0.0710 std=2.3847
+2026-05-28 09:42:11 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:42:11 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=没有反对意见，项目数据库选型最终决定使用PostgreSQL 16
+2026-05-28 09:42:11 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.22s value_range=[-8.0000, 11.2422] mean=0.0699 std=2.5034
+2026-05-28 09:42:12 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-05-28 09:42:12 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=好，项目数据库选型决定使用PostgreSQL 16，就这么定了
+2026-05-28 09:42:12 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-8.2734, 12.6562] mean=0.0598 std=2.5570
+2026-05-28 09:42:14 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_016805746 (chat=eval, msgs=8, pool=1/20)
+2026-05-28 09:42:14 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-28 09:42:14 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_016805746 (msgs=8)
+2026-05-28 09:42:14 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_016805746 chat=eval msgs=8 len=297
+2026-05-28 09:42:14 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=297 content=讨论新项目数据库选型，我调研了PostgreSQL 16，功能非常全面 PostgreSQL的JSONB和CTE递归查询
+2026-05-28 09:42:14 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=297)
+2026-05-28 09:42:16 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.50s
+2026-05-28 09:42:16 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-28 09:42:16 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=e12999572121 title=项目数据库选型决定使用PostgreSQL 16 source=im
+2026-05-28 09:42:16 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=e12999572121 v1
+2026-05-28 09:42:16 - src.core.engine - INFO - Created decision: e12999572121 v1 — 项目数据库选型决定使用PostgreSQL 16
+2026-05-28 09:42:16 - src.core.engine - INFO - [Mutation] CREATE applied: sid=e12999572121 v1
+2026-05-28 09:42:16 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:42:16 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:42:17 - src.view.client - ERROR - Failed to upsert record for e12999572121: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:42:17 - src.view.syncer - INFO - [BaseView] Synced decision e12999572121 v1
+2026-05-28 09:42:17 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=e12999572121
+2026-05-28 09:42:17 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=e12999572121
+2026-05-28 09:42:17 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-05-28 09:42:17 - src.core.engine - INFO - [Engine] <<< _process_episode done time=2.32s
+2026-05-28 09:42:17 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-28 09:42:17 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-28 09:42:17 - src.core.engine - INFO - Synced 1 dirty decisions to storage
+2026-05-28 09:42:17 - src.core.engine - INFO - MemoryEngine stopped (applied=1, failed=0)

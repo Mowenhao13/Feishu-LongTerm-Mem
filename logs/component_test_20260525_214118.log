@@ -1,0 +1,35 @@
+2026-05-25 21:41:18 - component_test - ERROR - [LLM Test] Failed: No module named 'aiohttp'
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/scripts/test_components.py", line 85, in test_llm
+    from src.model.llm_provider import LLMProvider
+  File "/Users/halllo/projects/local/feishu-mem/src/model/llm_provider.py", line 3, in <module>
+    from .openai_provider import OpenAIProvider
+  File "/Users/halllo/projects/local/feishu-mem/src/model/openai_provider.py", line 13, in <module>
+    import aiohttp
+ModuleNotFoundError: No module named 'aiohttp'
+
+2026-05-25 21:41:18 - src.model.embedding_provider - INFO - [Embedding] Init: url={'url': 'http://127.0.0.1:8000/v1/embeddings', 'model': 'Qwen3-Embedding-4B', 'timeout': 30, 'max_retries': 3} model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-25 21:41:18 - component_test - INFO - [Embedding Test] >>> Encoding 6 texts
+2026-05-25 21:41:18 - component_test - ERROR - [Embedding Test] Failed: 'EmbeddingProvider' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/scripts/test_components.py", line 149, in test_embedding
+    vectors = embedder.encode(texts)
+              ^^^^^^^^^^^^^^^
+AttributeError: 'EmbeddingProvider' object has no attribute 'encode'
+
+2026-05-25 21:41:18 - src.model.reranker_provider - INFO - [Reranker] Init: url={'url': 'http://127.0.0.1:8001', 'model': 'Qwen3-Reranker-4B', 'timeout': 30, 'max_retries': 3} model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-25 21:41:18 - component_test - INFO - [Reranker Test] >>> Reranking query='前端技术选型' with 5 docs
+2026-05-25 21:41:18 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=6 docs=5 model=Qwen3-Reranker-4B
+2026-05-25 21:41:18 - component_test - ERROR - [Reranker Test] Failed: 'dict' object has no attribute 'rstrip'
+Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/scripts/test_components.py", line 177, in test_reranker
+    scores = reranker.rerank(TEST_QUERY, TEST_DOCS)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/model/reranker_provider.py", line 66, in rerank
+    return self._rerank_via_completions(queries, docs, instruction)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/halllo/projects/local/feishu-mem/src/model/reranker_provider.py", line 136, in _rerank_via_completions
+    completions_url = self.base_url.rstrip('/') + '/v1/completions'
+                      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'rstrip'
+

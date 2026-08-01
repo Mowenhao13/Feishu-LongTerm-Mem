@@ -1,0 +1,80 @@
+2026-06-04 08:58:23 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260604_085823.log
+2026-06-04 08:58:23 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-06-04 08:58:23 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-04 08:58:23 - src.core.engine - INFO - GitStorage initialized at mem-data
+2026-06-04 08:58:23 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-06-04 08:58:23 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=1 topics=1
+2026-06-04 08:58:24 - src.view.tenant_token - INFO - [TenantToken] Refreshed token, expires in 7112s
+2026-06-04 08:58:24 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-04 08:58:24 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-04 08:58:24 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-04 08:58:24 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-06-04 08:58:24 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-06-04 08:58:24 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-04 08:58:24 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-04 08:58:25 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 20 episode(s) from data/suspend_pool.json
+2026-06-04 08:58:25 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=37 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=37 preview=数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_d8659e87e started with msg=eval_1
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=容器化肯定要上K8s，生产环境都这么用了
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.09s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=83 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=83 preview=话说回来，数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS，而且还有timescaledb这样的
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '话说回来，数据库选型的话，PostgreSQL的扩展性更强，', suspend episode=ep_d8659e87e (msgs=2)
+2026-06-04 08:58:25 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_d8659e87e (chat=eval, msgs=2, pool=21/20)
+2026-06-04 08:58:25 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_666f639b0 (chat=eval_1, suspended_at=13:38:29)
+2026-06-04 08:58:25 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_f2316ed4a started after keyword suspend
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=17 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=17 preview=容器化方案就用K8s吧，生态最成熟
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=数据库选型还是要看团队能力，PG学习成本高一些，不过长期来看值得投资
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=12 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=12 preview=前端可以考虑用React
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=25 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=25 preview=容器的监控用Prometheus+Grafana吧
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=53 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=53 preview=对了，消息队列选了Kafka，配合流处理引擎很强大，而且Kafka的生态非常完善，从连接器到流处理一应俱全
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:25 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '对了，消息队列选了Kafka，配合流处理引擎很强大，而且Ka', suspend episode=ep_f2316ed4a (msgs=6)
+2026-06-04 08:58:25 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_f2316ed4a (chat=eval, msgs=6, pool=21/20)
+2026-06-04 08:58:25 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_0b429bff5 (chat=eval_1, suspended_at=13:38:35)
+2026-06-04 08:58:25 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_909ee004c started after keyword suspend
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-06-04 08:58:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=数据库还是决定用PG，RDS托管省心省力，阿里云RDS for PG的性价比还不错，自动备份和监控都自带
+2026-06-04 08:58:25 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 08:58:27 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_909ee004c (chat=eval, msgs=2, pool=21/20)
+2026-06-04 08:58:27 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_0ef853a96 (chat=eval_0, suspended_at=17:45:52)
+2026-06-04 08:58:27 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 20 episode(s) to data/suspend_pool.json
+2026-06-04 08:58:27 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_909ee004c (msgs=2)
+2026-06-04 08:58:27 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_909ee004c chat=eval msgs=2 len=106
+2026-06-04 08:58:27 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=106 content=对了，消息队列选了Kafka，配合流处理引擎很强大，而且Kafka的生态非常完善，从连接器到流处理一应俱全 数据库还是决
+2026-06-04 08:58:27 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=106)
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR - Exception: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR -    [TIME] Duration: 0.02s
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR -    [ERROR] Error message: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR - retry_num: 0
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR - Exception: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR -    [TIME] Duration: 0.03s
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR -    [ERROR] Error message: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR - retry_num: 1
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR - Exception: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR -    [TIME] Duration: 0.05s
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR -    [ERROR] Error message: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.model.openai_provider - ERROR - retry_num: 2
+2026-06-04 08:58:27 - src.extractors.simple_llm_extractor - ERROR - [LLM Extractor] LLM call failed: Request failed: 'str' object has no attribute 'get'
+2026-06-04 08:58:27 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.05s
+2026-06-04 08:58:27 - src.core.engine - INFO - [LLM] No decision found in content (对了，消息队列选了Kafka，配合流处理引擎很强大，而且Kafka的生态非常完善，从连接器到流处理一应俱全 数据库还是决)
+2026-06-04 08:58:27 - src.core.engine - INFO - [Engine] No decision extracted from episode ep_909ee004c (len=106)
+2026-06-04 08:58:28 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 2, 'episode_hyperedges': 1, 'topics': 1}
+2026-06-04 08:58:28 - src.core.engine - INFO - [Engine] <<< _process_episode done time=0.05s
+2026-06-04 08:58:28 - src.card.pusher - INFO - Push scheduler stopped
+2026-06-04 08:58:28 - src.core.engine - INFO - Hypergraph saved on stop
+2026-06-04 08:58:28 - src.core.engine - INFO - MemoryEngine stopped (applied=0, failed=0)

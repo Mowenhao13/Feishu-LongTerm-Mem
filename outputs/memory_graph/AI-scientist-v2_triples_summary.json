@@ -1,0 +1,763 @@
+{
+  "triples": [
+    {
+      "head": "AI Scientist-v2",
+      "relation": "uses",
+      "tail": "AgentManager",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "AI Scientist-v2",
+      "relation": "uses",
+      "tail": "ParallelAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "AI Scientist-v2",
+      "relation": "uses",
+      "tail": "MinimalAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "AgentManager",
+      "relation": "responsible_for",
+      "tail": "high-level coordination",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "ParallelAgent",
+      "relation": "responsible_for",
+      "tail": "parallel execution management",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "MinimalAgent",
+      "relation": "responsible_for",
+      "tail": "specific task execution",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "AI Scientist-v2",
+      "relation": "based_on",
+      "tail": "layered architecture",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "layered architecture",
+      "relation": "enables",
+      "tail": "multi-agent collaboration",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2b80f1"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "主从架构",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "进程池",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "AgentManager",
+      "relation": "responsible_for",
+      "tail": "阶段协调",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "ParallelAgent",
+      "relation": "responsible_for",
+      "tail": "并行执行管理",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "ParallelAgent",
+      "relation": "uses",
+      "tail": "ProcessPoolExecutor",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "ParallelAgent",
+      "relation": "uses",
+      "tail": "GPUManager",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "ProcessPoolExecutor",
+      "relation": "manages",
+      "tail": "Worker",
+      "schema": [
+        "TECHNOLOGY",
+        "manages",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "GPUManager",
+      "relation": "responsible_for",
+      "tail": "资源分配",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "GPUManager",
+      "relation": "allocates",
+      "tail": "GPU",
+      "schema": [
+        "SYSTEM",
+        "allocates",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "Worker",
+      "relation": "uses",
+      "tail": "MinimalAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "MinimalAgent",
+      "relation": "created_by",
+      "tail": "_process_node_wrapper",
+      "schema": [
+        "SYSTEM",
+        "created_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "ParallelAgent",
+      "relation": "adjusts",
+      "tail": "worker数量",
+      "schema": [
+        "SYSTEM",
+        "adjusts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "worker数量",
+      "relation": "based_on",
+      "tail": "GPU数量",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-390d17"
+    },
+    {
+      "head": "Journal",
+      "relation": "tracks",
+      "tail": "experiment_node",
+      "schema": [
+        "SYSTEM",
+        "tracks",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "Journal",
+      "relation": "maintains",
+      "tail": "tree_structure",
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "Journal",
+      "relation": "maintains",
+      "tail": "parent_child_relationship",
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "Node",
+      "relation": "contains",
+      "tail": "code",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "Node",
+      "relation": "contains",
+      "tail": "execution_result",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "Node",
+      "relation": "contains",
+      "tail": "metric",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "Node",
+      "relation": "contains",
+      "tail": "VLM_analysis",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "AgentManager",
+      "relation": "maintains",
+      "tail": "stage_history",
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "AgentManager",
+      "relation": "maintains",
+      "tail": "current_state",
+      "schema": [
+        "SYSTEM",
+        "maintains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "checkpoint_mechanism",
+      "relation": "saves",
+      "tail": "complete_state",
+      "schema": [
+        "CONCEPT",
+        "saves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "checkpoint_mechanism",
+      "relation": "uses",
+      "tail": "pickle_file",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "checkpoint_mechanism",
+      "relation": "supports",
+      "tail": "interrupt_recovery",
+      "schema": [
+        "CONCEPT",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-6b836b"
+    },
+    {
+      "head": "query()",
+      "relation": "uses",
+      "tail": "LLM",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "query()",
+      "relation": "uses",
+      "tail": "FunctionSpec",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "FunctionSpec",
+      "relation": "related_to",
+      "tail": "structured_output",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "node_data",
+      "relation": "uses",
+      "tail": "serialization",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "node_data",
+      "relation": "uses",
+      "tail": "deserialization",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "node_data",
+      "relation": "used_for",
+      "tail": "inter_process_communication",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "GPUManager",
+      "relation": "uses",
+      "tail": "process_id",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "GPUManager",
+      "relation": "uses",
+      "tail": "CUDA_VISIBLE_DEVICES",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "CUDA_VISIBLE_DEVICES",
+      "relation": "passed_to",
+      "tail": "worker_process",
+      "schema": [
+        "STANDARD",
+        "passed_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "GPUManager",
+      "relation": "responsible_for",
+      "tail": "GPU_resource_coordination",
+      "schema": [
+        "TECHNOLOGY",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-e39916"
+    },
+    {
+      "head": "research_process",
+      "relation": "composed_of",
+      "tail": "initial_implementation",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "research_process",
+      "relation": "composed_of",
+      "tail": "baseline_tuning",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "research_process",
+      "relation": "composed_of",
+      "tail": "creative_research",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "research_process",
+      "relation": "composed_of",
+      "tail": "ablation_studies",
+      "schema": [
+        "CONCEPT",
+        "composed_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "initial_implementation",
+      "relation": "has_substage",
+      "tail": "substage",
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "baseline_tuning",
+      "relation": "has_substage",
+      "tail": "substage",
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "creative_research",
+      "relation": "has_substage",
+      "tail": "substage",
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "ablation_studies",
+      "relation": "has_substage",
+      "tail": "substage",
+      "schema": [
+        "CONCEPT",
+        "has_substage",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "substage",
+      "relation": "generated_by",
+      "tail": "_create_next_substage",
+      "schema": [
+        "CONCEPT",
+        "generated_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "parent_node",
+      "relation": "determines",
+      "tail": "node_processing_type",
+      "schema": [
+        "CONCEPT",
+        "determines",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "node_processing_type",
+      "relation": "includes",
+      "tail": "_debug",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "node_processing_type",
+      "relation": "includes",
+      "tail": "_generate_hyperparam_tuning_node",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "node_processing_type",
+      "relation": "includes",
+      "tail": "_generate_ablation_node",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "node_processing_type",
+      "relation": "includes",
+      "tail": "_improve",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "node_processing_type",
+      "relation": "includes",
+      "tail": "_draft",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_debug",
+      "relation": "triggered_by",
+      "tail": "buggy_parent_node",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_generate_hyperparam_tuning_node",
+      "relation": "triggered_by",
+      "tail": "stage_2",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_generate_ablation_node",
+      "relation": "triggered_by",
+      "tail": "stage_4",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_improve",
+      "relation": "triggered_by",
+      "tail": "non_buggy_non_stage_2_4",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_draft",
+      "relation": "triggered_by",
+      "tail": "null_parent_node",
+      "schema": [
+        "CONCEPT",
+        "triggered_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_select_parallel_nodes",
+      "relation": "implements",
+      "tail": "exploration_exploitation_balance",
+      "schema": [
+        "CONCEPT",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    },
+    {
+      "head": "_select_parallel_nodes",
+      "relation": "adapts_to",
+      "tail": "stage_characteristics",
+      "schema": [
+        "CONCEPT",
+        "adapts_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-8c81ec"
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 65,
+    "unique_schemas": 34,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'responsible_for', 'CONCEPT')": 4,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 1,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 3,
+      "('SYSTEM', 'uses', 'SYSTEM')": 2,
+      "('TECHNOLOGY', 'manages', 'SYSTEM')": 1,
+      "('SYSTEM', 'allocates', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'created_by', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adjusts', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'tracks', 'CONCEPT')": 1,
+      "('SYSTEM', 'maintains', 'CONCEPT')": 4,
+      "('CONCEPT', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'saves', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'supports', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 2,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'uses', 'STANDARD')": 1,
+      "('STANDARD', 'passed_to', 'SYSTEM')": 1,
+      "('CONCEPT', 'composed_of', 'CONCEPT')": 4,
+      "('CONCEPT', 'has_substage', 'CONCEPT')": 4,
+      "('CONCEPT', 'generated_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'determines', 'CONCEPT')": 1,
+      "('CONCEPT', 'includes', 'CONCEPT')": 5,
+      "('CONCEPT', 'triggered_by', 'CONCEPT')": 5,
+      "('CONCEPT', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'adapts_to', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 34,
+    "fact_layer_size": 65,
+    "passage_layer_size": 5
+  }
+}

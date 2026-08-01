@@ -1,0 +1,16 @@
+{"chat_id": "chat_0", "msg_id": "m001", "speaker": "张三", "msg": "用PG还是MySQL，之前项目用的PG感觉还不错", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m002", "speaker": "李四", "msg": "PG的扩展性确实好，而且社区活跃，但MySQL我们团队更熟，上手成本低", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m003", "speaker": "王五", "msg": "确定吗？PG的学习曲线可不低，线上万一出问题能搞定吗", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m004", "speaker": "张三", "msg": "长期看PG更值得投入，文档也全，周边生态像PostGIS这些后面可能用得上", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m005", "speaker": "李四", "msg": "要不这样，核心业务用PG，历史数据还是放MySQL读库，两边不耽误", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m006", "speaker": "王五", "msg": "行，那就PG吧，MySQL先保留着做读库", "expected_decision": true, "expected_topic": "用PG还是MySQL", "expected_summary": "核心业务采用PostgreSQL，历史数据保留MySQL作为读库", "expected_status": "decided", "expected_impact": "major", "difficulty": "easy"}
+{"chat_id": "chat_0", "msg_id": "m007", "speaker": "张三", "msg": "App Router迁移了吗？新项目要不要直接用", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m008", "speaker": "李四", "msg": "App Router的streaming和server components挺香的，但Pages Router的项目迁过来工作量不小", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m009", "speaker": "王五", "msg": "Pages Router用得好好的，迁移出问题谁负责，再说吧", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m010", "speaker": "李四", "msg": "昨天试了下，路由定义更直观，loading.tsx直接丢目录就行，不用手动配了", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_0", "msg_id": "m011", "speaker": "张三", "msg": "那就迁吧，早迁早享受，新项目直接上App Router", "expected_decision": true, "expected_topic": "Next.js App Router迁移", "expected_summary": "新项目直接采用App Router，存量Pages Router项目逐步迁移", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}
+{"chat_id": "chat_1", "msg_id": "m012", "speaker": "赵六", "msg": "K8s版本升级策略大家有什么想法？现在集群还是1.24", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_1", "msg_id": "m013", "speaker": "钱七", "msg": "1.24快EOL了，至少升到1.26，但跨版本升级要一个个来，不能跳", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_1", "msg_id": "m014", "speaker": "赵六", "msg": "今天食堂的鱼香肉丝不错，比上周好", "expected_decision": false, "is_distractor": true}
+{"chat_id": "chat_1", "msg_id": "m015", "speaker": "钱七", "msg": "先用kubeadm升到1.26，跑一个月稳定了再上1.28，这样风险可控", "expected_decision": false, "is_distractor": false}
+{"chat_id": "chat_1", "msg_id": "m016", "speaker": "赵六", "msg": "那就按这个节奏来，先1.26再1.28，中间留够观察期", "expected_decision": true, "expected_topic": "K8s版本升级策略", "expected_summary": "先用kubeadm升级到1.26，稳定运行一个月后再升级到1.28", "expected_status": "decided", "expected_impact": "major", "difficulty": "medium"}

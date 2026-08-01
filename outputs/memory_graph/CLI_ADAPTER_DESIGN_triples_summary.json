@@ -1,0 +1,1262 @@
+{
+  "triples": [
+    {
+      "head": "CLI Adapter",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-f18a65"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "based_on",
+      "tail": "Repo2 Adapter 接口",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-f18a65"
+    },
+    {
+      "head": "Multica",
+      "relation": "related_to",
+      "tail": "ref/multica",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-f18a65"
+    },
+    {
+      "head": "Repo2 Adapter 接口",
+      "relation": "related_to",
+      "tail": "ref/repo2",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-f18a65"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "related_to",
+      "tail": "ref/repo3",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-f18a65"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "related_to",
+      "tail": "ref/repo1",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-000-f18a65"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "related_to",
+      "tail": "multica",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "related_to",
+      "tail": "repo2",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "related_to",
+      "tail": "repo3",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "CLI Adapter",
+      "relation": "related_to",
+      "tail": "repo1",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo2",
+      "relation": "uses",
+      "tail": "Go",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo3",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo1",
+      "relation": "uses",
+      "tail": "TypeScript",
+      "schema": [
+        "ORG",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "server/pkg/agent/{agent,claude,codex,thinking,models}.go",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo2",
+      "relation": "implements",
+      "tail": "src/daemon/adapter/{adapter,claude,codex,command}.go",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo3",
+      "relation": "implements",
+      "tail": "apps/server/src/adapter/adapter.factory.ts",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo1",
+      "relation": "implements",
+      "tail": "agent-runtime/src/runtime/",
+      "schema": [
+        "ORG",
+        "implements",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "multica",
+      "relation": "has",
+      "tail": "12 个 Agent 后端",
+      "schema": [
+        "ORG",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo2",
+      "relation": "has",
+      "tail": "简化适配器模式",
+      "schema": [
+        "ORG",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo3",
+      "relation": "has",
+      "tail": "工厂 + 中间件链",
+      "schema": [
+        "ORG",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "repo1",
+      "relation": "has",
+      "tail": "运行时抽象",
+      "schema": [
+        "ORG",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-60f628"
+    },
+    {
+      "head": "multica",
+      "relation": "adopts",
+      "tail": "Channel架构",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "adopts",
+      "tail": "子进程管理",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "uses",
+      "tail": "Backend接口",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Backend接口",
+      "relation": "has_method",
+      "tail": "Execute",
+      "schema": [
+        "CONCEPT",
+        "has_method",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Execute",
+      "relation": "returns",
+      "tail": "Session",
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Session",
+      "relation": "contains",
+      "tail": "Messages",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Session",
+      "relation": "contains",
+      "tail": "Result",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Messages",
+      "relation": "provides",
+      "tail": "流式事件",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Result",
+      "relation": "provides",
+      "tail": "最终结果",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "supports",
+      "tail": "Session恢复",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Session恢复",
+      "relation": "uses",
+      "tail": "ResumeSessionID",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Args安全过滤",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Args安全过滤",
+      "relation": "uses",
+      "tail": "filterCustomArgs",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "filterCustomArgs",
+      "relation": "filters",
+      "tail": "--output-format",
+      "schema": [
+        "CONCEPT",
+        "filters",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "filterCustomArgs",
+      "relation": "filters",
+      "tail": "--permission-mode",
+      "schema": [
+        "CONCEPT",
+        "filters",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "filterCustomArgs",
+      "relation": "filters",
+      "tail": "--mcp-config",
+      "schema": [
+        "CONCEPT",
+        "filters",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "Env安全过滤",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Env安全过滤",
+      "relation": "uses",
+      "tail": "isFilteredChildEnvKey",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "isFilteredChildEnvKey",
+      "relation": "filters",
+      "tail": "CLAUDECODE_*",
+      "schema": [
+        "CONCEPT",
+        "filters",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "implements",
+      "tail": "MCP Config管理",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "MCP Config管理",
+      "relation": "uses",
+      "tail": "临时文件",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "MCP Config管理",
+      "relation": "passes_via",
+      "tail": "--mcp-config",
+      "schema": [
+        "CONCEPT",
+        "passes_via",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "supports",
+      "tail": "Thinking Level",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "Thinking Level",
+      "relation": "injects",
+      "tail": "--effort",
+      "schema": [
+        "CONCEPT",
+        "injects",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "--effort",
+      "relation": "supports_values",
+      "tail": "low/medium/high/xhigh/max",
+      "schema": [
+        "STANDARD",
+        "supports_values",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "multica",
+      "relation": "related_to",
+      "tail": "Claude CLI适配器",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-48450d"
+    },
+    {
+      "head": "claudeBackend",
+      "relation": "uses",
+      "tail": "stream-json",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "claudeBackend",
+      "relation": "uses",
+      "tail": "stdin/stdout",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "claudeBackend",
+      "relation": "uses",
+      "tail": "subprocess",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "claudeBackend",
+      "relation": "adopts",
+      "tail": "bypassPermissions",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "claudeBackend",
+      "relation": "rejects",
+      "tail": "AskUserQuestion",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "codexBackend",
+      "relation": "uses",
+      "tail": "JSON-RPC",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "codexBackend",
+      "relation": "uses",
+      "tail": "MCP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "codexBackend",
+      "relation": "uses",
+      "tail": "semantic inactivity timeout",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "codexBackend",
+      "relation": "uses",
+      "tail": "codexClient",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "codexBackend",
+      "relation": "uses",
+      "tail": "config.toml",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "codexBackend",
+      "relation": "compared_with",
+      "tail": "claudeBackend",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "Repo2",
+      "relation": "related_to",
+      "tail": "adapter pattern",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "Repo2",
+      "relation": "related_to",
+      "tail": "CLI wrapper",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "multica",
+      "relation": "responsible_for",
+      "tail": "codexBackend",
+      "schema": [
+        "ORG",
+        "responsible_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-7613a5"
+    },
+    {
+      "head": "Adapter",
+      "relation": "defined_in",
+      "tail": "adapter.go",
+      "schema": [
+        "CONCEPT",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "CommandAdapter",
+      "relation": "implements",
+      "tail": "Adapter",
+      "schema": [
+        "TECHNOLOGY",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "CommandAdapter",
+      "relation": "defined_in",
+      "tail": "command.go",
+      "schema": [
+        "TECHNOLOGY",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "NewClaudeAdapter",
+      "relation": "uses",
+      "tail": "CommandAdapter",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "NewCodexAdapter",
+      "relation": "uses",
+      "tail": "CommandAdapter",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "NewClaudeAdapter",
+      "relation": "defined_in",
+      "tail": "claude.go",
+      "schema": [
+        "TECHNOLOGY",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "NewCodexAdapter",
+      "relation": "defined_in",
+      "tail": "codex.go",
+      "schema": [
+        "TECHNOLOGY",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "CommandAdapter",
+      "relation": "related_to",
+      "tail": "快速原型",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "CommandAdapter",
+      "relation": "related_to",
+      "tail": "生产级特性",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "defined_in",
+      "tail": "adapter.factory.ts",
+      "schema": [
+        "TECHNOLOGY",
+        "defined_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "uses",
+      "tail": "工厂模式",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "uses",
+      "tail": "环境密钥回退",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "uses",
+      "tail": "中间件链",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "supports",
+      "tail": "claude",
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "supports",
+      "tail": "codex",
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "supports",
+      "tail": "openai",
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentAdapterFactory",
+      "relation": "supports",
+      "tail": "mock",
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-0e6db0"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Multica",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Repo2 Adapter 接口",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "ClaudeAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "CodexAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "OpenCodeAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "CustomAdapter",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "ClaudeAdapter",
+      "relation": "spawns",
+      "tail": "claude CLI",
+      "schema": [
+        "SYSTEM",
+        "spawns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "CodexAdapter",
+      "relation": "spawns",
+      "tail": "codex CLI",
+      "schema": [
+        "SYSTEM",
+        "spawns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "OpenCodeAdapter",
+      "relation": "spawns",
+      "tail": "opencode CLI",
+      "schema": [
+        "SYSTEM",
+        "spawns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "CodexAdapter",
+      "relation": "uses",
+      "tail": "JSON-RPC 协议",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "CodexAdapter",
+      "relation": "uses",
+      "tail": "MCP Config",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Channel 架构",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "filterCustomArgs",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "isFilteredChildEnvKey",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "ResumeSessionID",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "resolveSessionID",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "MCP 注入",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Thinking Level",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "自动批准",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "流式格式",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "超时策略",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Token 跟踪",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "ExecOptions → Session 架构",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "Start/Stop 生命周期",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentAdapter",
+      "relation": "based_on",
+      "tail": "Multica",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentAdapter",
+      "relation": "based_on",
+      "tail": "Repo2 Adapter 接口",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentAdapter",
+      "relation": "uses",
+      "tail": "Execute",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentAdapter",
+      "relation": "uses",
+      "tail": "Start",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentAdapter",
+      "relation": "uses",
+      "tail": "Stop",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentAdapter",
+      "relation": "uses",
+      "tail": "IsRunning",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "AgentAdapter",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-b3805d"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 110,
+    "unique_schemas": 38,
+    "schema_distribution": {
+      "('SYSTEM', 'based_on', 'SYSTEM')": 2,
+      "('SYSTEM', 'related_to', 'ORG')": 4,
+      "('CONCEPT', 'related_to', 'ORG')": 4,
+      "('ORG', 'uses', 'TECHNOLOGY')": 4,
+      "('ORG', 'implements', 'SYSTEM')": 4,
+      "('ORG', 'has', 'CONCEPT')": 4,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 17,
+      "('SYSTEM', 'uses', 'CONCEPT')": 6,
+      "('CONCEPT', 'has_method', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'CONCEPT')": 1,
+      "('CONCEPT', 'contains', 'CONCEPT')": 2,
+      "('CONCEPT', 'provides', 'CONCEPT')": 2,
+      "('SYSTEM', 'supports', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 8,
+      "('SYSTEM', 'implements', 'CONCEPT')": 3,
+      "('CONCEPT', 'filters', 'STANDARD')": 3,
+      "('CONCEPT', 'filters', 'CONCEPT')": 1,
+      "('CONCEPT', 'passes_via', 'STANDARD')": 1,
+      "('CONCEPT', 'injects', 'STANDARD')": 1,
+      "('STANDARD', 'supports_values', 'CONCEPT')": 1,
+      "('SYSTEM', 'related_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'uses', 'STANDARD')": 4,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'SYSTEM')": 5,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 3,
+      "('ORG', 'responsible_for', 'SYSTEM')": 1,
+      "('CONCEPT', 'defined_in', 'SYSTEM')": 1,
+      "('TECHNOLOGY', 'implements', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'defined_in', 'SYSTEM')": 4,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 2,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 3,
+      "('TECHNOLOGY', 'supports', 'TECHNOLOGY')": 4,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'spawns', 'TECHNOLOGY')": 3,
+      "('CONCEPT', 'based_on', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 38,
+    "fact_layer_size": 110,
+    "passage_layer_size": 6
+  }
+}

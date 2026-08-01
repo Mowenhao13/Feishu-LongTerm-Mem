@@ -1,0 +1,85 @@
+generation:
+  method: llm
+  model: "deepseek-chat"
+  temperature: 0.7
+
+single_chat:
+  topics:
+    - name: "用PG还是MySQL"
+      keywords: ["PostgreSQL", "MySQL", "迁移", "兼容性"]
+    - name: "Redis缓存key规范"
+      keywords: ["Redis", "缓存", "key命名", "过期策略"]
+    - name: "分库分表方案"
+      keywords: ["分库", "分表", "ShardingSphere", "MyCAT"]
+    - name: "Next.js App Router迁移"
+      keywords: ["Next.js", "App Router", "Pages Router", "迁移"]
+    - name: "组件库选Antd还是Semi"
+      keywords: ["Antd", "Semi Design", "组件库", "迁移"]
+    - name: "构建工具切Vite"
+      keywords: ["Vite", "Webpack", "构建", "迁移"]
+    - name: "K8s版本升级策略"
+      keywords: ["K8s", "版本升级", "kubeadm", "Rancher"]
+    - name: "Docker镜像体积优化"
+      keywords: ["Docker", "镜像", "体积", "alpine", "多阶段构建"]
+    - name: "告警阈值调多少"
+      keywords: ["告警", "阈值", "P99", "CPU", "内存"]
+    - name: "Grafana大盘重构"
+      keywords: ["Grafana", "大盘", "面板", "JSON模型"]
+    - name: "日志采样率"
+      keywords: ["日志", "采样", "ELK", "Loki"]
+    - name: "Kafka分区数调整"
+      keywords: ["Kafka", "分区", "吞吐", "重平衡"]
+    - name: "RabbitMQ死信队列"
+      keywords: ["RabbitMQ", "死信", "重试", "延迟队列"]
+    - name: "Pulsar Topic管理"
+      keywords: ["Pulsar", "Topic", "租户", "namespace"]
+  num_decisions_per_topic: 5
+  noise_ratio: 0.3
+  difficulty:
+    easy: 0.3
+    medium: 0.4
+    hard: 0.3
+  total_messages: ~1500
+
+multi_chat:
+  num_chats: 5
+  topics_per_chat: 3
+  num_decisions_per_chat: 8
+  overlap_ratio: 0.2
+  total_messages: ~2500
+
+# argusbot_v3 — expanded benchmark dataset (Phase 2)
+argusbot_v3:
+  description: "扩增数据集，~12,600条消息 / ~1,510决策 / ~816查询，覆盖跨Session/冲突/噪声/用户分区等场景"
+  llm_domains: 7
+  llm_chats: 70
+  llm_messages: 2373
+  llm_decisions: 132
+  llm_queries: 717
+  multi_session_topics: 10
+  multi_session_messages: 240
+  multi_session_decisions: 30
+  user_partitioning_scenarios: 8
+  user_partitioning_messages: 52
+  user_partitioning_decisions: 8
+  cross_session_conflicts: 10
+  cross_session_messages: 90
+  cross_session_decisions: 20
+  variable_noise_ratios: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+  variable_noise_chats: 440
+  variable_noise_messages: 9845
+  variable_noise_decisions: 1320
+  temporal_queries: 80
+  ambiguous_queries: 19
+  total_messages: ~12600
+  total_decisions: ~1510
+
+speaker_styles:
+  - name: "直接型"
+    traits: "话少、结论前置、常用'就'字"
+  - name: "分析型"
+    traits: "话多、喜欢列举优缺点、长句多"
+  - name: "谨慎型"
+    traits: "常用反问/疑问句、倾向说'再想想''确定吗'"
+  - name: "协调型"
+    traits: "善于总结、常用'大家觉得呢''那就这么定了'"

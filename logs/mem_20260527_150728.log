@@ -1,0 +1,281 @@
+2026-05-27 15:07:28 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260527_150728.log
+2026-05-27 15:07:29 - src.eval_runner - INFO - MemoryGraph loaded: 34 decisions
+2026-05-27 15:07:29 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-27 15:07:29 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-27 15:07:29 - src.core.engine - INFO - Loaded 34 decisions, 4 topics
+2026-05-27 15:07:29 - src.core.engine - INFO - Hypergraph loaded: decisions=0 facts=0 episodes=58 topics=1
+2026-05-27 15:07:29 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-27 15:07:29 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-27 15:07:29 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-27 15:07:29 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-27 15:07:29 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-27 15:07:29 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-27 15:07:29 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-27 15:07:29 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-05-27 15:07:29 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-27 15:07:29 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_17f02663c started with msg=eval_1
+2026-05-27 15:07:29 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少
+2026-05-27 15:07:29 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150729-8a9a6090.json
+2026-05-27 15:07:29 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:29 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=703 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:29 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=703)
+2026-05-27 15:07:31 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.13s
+2026-05-27 15:07:31 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:31 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型我倾向PostgreSQL，OLTP场景下性能比MySQL好不少)
+2026-05-27 15:07:31 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.13s
+2026-05-27 15:07:31 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化肯定要上K8s，生产环境都这么用了
+2026-05-27 15:07:31 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150731-648c51f2.json
+2026-05-27 15:07:31 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:31 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=686 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:31 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=686)
+2026-05-27 15:07:32 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.87s
+2026-05-27 15:07:32 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:32 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化肯定要上K8s，生产环境都这么用了)
+2026-05-27 15:07:32 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.87s
+2026-05-27 15:07:32 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS
+2026-05-27 15:07:32 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150732-97107d11.json
+2026-05-27 15:07:32 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:32 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=702 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:32 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=702)
+2026-05-27 15:07:33 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.91s
+2026-05-27 15:07:33 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:33 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型的话，PostgreSQL的扩展性更强，支持JSONB和GIS)
+2026-05-27 15:07:33 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.91s
+2026-05-27 15:07:33 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列我觉得Kafka更合适，高吞吐低延迟
+2026-05-27 15:07:33 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150733-45b2ecc7.json
+2026-05-27 15:07:33 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:33 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=688 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:33 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=688)
+2026-05-27 15:07:34 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.80s
+2026-05-27 15:07:34 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:34 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列我觉得Kafka更合适，高吞吐低延迟)
+2026-05-27 15:07:34 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.80s
+2026-05-27 15:07:34 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化方案就用K8s吧，生态最成熟
+2026-05-27 15:07:34 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150734-961c3e47.json
+2026-05-27 15:07:34 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:34 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=683 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:34 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=683)
+2026-05-27 15:07:35 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.16s
+2026-05-27 15:07:35 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:35 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化方案就用K8s吧，生态最成熟)
+2026-05-27 15:07:35 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.16s
+2026-05-27 15:07:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选型还是要看团队能力，PG学习成本高一些
+2026-05-27 15:07:35 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150735-2169041d.json
+2026-05-27 15:07:35 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:35 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=689 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:35 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=689)
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.20s
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:37 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选型还是要看团队能力，PG学习成本高一些)
+2026-05-27 15:07:37 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.20s
+2026-05-27 15:07:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端可以考虑用React，社区资源丰富
+2026-05-27 15:07:37 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150737-a9ccef23.json
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=685 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=685)
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.90s
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:37 - src.core.engine - INFO - [Engine] No decision extracted from content (前端可以考虑用React，社区资源丰富)
+2026-05-27 15:07:37 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.90s
+2026-05-27 15:07:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器的监控用Prometheus+Grafana吧
+2026-05-27 15:07:37 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150737-b541974c.json
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=691 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:37 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=691)
+2026-05-27 15:07:39 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.09s
+2026-05-27 15:07:39 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:39 - src.core.engine - INFO - [Engine] No decision extracted from content (容器的监控用Prometheus+Grafana吧)
+2026-05-27 15:07:39 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.09s
+2026-05-27 15:07:39 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=消息队列选了Kafka，配合流处理引擎很强大
+2026-05-27 15:07:39 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150739-81039c7a.json
+2026-05-27 15:07:39 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:39 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=688 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:39 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=688)
+2026-05-27 15:07:40 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.02s
+2026-05-27 15:07:40 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:40 - src.core.engine - INFO - [Engine] No decision extracted from content (消息队列选了Kafka，配合流处理引擎很强大)
+2026-05-27 15:07:40 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.02s
+2026-05-27 15:07:40 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库还是决定用PG，RDS托管省心省力
+2026-05-27 15:07:40 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150740-9763c54e.json
+2026-05-27 15:07:40 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:40 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=686 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:40 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=686)
+2026-05-27 15:07:41 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.97s
+2026-05-27 15:07:41 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:41 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库还是决定用PG，RDS托管省心省力)
+2026-05-27 15:07:41 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.97s
+2026-05-27 15:07:41 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端Sentry做错误监控很成熟，可以试试
+2026-05-27 15:07:41 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150741-eb43d3bf.json
+2026-05-27 15:07:41 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:41 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=687 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:41 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=687)
+2026-05-27 15:07:42 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.10s
+2026-05-27 15:07:42 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:42 - src.core.engine - INFO - [Engine] No decision extracted from content (前端Sentry做错误监控很成熟，可以试试)
+2026-05-27 15:07:42 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.10s
+2026-05-27 15:07:42 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库选PG了，大家没意见吧
+2026-05-27 15:07:42 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150742-0df8a31b.json
+2026-05-27 15:07:42 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:42 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=680 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:42 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=680)
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.10s
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:43 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库选PG了，大家没意见吧)
+2026-05-27 15:07:43 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.10s
+2026-05-27 15:07:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器化用K8s，helm chart管理部署
+2026-05-27 15:07:43 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150743-94a214e9.json
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=688 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=688)
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.73s
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:43 - src.core.engine - INFO - [Engine] No decision extracted from content (容器化用K8s，helm chart管理部署)
+2026-05-27 15:07:43 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.73s
+2026-05-27 15:07:43 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端性能优化可以用SSR和服务端组件
+2026-05-27 15:07:43 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150743-35fca076.json
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=684 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:43 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=684)
+2026-05-27 15:07:44 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.84s
+2026-05-27 15:07:44 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:44 - src.core.engine - INFO - [Engine] No decision extracted from content (前端性能优化可以用SSR和服务端组件)
+2026-05-27 15:07:44 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.84s
+2026-05-27 15:07:44 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库连接池用PgBouncer，支持事务池
+2026-05-27 15:07:44 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150744-937b6499.json
+2026-05-27 15:07:44 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:44 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=688 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:44 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=688)
+2026-05-27 15:07:46 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.55s
+2026-05-27 15:07:46 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:07:46 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=f12c56bd4627 title=数据库连接池采用PgBouncer并支持事务池 source=eval
+2026-05-27 15:07:46 - src.core.engine - INFO - [Mutation] Existing by sid: sid=f12c56bd4627 v3
+2026-05-27 15:07:46 - src.core.engine - INFO - Updated decision: f12c56bd4627 v4
+2026-05-27 15:07:46 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=f12c56bd4627 v5
+2026-05-27 15:07:47 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:47 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:48 - src.view.client - ERROR - Failed to upsert record for f12c56bd4627: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:48 - src.view.syncer - INFO - [BaseView] Synced decision f12c56bd4627 v4
+2026-05-27 15:07:48 - src.core.engine - INFO - [Mutation] Base sync triggered for UPDATE: sid=f12c56bd4627
+2026-05-27 15:07:48 - src.core.engine - INFO - [Engine] <<< _process_detection done time=3.47s
+2026-05-27 15:07:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器资源限制用resource quota和limit range
+2026-05-27 15:07:48 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150748-36dec412.json
+2026-05-27 15:07:48 - src.core.engine - INFO - [LLM] Injected 33 existing decisions as context
+2026-05-27 15:07:48 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=699 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:48 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=699)
+2026-05-27 15:07:49 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.26s
+2026-05-27 15:07:49 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:07:49 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=429768895560 title=容器资源限制方案 source=eval
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.21s value_range=[-10.6641, 13.5938] mean=0.0199 std=2.5601
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=30 chars=1256 model=Qwen3-Embedding-4B
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[1/30] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[2/30] len=80 preview=考虑到未来吞吐量可能增加，RabbitMQ可能扛不住，决定将消息队列从RabbitMQ换成Kafka，因为Kafka流处
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[3/30] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[4/30] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[5/30] len=29 preview=决定采用Harbor作为容器镜像仓库，并支持漏洞扫描功能。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[6/30] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[7/30] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[8/30] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[9/30] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[10/30] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[11/30] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[12/30] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[13/30] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[14/30] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[15/30] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[16/30] len=56 preview=字体文件全部转为woff2格式，静态资源全量上CDN并加长期强缓存策略，关键CSS直接内联到HTML里减少请求。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[17/30] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[18/30] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[19/30] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[20/30] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[21/30] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[22/30] len=25 preview=决定数据库连接使用SSL加密，以满足安全合规要求。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[23/30] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[24/30] len=34 preview=数据库决定使用PostgreSQL，并采用RDS托管方案以省心省力。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[25/30] len=23 preview=数据库迁移工具采用golang-migrate
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[26/30] len=23 preview=前端构建产物放到OSS，并通过CDN加速分发。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[27/30] len=42 preview=决定在容器安全方面采用Pod Security Standards作为安全策略标准。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[28/30] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[29/30] len=22 preview=数据库连接池用PgBouncer，支持事务池
+2026-05-27 15:07:49 - src.model.embedding_provider - INFO - [Embedding]     text[30/30] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 15:07:54 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=30 dim=2560 time=4.89s value_range=[-12.2578, 13.6875] mean=-0.0101 std=2.6328
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=18 preview=容器日志收集采用Loki，轻量级方案
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=26 preview=决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=容器资源限制采用Resource Quota和Limit Range docs=5
+2026-05-27 15:07:54 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-3.2129, -4.0508, -4.0234, -4.3242, -4.0] time=0.15s top3=[0]-3.2129:决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容; [4]-4.0000:决定使用Prometheus和Grafana作为容器监控方案。; [2]-4.0234:决定使用Calico作为容器网络插件，支持网络策略。
+2026-05-27 15:07:54 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.2129)
+2026-05-27 15:07:54 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=429768895560 v1
+2026-05-27 15:07:54 - src.core.engine - INFO - Created decision: 429768895560 v1 — 容器资源限制方案
+2026-05-27 15:07:54 - src.core.engine - INFO - [Mutation] CREATE applied: sid=429768895560 v1
+2026-05-27 15:07:55 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:55 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:55 - src.view.client - ERROR - Failed to upsert record for 429768895560: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:55 - src.view.syncer - INFO - [BaseView] Synced decision 429768895560 v1
+2026-05-27 15:07:55 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=429768895560
+2026-05-27 15:07:55 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=429768895560
+2026-05-27 15:07:55 - src.core.engine - INFO - [Engine] <<< _process_detection done time=7.54s
+2026-05-27 15:07:55 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端CDN缓存策略也得考虑，减少回源
+2026-05-27 15:07:55 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150755-602e82cf.json
+2026-05-27 15:07:55 - src.core.engine - INFO - [LLM] Injected 34 existing decisions as context
+2026-05-27 15:07:55 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=695 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:55 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=695)
+2026-05-27 15:07:56 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.11s
+2026-05-27 15:07:56 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:07:56 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=aa200afa920b title=前端CDN缓存策略考虑 source=eval
+2026-05-27 15:07:56 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=aa200afa920b v1
+2026-05-27 15:07:57 - src.core.engine - INFO - Created decision: aa200afa920b v1 — 前端CDN缓存策略考虑
+2026-05-27 15:07:57 - src.core.engine - INFO - [Mutation] CREATE applied: sid=aa200afa920b v1
+2026-05-27 15:07:57 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:57 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:57 - src.view.client - ERROR - Failed to upsert record for aa200afa920b: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:07:57 - src.view.syncer - INFO - [BaseView] Synced decision aa200afa920b v1
+2026-05-27 15:07:57 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=aa200afa920b
+2026-05-27 15:07:57 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=aa200afa920b
+2026-05-27 15:07:57 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.92s
+2026-05-27 15:07:57 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=数据库迁移工具用golang-migrate
+2026-05-27 15:07:57 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150757-024ce6f8.json
+2026-05-27 15:07:57 - src.core.engine - INFO - [LLM] Injected 35 existing decisions as context
+2026-05-27 15:07:57 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=713 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:57 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=713)
+2026-05-27 15:07:58 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.90s
+2026-05-27 15:07:58 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:07:58 - src.core.engine - INFO - [Engine] No decision extracted from content (数据库迁移工具用golang-migrate)
+2026-05-27 15:07:58 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.90s
+2026-05-27 15:07:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=容器网络插件用Calico，支持网络策略
+2026-05-27 15:07:58 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150758-ec8385f4.json
+2026-05-27 15:07:58 - src.core.engine - INFO - [LLM] Injected 35 existing decisions as context
+2026-05-27 15:07:58 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=711 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:07:58 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=711)
+2026-05-27 15:07:59 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.18s
+2026-05-27 15:07:59 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-27 15:07:59 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=1a1e020f68c7 title=容器网络插件选型为Calico source=eval
+2026-05-27 15:07:59 - src.core.engine - INFO - [Mutation] Existing by sid: sid=1a1e020f68c7 v2
+2026-05-27 15:07:59 - src.core.engine - INFO - Updated decision: 1a1e020f68c7 v3
+2026-05-27 15:07:59 - src.core.engine - INFO - [Mutation] UPDATE applied: sid=1a1e020f68c7 v4
+2026-05-27 15:08:00 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:08:00 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:08:00 - src.view.client - ERROR - Failed to upsert record for 1a1e020f68c7: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-27 15:08:00 - src.view.syncer - INFO - [BaseView] Synced decision 1a1e020f68c7 v3
+2026-05-27 15:08:00 - src.core.engine - INFO - [Mutation] Base sync triggered for UPDATE: sid=1a1e020f68c7
+2026-05-27 15:08:00 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.00s
+2026-05-27 15:08:00 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端打包工具换成Vite，比Webpack快很多
+2026-05-27 15:08:00 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260527150800-6301485e.json
+2026-05-27 15:08:00 - src.core.engine - INFO - [LLM] Injected 35 existing decisions as context
+2026-05-27 15:08:00 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=715 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent
+2026-05-27 15:08:00 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=715)
+2026-05-27 15:08:01 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.95s
+2026-05-27 15:08:01 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - 监控方案：继续使用Sent)
+2026-05-27 15:08:01 - src.core.engine - INFO - [Engine] No decision extracted from content (前端打包工具换成Vite，比Webpack快很多)
+2026-05-27 15:08:01 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.99s
+2026-05-27 15:08:03 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_17f02663c (chat=eval, msgs=20, pool=1/20)
+2026-05-27 15:08:03 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-27 15:08:03 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-27 15:08:03 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-27 15:08:04 - src.core.engine - INFO - Synced 4 dirty decisions to storage
+2026-05-27 15:08:04 - src.core.engine - INFO - MemoryEngine stopped (applied=4, failed=0)

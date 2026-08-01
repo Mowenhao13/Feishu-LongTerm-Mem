@@ -1,0 +1,7 @@
+2026-05-28 08:56:46 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_085646.log
+2026-05-28 08:56:46 - __main__ - ERROR - [System] Fatal error: Traceback (most recent call last):
+  File "/Users/halllo/projects/local/feishu-mem/main.py", line 739, in main
+    asyncio.run(main_async())
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'asyncio' where it is not associated with a value
+

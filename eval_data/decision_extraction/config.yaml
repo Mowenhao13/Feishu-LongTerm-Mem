@@ -1,0 +1,13 @@
+name: "decision-extraction-eval"
+description: "HyperMem DecisionExtractor decision extraction correctness evaluation dataset"
+version: "1.0"
+total_scenarios: 12
+total_samples: 170
+dimensions:
+  - detection
+  - content
+  - proposer
+  - executor
+  - impact_level
+  - status
+  - conflict

@@ -1,0 +1,814 @@
+2026-05-28 09:19:12 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260528_091912.log
+2026-05-28 09:19:15 - src.eval_runner - INFO - MemoryGraph loaded: 174 decisions
+2026-05-28 09:19:16 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-05-28 09:19:16 - src.core.engine - INFO - GitStorage initialized at data
+2026-05-28 09:19:19 - src.core.engine - INFO - Loaded 174 decisions, 27 topics
+2026-05-28 09:19:19 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-05-28 09:19:19 - src.core.engine - INFO - BaseViewSyncer initialized
+2026-05-28 09:19:19 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-05-28 09:19:19 - src.core.engine - INFO - MemoryEngine initialized
+2026-05-28 09:19:19 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-05-28 09:19:19 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-05-28 09:19:19 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-05-28 09:19:19 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-05-28 09:19:19 - src.detect.suspend_pool - INFO - [SuspendPool] No existing pool at data/suspend_pool.json
+2026-05-28 09:19:19 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-05-28 09:19:19 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=20 model=Qwen3-Embedding-4B
+2026-05-28 09:19:19 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=20 preview=前端框架选型讨论一下，新项目马上要开始了
+2026-05-28 09:19:19 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.24s value_range=[-11.1641, 10.5078] mean=0.0300 std=2.5038
+2026-05-28 09:19:19 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_24f3d898d started with msg=eval_1
+2026-05-28 09:19:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=前端框架选型讨论一下，新项目马上要开始了
+2026-05-28 09:19:19 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091919-b2b21e9a.json
+2026-05-28 09:19:19 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:19 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1022 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:19 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1022)
+2026-05-28 09:19:20 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.57s
+2026-05-28 09:19:20 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:20 - src.core.engine - INFO - [Engine] No decision extracted from content (前端框架选型讨论一下，新项目马上要开始了)
+2026-05-28 09:19:20 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.58s
+2026-05-28 09:19:20 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=34 model=Qwen3-Embedding-4B
+2026-05-28 09:19:20 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=34 preview=我建议用React 19 + Next.js，生态最成熟，招人也容易
+2026-05-28 09:19:20 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.34s value_range=[-9.7031, 9.1250] mean=0.0480 std=2.4571
+2026-05-28 09:19:20 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=我建议用React 19 + Next.js，生态最成熟，招人也容易
+2026-05-28 09:19:20 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091920-ea3192c3.json
+2026-05-28 09:19:20 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:20 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1036 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:20 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1036)
+2026-05-28 09:19:22 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.04s
+2026-05-28 09:19:22 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:22 - src.core.engine - INFO - [Engine] No decision extracted from content (我建议用React 19 + Next.js，生态最成熟，招人也容易)
+2026-05-28 09:19:22 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.04s
+2026-05-28 09:19:22 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 09:19:22 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=React的生态确实没话说，但Next.js太重了，我们业务没那么复杂
+2026-05-28 09:19:23 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.54s value_range=[-10.4453, 9.5469] mean=0.0185 std=2.4789
+2026-05-28 09:19:23 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=React的生态确实没话说，但Next.js太重了，我们业务没那么复杂
+2026-05-28 09:19:23 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091923-15b24ca2.json
+2026-05-28 09:19:23 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:23 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1037 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:23 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1037)
+2026-05-28 09:19:24 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.08s
+2026-05-28 09:19:24 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:24 - src.core.engine - INFO - [Engine] No decision extracted from content (React的生态确实没话说，但Next.js太重了，我们业务没那么复杂)
+2026-05-28 09:19:24 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.08s
+2026-05-28 09:19:24 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=30 model=Qwen3-Embedding-4B
+2026-05-28 09:19:24 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=30 preview=Vue 3 + Nuxt也可以考虑，上手快，国内社区也很活跃
+2026-05-28 09:19:25 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.74s value_range=[-11.1953, 8.9375] mean=0.0195 std=2.4945
+2026-05-28 09:19:25 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Vue 3 + Nuxt也可以考虑，上手快，国内社区也很活跃
+2026-05-28 09:19:25 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091925-c28d5972.json
+2026-05-28 09:19:25 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:25 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1032 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:25 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1032)
+2026-05-28 09:19:26 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.01s
+2026-05-28 09:19:26 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:26 - src.core.engine - INFO - [Engine] No decision extracted from content (Vue 3 + Nuxt也可以考虑，上手快，国内社区也很活跃)
+2026-05-28 09:19:26 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.01s
+2026-05-28 09:19:26 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:19:26 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=React的JSX写起来真的很爽，组件组合模式比模板语法灵活太多了
+2026-05-28 09:19:27 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.14s value_range=[-13.1094, 8.9219] mean=-0.0086 std=2.5827
+2026-05-28 09:19:27 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=React的JSX写起来真的很爽，组件组合模式比模板语法灵活太多了
+2026-05-28 09:19:27 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091927-3370975b.json
+2026-05-28 09:19:27 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:27 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1035 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:27 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1035)
+2026-05-28 09:19:28 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.19s
+2026-05-28 09:19:28 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:28 - src.core.engine - INFO - [Engine] No decision extracted from content (React的JSX写起来真的很爽，组件组合模式比模板语法灵活太多了)
+2026-05-28 09:19:28 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.19s
+2026-05-28 09:19:28 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=74 model=Qwen3-Embedding-4B
+2026-05-28 09:19:28 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=74 preview=其实Vue 3的Composition API已经不输React Hooks了，而且ref/reactive的响应式设计
+2026-05-28 09:19:29 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.46s value_range=[-13.1328, 9.0703] mean=0.0166 std=2.5712
+2026-05-28 09:19:29 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=其实Vue 3的Composition API已经不输React Hooks了，而且ref/reactive的响应式设计
+2026-05-28 09:19:29 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091929-18fb3171.json
+2026-05-28 09:19:29 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:29 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1076 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:29 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1076)
+2026-05-28 09:19:30 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.86s
+2026-05-28 09:19:30 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:30 - src.core.engine - INFO - [Engine] No decision extracted from content (其实Vue 3的Composition API已经不输React Hooks了，而且ref/reactive的响应式设计)
+2026-05-28 09:19:30 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.86s
+2026-05-28 09:19:30 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-05-28 09:19:30 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=要不看看Svelte？编译型框架，打包体积小，性能巨好，而且代码最简洁
+2026-05-28 09:19:30 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.37s value_range=[-12.2734, 10.9531] mean=0.0313 std=2.6340
+2026-05-28 09:19:30 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=要不看看Svelte？编译型框架，打包体积小，性能巨好，而且代码最简洁
+2026-05-28 09:19:30 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091930-d2fe1143.json
+2026-05-28 09:19:30 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:30 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1037 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:30 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1037)
+2026-05-28 09:19:31 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.79s
+2026-05-28 09:19:31 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:31 - src.core.engine - INFO - [Engine] No decision extracted from content (要不看看Svelte？编译型框架，打包体积小，性能巨好，而且代码最简洁)
+2026-05-28 09:19:31 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.79s
+2026-05-28 09:19:32 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:19:32 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=Svelte我觉得太新了，团队里没人用过，招聘也是个问题，不敢冒险
+2026-05-28 09:19:32 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.27s value_range=[-11.0469, 10.3281] mean=0.0186 std=2.4829
+2026-05-28 09:19:32 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Svelte我觉得太新了，团队里没人用过，招聘也是个问题，不敢冒险
+2026-05-28 09:19:32 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091932-4f3cde40.json
+2026-05-28 09:19:32 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:32 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1035 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:32 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1035)
+2026-05-28 09:19:33 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.00s
+2026-05-28 09:19:33 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:33 - src.core.engine - INFO - [Engine] No decision extracted from content (Svelte我觉得太新了，团队里没人用过，招聘也是个问题，不敢冒险)
+2026-05-28 09:19:33 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.01s
+2026-05-28 09:19:33 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=61 model=Qwen3-Embedding-4B
+2026-05-28 09:19:33 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=61 preview=说回来React的Server Component确实是趋势，Next.js在这方面走得很前面，数据获取和渲染策略一套搞
+2026-05-28 09:19:34 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-12.7031, 9.4141] mean=0.0109 std=2.5293
+2026-05-28 09:19:34 - src.detect.episode - INFO - [Episode] chat=eval KEYWORD boundary: keyword match in '说回来React的Server Component确实是趋势', suspend episode=ep_24f3d898d (msgs=8)
+2026-05-28 09:19:34 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_24f3d898d (chat=eval, msgs=8, pool=1/20)
+2026-05-28 09:19:34 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_24f3d898d chat=eval sim=0.6765 >= 0.55 ✓
+2026-05-28 09:19:34 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_24f3d898d (chat=eval, msgs=8, pool=0/20)
+2026-05-28 09:19:34 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_24f3d898d (msgs=8)
+2026-05-28 09:19:34 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=说回来React的Server Component确实是趋势，Next.js在这方面走得很前面，数据获取和渲染策略一套搞
+2026-05-28 09:19:34 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091934-3bf6e417.json
+2026-05-28 09:19:34 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:34 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1063 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:34 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1063)
+2026-05-28 09:19:34 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.77s
+2026-05-28 09:19:34 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:34 - src.core.engine - INFO - [Engine] No decision extracted from content (说回来React的Server Component确实是趋势，Next.js在这方面走得很前面，数据获取和渲染策略一套搞)
+2026-05-28 09:19:34 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.78s
+2026-05-28 09:19:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=79 model=Qwen3-Embedding-4B
+2026-05-28 09:19:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=79 preview=Vue 3的defineProps和defineEmits在TS支持上已经很强了，而且Vapor Mode也在往编译优化
+2026-05-28 09:19:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.22s value_range=[-14.3125, 9.0469] mean=-0.0230 std=2.4570
+2026-05-28 09:19:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Vue 3的defineProps和defineEmits在TS支持上已经很强了，而且Vapor Mode也在往编译优化
+2026-05-28 09:19:35 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091935-68bbc1cc.json
+2026-05-28 09:19:35 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:35 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1081 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:35 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1081)
+2026-05-28 09:19:36 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.88s
+2026-05-28 09:19:36 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:36 - src.core.engine - INFO - [Engine] No decision extracted from content (Vue 3的defineProps和defineEmits在TS支持上已经很强了，而且Vapor Mode也在往编译优化)
+2026-05-28 09:19:36 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.88s
+2026-05-28 09:19:36 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=58 model=Qwen3-Embedding-4B
+2026-05-28 09:19:36 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=58 preview=你们考虑过维护成本吗？React十年了，社区沉淀了多少现成的库和解决方案，出了问题StackOverflow一搜就有
+2026-05-28 09:19:37 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.17s value_range=[-10.9141, 8.1875] mean=0.0422 std=2.4178
+2026-05-28 09:19:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=你们考虑过维护成本吗？React十年了，社区沉淀了多少现成的库和解决方案，出了问题StackOverflow一搜就有
+2026-05-28 09:19:37 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091937-62930147.json
+2026-05-28 09:19:37 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:37 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1060 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:37 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1060)
+2026-05-28 09:19:38 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.87s
+2026-05-28 09:19:38 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:38 - src.core.engine - INFO - [Engine] No decision extracted from content (你们考虑过维护成本吗？React十年了，社区沉淀了多少现成的库和解决方案，出了问题StackOverflow一搜就有)
+2026-05-28 09:19:38 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.87s
+2026-05-28 09:19:38 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=64 model=Qwen3-Embedding-4B
+2026-05-28 09:19:38 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=64 preview=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:19:38 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.30s value_range=[-11.2031, 8.5000] mean=0.0220 std=2.5617
+2026-05-28 09:19:38 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:19:38 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091938-6e799f9d.json
+2026-05-28 09:19:38 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:38 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1066 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:38 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1066)
+2026-05-28 09:19:40 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.40s
+2026-05-28 09:19:40 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-28 09:19:40 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=4cc144ec5123 title=前端框架选型：Vue优于React source=eval
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=65 model=Qwen3-Embedding-4B
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=65 preview=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-10.8047, 8.6250] mean=0.0290 std=2.5936
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=118 chars=4520 model=Qwen3-Embedding-4B
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[1/118] len=44 preview=决定使用Kafka MirrorMaker实现跨集群数据同步，用于灾备或多区域部署场景。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[2/118] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[3/118] len=25 preview=前端AB测试方案采用Feature Flag实现。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[4/118] len=20 preview=决定使用Trivy进行容器镜像安全扫描。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[5/118] len=23 preview=决定为消息队列设置消息保留策略，具体配置待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[6/118] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[7/118] len=32 preview=决定对消息队列Kafka启用消息压缩，以降低网络带宽和存储成本。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[8/118] len=54 preview=现有系统使用RabbitMQ，需要构建消息桥接层实现从RabbitMQ到Kafka的平滑迁移，避免直接切换。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[9/118] len=57 preview=推荐使用SkyWalking作为APM工具，因为其对Java生态支持最好且无侵入，适用于以Java为主的业务场景。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[10/118] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[11/118] len=28 preview=决定为消息队列配置死信队列，用于处理无法正常消费的消息。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[12/118] len=37 preview=确定消息队列Topic的命名规范，包括命名格式、层级结构、环境标识等规则。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[13/118] len=22 preview=容器网络插件采用Calico，支持网络策略。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[14/118] len=32 preview=推荐使用PgBonder作为PG连接池，并采用事务模式复用连接。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[15/118] len=66 preview=将前端业务组件抽离成独立npm包，实现跨项目复用和清晰版本管理，并使用Changeset进行自动版本号管理和Change
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[16/118] len=37 preview=决定在容器运维中采用Operator模式，以实现自动化管理，提升运维效率。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[17/118] len=50 preview=将不变的依赖层放在前面，经常变的业务代码放在后面，利用Docker的layer缓存机制减少构建时间。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[18/118] len=19 preview=决定使用Harbor作为容器镜像仓库。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[19/118] len=26 preview=前端路由权限控制方案已确定，具体实现细节待后续讨论。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[20/118] len=52 preview=在Nginx Ingress Controller上集成ModSecurity实现Web应用防火墙防护。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[21/118] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[22/118] len=36 preview=决定采用WebWorker处理前端大数据渲染，以提升页面性能和用户体验。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[23/118] len=35 preview=决定使用TimescaleDB的自动分区功能来管理时间序列数据的分区。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[24/118] len=31 preview=确定消息队列的幂等处理方案，确保消息重复消费时不会产生副作用。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[25/118] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[26/118] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[27/118] len=64 preview=决定在前端项目中采用Service Worker技术实现离线缓存和PWA（渐进式Web应用）支持，以提升用户体验和应用的
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[28/118] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[29/118] len=53 preview=决定将前端E2E测试工具从Cypress切换为Playwright，以利用其跨浏览器支持和更快的执行速度。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[30/118] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[31/118] len=30 preview=生产环境容器PV回收策略选择Retain，而非Delete。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[32/118] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[33/118] len=28 preview=针对Kafka消费者组重平衡问题进行优化，具体方案待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[34/118] len=43 preview=采用HPA（基于CPU/内存）与VPA结合，必要时加装KEDA，实现更精细的弹性伸缩。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[35/118] len=19 preview=决定采用Loki作为容器日志收集方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[36/118] len=35 preview=容器Ingress采用Nginx Ingress Controller
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[37/118] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[38/118] len=28 preview=决定使用golang-migrate作为数据库迁移工具。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[39/118] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[40/118] len=48 preview=数据库慢查询分析使用pg_stat_statements配合explain analyze进行。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[41/118] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[42/118] len=62 preview=容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[43/118] len=59 preview=引入Schema Registry管理消息数据格式，确保生产者和消费者之间数据格式一致，并通过兼容性检查提前发现问题。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[44/118] len=50 preview=前端浏览器兼容性列表只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[45/118] len=23 preview=决定在容器中使用PV/PVC来实现持久化存储。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[46/118] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[47/118] len=26 preview=讨论Kafka升级方案，确保无损迁移，具体细节待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[48/118] len=28 preview=前端使用changesets管理版本和changelog
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[49/118] len=20 preview=决定采用前端日志采集方案，具体细节待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[50/118] len=42 preview=决定使用Rancher还是KubeSphere进行容器多集群管理，需进一步讨论确认。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[51/118] len=6 preview=前端灰度发布
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[52/118] len=28 preview=决定使用Istio作为容器Service Mesh方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[53/118] len=72 preview=决定采用降级策略处理前端hydration错误，当SSR和CSR渲染不一致时，客户端重新渲染并清除服务端生成的HTML，
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[54/118] len=74 preview=决定采用ArgoCD作为GitOps工具，实现声明式部署，以提高部署的可控性和自动化水平。  [补充] 具体工具为Arg
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[55/118] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[56/118] len=25 preview=决定消息队列Schema兼容性策略，具体方案待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[57/118] len=25 preview=前端用Vitest替代Jest，速度快而且兼容性好
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[58/118] len=42 preview=决定使用Helm来管理容器化应用的部署，通过模板化配置实现标准化和可重复的部署流程。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[59/118] len=32 preview=决定采用WebP格式、懒加载和CDN加速来优化前端图片加载性能。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[60/118] len=33 preview=数据库表结构变更使用sqitch进行版本控制，支持方便的回滚操作。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[61/118] len=42 preview=决定采用Bytebase进行SQL审核，以规范数据库变更流程，提高代码质量和安全性。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[62/118] len=25 preview=决定使用Velero进行容器备份，并包含PV快照。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[63/118] len=37 preview=前端微前端落地，采用Module Federation方案，并共享组件库。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[64/118] len=41 preview=采用SSR和服务端组件进行前端性能优化，使用Next.js框架以提升首屏加载速度。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[65/118] len=23 preview=决定采用流式SSR技术来优化前端首屏加载性能。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[66/118] len=52 preview=决定使用topologySpreadConstraints实现容器Pod的跨可用区调度，以提升高可用性。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[67/118] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[68/118] len=24 preview=前端SSR使用Next.js，之前评估过没问题。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[69/118] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[70/118] len=48 preview=Trace采样率建议头部采集全量，尾部采样10%，这样既能保证关键路径的完整性，又能控制存储成本
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[71/118] len=32 preview=将数据库迁移工具从golang-migrate切换为sqitch
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[72/118] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[73/118] len=19 preview=前端技术栈选择React作为主要框架。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[74/118] len=34 preview=容器用Kyverno做策略管理，比OPA Gatekeeper更易用
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[75/118] len=34 preview=容器HPA配置多个指标，CPU超过70%或者内存超过80%都触发扩容
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[76/118] len=16 preview=容器使用PV/PVC做持久化存储
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[77/118] len=52 preview=讨论Kafka集群的高可用配置，包括副本因子、ISR设置、acks参数等，确保消息不丢失且服务持续可用。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[78/118] len=23 preview=决定使用Burrow作为Kafka的监控工具。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[79/118] len=33 preview=容器化方案决定使用Kubernetes（K8s），因其生态最成熟。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[80/118] len=21 preview=需要制定前端CDN缓存策略，具体细节待定。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[81/118] len=40 preview=确定Kubernetes命名空间的规划方案，包括命名规范、环境隔离、团队划分等。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[82/118] len=38 preview=自定义指标采集统一使用OpenTelemetry Collector作为网关
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[83/118] len=43 preview=决定采用Kafka KRaft模式，替代ZooKeeper依赖，以简化架构并提升性能。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[84/118] len=31 preview=前端项目使用pnpm替代npm，以提升安装速度和节省磁盘空间。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[85/118] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[86/118] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[87/118] len=28 preview=决定采用数据库逻辑复制方案，实现实时数据同步到数据仓库。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[88/118] len=29 preview=决定采用Patroni作为PostgreSQL高可用方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[89/118] len=24 preview=决定数据库连接使用SSL加密以确保数据传输安全。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[90/118] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[91/118] len=80 preview=决定在容器架构中采用Sidecar模式，将辅助功能（如日志收集、监控代理、服务网格等）以独立容器的方式与主应用容器部署在
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[92/118] len=44 preview=决定将前端静态资源部署到对象存储服务（OSS）并搭配CDN加速，以提升加载速度和稳定性。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[93/118] len=30 preview=决定使用GitHub Actions作为容器CI/CD工具。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[94/118] len=39 preview=数据库字段类型选择bigint还是int取决于预估数据量，大表用bigint。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[95/118] len=36 preview=采用Cluster Autoscaler实现容器Node节点的自动扩容。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[96/118] len=30 preview=决定采用GitHub Actions作为容器CI/CD工具。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[97/118] len=48 preview=前端开发环境和测试环境统一使用MSW（Mock Service Worker）进行接口Mock。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[98/118] len=32 preview=决定实施前端安全防护，包括XSS、CSRF防护和CSP策略配置。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[99/118] len=40 preview=PG的分区表使用native partitioning，因为继承分区性能不够好。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[100/118] len=51 preview=决定采用容器Pod Anti-Affinity策略，以分散Pod在不同节点上，提高可用性和资源利用率。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[101/118] len=29 preview=容器服务发现采用CoreDNS，即K8s默认的DNS方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[102/118] len=22 preview=决定采用Fluentd作为容器日志采集工具。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[103/118] len=63 preview=决定采用PostgreSQL作为数据库，因其扩展性强，支持JSONB、GIS和TimescaleDB等扩展，适合混合负载
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[104/118] len=27 preview=决定使用golang-migrate作为数据库迁移工具
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[105/118] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[106/118] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[107/118] len=27 preview=前端错误边界用ErrorBoundary包裹，避免白屏
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[108/118] len=55 preview=容器结合Istio做灰度发布，可以在不修改应用代码的情况下实现流量管理，并且利用Istio的mTLS加密通信。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[109/118] len=41 preview=决定采用容器Gateway API作为新的网关方案，替代或补充现有Ingress。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[110/118] len=50 preview=容器安全使用Pod Security Standards，该标准在K8s 1.25之后已是默认行为。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[111/118] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[112/118] len=38 preview=决定数据库连接池用完时采用排队等待策略，并使用PgBouncer设置池大小。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[113/118] len=30 preview=决定使用PgBouncer的事务池模式作为数据库连接池方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[114/118] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[115/118] len=31 preview=决定使用Prometheus+Grafana作为容器监控方案。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[116/118] len=50 preview=决定使用webpack-bundle-analyzer定期检查前端Bundle大小，以优化打包体积。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[117/118] len=55 preview=决定在前端构建产物中实施Tree Shaking和Code Splitting，以减小打包体积并优化加载性能。
+2026-05-28 09:19:40 - src.model.embedding_provider - INFO - [Embedding]     text[118/118] len=55 preview=在前端CI流程中加入Prettier代码格式化检查和ESLint代码质量检查，确保代码风格统一和减少潜在错误。
+2026-05-28 09:19:44 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=118 dim=2560 time=4.02s value_range=[-13.3750, 15.9062] mean=0.0053 std=2.6015
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=65 preview=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=19 preview=前端技术栈选择React作为主要框架。
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=25 preview=前端用Vitest替代Jest，速度快而且兼容性好
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=24 preview=前端SSR使用Next.js，之前评估过没问题。
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好 docs=5
+2026-05-28 09:19:44 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-4.4219, -4.3281, -4.625, -4.5781, -3.9023] time=0.30s top3=[4]-3.9023:将前端打包工具从Webpack切换到Vite，以提升构建速度。; [1]-4.3281:前端用Vitest替代Jest，速度快而且兼容性好; [0]-4.4219:前端技术栈选择React作为主要框架。
+2026-05-28 09:19:44 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.9023)
+2026-05-28 09:19:44 - src.core.engine - INFO - [Similar] Found by bigram: sid=a2a891d6a09c score=0.37
+2026-05-28 09:19:44 - src.core.engine - INFO - [Mutation] Similar found: sid=a2a891d6a09c summary=前端框架采用React score=0.3684
+2026-05-28 09:19:45 - src.core.engine - INFO - [Dedup] LLM judge: action=conflict reason=新决策主张Vue优于React，而已有决策采用React，两者对前端框架的选择存在矛盾。
+2026-05-28 09:19:45 - src.core.engine - INFO - [Mutation] CONFLICT: new=4cc144ec5123 vs similar=a2a891d6a09c reason=新决策主张Vue优于React，而已有决策采用React，两者对前端框架的选择存在矛盾。
+2026-05-28 09:19:45 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=4cc144ec5123 v1
+2026-05-28 09:19:46 - src.core.engine - INFO - Created decision: 4cc144ec5123 v1 — 前端框架选型：Vue优于React
+2026-05-28 09:19:46 - src.core.engine - INFO - [Mutation] CREATE applied: sid=4cc144ec5123 v1
+2026-05-28 09:19:46 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:19:46 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:19:47 - src.view.client - ERROR - Failed to upsert record for 4cc144ec5123: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:19:47 - src.view.syncer - INFO - [BaseView] Synced decision 4cc144ec5123 v1
+2026-05-28 09:19:47 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=4cc144ec5123
+2026-05-28 09:19:47 - src.core.engine - INFO - [Mutation] Detected 1 conflict(s) for sid=4cc144ec5123
+2026-05-28 09:19:47 - src.core.engine - INFO - [Mutation] Conflict: a2a891d6a09c ↔ 4cc144ec5123 — Conflict between '前端框架采用React' and '前端框架选型：Vue优于Re
+2026-05-28 09:19:47 - src.core.engine - INFO - Conflict kept both: a2a891d6a09c <-> 4cc144ec5123
+2026-05-28 09:19:47 - src.core.engine - INFO - [Mutation] CONFLICT resolved: a2a891d6a09c
+2026-05-28 09:19:47 - src.core.engine - INFO - [Engine] <<< _process_detection done time=8.64s
+2026-05-28 09:19:47 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=50 model=Qwen3-Embedding-4B
+2026-05-28 09:19:47 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=50 preview=Svelte的代码量只有React的30%，同样的功能Svelte写起来少一半代码，bug也就少一半
+2026-05-28 09:19:48 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.26s value_range=[-11.2188, 9.1016] mean=0.0018 std=2.5908
+2026-05-28 09:19:48 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Svelte的代码量只有React的30%，同样的功能Svelte写起来少一半代码，bug也就少一半
+2026-05-28 09:19:48 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091948-f4dd0df3.json
+2026-05-28 09:19:48 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:48 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1052 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:48 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1052)
+2026-05-28 09:19:49 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.90s
+2026-05-28 09:19:49 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:49 - src.core.engine - INFO - [Engine] No decision extracted from content (Svelte的代码量只有React的30%，同样的功能Svelte写起来少一半代码，bug也就少一半)
+2026-05-28 09:19:49 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.90s
+2026-05-28 09:19:49 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=24 model=Qwen3-Embedding-4B
+2026-05-28 09:19:49 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=24 preview=React的useEffect确实容易滥用到爆炸
+2026-05-28 09:19:49 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.24s value_range=[-10.8828, 8.4609] mean=0.0617 std=2.5708
+2026-05-28 09:19:49 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=React的useEffect确实容易滥用到爆炸
+2026-05-28 09:19:49 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091949-23547dfb.json
+2026-05-28 09:19:49 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:49 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1026 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:49 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1026)
+2026-05-28 09:19:52 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=2.48s
+2026-05-28 09:19:52 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:52 - src.core.engine - INFO - [Engine] No decision extracted from content (React的useEffect确实容易滥用到爆炸)
+2026-05-28 09:19:52 - src.core.engine - INFO - [Engine] <<< _process_detection done time=2.48s
+2026-05-28 09:19:52 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-05-28 09:19:52 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=对对对，我们之前那个项目就是useEffect依赖搞了一堆bug，排查起来很痛苦
+2026-05-28 09:19:52 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-10.1484, 8.3125] mean=-0.0066 std=2.5009
+2026-05-28 09:19:52 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=对对对，我们之前那个项目就是useEffect依赖搞了一堆bug，排查起来很痛苦
+2026-05-28 09:19:52 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091952-7c172af9.json
+2026-05-28 09:19:52 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:52 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1042 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:52 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1042)
+2026-05-28 09:19:54 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.16s
+2026-05-28 09:19:54 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:54 - src.core.engine - INFO - [Engine] No decision extracted from content (对对对，我们之前那个项目就是useEffect依赖搞了一堆bug，排查起来很痛苦)
+2026-05-28 09:19:54 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.17s
+2026-05-28 09:19:54 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=73 model=Qwen3-Embedding-4B
+2026-05-28 09:19:54 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=73 preview=但React现在有Suspense和Server Components，很多以前用useEffect的场景现在不需要了，
+2026-05-28 09:19:54 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.16s value_range=[-10.8594, 10.8750] mean=0.0130 std=2.5817
+2026-05-28 09:19:54 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=但React现在有Suspense和Server Components，很多以前用useEffect的场景现在不需要了，
+2026-05-28 09:19:54 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091954-356ed21a.json
+2026-05-28 09:19:54 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:54 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1075 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:54 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1075)
+2026-05-28 09:19:55 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.77s
+2026-05-28 09:19:55 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:55 - src.core.engine - INFO - [Engine] No decision extracted from content (但React现在有Suspense和Server Components，很多以前用useEffect的场景现在不需要了，)
+2026-05-28 09:19:55 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.77s
+2026-05-28 09:19:56 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=59 model=Qwen3-Embedding-4B
+2026-05-28 09:19:56 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=59 preview=Nuxt 3也不差，Nitro引擎处理服务端逻辑很优雅，而且Vue的Transition组件做动画比React舒服太多
+2026-05-28 09:19:56 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.27s value_range=[-11.8438, 10.9531] mean=0.0265 std=2.5426
+2026-05-28 09:19:56 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Nuxt 3也不差，Nitro引擎处理服务端逻辑很优雅，而且Vue的Transition组件做动画比React舒服太多
+2026-05-28 09:19:56 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091956-256fb34b.json
+2026-05-28 09:19:56 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:56 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1061 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:56 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1061)
+2026-05-28 09:19:57 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.82s
+2026-05-28 09:19:57 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:57 - src.core.engine - INFO - [Engine] No decision extracted from content (Nuxt 3也不差，Nitro引擎处理服务端逻辑很优雅，而且Vue的Transition组件做动画比React舒服太多)
+2026-05-28 09:19:57 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.82s
+2026-05-28 09:19:57 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=55 model=Qwen3-Embedding-4B
+2026-05-28 09:19:57 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=55 preview=Svelte的stores和reactive声明真的优雅，写起来有种丝滑感，$:语法直接声明依赖，开发体验很爽
+2026-05-28 09:19:58 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.36s value_range=[-10.1250, 10.0547] mean=-0.0859 std=2.5779
+2026-05-28 09:19:58 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Svelte的stores和reactive声明真的优雅，写起来有种丝滑感，$:语法直接声明依赖，开发体验很爽
+2026-05-28 09:19:58 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091958-bdde9c16.json
+2026-05-28 09:19:58 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:58 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1057 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:58 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1057)
+2026-05-28 09:19:58 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.82s
+2026-05-28 09:19:58 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:19:58 - src.core.engine - INFO - [Engine] No decision extracted from content (Svelte的stores和reactive声明真的优雅，写起来有种丝滑感，$:语法直接声明依赖，开发体验很爽)
+2026-05-28 09:19:58 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.82s
+2026-05-28 09:19:59 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=63 model=Qwen3-Embedding-4B
+2026-05-28 09:19:59 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=63 preview=我觉得选型还要看后端团队的技术栈，如果后端用Node.js，那React + Next.js前后端统一语言，可以减少上下
+2026-05-28 09:19:59 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.21s value_range=[-10.3984, 10.8047] mean=0.0443 std=2.3965
+2026-05-28 09:19:59 - src.detect.episode - INFO - [Episode] chat=eval SEMANTIC-GAP boundary: sim=0.4877 < 0.50, suspend episode=ep_24f3d898d (msgs=18)
+2026-05-28 09:19:59 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_24f3d898d (chat=eval, msgs=18, pool=1/20)
+2026-05-28 09:19:59 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_24f3d898d chat=eval sim=0.8289 >= 0.55 ✓
+2026-05-28 09:19:59 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_24f3d898d (chat=eval, msgs=18, pool=0/20)
+2026-05-28 09:19:59 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_24f3d898d (msgs=18)
+2026-05-28 09:19:59 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=我觉得选型还要看后端团队的技术栈，如果后端用Node.js，那React + Next.js前后端统一语言，可以减少上下
+2026-05-28 09:19:59 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528091959-eb889ff5.json
+2026-05-28 09:19:59 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:19:59 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1065 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:19:59 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1065)
+2026-05-28 09:20:00 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.84s
+2026-05-28 09:20:00 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:00 - src.core.engine - INFO - [Engine] No decision extracted from content (我觉得选型还要看后端团队的技术栈，如果后端用Node.js，那React + Next.js前后端统一语言，可以减少上下)
+2026-05-28 09:20:00 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.85s
+2026-05-28 09:20:00 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=21 model=Qwen3-Embedding-4B
+2026-05-28 09:20:00 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=21 preview=后端是Java团队啊，哪来的Node.js
+2026-05-28 09:20:01 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-8.9453, 8.8125] mean=0.0074 std=2.4863
+2026-05-28 09:20:01 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=后端是Java团队啊，哪来的Node.js
+2026-05-28 09:20:01 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092001-b710bb3a.json
+2026-05-28 09:20:01 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:01 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1023 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:01 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1023)
+2026-05-28 09:20:01 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.77s
+2026-05-28 09:20:01 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:01 - src.core.engine - INFO - [Engine] No decision extracted from content (后端是Java团队啊，哪来的Node.js)
+2026-05-28 09:20:01 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.78s
+2026-05-28 09:20:02 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=57 model=Qwen3-Embedding-4B
+2026-05-28 09:20:02 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=57 preview=那更倾向Vue了，Java和Javascript的边界本来就清晰，Vue的设计理念对从Java转前端的开发者更友好
+2026-05-28 09:20:02 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.21s value_range=[-15.9688, 11.7031] mean=0.0540 std=2.5891
+2026-05-28 09:20:02 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=那更倾向Vue了，Java和Javascript的边界本来就清晰，Vue的设计理念对从Java转前端的开发者更友好
+2026-05-28 09:20:02 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092002-86d8f2ea.json
+2026-05-28 09:20:02 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:02 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1059 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:02 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1059)
+2026-05-28 09:20:03 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.80s
+2026-05-28 09:20:03 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:03 - src.core.engine - INFO - [Engine] No decision extracted from content (那更倾向Vue了，Java和Javascript的边界本来就清晰，Vue的设计理念对从Java转前端的开发者更友好)
+2026-05-28 09:20:03 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.80s
+2026-05-28 09:20:03 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=48 model=Qwen3-Embedding-4B
+2026-05-28 09:20:03 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=48 preview=选React也不冲突吧，TypeScript加持下，React项目结构清晰，Java转过来也不难
+2026-05-28 09:20:03 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-13.6484, 9.0078] mean=0.0569 std=2.4283
+2026-05-28 09:20:03 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=选React也不冲突吧，TypeScript加持下，React项目结构清晰，Java转过来也不难
+2026-05-28 09:20:03 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092003-d39ee6cb.json
+2026-05-28 09:20:03 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:03 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1050 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:03 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1050)
+2026-05-28 09:20:05 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=1.76s
+2026-05-28 09:20:05 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:05 - src.core.engine - INFO - [Engine] No decision extracted from content (选React也不冲突吧，TypeScript加持下，React项目结构清晰，Java转过来也不难)
+2026-05-28 09:20:05 - src.core.engine - INFO - [Engine] <<< _process_detection done time=1.76s
+2026-05-28 09:20:06 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=49 model=Qwen3-Embedding-4B
+2026-05-28 09:20:06 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=49 preview=TypeScript确实是加分项，React + TypeScript的泛型组件写起来类型安全很高
+2026-05-28 09:20:06 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.15s value_range=[-12.3984, 9.5625] mean=0.0276 std=2.4355
+2026-05-28 09:20:06 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=TypeScript确实是加分项，React + TypeScript的泛型组件写起来类型安全很高
+2026-05-28 09:20:06 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092006-cb8c6bf9.json
+2026-05-28 09:20:06 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:06 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1051 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:06 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1051)
+2026-05-28 09:20:07 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.93s
+2026-05-28 09:20:07 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:07 - src.core.engine - INFO - [Engine] No decision extracted from content (TypeScript确实是加分项，React + TypeScript的泛型组件写起来类型安全很高)
+2026-05-28 09:20:07 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.94s
+2026-05-28 09:20:07 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=89 model=Qwen3-Embedding-4B
+2026-05-28 09:20:07 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=89 preview=Vue 3 + TypeScript配合Volar插件，类型推导完全不输React，defineComponent + 
+2026-05-28 09:20:07 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-13.3203, 8.6328] mean=0.0035 std=2.5204
+2026-05-28 09:20:07 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Vue 3 + TypeScript配合Volar插件，类型推导完全不输React，defineComponent + 
+2026-05-28 09:20:07 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092007-58ece45f.json
+2026-05-28 09:20:07 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:07 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1091 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:07 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1091)
+2026-05-28 09:20:08 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.72s
+2026-05-28 09:20:08 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:08 - src.core.engine - INFO - [Engine] No decision extracted from content (Vue 3 + TypeScript配合Volar插件，类型推导完全不输React，defineComponent + )
+2026-05-28 09:20:08 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.72s
+2026-05-28 09:20:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-05-28 09:20:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=还有打包体积的问题，同样一个页面，Svelte打包后的js只有React的1/3左右，首屏加载差距很明显
+2026-05-28 09:20:09 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.14s value_range=[-13.7578, 10.0391] mean=0.0192 std=2.6235
+2026-05-28 09:20:09 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=还有打包体积的问题，同样一个页面，Svelte打包后的js只有React的1/3左右，首屏加载差距很明显
+2026-05-28 09:20:09 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092009-7e8f9307.json
+2026-05-28 09:20:09 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:09 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1054 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:09 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1054)
+2026-05-28 09:20:10 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.91s
+2026-05-28 09:20:10 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:10 - src.core.engine - INFO - [Engine] No decision extracted from content (还有打包体积的问题，同样一个页面，Svelte打包后的js只有React的1/3左右，首屏加载差距很明显)
+2026-05-28 09:20:10 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.91s
+2026-05-28 09:20:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=38 model=Qwen3-Embedding-4B
+2026-05-28 09:20:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=38 preview=首屏加载可以用SSR啊，Next.js渲染出来直接就HTML了，体积不是问题
+2026-05-28 09:20:11 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.25s value_range=[-11.7656, 8.5312] mean=-0.0265 std=2.5334
+2026-05-28 09:20:11 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=首屏加载可以用SSR啊，Next.js渲染出来直接就HTML了，体积不是问题
+2026-05-28 09:20:11 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092011-120df5d3.json
+2026-05-28 09:20:11 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:11 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1040 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:11 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1040)
+2026-05-28 09:20:11 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.73s
+2026-05-28 09:20:11 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:11 - src.core.engine - INFO - [Engine] No decision extracted from content (首屏加载可以用SSR啊，Next.js渲染出来直接就HTML了，体积不是问题)
+2026-05-28 09:20:11 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.73s
+2026-05-28 09:20:12 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=18 model=Qwen3-Embedding-4B
+2026-05-28 09:20:12 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=18 preview=Nuxt也能SSR，这个点拉不开差距
+2026-05-28 09:20:12 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.26s value_range=[-10.9219, 9.7812] mean=0.0155 std=2.5992
+2026-05-28 09:20:12 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Nuxt也能SSR，这个点拉不开差距
+2026-05-28 09:20:12 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092012-d5b74ba5.json
+2026-05-28 09:20:12 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:12 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1020 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:12 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1020)
+2026-05-28 09:20:13 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.73s
+2026-05-28 09:20:13 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:13 - src.core.engine - INFO - [Engine] No decision extracted from content (Nuxt也能SSR，这个点拉不开差距)
+2026-05-28 09:20:13 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.73s
+2026-05-28 09:20:13 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=52 model=Qwen3-Embedding-4B
+2026-05-28 09:20:13 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=52 preview=性能方面Svelte确实有点东西，没有虚拟DOM，直接编译成原生DOM操作，benchmark一直很靠前
+2026-05-28 09:20:13 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.14s value_range=[-12.2734, 9.4141] mean=0.0420 std=2.6053
+2026-05-28 09:20:13 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=性能方面Svelte确实有点东西，没有虚拟DOM，直接编译成原生DOM操作，benchmark一直很靠前
+2026-05-28 09:20:13 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092013-68d69633.json
+2026-05-28 09:20:13 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:13 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1054 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:13 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1054)
+2026-05-28 09:20:14 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.83s
+2026-05-28 09:20:14 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:14 - src.core.engine - INFO - [Engine] No decision extracted from content (性能方面Svelte确实有点东西，没有虚拟DOM，直接编译成原生DOM操作，benchmark一直很靠前)
+2026-05-28 09:20:14 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.83s
+2026-05-28 09:20:15 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=49 model=Qwen3-Embedding-4B
+2026-05-28 09:20:15 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=49 preview=但React的并发模式和Fiber架构在处理复杂交互时优势还是有的，特别是在需要高优先级更新的场景
+2026-05-28 09:20:15 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.16s value_range=[-10.5938, 10.0859] mean=0.0578 std=2.4766
+2026-05-28 09:20:15 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=但React的并发模式和Fiber架构在处理复杂交互时优势还是有的，特别是在需要高优先级更新的场景
+2026-05-28 09:20:15 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092015-00785da2.json
+2026-05-28 09:20:15 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:15 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1051 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:15 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1051)
+2026-05-28 09:20:16 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.78s
+2026-05-28 09:20:16 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:16 - src.core.engine - INFO - [Engine] No decision extracted from content (但React的并发模式和Fiber架构在处理复杂交互时优势还是有的，特别是在需要高优先级更新的场景)
+2026-05-28 09:20:16 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.78s
+2026-05-28 09:20:16 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=56 model=Qwen3-Embedding-4B
+2026-05-28 09:20:16 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=56 preview=现在是2025年了，Vue 3的性能已经不差了，而且Vapor Mode直接跳过虚拟DOM，到时候性能差距会更小
+2026-05-28 09:20:16 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-13.3203, 10.6094] mean=0.0230 std=2.5643
+2026-05-28 09:20:16 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=现在是2025年了，Vue 3的性能已经不差了，而且Vapor Mode直接跳过虚拟DOM，到时候性能差距会更小
+2026-05-28 09:20:16 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092016-b6d04994.json
+2026-05-28 09:20:16 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:16 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1058 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:16 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1058)
+2026-05-28 09:20:17 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.94s
+2026-05-28 09:20:17 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:17 - src.core.engine - INFO - [Engine] No decision extracted from content (现在是2025年了，Vue 3的性能已经不差了，而且Vapor Mode直接跳过虚拟DOM，到时候性能差距会更小)
+2026-05-28 09:20:17 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.95s
+2026-05-28 09:20:18 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=89 model=Qwen3-Embedding-4B
+2026-05-28 09:20:18 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=89 preview=我觉得还有一个关键点：组件库和模板市场。React有MUI、Ant Design、Shadcn/ui，Vue有Eleme
+2026-05-28 09:20:18 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.31s value_range=[-12.9453, 9.5312] mean=0.0171 std=2.6199
+2026-05-28 09:20:18 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=我觉得还有一个关键点：组件库和模板市场。React有MUI、Ant Design、Shadcn/ui，Vue有Eleme
+2026-05-28 09:20:18 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092018-794bc68f.json
+2026-05-28 09:20:18 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:18 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1091 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:18 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1091)
+2026-05-28 09:20:19 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.77s
+2026-05-28 09:20:19 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:19 - src.core.engine - INFO - [Engine] No decision extracted from content (我觉得还有一个关键点：组件库和模板市场。React有MUI、Ant Design、Shadcn/ui，Vue有Eleme)
+2026-05-28 09:20:19 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.77s
+2026-05-28 09:20:19 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=61 model=Qwen3-Embedding-4B
+2026-05-28 09:20:19 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=61 preview=Element Plus确实好用，中文文档完善，而且跟Element UI一脉相承，我们从Vue 2升级到Vue 3很平
+2026-05-28 09:20:19 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-12.3281, 9.1328] mean=0.0155 std=2.5565
+2026-05-28 09:20:19 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Element Plus确实好用，中文文档完善，而且跟Element UI一脉相承，我们从Vue 2升级到Vue 3很平
+2026-05-28 09:20:19 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092019-07933c83.json
+2026-05-28 09:20:19 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:19 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1063 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:19 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1063)
+2026-05-28 09:20:20 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.96s
+2026-05-28 09:20:20 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:20 - src.core.engine - INFO - [Engine] No decision extracted from content (Element Plus确实好用，中文文档完善，而且跟Element UI一脉相承，我们从Vue 2升级到Vue 3很平)
+2026-05-28 09:20:20 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.97s
+2026-05-28 09:20:21 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=58 model=Qwen3-Embedding-4B
+2026-05-28 09:20:21 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=58 preview=Shadcn/ui虽然不是传统组件库，但它的设计理念太先进了，直接copy代码到项目里，完全掌控样式，自定义程度最高
+2026-05-28 09:20:21 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-8.8438, 12.6172] mean=-0.0204 std=2.5649
+2026-05-28 09:20:21 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Shadcn/ui虽然不是传统组件库，但它的设计理念太先进了，直接copy代码到项目里，完全掌控样式，自定义程度最高
+2026-05-28 09:20:21 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092021-6a46e61b.json
+2026-05-28 09:20:21 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:21 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1060 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:21 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1060)
+2026-05-28 09:20:22 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.94s
+2026-05-28 09:20:22 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:22 - src.core.engine - INFO - [Engine] No decision extracted from content (Shadcn/ui虽然不是传统组件库，但它的设计理念太先进了，直接copy代码到项目里，完全掌控样式，自定义程度最高)
+2026-05-28 09:20:22 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.94s
+2026-05-28 09:20:22 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=28 model=Qwen3-Embedding-4B
+2026-05-28 09:20:22 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=28 preview=每次一到选型就纠结，上次也是讨论了好久最后换人了才定下来
+2026-05-28 09:20:23 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.21s value_range=[-11.0156, 9.9219] mean=0.0185 std=2.4351
+2026-05-28 09:20:23 - src.detect.episode - INFO - [Episode] chat=eval SEMANTIC-GAP boundary: sim=0.4097 < 0.50, suspend episode=ep_24f3d898d (msgs=33)
+2026-05-28 09:20:23 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_24f3d898d (chat=eval, msgs=33, pool=1/20)
+2026-05-28 09:20:23 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_24f3d898d chat=eval sim=0.5801 >= 0.55 ✓
+2026-05-28 09:20:23 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_24f3d898d (chat=eval, msgs=33, pool=0/20)
+2026-05-28 09:20:23 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_24f3d898d (msgs=33)
+2026-05-28 09:20:23 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=每次一到选型就纠结，上次也是讨论了好久最后换人了才定下来
+2026-05-28 09:20:23 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092023-4ad411a2.json
+2026-05-28 09:20:23 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:23 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1030 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:23 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1030)
+2026-05-28 09:20:23 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.75s
+2026-05-28 09:20:23 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:23 - src.core.engine - INFO - [Engine] No decision extracted from content (每次一到选型就纠结，上次也是讨论了好久最后换人了才定下来)
+2026-05-28 09:20:23 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.75s
+2026-05-28 09:20:24 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-05-28 09:20:24 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=要不这样，先拿一个小模块用不同框架做个POC，对比下开发效率、性能、打包体积，用数据说话
+2026-05-28 09:20:24 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.16s value_range=[-9.4141, 10.9766] mean=0.0758 std=2.5536
+2026-05-28 09:20:24 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=要不这样，先拿一个小模块用不同框架做个POC，对比下开发效率、性能、打包体积，用数据说话
+2026-05-28 09:20:24 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092024-652c5375.json
+2026-05-28 09:20:24 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:24 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1046 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:24 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1046)
+2026-05-28 09:20:25 - src.core.engine - INFO - [LLM] <<< Extract result type=dict time=1.15s
+2026-05-28 09:20:25 - src.core.engine - INFO - [LLM] Extracted decision dict with 6 keys
+2026-05-28 09:20:25 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=73a52f49048b title=前端框架选型POC验证 source=eval
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=先拿一个小模块用不同框架做个POC，对比开发效率、性能、打包体积，用数据说话。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.21s value_range=[-8.6016, 11.1250] mean=0.0962 std=2.5615
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=119 chars=4585 model=Qwen3-Embedding-4B
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[1/119] len=44 preview=决定使用Kafka MirrorMaker实现跨集群数据同步，用于灾备或多区域部署场景。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[2/119] len=35 preview=决定继续保留Sentry，同时混合使用自建监控，后续根据情况逐步迁移。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[3/119] len=25 preview=前端AB测试方案采用Feature Flag实现。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[4/119] len=20 preview=决定使用Trivy进行容器镜像安全扫描。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[5/119] len=23 preview=决定为消息队列设置消息保留策略，具体配置待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[6/119] len=23 preview=决定对数据库查询计划进行缓存，以提升查询性能。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[7/119] len=32 preview=决定对消息队列Kafka启用消息压缩，以降低网络带宽和存储成本。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[8/119] len=54 preview=现有系统使用RabbitMQ，需要构建消息桥接层实现从RabbitMQ到Kafka的平滑迁移，避免直接切换。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[9/119] len=57 preview=推荐使用SkyWalking作为APM工具，因为其对Java生态支持最好且无侵入，适用于以Java为主的业务场景。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[10/119] len=25 preview=数据库备份采用pg_dump加上WAL归档的方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[11/119] len=28 preview=决定为消息队列配置死信队列，用于处理无法正常消费的消息。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[12/119] len=37 preview=确定消息队列Topic的命名规范，包括命名格式、层级结构、环境标识等规则。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[13/119] len=22 preview=容器网络插件采用Calico，支持网络策略。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[14/119] len=32 preview=推荐使用PgBonder作为PG连接池，并采用事务模式复用连接。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[15/119] len=66 preview=将前端业务组件抽离成独立npm包，实现跨项目复用和清晰版本管理，并使用Changeset进行自动版本号管理和Change
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[16/119] len=37 preview=决定在容器运维中采用Operator模式，以实现自动化管理，提升运维效率。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[17/119] len=50 preview=将不变的依赖层放在前面，经常变的业务代码放在后面，利用Docker的layer缓存机制减少构建时间。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[18/119] len=19 preview=决定使用Harbor作为容器镜像仓库。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[19/119] len=26 preview=前端路由权限控制方案已确定，具体实现细节待后续讨论。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[20/119] len=52 preview=在Nginx Ingress Controller上集成ModSecurity实现Web应用防火墙防护。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[21/119] len=87 preview=决定保留Sentry用于核心错误监控，同时自建自定义业务指标上报系统，使用OpenTelemetry采集数据、Click
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[22/119] len=36 preview=决定采用WebWorker处理前端大数据渲染，以提升页面性能和用户体验。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[23/119] len=35 preview=决定使用TimescaleDB的自动分区功能来管理时间序列数据的分区。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[24/119] len=31 preview=确定消息队列的幂等处理方案，确保消息重复消费时不会产生副作用。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[25/119] len=97 preview=首屏优化阶段优先处理Bundle体积，体验优化阶段再处理图片和CLS指标；监控大盘使用Grafana，自定义业务埋点用P
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[26/119] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[27/119] len=64 preview=决定在前端项目中采用Service Worker技术实现离线缓存和PWA（渐进式Web应用）支持，以提升用户体验和应用的
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[28/119] len=45 preview=数据库确定为PostgreSQL，消息队列确定为RabbitMQ，缓存层确定为Redis。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[29/119] len=53 preview=决定将前端E2E测试工具从Cypress切换为Playwright，以利用其跨浏览器支持和更快的执行速度。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[30/119] len=23 preview=前端状态管理使用Zustand，因其轻量好用。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[31/119] len=30 preview=生产环境容器PV回收策略选择Retain，而非Delete。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[32/119] len=34 preview=容器资源限制采用Resource Quota和Limit Range
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[33/119] len=28 preview=针对Kafka消费者组重平衡问题进行优化，具体方案待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[34/119] len=43 preview=采用HPA（基于CPU/内存）与VPA结合，必要时加装KEDA，实现更精细的弹性伸缩。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[35/119] len=19 preview=决定采用Loki作为容器日志收集方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[36/119] len=35 preview=容器Ingress采用Nginx Ingress Controller
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[37/119] len=48 preview=经过讨论，决定采用阿里云ACK托管集群，放弃自建K8s，因为自建维护成本高且缺乏专职SRE团队。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[38/119] len=28 preview=决定使用golang-migrate作为数据库迁移工具。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[39/119] len=21 preview=数据库分表方案使用Citus，支持分布式。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[40/119] len=48 preview=数据库慢查询分析使用pg_stat_statements配合explain analyze进行。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[41/119] len=24 preview=决定数据库读写分离使用主从复制，并采用异步模式。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[42/119] len=62 preview=容器HPA弹性策略，基于CPU和内存的自动伸缩已经够用，但如果业务有突发流量，可以考虑加装KEDA来支持基于事件驱动的伸
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[43/119] len=59 preview=引入Schema Registry管理消息数据格式，确保生产者和消费者之间数据格式一致，并通过兼容性检查提前发现问题。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[44/119] len=50 preview=前端浏览器兼容性列表只支持最新两个大版本的Chrome、Firefox、Edge，不再支持IE11。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[45/119] len=23 preview=决定在容器中使用PV/PVC来实现持久化存储。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[46/119] len=92 preview=决定接入Sentry进行错误监控，重点关注LCP和FID性能指标，LCP超过2.5秒触发告警，FID控制在100毫秒以内
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[47/119] len=26 preview=讨论Kafka升级方案，确保无损迁移，具体细节待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[48/119] len=28 preview=前端使用changesets管理版本和changelog
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[49/119] len=20 preview=决定采用前端日志采集方案，具体细节待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[50/119] len=42 preview=决定使用Rancher还是KubeSphere进行容器多集群管理，需进一步讨论确认。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[51/119] len=6 preview=前端灰度发布
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[52/119] len=28 preview=决定使用Istio作为容器Service Mesh方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[53/119] len=72 preview=决定采用降级策略处理前端hydration错误，当SSR和CSR渲染不一致时，客户端重新渲染并清除服务端生成的HTML，
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[54/119] len=74 preview=决定采用ArgoCD作为GitOps工具，实现声明式部署，以提高部署的可控性和自动化水平。  [补充] 具体工具为Arg
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[55/119] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[56/119] len=25 preview=决定消息队列Schema兼容性策略，具体方案待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[57/119] len=25 preview=前端用Vitest替代Jest，速度快而且兼容性好
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[58/119] len=42 preview=决定使用Helm来管理容器化应用的部署，通过模板化配置实现标准化和可重复的部署流程。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[59/119] len=32 preview=决定采用WebP格式、懒加载和CDN加速来优化前端图片加载性能。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[60/119] len=33 preview=数据库表结构变更使用sqitch进行版本控制，支持方便的回滚操作。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[61/119] len=42 preview=决定采用Bytebase进行SQL审核，以规范数据库变更流程，提高代码质量和安全性。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[62/119] len=25 preview=决定使用Velero进行容器备份，并包含PV快照。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[63/119] len=37 preview=前端微前端落地，采用Module Federation方案，并共享组件库。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[64/119] len=41 preview=采用SSR和服务端组件进行前端性能优化，使用Next.js框架以提升首屏加载速度。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[65/119] len=23 preview=决定采用流式SSR技术来优化前端首屏加载性能。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[66/119] len=52 preview=决定使用topologySpreadConstraints实现容器Pod的跨可用区调度，以提升高可用性。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[67/119] len=31 preview=决定使用Prometheus和Grafana作为容器监控方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[68/119] len=24 preview=前端SSR使用Next.js，之前评估过没问题。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[69/119] len=61 preview=最终确定采用最务实的方案，不再变动。同时决定加入CLS（累计布局偏移）指标，要求控制在0.1以内，因为其影响用户体验很大
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[70/119] len=48 preview=Trace采样率建议头部采集全量，尾部采样10%，这样既能保证关键路径的完整性，又能控制存储成本
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[71/119] len=32 preview=将数据库迁移工具从golang-migrate切换为sqitch
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[72/119] len=35 preview=核心业务使用裸金属服务器加K8s，非核心业务使用云托管，形成混合架构。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[73/119] len=19 preview=前端技术栈选择React作为主要框架。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[74/119] len=34 preview=容器用Kyverno做策略管理，比OPA Gatekeeper更易用
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[75/119] len=34 preview=容器HPA配置多个指标，CPU超过70%或者内存超过80%都触发扩容
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[76/119] len=16 preview=容器使用PV/PVC做持久化存储
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[77/119] len=52 preview=讨论Kafka集群的高可用配置，包括副本因子、ISR设置、acks参数等，确保消息不丢失且服务持续可用。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[78/119] len=23 preview=决定使用Burrow作为Kafka的监控工具。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[79/119] len=33 preview=容器化方案决定使用Kubernetes（K8s），因其生态最成熟。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[80/119] len=21 preview=需要制定前端CDN缓存策略，具体细节待定。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[81/119] len=40 preview=确定Kubernetes命名空间的规划方案，包括命名规范、环境隔离、团队划分等。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[82/119] len=38 preview=自定义指标采集统一使用OpenTelemetry Collector作为网关
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[83/119] len=43 preview=决定采用Kafka KRaft模式，替代ZooKeeper依赖，以简化架构并提升性能。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[84/119] len=31 preview=前端项目使用pnpm替代npm，以提升安装速度和节省磁盘空间。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[85/119] len=40 preview=核心业务使用裸金属服务器加K8s，非核心业务上云托管，以平衡成本、性能和灵活性。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[86/119] len=58 preview=经过讨论，决定使用阿里云ACK托管集群作为部署方案，放弃自建K8s集群，因为自建维护成本高，且混合部署方案未被采纳。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[87/119] len=28 preview=决定采用数据库逻辑复制方案，实现实时数据同步到数据仓库。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[88/119] len=29 preview=决定采用Patroni作为PostgreSQL高可用方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[89/119] len=24 preview=决定数据库连接使用SSL加密以确保数据传输安全。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[90/119] len=34 preview=决定使用Helm Chart来统一管理所有Kubernetes部署。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[91/119] len=80 preview=决定在容器架构中采用Sidecar模式，将辅助功能（如日志收集、监控代理、服务网格等）以独立容器的方式与主应用容器部署在
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[92/119] len=44 preview=决定将前端静态资源部署到对象存储服务（OSS）并搭配CDN加速，以提升加载速度和稳定性。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[93/119] len=30 preview=决定使用GitHub Actions作为容器CI/CD工具。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[94/119] len=39 preview=数据库字段类型选择bigint还是int取决于预估数据量，大表用bigint。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[95/119] len=36 preview=采用Cluster Autoscaler实现容器Node节点的自动扩容。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[96/119] len=30 preview=决定采用GitHub Actions作为容器CI/CD工具。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[97/119] len=48 preview=前端开发环境和测试环境统一使用MSW（Mock Service Worker）进行接口Mock。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[98/119] len=32 preview=决定实施前端安全防护，包括XSS、CSRF防护和CSP策略配置。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[99/119] len=40 preview=PG的分区表使用native partitioning，因为继承分区性能不够好。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[100/119] len=51 preview=决定采用容器Pod Anti-Affinity策略，以分散Pod在不同节点上，提高可用性和资源利用率。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[101/119] len=29 preview=容器服务发现采用CoreDNS，即K8s默认的DNS方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[102/119] len=22 preview=决定采用Fluentd作为容器日志采集工具。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[103/119] len=63 preview=决定采用PostgreSQL作为数据库，因其扩展性强，支持JSONB、GIS和TimescaleDB等扩展，适合混合负载
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[104/119] len=27 preview=决定使用golang-migrate作为数据库迁移工具
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[105/119] len=23 preview=决定前端组件测试使用Vitest作为测试框架。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[106/119] len=25 preview=决定将前端构建产物存放在对象存储服务（OSS）中。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[107/119] len=27 preview=前端错误边界用ErrorBoundary包裹，避免白屏
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[108/119] len=55 preview=容器结合Istio做灰度发布，可以在不修改应用代码的情况下实现流量管理，并且利用Istio的mTLS加密通信。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[109/119] len=41 preview=决定采用容器Gateway API作为新的网关方案，替代或补充现有Ingress。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[110/119] len=50 preview=容器安全使用Pod Security Standards，该标准在K8s 1.25之后已是默认行为。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[111/119] len=43 preview=采用互斥锁或永不过期加后台异步更新的方案防御缓存击穿，整体架构升级分三期推进稳步上线。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[112/119] len=38 preview=决定数据库连接池用完时采用排队等待策略，并使用PgBouncer设置池大小。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[113/119] len=30 preview=决定使用PgBouncer的事务池模式作为数据库连接池方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[114/119] len=48 preview=决定使用Kubernetes（K8s）进行容器化，以实现统一管理编排和自动扩缩容，降低运维成本。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[115/119] len=31 preview=决定使用Prometheus+Grafana作为容器监控方案。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[116/119] len=50 preview=决定使用webpack-bundle-analyzer定期检查前端Bundle大小，以优化打包体积。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[117/119] len=55 preview=决定在前端构建产物中实施Tree Shaking和Code Splitting，以减小打包体积并优化加载性能。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[118/119] len=55 preview=在前端CI流程中加入Prettier代码格式化检查和ESLint代码质量检查，确保代码风格统一和减少潜在错误。
+2026-05-28 09:20:25 - src.model.embedding_provider - INFO - [Embedding]     text[119/119] len=65 preview=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:20:29 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=119 dim=2560 time=3.50s value_range=[-13.3750, 15.9062] mean=0.0054 std=2.6018
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker] >>> Request: queries=1 docs=5 model=Qwen3-Reranker-4B
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker]     query[1/1] len=39 preview=先拿一个小模块用不同框架做个POC，对比开发效率、性能、打包体积，用数据说话。
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker]     doc[1/5] len=19 preview=前端技术栈选择React作为主要框架。
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker]     doc[2/5] len=24 preview=决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker]     doc[3/5] len=65 preview=维护成本不能只看社区，要看代码可维护性。Vue的SFC模式天然把模板、逻辑、样式分离，比React的all-in-js好
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker]     doc[4/5] len=31 preview=将前端打包工具从Webpack切换到Vite，以提升构建速度。
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker]     doc[5/5] len=41 preview=采用SSR和服务端组件进行前端性能优化，使用Next.js框架以提升首屏加载速度。
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker] POST http://127.0.0.1:8001/v1/rerank query=先拿一个小模块用不同框架做个POC，对比开发效率、性能、打包体积，用数据说话。 docs=5
+2026-05-28 09:20:29 - src.model.reranker_provider - INFO - [Reranker] <<< Response: scores=[-4.5586, -4.2227, -4.2852, -3.9551, -4.1562] time=0.16s top3=[3]-3.9551:将前端打包工具从Webpack切换到Vite，以提升构建速度。; [4]-4.1562:采用SSR和服务端组件进行前端性能优化，使用Next.js框架以提升首屏加载速度; [1]-4.2227:决定采用微前端架构来拆分前端应用，具体方案待定。
+2026-05-28 09:20:29 - src.core.engine - INFO - [Similar] Embedding search no match (top=-3.9551)
+2026-05-28 09:20:29 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=73a52f49048b v1
+2026-05-28 09:20:29 - src.core.engine - INFO - Created decision: 73a52f49048b v1 — 前端框架选型POC验证
+2026-05-28 09:20:29 - src.core.engine - INFO - [Mutation] CREATE applied: sid=73a52f49048b v1
+2026-05-28 09:20:29 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:20:30 - src.view.client - WARNING - Failed to list fields: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:20:30 - src.view.client - ERROR - Failed to upsert record for 73a52f49048b: code=99991677, msg=Authentication token expired. Please request a new one.
+2026-05-28 09:20:30 - src.view.syncer - INFO - [BaseView] Synced decision 73a52f49048b v1
+2026-05-28 09:20:30 - src.core.engine - INFO - [Mutation] Base sync triggered for CREATE: sid=73a52f49048b
+2026-05-28 09:20:30 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=73a52f49048b
+2026-05-28 09:20:30 - src.core.engine - INFO - [Engine] <<< _process_detection done time=6.25s
+2026-05-28 09:20:31 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=39 model=Qwen3-Embedding-4B
+2026-05-28 09:20:31 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=39 preview=做POC可以，但时间成本也要算进去，而且POC做出来的效果跟正式项目差距挺大的
+2026-05-28 09:20:31 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.19s value_range=[-11.0938, 9.3047] mean=0.0612 std=2.4934
+2026-05-28 09:20:31 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=做POC可以，但时间成本也要算进去，而且POC做出来的效果跟正式项目差距挺大的
+2026-05-28 09:20:31 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092031-cae4658b.json
+2026-05-28 09:20:31 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:31 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1041 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:31 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1041)
+2026-05-28 09:20:32 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.87s
+2026-05-28 09:20:32 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:32 - src.core.engine - INFO - [Engine] No decision extracted from content (做POC可以，但时间成本也要算进去，而且POC做出来的效果跟正式项目差距挺大的)
+2026-05-28 09:20:32 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.87s
+2026-05-28 09:20:32 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=33 model=Qwen3-Embedding-4B
+2026-05-28 09:20:32 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=33 preview=我坚持React，生态优势摆在那里，以后加功能、找外包、招人都方便
+2026-05-28 09:20:33 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.13s value_range=[-12.6641, 11.4062] mean=0.0552 std=2.4278
+2026-05-28 09:20:33 - src.detect.episode - INFO - [Episode] chat=eval SEMANTIC-GAP boundary: sim=0.4617 < 0.50, suspend episode=ep_24f3d898d (msgs=36)
+2026-05-28 09:20:33 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_24f3d898d (chat=eval, msgs=36, pool=1/20)
+2026-05-28 09:20:33 - src.detect.suspend_pool - INFO - [SuspendPool] Reopen: episode=ep_24f3d898d chat=eval sim=0.8007 >= 0.55 ✓
+2026-05-28 09:20:33 - src.detect.suspend_pool - INFO - [SuspendPool] Reopened episode=ep_24f3d898d (chat=eval, msgs=36, pool=0/20)
+2026-05-28 09:20:33 - src.detect.episode - INFO - [Episode] chat=eval REOPENED episode=ep_24f3d898d (msgs=36)
+2026-05-28 09:20:33 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=我坚持React，生态优势摆在那里，以后加功能、找外包、招人都方便
+2026-05-28 09:20:33 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092033-1c3117b4.json
+2026-05-28 09:20:33 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:33 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1035 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:33 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1035)
+2026-05-28 09:20:33 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.71s
+2026-05-28 09:20:33 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:33 - src.core.engine - INFO - [Engine] No decision extracted from content (我坚持React，生态优势摆在那里，以后加功能、找外包、招人都方便)
+2026-05-28 09:20:33 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.71s
+2026-05-28 09:20:34 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=44 model=Qwen3-Embedding-4B
+2026-05-28 09:20:34 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=44 preview=我还是倾向Vue，开发效率确实是三种里最高的，而且这个项目周期紧，Vue上手快能快速出活
+2026-05-28 09:20:34 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.25s value_range=[-12.3516, 11.0469] mean=0.0712 std=2.6014
+2026-05-28 09:20:34 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=我还是倾向Vue，开发效率确实是三种里最高的，而且这个项目周期紧，Vue上手快能快速出活
+2026-05-28 09:20:34 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092034-573f251e.json
+2026-05-28 09:20:34 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:34 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1046 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:34 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1046)
+2026-05-28 09:20:35 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.82s
+2026-05-28 09:20:35 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:35 - src.core.engine - INFO - [Engine] No decision extracted from content (我还是倾向Vue，开发效率确实是三种里最高的，而且这个项目周期紧，Vue上手快能快速出活)
+2026-05-28 09:20:35 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.82s
+2026-05-28 09:20:35 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=42 model=Qwen3-Embedding-4B
+2026-05-28 09:20:35 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=42 preview=Svelte虽然我用着爽，但它要面对的不仅是技术选型，还有人才和团队接受度的现实问题
+2026-05-28 09:20:35 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.12s value_range=[-11.0781, 8.9844] mean=0.0020 std=2.4647
+2026-05-28 09:20:35 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=Svelte虽然我用着爽，但它要面对的不仅是技术选型，还有人才和团队接受度的现实问题
+2026-05-28 09:20:35 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092035-de4760ab.json
+2026-05-28 09:20:35 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:35 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1044 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:35 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1044)
+2026-05-28 09:20:36 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.74s
+2026-05-28 09:20:36 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:36 - src.core.engine - INFO - [Engine] No decision extracted from content (Svelte虽然我用着爽，但它要面对的不仅是技术选型，还有人才和团队接受度的现实问题)
+2026-05-28 09:20:36 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.74s
+2026-05-28 09:20:37 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=59 model=Qwen3-Embedding-4B
+2026-05-28 09:20:37 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=59 preview=算了今天定不了，先各自整理一份选型报告，下周再讨论，暂定React和Vue两个候选方案，Svelte作为调研方向先跟进
+2026-05-28 09:20:37 - src.model.embedding_provider - INFO - [Embedding] <<< Response: vectors=1 dim=2560 time=0.10s value_range=[-12.1953, 9.7578] mean=0.0214 std=2.5032
+2026-05-28 09:20:37 - src.core.engine - INFO - [Engine] >>> _process_detection source=eval content=算了今天定不了，先各自整理一份选型报告，下周再讨论，暂定React和Vue两个候选方案，Svelte作为调研方向先跟进
+2026-05-28 09:20:37 - src.graph.snapshot - INFO - Snapshot saved: data/snapshots/snap-20260528092037-d868621f.json
+2026-05-28 09:20:37 - src.core.engine - INFO - [LLM] Injected 50 existing decisions as context
+2026-05-28 09:20:37 - src.core.engine - INFO - [LLM] >>> _extract_decision source=eval len=1061 content=⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM
+2026-05-28 09:20:37 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=1061)
+2026-05-28 09:20:38 - src.core.engine - INFO - [LLM] <<< Extract result type=NoneType time=0.70s
+2026-05-28 09:20:38 - src.core.engine - INFO - [LLM] No decision found in content (⚠️ 以下决策已存在于系统中。如果新对话讨论的是与以下已有决策相同的事项，请不要再提取！ - Kafka MirrorM)
+2026-05-28 09:20:38 - src.core.engine - INFO - [Engine] No decision extracted from content (算了今天定不了，先各自整理一份选型报告，下周再讨论，暂定React和Vue两个候选方案，Svelte作为调研方向先跟进)
+2026-05-28 09:20:38 - src.core.engine - INFO - [Engine] <<< _process_detection done time=0.70s
+2026-05-28 09:20:40 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_24f3d898d (chat=eval, msgs=40, pool=1/20)
+2026-05-28 09:20:40 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 1 episode(s) to data/suspend_pool.json
+2026-05-28 09:20:40 - src.card.pusher - INFO - Push scheduler stopped
+2026-05-28 09:20:40 - src.core.engine - INFO - Hypergraph saved on stop
+2026-05-28 09:20:40 - src.core.engine - INFO - Synced 3 dirty decisions to storage
+2026-05-28 09:20:40 - src.core.engine - INFO - MemoryEngine stopped (applied=3, failed=0)

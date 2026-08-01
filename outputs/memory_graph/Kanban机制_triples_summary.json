@@ -1,0 +1,716 @@
+{
+  "triples": [
+    {
+      "head": "Kanban机制",
+      "relation": "related_to",
+      "tail": "Kanban",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-8dc21a"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "based_on",
+      "tail": "看板机制",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "compared_with",
+      "tail": "传统多 Agent 协作",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "uses",
+      "tail": "项目管理",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "uses",
+      "tail": "Workspace",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "uses",
+      "tail": "结构化工作流",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "uses",
+      "tail": "人工监督",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "uses",
+      "tail": "AI 协作",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "看板机制",
+      "relation": "related_to",
+      "tail": "项目管理",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Workspace",
+      "relation": "related_to",
+      "tail": "代理执行",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "传统多 Agent 协作",
+      "relation": "related_to",
+      "tail": "代理执行",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-498efa"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "compared_with",
+      "tail": "传统多 Agent 协作",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "based_on",
+      "tail": "Issue",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "uses",
+      "tail": "Git worktree",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "uses",
+      "tail": "差异审查",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "uses",
+      "tail": "内联评论",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "uses",
+      "tail": "预览测试",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "uses",
+      "tail": "多会话",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "uses",
+      "tail": "PR",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban 看板机制",
+      "relation": "related_to",
+      "tail": "工作流",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "工作流",
+      "relation": "related_to",
+      "tail": "规划",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "工作流",
+      "relation": "related_to",
+      "tail": "执行",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "工作流",
+      "relation": "related_to",
+      "tail": "审查",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "工作流",
+      "relation": "related_to",
+      "tail": "合并",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "传统多 Agent 协作",
+      "relation": "related_to",
+      "tail": "对话",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "传统多 Agent 协作",
+      "relation": "related_to",
+      "tail": "任务列表",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "传统多 Agent 协作",
+      "relation": "related_to",
+      "tail": "共享执行环境",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "传统多 Agent 协作",
+      "relation": "related_to",
+      "tail": "代理间直接通信",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "传统多 Agent 协作",
+      "relation": "related_to",
+      "tail": "线性执行",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-f4c1ec"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "adopts",
+      "tail": "Issue-Workspace 分离架构",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "adopts",
+      "tail": "多会话机制",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "adopts",
+      "tail": "审查和反馈循环",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Issue-Workspace 分离架构",
+      "relation": "based_on",
+      "tail": "Issue",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Issue-Workspace 分离架构",
+      "relation": "based_on",
+      "tail": "Workspace",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Issue",
+      "relation": "related_to",
+      "tail": "Workspace",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Workspace",
+      "relation": "uses",
+      "tail": "Git 分支",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "Workspace",
+      "relation": "uses",
+      "tail": "代理配置",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "多会话机制",
+      "relation": "based_on",
+      "tail": "Workspace",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "审查和反馈循环",
+      "relation": "uses",
+      "tail": "差异面板",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "审查和反馈循环",
+      "relation": "uses",
+      "tail": "内联评论",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "审查和反馈循环",
+      "relation": "uses",
+      "tail": "GitHub 集成",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "GitHub 集成",
+      "relation": "depends_on",
+      "tail": "PR",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-5624a2"
+    },
+    {
+      "head": "传统多 Agent 协作模式",
+      "relation": "related_to",
+      "tail": "直接协作模式",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "直接协作模式",
+      "relation": "related_to",
+      "tail": "缺乏人工监督",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "直接协作模式",
+      "relation": "related_to",
+      "tail": "共享执行环境",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "直接协作模式",
+      "relation": "related_to",
+      "tail": "缺乏结构化的项目管理层",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "直接协作模式",
+      "relation": "related_to",
+      "tail": "工作流线性",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "adopts",
+      "tail": "看板机制",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "看板机制",
+      "relation": "solves",
+      "tail": "缺乏项目管理",
+      "schema": [
+        "CONCEPT",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "Kanban board",
+      "relation": "provides",
+      "tail": "结构化 Issue 管理",
+      "schema": [
+        "CONCEPT",
+        "provides",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "Git worktree 隔离",
+      "relation": "solves",
+      "tail": "执行环境冲突",
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "差异查看器",
+      "relation": "solves",
+      "tail": "难以审查变更",
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "内联评论",
+      "relation": "solves",
+      "tail": "难以审查变更",
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "内置浏览器预览",
+      "relation": "solves",
+      "tail": "测试需要切换上下文",
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "统一的执行器抽象",
+      "relation": "solves",
+      "tail": "代理接口不统一",
+      "schema": [
+        "TECHNOLOGY",
+        "solves",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "统一的执行器抽象",
+      "relation": "supports",
+      "tail": "10+ 代理",
+      "schema": [
+        "TECHNOLOGY",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-c990f2"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "based_on",
+      "tail": "人机协作框架",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27f"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "uses",
+      "tail": "MCP 服务器",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-38a27f"
+    },
+    {
+      "head": "MCP 服务器",
+      "relation": "used_for",
+      "tail": "创建和管理 Issue",
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27f"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "supports",
+      "tail": "多仓库支持",
+      "schema": [
+        "SYSTEM",
+        "supports",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27f"
+    },
+    {
+      "head": "多仓库支持",
+      "relation": "enables",
+      "tail": "在单个 Workspace 中处理多个代码库",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-38a27f"
+    },
+    {
+      "head": "Vibe Kanban",
+      "relation": "compared_with",
+      "tail": "传统多 agent 系统",
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-38a27f"
+    }
+  ],
+  "stats": {
+    "total_chunks": 6,
+    "total_triples": 62,
+    "unique_schemas": 20,
+    "schema_distribution": {
+      "('CONCEPT', 'related_to', 'CONCEPT')": 18,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 3,
+      "('SYSTEM', 'compared_with', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 9,
+      "('SYSTEM', 'uses', 'SYSTEM')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 4,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 3,
+      "('CONCEPT', 'uses', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 4,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'solves', 'CONCEPT')": 1,
+      "('CONCEPT', 'provides', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'solves', 'CONCEPT')": 5,
+      "('TECHNOLOGY', 'supports', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 1,
+      "('SYSTEM', 'supports', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 20,
+    "fact_layer_size": 62,
+    "passage_layer_size": 6
+  }
+}

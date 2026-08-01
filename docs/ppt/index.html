@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞书长期记忆系统 - 项目展示</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  :root {
+    --bg: #0a0e17;
+    --bg2: #111827;
+    --surface: #1a2332;
+    --surface2: #1e293b;
+    --border: #2d3a50;
+    --text: #e2e8f0;
+    --text2: #94a3b8;
+    --accent: #60a5fa;
+    --accent2: #22d3ee;
+    --green: #4ade80;
+    --yellow: #fbbf24;
+    --orange: #fb923c;
+    --red: #f87171;
+    --pink: #f472b6;
+    --purple: #a78bfa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .slides-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    overflow-y: auto;
+  }
+  .slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  .nav-bar {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 10px 24px;
+    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .nav-btn {
+    background: none;
+    border: none;
+    color: var(--text2);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .nav-btn:hover { color: var(--text); background: var(--surface); }
+  .nav-btn.primary { background: var(--accent); color: #fff; padding: 6px 18px; font-weight: 500; }
+  .nav-btn.primary:hover { background: #3b82f6; }
+  .page-indicator {
+    color: var(--text2);
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    min-width: 60px;
+    text-align: center;
+  }
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    z-index: 200;
+    transition: width 0.4s ease;
+  }
+
+  /* ======== Content Styles ======== */
+  .slide-content {
+    max-width: 1100px;
+    width: 100%;
+    transform: translateY(12px);
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent2);
+    margin-bottom: 8px;
+  }
+  p, li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text2);
+  }
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--text2);
+    margin-top: 12px;
+    font-weight: 300;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .card .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .card p { font-size: 0.9rem; margin-top: 6px; }
+
+  /* Terminal block */
+  .terminal {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    padding: 20px 24px;
+    overflow-x: auto;
+    margin-top: 16px;
+  }
+  .terminal .prompt { color: var(--green); }
+  .terminal .comment { color: #8b949e; }
+  .terminal .highlight { color: var(--accent); }
+  .terminal .warn { color: var(--yellow); }
+  .terminal .error { color: var(--red); }
+  .terminal .cyan { color: var(--accent2); }
+  .terminal .magenta { color: var(--pink); }
+  .terminal .bold { font-weight: 700; }
+
+  /* Architecture diagram */
+  .arch-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+  .arch-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 20px;
+    text-align: center;
+    min-width: 120px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .arch-box .icon { font-size: 1.5rem; margin-bottom: 4px; }
+  .arch-box.accent { border-color: var(--accent); background: rgba(96, 165, 250, 0.08); }
+  .arch-box.green { border-color: var(--green); background: rgba(74, 222, 128, 0.08); }
+  .arch-box.cyan { border-color: var(--accent2); background: rgba(34, 211, 238, 0.08); }
+  .arch-box.purple { border-color: var(--purple); background: rgba(167, 139, 250, 0.08); }
+  .arch-box.orange { border-color: var(--orange); background: rgba(251, 146, 60, 0.08); }
+  .arch-arrow { color: var(--border); font-size: 1.3rem; padding: 0 6px; }
+
+  /* Screenshot placeholder */
+  .img-placeholder {
+    background: var(--surface);
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 0.9rem;
+    margin-top: 12px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .img-placeholder .icon { font-size: 2rem; }
+  .img-placeholder .hint { font-size: 0.8rem; color: var(--text2); opacity: 0.6; }
+
+  /* Tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .tag {
+    background: rgba(96, 165, 250, 0.12);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+  }
+  .tag.green { background: rgba(74, 222, 128, 0.12); color: var(--green); }
+  .tag.cyan { background: rgba(34, 211, 238, 0.12); color: var(--accent2); }
+  .tag.yellow { background: rgba(251, 191, 36, 0.12); color: var(--yellow); }
+  .tag.purple { background: rgba(167, 139, 250, 0.12); color: var(--purple); }
+
+  /* Tool badges */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .tool-badge {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text2);
+    transition: all 0.2s;
+  }
+  .tool-badge:hover { border-color: var(--accent); color: var(--text); }
+
+  .cover-sub {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .cover-sub span {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    color: var(--text2);
+  }
+
+  ul, ol { padding-left: 20px; margin-top: 8px; }
+  ul li, ol li { margin-bottom: 6px; }
+
+  .stat-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .stat-item {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 16px 24px;
+    border: 1px solid var(--border);
+    min-width: 120px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--text2); margin-top: 4px; }
+
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+  }
+  .flow-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    text-align: center;
+    min-width: 80px;
+  }
+  .flow-arrow { color: var(--border); font-size: 1rem; }
+
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .arch-flow { flex-direction: column; gap: 8px; }
+    .arch-arrow { transform: rotate(90deg); }
+    .nav-bar { gap: 8px; padding: 8px 16px; }
+    .tool-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  }
+
+  /* Timing log */
+  .log-line { display: flex; gap: 8px; }
+  .log-time { color: #8b949e; min-width: 80px; flex-shrink: 0; }
+  .log-level { min-width: 52px; flex-shrink: 0; font-weight: 600; }
+
+  .key-inline {
+    background: var(--surface2);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent2);
+  }
+
+  /* Table */
+  .compact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 0.85rem;
+  }
+  .compact-table th {
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text2);
+    font-weight: 500;
+  }
+  .compact-table td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+  }
+  .compact-table tr:hover td { background: var(--surface); }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<div class="slides-container" id="slides">
+
+  <!-- ==================== SLIDE 1: COVER ==================== -->
+  <div class="slide active" data-index="0">
+    <div class="slide-content" style="text-align:center;">
+      <h1>飞书长期记忆系统</h1>
+      <p class="subtitle" style="font-size:1.3rem;">基于 LLM 的群聊决策提取与持久化引擎</p>
+      <div class="cover-sub" style="justify-content:center;">
+        <span>Feishu IM Integration</span>
+        <span>LLM Decision Extraction</span>
+        <span>Git Versioned Storage</span>
+        <span>MCP Tools</span>
+      </div>
+      <div style="margin-top:40px; display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="font-size:0.85rem; color:var(--text2);">项目展示 · Feishu-LongTerm-Mem</div>
+        <div style="display:flex; gap:16px; font-size:0.8rem; color:var(--text2);">
+          <span>🔗 github.com/Mowenhao13/Feishu-LongTerm-Mem</span>
+          <span>⚡ Python + FastMCP + LLM</span>
+        </div>
+        <div style="display:flex; gap:16px; color:var(--text2); font-size:0.7rem; opacity:0.5; margin-top:4px;">
+          <span>莫文豪</span>
+          <span>心态就是力量</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 2: 背景与目标 ==================== -->
+  <div class="slide" data-index="1">
+    <div class="slide-content">
+      <h2>背景与目标</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="label">问题</div>
+          <p style="color:var(--text); font-weight:500;">群聊中的技术决策难以沉淀</p>
+          <p>团队在飞书群聊中讨论技术选型、架构方案、任务分配，但决策结果散落在对话流中，后续难以追溯和复用。</p>
+        </div>
+        <div class="card">
+          <div class="label">目标</div>
+          <p style="color:var(--text); font-weight:500;">构建可持续积累的团队决策记忆</p>
+          <p>自动从群聊对话中提取决策、识别冲突、追踪状态变更，并通过 MCP 协议将决策记忆暴露给 AI 客户端。</p>
+        </div>
+      </div>
+      <div class="grid-3" style="margin-top:16px;">
+        <div class="card" style="padding:16px;">
+          <div class="label" style="color:var(--green);">核心能力</div>
+          <p>自动检测决策信号 · 无需人工标注</p>
+        </div>
+        <div class="card" style="padding:16px;">
+          <div class="label" style="color:var(--accent2);">版本控制</div>
+          <p>每次决策变更都有 Git 历史可追溯</p>
+        </div>
+        <div class="card" style="padding:16px;">
+          <div class="label" style="color:var(--purple);">开放接口</div>
+          <p>34个 MCP 工具，AI 客户端原生集成</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 3: 架构概览 ==================== -->
+  <div class="slide" data-index="2">
+    <div class="slide-content">
+      <h2>系统架构</h2>
+      <p class="subtitle" style="margin-bottom:16px;">消息接入 → 检测评分 → Episode 管理 → LLM 提取 → 图存储 → MCP 暴露</p>
+
+      <div class="arch-flow">
+        <div class="arch-box accent"><div class="icon">📨</div>飞书 IM</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box"><div class="icon">🔍</div>IM Detector<br><span style="font-size:0.7rem;color:var(--text2);">Poll / WebSocket</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box green"><div class="icon">📦</div>Episode<br><span style="font-size:0.7rem;color:var(--text2);">Buffer + SuspendPool</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box cyan"><div class="icon">🧠</div>LLM Extractor</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box purple"><div class="icon">🗃️</div>MemoryGraph<br><span style="font-size:0.7rem;color:var(--text2);">+ Git Storage</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box orange"><div class="icon">🔌</div>MCP Server</div>
+      </div>
+
+      <div class="grid-3" style="margin-top:20px;">
+        <div class="card" style="padding:16px;">
+          <div class="label">⬅️ 接入层</div>
+          <p>飞书 WebSocket / Poll 实时接收消息，启发式信号检测 + 反信号过滤</p>
+        </div>
+        <div class="card" style="padding:16px;">
+          <div class="label">🧠 决策层</div>
+          <p>Episode 聚合上下文 → LLM 提取决策 → 去重/冲突检测 → 变更入库</p>
+        </div>
+        <div class="card" style="padding:16px;">
+          <div class="label">💾 存储层</div>
+          <p>MemoryGraph 内存索引 + Git Branch-per-Record 持久化 + Hypergraph 语义关联</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ==================== SLIDE 4: HyperMem 超图结构 ==================== -->
+  <div class="slide" data-index="3">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>HyperMem 超图记忆架构</h2>
+      <p class="subtitle">三层节点 + 超边关联，从粗到精的语义检索</p>
+      <div class="grid-2">
+        <div>
+          <h3>三层结构</h3>
+          <table class="compact-table">
+            <tr><th>层级</th><th>说明</th><th>粒度</th></tr>
+            <tr><td><span class="tag cyan">Topic</span></td><td>高层语义聚类（如"技术选型"）</td><td>最粗</td></tr>
+            <tr><td><span class="tag purple">Episode</span></td><td>叙事片段（一次话题的完整讨论）</td><td>中</td></tr>
+            <tr><td><span class="tag green">Fact/Decision</span></td><td>原子信息（具体决策内容）</td><td>最细</td></tr>
+          </table>
+          <h3 style="margin-top:20px;">超边（Hyperedge）</h3>
+          <ul>
+            <li>一条超边可连接多个节点（Topic → 所有相关 Episodes）</li>
+            <li>决策通过超边关联到所属 Episode 和 Topic</li>
+            <li>跨 Episode 的决策通过超边建立语义关联</li>
+          </ul>
+          <h3 style="margin-top:20px;">从粗到精检索</h3>
+          <div class="arch-flow" style="flex-direction:column;gap:8px;">
+            <div class="arch-box cyan"><div class="icon">🔍</div>Topic 层：向量搜索缩小范围</div>
+            <div class="arch-arrow" style="transform:rotate(90deg);">→</div>
+            <div class="arch-box purple"><div class="icon">📝</div>Episode 层：超边传播注意力权重</div>
+            <div class="arch-arrow" style="transform:rotate(90deg);">→</div>
+            <div class="arch-box green"><div class="icon">📋</div>Decision 层：精确提取原子事实</div>
+          </div>
+        </div>
+        <div>
+          <h3>架构图</h3>
+          <div class="terminal" style="font-size:0.72rem;">
+            <span class="comment"># HyperMem 结构示意</span><br>
+            <span class="cyan">Topic: "多智能体循环架构"</span><br>
+            │<br>
+            ├─ <span class="purple">Episode: ep_001 (四Agent协作讨论)</span><br>
+            │  ├─ <span class="green">Decision: 分层方案</span><br>
+            │  ├─ <span class="green">Decision: 结构化日志</span><br>
+            │  └─ <span class="green">Decision: 错误分类策略</span><br>
+            ├─ <span class="purple">Episode: ep_002 (通信协议选型)</span><br>
+            │  └─ <span class="green">Decision: gRPC通信协议</span><br>
+            └─ <span class="purple">Episode: ep_003 (Agent数量控制)</span><br>
+               └─ <span class="green">Decision: 固定10个智能体</span><br>
+            <br>
+            <span class="comment"># 超边连接同主题下所有 Episode</span><br>
+            hyperedge(Topic) → [ep_001, ep_002, ep_003]
+          </div>
+          <h3 style="margin-top:16px;">v2 数据集覆盖</h3>
+          <div style="margin-top:8px;">
+            <div class="stat-row">
+              <div class="stat-item">
+                <div class="stat-num" style="color:var(--cyan);">10</div>
+                <div class="stat-label">Topics</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" style="color:var(--purple);">183</div>
+                <div class="stat-label">Episodes</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" style="color:var(--green);">31</div>
+                <div class="stat-label">Decisions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 5: SuspendPool 挂起池 ==================== -->
+  <div class="slide" data-index="4">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>SuspendPool — Episode 挂起与恢复</h2>
+      <p class="subtitle">智能管理暂停的对话，实现话题切换与恢复</p>
+      <div class="grid-2">
+        <div>
+          <h3>为什么需要 SuspendPool？</h3>
+          <ul>
+            <li>群聊中话题经常切换，但旧话题可能稍后回归</li>
+            <li>直接丢弃 Episode 会丢失上下文，影响后续关联</li>
+            <li>SuspendPool 保留暂停 Episode 的完整消息和 embedding</li>
+            <li>新消息到达时，与池中所有暂停 Episode 做 Max-similarity 匹配</li>
+          </ul>
+          <h3 style="margin-top:20px;">三重边界检测</h3>
+          <table class="compact-table">
+            <tr><th>边界类型</th><th>阈值</th><th>触发</th></tr>
+            <tr><td>⏱ 时间间隔</td><td>1800s (30min)</td><td>超时 Suspend</td></tr>
+            <tr><td>🧠 语义切换</td><td>similarity &lt; 0.50</td><td>话题变化 Suspend</td></tr>
+            <tr><td>📊 容量上限</td><td>MAX_MSGS=50</td><td>超限强制 Suspend</td></tr>
+          </table>
+          <h3 style="margin-top:20px;">Reopen 条件</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            max_sim = max(sim(new_msg, ep))<br>
+            if max_sim &gt;= <span class="highlight">0.55</span> → <span class="green">REOPEN</span><br>
+            else → <span class="cyan">创建新 Episode</span>
+          </div>
+        </div>
+        <div>
+          <h3>生命周期</h3>
+          <div class="flow-row">
+            <span class="flow-step" style="border-color:var(--accent);color:var(--accent);">⚡ Active</span>
+            <span class="flow-arrow">→ 检测到边界</span>
+            <span class="flow-step" style="border-color:var(--yellow);color:var(--yellow);">⏸ Suspend</span>
+            <span class="flow-arrow">→ 新消息比对</span>
+            <span class="flow-step" style="border-color:var(--green);color:var(--green);">▶ Reopen</span>
+            <span class="flow-arrow">或</span>
+            <span class="flow-step" style="border-color:var(--red);color:var(--red);">🗑 LRU淘汰</span>
+          </div>
+          <h3 style="margin-top:20px;">v2 运行数据</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            <span class="comment"># eval_v2 真实数据</span><br>
+            处理消息: <span class="highlight">1,500</span><br>
+            Episode Suspend: <span class="warn">821</span> 次<br>
+            Episode Reopen: <span class="cyan">723</span> 次<br>
+            新创建 Episode: <span class="green">183</span> 次<br>
+            处理速率: <span class="highlight">30.0</span> msg/s<br>
+            <br>
+            <span class="comment"># 意味着平均每 2 条消息</span><br>
+            <span class="comment"># 就发生一次 Reopen 检查</span>
+          </div>
+          <h3 style="margin-top:12px;">LRU 淘汰</h3>
+          <p style="font-size:0.85rem;">池满 20 个时，淘汰最早暂停的 Episode，确保内存可控</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 6: 飞书 IM 集成 ==================== -->
+  <div class="slide" data-index="5">
+    <div class="slide-content">
+      <h2>飞书 IM 集成</h2>
+      <p class="subtitle">实时消息监听与智能信号检测</p>
+      <div class="grid-2">
+        <div>
+          <h3>运行模式</h3>
+          <div class="tags">
+            <span class="tag cyan">WebSocket 模式</span>
+            <span class="tag">Poll 轮询模式</span>
+            <span class="tag yellow">Burst 突发模式</span>
+          </div>
+          <ul style="margin-top:12px;">
+            <li><strong>WebSocket</strong>：长连接实时接收消息，低延迟</li>
+            <li><strong>Poll</strong>：定时轮询飞书 API，兼容受限网络环境</li>
+            <li><strong>Burst</strong>：短时间大量消息时自动进入批量缓冲，减少 LLM 调用频率</li>
+          </ul>
+          <h3 style="margin-top:20px;">启发式评分流水线</h3>
+          <div class="flow-row">
+            <span class="flow-step">词汇分析</span>
+            <span class="flow-arrow">+</span>
+            <span class="flow-step">结构分析</span>
+            <span class="flow-arrow">+</span>
+            <span class="flow-step">动态分析</span>
+            <span class="flow-arrow">+</span>
+            <span class="flow-step">模式匹配</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step" style="border-color:var(--green);color:var(--green);">信号判定</span>
+          </div>
+        </div>
+        <div>
+          <h3>飞书消息接收</h3>
+          <img src="images/image1.png" alt="飞书群聊消息截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:8px;">
+          <h3 style="margin-top:16px;">信号评分示例</h3>
+          <div class="terminal" style="margin-top:8px;">
+            <span class="comment"># 检测器评分输出</span><br>
+            [Detect] msg=数据库选型倾向PostgreSQL score=<span class="highlight">0.82</span> signal=<span class="green">true</span><br>
+            [Detect] msg=今天天气不错 score=<span class="warn">0.12</span> signal=<span class="error">false</span><br>
+            [Detect] msg=容器化方案就用K8s score=<span class="highlight">0.91</span> signal=<span class="green">true</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 7: Episode 管理 ==================== -->
+  <div class="slide" data-index="6">
+    <div class="slide-content">
+      <h2>Episode 管理</h2>
+      <p class="subtitle">消息缓冲、边界检测、Suspend/Reopen 机制</p>
+      <div class="grid-2">
+        <div>
+          <h3>三重边界检测</h3>
+          <table class="compact-table">
+            <tr><th>边界类型</th><th>阈值</th><th>说明</th></tr>
+            <tr><td>⏱ 时间间隔</td><td>EPISODE_TIME_GAP=1800s</td><td>30分钟无新消息关闭</td></tr>
+            <tr><td>🧠 语义切换</td><td>SEMANTIC=0.50</td><td>低于此值触发话题切换</td></tr>
+            <tr><td>📊 容量上限</td><td>MAX_MSGS=50</td><td>超限强制关闭</td></tr>
+          </table>
+          <h3 style="margin-top:20px;">Suspend / Reopen 机制</h3>
+          <ul>
+            <li>检测到边界时 <span class="tag yellow">Suspend</span> 到池中，保留上下文和 embedding</li>
+            <li>新消息与暂停 episode 逐条比对 Max-similarity</li>
+            <li>相似度高于 <span class="key-inline">0.55</span> 时 <span class="tag green">Reopen</span> 恢复对话</li>
+            <li>池满 <span class="key-inline">20</span> 时 LRU 淘汰最早暂停的 episode</li>
+          </ul>
+        </div>
+        <div>
+          <h3>SuspendPool 状态</h3>
+          <div class="terminal" style="margin-top:8px;">
+            <span class="comment"># suspend_pool.json 真实数据</span><br>
+            {<br>
+            &nbsp;&nbsp;"episodes": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"ep_bd53f342bf1b": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"chat_id": "eval_1",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"messages": 2,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 含完整消息文本 + embedding 向量</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// ...更多暂停的 episode</span><br>
+            &nbsp;&nbsp;}<br>
+            }
+          </div>
+          <h3 style="margin-top:16px;">运行日志</h3>
+          <div class="terminal" style="margin-top:8px;font-size:0.75rem;">
+            [Episode] Buffer <span class="cyan">eval_1</span> boundary=time_gap → <span class="warn">SUSPEND</span> ep_xxx (6 msgs)<br>
+            [Episode] Buffer <span class="cyan">eval_1</span> <span class="highlight">max_sim=0.62</span> &gt; 0.55 → <span class="green">REOPEN</span> ep_bd53f3 (resume)<br>
+            [Episode] SuspendPool LRU evict: ep_abc123 (suspended 2026-05-27 10:00)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 8: LLM 决策提取 ==================== -->
+  <div class="slide" data-index="7">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>LLM 决策提取</h2>
+      <p class="subtitle">从对话到结构化决策的全自动流水线</p>
+      <div class="grid-2">
+        <div>
+          <h3>提取流程</h3>
+          <div class="terminal" style="margin-top:8px;font-size:0.78rem;">
+            <span class="comment"># Episode → LLM 提取 → 去重 → 入库</span><br>
+            <br>
+            <span class="bold">[Extract]</span> Episode ready: 6 msgs, topic=容器化<br>
+            <span class="bold">[LLM]</span> Prompt: decision_extract + 对话上下文<br>
+            <span class="bold">[Result]</span> → <span class="green">决策已提取</span><br>
+            &nbsp;&nbsp;summary: 容器网络策略默认拒绝<br>
+            &nbsp;&nbsp;impact_level: major<br>
+            &nbsp;&nbsp;status: decided<br>
+            <br>
+            <span class="bold">[Mutation]</span> 查重中...<br>
+            <span class="bold">[Dedup]</span> embedding=0.71 → LLM judge → <span class="warn">UPDATE</span> 已有决策<br>
+            <span class="bold">[Git]</span> commit: <span class="highlight">decision(容器安全): eec3f9bb5f2e</span>
+          </div>
+        </div>
+        <div>
+          <h3>去重流水线</h3>
+          <div class="flow-row" style="margin-top:8px;">
+            <span class="flow-step">SID 匹配</span>
+            <span class="flow-arrow">or</span>
+            <span class="flow-step">Embedding 初筛</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Reranker 精排</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">LLM Judge</span>
+          </div>
+          <h3 style="margin-top:20px;">LLM 判定结果</h3>
+          <table class="compact-table">
+            <tr><th>判定</th><th>动作</th></tr>
+            <tr><td><span class="tag green">skip</span></td><td>完全重复，丢弃</td></tr>
+            <tr><td><span class="tag yellow">update</span></td><td>补充已有决策（版本+1）</td></tr>
+            <tr><td><span class="tag" style="color:var(--red);border-color:var(--red);">conflict</span></td><td>标记冲突关系，推送冲突卡片</td></tr>
+            <tr><td><span class="tag cyan">create_new</span></td><td>全新决策，创建记录</td></tr>
+          </table>
+          <img src="images/image3.png" alt="飞书冲突卡片截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:16px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 9: Git 存储展示 ==================== -->
+  <div class="slide" data-index="8">
+    <div class="slide-content">
+      <h2>Git 版本化存储</h2>
+      <p class="subtitle">Branch-per-Record 策略 · 每项决策独立分支管理</p>
+      <div class="grid-2">
+        <div>
+          <h3>Git 提交历史（data/ 仓库）</h3>
+          <div class="terminal" style="margin-top:8px;font-size:0.72rem;max-height:320px;overflow-y:auto;">
+            0be10a8 <span class="highlight">decision(技术选型): f0e1fa305140</span> - 数据库连接池耗尽策略<br>
+            9830082 <span class="highlight">decision(技术选型): f12c56bd4627</span> - 数据库连接池采用PgBouncer事务池模式<br>
+            4e07374 <span class="highlight">decision(技术选型): f3e422f27dc4</span> - 采用K8s进行容器化<br>
+            4a21c29 <span class="highlight">decision(技术选型): f5f0f49239c0</span> - 容器监控方案选型<br>
+            9c4b551 <span class="highlight">decision(技术选型): fca812dc41f0</span> - 前端Bundle分析工具选型<br>
+            93babcb <span class="highlight">decision(技术选型): ff348ed660d8</span> - 前端构建产物优化<br>
+            e1abd17 <span class="highlight">decision(技术选型): fffc7ebdc8ee</span> - 前端CI增加Prettier和ESLint<br>
+            a745999 <span class="highlight">decision(容器编排): e258798f0473</span> - 容器HPA+VPA<br>
+            989f1d7 <span class="highlight">decision(监控方案): e4957d7e4fb9</span> - 业务告警3-sigma动态基线<br>
+            e05230f <span class="highlight">decision(技术选型): e5258f079e85</span> - 前端ErrorBoundary<br>
+            6d4e625 <span class="highlight">decision(项目排期): e5d208c7e610</span> - 关键业务Dashboard<br>
+            283541e <span class="highlight">decision(技术选型): e7e3937ed5d8</span> - 容器Istio灰度发布<br>
+            1cef3c2 <span class="highlight">decision(项目排期): e7ef2d6e4d62</span> - 容器化测试环境搭建<br>
+            526903d <span class="highlight">decision(容器资源): eceebee8bd28</span> - Pod requests/limits配比<br>
+            8973c7c <span class="highlight">decision(技术选型): edeed01d4436</span> - 容器Gateway API选型<br>
+            f048e44 <span class="highlight">decision(技术选型): d89442758886</span> - 数据库选型PostgreSQL<br>
+            <span class="comment">...共 20+ 条决策提交</span>
+          </div>
+          <img src="images/image2.png" alt="Git 决策记录截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:12px;">
+        </div>
+        <div>
+          <h3>分支拓扑</h3>
+          <div class="terminal" style="margin-top:8px;font-size:0.78rem;">
+            $ git branch -a<br>
+            <span class="cyan">* feat/decision-tree-structure</span><br>
+            &nbsp;&nbsp;main<br>
+            &nbsp;&nbsp;remotes/origin/feat/decision-tree-structure<br>
+            &nbsp;&nbsp;remotes/origin/main<br>
+            <br>
+            <span class="comment"># data/ 仓库：每条决策一个分支</span><br>
+            $ git -C data log --all --oneline | head -5<br>
+            <span class="highlight">decision(技术选型): f0e1fa305140</span><br>
+            <span class="highlight">decision(技术选型): f12c56bd4627</span><br>
+            <span class="highlight">decision(技术选型): f3e422f27dc4</span><br>
+            <span class="highlight">decision(技术选型): f5f0f49239c0</span><br>
+            ...<br>
+            <br>
+            <span class="comment"># 决策文件示例（YAML frontmatter + Markdown）</span><br>
+            ---<br>
+            sid: f048e44<br>
+            status: decided<br>
+            impact: major<br>
+            topic: 技术选型<br>
+            ---<br>
+            数据库选型为PostgreSQL...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 10: MCP 工具集 ==================== -->
+  <div class="slide" data-index="9">
+    <div class="slide-content">
+      <h2>MCP 工具集</h2>
+      <p class="subtitle">38 个工具 · 四大分类 · AI 客户端原生集成</p>
+      <div class="grid-2">
+        <div>
+          <h3>查询工具 <span class="tag cyan">16 个</span></h3>
+          <div class="tool-grid">
+            <span class="tool-badge">list_decisions</span>
+            <span class="tool-badge">search</span>
+            <span class="tool-badge">topic</span>
+            <span class="tool-badge">timeline</span>
+            <span class="tool-badge">stats</span>
+            <span class="tool-badge">hot_decisions</span>
+            <span class="tool-badge">forgotten_decisions</span>
+            <span class="tool-badge">fulltext_search</span>
+            <span class="tool-badge">decision_card</span>
+            <span class="tool-badge">recent_decisions</span>
+            <span class="tool-badge">decision_children</span>
+            <span class="tool-badge">decision_descendants</span>
+            <span class="tool-badge">decision_ancestors</span>
+            <span class="tool-badge">decision_tree</span>
+          </div>
+          <h3 style="margin-top:16px;">写入工具 <span class="tag green">7 个</span></h3>
+          <div class="tool-grid">
+            <span class="tool-badge">create_decision</span>
+            <span class="tool-badge">update_decision</span>
+            <span class="tool-badge">confirm_decision</span>
+            <span class="tool-badge">reject_decision</span>
+            <span class="tool-badge">revert_decision</span>
+            <span class="tool-badge">resolve_conflict</span>
+          </div>
+        </div>
+        <div>
+          <h3>LLM 辅助工具 <span class="tag purple">7 个</span></h3>
+          <div class="tool-grid">
+            <span class="tool-badge">extract_decision</span>
+            <span class="tool-badge">evaluate_dedup</span>
+            <span class="tool-badge">check_conflict</span>
+            <span class="tool-badge">classify_topic</span>
+            <span class="tool-badge">detect_crosstopic</span>
+            <span class="tool-badge">extract_and_create</span>
+            <span class="tool-badge">resolve_conflict_action</span>
+          </div>
+          <h3 style="margin-top:16px;">Git & 系统工具 <span class="tag yellow">8 个</span></h3>
+          <div class="tool-grid">
+            <span class="tool-badge">git_history</span>
+            <span class="tool-badge">git_search</span>
+            <span class="tool-badge">git_blame</span>
+            <span class="tool-badge">conflict_list</span>
+            <span class="tool-badge">objection_list</span>
+            <span class="tool-badge">decision_history</span>
+            <span class="tool-badge">refresh</span>
+          </div>
+          <div class="terminal" style="margin-top:12px;font-size:0.75rem;">
+            <span class="comment"># Claude Desktop / Cline 中直接调用</span><br>
+            $ extract_and_create(dialogue="我们决定用PG数据库...")<br>
+            → <span class="green">决策已创建: 数据库选型PostgreSQL</span><br>
+            <br>
+            $ list_decisions(topic="容器化")<br>
+            → 返回 5 条相关决策
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 11: 运行时日志 ==================== -->
+  <div class="slide" data-index="10">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>运行时日志</h2>
+      <p class="subtitle">Eval 模式下的全流程终端输出</p>
+      <div class="grid-2">
+        <div>
+          <h3>引擎启动</h3>
+          <div class="terminal" style="font-size:0.72rem;">
+            <span class="bold">INFO</span> MemoryEngine initialized<br>
+            <span class="bold">INFO</span> Loaded <span class="highlight">19 decisions</span>, 3 topics<br>
+            <span class="bold">INFO</span> Hypergraph loaded: decisions=0 facts=0 episodes=58 topics=1<br>
+            <span class="bold">INFO</span> SleepManager initialized (auto-sleep ENABLED, interval=3600s)<br>
+            <span class="bold">INFO</span> Push scheduler started with 3 background tasks<br>
+            <span class="bold">INFO</span> MemoryEngine started with 5 background tasks<br>
+            <br>
+            <span class="warn">=== Eval 模式 ===</span><br>
+            输入: eval_data/test_data.txt<br>
+            延迟: 1.0s<br>
+            群聊: <span class="highlight">3</span> 个 (round-robin)<br>
+            加载 <span class="highlight">250</span> 条消息
+          </div>
+        </div>
+        <div>
+          <h3>消息处理与决策提取</h3>
+          <div class="terminal" style="font-size:0.72rem;max-height:340px;overflow-y:auto;">
+            <span class="comment"># Reopen 事件</span><br>
+            <span class="cyan">[ 0:16] ▶ 2|msg=数据库连接池用PgBouncer</span><br>
+            &nbsp;&nbsp;→ <span class="cyan">reopen</span> ep_bfff6021 (max_sim=0.63)<br>
+            <br>
+            <span class="comment"># Suspend 事件</span><br>
+            <span class="yellow">[ 0:34] ▶ 0|msg=换个话题...</span><br>
+            &nbsp;&nbsp;→ <span class="yellow">suspend</span> ep_e5b99a5f (6 msgs, 语义切换)<br>
+            <br>
+            <span class="comment"># 决策提取</span><br>
+            <span class="magenta">[ 0:41] ▶ 3|msg=容器LimitRange...</span><br>
+            &nbsp;&nbsp;→ <span class="magenta">decision</span> 容器资源限制方案<br>
+            &nbsp;&nbsp;→ <span class="green">[Mutation] CREATE applied</span> sid=eceebee8 v1<br>
+            &nbsp;&nbsp;→ <span class="green">[Mutation] CREATE applied</span> sid=xxx v1<br>
+            <br>
+            <span class="comment"># 去重判定</span><br>
+            [ 1:23] ▶ 1|msg=PG数据库选型...<br>
+            &nbsp;&nbsp;→ score=0.71 → LLM judge → <span class="warn">update</span><br>
+            &nbsp;&nbsp;→ <span class="green">[Mutation] UPDATE applied</span> sid=d8944275 v2<br>
+            <br>
+            <span class="comment"># 最终统计</span><br>
+            <span class="bold">📊 报告</span><br>
+            &nbsp;&nbsp;总消息: 250<br>
+            &nbsp;&nbsp;决策提取: <span class="highlight">120</span> | 创建: 82 | 更新: 12 | 跳过: 26<br>
+            &nbsp;&nbsp;Suspend: <span class="yellow">14</span> | Reopen: <span class="cyan">112</span>
+          </div>
+          <img src="images/image5.png" alt="运行时日志截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:12px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 12: 评估数据 ==================== -->
+  <div class="slide" data-index="11">
+    <div class="slide-content">
+      <h2>评估与测试</h2>
+      <p class="subtitle">Precision/Recall/F1 精度评估 · Embedding 语义匹配</p>
+      <div class="grid-2">
+        <div>
+          <h3>匹配算法</h3>
+          <div class="arch-flow">
+            <div class="arch-box green"><div class="icon">📋</div>expected.jsonl</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-box cyan"><div class="icon">🧠</div>Embedding</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-box purple"><div class="icon">📐</div>余弦矩阵</div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-box orange"><div class="icon">📊</div>P/R/F1</div>
+          </div>
+          <ul style="margin-top:12px;">
+            <li>qwen3-embedding-4b batch embed 所有摘要（2560 维）</li>
+            <li>chat_id 跨群隔离约束</li>
+            <li>suggestion 同类型阈值 0.3，跨类型 0.45</li>
+          </ul>
+          <h3 style="margin-top:20px;">指标含义</h3>
+          <table class="compact-table">
+            <tr><th>指标</th><th>含义</th><th>你的数据</th></tr>
+            <tr><td><strong>Precision</strong></td><td>提取的决策中正确比例（不瞎报）</td><td style="color:var(--green);">100%</td></tr>
+            <tr><td><strong>Recall</strong></td><td>实际决策中被找出比例（不漏报）</td><td>75.6%</td></tr>
+            <tr><td><strong>F1</strong></td><td>P 与 R 的调和平均（综合表现）</td><td style="color:var(--green);">86.1%</td></tr>
+          </table>
+          <p style="margin-top:8px;font-size:0.82rem;color:var(--text2);">特点：宁漏勿错，零误检（FP=0）</p>
+        </div>
+        <div>
+          <h3>最新测试结果（2026-06-05）</h3>
+          <table class="compact-table">
+            <tr><th>数据集</th><th>消息</th><th>期望</th><th>P</th><th>R</th><th>F1</th></tr>
+            <tr><td>argusbot_single</td><td>200</td><td>39</td><td style="color:var(--green);font-weight:700;">79.6%</td><td style="color:var(--green);font-weight:700;">100.0%</td><td style="color:var(--green);font-weight:700;">88.6%</td></tr>
+            <tr><td>argusbot_multi</td><td>320</td><td>69</td><td style="color:var(--green);font-weight:700;">96.3%</td><td>75.4%</td><td style="color:var(--green);font-weight:700;">84.5%</td></tr>
+            <tr style="background:rgba(74,222,128,0.08);"><td><strong>argusbot_multi_v2</strong></td><td><strong>1,500</strong></td><td><strong>41</strong></td><td style="color:var(--green);font-weight:700;"><strong>100%</strong></td><td style="color:var(--green);font-weight:700;"><strong>75.6%</strong></td><td style="color:var(--green);font-weight:700;"><strong>86.1%</strong></td></tr>
+          </table>
+          <div style="margin-top:16px;">
+            <h4>关键发现</h4>
+            <ul>
+              <li>v2 Precision = 100%，零误检（FP=0）</li>
+              <li>v2 Recall = 75.6%，10个漏检（FN=10），瓶颈在 LLM 提取的保守策略</li>
+              <li>5个群聊间跨群隔离 <span style="color:var(--green);font-weight:700;">100%</span></li>
+              <li>v2 覆盖主题 10 个，全部 Precision/Recall/F1 = 100%</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 10b: 评估流水线 ==================== -->
+  <div class="slide" data-index="12">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>评估流水线架构</h2>
+      <p class="subtitle">从消息输入到 Precision/Recall 全流程</p>
+      <div class="grid-2">
+        <div>
+          <h3>数据准备 → 处理 → 匹配 → 评估</h3>
+          <div class="arch-flow" style="flex-direction:column;gap:12px;">
+            <div class="arch-flow">
+              <div class="arch-box green"><div class="icon">📝</div>消息<br><span style="font-size:0.7rem;color:var(--text2);">messages.jsonl</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box accent"><div class="icon">⚙️</div>EvalRunner<br><span style="font-size:0.7rem;color:var(--text2);">逐条处理</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box cyan"><div class="icon">🧠</div>LLM 提取<br><span style="font-size:0.7rem;color:var(--text2);">实际决策</span></div>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-box purple"><div class="icon">📋</div>期望<br><span style="font-size:0.7rem;color:var(--text2);">expected.jsonl</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box orange"><div class="icon">📐</div>Embedding<br><span style="font-size:0.7rem;color:var(--text2);">余弦匹配</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box green"><div class="icon">📊</div>指标<br><span style="font-size:0.7rem;color:var(--text2);">P / R / F1</span></div>
+            </div>
+          </div>
+          <h3 style="margin-top:24px;">关键组件</h3>
+          <table class="compact-table">
+            <tr><th>组件</th><th>职责</th></tr>
+            <tr><td>EvalRunner</td><td>逐条消息送入引擎，模拟真实消息流</td></tr>
+            <tr><td>LLM Extractor</td><td>从对话中提取结构化决策</td></tr>
+            <tr><td>EvalComparator</td><td>Embedding 语义匹配，计算 TP/FP/FN</td></tr>
+            <tr><td>Embedding Provider</td><td>qwen3-embedding-4b，batch 向量化</td></tr>
+          </table>
+          <h3 style="margin-top:24px;">v2 覆盖主题</h3>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag cyan">多智能体循环架构</span>
+            <span class="tag">会话持久化与恢复</span>
+            <span class="tag green">Daemon与CLI双模式</span>
+            <span class="tag">飞书集成方案</span>
+            <span class="tag purple">PlannerAgent策略</span>
+            <span class="tag">BTW Side-Agent集成</span>
+            <span class="tag yellow">Stall检测配置</span>
+            <span class="tag">Telegram集成</span>
+            <span class="tag">JSONL命令总线</span>
+            <span class="tag">模型fallback链</span>
+          </div>
+        </div>
+        <div>
+          <h3>匹配逻辑</h3>
+          <div class="terminal" style="font-size:0.72rem;">
+            <span class="comment"># 1. Embedding 向量化（去重后 batch）</span><br>
+            all_texts = set(exp_summaries + act_summaries)<br>
+            vectors = embedder.embed(all_texts)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ <span class="highlight">2560 维</span><br>
+            <br>
+            <span class="comment"># 2. 余弦相似度矩阵</span><br>
+            matrix[i][j] = cosine(exp[i], act[j])<br>
+            <br>
+            <span class="comment"># 3. 约束过滤</span><br>
+            if chat_id != expected_chat: <span class="error">continue</span><br>
+            if topic mismatch: <span class="error">continue</span><br>
+            <br>
+            <span class="comment"># 4. 贪心匹配</span><br>
+            min_score = <span class="highlight">0.3</span> if same_type else <span class="warn">0.45</span><br>
+            if score >= min_score → <span class="green">TP</span><br>
+            else → <span class="error">FN</span><br>
+            unmatched actual → <span class="warn">FP</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 13: 决策推送 ==================== -->
+  <div class="slide" data-index="13">
+    <div class="slide-content">
+      <h2>决策推送与通知</h2>
+      <p class="subtitle">多通道推送 · 热点值管理 · 定时摘要</p>
+      <div class="grid-2">
+        <div>
+          <h3>推送触发时机</h3>
+          <table class="compact-table">
+            <tr><th>触发器</th><th>事件</th><th>通道</th></tr>
+            <tr><td><span class="tag cyan">CREATE</span></td><td>新决策创建</td><td>飞书卡片 / 终端</td></tr>
+            <tr><td><span class="tag yellow">UPDATE</span></td><td>决策状态变更</td><td>飞书卡片 / 终端</td></tr>
+            <tr><td><span class="tag" style="color:var(--red);border-color:var(--red);">CONFLICT</span></td><td>检测到决策冲突</td><td>飞书交互卡片</td></tr>
+            <tr><td><span class="tag">SCHEDULED</span></td><td>每日/每周摘要</td><td>终端 / macOS 通知</td></tr>
+            <tr><td><span class="tag purple">HOT_SCORE</span></td><td>低热点决策提醒</td><td>终端</td></tr>
+          </table>
+          <img src="images/image4.png" alt="飞书决策卡片截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:12px;">
+        </div>
+        <div>
+          <h3>热点值管理</h3>
+          <div class="terminal" style="font-size:0.78rem;">
+            <span class="comment"># 每次推送递增</span><br>
+            hot_score = min(100, hot_score + <span class="highlight">10.0</span>)<br>
+            <br>
+            <span class="comment"># 定时衰减（每10分钟扫描）</span><br>
+            hot_score = max(0, hot_score * <span class="highlight">0.95</span>)<br>
+            <br>
+            <span class="comment"># 热度等级</span><br>
+            ≥80 <span class="cyan">活跃</span> | ≥50 <span class="green">正常</span> | ≥20 <span class="warn">模糊</span> | &lt;20 <span class="error">遗忘</span>
+          </div>
+          <h3 style="margin-top:16px;">调度循环</h3>
+          <ul>
+            <li>每日 08:00 推送昨日决策摘要</li>
+            <li>每周六 21:00 推送本周汇总</li>
+            <li>每 10 分钟扫描低热点决策</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 14: 技术栈 ==================== -->
+  <div class="slide" data-index="14">
+    <div class="slide-content">
+      <h2>技术栈</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="label" style="color:var(--accent);">语言与框架</div>
+          <div class="value">Python 3.10+</div>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">FastMCP</span>
+            <span class="tag">asyncio</span>
+            <span class="tag">Pydantic</span>
+            <span class="tag">lark-oapi</span>
+          </div>
+          <p>异步事件驱动架构，uv 包管理</p>
+        </div>
+        <div class="card">
+          <div class="label" style="color:var(--accent2);">LLM 与语义</div>
+          <div class="value">DeepSeek + Qwen3</div>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag cyan">deepseek-chat</span>
+            <span class="tag cyan">Qwen3-Embedding</span>
+            <span class="tag cyan">Qwen3-Reranker</span>
+          </div>
+          <p>OpenAI 兼容 API，Embedding 双阶段检索</p>
+        </div>
+        <div class="card">
+          <div class="label" style="color:var(--green);">存储与版本</div>
+          <div class="value">Git + JSON</div>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag green">Branch-per-Record</span>
+            <span class="tag green">YAML Frontmatter</span>
+            <span class="tag green">Hypergraph</span>
+          </div>
+          <p>版本化决策存储，四层语义超图</p>
+        </div>
+      </div>
+      <div class="grid-3" style="margin-top:12px;">
+        <div class="card">
+          <div class="label" style="color:var(--purple);">部署</div>
+          <p>MCP Server via stdio<br>OpenClaw（推荐）<br>单进程，无外部依赖</p>
+        </div>
+        <div class="card">
+          <div class="label" style="color:var(--yellow);">集成</div>
+          <p>飞书 IM（WebSocket/Poll）<br>飞书任务视图同步<br>Sleep 机制</p>
+        </div>
+        <div class="card">
+          <div class="label" style="color:var(--pink);">评估</div>
+          <p>EvalRunner 流模拟<br>多群聊决策提取<br>彩色终端报告</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 15: Sleep 机制 ==================== -->
+  <div class="slide" data-index="15">
+    <div class="slide-content">
+      <h2>Sleep 机制</h2>
+      <p class="subtitle">智能休眠策略，减少无效资源消耗</p>
+      <div class="grid-2">
+        <div>
+          <h3>工作原理</h3>
+          <ul style="margin-top:12px;">
+            <li>长时间无新消息时，引擎自动进入休眠状态</li>
+            <li>休眠期间暂停 LLM 调用和 Episode 边界检测</li>
+            <li>收到新消息时自动唤醒，恢复正常处理</li>
+          </ul>
+          <div class="terminal" style="margin-top:16px;font-size:0.78rem;">
+            <span class="comment"># SleepManager 配置</span><br>
+            auto-sleep ENABLED<br>
+            interval = <span class="highlight">3600s</span> (1小时)<br>
+            <br>
+            <span class="comment"># 运行时日志</span><br>
+            <span class="bold">INFO</span> SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+          </div>
+        </div>
+        <div>
+          <h3>状态流转</h3>
+          <div class="arch-flow" style="flex-direction:column;gap:12px;margin-top:16px;">
+            <div class="arch-flow">
+              <div class="arch-box accent"><div class="icon">⚡</div>活跃状态</div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box orange"><div class="icon">⏳</div>空闲计时<br><span style="font-size:0.7rem;color:var(--text2);">无新消息</span></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box purple"><div class="icon">😴</div>休眠状态<br><span style="font-size:0.7rem;color:var(--text2);">暂停检测</span></div>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-box purple"><div class="icon">😴</div>休眠中</div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box green"><div class="icon">📨</div>新消息到达</div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-box accent"><div class="icon">⚡</div>自动唤醒</div>
+            </div>
+          </div>
+          <h3 style="margin-top:24px;">收益</h3>
+          <div class="grid-3" style="margin-top:12px;">
+            <div class="card" style="padding:12px;text-align:center;">
+              <div class="value" style="color:var(--green);">~80%</div>
+              <p style="font-size:0.8rem;">LLM API 调用节省</p>
+            </div>
+            <div class="card" style="padding:12px;text-align:center;">
+              <div class="value" style="color:var(--accent2);">低延迟</div>
+              <p style="font-size:0.8rem;">消息即时唤醒</p>
+            </div>
+            <div class="card" style="padding:12px;text-align:center;">
+              <div class="value" style="color:var(--purple);">零配置</div>
+              <p style="font-size:0.8rem;">自动启用无需干预</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 16: 决策层级结构 ==================== -->
+  <div class="slide" data-index="16">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>决策层级结构</h2>
+      <p class="subtitle">父决策 → 子决策 → 后代决策，完整树状追踪</p>
+      <div class="grid-2">
+        <div>
+          <h3>MCP 工具 + API</h3>
+          <div class="terminal" style="margin-top:8px;font-size:0.78rem;">
+            <span class="comment"># MCP 工具（OpenClaw 中直接调用）</span><br>
+            decision_children(sid="xxx")<br>
+            → 获取直接子决策<br>
+            <br>
+            decision_descendants(sid="xxx")<br>
+            → 递归获取所有后代<br>
+            <br>
+            decision_ancestors(sid="xxx")<br>
+            → 获取祖先路径 [根→...→父→当前]<br>
+            <br>
+            <span class="comment"># decision_tree 返回完整递归树</span><br>
+            → {"sid": "...", "children": [{...}]}<br>
+            <br>
+            <span class="comment"># 底层 API</span><br>
+            graph.<span class="highlight">get_children_of</span>(sid)<br>
+            graph.<span class="highlight">get_descendants</span>(sid)<br>
+            graph.<span class="highlight">get_ancestors</span>(sid)
+          </div>
+        </div>
+        <div>
+          <h3>决策树示例</h3>
+          <img src="images/image6.png" alt="决策树结构截图" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:8px;">
+          <p style="margin-top:8px;">如：<strong>容器化方案</strong> → K8s → 容器网络(Calico) / 容器监控(Prometheus) / 容器安全(PSS)</p>
+          <img src="images/image7.png" alt="决策可视化" style="width:100%; border-radius:12px; border:1px solid var(--border); margin-top:12px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 17: 冲突检测与解决 ==================== -->
+  <div class="slide" data-index="17">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>冲突检测与解决</h2>
+      <p class="subtitle">多层次冲突检测 · 交互式冲突解决</p>
+      <div class="grid-2">
+        <div>
+          <h3>冲突检测流程</h3>
+          <div class="flow-row" style="margin-top:8px;">
+            <span class="flow-step">Embedding 相似度</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Reranker 精排</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">LLM 语义判定</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step" style="border-color:var(--red);color:var(--red);">冲突标记</span>
+          </div>
+          <ul style="margin-top:16px;">
+            <li>基于 embedding 的语义相似度初筛</li>
+            <li>Reranker 对候选对精排打分</li>
+            <li>LLM Judge 最终判定冲突/更新/跳过</li>
+            <li>冲突决策自动推送飞书交互卡片</li>
+          </ul>
+          <div class="terminal" style="margin-top:12px;font-size:0.78rem;">
+            <span class="comment"># 冲突数据文件（eval_data/）</span><br>
+            conflict_db_mysql.txt<br>
+            conflict_db_postgresql.txt<br>
+            conflict_auth_session.txt<br>
+            conflict_auth_oauth.txt<br>
+            conflict_auth_jwt.txt<br>
+            conflict_chat_data.txt
+          </div>
+        </div>
+        <div>
+          <h3>MCP 冲突工具</h3>
+          <div class="tool-grid">
+            <span class="tool-badge">check_conflict</span>
+            <span class="tool-badge">conflict_list</span>
+            <span class="tool-badge">resolve_conflict</span>
+            <span class="tool-badge">resolve_conflict_action</span>
+          </div>
+          <h3 style="margin-top:20px;">交互式解决</h3>
+          <p>冲突卡片包含两个按钮，点击后自动执行 <span class="key-inline">resolve_conflict</span>：</p>
+          <ul style="margin-top:8px;">
+            <li><span class="tag green">保留 A</span> → B 标记为 superseded</li>
+            <li><span class="tag green">保留 B</span> → A 标记为 superseded</li>
+            <li>解决后自动推送更新通知</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 18: v2 决策链演示 ==================== -->
+  <div class="slide" data-index="18">
+    <div class="slide-content" style="transform: translateY(32px);">
+      <h2>v2 决策链演示 — 多智能体循环架构</h2>
+      <p class="subtitle">chat_0 中的完整决策链路：建议 → 拍板 → 细粒度子决策</p>
+      <div class="grid-2">
+        <div>
+          <h3>决策链时间线</h3>
+          <table class="compact-table">
+            <tr><th>#</th><th>角色</th><th>内容摘要</th><th>类型</th></tr>
+            <tr><td>1</td><td>Alice</td><td>发起讨论：四Agent协作方案</td><td>根决策</td></tr>
+            <tr><td>2</td><td>Bob</td><td>建议分层：执行层+协调层</td><td style="color:var(--yellow);">建议 L1</td></tr>
+            <tr><td>3</td><td>Charlie</td><td>状态同步关键，考虑异步队列</td><td>技术补充</td></tr>
+            <tr><td>4</td><td>Diana</td><td>明确Agent职责边界</td><td>用户视角</td></tr>
+            <tr><td>5</td><td>Eve</td><td>协调层暴露统一状态接口</td><td>前端视角</td></tr>
+            <tr style="background:rgba(74,222,128,0.08);"><td><b>6</b></td><td><b>Alice</b></td><td><b>拍板：分层+协调层设两个Agent</b></td><td style="color:var(--green);font-weight:700;">✅ 决定 L2</td></tr>
+            <tr><td>7</td><td>Bob</td><td>建议异常处理Agent监听错误事件</td><td style="color:var(--yellow);">建议 L3</td></tr>
+            <tr><td>8</td><td>Charlie</td><td>错误分三类：临时/永久/业务</td><td>技术建议</td></tr>
+            <tr style="background:rgba(74,222,128,0.08);"><td><b>9</b></td><td><b>Alice</b></td><td><b>拍板：三类错误对应处理策略</b></td><td style="color:var(--green);font-weight:700;">✅ 决定 L3</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>决策树结构</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            <span class="comment"># chat_0 多智能体循环架构</span><br>
+            m001: 确定四Agent协作方案 <span class="cyan">(根决策)</span><br>
+            └─ m002: Bob建议执行层/协调层分层 <span class="warn">(建议, L1)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└─ m006: Alice拍板分层方案 <span class="green">(决定, L2)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ m023: 结构化日志要求 <span class="green">(决定, L2)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ m028: 异常处理Agent建议 <span class="warn">(建议, L3)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ m030: 错误分类策略 <span class="green">(决定, L3)</span>
+          </div>
+          <h3 style="margin-top:20px;">置信度分析</h3>
+          <div class="terminal" style="font-size:0.75rem;">
+            <span class="comment"># m030 错误分类策略</span><br>
+            明确拍板词 "行，就按..." → <span class="highlight">+0.05</span><br>
+            指定了执行者 Bob → <span class="highlight">+0.05</span><br>
+            有明确技术分类 → <span class="highlight">+0.05</span><br>
+            基础置信度 → <span class="highlight">0.80</span><br>
+            ─────────────────────<br>
+            最终置信度 → <span class="green" style="font-weight:700;">~0.95 (高置信)</span>
+          </div>
+          <h3 style="margin-top:20px;">评估结果</h3>
+          <div class="stat-row">
+            <div class="stat-item">
+              <div class="stat-num" style="color:var(--green);">86.1%</div>
+              <div class="stat-label">F1 Score</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" style="color:var(--green);">100%</div>
+              <div class="stat-label">Precision</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" style="color:var(--green);">75.6%</div>
+              <div class="stat-label">Recall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ==================== SLIDE 19: 快速开始 ==================== -->
+  <div class="slide" data-index="19">
+    <div class="slide-content">
+      <h2>快速开始</h2>
+      <p class="subtitle">从克隆到运行，三步启动</p>
+      <div class="grid-2">
+        <div>
+          <div class="terminal" style="font-size:0.78rem;">
+            <span class="comment"># 1. 克隆并安装依赖</span><br>
+            $ git clone https://github.com/Mowenhao13/Feishu-LongTerm-Mem<br>
+            $ cd Feishu-LongTerm-Mem<br>
+            $ uv sync<br>
+            <br>
+            <span class="comment"># 2. 配置 .env</span><br>
+            $ cp .env.example .env<br>
+            <span class="comment"># 填入 LARK_APP_ID, LARK_APP_SECRET, API_KEY</span><br>
+            <br>
+            <span class="comment"># 3. 启动</span><br>
+            $ uv run python main.py<br>
+            <br>
+            <span class="comment"># 也可单独使用 Eval 模式测试</span><br>
+            $ uv run python src/eval_runner.py --input eval_data/test_data.txt
+          </div>
+        </div>
+        <div>
+          <h3>环境要求</h3>
+          <table class="compact-table">
+            <tr><th>组件</th><th>要求</th></tr>
+            <tr><td>Python</td><td>3.10+</td></tr>
+            <tr><td>uv</td><td>≥ 0.4.0</td></tr>
+            <tr><td>飞书应用</td><td>具备 im:message 权限</td></tr>
+            <tr><td>LLM API</td><td>OpenAI 兼容接口</td></tr>
+            <tr><td>Embedding</td><td>可选，增强语义检测</td></tr>
+          </table>
+          <h3 style="margin-top:16px;">MCP 配置（OpenClaw）</h3>
+          <div class="terminal" style="font-size:0.78rem;">
+            {<br>
+            &nbsp;&nbsp;"mcpServers": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"feishu-mem": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"command": "uv",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"args": ["run", "python", "scripts/mcp_server.py"]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 20: Q&A ==================== -->
+  <div class="slide" data-index="20">
+    <div class="slide-content" style="text-align:center;">
+      <h1 style="font-size:4rem;">Q & A</h1>
+      <p class="subtitle" style="font-size:1.2rem; margin-top:20px;">感谢聆听 · 欢迎提问</p>
+      <div style="margin-top:40px; display:flex; flex-direction:column; align-items:center; gap:12px;">
+        <div style="display:flex; gap:24px; color:var(--text2); font-size:0.9rem;">
+          <span>📧 mowenhao21@outlook.com</span>
+          <span>🐙 github.com/Mowenhao13/Feishu-LongTerm-Mem</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="nav-bar">
+  <button class="nav-btn" id="prevSlide">◀</button>
+  <span class="page-indicator" id="pageIndicator">1 / 21</span>
+  <button class="nav-btn" id="nextSlide">▶</button>
+  <button class="nav-btn primary" id="gotoSlide" style="display:none;">跳转</button>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  const progress = document.getElementById('progress');
+  const indicator = document.getElementById('pageIndicator');
+
+  function showSlide(idx) {
+    idx = Math.max(0, Math.min(idx, total - 1));
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === idx);
+    });
+    current = idx;
+    indicator.textContent = (idx + 1) + ' / ' + total;
+    progress.style.width = ((idx + 1) / total * 100) + '%';
+  }
+
+  document.getElementById('prevSlide').addEventListener('click', () => showSlide(current - 1));
+  document.getElementById('nextSlide').addEventListener('click', () => showSlide(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+      e.preventDefault();
+      showSlide(current + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      showSlide(current - 1);
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      showSlide(0);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      showSlide(total - 1);
+    }
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      showSlide(current + (diff > 0 ? 1 : -1));
+    }
+  });
+
+  showSlide(0);
+})();
+</script>
+</body>
+</html>

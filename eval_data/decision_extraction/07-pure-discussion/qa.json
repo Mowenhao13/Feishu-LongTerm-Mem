@@ -1,0 +1,204 @@
+{
+  "qars": [
+    {
+      "id": "de_07_000_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_001_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_002_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_003_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_004_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_005_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_006_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_007_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_008_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_009_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_010_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_011_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_012_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_013_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_014_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_015_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_016_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_017_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_018_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_07_019_detection",
+      "Q": "以上对话中是否做出了决策？",
+      "A": "B",
+      "options": {
+        "A": "是",
+        "B": "否，只是在讨论没有结论"
+      },
+      "dimension": "detection"
+    }
+  ]
+}

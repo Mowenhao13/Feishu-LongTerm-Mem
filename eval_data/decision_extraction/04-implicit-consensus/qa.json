@@ -1,0 +1,979 @@
+{
+  "qars": [
+    {
+      "id": "de_04_000_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_000_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_000_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_000_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_000_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_000_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_001_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_001_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_001_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "李四",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_001_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "王五",
+        "B": "李四",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_001_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_001_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_002_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_002_content",
+      "Q": "达成的共识是什么？",
+      "A": "B",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_002_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "王五",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_002_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "李四",
+        "B": "王五",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_002_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_002_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_003_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_003_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_003_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "张三",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_003_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "李四",
+        "B": "张三",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_003_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_003_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_004_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_004_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_004_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_004_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "王五",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_004_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_004_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_005_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_005_content",
+      "Q": "达成的共识是什么？",
+      "A": "B",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_005_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_005_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "张三",
+        "B": "陈七",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_005_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_005_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_006_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_006_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_006_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "王五",
+        "B": "陈七",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_006_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "王五",
+        "B": "陈七",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_006_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_006_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_007_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_007_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_007_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_007_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "张三",
+        "B": "李四",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_007_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_007_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_008_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_008_content",
+      "Q": "达成的共识是什么？",
+      "A": "B",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_008_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_008_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "张三",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_008_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_008_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_009_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_009_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_009_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "张三",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_009_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "张三",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_009_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_009_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_010_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_010_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_010_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_010_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_010_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_010_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_011_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_011_content",
+      "Q": "达成的共识是什么？",
+      "A": "B",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_011_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_011_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "李四",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_011_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_011_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_012_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_012_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_012_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_012_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "李四",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_012_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_012_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_013_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_013_content",
+      "Q": "达成的共识是什么？",
+      "A": "A",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_013_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "陈七",
+        "B": "赵六",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_013_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "陈七",
+        "B": "赵六",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_013_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_013_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    },
+    {
+      "id": "de_04_014_detection",
+      "Q": "以上对话中是否形成了决策？",
+      "A": "A",
+      "options": {
+        "A": "是，达成了共识",
+        "B": "否，没有明确结论"
+      },
+      "dimension": "detection"
+    },
+    {
+      "id": "de_04_014_content",
+      "Q": "达成的共识是什么？",
+      "A": "B",
+      "options": {
+        "A": "有技术方案共识",
+        "B": "有部署方案共识",
+        "C": "没有共识"
+      },
+      "dimension": "content"
+    },
+    {
+      "id": "de_04_014_proposer",
+      "Q": "这个决策是谁提出的？",
+      "A": "A",
+      "options": {
+        "A": "李四",
+        "B": "陈七",
+        "C": "无法确定"
+      },
+      "dimension": "proposer"
+    },
+    {
+      "id": "de_04_014_executor",
+      "Q": "谁负责执行？",
+      "A": "C",
+      "options": {
+        "A": "李四",
+        "B": "陈七",
+        "C": "未明确指定"
+      },
+      "dimension": "executor"
+    },
+    {
+      "id": "de_04_014_impact",
+      "Q": "影响级别是？",
+      "A": "B",
+      "options": {
+        "A": "major",
+        "B": "minor",
+        "C": "advisory"
+      },
+      "dimension": "impact_level"
+    },
+    {
+      "id": "de_04_014_status",
+      "Q": "决策状态是？",
+      "A": "A",
+      "options": {
+        "A": "decided",
+        "B": "pending_confirmation",
+        "C": "in_progress"
+      },
+      "dimension": "status"
+    }
+  ]
+}

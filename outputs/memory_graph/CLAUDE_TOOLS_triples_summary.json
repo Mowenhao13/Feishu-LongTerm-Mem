@@ -1,0 +1,3322 @@
+{
+  "triples": [
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Claude Code CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-89178b"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "based_on",
+      "tail": "Claude Code Tools Reference",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-000-89178b"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "related_to",
+      "tail": "多 Agent 协作系统",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-89178b"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "related_to",
+      "tail": "工具使用规范",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-89178b"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "Claude Code CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "分层工具权限模型",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "分层工具权限模型",
+      "relation": "based_on",
+      "tail": "工具使用分层",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "responsible_for",
+      "tail": "DAG 规划",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "全量工具",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "DAG 编排工具",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "responsible_for",
+      "tail": "子任务执行",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "开发工具",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "本地原语",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "编排工具",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "Worktree 管理",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "Agent 通信",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "responsible_for",
+      "tail": "DAG 状态机",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "事件驱动",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "状态机硬编码控制",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "rejects",
+      "tail": "Claude Code 工具",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "DAG 状态机",
+      "relation": "depends_on",
+      "tail": "Exit Code",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "DAG 状态机",
+      "relation": "depends_on",
+      "tail": "Git commit",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "DAG 状态机",
+      "relation": "depends_on",
+      "tail": "Worktree 变化",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-89b5ef"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Bash",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Read",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Write",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Edit",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Glob",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Grep",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "LSP",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "WebFetch",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "WebSearch",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Monitor",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "NotebookEdit",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "PowerShell",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "AskUserQuestion",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "EnterPlanMode",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "ExitPlanMode",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "EnterWorktree",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "ExitWorktree",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TaskCreate",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TaskGet",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TaskList",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TaskUpdate",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TaskStop",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "CronCreate",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "CronDelete",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "CronList",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "SendMessage",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TeamCreate",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "TeamDelete",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "PushNotification",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "Skill",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "ToolSearch",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Claude Code CLI",
+      "relation": "has_tool",
+      "tail": "ScheduleWakeup",
+      "schema": [
+        "SYSTEM",
+        "has_tool",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Agent",
+      "relation": "generates",
+      "tail": "Subagent",
+      "schema": [
+        "TECHNOLOGY",
+        "generates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Subagent",
+      "relation": "has_property",
+      "tail": "independent_context_window",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Bash",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Write",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Edit",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "WebFetch",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "WebSearch",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Monitor",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "NotebookEdit",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "PowerShell",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "ExitPlanMode",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Skill",
+      "relation": "requires_permission",
+      "tail": "true",
+      "schema": [
+        "TECHNOLOGY",
+        "requires_permission",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "ToolSearch",
+      "relation": "loads",
+      "tail": "MCP_tool",
+      "schema": [
+        "TECHNOLOGY",
+        "loads",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "ToolSearch",
+      "relation": "has_property",
+      "tail": "lazy_loading",
+      "schema": [
+        "TECHNOLOGY",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-00c5ec"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "responsible_for",
+      "tail": "DAG 规划层",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "LLM",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "AskUserQuestion",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "EnterPlanMode",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "ExitPlanMode",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "TaskCreate",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "TaskGet",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "TaskList",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "TaskUpdate",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Glob",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Grep",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Read",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "WebSearch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "WebFetch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "CronCreate",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Claude Code 内置工具",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "based_on",
+      "tail": "DAG",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "responsible_for",
+      "tail": "子任务执行层",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Read",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Write",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Edit",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Bash",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Glob",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Grep",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "LSP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Monitor",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "WebFetch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "WebSearch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "MCP 本地原语工具",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "Worktree",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "depends_on",
+      "tail": "Coordinator Agent",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "related_to",
+      "tail": "Coordinator Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Handoff DAG",
+      "relation": "related_to",
+      "tail": "Worker Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worktree",
+      "relation": "related_to",
+      "tail": "Worker Agent",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Claude Code 内置工具",
+      "relation": "related_to",
+      "tail": "Coordinator Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "MCP 本地原语工具",
+      "relation": "related_to",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-fdc10e"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "MCP 工具",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_complete",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_block",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_show",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "handoff_complete",
+      "relation": "related_to",
+      "tail": "任务完成",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "handoff_block",
+      "relation": "related_to",
+      "tail": "阻塞任务",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "handoff_show",
+      "relation": "related_to",
+      "tail": "读取上下文",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "MCP 工具",
+      "relation": "based_on",
+      "tail": "Claude Code MCP Server",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Claude Code MCP Server",
+      "relation": "configured_by",
+      "tail": "--mcp-servers",
+      "schema": [
+        "TECHNOLOGY",
+        "configured_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Claude Code MCP Server",
+      "relation": "configured_by",
+      "tail": "~/.claude/mcp.json",
+      "schema": [
+        "TECHNOLOGY",
+        "configured_by",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "SendMessage",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "EnterWorktree",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "ExitWorktree",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TaskCreate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TaskUpdate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TaskStop",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "CronCreate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "CronDelete",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "CronList",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TeamCreate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TeamDelete",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "EnterPlanMode",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "ExitPlanMode",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "Skill",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "权限规则",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "restricts",
+      "tail": "Worker Agent 文件操作",
+      "schema": [
+        "CONCEPT",
+        "restricts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent 文件操作",
+      "relation": "limited_to",
+      "tail": "Worktree 目录",
+      "schema": [
+        "CONCEPT",
+        "limited_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "allows",
+      "tail": "Read({{worktree_path}}/**)",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "allows",
+      "tail": "Write({{worktree_path}}/**)",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "allows",
+      "tail": "Edit({{worktree_path}}/**)",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "allows",
+      "tail": "Bash(*)",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "allows",
+      "tail": "WebFetch(domain:*)",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "allows",
+      "tail": "WebSearch",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "Read({{worktree_path}}/.git/**)",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "Bash(git push *)",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "Bash(git worktree *)",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "Agent(*)",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "SendMessage",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "TaskCreate",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "权限规则",
+      "relation": "denies",
+      "tail": "TaskUpdate",
+      "schema": [
+        "CONCEPT",
+        "denies",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "related_to",
+      "tail": "Bash 命令限制",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-abde5a"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "uses",
+      "tail": "DAG状态机",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "DAG状态机",
+      "relation": "responsible_for",
+      "tail": "平台运行时",
+      "schema": [
+        "CONCEPT",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "Exit Code 0",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "Exit Code ≠ 0",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "handoff_complete()",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "handoff_block()",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "Worktree创建完成",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "uses",
+      "tail": "超时(IdleWatchdog)",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "git push",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "git worktree",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "rejects",
+      "tail": "gh pr create",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "npm test",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "npm run build",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "git add",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "git commit",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "cd",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "pip install",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "npm install",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "AgentHub",
+      "relation": "adopts",
+      "tail": "rm -rf",
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "based_on",
+      "tail": "DAG状态机",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "平台运行时",
+      "relation": "related_to",
+      "tail": "AgentHub",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-8245da"
+    },
+    {
+      "head": "Read",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Read",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Write",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Write",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Edit",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Edit",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Bash",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Bash",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Glob",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Glob",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Grep",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Grep",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "LSP",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "LSP",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Monitor",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Monitor",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "WebFetch",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "WebFetch",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "WebSearch",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "WebSearch",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "AskUserQuestion",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "EnterPlanMode",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "ExitPlanMode",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TaskCreate",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TaskGet",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TaskList",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TaskUpdate",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TaskStop",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Agent",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "EnterWorktree",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "ExitWorktree",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "SendMessage",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TeamCreate",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "TeamDelete",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "CronCreate",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "CronDelete",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "CronList",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Skill",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "PushNotification",
+      "relation": "used_by",
+      "tail": "Coordinator",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "handoff_complete()",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "handoff_block()",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "handoff_show()",
+      "relation": "used_by",
+      "tail": "Worker Agent",
+      "schema": [
+        "TECHNOLOGY",
+        "used_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "restricted_to",
+      "tail": "Worktree",
+      "schema": [
+        "SYSTEM",
+        "restricted_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "handoff_complete()",
+      "relation": "based_on",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "handoff_block()",
+      "relation": "based_on",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "handoff_show()",
+      "relation": "based_on",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-006-269130"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_show",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Glob",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Grep",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Read",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Write",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Bash",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_complete",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "exit 0",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_block",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "AskUserQuestion",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Glob",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Read",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "TaskCreate",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "ExitPlanMode",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Coordinator Agent",
+      "relation": "uses",
+      "tail": "Handoff",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#1",
+      "relation": "responsible_for",
+      "tail": "Architect",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#2",
+      "relation": "responsible_for",
+      "tail": "Backend",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#3",
+      "relation": "responsible_for",
+      "tail": "Frontend",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#4",
+      "relation": "responsible_for",
+      "tail": "Reviewer",
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#2",
+      "relation": "depends_on",
+      "tail": "Handoff#1",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#3",
+      "relation": "depends_on",
+      "tail": "Handoff#1",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#4",
+      "relation": "depends_on",
+      "tail": "Handoff#2",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Handoff#4",
+      "relation": "depends_on",
+      "tail": "Handoff#3",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "handoff_block",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "handoff_block",
+      "relation": "related_to",
+      "tail": "blocked",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "平台状态机",
+      "relation": "related_to",
+      "tail": "running",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "平台状态机",
+      "relation": "related_to",
+      "tail": "blocked",
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Stripe",
+      "relation": "adopts",
+      "tail": "primary provider",
+      "schema": [
+        "PRODUCT",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "PayPal",
+      "relation": "related_to",
+      "tail": "支付渠道",
+      "schema": [
+        "PRODUCT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-007-92e0e0"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Claude Code CLI",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "configured_by",
+      "tail": "Subagent frontmatter",
+      "schema": [
+        "SYSTEM",
+        "configured_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "configured_by",
+      "tail": "disallowedTools",
+      "schema": [
+        "SYSTEM",
+        "configured_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Read",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Write",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Edit",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Bash",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Glob",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Grep",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "LSP",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "Monitor",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "WebFetch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "WebSearch",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "agenthub-handoff",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "agenthub-handoff",
+      "relation": "based_on",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "configured_by",
+      "tail": "--allowedTools",
+      "schema": [
+        "SYSTEM",
+        "configured_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "configured_by",
+      "tail": "--disallowedTools",
+      "schema": [
+        "SYSTEM",
+        "configured_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "Agent",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "SendMessage",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TaskCreate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TaskUpdate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "EnterWorktree",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "ExitWorktree",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "EnterPlanMode",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "ExitPlanMode",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "Skill",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "CronCreate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "CronDelete",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "CronList",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TeamCreate",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "rejects",
+      "tail": "TeamDelete",
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "MCP Server",
+      "relation": "injects",
+      "tail": "agenthub",
+      "schema": [
+        "SYSTEM",
+        "injects",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "agenthub",
+      "relation": "based_on",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "based_on",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "agenthub",
+      "relation": "uses",
+      "tail": "agenthub",
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "agenthub",
+      "relation": "depends_on",
+      "tail": "AGENTHUB_HANDOFF_ID",
+      "schema": [
+        "TECHNOLOGY",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "agenthub",
+      "relation": "depends_on",
+      "tail": "AGENTHUB_TOKEN",
+      "schema": [
+        "TECHNOLOGY",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-008-fd5786"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "最小工具集",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "最小权限",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "路径锁定",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "零编排能力",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "零通信能力",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "三工具接口",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "based_on",
+      "tail": "确定性的交接",
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "complete",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "block",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "uses",
+      "tail": "show",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "complete",
+      "relation": "related_to",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "block",
+      "relation": "related_to",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "show",
+      "relation": "related_to",
+      "tail": "MCP",
+      "schema": [
+        "TECHNOLOGY",
+        "related_to",
+        "STANDARD"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "跨 Agent 的接力棒传递",
+      "relation": "controlled_by",
+      "tail": "平台状态机",
+      "schema": [
+        "CONCEPT",
+        "controlled_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "平台状态机",
+      "relation": "uses",
+      "tail": "Exit Code",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    },
+    {
+      "head": "Worker Agent",
+      "relation": "restricted_to",
+      "tail": "Worktree 目录",
+      "schema": [
+        "SYSTEM",
+        "restricted_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-009-343510"
+    }
+  ],
+  "stats": {
+    "total_chunks": 10,
+    "total_triples": 297,
+    "unique_schemas": 41,
+    "schema_distribution": {
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 64,
+      "('TECHNOLOGY', 'based_on', 'STANDARD')": 6,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 4,
+      "('TECHNOLOGY', 'related_to', 'CONCEPT')": 5,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 5,
+      "('SYSTEM', 'uses', 'CONCEPT')": 9,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 3,
+      "('SYSTEM', 'rejects', 'TECHNOLOGY')": 33,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 3,
+      "('SYSTEM', 'has_tool', 'TECHNOLOGY')": 33,
+      "('TECHNOLOGY', 'generates', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 1,
+      "('TECHNOLOGY', 'requires_permission', 'CONCEPT')": 10,
+      "('TECHNOLOGY', 'loads', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'has_property', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 9,
+      "('SYSTEM', 'depends_on', 'SYSTEM')": 5,
+      "('CONCEPT', 'related_to', 'SYSTEM')": 4,
+      "('TECHNOLOGY', 'related_to', 'SYSTEM')": 2,
+      "('TECHNOLOGY', 'based_on', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'configured_by', 'TECHNOLOGY')": 2,
+      "('CONCEPT', 'restricts', 'CONCEPT')": 1,
+      "('CONCEPT', 'limited_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'allows', 'STANDARD')": 6,
+      "('CONCEPT', 'denies', 'STANDARD')": 7,
+      "('CONCEPT', 'responsible_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'uses', 'CONCEPT')": 6,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 8,
+      "('TECHNOLOGY', 'used_by', 'SYSTEM')": 42,
+      "('SYSTEM', 'restricted_to', 'CONCEPT')": 2,
+      "('SYSTEM', 'responsible_for', 'SYSTEM')": 4,
+      "('PRODUCT', 'adopts', 'CONCEPT')": 1,
+      "('PRODUCT', 'related_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'configured_by', 'CONCEPT')": 4,
+      "('SYSTEM', 'injects', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'uses', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'depends_on', 'CONCEPT')": 2,
+      "('TECHNOLOGY', 'related_to', 'STANDARD')": 3,
+      "('CONCEPT', 'controlled_by', 'SYSTEM')": 1
+    },
+    "schema_layer_size": 41,
+    "fact_layer_size": 258,
+    "passage_layer_size": 10
+  }
+}

@@ -1,0 +1,2765 @@
+{
+  "schema_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        2,
+        34
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        16,
+        51
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 21,
+      "fact_indices": [
+        17,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        71,
+        72
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        18,
+        41
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        19,
+        24,
+        28
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        27,
+        69,
+        70
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "frequency": 5,
+      "fact_indices": [
+        29,
+        30,
+        31,
+        32,
+        48
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        33,
+        79
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        35
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        40
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "CONCEPT",
+        "reviewed_via",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        42
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "PERSON",
+        "performs",
+        "CONCEPT"
+      ],
+      "frequency": 2,
+      "fact_indices": [
+        43,
+        44
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "CONCEPT",
+        "occurs_before",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        45
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        46
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        47
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "frequency": 3,
+      "fact_indices": [
+        49,
+        50,
+        52
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        73
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "frequency": 4,
+      "fact_indices": [
+        74,
+        75,
+        76,
+        77
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        78
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "frequency": 1,
+      "fact_indices": [
+        80
+      ]
+    }
+  ],
+  "fact_layer": [
+    {
+      "idx": 0,
+      "content": [
+        "Diff 视图设计文档",
+        "based_on",
+        "Repo4 GitHub Diff 体系"
+      ],
+      "schema_idx": 0,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 1,
+      "content": [
+        "Diff 视图设计文档",
+        "based_on",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema_idx": 1,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 2,
+      "content": [
+        "Repo4 GitHub Diff 体系",
+        "related_to",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        0
+      ]
+    },
+    {
+      "idx": 3,
+      "content": [
+        "repo4",
+        "implements",
+        "GitHubDiffRenderAdapter"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 4,
+      "content": [
+        "repo4",
+        "implements",
+        "GitHubCLIService"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 5,
+      "content": [
+        "repo4",
+        "implements",
+        "GitHubViewModel"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 6,
+      "content": [
+        "repo4",
+        "implements",
+        "GitHubPRObservationService"
+      ],
+      "schema_idx": 3,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 7,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 8,
+      "content": [
+        "GitHubCLIService",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 9,
+      "content": [
+        "GitHubViewModel",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 10,
+      "content": [
+        "GitHubPRObservationService",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema_idx": 4,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 11,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "AgentHubGitHub/Services/GitHubCLIService.swift"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 12,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "Utils/GitHubDiffRenderAdapter.swift"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 13,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "ViewModels/GitHubViewModel.swift"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 14,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "Models/GitHubModels.swift"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 15,
+      "content": [
+        "GitHubPRObservationService",
+        "located_in",
+        "ViewModels/GitHubViewModel.swift"
+      ],
+      "schema_idx": 5,
+      "passage_indices": [
+        1
+      ]
+    },
+    {
+      "idx": 16,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "based_on",
+        "GitHub统一补丁文本"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 17,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "统一diff文本"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 18,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "produces",
+        "旧/新缓冲区"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 19,
+      "content": [
+        "GitHubCLIService",
+        "responsible_for",
+        "PR生命周期管理"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 20,
+      "content": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubPullRequest"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 21,
+      "content": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubPRFile"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 22,
+      "content": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubComment"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 23,
+      "content": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubCheckRun"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 24,
+      "content": [
+        "GitHubViewModel",
+        "responsible_for",
+        "PR列表状态管理"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 25,
+      "content": [
+        "GitHubViewModel",
+        "uses",
+        "GitHubPRFilter"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 26,
+      "content": [
+        "GitHubViewModel",
+        "uses",
+        "GitHubPRObservationState"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 27,
+      "content": [
+        "PR观察服务",
+        "uses",
+        "Swift async序列模式"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 28,
+      "content": [
+        "PR观察服务",
+        "responsible_for",
+        "自动轮询当前分支PR状态"
+      ],
+      "schema_idx": 9,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 29,
+      "content": [
+        "Repo4 Diff体系",
+        "adopts",
+        "GitHubDiffRenderAdapter"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 30,
+      "content": [
+        "Repo4 Diff体系",
+        "adopts",
+        "GitHubCLIService"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 31,
+      "content": [
+        "Repo4 Diff体系",
+        "adopts",
+        "GitHubViewModel"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 32,
+      "content": [
+        "Repo4 Diff体系",
+        "adopts",
+        "PR观察服务"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 33,
+      "content": [
+        "Repo4 Diff体系",
+        "compared_with",
+        "Vibe Kanban审查流程"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 34,
+      "content": [
+        "Repo4 Diff体系",
+        "related_to",
+        "方案对比"
+      ],
+      "schema_idx": 2,
+      "passage_indices": [
+        2
+      ]
+    },
+    {
+      "idx": 35,
+      "content": [
+        "审查机制",
+        "related_to",
+        "人工审查"
+      ],
+      "schema_idx": 13,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 36,
+      "content": [
+        "工作流",
+        "consists_of",
+        "规划 (Issue)"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 37,
+      "content": [
+        "工作流",
+        "consists_of",
+        "执行 (Workspace)"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 38,
+      "content": [
+        "工作流",
+        "consists_of",
+        "审查 (Diff)"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 39,
+      "content": [
+        "工作流",
+        "consists_of",
+        "合并 (PR)"
+      ],
+      "schema_idx": 14,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 40,
+      "content": [
+        "Git Worktree",
+        "used_for",
+        "代码隔离"
+      ],
+      "schema_idx": 15,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 41,
+      "content": [
+        "Agent",
+        "produces",
+        "代码"
+      ],
+      "schema_idx": 8,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 42,
+      "content": [
+        "代码",
+        "reviewed_via",
+        "Diff 对比"
+      ],
+      "schema_idx": 16,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 43,
+      "content": [
+        "人类",
+        "performs",
+        "审查"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 44,
+      "content": [
+        "人类",
+        "performs",
+        "内联评论"
+      ],
+      "schema_idx": 17,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 45,
+      "content": [
+        "审查",
+        "occurs_before",
+        "合并"
+      ],
+      "schema_idx": 18,
+      "passage_indices": [
+        3
+      ]
+    },
+    {
+      "idx": 46,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "GitHubDiffRenderAdapter"
+      ],
+      "schema_idx": 19,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 47,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema_idx": 20,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 48,
+      "content": [
+        "AgentHub",
+        "adopts",
+        "Repo4"
+      ],
+      "schema_idx": 11,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 49,
+      "content": [
+        "Diff 渲染引擎",
+        "based_on",
+        "Repo4"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 50,
+      "content": [
+        "PR 审查流程",
+        "based_on",
+        "Repo4"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 51,
+      "content": [
+        "Review 工作流",
+        "based_on",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema_idx": 6,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 52,
+      "content": [
+        "自动观察",
+        "based_on",
+        "Repo4"
+      ],
+      "schema_idx": 21,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 53,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "统一 diff → 旧/新缓冲区"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 54,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "行级变化定位"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 55,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "文件列表"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 56,
+      "content": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "完整 diff 文本渲染"
+      ],
+      "schema_idx": 22,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 57,
+      "content": [
+        "PR 审查流程",
+        "uses",
+        "PR 列表"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 58,
+      "content": [
+        "PR 审查流程",
+        "uses",
+        "PR 详情"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 59,
+      "content": [
+        "PR 审查流程",
+        "uses",
+        "审查评论 CRUD"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 60,
+      "content": [
+        "PR 审查流程",
+        "uses",
+        "CI 检查展示"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 61,
+      "content": [
+        "PR 审查流程",
+        "uses",
+        "PR CRUD"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 62,
+      "content": [
+        "Review 工作流",
+        "uses",
+        "内联评论系统"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 63,
+      "content": [
+        "Review 工作流",
+        "uses",
+        "审批门禁"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 64,
+      "content": [
+        "自动观察",
+        "uses",
+        "当前分支 PR 自动轮询"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 65,
+      "content": [
+        "自动观察",
+        "uses",
+        "CI 状态变化推送"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 66,
+      "content": [
+        "自动观察",
+        "uses",
+        "审查评论实时更新"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 67,
+      "content": [
+        "AgentHub",
+        "uses",
+        "WS 实时推送模式"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 68,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 69,
+      "content": [
+        "AgentHub",
+        "uses",
+        "gh CLI"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 70,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Swift async 序列"
+      ],
+      "schema_idx": 10,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 71,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Board Issue"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 72,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Worktree"
+      ],
+      "schema_idx": 7,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 73,
+      "content": [
+        "AgentHub",
+        "uses",
+        "Diff 视图系统"
+      ],
+      "schema_idx": 23,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 74,
+      "content": [
+        "Diff 视图系统",
+        "composed_of",
+        "Diff 渲染引擎"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 75,
+      "content": [
+        "Diff 视图系统",
+        "composed_of",
+        "PR 审查流程"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 76,
+      "content": [
+        "Diff 视图系统",
+        "composed_of",
+        "Review 工作流"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 77,
+      "content": [
+        "Diff 视图系统",
+        "composed_of",
+        "自动观察"
+      ],
+      "schema_idx": 24,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 78,
+      "content": [
+        "AgentHub",
+        "rejects",
+        "Repo4 工作流"
+      ],
+      "schema_idx": 25,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 79,
+      "content": [
+        "AgentHub",
+        "compared_with",
+        "Repo4"
+      ],
+      "schema_idx": 12,
+      "passage_indices": [
+        4
+      ]
+    },
+    {
+      "idx": 80,
+      "content": [
+        "AgentHub",
+        "compared_with",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema_idx": 26,
+      "passage_indices": [
+        4
+      ]
+    }
+  ],
+  "passage_layer": [
+    {
+      "idx": 0,
+      "chunk_id": "chunk-000-d63fd451c33c1566",
+      "content": "# Diff 视图设计文档\n\n\n\n> 分析来源: Repo4 (ref/repo4), Vibe Kanban (docs 分析)推荐方案: Repo4 GitHub Diff 体系 (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "fact_indices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "idx": 1,
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "content": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "fact_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "idx": 2,
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "content": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "fact_indices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "idx": 3,
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "content": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "fact_indices": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "idx": 4,
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "content": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "fact_indices": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    }
+  ],
+  "triples_with_schema": [
+    {
+      "triple": [
+        "Diff 视图设计文档",
+        "based_on",
+        "Repo4 GitHub Diff 体系"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-000-d63fd451c33c1566",
+      "passage": "# Diff 视图设计文档\n\n\n\n> 分析来源: Repo4 (ref/repo4), Vibe Kanban (docs 分析)推荐方案: Repo4 GitHub Diff 体系 (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Diff 视图设计文档",
+        "based_on",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-d63fd451c33c1566",
+      "passage": "# Diff 视图设计文档\n\n\n\n> 分析来源: Repo4 (ref/repo4), Vibe Kanban (docs 分析)推荐方案: Repo4 GitHub Diff 体系 (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 GitHub Diff 体系",
+        "related_to",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-d63fd451c33c1566",
+      "passage": "# Diff 视图设计文档\n\n\n\n> 分析来源: Repo4 (ref/repo4), Vibe Kanban (docs 分析)推荐方案: Repo4 GitHub Diff 体系 (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "repo4",
+        "implements",
+        "GitHubDiffRenderAdapter"
+      ],
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "repo4",
+        "implements",
+        "GitHubCLIService"
+      ],
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "repo4",
+        "implements",
+        "GitHubViewModel"
+      ],
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "repo4",
+        "implements",
+        "GitHubPRObservationService"
+      ],
+      "schema": [
+        "ORG",
+        "implements",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubCLIService",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubViewModel",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubPRObservationService",
+        "implemented_in",
+        "Swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "AgentHubGitHub/Services/GitHubCLIService.swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "Utils/GitHubDiffRenderAdapter.swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "ViewModels/GitHubViewModel.swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "located_in",
+        "Models/GitHubModels.swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubPRObservationService",
+        "located_in",
+        "ViewModels/GitHubViewModel.swift"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "located_in",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "passage": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "based_on",
+        "GitHub统一补丁文本"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "统一diff文本"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "produces",
+        "旧/新缓冲区"
+      ],
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubCLIService",
+        "responsible_for",
+        "PR生命周期管理"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubPullRequest"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubPRFile"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubComment"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubCLIService",
+        "uses",
+        "GitHubCheckRun"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubViewModel",
+        "responsible_for",
+        "PR列表状态管理"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubViewModel",
+        "uses",
+        "GitHubPRFilter"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubViewModel",
+        "uses",
+        "GitHubPRObservationState"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR观察服务",
+        "uses",
+        "Swift async序列模式"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR观察服务",
+        "responsible_for",
+        "自动轮询当前分支PR状态"
+      ],
+      "schema": [
+        "SYSTEM",
+        "responsible_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 Diff体系",
+        "adopts",
+        "GitHubDiffRenderAdapter"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 Diff体系",
+        "adopts",
+        "GitHubCLIService"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 Diff体系",
+        "adopts",
+        "GitHubViewModel"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 Diff体系",
+        "adopts",
+        "PR观察服务"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 Diff体系",
+        "compared_with",
+        "Vibe Kanban审查流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Repo4 Diff体系",
+        "related_to",
+        "方案对比"
+      ],
+      "schema": [
+        "SYSTEM",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "passage": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "审查机制",
+        "related_to",
+        "人工审查"
+      ],
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "consists_of",
+        "规划 (Issue)"
+      ],
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "consists_of",
+        "执行 (Workspace)"
+      ],
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "consists_of",
+        "审查 (Diff)"
+      ],
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "工作流",
+        "consists_of",
+        "合并 (PR)"
+      ],
+      "schema": [
+        "CONCEPT",
+        "consists_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Git Worktree",
+        "used_for",
+        "代码隔离"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Agent",
+        "produces",
+        "代码"
+      ],
+      "schema": [
+        "SYSTEM",
+        "produces",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "代码",
+        "reviewed_via",
+        "Diff 对比"
+      ],
+      "schema": [
+        "CONCEPT",
+        "reviewed_via",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "人类",
+        "performs",
+        "审查"
+      ],
+      "schema": [
+        "PERSON",
+        "performs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "人类",
+        "performs",
+        "内联评论"
+      ],
+      "schema": [
+        "PERSON",
+        "performs",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "审查",
+        "occurs_before",
+        "合并"
+      ],
+      "schema": [
+        "CONCEPT",
+        "occurs_before",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "passage": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "GitHubDiffRenderAdapter"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "adopts",
+        "Repo4"
+      ],
+      "schema": [
+        "SYSTEM",
+        "adopts",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Diff 渲染引擎",
+        "based_on",
+        "Repo4"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR 审查流程",
+        "based_on",
+        "Repo4"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Review 工作流",
+        "based_on",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "自动观察",
+        "based_on",
+        "Repo4"
+      ],
+      "schema": [
+        "SYSTEM",
+        "based_on",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "统一 diff → 旧/新缓冲区"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "行级变化定位"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "文件列表"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "GitHubDiffRenderAdapter",
+        "uses",
+        "完整 diff 文本渲染"
+      ],
+      "schema": [
+        "TECHNOLOGY",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR 审查流程",
+        "uses",
+        "PR 列表"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR 审查流程",
+        "uses",
+        "PR 详情"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR 审查流程",
+        "uses",
+        "审查评论 CRUD"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR 审查流程",
+        "uses",
+        "CI 检查展示"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "PR 审查流程",
+        "uses",
+        "PR CRUD"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Review 工作流",
+        "uses",
+        "内联评论系统"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Review 工作流",
+        "uses",
+        "审批门禁"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "自动观察",
+        "uses",
+        "当前分支 PR 自动轮询"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "自动观察",
+        "uses",
+        "CI 状态变化推送"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "自动观察",
+        "uses",
+        "审查评论实时更新"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "WS 实时推送模式"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "gh CLI"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Swift async 序列"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Board Issue"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Worktree"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "uses",
+        "Diff 视图系统"
+      ],
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Diff 视图系统",
+        "composed_of",
+        "Diff 渲染引擎"
+      ],
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Diff 视图系统",
+        "composed_of",
+        "PR 审查流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Diff 视图系统",
+        "composed_of",
+        "Review 工作流"
+      ],
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "Diff 视图系统",
+        "composed_of",
+        "自动观察"
+      ],
+      "schema": [
+        "SYSTEM",
+        "composed_of",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "rejects",
+        "Repo4 工作流"
+      ],
+      "schema": [
+        "SYSTEM",
+        "rejects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "compared_with",
+        "Repo4"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    },
+    {
+      "triple": [
+        "AgentHub",
+        "compared_with",
+        "Vibe Kanban Review 流程"
+      ],
+      "schema": [
+        "SYSTEM",
+        "compared_with",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "passage": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-000-d63fd451c33c1566",
+      "chunk_text": "# Diff 视图设计文档\n\n\n\n> 分析来源: Repo4 (ref/repo4), Vibe Kanban (docs 分析)推荐方案: Repo4 GitHub Diff 体系 (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "chunk_index": 0
+    },
+    {
+      "chunk_id": "chunk-001-adce15d9cf16df67",
+      "chunk_text": "## 1. 分析范围\n\n\n\n| 仓库 | 实现 | 关键文件 ||------|------|---------|| repo4 | Swift — GitHubDiffRenderAdapter + GitHubCLIService + GitHubViewModel | AgentHubGitHub/Services/GitHubCLIService.swift, Utils/GitHubDiffRenderAdapter.swift, ViewModels/GitHubViewModel.swift, Models/GitHubModels.swift || repo4 | Swift — PR 观察服务 (GitHubPRObservationService) | ViewModels/GitHubViewModel.swift (observation) |\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "chunk_index": 1
+    },
+    {
+      "chunk_id": "chunk-002-7a96c5805a351cf0",
+      "chunk_text": "## 2. 方案对比\n\n\n\n### 2.1 Repo4 Diff 体系 (推荐主方案)\n\n\n\n#### Diff 渲染适配器\n\n\n\n\n```\n// GitHubDiffRenderAdapter.swift\n// 将 GitHub 统一补丁文本转换为旧/新缓冲区\n\nclass GitHubDiffRenderAdapter {\n    /// 将统一 diff 文本解析为旧/新文件快照\n    /// 输入: git diff 或 PR 补丁文本\n    /// 输出: 前端可渲染的 Old/New 缓冲区\n    static func parse(_ diffText: String) -> (oldBuffer: [String], newBuffer: [String])\n\n    /// 定位 diff 中的变化行 (用于行级评论)\n    static func changedLines(_ diffText: String) -> [(oldLine: Int?, newLine: Int?)]\n}\n\n```\n\n\n\n\n#### PR 审查流程\n\n\n\n\n```\n// GitHubCLIService — 完整的 PR 生命周期管理\n\n// 1. 列出 PR（按状态/作者/标签过滤）\nfunc listPullRequests(at repoPath: String, state: PRState,\n    limit: Int, authoredByMe: Bool? = nil, labels: [String]) async throws -> [GitHubPullRequest]\n\n// 2. 获取 PR 详情（含 diff 和文件列表）\nfunc getPullRequest(at repoPath: String, number: Int) async throws -> GitHubPullRequest\nfunc getPRDiff(at repoPath: String, number: Int) async throws -> String\nfunc getPRFiles(at repoPath: String, number: Int) async throws -> [GitHubPRFile]\n\n// 3. 审查评论\nfunc listPRReviewComments(at repoPath: String, number: Int)\n    async throws -> [GitHubComment]\nfunc addPRComment(at repoPath: String, number: Int, body: String) async throws\nfunc addPRReview(at repoPath: String, number: Int, body: String,\n    event: ReviewEvent) async throws\n\n// 4. 创建/更新 PR\nfunc createPR(at repoPath: String, title: String, body: String?,\n    head: String, base: String, draft: Bool) async throws -> GitHubPullRequest\nfunc updatePR(at repoPath: String, number: Int, title: String?,\n    body: String?) async throws -> GitHubPullRequest\n\n// 5. CI 检查\nfunc listCheckRuns(at repoPath: String, prNumber: Int) async throws -> [GitHubCheckRun]\n\n```\n\n\n\n\n#### GitHubViewModel 状态管理\n\n\n\n\n```\n// 核心状态\nclass GitHubViewModel {\n    // PR 列表\n    var pullRequests: [GitHubPullRequest]    // 按 filter 过滤后的列表\n    var prFilter: GitHubPRFilter             // open / draft / merged / closed / all\n\n    // PR 详情\n    var selectedPR: GitHubPullRequest?\n    var selectedPRFiles: [GitHubPRFile]      // 变更文件列表\n    var selectedPRDiff: String               // 完整 diff 文本\n    var selectedPRReviewComments: [GitHubComment]  // 审查评论\n\n    // CI 检查\n    var checks: [GitHubCheckRun]             // 状态检查列表\n\n    // PR 观察服务 — 自动轮询更新\n    var currentBranchObservationState: GitHubPRObservationState\n}\n\n```\n\n\n\n\n#### PR 观察服务\n\n\n\n\n```\n// Swift async 序列模式 — 自动轮询当前分支 PR 状态\nfunc startCurrentBranchObservation() {\n    currentBranchObservationTask = Task { [weak self] in\n        for await event in observationService.observe(repoPath: repoPath)  {\n            switch event {\n            case .prUpdated(let pr):      self?.updateCurrentBranchPR(pr)\n            case .checksUpdated(let cks): self?.updateChecks(cks)\n            case .commentsUpdated(let cs): self?.updateComments(cs)\n            }\n        }\n    }\n}\n\n```\n\n\n\n\n### 2.2 Vibe Kanban 审查流程 (参考)\n\n\n",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "chunk_index": 2
+    },
+    {
+      "chunk_id": "chunk-003-2eab6a9cc34e3f98",
+      "chunk_text": "审查机制描述: 强调人工在每个环节的审查介入，工作流为:\n\n\n```\n规划 (Issue) → 执行 (Workspace) → 审查 (Diff) → 合并 (PR)\n\n```\n\n\n\n\n关键设计: Git Worktree 隔离后，Agent 产出的代码通过 Diff 对比后，人类在合并前可审查并内联评论。\n\n\n\n---",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "chunk_index": 3
+    },
+    {
+      "chunk_id": "chunk-004-215541988b7cb236",
+      "chunk_text": "## 3. 推荐方案: Repo4 GitHub Diff (主) + Vibe Kanban Review 流程 (参考)\n\n\n\n### 3.1 AgentHub Diff 视图体系\n\n\n\n```\nDiff 视图系统\n│\n├── Diff 渲染引擎 (采纳 Repo4)\n│   ├── GitHubDiffRenderAdapter — 统一 diff → 旧/新缓冲区\n│   ├── 行级变化定位 (oldLine/newLine)\n│   ├── 文件列表 (GitHubPRFile[])\n│   └── 完整 diff 文本渲染\n│\n├── PR 审查流程 (采纳 Repo4)\n│   ├── PR 列表 (过滤: open/draft/merged/closed)\n│   ├── PR 详情 (变更文件/完整 diff/审查评论)\n│   ├── 审查评论 CRUD (行级/全局)\n│   ├── CI 检查展示 (GitHubCheckRun)\n│   └── PR CRUD (create/update/merge)\n│\n├── Review 工作流 (采纳 Vibe Kanban)\n│   ├── Issue → Agent Worktree → Diff 生成 → 审查 → 合并\n│   ├── 内联评论系统 (diff 行级评论)\n│   └── 审批门禁 (approve/request-changes)\n│\n└── 自动观察 (采纳 Repo4)\n    ├── 当前分支 PR 自动轮询\n    ├── CI 状态变化推送\n    └── 审查评论实时更新\n\n```\n\n\n\n### 3.2 关键设计决策\n\n\n\n| 特性 | Repo4 | AgentHub 选型 ||------|-------|--------------|| Diff 渲染 | GitHubDiffRenderAdapter | ✅ 采纳 — 统一 diff → 行级缓冲区 || PR 列表 | gh CLI list | ✅ 采纳 — 4 种过滤状态 || PR 详情 | gh CLI view | ✅ 采纳 — 文件列表/diff/评论 || 审查评论 | 行级评论 | ✅ 采纳 || CI 检查 | gh CLI checks | ✅ 采纳 || PR 观察 | Swift async 序列 | ✅ 采纳 — WS 实时推送模式 || 工作流 | — | ✅ 采用 Vibe Kanban Review 流程 |\n\n\n\n### 3.3 在 AgentHub 协作流程中的位置\n\n\n\n```\nAgent 在 Worktree 中完成任务\n    │\n    ▼\nAgent: git commit + git push\n    │\n    ▼\nAgent: gh pr create (Agent 自己创建 PR)\n    │\n    ▼\nAgentHub: 自动识别新 PR → Board Issue 状态: in_review\n    │\n    ▼\n人类/Review Agent: 在 Diff 视图中审查\n    │\n    ├── 行级评论 → Agent 收到通知 → 在 worktree 修改\n    │   └── 循环直到通过审查\n    │\n    ├── Approve → Agent 合并 PR\n    │   └── Board Issue 状态: done\n    │\n    └── Request Changes → Agent 收到通知 → 修改\n        └── 重新提交审查\n\n```",
+      "doc_path": "test_files/docs/diff/DIFF_VIEW_DESIGN.md",
+      "chunk_index": 4
+    }
+  ],
+  "stats": {
+    "total_chunks": 5,
+    "total_triples": 81,
+    "unique_schemas": 27,
+    "schema_distribution": {
+      "('CONCEPT', 'based_on', 'SYSTEM')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('SYSTEM', 'related_to', 'CONCEPT')": 2,
+      "('ORG', 'implements', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'implemented_in', 'TECHNOLOGY')": 4,
+      "('TECHNOLOGY', 'located_in', 'SYSTEM')": 5,
+      "('SYSTEM', 'based_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'uses', 'CONCEPT')": 21,
+      "('SYSTEM', 'produces', 'CONCEPT')": 2,
+      "('SYSTEM', 'responsible_for', 'CONCEPT')": 3,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 3,
+      "('SYSTEM', 'adopts', 'SYSTEM')": 5,
+      "('SYSTEM', 'compared_with', 'SYSTEM')": 2,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'consists_of', 'CONCEPT')": 4,
+      "('TECHNOLOGY', 'used_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'reviewed_via', 'CONCEPT')": 1,
+      "('PERSON', 'performs', 'CONCEPT')": 2,
+      "('CONCEPT', 'occurs_before', 'CONCEPT')": 1,
+      "('SYSTEM', 'adopts', 'TECHNOLOGY')": 1,
+      "('SYSTEM', 'adopts', 'CONCEPT')": 1,
+      "('SYSTEM', 'based_on', 'SYSTEM')": 3,
+      "('TECHNOLOGY', 'uses', 'CONCEPT')": 4,
+      "('SYSTEM', 'uses', 'SYSTEM')": 1,
+      "('SYSTEM', 'composed_of', 'SYSTEM')": 4,
+      "('SYSTEM', 'rejects', 'CONCEPT')": 1,
+      "('SYSTEM', 'compared_with', 'CONCEPT')": 1
+    },
+    "schema_layer_size": 27,
+    "fact_layer_size": 81,
+    "passage_layer_size": 5
+  }
+}

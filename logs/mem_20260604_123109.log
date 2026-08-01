@@ -1,0 +1,424 @@
+2026-06-04 12:31:09 - __main__ - INFO - File logging to /Users/halllo/projects/local/feishu-mem/logs/mem_20260604_123109.log
+2026-06-04 12:31:09 - src.eval_runner - INFO - MemoryGraph loaded: 0 decisions
+2026-06-04 12:31:09 - src.core.engine - INFO - Initializing MemoryEngine...
+2026-06-04 12:31:09 - src.core.engine - INFO - GitStorage initialized at mem-data
+2026-06-04 12:31:09 - src.core.engine - INFO - Loaded 0 decisions, 0 topics
+2026-06-04 12:31:09 - src.core.engine - INFO - No existing hypergraph found, starting fresh
+2026-06-04 12:31:09 - src.view.tenant_token - INFO - [TenantToken] Refreshed token, expires in 6770s
+2026-06-04 12:31:09 - src.core.engine - INFO - [TaskView] TaskViewSyncer initialized
+2026-06-04 12:31:09 - src.core.engine - INFO - SleepManager initialized (auto-sleep ENABLED, interval=3600s)
+2026-06-04 12:31:09 - src.core.engine - INFO - MemoryEngine initialized
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] Init: url=http://127.0.0.1:8000/v1/embeddings model=Qwen3-Embedding-4B timeout=120 retries=5
+2026-06-04 12:31:09 - src.model.reranker_provider - INFO - [Reranker] Init: url=http://127.0.0.1:8001 model=Qwen3-Reranker-4B timeout=120 retries=10
+2026-06-04 12:31:09 - src.core.engine - INFO - Embedding provider set for similarity search
+2026-06-04 12:31:09 - src.core.engine - INFO - Reranker provider set for similarity search
+2026-06-04 12:31:09 - src.detect.suspend_pool - INFO - [SuspendPool] Loaded 20 episode(s) from data/suspend_pool.json
+2026-06-04 12:31:09 - src.detect.episode - INFO - [EpisodeManager] Created buffer for chat=eval
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=161 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=161 preview={"chat_id": "chat_0", "msg_id": "m001", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_09695e208 started with msg=eval_1
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=183 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=183 preview={"chat_id": "chat_0", "msg_id": "m002", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=195 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=195 preview={"chat_id": "chat_0", "msg_id": "m003", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=166 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=166 preview={"chat_id": "chat_0", "msg_id": "m004", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=191 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=191 preview={"chat_id": "chat_0", "msg_id": "m005", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=171 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=171 preview={"chat_id": "chat_0", "msg_id": "m006", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=315 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=315 preview={"chat_id": "chat_0", "msg_id": "m007", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=168 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=168 preview={"chat_id": "chat_0", "msg_id": "m008", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=199 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=199 preview={"chat_id": "chat_0", "msg_id": "m009", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=178 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=178 preview={"chat_id": "chat_0", "msg_id": "m010", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=183 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=183 preview={"chat_id": "chat_0", "msg_id": "m011", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=176 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=176 preview={"chat_id": "chat_0", "msg_id": "m012", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.19s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=161 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=161 preview={"chat_id": "chat_0", "msg_id": "m013", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=337 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=337 preview={"chat_id": "chat_0", "msg_id": "m014", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m015", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=174 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=174 preview={"chat_id": "chat_0", "msg_id": "m016", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=194 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=194 preview={"chat_id": "chat_0", "msg_id": "m017", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=192 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=192 preview={"chat_id": "chat_0", "msg_id": "m018", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=164 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=164 preview={"chat_id": "chat_0", "msg_id": "m019", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=200 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=200 preview={"chat_id": "chat_0", "msg_id": "m020", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=163 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=163 preview={"chat_id": "chat_0", "msg_id": "m021", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=315 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=315 preview={"chat_id": "chat_0", "msg_id": "m022", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=166 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=166 preview={"chat_id": "chat_0", "msg_id": "m023", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=214 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=214 preview={"chat_id": "chat_0", "msg_id": "m024", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=180 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=180 preview={"chat_id": "chat_0", "msg_id": "m025", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=162 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=162 preview={"chat_id": "chat_0", "msg_id": "m026", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=204 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=204 preview={"chat_id": "chat_0", "msg_id": "m027", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m028", "speaker": "Carol", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=310 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=310 preview={"chat_id": "chat_0", "msg_id": "m029", "speaker": "Alice", 
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=160 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=160 preview={"chat_id": "chat_0", "msg_id": "m030", "speaker": "Bob", "m
+2026-06-04 12:31:09 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=162 model=Qwen3-Embedding-4B
+2026-06-04 12:31:09 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=162 preview={"chat_id": "chat_0", "msg_id": "m031", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=187 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=187 preview={"chat_id": "chat_0", "msg_id": "m032", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=193 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=193 preview={"chat_id": "chat_0", "msg_id": "m033", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=161 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=161 preview={"chat_id": "chat_0", "msg_id": "m034", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=169 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=169 preview={"chat_id": "chat_0", "msg_id": "m035", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=167 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=167 preview={"chat_id": "chat_0", "msg_id": "m036", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=297 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=297 preview={"chat_id": "chat_0", "msg_id": "m037", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m038", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=190 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=190 preview={"chat_id": "chat_0", "msg_id": "m039", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=177 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=177 preview={"chat_id": "chat_0", "msg_id": "m040", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m041", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=172 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=172 preview={"chat_id": "chat_0", "msg_id": "m042", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=302 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=302 preview={"chat_id": "chat_0", "msg_id": "m043", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m044", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=164 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=164 preview={"chat_id": "chat_0", "msg_id": "m045", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=189 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=189 preview={"chat_id": "chat_0", "msg_id": "m046", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=181 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=181 preview={"chat_id": "chat_0", "msg_id": "m047", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=161 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=161 preview={"chat_id": "chat_0", "msg_id": "m048", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=168 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=168 preview={"chat_id": "chat_0", "msg_id": "m049", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=155 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=155 preview={"chat_id": "chat_0", "msg_id": "m050", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.detect.episode - INFO - [Episode] chat=eval MAX-MSG boundary: 50 >= 50, suspending episode=ep_09695e208
+2026-06-04 12:31:10 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_09695e208 (chat=eval, msgs=50, pool=21/20)
+2026-06-04 12:31:10 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_a77f7e31a (chat=eval, suspended_at=09:38:58)
+2026-06-04 12:31:10 - src.detect.episode - INFO - [Episode] chat=eval new episode=ep_620a6d7ce started after max-msg suspend
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=303 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=303 preview={"chat_id": "chat_0", "msg_id": "m051", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=168 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=168 preview={"chat_id": "chat_0", "msg_id": "m052", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=187 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=187 preview={"chat_id": "chat_0", "msg_id": "m053", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=184 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=184 preview={"chat_id": "chat_0", "msg_id": "m054", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=173 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=173 preview={"chat_id": "chat_0", "msg_id": "m055", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=180 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=180 preview={"chat_id": "chat_0", "msg_id": "m056", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=331 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=331 preview={"chat_id": "chat_0", "msg_id": "m057", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=170 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=170 preview={"chat_id": "chat_0", "msg_id": "m058", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=195 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=195 preview={"chat_id": "chat_0", "msg_id": "m059", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.09s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=179 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=179 preview={"chat_id": "chat_0", "msg_id": "m060", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=162 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=162 preview={"chat_id": "chat_0", "msg_id": "m061", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=161 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=161 preview={"chat_id": "chat_0", "msg_id": "m062", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=313 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=313 preview={"chat_id": "chat_0", "msg_id": "m063", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m064", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=166 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=166 preview={"chat_id": "chat_0", "msg_id": "m065", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=190 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=190 preview={"chat_id": "chat_0", "msg_id": "m066", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=173 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=173 preview={"chat_id": "chat_0", "msg_id": "m067", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=173 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=173 preview={"chat_id": "chat_0", "msg_id": "m068", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=172 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=172 preview={"chat_id": "chat_0", "msg_id": "m069", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=310 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=310 preview={"chat_id": "chat_0", "msg_id": "m070", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=161 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=161 preview={"chat_id": "chat_0", "msg_id": "m071", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=195 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=195 preview={"chat_id": "chat_0", "msg_id": "m072", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=184 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=184 preview={"chat_id": "chat_0", "msg_id": "m073", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=166 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=166 preview={"chat_id": "chat_0", "msg_id": "m074", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=187 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=187 preview={"chat_id": "chat_0", "msg_id": "m075", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=175 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=175 preview={"chat_id": "chat_0", "msg_id": "m076", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=300 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=300 preview={"chat_id": "chat_0", "msg_id": "m077", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=162 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=162 preview={"chat_id": "chat_0", "msg_id": "m078", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=195 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=195 preview={"chat_id": "chat_0", "msg_id": "m079", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=176 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=176 preview={"chat_id": "chat_0", "msg_id": "m080", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=158 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=158 preview={"chat_id": "chat_0", "msg_id": "m081", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=173 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=173 preview={"chat_id": "chat_0", "msg_id": "m082", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=160 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=160 preview={"chat_id": "chat_0", "msg_id": "m083", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=157 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=157 preview={"chat_id": "chat_0", "msg_id": "m084", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=165 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=165 preview={"chat_id": "chat_0", "msg_id": "m085", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=189 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=189 preview={"chat_id": "chat_0", "msg_id": "m086", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=183 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=183 preview={"chat_id": "chat_0", "msg_id": "m087", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=159 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=159 preview={"chat_id": "chat_0", "msg_id": "m088", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=185 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=185 preview={"chat_id": "chat_0", "msg_id": "m089", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=163 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=163 preview={"chat_id": "chat_0", "msg_id": "m090", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=315 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=315 preview={"chat_id": "chat_0", "msg_id": "m091", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=168 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=168 preview={"chat_id": "chat_0", "msg_id": "m092", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=201 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=201 preview={"chat_id": "chat_0", "msg_id": "m093", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=185 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=185 preview={"chat_id": "chat_0", "msg_id": "m094", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=158 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=158 preview={"chat_id": "chat_0", "msg_id": "m095", "speaker": "Alice", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=180 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=180 preview={"chat_id": "chat_0", "msg_id": "m096", "speaker": "Bob", "m
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=329 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=329 preview={"chat_id": "chat_0", "msg_id": "m097", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=160 model=Qwen3-Embedding-4B
+2026-06-04 12:31:10 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=160 preview={"chat_id": "chat_0", "msg_id": "m098", "speaker": "Carol", 
+2026-06-04 12:31:10 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:12 - src.detect.suspend_pool - INFO - [SuspendPool] Suspended episode=ep_620a6d7ce (chat=eval, msgs=48, pool=21/20)
+2026-06-04 12:31:12 - src.detect.suspend_pool - INFO - [SuspendPool] Evicted episode=ep_2e3b9f8ef (chat=eval, suspended_at=09:39:16)
+2026-06-04 12:31:12 - src.detect.suspend_pool - INFO - [SuspendPool] Saved 20 episode(s) to data/suspend_pool.json
+2026-06-04 12:31:12 - src.eval_runner - INFO - [Eval] Processing closed episode=ep_620a6d7ce (msgs=48)
+2026-06-04 12:31:12 - src.core.engine - INFO - [Engine] >>> _process_episode id=ep_620a6d7ce chat=eval msgs=48 len=9383
+2026-06-04 12:31:12 - src.core.engine - INFO - [LLM] >>> _extract_decision source=im len=9383 content={"chat_id": "chat_0", "msg_id": "m051", "speaker": "Alice", 
+2026-06-04 12:31:12 - src.core.engine - INFO - [LLM] Calling extractor.extract_decision (len=9383)
+2026-06-04 12:31:17 - src.core.engine - INFO - [LLM] <<< Extract result type=list time=5.00s
+2026-06-04 12:31:17 - src.core.engine - INFO - [LLM] Extracted 7 decisions
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=7ba363931c21 title=K8s版本升级策略 source=im
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='K8s版本升级策略', existing_count=0
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=7ba363931c21 v1
+2026-06-04 12:31:17 - src.core.engine - INFO - Created decision: 7ba363931c21 v1 — K8s版本升级策略
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] CREATE applied: sid=7ba363931c21 v1
+2026-06-04 12:31:17 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=7ba363931c21
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=7ba363931c21
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=0d28eb201e6c title=Docker镜像体积优化 source=im
+2026-06-04 12:31:17 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=46 model=Qwen3-Embedding-4B
+2026-06-04 12:31:17 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=46 preview=采用多阶段构建，基础镜像使用ubuntu slim，由Carol编写Dockerfile试点
+2026-06-04 12:31:17 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.02s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:17 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Docker镜像体积优化', existing_count=1
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.026), existing_summary='K8s版本升级策略'
+2026-06-04 12:31:17 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=0d28eb201e6c v1
+2026-06-04 12:31:18 - src.core.engine - INFO - Created decision: 0d28eb201e6c v1 — Docker镜像体积优化
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=0d28eb201e6c v1
+2026-06-04 12:31:18 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=0d28eb201e6c
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=0d28eb201e6c
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=2f7d5427d1a8 title=告警阈值调多少 source=im
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=36 model=Qwen3-Embedding-4B
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=36 preview=先采用固定阈值（CPU 80%，内存 70%），收集数据后优化为动态方案
+2026-06-04 12:31:18 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:18 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='告警阈值调多少', existing_count=2
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.015), existing_summary='K8s版本升级策略'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.026), existing_summary='Docker镜像体积优化'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=2f7d5427d1a8 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - Created decision: 2f7d5427d1a8 v1 — 告警阈值调多少
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=2f7d5427d1a8 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=2f7d5427d1a8
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=2f7d5427d1a8
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=681765614aaf title=Grafana大盘重构 source=im
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=32 model=Qwen3-Embedding-4B
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=32 preview=采用UI编辑后导出JSON的方式重构大盘，核心面板用JSON维护
+2026-06-04 12:31:18 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.05s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:18 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Grafana大盘重构', existing_count=3
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='K8s版本升级策略'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.028), existing_summary='Docker镜像体积优化'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.016), existing_summary='告警阈值调多少'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=681765614aaf v1
+2026-06-04 12:31:18 - src.core.engine - INFO - Created decision: 681765614aaf v1 — Grafana大盘重构
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=681765614aaf v1
+2026-06-04 12:31:18 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=681765614aaf
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=681765614aaf
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=c36c474d3674 title=日志采样率 source=im
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=ERROR和WARN全量采集，INFO采样10%，保留最近7天全量日志
+2026-06-04 12:31:18 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:18 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='日志采样率', existing_count=4
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='K8s版本升级策略'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.040), existing_summary='Docker镜像体积优化'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.031), existing_summary='告警阈值调多少'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='Grafana大盘重构'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=c36c474d3674 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - Created decision: c36c474d3674 v1 — 日志采样率
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=c36c474d3674 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=c36c474d3674
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=c36c474d3674
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=447a7061e743 title=RabbitMQ死信队列 source=im
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=35 model=Qwen3-Embedding-4B
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=35 preview=核心业务重试5次并单独配置，非核心重试3次，设置死信队列告警和转存机制
+2026-06-04 12:31:18 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.03s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:18 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='RabbitMQ死信队列', existing_count=5
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='K8s版本升级策略'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='Docker镜像体积优化'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='告警阈值调多少'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.050(dice_ft=0.017), existing_summary='Grafana大盘重构'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='日志采样率'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=447a7061e743 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - Created decision: 447a7061e743 v1 — RabbitMQ死信队列
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=447a7061e743 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=447a7061e743
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=447a7061e743
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] >>> _apply_decision_mutations sid=8d93593d03e1 title=Pulsar Topic管理 source=im
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding] >>> Request: texts=1 chars=40 model=Qwen3-Embedding-4B
+2026-06-04 12:31:18 - src.model.embedding_provider - INFO - [Embedding]     text[1/1] len=40 preview=每个业务线一个租户，namespace按环境划分，跨业务数据使用shared租户
+2026-06-04 12:31:18 - src.model.embedding_provider - ERROR - [Embedding] Request failed after 0.01s: 401 Client Error: Unauthorized for url: http://127.0.0.1:8000/v1/embeddings
+2026-06-04 12:31:18 - src.core.engine - WARNING - [Similar] Embedding search failed, fallback to bigram: 401 Client Error: Unauthorized for url: http://127.0.0.1:800
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter scan: new_topic=general new_summary='Pulsar Topic管理', existing_count=6
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.029), existing_summary='K8s版本升级策略'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.025), existing_summary='Docker镜像体积优化'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.014), existing_summary='告警阈值调多少'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.000), existing_summary='Grafana大盘重构'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.014), existing_summary='日志采样率'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Prefilter skip: topic=general vs general, dice=0.000(dice_ft=0.015), existing_summary='RabbitMQ死信队列'
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] Confirmed new decision: sid=8d93593d03e1 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - Created decision: 8d93593d03e1 v1 — Pulsar Topic管理
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] CREATE applied: sid=8d93593d03e1 v1
+2026-06-04 12:31:18 - src.core.engine - INFO - [TaskView] Sync triggered for CREATE: sid=8d93593d03e1
+2026-06-04 12:31:18 - src.core.engine - INFO - [Mutation] No conflicts detected for sid=8d93593d03e1
+2026-06-04 12:31:18 - src.core.engine - INFO - [Engine] Hypergraph updated: stats={'decisions': 0, 'decision_hyperedges': 0, 'facts': 0, 'fact_hyperedges': 0, 'episodes': 1, 'episode_hyperedges': 1, 'topics': 1}
+2026-06-04 12:31:18 - src.core.engine - INFO - [Engine] <<< _process_episode done time=5.99s
+2026-06-04 12:31:18 - src.card.pusher - INFO - Push scheduler stopped
+2026-06-04 12:31:18 - src.core.engine - INFO - Hypergraph saved on stop
+2026-06-04 12:31:19 - src.core.engine - INFO - Synced 7 dirty decisions to storage
+2026-06-04 12:31:19 - src.core.engine - INFO - MemoryEngine stopped (applied=7, failed=0)

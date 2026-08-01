@@ -1,0 +1,877 @@
+{
+  "triples": [
+    {
+      "head": "Handoff机制",
+      "relation": "is_core_design_pattern_for",
+      "tail": "多Agent协作",
+      "schema": [
+        "CONCEPT",
+        "is_core_design_pattern_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2d2c78"
+    },
+    {
+      "head": "Handoff机制",
+      "relation": "implemented_in",
+      "tail": "AutoGen",
+      "schema": [
+        "CONCEPT",
+        "implemented_in",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-000-2d2c78"
+    },
+    {
+      "head": "Handoff机制",
+      "relation": "allows",
+      "tail": "动态任务委托",
+      "schema": [
+        "CONCEPT",
+        "allows",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2d2c78"
+    },
+    {
+      "head": "动态任务委托",
+      "relation": "enables",
+      "tail": "Agent间协作",
+      "schema": [
+        "CONCEPT",
+        "enables",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-000-2d2c78"
+    },
+    {
+      "head": "Handoff",
+      "relation": "introduced_by",
+      "tail": "Swarm",
+      "schema": [
+        "CONCEPT",
+        "introduced_by",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "Handoff",
+      "relation": "introduced_by",
+      "tail": "OpenAI",
+      "schema": [
+        "CONCEPT",
+        "introduced_by",
+        "ORG"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "Handoff",
+      "relation": "is_a",
+      "tail": "multi_agent_design_pattern",
+      "schema": [
+        "CONCEPT",
+        "is_a",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "Handoff",
+      "relation": "uses",
+      "tail": "tool_call",
+      "schema": [
+        "CONCEPT",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "Handoff",
+      "relation": "delegates_to",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "delegates_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "is_a",
+      "tail": "message_type",
+      "schema": [
+        "CONCEPT",
+        "is_a",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "used_for",
+      "tail": "handoff_signaling",
+      "schema": [
+        "CONCEPT",
+        "used_for",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "has_field",
+      "tail": "target",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "has_field",
+      "tail": "content",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "has_field",
+      "tail": "source",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "has_field",
+      "tail": "context",
+      "schema": [
+        "CONCEPT",
+        "has_field",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "target",
+      "relation": "refers_to",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "refers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "source",
+      "relation": "refers_to",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "refers_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-001-62ba7c"
+    },
+    {
+      "head": "Handoff类",
+      "relation": "has_property",
+      "tail": "target",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "Handoff类",
+      "relation": "has_property",
+      "tail": "description",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "Handoff类",
+      "relation": "has_property",
+      "tail": "name",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "Handoff类",
+      "relation": "has_property",
+      "tail": "message",
+      "schema": [
+        "CONCEPT",
+        "has_property",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "Handoff配置",
+      "relation": "can_be_converted_to",
+      "tail": "工具函数",
+      "schema": [
+        "CONCEPT",
+        "can_be_converted_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "工具函数",
+      "relation": "used_by",
+      "tail": "Agent",
+      "schema": [
+        "CONCEPT",
+        "used_by",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "handoff_tool",
+      "relation": "is_property_of",
+      "tail": "Handoff类",
+      "schema": [
+        "CONCEPT",
+        "is_property_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "handoff_tool",
+      "relation": "returns",
+      "tail": "FunctionTool",
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "FunctionTool",
+      "relation": "takes_parameter",
+      "tail": "_handoff_tool",
+      "schema": [
+        "TECHNOLOGY",
+        "takes_parameter",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "_handoff_tool",
+      "relation": "returns",
+      "tail": "message",
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-002-5e8d02"
+    },
+    {
+      "head": "AssistantAgent",
+      "relation": "configures",
+      "tail": "handoffs",
+      "schema": [
+        "SYSTEM",
+        "configures",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "AssistantAgent",
+      "relation": "uses",
+      "tail": "handoffs",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "handoffs",
+      "relation": "targets",
+      "tail": "flights_refunder",
+      "schema": [
+        "CONCEPT",
+        "targets",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "handoffs",
+      "relation": "targets",
+      "tail": "user",
+      "schema": [
+        "CONCEPT",
+        "targets",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "AssistantAgent",
+      "relation": "implements",
+      "tail": "_check_and_handle_handoff",
+      "schema": [
+        "SYSTEM",
+        "implements",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_check_and_handle_handoff",
+      "relation": "detects",
+      "tail": "handoff_request",
+      "schema": [
+        "CONCEPT",
+        "detects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_check_and_handle_handoff",
+      "relation": "processes",
+      "tail": "handoff_request",
+      "schema": [
+        "CONCEPT",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "handoff_request",
+      "relation": "contains",
+      "tail": "function_call",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "function_call",
+      "relation": "includes",
+      "tail": "handoff_tool",
+      "schema": [
+        "CONCEPT",
+        "includes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_check_and_handle_handoff",
+      "relation": "collects",
+      "tail": "tool_calls",
+      "schema": [
+        "CONCEPT",
+        "collects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_check_and_handle_handoff",
+      "relation": "collects",
+      "tail": "execution_results",
+      "schema": [
+        "CONCEPT",
+        "collects",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_check_and_handle_handoff",
+      "relation": "builds",
+      "tail": "handoff_context",
+      "schema": [
+        "CONCEPT",
+        "builds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "handoff_context",
+      "relation": "contains",
+      "tail": "tool_calls",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "handoff_context",
+      "relation": "contains",
+      "tail": "execution_results",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_check_and_handle_handoff",
+      "relation": "returns",
+      "tail": "HandoffMessage",
+      "schema": [
+        "CONCEPT",
+        "returns",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "Agent",
+      "relation": "receives",
+      "tail": "HandoffMessage",
+      "schema": [
+        "SYSTEM",
+        "receives",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "Agent",
+      "relation": "adds",
+      "tail": "context_information",
+      "schema": [
+        "SYSTEM",
+        "adds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "context_information",
+      "relation": "added_to",
+      "tail": "model_context",
+      "schema": [
+        "CONCEPT",
+        "added_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "model_context",
+      "relation": "type_of",
+      "tail": "ChatCompletionContext",
+      "schema": [
+        "CONCEPT",
+        "type_of",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_add_messages_to_context",
+      "relation": "processes",
+      "tail": "HandoffMessage",
+      "schema": [
+        "CONCEPT",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_add_messages_to_context",
+      "relation": "iterates",
+      "tail": "context",
+      "schema": [
+        "CONCEPT",
+        "iterates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "HandoffMessage",
+      "relation": "has",
+      "tail": "context",
+      "schema": [
+        "CONCEPT",
+        "has",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "context",
+      "relation": "contains",
+      "tail": "llm_msg",
+      "schema": [
+        "CONCEPT",
+        "contains",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_add_messages_to_context",
+      "relation": "adds",
+      "tail": "llm_msg",
+      "schema": [
+        "CONCEPT",
+        "adds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "_add_messages_to_context",
+      "relation": "adds",
+      "tail": "msg",
+      "schema": [
+        "CONCEPT",
+        "adds",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "msg",
+      "relation": "converted_to",
+      "tail": "to_model_message",
+      "schema": [
+        "CONCEPT",
+        "converted_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-003-f84502"
+    },
+    {
+      "head": "Swarm团队",
+      "relation": "uses",
+      "tail": "HandoffMessage",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Swarm团队",
+      "relation": "uses",
+      "tail": "HandoffTermination",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Swarm团队",
+      "relation": "uses",
+      "tail": "TextMentionTermination",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Speaker选择",
+      "relation": "based_on",
+      "tail": "HandoffMessage",
+      "schema": [
+        "CONCEPT",
+        "based_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Speaker选择",
+      "relation": "compared_with",
+      "tail": "SelectorGroupChat",
+      "schema": [
+        "CONCEPT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Speaker选择",
+      "relation": "compared_with",
+      "tail": "RoundRobinGroupChat",
+      "schema": [
+        "CONCEPT",
+        "compared_with",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "HandoffTermination",
+      "relation": "depends_on",
+      "tail": "HandoffMessage",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Swarm团队",
+      "relation": "depends_on",
+      "tail": "HandoffTermination",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "Swarm团队",
+      "relation": "depends_on",
+      "tail": "TextMentionTermination",
+      "schema": [
+        "SYSTEM",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-004-34b3aa"
+    },
+    {
+      "head": "travel_agent",
+      "relation": "handoffs_to",
+      "tail": "flights_refunder",
+      "schema": [
+        "SYSTEM",
+        "handoffs_to",
+        "SYSTEM"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "travel_agent",
+      "relation": "handoffs_to",
+      "tail": "user",
+      "schema": [
+        "SYSTEM",
+        "handoffs_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "travel_agent",
+      "relation": "uses",
+      "tail": "AssistantAgent",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "travel_agent",
+      "relation": "uses",
+      "tail": "model_client",
+      "schema": [
+        "SYSTEM",
+        "uses",
+        "TECHNOLOGY"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "travel_agent",
+      "relation": "generates",
+      "tail": "HandoffMessage",
+      "schema": [
+        "SYSTEM",
+        "generates",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "flights_refunder",
+      "relation": "takes_over",
+      "tail": "task",
+      "schema": [
+        "SYSTEM",
+        "takes_over",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "flights_refunder",
+      "relation": "shares",
+      "tail": "message_context",
+      "schema": [
+        "SYSTEM",
+        "shares",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "flights_refunder",
+      "relation": "processes",
+      "tail": "refund_request",
+      "schema": [
+        "SYSTEM",
+        "processes",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-005-0834d2"
+    },
+    {
+      "head": "handoff功能",
+      "relation": "depends_on",
+      "tail": "工具调用",
+      "schema": [
+        "CONCEPT",
+        "depends_on",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd"
+    },
+    {
+      "head": "handoff功能",
+      "relation": "related_to",
+      "tail": "并行工具调用",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd"
+    },
+    {
+      "head": "handoff功能",
+      "relation": "related_to",
+      "tail": "Handoff名称唯一性",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd"
+    },
+    {
+      "head": "Handoff名称",
+      "relation": "related_to",
+      "tail": "工具名称",
+      "schema": [
+        "CONCEPT",
+        "related_to",
+        "CONCEPT"
+      ],
+      "chunk_id": "chunk-006-3663fd"
+    }
+  ],
+  "stats": {
+    "total_chunks": 7,
+    "total_triples": 74,
+    "unique_schemas": 49,
+    "schema_distribution": {
+      "('CONCEPT', 'is_core_design_pattern_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'implemented_in', 'TECHNOLOGY')": 1,
+      "('CONCEPT', 'allows', 'CONCEPT')": 1,
+      "('CONCEPT', 'enables', 'CONCEPT')": 1,
+      "('CONCEPT', 'introduced_by', 'SYSTEM')": 1,
+      "('CONCEPT', 'introduced_by', 'ORG')": 1,
+      "('CONCEPT', 'is_a', 'CONCEPT')": 2,
+      "('CONCEPT', 'uses', 'CONCEPT')": 1,
+      "('CONCEPT', 'delegates_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_for', 'CONCEPT')": 1,
+      "('CONCEPT', 'has_field', 'CONCEPT')": 4,
+      "('CONCEPT', 'refers_to', 'CONCEPT')": 2,
+      "('CONCEPT', 'has_property', 'CONCEPT')": 4,
+      "('CONCEPT', 'can_be_converted_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'used_by', 'CONCEPT')": 1,
+      "('CONCEPT', 'is_property_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'TECHNOLOGY')": 1,
+      "('TECHNOLOGY', 'takes_parameter', 'CONCEPT')": 1,
+      "('CONCEPT', 'returns', 'CONCEPT')": 2,
+      "('SYSTEM', 'configures', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'CONCEPT')": 4,
+      "('CONCEPT', 'targets', 'SYSTEM')": 2,
+      "('SYSTEM', 'implements', 'CONCEPT')": 1,
+      "('CONCEPT', 'detects', 'CONCEPT')": 1,
+      "('CONCEPT', 'processes', 'CONCEPT')": 2,
+      "('CONCEPT', 'contains', 'CONCEPT')": 4,
+      "('CONCEPT', 'includes', 'CONCEPT')": 1,
+      "('CONCEPT', 'collects', 'CONCEPT')": 2,
+      "('CONCEPT', 'builds', 'CONCEPT')": 1,
+      "('SYSTEM', 'receives', 'CONCEPT')": 1,
+      "('SYSTEM', 'adds', 'CONCEPT')": 1,
+      "('CONCEPT', 'added_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'type_of', 'CONCEPT')": 1,
+      "('CONCEPT', 'iterates', 'CONCEPT')": 1,
+      "('CONCEPT', 'has', 'CONCEPT')": 1,
+      "('CONCEPT', 'adds', 'CONCEPT')": 2,
+      "('CONCEPT', 'converted_to', 'CONCEPT')": 1,
+      "('CONCEPT', 'based_on', 'CONCEPT')": 1,
+      "('CONCEPT', 'compared_with', 'SYSTEM')": 2,
+      "('CONCEPT', 'depends_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'depends_on', 'CONCEPT')": 2,
+      "('SYSTEM', 'handoffs_to', 'SYSTEM')": 1,
+      "('SYSTEM', 'handoffs_to', 'CONCEPT')": 1,
+      "('SYSTEM', 'uses', 'TECHNOLOGY')": 2,
+      "('SYSTEM', 'generates', 'CONCEPT')": 1,
+      "('SYSTEM', 'takes_over', 'CONCEPT')": 1,
+      "('SYSTEM', 'shares', 'CONCEPT')": 1,
+      "('SYSTEM', 'processes', 'CONCEPT')": 1,
+      "('CONCEPT', 'related_to', 'CONCEPT')": 3
+    },
+    "schema_layer_size": 49,
+    "fact_layer_size": 74,
+    "passage_layer_size": 7
+  }
+}
