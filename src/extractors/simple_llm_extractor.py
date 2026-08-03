@@ -36,9 +36,14 @@ class SimpleLLMExtractor:
 
     def __init__(self, llm_provider: Any) -> None:
         self._llm = llm_provider
+        self._trace_id: Optional[str] = None
         self._confidence_threshold = 0.70  # 提高置信度阈值，只保留高置信度决策
-        logger.info("[LLM Extractor] Initialized with provider=%s, confidence_threshold=%.2f", 
+        logger.info("[LLM Extractor] Initialized with provider=%s, confidence_threshold=%.2f",
                     type(llm_provider).__name__, self._confidence_threshold)
+
+    def set_trace_id(self, trace_id: Optional[str]) -> None:
+        """设置当前 trace_id，用于 Langfuse 溯源"""
+        self._trace_id = trace_id
 
     async def extract_decision(self, content: str,
                                  existing_decisions: Optional[List] = None) -> Optional[List[dict]]:
@@ -56,6 +61,7 @@ class SimpleLLMExtractor:
             resp = await self._llm.generate(
                 prompt,
                 response_format={"type": "json_object"},
+                trace_id=self._trace_id,
             )
             logger.info("[LLM Extractor] <<< LLM response len=%d preview=%.200s", len(resp), resp[:200])
 

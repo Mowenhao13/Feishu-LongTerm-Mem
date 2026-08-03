@@ -17,6 +17,7 @@ import asyncio
 import random
 
 from .protocol import LLMProvider, LLMError
+from src.llm.langfuse_config import get_langfuse, should_sample
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -73,7 +74,7 @@ class OpenAIProvider(LLMProvider):
         
 
 
-    async def generate(self, prompt: str, temperature: float | None = None, max_tokens: int | None = None, extra_body: dict | None = None, response_format: dict | None = None) -> str:
+    async def generate(self, prompt: str, temperature: float | None = None, max_tokens: int | None = None, extra_body: dict | None = None, response_format: dict | None = None, trace_id: str | None = None) -> str:
         """
         Generate a response for the given prompt.
 
@@ -81,6 +82,7 @@ class OpenAIProvider(LLMProvider):
             prompt: Input prompt
             temperature: Override temperature for this request
             max_tokens: Override max tokens for this request
+            trace_id: Optional trace ID for Langfuse observability
 
         Returns:
             Generated response text
@@ -88,6 +90,32 @@ class OpenAIProvider(LLMProvider):
         Raises:
             LLMError: If generation fails
         """
+        # Langfuse 手动埋点
+        langfuse = get_langfuse()
+        f_trace = None
+        f_span = None
+        if langfuse and should_sample():
+            f_trace = langfuse.trace(
+                name="llm_generate",
+                input={"prompt": prompt[:200]},
+                metadata={
+                    "model": self.model,
+                    "trace_id": trace_id or "",
+                },
+            )
+            f_span = f_trace.span(name="openai_call")
+
+        try:
+            return await self._do_generate(prompt, temperature, max_tokens, extra_body, response_format)
+        except Exception as e:
+            if f_span:
+                f_span.end(output={"status": "error", "error": str(e)})
+            if f_trace:
+                f_trace.end()
+            raise
+
+    async def _do_generate(self, prompt: str, temperature: float | None = None, max_tokens: int | None = None, extra_body: dict | None = None, response_format: dict | None = None) -> str:
+        """实际执行 LLM API 调用（从 generate 拆分以便 Langfuse 包裹）"""
         # Use time.perf_counter() for more precise time measurement
         start_time = time.perf_counter()
         # Prepare request data

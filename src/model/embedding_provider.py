@@ -16,7 +16,7 @@ logger = get_logger(__name__)
 
 class EmbeddingProvider:
     def __init__(self, base_url: str = None, model_name: str = None, timeout: int = 120, max_retries: int = 5):
-        self.base_url = base_url or os.getenv("EMBEDDING_BASE_URL", "http://0.0.0.0:11000/v1/embeddings")
+        self.base_url = base_url or os.getenv("EMBEDDING_BASE_URL") or "http://127.0.0.1:8000/v1/embeddings"
         self.model_name = model_name or os.getenv("EMBEDDING_MODEL_NAME", "Qwen3-Embedding-4B")
         self.api_key = os.getenv("EMBEDDING_API_KEY", "")
         self.timeout = timeout

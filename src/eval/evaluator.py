@@ -23,6 +23,14 @@ DIMENSION_GUIDE = {
     "impact_level": "\n【重要规则】影响级别判断标准：\n- major（重大变更）：涉及架构/技术栈替换、跨团队影响、核心流程重构，如数据库选型、框架替换\n- minor（常规变更）：在现有框架内调整参数/配置/方案，如更改阈值、锁定参数\n- advisory（建议级别）：仅供参考，非强制性",
     "status": "\n判断提示：\n- decided（已确定）：有人拍板定案，达成共识\n- in_progress（执行中）：明确提到正在做\n- completed（已完成）：明确说做完了\n- pending_confirmation（待确认）：还需要确认",
     "conflict": "\n【重要规则】冲突判断标准：\n- 当某人提出方案并得到确认（\"好\"），然后立即改口用另一个方案，就构成前后矛盾\n- 示例：甲\"用MySQL\"乙\"好\"→甲\"等等还是用PostgreSQL\"乙\"那就PostgreSQL\"→这是矛盾（前面说了MySQL后面推翻）\n- 仅仅讨论不同可能性（\"用A还是B？\"\"B不错\"\"A也行\"）没有确认过决定，不构成矛盾\n- 关键：看是否有\"明确确认后又反悔\"的模式",
+    # WebSearch 评测维度分组（Phase 4+）
+    "websearch_extraction": "\n【WebSearch 提取精度】评估从 websearch 结果中提取决策的准确程度：\n- 能正确提取搜索结果的 key information 作为决策",
+    "websearch_update": "\n【WebSearch 更新正确率】评估新旧信息冲突时更新决策的准确程度：\n- 当新搜索结果显示旧事实已变更时，正确更新已有决策",
+    "websearch_conflict": "\n【WebSearch 冲突检测】评估系统能否感知 websearch 结果与已有记忆的冲突：\n- 当新结果与现有决策矛盾时，应检测到不一致",
+    "websearch_stale": "\n【WebSearch 时效性】评估系统能否在信息过时后拒绝重复采纳：\n- 当过时的搜索结果被再次展示时，不创建新决策",
+    "websearch_cross_session": "\n【WebSearch 跨 Session 召回】评估系统能否在后续 session 中检索之前 session 的记忆：\n- Session 2 的无搜索对话中，应能从记忆检索到 Session 1 的决策",
+    "websearch_merge": "\n【WebSearch 多源合并】评估系统能否合并多个矛盾搜索来源的冲突结果：\n- 对话中讨论了多个冲突来源后，最终决策应反映解决后的方案",
+    "websearch_noise": "\n【WebSearch 噪声过滤】评估系统能否拒绝对无关搜索结果的决策提取：\n- 低相关度的搜索结果不应触发决策创建",
 }
 
 

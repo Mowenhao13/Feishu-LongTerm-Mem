@@ -10,8 +10,8 @@ class LLMProvider:
         else:
             raise ValueError(f"Unsupported provider type: {provider_type}. Supported types: 'openai'")
 
-    async def generate(self, prompt: str, temperature: float | None = None, extra_body: dict | None = None, response_format: dict | None = None) -> str:
-        return await self.provider.generate(prompt, temperature,self.provider.max_tokens, extra_body, response_format)
+    async def generate(self, prompt: str, temperature: float | None = None, extra_body: dict | None = None, response_format: dict | None = None, trace_id: str | None = None) -> str:
+        return await self.provider.generate(prompt, temperature, self.provider.max_tokens, extra_body, response_format, trace_id=trace_id)
 
     def get_accumulated_stats(self) -> Optional[dict]:
         """Get accumulated statistics"""

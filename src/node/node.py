@@ -84,11 +84,22 @@ class DecisionNode(BaseModel):
     # ==================== New fields ====================
     decision_role: str = Field(default=DecisionRole.ROLE_DECISION, description="Role: decision/plan/consideration/action")
     phase_scope: Optional[PhaseScope] = Field(default=PhaseScope.POINT, description="Phase scope of the decision")
-    decided_at: Optional[datetime] = Field(default=None, description="When the decision was decided")
     source_type: str = Field(default="", description="Source channel: im/doc/meeting/manual")
     source_message_id: str = Field(default="", description="Source message ID")
     source_chat_id: str = Field(default="", description="Source chat ID")
     extra: Dict[str, Any] = Field(default_factory=dict, description="Extra custom fields")
+
+    # ==================== Lifecycle timestamps ====================
+    proposed_at: Optional[datetime] = Field(default=None, description="When the decision was first proposed")
+    discussed_at: Optional[datetime] = Field(default=None, description="When the decision entered discussion")
+    decided_at: Optional[datetime] = Field(default=None, description="When the decision was decided")
+    executing_at: Optional[datetime] = Field(default=None, description="When execution started")
+    completed_at: Optional[datetime] = Field(default=None, description="When execution completed")
+    shelved_at: Optional[datetime] = Field(default=None, description="When shelved")
+    rejected_at: Optional[datetime] = Field(default=None, description="When rejected")
+    superseded_at: Optional[datetime] = Field(default=None, description="When superseded by another decision")
+    deprecated_at: Optional[datetime] = Field(default=None, description="When deprecated")
+    pending_confirmation_at: Optional[datetime] = Field(default=None, description="When pending confirmation was set")
 
     # Renamed to avoid shadowing the conflict_status() static method
     conflict_state: str = Field(default="", description="Conflict status: ''|active|resolved")
@@ -221,8 +232,28 @@ class DecisionNode(BaseModel):
     def change_status(self, new_status: DecisionStatus) -> None:
         self.status = new_status
         self.updated_at = datetime.now()
-        if new_status == DecisionStatus.DECIDED:
-            self.decided_at = datetime.now()
+
+        # Auto-set lifecycle timestamp for each status transition
+        if new_status == DecisionStatus.PENDING:
+            self.proposed_at = self.proposed_at or datetime.now()
+        elif new_status == DecisionStatus.PENDING_CONFIRMATION:
+            self.pending_confirmation_at = self.pending_confirmation_at or datetime.now()
+        elif new_status == DecisionStatus.IN_DISCUSSION:
+            self.discussed_at = self.discussed_at or datetime.now()
+        elif new_status == DecisionStatus.DECIDED:
+            self.decided_at = self.decided_at or datetime.now()
+        elif new_status == DecisionStatus.EXECUTING:
+            self.executing_at = self.executing_at or datetime.now()
+        elif new_status == DecisionStatus.COMPLETED:
+            self.completed_at = self.completed_at or datetime.now()
+        elif new_status == DecisionStatus.SHELVED:
+            self.shelved_at = self.shelved_at or datetime.now()
+        elif new_status == DecisionStatus.REJECTED:
+            self.rejected_at = self.rejected_at or datetime.now()
+        elif new_status == DecisionStatus.SUPERSEDED:
+            self.superseded_at = self.superseded_at or datetime.now()
+        elif new_status == DecisionStatus.DEPRECATED:
+            self.deprecated_at = self.deprecated_at or datetime.now()
 
 
 # ==================== Inline decision creation (from node.go) ====================

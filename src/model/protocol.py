@@ -15,7 +15,7 @@ class LLMProvider(Protocol):
     to be compatible with the memory layer's requirements.
     """
 
-    async def generate(self, prompt: str, temperature: float | None = None, extra_body: dict | None = None, response_format: dict | None = None) -> str:
+    async def generate(self, prompt: str, temperature: float | None = None, extra_body: dict | None = None, response_format: dict | None = None, trace_id: str | None = None) -> str:
         """
         Generate a response for the given prompt.
 

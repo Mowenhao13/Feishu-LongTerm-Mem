@@ -1,0 +1,56 @@
+{
+  "dataset": "argusbot_v3",
+  "generated_at": "2026-08-01T15:20:54",
+  "overview": {
+    "total_messages": 12600,
+    "total_decisions": 1510,
+    "total_queries": 816,
+    "modules": 7
+  },
+  "modules": {
+    "1_main_benchmark": {
+      "messages": 2373,
+      "decisions": 132,
+      "queries": 717,
+      "chats": 70,
+      "domains": 7,
+      "generation_method": "LLM (deepseek-local)"
+    },
+    "2_multi_session": {
+      "messages": 240,
+      "decisions": 30,
+      "topics": 10,
+      "sessions_per_topic": 3,
+      "generation_method": "template"
+    },
+    "3_user_partitioning": {
+      "messages": 52,
+      "decisions": 8,
+      "scenarios": 8,
+      "generation_method": "template"
+    },
+    "4_cross_session_conflicts": {
+      "messages": 90,
+      "decisions": 20,
+      "conflict_types": 4,
+      "generation_method": "template"
+    },
+    "5_variable_noise": {
+      "messages": 9845,
+      "decisions": 1320,
+      "noise_ratios": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+      "chats_per_ratio": 55,
+      "generation_method": "template"
+    },
+    "6_temporal_queries": {
+      "queries": 80,
+      "query_types": ["event_anchor", "relative_recency", "absolute_time", "time_range", "before_after_seq"],
+      "generation_method": "template"
+    },
+    "7_ambiguous_queries": {
+      "queries": 19,
+      "query_types": ["ambiguous", "abstention", "cross_context"],
+      "generation_method": "template"
+    }
+  }
+}

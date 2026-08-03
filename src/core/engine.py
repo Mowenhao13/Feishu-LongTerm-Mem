@@ -5,6 +5,7 @@ import hashlib
 import os
 import signal
 import time
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
@@ -19,6 +20,7 @@ from src.node.node import DecisionNode
 from src.node.types import DecisionStatus, ImpactLevel, Objection, Relation, RelationType
 from src.prompts import REALTIME_DEDUP_PROMPT
 from src.storage.git_storage import GitStorage, GitStorageConfig
+from src.llm.langfuse_config import get_langfuse, should_sample
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -42,6 +44,7 @@ class PipelineEngine:
         self._config = config or EngineConfig()
         self._applied_count = 0
         self._failed_count = 0
+        self._mutation_history: List[Dict[str, Any]] = []
 
     # ==================== 入口 ====================
 
@@ -49,7 +52,11 @@ class PipelineEngine:
         """应用单个 Mutation
 
         对应 Go ApplyMutation, 按 mut.mtype 分发。
+        自动设置 mutation timestamp 并记录到历史。
         """
+        if mut.timestamp is None:
+            mut.timestamp = datetime.now()
+
         if not mut.is_valid:
             logger.warning("Invalid mutation: sdr_id=%s, type=%s", mut.sdr_id, mut.mtype)
             self._failed_count += 1
@@ -72,9 +79,15 @@ class PipelineEngine:
                 self._failed_count += 1
                 return False
 
+            # 从 mutation metadata 中提取 trace_id，注入 GitStorage 用于 commit 溯源
+            trace_id = mut.metadata.get("trace_id") if mut.metadata else None
+            if trace_id and self._storage:
+                self._storage.set_trace_id(trace_id)
+
             result = handler(mut)
             if result:
                 self._applied_count += 1
+                self._record_mutation(mut)
             else:
                 self._failed_count += 1
             return result
@@ -83,6 +96,29 @@ class PipelineEngine:
             logger.error("Mutation failed: %s — %s", mut.mtype, e)
             self._failed_count += 1
             return False
+
+    def _record_mutation(self, mut: DecisionMutation) -> None:
+        """记录 mutation 到历史（用于审计追踪）"""
+        self._mutation_history.append({
+            "timestamp": mut.timestamp.isoformat() if mut.timestamp else "",
+            "type": mut.mtype.value,
+            "sid": mut.sdr_id,
+            "topic": mut.topic,
+            "old_status": mut.old_status,
+            "new_status": mut.new_status,
+            "summary": mut.summary or "",
+        })
+
+    def get_mutations_for_decision(self, sid: str) -> List[Dict[str, Any]]:
+        """获取指定决策的所有 mutation 记录，按时间排序"""
+        return [
+            m for m in self._mutation_history
+            if m["sid"] == sid
+        ]
+
+    def get_all_mutation_history(self, limit: int = 100) -> List[Dict[str, Any]]:
+        """获取最近的 mutation 历史"""
+        return list(reversed(self._mutation_history))[:limit]
 
     def batch_apply(self, mutations: List[DecisionMutation]) -> int:
         """批量应用 Mutation，返回成功数"""
@@ -117,6 +153,7 @@ class PipelineEngine:
 
     def _apply_create(self, mut: DecisionMutation) -> bool:
         """CREATE — 新建决策"""
+        status = DecisionStatus(mut.new_status) if mut.new_status else DecisionStatus.PENDING
         node = DecisionNode(
             sid=mut.sdr_id,
             topic_id=mut.topic,
@@ -124,7 +161,7 @@ class PipelineEngine:
             summary=mut.summary,
             full_text=mut.full_text,
             rationale=mut.rationale,
-            status=DecisionStatus(mut.new_status) if mut.new_status else DecisionStatus.PENDING,
+            status=status,
             impact_level=ImpactLevel(mut.new_impact_level) if mut.new_impact_level else ImpactLevel.MINOR,
             version=1,
             branch=f"decision/{mut.sdr_id}",
@@ -138,6 +175,7 @@ class PipelineEngine:
             created_at=datetime.now(),
             updated_at=datetime.now(),
         )
+        node.change_status(status)
 
         errors = self.validate_decision(node)
         if errors:
@@ -203,7 +241,7 @@ class PipelineEngine:
         return True
 
     def _apply_status_change(self, mut: DecisionMutation) -> bool:
-        """STATUS_CHANGE — 变更决策状态"""
+        """STATUS_CHANGE — 变更决策状态（自动记录生命周期时间戳）"""
         existing = self._graph.get_decision(mut.sdr_id)
         if existing is None:
             logger.warning("Status change failed: decision %s not found", mut.sdr_id)
@@ -216,8 +254,7 @@ class PipelineEngine:
             return False
 
         old_status = existing.status
-        existing.status = new_status
-        existing.updated_at = datetime.now()
+        existing.change_status(new_status)
 
         self._graph.upsert_decision(existing, mut.project)
 
@@ -262,7 +299,7 @@ class PipelineEngine:
         ))
 
         self._graph.upsert_decision(merged, mut.project)
-        target.status = DecisionStatus.SUPERSEDED
+        target.change_status(DecisionStatus.SUPERSEDED)
         self._graph.upsert_decision(target, mut.project)
 
         if self._storage:
@@ -350,8 +387,7 @@ class PipelineEngine:
             return False
 
         old_status = existing.status
-        existing.status = DecisionStatus.DEPRECATED
-        existing.updated_at = datetime.now()
+        existing.change_status(DecisionStatus.DEPRECATED)
 
         self._graph.upsert_decision(existing, mut.project)
 
@@ -373,8 +409,7 @@ class PipelineEngine:
             return False
 
         logger.info("Revert: %s to version %s (simplified, marking as pending)", mut.sdr_id, mut.revert_to_version)
-        existing.status = DecisionStatus.PENDING
-        existing.updated_at = datetime.now()
+        existing.change_status(DecisionStatus.PENDING)
 
         self._graph.upsert_decision(existing, mut.project)
 
@@ -415,6 +450,7 @@ class MemoryEngine:
 
         self._hypergraph: Any = None
         self._hg_persistence: Any = None
+        self._hypergraph_embedding: Any = None
         self._hypergraph_modified: bool = False
 
         self._processed_episode_hashes: Set[str] = set()
@@ -500,8 +536,18 @@ class MemoryEngine:
             if self._hg_persistence.exists():
                 self._hypergraph = self._hg_persistence.load()
                 stats = self._hypergraph.get_stats()
-                logger.info("Hypergraph loaded: decisions=%d facts=%d episodes=%d topics=%d",
-                            stats["decisions"], stats["facts"], stats["episodes"], stats["topics"])
+                logger.info("Hypergraph loaded: decisions=%d episodes=%d topics=%d",
+                            stats["decisions"], stats["episodes"], stats["topics"])
+
+                # Load cached embeddings if available
+                try:
+                    self._hypergraph_embedding = self._hg_persistence.load_embeddings()
+                    if self._hypergraph_embedding is not None:
+                        emb_stats = self._hypergraph_embedding.get_stats()
+                        logger.info("Hypergraph embeddings loaded: stats=%s", emb_stats)
+                except Exception as emb_load_err:
+                    logger.debug("Hypergraph embedding cache not found or invalid: %s", str(emb_load_err)[:60])
+                    self._hypergraph_embedding = None
             else:
                 self._hypergraph = Hypergraph()
                 logger.info("No existing hypergraph found, starting fresh")
@@ -608,6 +654,10 @@ class MemoryEngine:
             try:
                 self._hg_persistence.save(self._hypergraph)
                 logger.info("Hypergraph saved on stop")
+
+                # Also persist embeddings if available
+                if self._hypergraph_embedding is not None:
+                    self._hg_persistence.save_embeddings(self._hypergraph_embedding)
             except Exception as e:
                 logger.warning("Hypergraph save on stop failed: %s", e)
 
@@ -661,10 +711,12 @@ class MemoryEngine:
         3. 冲突检测 + 应用 Mutation
         4. 同步到 GitStorage
         """
+        # 生成 trace_id 贯穿整个检测流程
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
         content = getattr(detection_result, "content", "") or str(detection_result)
         source = getattr(detection_result, "source", "im")
         content_preview = content[:80].replace("\n", " ")
-        logger.info("[Engine] >>> _process_detection source=%s content=%.60s", source, content_preview)
+        logger.info("[Engine] >>> _process_detection source=%s content=%.60s trace_id=%s", source, content_preview, trace_id)
 
         proc_start = time.time()
 
@@ -679,11 +731,11 @@ class MemoryEngine:
 
             # Step 2: Extract decision via LLM
             existing_decisions = self._build_existing_decisions_context()
-            node = await self._extract_decision(content, source, existing_decisions=existing_decisions)
+            node = await self._extract_decision(content, source, existing_decisions=existing_decisions, trace_id=trace_id)
 
             # Step 3: Apply mutations
             if node:
-                await self._apply_decision_mutations(node, source)
+                await self._apply_decision_mutations(node, source, trace_id=trace_id)
             else:
                 logger.info("[Engine] No decision extracted from content (%.60s)", content_preview)
 
@@ -712,6 +764,8 @@ class MemoryEngine:
             - episode.messages: EpisodeMessage 列表
             - episode.to_dict(): 序列化方法
         """
+        # 生成 trace_id 贯穿整个 episode 处理流程
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
         content = episode.full_text
         chat_id = episode.chat_id
         episode_id = episode.id
@@ -724,8 +778,8 @@ class MemoryEngine:
             return
         self._processed_episode_hashes.add(content_hash)
 
-        logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d",
-                    episode_id[:12], chat_id[:12], episode.message_count, len(content))
+        logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d trace_id=%s",
+                    episode_id[:12], chat_id[:12], episode.message_count, len(content), trace_id)
 
         if episode.message_count < 2 and len(content) < 100:
             logger.info("[Engine] Episode %s too short (msgs=%d, len=%d), skipping LLM extraction",
@@ -741,11 +795,12 @@ class MemoryEngine:
 
         try:
             nodes = await self._extract_decision(content, "im",
-                                                  existing_decisions=self._build_existing_decisions_context())
+                                                  existing_decisions=self._build_existing_decisions_context(),
+                                                  trace_id=trace_id)
 
             if nodes:
                 for node in nodes:
-                    await self._apply_decision_mutations(node, "im")
+                    await self._apply_decision_mutations(node, "im", trace_id=trace_id)
             else:
                 logger.info("[Engine] No decision extracted from episode %s (len=%d)",
                             episode_id[:12], len(content))
@@ -780,6 +835,21 @@ class MemoryEngine:
                 if self._hg_persistence:
                     self._hg_persistence.save(self._hypergraph)
                     self._hypergraph_modified = True
+
+                # ── Generate embeddings for hypergraph content ──
+                if self._embedder and self._hg_persistence and stats.get("episodes", 0) > 0:
+                    try:
+                        from src.structure import HypergraphEmbedding
+                        emb = HypergraphEmbedding.compute_from_hypergraph(
+                            self._hypergraph,
+                            embed_fn=self._embedder.embed,
+                        )
+                        self._hg_persistence.save_embeddings(emb)
+                        emb_stats = emb.get_stats()
+                        logger.info("[Engine] Hypergraph embeddings generated: stats=%s", emb_stats)
+                    except Exception as emb_err:
+                        logger.warning("[Engine] Hypergraph embedding generation skipped: %s",
+                                        str(emb_err)[:60])
             except Exception as hg_err:
                 logger.warning("[Engine] Hypergraph build skipped: %s", str(hg_err)[:60])
 
@@ -793,7 +863,8 @@ class MemoryEngine:
             logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
 
     async def _extract_decision(self, content: str, source: str,
-                                 existing_decisions: Optional[List[Dict]] = None) -> Optional[List[DecisionNode]]:
+                                 existing_decisions: Optional[List[Dict]] = None,
+                                 trace_id: Optional[str] = None) -> Optional[List[DecisionNode]]:
         """使用 LLM 提取决策（支持批量返回多条决策）
 
         Args:
@@ -801,10 +872,15 @@ class MemoryEngine:
             source: 来源 ("im", "doc", etc.)
             existing_decisions: 已有决策列表（注入到 prompt 中让 LLM 避免重复提取）
                 格式: [{"title": "...", "summary": "..."}, ...]
+            trace_id: 用于 Langfuse 溯源的 trace ID
         """
         if self._extractor is None:
             logger.warning("[LLM] No extractor configured, skipping LLM extraction")
             return None
+
+        # 将 trace_id 传入 extractor，使 LLM 调用可溯源
+        if hasattr(self._extractor, "set_trace_id"):
+            self._extractor.set_trace_id(trace_id)
 
         # 注入已有决策上下文（Plan A）
         if existing_decisions:
@@ -1011,7 +1087,7 @@ class MemoryEngine:
 
         return None, 0.0
 
-    async def _judge_decision_duplicate(self, new_node: DecisionNode, existing_node: DecisionNode) -> tuple:
+    async def _judge_decision_duplicate(self, new_node: DecisionNode, existing_node: DecisionNode, trace_id: Optional[str] = None) -> tuple:
         """用 LLM 判断新决策与已有决策的关系
 
         如果两者是同父决策或存在直接父子关系，跳过 LLM 判断直接返回 create_new。
@@ -1031,6 +1107,16 @@ class MemoryEngine:
 
         if self._extractor is None:
             return "create_new", "no LLM", ""
+
+        # Langfuse Trace: dedup_judge
+        langfuse = get_langfuse()
+        dedup_trace = None
+        if langfuse and should_sample():
+            dedup_trace = langfuse.trace(
+                name="dedup_judge",
+                input={"new": new_node.title, "existing": existing_node.title},
+                metadata={"trace_id": trace_id or ""},
+            )
 
         prompt = REALTIME_DEDUP_PROMPT.format(
             new_title=new_node.title or new_node.summary,
@@ -1053,6 +1139,7 @@ class MemoryEngine:
                     prompt,
                     temperature=_dedup_temperature,
                     response_format={"type": "json_object"},
+                    trace_id=trace_id,
                 )
                 import json
                 result = json.loads(resp)
@@ -1060,12 +1147,16 @@ class MemoryEngine:
                 reason = result.get("reason", "")
                 info = result.get("info_to_merge", "")
                 logger.info("[Dedup] LLM judge: action=%s reason=%.60s", action, reason)
+                if dedup_trace:
+                    dedup_trace.end(output={"action": action, "reason": reason})
                 return action, reason, info
         except Exception as e:
             logger.warning("[Dedup] LLM judge failed: %s", str(e)[:60])
+            if dedup_trace:
+                dedup_trace.end(output={"status": "error", "error": str(e)})
         return "create_new", "judge_failed", ""
 
-    async def _apply_decision_mutations(self, node: DecisionNode, source: str) -> None:
+    async def _apply_decision_mutations(self, node: DecisionNode, source: str, trace_id: Optional[str] = None) -> None:
         """将提取的决策应用于超图和存储
 
         核心流程：
@@ -1086,6 +1177,9 @@ class MemoryEngine:
 
         existing = self._graph.get_decision(node.sid)
 
+        # 在 mutation 中携带 trace_id，用于 Git commit 溯源
+        trace_meta = {"trace_id": trace_id or ""} if trace_id else {}
+
         if existing:
             logger.info("[Mutation] Existing by sid: sid=%s v%d", node.sid[:12], existing.version)
             updates = DecisionMutation(
@@ -1102,6 +1196,7 @@ class MemoryEngine:
                 tags=node.tags,
                 confidence=node.confidence,
                 parent_id=node.parent_id,
+                metadata={**trace_meta},
             )
             if await asyncio.to_thread(self._pipeline.apply_mutation, updates):
                 self._status.total_mutations_applied += 1
@@ -1132,7 +1227,7 @@ class MemoryEngine:
                 node.confidence = max(node.confidence, similar.confidence)
                 node.tags = list(set(node.tags + similar.tags))
             else:
-                action, reason, info = await self._judge_decision_duplicate(node, similar)
+                action, reason, info = await self._judge_decision_duplicate(node, similar, trace_id=trace_id)
 
                 if action == "skip":
                     logger.info("[Mutation] SKIP: new=%s similar=%s reason=%.60s",
@@ -1184,7 +1279,7 @@ class MemoryEngine:
                             MemoryEngine._summary_similarity((node.full_text or ""), (existing.full_text or "")),
                             existing.summary[:80])
                 continue
-            action, reason, info = await self._judge_decision_duplicate(node, existing)
+            action, reason, info = await self._judge_decision_duplicate(node, existing, trace_id=trace_id)
             if action == "skip":
                 logger.info("[Mutation] Prefilter SKIP: new=%s vs existing=%s reason=%.60s",
                             node.sid[:12], existing.sid[:12], reason)
@@ -1234,6 +1329,7 @@ class MemoryEngine:
             parent_id=node.parent_id,
             new_status=node.status.value,
             new_impact_level=node.impact_level.value,
+            metadata={**trace_meta},
         )
         if await asyncio.to_thread(self._pipeline.apply_mutation, create):
             self._status.total_mutations_applied += 1

@@ -27,7 +27,7 @@ class ModelConfig:
 
     embedding_config: dict = {
         "model_name": "Qwen3-Embedding-4B",
-        "base_url": os.environ.get("EMBEDDING_BASE_URL", "http://localhost:11810/v1"),
+        "base_url": os.environ.get("EMBEDDING_BASE_URL", "http://127.0.0.1:8000/v1"),
     }
     embedding_max_retries: int = 10
 
@@ -80,7 +80,7 @@ class ModelConfig:
     use_reranker: bool = os.environ.get("HYPERMEM_USE_RERANKER", "false").lower() == "true"
     reranker_config: dict = {
         "model_name": "Qwen3-Reranker-4B",
-        "base_url": os.environ.get("RERANKER_BASE_URL", "http://localhost:12810"),
+        "base_url": os.environ.get("RERANKER_BASE_URL", "http://127.0.0.1:8001"),
     }
     reranker_max_retries: int = 10
 

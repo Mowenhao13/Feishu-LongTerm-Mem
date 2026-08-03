@@ -62,4 +62,21 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ---
 
+## 5. A/B 测试验证
+
+每次加入新功能后，必须运行全量 A/B 测试来验证对最终结果的影响：
+
+```bash
+python experiments/two_layer_vs_four_layer/run_experiments.py --all
+```
+
+必须在测试报告中确认：
+1. **Precision / Recall / F1 不能下降**（或下降原因有合理解释）
+2. **LLM 调用次数不能显著增加**（避免成本膨胀）
+3. 确认改动没有破坏已有功能
+
+如果改动后测试结果有变化，在 commit message 中注明影响。
+
+---
+
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
