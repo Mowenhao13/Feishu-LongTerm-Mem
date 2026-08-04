@@ -102,10 +102,21 @@ class Neo4jSyncEngine:
             logger.info("Neo4j sync: syncing %d dirty entities", len(entities))
             for entity in entities:
                 try:
-                    await self._client.upsert_entity(entity)
+                    # 适配层：memory_types.ExtractedEntity 与 neo4j_client.ExtractedEntity 的属性名不同
+                    neo4j_entity = entity
+                    if hasattr(entity, 'source_episode_id'):
+                        neo4j_entity = type('Neo4jEntity', (), {
+                            'name': entity.name,
+                            'entity_type': entity.entity_type,
+                            'attributes': getattr(entity, 'attributes', {}),
+                            'confidence': getattr(entity, 'confidence', 0.8),
+                            'source_id': entity.source_episode_id,
+                            'created_at': getattr(entity, 'created_at', None),
+                        })()
+                    await self._client.upsert_entity(neo4j_entity)
                     self._stats["entities_written"] += 1
                 except Exception as exc:
-                    logger.error("Failed to upsert entity '%s': %s", entity.name, exc)
+                    logger.error("Failed to upsert entity '%s': %s", getattr(entity, 'name', '?'), exc)
                     self._stats["errors"] += 1
 
         # Relationships
@@ -119,10 +130,27 @@ class Neo4jSyncEngine:
             logger.info("Neo4j sync: syncing %d dirty relationships", len(relationships))
             for rel in relationships:
                 try:
-                    await self._client.upsert_relationship(rel)
+                    # 适配层：memory_types.ExtractedRelationship 与 neo4j_client.ExtractedRelationship 的属性名不同
+                    # memory_types 使用 source_name/target_name/relationship_type
+                    # neo4j_client 使用 source/target/rel_type
+                    neo4j_rel = rel
+                    if hasattr(rel, 'source_name'):
+                        # 来自 memory_types 的 ExtractedRelationship
+                        neo4j_rel = type('Neo4jRel', (), {
+                            'source': rel.source_name,
+                            'target': rel.target_name,
+                            'rel_type': rel.relationship_type,
+                            'confidence': getattr(rel, 'confidence', 0.8),
+                            'attributes': {},
+                            'valid_at': getattr(rel, 'valid_at', None),
+                            'source_id': getattr(rel, 'source_episode_id', ''),  # field name mismatch
+                        })()
+                    await self._client.upsert_relationship(neo4j_rel)
                     self._stats["relationships_written"] += 1
                 except Exception as exc:
-                    logger.error("Failed to upsert relationship %s->%s: %s", rel.source, rel.target, exc)
+                    rel_src = getattr(rel, 'source', getattr(rel, 'source_name', '?'))
+                    rel_tgt = getattr(rel, 'target', getattr(rel, 'target_name', '?'))
+                    logger.error("Failed to upsert relationship %s->%s: %s", rel_src, rel_tgt, exc)
                     self._stats["errors"] += 1
 
     # ---------- helpers ----------
