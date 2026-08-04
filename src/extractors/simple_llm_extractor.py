@@ -7,6 +7,10 @@ import logging
 from typing import Any, Dict, List, Optional
 
 from src.prompts.decision_prompts import DECISION_EXTRACTION_PROMPT_SHORT
+from src.extractors.project_context_prompt import (
+    PROJECT_CONTEXT_PROMPT,
+    format_file_changes_for_prompt,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -147,16 +151,19 @@ class SimpleLLMExtractor:
         content: str,
         entity_context: Optional[List[Dict[str, Any]]] = None,
         existing_decisions: Optional[List[Dict[str, Any]]] = None,
+        project_context: Optional[Any] = None,
     ) -> Optional[List[dict]]:
-        """提取决策 — 支持实体上下文注入（Stage 2 of two-stage pipeline）
+        """提取决策 — 支持实体上下文 + 项目文件变更上下文注入
 
-        Same as extract_decision but injects entity names from Stage 1
-        into the prompt so decisions can reference specific entities.
+        Same as extract_decision but injects entity names and/or
+        project file changes into the prompt as preamble sections.
 
         Args:
             content: 对话内容
-            entity_context: Stage 1 提取的实体列表 [{"name": "...", "entity_type": "..."}, ...]
+            entity_context: Stage 1 提取的实体列表
             existing_decisions: 已有决策列表（去重用）
+            project_context: ProjectDevelopmentContext 包含最近的文件变更
+                当 ConversationFileBridge 判断需要合并时传入
 
         Returns:
             Optional[List[dict]]: 同 extract_decision
@@ -177,6 +184,18 @@ class SimpleLLMExtractor:
         else:
             entity_preamble = ""
 
+        # Inject project file changes as a preamble (via ConversationFileBridge)
+        project_preamble = ""
+        if project_context:
+            changes = getattr(project_context, "recent_changes", None) or getattr(project_context, "changes", None) or []
+            if changes:
+                file_changes_text = format_file_changes_for_prompt(changes)
+                project_preamble = PROJECT_CONTEXT_PROMPT.format(file_changes_text=file_changes_text)
+                logger.info(
+                    "[LLM Extractor] Injected project context: %d file changes",
+                    len(changes),
+                )
+
         if existing_decisions:
             decision_lines = ["\n## 系统中已有决策（仅作参考）"]
             for d in existing_decisions:
@@ -186,11 +205,23 @@ class SimpleLLMExtractor:
             decision_preamble = ""
 
         safe_content = content.replace("{", "{{").replace("}", "}}")
-        enriched_content = f"{entity_preamble}\n{decision_preamble}\n\n## 对话内容\n\n{safe_content}"
+        enriched_parts = []
+        if entity_preamble:
+            enriched_parts.append(entity_preamble)
+        if project_preamble:
+            enriched_parts.append(project_preamble)
+        if existing_decisions and decision_preamble:
+            enriched_parts.append(decision_preamble)
+        enriched_parts.append(f"\n## 对话内容\n\n{safe_content}")
+        enriched_content = "\n".join(enriched_parts)
 
         prompt = DECISION_EXTRACTION_PROMPT_SHORT.format(conversation_text=enriched_content)
-        logger.info("[LLM Extractor] extract_with_context: >>> Calling LLM (len=%d, entities=%d)",
-                    len(prompt), len(entity_context) if entity_context else 0)
+        logger.info(
+            "[LLM Extractor] extract_with_context: >>> Calling LLM (len=%d, entities=%d, project_changes=%d)",
+            len(prompt),
+            len(entity_context) if entity_context else 0,
+            len(project_context.recent_changes) if project_context and getattr(project_context, "recent_changes", None) else 0,
+        )
 
         try:
             resp = await self._llm.generate(
