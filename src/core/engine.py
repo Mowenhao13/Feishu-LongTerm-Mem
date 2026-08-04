@@ -1037,18 +1037,41 @@ class MemoryEngine:
                 for e in mem_result.entities
             ]
 
+            # ── Project Context: check conv-file bridge for merge ──
+            project_ctx = None
+            if self._project_bridge is not None:
+                # Get recent file changes via the bridge
+                # The bridge decides whether to merge based on its level
+                file_changes = getattr(self._project_bridge, "_recent_file_changes", [])
+                if file_changes and hasattr(self._project_detector, "build_development_context"):
+                    project_ctx = self._project_detector.build_development_context(
+                        changes=file_changes,
+                        conv_signal=getattr(self._detector, "_last_signal", None),
+                    )
+                    if project_ctx and project_ctx.linked_conversation_snippets:
+                        logger.info(
+                            "[Engine] v2: Project context merged (%d changes, %d linked snippets)",
+                            len(project_ctx.recent_changes),
+                            len(project_ctx.linked_conversation_snippets),
+                        )
+
             nodes: Any = None
             if self._extractor is not None:
                 if hasattr(self._extractor, "set_trace_id"):
                     self._extractor.set_trace_id(trace_id)
 
                 if hasattr(self._extractor, "extract_with_context"):
-                    logger.info("[Engine] v2 Stage 2: Calling extract_with_context")
+                    logger.info(
+                        "[Engine] v2 Stage 2: Calling extract_with_context (entities=%d, project=%s)",
+                        len(entity_context),
+                        "yes" if project_ctx and project_ctx.has_changes else "no",
+                    )
                     if asyncio.iscoroutinefunction(self._extractor.extract_with_context):
                         result = await self._extractor.extract_with_context(
                             content,
                             entity_context=entity_context,
                             existing_decisions=self._build_existing_decisions_context(),
+                            project_context=project_ctx,
                         )
                     else:
                         result = await asyncio.to_thread(
@@ -1056,6 +1079,7 @@ class MemoryEngine:
                             content,
                             entity_context,
                             self._build_existing_decisions_context(),
+                            project_ctx,
                         )
 
                     if result:
