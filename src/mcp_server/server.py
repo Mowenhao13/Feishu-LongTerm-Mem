@@ -166,6 +166,18 @@ class MemoryLoader:
 
 _loader = MemoryLoader()
 
+_neo4j_client: Any = None
+
+
+def set_neo4j_client(client: Any) -> None:
+    global _neo4j_client
+    _neo4j_client = client
+
+
+def get_neo4j_client() -> Any:
+    global _neo4j_client
+    return _neo4j_client
+
 
 def _record_mutation(t: str, sid: str, old_status: str = "", new_status: str = "") -> None:
     """Record a mutation event for audit trail (in-memory, MCP-scoped)."""
@@ -1054,6 +1066,92 @@ def mutation_history(sid: str, limit: int = 50) -> str:
         "history": records[:limit],
         "total": len(records),
     }, ensure_ascii=False)
+
+
+# ==================== 实体/关系查询（Neo4j） ====================
+
+
+@mcp.tool(
+    name="list_entities",
+    description="列出所有已知实体（Person, Technology, Project 等）。需要 Neo4j 连接。",
+)
+def list_entities(entity_type: str = "", limit: int = 50) -> str:
+    """列出实体，可按类型筛选。"""
+    client = get_neo4j_client()
+    if client is None:
+        return json.dumps({"error": "Neo4j not configured", "entities": []}, ensure_ascii=False)
+
+    import asyncio
+
+    async def _query():
+        if entity_type:
+            return await client.query_entities_by_type(entity_type)
+        return []
+
+    try:
+        loop = asyncio.new_event_loop()
+        try:
+            results = loop.run_until_complete(_query())
+        finally:
+            loop.close()
+        return json.dumps({"entities": results, "total": len(results)}, ensure_ascii=False, default=str)
+    except Exception as e:
+        return json.dumps({"error": str(e), "entities": []}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="get_entity",
+    description="获取单个实体的详细信息。需要 Neo4j 连接。",
+)
+def get_entity(name: str) -> str:
+    """获取单个实体详情。"""
+    client = get_neo4j_client()
+    if client is None:
+        return json.dumps({"error": "Neo4j not configured"}, ensure_ascii=False)
+
+    import asyncio
+
+    async def _query():
+        return await client.query_entity(name)
+
+    try:
+        loop = asyncio.new_event_loop()
+        try:
+            result = loop.run_until_complete(_query())
+            if result is None:
+                return json.dumps({"error": f"Entity '{name}' not found"}, ensure_ascii=False)
+            return json.dumps({"entity": result}, ensure_ascii=False, default=str)
+        finally:
+            loop.close()
+    except Exception as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="search_entity_relations",
+    description="查询实体的关系网络（关联的实体和关系）。需要 Neo4j 连接。",
+)
+def search_entity_relations(name: str, max_depth: int = 2) -> str:
+    """查询实体的关系网络，max_depth 控制图遍历深度（1-3）。"""
+    client = get_neo4j_client()
+    if client is None:
+        return json.dumps({"error": "Neo4j not configured"}, ensure_ascii=False)
+
+    import asyncio
+
+    async def _query():
+        return await client.query_entity_relationships(name, max_depth=max_depth)
+
+    try:
+        loop = asyncio.new_event_loop()
+        try:
+            results = loop.run_until_complete(_query())
+            return json.dumps({"entity": name, "relations": results, "total": len(results)},
+                              ensure_ascii=False, default=str)
+        finally:
+            loop.close()
+    except Exception as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
 
 
 # ==================== 启动 ====================

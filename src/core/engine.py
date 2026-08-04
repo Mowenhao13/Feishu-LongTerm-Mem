@@ -768,7 +768,7 @@ class MemoryEngine:
             - episode.to_dict(): 序列化方法
         """
         # 生成 trace_id 贯穿整个 episode 处理流程
-        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}_decision-extraction"
         content = episode.full_text
         chat_id = episode.chat_id
         episode_id = episode.id
@@ -885,7 +885,7 @@ class MemoryEngine:
             await self._process_episode(episode)
             return
 
-        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}_memory-extraction"
         content = getattr(episode, "full_text", "") or getattr(episode, "content", "")
         episode_id = getattr(episode, "id", "")
         chat_id = getattr(episode, "chat_id", "")

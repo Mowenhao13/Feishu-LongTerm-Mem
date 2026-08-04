@@ -90,17 +90,24 @@ class OpenAIProvider(LLMProvider):
         Raises:
             LLMError: If generation fails
         """
-        # Langfuse 手动埋点
+        # Langfuse 手动埋点（带语义化的 trace name）
         langfuse = get_langfuse()
         f_trace = None
         f_span = None
         if langfuse and should_sample():
+            # 从 trace_id 推断调用阶段：trc_20260101_120000_abc_decision-extraction
+            # 或在 generate() 的 kwargs 中传递 task_name
+            trace_parts = (trace_id or "").split("_")
+            task_name = "llm_generate"
+            if len(trace_parts) >= 4:
+                task_name = trace_parts[3]  # 第四个部分是 task name
             f_trace = langfuse.trace(
-                name="llm_generate",
+                name=task_name,
                 input={"prompt": prompt[:200]},
                 metadata={
                     "model": self.model,
                     "trace_id": trace_id or "",
+                    "task": task_name,
                 },
             )
             f_span = f_trace.span(name="openai_call")
