@@ -66,9 +66,34 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 每次加入新功能后，必须运行全量 A/B 测试来验证对最终结果的影响：
 
+### 超图架构对比（已有）
+对比 4 层超图和 2 层超图的架构差异：
 ```bash
 python experiments/two_layer_vs_four_layer/run_experiments.py --all
 ```
+
+### 提取管道对比（新增）
+对比单阶段（direct）和两阶段（two_stage）提取管道的差异：
+```bash
+python experiments/pipeline_ab_test/run.py --all
+```
+
+测试内容包括：
+1. **实体/关系提取质量**：对比两阶段 vs 单阶段的实体/关系/事实提取准确率
+2. **决策提取质量**：对比两阶段 vs 单阶段的决策 Precision / Recall / F1
+3. **LLM 调用成本**：两阶段模式下总 LLM 调用次数 vs 单阶段
+4. **端到端延迟**：从消息到决策入库的完整耗时
+
+两阶段模式（two_stage）：
+- Stage 1: MemoryExtractor — 提取实体/关系/事实（1次 LLM 调用）
+- Stage 2: 基于实体上下文的决策提取（1次 LLM 调用）
+- 总调用：2次 LLM / episode
+
+单阶段模式（direct，baseline）：
+- SimpleLLMExtractor.extract_decision — 直接提取决策（1次 LLM 调用）
+- 总调用：1次 LLM / episode
+
+### 提交要求
 
 必须在测试报告中确认：
 1. **Precision / Recall / F1 不能下降**（或下降原因有合理解释）
