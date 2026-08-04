@@ -758,6 +758,7 @@ class MemoryEngine:
         1. 将文件变更列表传入 ConversationFileBridge
         2. 通过 bridge 构建 ProjectDevelopmentContext
         3. 如果 bridge 判断需要与对话上下文合并，提取决策
+        4. 对变更文档执行实体提取（走 MemoryExtractor → EntityStore → Neo4j）
         """
         changes = getattr(detect_result, "changes", [])
         if not changes:
@@ -768,6 +769,40 @@ class MemoryEngine:
             len(changes),
             sum(1 for c in changes if getattr(c, "is_significant", False)),
         )
+
+        # ── 文档实体提取 ──
+        # 对每个有内容的文件变更，走 MemoryExtractor 提取实体并存入 EntityStore
+        if self._memory_extractor is not None and self._entity_store is not None:
+            for change in changes:
+                content = getattr(change, "content", "") or ""
+                doc_id = getattr(change, "doc_token", "") or getattr(change, "file_path", "")
+                if not content or not doc_id:
+                    continue
+                try:
+                    mem_result = await self._memory_extractor.extract(
+                        content,
+                        episode_id=doc_id,
+                        existing_entities=self._entity_store.build_extraction_context(),
+                    )
+                    if mem_result.entities:
+                        # Mark entities as coming from a document source
+                        for ent in mem_result.entities:
+                            ent.source_type = "document"
+                        self._entity_store.add_entities(mem_result.entities)
+                        self._entity_store.add_relationships(mem_result.relationships)
+                        self._entity_store.add_facts(mem_result.facts)
+                        logger.info(
+                            "[Project] Doc entity extraction: %s → %d entities, %d rels",
+                            doc_id[:20] if len(doc_id) > 20 else doc_id,
+                            len(mem_result.entities),
+                            len(mem_result.relationships),
+                        )
+                except Exception as exc:
+                    logger.warning(
+                        "[Project] Doc entity extraction failed for %s: %s",
+                        doc_id[:20] if len(doc_id) > 20 else doc_id,
+                        exc,
+                    )
 
         # Feed file changes to the conversation-file bridge
         if self._project_bridge and changes:

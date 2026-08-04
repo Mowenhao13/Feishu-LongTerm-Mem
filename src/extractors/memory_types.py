@@ -20,6 +20,7 @@ class ExtractedEntity:
     attributes: Dict[str, Any] = field(default_factory=dict)
     confidence: float = 0.0
     source_episode_id: str = ""
+    source_type: str = "episode"  # "episode" | "document"
 
 
 @dataclass

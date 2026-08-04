@@ -16,7 +16,7 @@ class RetrievalResult:
     """Result container for a single retrieval pass.
 
     Per-decision scores are stored as parallel lists in ``decision_scores``,
-    keyed by channel name (e.g. "embedding", "bm25", "reranker") — each list
+    keyed by channel name (e.g. "embedding", "bm25", "entity_graph") — each list
     aligns 1:1 with ``decisions``.
     """
 
@@ -33,7 +33,7 @@ class HierarchicalRetriever:
     """层次化检索器
 
     整合 ref/main stage4 的核心逻辑：
-    3 层检索（Topic → Episode/Decision → Fact），支持 BM25 + 向量融合。
+    3 层检索（Topic → Episode/Decision → Fact），支持 BM25 + 向量 + 图结构实体融合。
     """
 
     def __init__(
@@ -42,6 +42,8 @@ class HierarchicalRetriever:
         bm25_index: Any = None,
         embedding_provider: Any = None,
         reranker_provider: Any = None,
+        neo4j_client: Any = None,
+        query_entity_extractor: Any = None,
         retrieval_type: str = "rrf",
         use_reranker: bool = False,
         top_k_decisions: int = 10,
@@ -50,6 +52,8 @@ class HierarchicalRetriever:
         self._bm25 = bm25_index
         self._embedding = embedding_provider
         self._reranker = reranker_provider
+        self._neo4j_client = neo4j_client
+        self._entity_extractor = query_entity_extractor
         self._retrieval_type = retrieval_type
         self._use_reranker = use_reranker
         self._top_k_decisions = top_k_decisions
@@ -73,14 +77,15 @@ class HierarchicalRetriever:
         rtype = retrieval_type or self._retrieval_type
         do_rerank = use_reranker if use_reranker is not None else self._use_reranker
 
-        # ── Step 1: Keyword fallback (always available) ──────────────
-        matched_decisions = self._memory_graph.search_by_keywords(query)
-        keyword_list: List[Tuple[Dict, float]] = [
-            ({"id": d.sid, "summary": d.summary, "full_text": d.full_text}, 0.0)
-            for d in matched_decisions
-        ]
+        # ── Step 1: Graph entity signal (Neo4j entity→decision traversal) ─
+        entity_list: List[Tuple[Dict, float]] = []
+        if self._neo4j_client is not None and self._entity_extractor is not None and rtype in ("entity_graph", "rrf"):
+            try:
+                entity_list = self._entity_graph_search(query, top_k_decisions * 3)
+            except Exception as e:
+                logger.warning("[Retrieval] Entity graph search failed, skipping: %s", str(e)[:80])
 
-        # ── Step 2: Dense retrieval via Embedding ────────────────────
+        # ── Step 2: Dense retrieval via Embedding ──────────────────────────
         vector_list: List[Tuple[Dict, float]] = []
         if self._embedding is not None and rtype in ("vector", "rrf"):
             try:
@@ -88,7 +93,7 @@ class HierarchicalRetriever:
             except Exception as e:
                 logger.warning("[Retrieval] Vector search failed, skipping: %s", str(e)[:80])
 
-        # ── Step 3: Sparse retrieval via BM25 ────────────────────────
+        # ── Step 3: Sparse retrieval via BM25 ──────────────────────────────
         bm25_list: List[Tuple[Dict, float]] = []
         if self._bm25 is not None and rtype in ("bm25", "rrf"):
             try:
@@ -96,41 +101,52 @@ class HierarchicalRetriever:
             except Exception as e:
                 logger.warning("[Retrieval] BM25 search failed, skipping: %s", str(e)[:80])
 
-        # ── Step 4: Fusion / selection ───────────────────────────────
-        if rtype == "rrf" and vector_list and bm25_list:
-            if keyword_list:
+        # ── Step 4: Fusion / selection ─────────────────────────────────────
+        fused: List[Tuple[Dict, float]] = []
+        if rtype == "rrf":
+            # Build the list of non-empty signal lists for RRF
+            signals = [lst for lst in [entity_list, vector_list, bm25_list] if lst]
+            if len(signals) >= 2:
                 fused = self.reciprocal_rank_fusion(
-                    [keyword_list, vector_list, bm25_list],
+                    signals,
                     top_n=top_k_decisions * top_k_topics,
                     k=60,
                 )
-            else:
-                fused = self.reciprocal_rank_fusion(
-                    [vector_list, bm25_list],
-                    top_n=top_k_decisions * top_k_topics,
-                    k=60,
+                logger.info(
+                    "[Retrieval] RRF fused: entity=%d vector=%d bm25=%d → %d",
+                    len(entity_list), len(vector_list), len(bm25_list), len(fused),
                 )
-            logger.info("[Retrieval] RRF fused: keyword=%d vector=%d bm25=%d → %d",
-                        len(keyword_list), len(vector_list), len(bm25_list), len(fused))
+            elif len(signals) == 1:
+                fused = signals[0][: top_k_decisions * top_k_topics]
         elif rtype == "vector" and vector_list:
             fused = vector_list[:top_k_decisions * top_k_topics]
             logger.info("[Retrieval] Vector-only: %d results", len(fused))
         elif rtype == "bm25" and bm25_list:
             fused = bm25_list[:top_k_decisions * top_k_topics]
             logger.info("[Retrieval] BM25-only: %d results", len(fused))
+        elif rtype == "entity_graph" and entity_list:
+            fused = entity_list[:top_k_decisions * top_k_topics]
+            logger.info("[Retrieval] Entity-graph-only: %d results", len(fused))
         else:
-            # Fallback to keyword — the same behaviour as before
-            fused = keyword_list[:top_k_decisions * top_k_topics]
+            # Fallback: keyword 兜底
+            try:
+                keyword_decisions = self._memory_graph.search_by_keywords(query)
+                fused = [
+                    ({"id": d.sid, "summary": d.summary, "full_text": d.full_text}, 0.0)
+                    for d in keyword_decisions
+                ][:top_k_decisions * top_k_topics]
+                logger.info("[Retrieval] Fallback to keyword: %d results", len(fused))
+            except Exception as e:
+                logger.warning("[Retrieval] Keyword fallback failed: %s", str(e)[:80])
 
-        # ── Step 5: Build DecisionNode list from fused results ──────
+        # ── Step 5: Build DecisionNode list from fused results ────────────
         decisions: List[DecisionNode] = []
         seen_ids: set = set()
-        # Build lookups for decision resolution
-        node_map: Dict[str, DecisionNode] = {d.sid: d for d in matched_decisions}
+        # Build lookups for decision resolution — use all decisions from memory graph
+        node_map: Dict[str, DecisionNode] = {}
         if self._memory_graph is not None:
             for d in self._memory_graph.get_all_decisions():
-                if d.sid not in node_map:
-                    node_map[d.sid] = d
+                node_map[d.sid] = d
 
         for doc_dict, score in fused:
             doc_id = doc_dict.get("id", "")
@@ -141,14 +157,14 @@ class HierarchicalRetriever:
             if node is not None:
                 decisions.append(node)
 
-        # ── Step 6: Reranker refinement (optional) ───────────────────
+        # ── Step 6: Reranker refinement (optional) ─────────────────────────
         if do_rerank and self._reranker is not None and decisions:
             try:
                 decisions = self._rerank_decisions(query, decisions, top_k_decisions * top_k_topics)
             except Exception as e:
                 logger.warning("[Retrieval] Reranker failed, skipping: %s", str(e)[:80])
 
-        # ── Step 7: Build topic groups ──────────────────────────────
+        # ── Step 7: Build topic groups ────────────────────────────────────
         topic_groups: Dict[str, List[DecisionNode]] = {}
         for d in decisions:
             tid = d.topic_id or "general"
@@ -176,13 +192,89 @@ class HierarchicalRetriever:
         result.total_count = len(unique_decisions)
 
         # Populate channel-level scores
-        result.scores["retrieval_type"] = len(vector_list) if rtype == "vector" else 0.0
-        result.scores["keyword_count"] = float(len(keyword_list))
+        result.scores["retrieval_type"] = float(len(vector_list)) if rtype == "vector" else 0.0
+        result.scores["entity_count"] = float(len(entity_list))
         result.scores["vector_count"] = float(len(vector_list))
         result.scores["bm25_count"] = float(len(bm25_list))
         result.scores["reranker_applied"] = 1.0 if (do_rerank and self._reranker is not None and decisions) else 0.0
 
         return result
+
+    def _entity_graph_search(
+        self,
+        query: str,
+        top_n: int,
+    ) -> List[Tuple[Dict, float]]:
+        """Extract entity names from the query, then find related decisions
+        via the Neo4j graph (Entity→MENTIONS→Episode→REFERENCES→Decision).
+
+        Returns scored results compatible with RRF.
+        """
+        if self._entity_extractor is None or self._neo4j_client is None:
+            return []
+
+        # 1. Extract entity names from the query (single light LLM call)
+        entity_names = self._run_entity_extraction(query)
+        if not entity_names:
+            logger.debug("[Retrieval] No entities extracted from query")
+            return []
+
+        # 2. Search Neo4j for decisions related to these entities
+        raw_results = self._run_neo4j_search(entity_names, top_n)
+        if not raw_results:
+            logger.debug("[Retrieval] No decisions found for entities: %s", entity_names)
+            return []
+
+        # 3. Score by inverse rank for RRF compatibility
+        scored: List[Tuple[Dict, float]] = []
+        for rank, item in enumerate(raw_results):
+            score = 1.0 / (rank + 1)
+            scored.append((
+                {
+                    "id": item.get("sid") or item.get("id", ""),
+                    "summary": item.get("summary", ""),
+                    "full_text": item.get("full_text", ""),
+                },
+                score,
+            ))
+
+        logger.info(
+            "[Retrieval] Entity graph search: entities=%s → %d decisions",
+            entity_names[:5], len(scored),
+        )
+        return scored
+
+    def _run_entity_extraction(self, query: str) -> List[str]:
+        """Run the lightweight entity extractor synchronously.
+
+        The extractor's ``extract()`` is async.  When called from a sync
+        context that may or may not have a running event loop, we use a
+        fresh thread + new loop to avoid blocking.
+        """
+        import asyncio
+        from concurrent.futures import ThreadPoolExecutor
+
+        with ThreadPoolExecutor(max_workers=1) as pool:
+            future = pool.submit(
+                asyncio.run, self._entity_extractor.extract(query)
+            )
+            return future.result(timeout=10)
+
+    def _run_neo4j_search(
+        self, entity_names: List[str], limit: int
+    ) -> List[Dict[str, Any]]:
+        """Run the Neo4j search synchronously (same thread+loop pattern)."""
+        import asyncio
+        from concurrent.futures import ThreadPoolExecutor
+
+        with ThreadPoolExecutor(max_workers=1) as pool:
+            future = pool.submit(
+                asyncio.run,
+                self._neo4j_client.search_decisions_by_entity_names(
+                    entity_names, limit=limit
+                ),
+            )
+            return future.result(timeout=10)
 
     def _vector_search(
         self,

@@ -159,6 +159,7 @@ class Neo4jClient:
             "CREATE CONSTRAINT IF NOT EXISTS FOR (e:Entity) REQUIRE e.name IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (d:Decision) REQUIRE d.sid IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (e:Episode) REQUIRE e.id IS UNIQUE",
+            "CREATE CONSTRAINT IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (t:Topic) REQUIRE t.topic_id IS UNIQUE",
         ]
         async with self._driver.session(database="neo4j") as session:
@@ -182,12 +183,22 @@ class Neo4jClient:
 
     # ---------- entity CRUD ----------
 
-    async def upsert_entity(self, entity: ExtractedEntity) -> None:
+    async def upsert_entity(
+        self,
+        entity: ExtractedEntity,
+        source_type: str = "episode",
+    ) -> None:
         """Create or update an Entity node.
 
         Uses MERGE on name for idempotent upsert. The attributes_json
         field stores the full attributes dict as a JSON string so it
         remains query-agnostic.
+
+        If ``source_id`` is set, also creates / confirms a ``MENTIONS``
+        relationship::
+
+            - source_type="episode" (default): (Episode)-[:MENTIONS]->(Entity)
+            - source_type="document":           (Document)-[:MENTIONS]->(Entity)
         """
         now = self._now()
         attrs_json = json.dumps(entity.attributes, ensure_ascii=False, default=_serialize_value)
@@ -207,6 +218,20 @@ class Neo4jClient:
                 confidence=entity.confidence,
                 now=now,
             )
+
+            # Bridge: (source)-[:MENTIONS]->(Entity)
+            if entity.source_id:
+                source_label = "Document" if source_type == "document" else "Episode"
+                await session.run(
+                    f"""
+                    MERGE (s:{source_label} {{id: $source_id}})
+                    WITH s
+                    MATCH (e:Entity {{name: $name}})
+                    MERGE (s)-[:MENTIONS]->(e)
+                    """,
+                    source_id=entity.source_id,
+                    name=entity.name,
+                )
 
     async def upsert_relationship(self, rel: ExtractedRelationship) -> None:
         """Create or update a RELATES_TO relationship between two entities.
@@ -433,7 +458,82 @@ class Neo4jClient:
                     topic_id=topic_id,
                 )
 
-    # ---------- temporal query ----------
+    # ---------- document CRUD ----------
+
+    async def upsert_document(self, doc_id: str, title: str = "",
+                               summary: str = "") -> None:
+        """Create or update a Document node.
+
+        ``Document`` is the Neo4j label for project source files (.md, etc.)
+        that have been entity-extracted.  Documents are linked to Entities via
+        ``MENTIONS`` edges, same as Episodes, so search can traverse both.
+        """
+        now = self._now()
+        async with self._session() as session:
+            await session.run(
+                """
+                MERGE (d:Document {id: $id})
+                SET d.title = $title,
+                    d.summary = $summary,
+                    d.created_at = COALESCE(d.created_at, $now)
+                """,
+                id=doc_id,
+                title=title,
+                summary=summary,
+                now=now,
+            )
+
+    # ---------- entity→decision search (for graph retrieval signal) ----------
+
+    async def search_decisions_by_entity_names(
+        self,
+        entity_names: List[str],
+        limit: int = 30,
+    ) -> List[Dict[str, Any]]:
+        """Find decisions related to any of the given entity names.
+
+        Traverses both Episode and Document sources::
+
+            (Entity)<-[:MENTIONS]-(Episode)-[:REFERENCES]->(Decision)
+            (Entity)<-[:MENTIONS]-(Document)-[:REFERENCES]->(Decision)
+
+        Returns a list of dicts with keys ``id``, ``summary``, ``full_text``.
+        Returns an empty list on any error (the caller should treat this as
+        a graceful degradation).
+        """
+        if not entity_names:
+            return []
+
+        try:
+            async with self._session() as session:
+                result = await session.run(
+                    """
+                    MATCH (e:Entity)
+                    WHERE e.name IN $entity_names
+                    OPTIONAL MATCH (ep:Episode)-[:MENTIONS]->(e)
+                    OPTIONAL MATCH (d:Document)-[:MENTIONS]->(e)
+                    OPTIONAL MATCH (ep_dec:Decision)-[:REFERENCES]->(ep)
+                    OPTIONAL MATCH (doc_dec:Decision)-[:REFERENCES]->(d)
+                    WITH e, COLLECT(DISTINCT ep_dec) + COLLECT(DISTINCT doc_dec) AS all_decisions
+                    UNWIND all_decisions AS d
+                    WHERE d IS NOT NULL
+                    RETURN DISTINCT
+                        d.sid AS id,
+                        d.summary AS summary,
+                        d.full_text AS full_text
+                    LIMIT $limit
+                    """,
+                    entity_names=entity_names,
+                    limit=limit,
+                )
+                return [_deserialize_record(r) for r in await result.fetch(limit)]
+        except Exception as exc:
+            logger.warning(
+                "search_decisions_by_entity_names failed (names=%s): %s",
+                entity_names,
+                exc,
+            )
+            return []
 
     async def query_as_of(
         self, entity_name: str, timestamp: str

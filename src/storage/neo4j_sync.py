@@ -103,6 +103,7 @@ class Neo4jSyncEngine:
             for entity in entities:
                 try:
                     # 适配层：memory_types.ExtractedEntity 与 neo4j_client.ExtractedEntity 的属性名不同
+                    source_type = getattr(entity, 'source_type', 'episode')
                     neo4j_entity = entity
                     if hasattr(entity, 'source_episode_id'):
                         neo4j_entity = type('Neo4jEntity', (), {
@@ -113,7 +114,7 @@ class Neo4jSyncEngine:
                             'source_id': entity.source_episode_id,
                             'created_at': getattr(entity, 'created_at', None),
                         })()
-                    await self._client.upsert_entity(neo4j_entity)
+                    await self._client.upsert_entity(neo4j_entity, source_type=source_type)
                     self._stats["entities_written"] += 1
                 except Exception as exc:
                     logger.error("Failed to upsert entity '%s': %s", getattr(entity, 'name', '?'), exc)
