@@ -456,6 +456,10 @@ class MemoryEngine:
         self._memory_extractor: Optional[Any] = None
         self._entity_store: Optional[Any] = None
 
+        # Project codebase detection
+        self._project_detector: Optional[Any] = None
+        self._project_bridge: Optional[Any] = None
+
         self._processed_episode_hashes: Set[str] = set()
         self._task_view_syncer: Any = None
 
@@ -612,6 +616,19 @@ class MemoryEngine:
             )
             self._tasks.append(task)
 
+        # Project codebase detection loop (watchdog + MemoStore)
+        if self._project_detector:
+            try:
+                await self._project_detector.start()
+                task = asyncio.create_task(
+                    self._run_project_detector_loop(),
+                    name="project-detector-loop",
+                )
+                self._tasks.append(task)
+                logger.info("Project detector loop started")
+            except Exception as e:
+                logger.warning("Project detector start failed (non-fatal): %s", e)
+
         self._tasks.append(
             asyncio.create_task(
                 self._sync_loop(),
@@ -643,6 +660,13 @@ class MemoryEngine:
         self._running = False
         self._status.is_running = False
         self._status.last_snapshot_time = datetime.now().isoformat()
+
+        # Stop project detector first (before cancelling tasks)
+        if self._project_detector:
+            try:
+                await self._project_detector.stop()
+            except Exception as e:
+                logger.warning("Project detector stop error: %s", e)
 
         for task in self._tasks:
             task.cancel()
@@ -703,6 +727,84 @@ class MemoryEngine:
             await self._process_detection(result)
 
         await asyncio.sleep(self._config.ingester_poll_interval)
+
+    # ==================== 项目代码检测循环 ====================
+
+    async def _run_project_detector_loop(self) -> None:
+        """项目代码库检测循环 — 基于 watchdog + MemoStore 的事件驱动检测
+
+        与 _run_detector_loop 不同，该项目检测器是事件驱动的（watchdog 在后台
+        监听文件系统事件），loop 只需定期 poll 待处理事件队列即可。
+
+        检测到的文件变更通过 ConversationFileBridge 与对话上下文桥接，
+        然后传给 LLM 进行决策提取。
+        """
+        while self._running:
+            try:
+                result = await self._project_detector.detect()
+                if result and result.has_changes:
+                    await self._process_project_changes(result)
+            except asyncio.CancelledError:
+                break
+            except Exception as e:
+                self._status.error_count += 1
+                logger.error("Project detector loop error: %s", e)
+            # Short sleep to yield control — watchdog handles real-time events
+            await asyncio.sleep(0.5)
+
+    async def _process_project_changes(self, detect_result: Any) -> None:
+        """处理项目文件变更检测结果
+
+        1. 将文件变更列表传入 ConversationFileBridge
+        2. 通过 bridge 构建 ProjectDevelopmentContext
+        3. 如果 bridge 判断需要与对话上下文合并，提取决策
+        """
+        changes = getattr(detect_result, "changes", [])
+        if not changes:
+            return
+
+        logger.info(
+            "[Project] Detected %d file changes (significant=%d)",
+            len(changes),
+            sum(1 for c in changes if getattr(c, "is_significant", False)),
+        )
+
+        # Feed file changes to the conversation-file bridge
+        if self._project_bridge and changes:
+            self._project_bridge.feed_file_changes(changes)
+
+        # Build project development context for potential LLM injection
+        ctx = await self._build_project_context(detect_result)
+        if ctx and ctx.significant_changes:
+            logger.info(
+                "[Project] Built context: %d significant changes, %d linked snippets",
+                len(ctx.significant_changes),
+                len(ctx.linked_conversation_snippets),
+            )
+
+    async def _build_project_context(self, detect_result: Any) -> Any:
+        """Build ProjectDevelopmentContext from detect result.
+
+        Uses the ConversationFileBridge to merge conversation keywords
+        with file changes.
+        """
+        if self._project_bridge is None or not hasattr(self._project_detector, "build_development_context"):
+            return None
+
+        changes = getattr(detect_result, "changes", [])
+        return self._project_detector.build_development_context(
+            changes=changes,
+            conv_signal=getattr(self._detector, "_last_signal", None),
+        )
+
+    async def _feed_project_keywords(self, keywords: List[str]) -> None:
+        """Feed conversation keywords to the project bridge.
+
+        Called after each conversation episode is processed, so the bridge
+        can build up a keyword profile for Level 1 matching.
+        """
+        if self._project_bridge and keywords:
+            self._project_bridge.feed_keywords(keywords)
 
     # ==================== 检测结果处理 ====================
 
@@ -1128,6 +1230,28 @@ class MemoryEngine:
             logger.info("Memory extractor set for 2-stage pipeline")
         if entity_store:
             logger.info("Entity store set for 2-stage pipeline")
+
+    def set_project_detector(
+        self,
+        project_detector: Any,
+        project_bridge: Optional[Any] = None,
+    ) -> None:
+        """Configure project codebase detection.
+
+        Enables a new async loop (_project_detector_loop) that monitors
+        the local project directory for file changes using watchdog + MemoStore.
+
+        Args:
+            project_detector: ProjectDetector instance.
+            project_bridge: Optional ConversationFileBridge instance.
+                If None, uses the ProjectDetector's internal bridge.
+        """
+        self._project_detector = project_detector
+        self._project_bridge = project_bridge
+        logger.info(
+            "Project detector configured (dir=%s)",
+            getattr(project_detector, "name", "unknown"),
+        )
 
     @staticmethod
     def _summary_similarity(a: str, b: str) -> float:
