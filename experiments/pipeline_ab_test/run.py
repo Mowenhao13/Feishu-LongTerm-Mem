@@ -107,16 +107,60 @@ class ABTestReport:
         }
 
 
+def _calc_token_overlap(a: str, b: str) -> float:
+    """计算两个文本的语义匹配度（基于关键词重叠）
+
+    用于 LLM 输出与 expected decision 的模糊匹配。
+    token 分割时保留组合词（如 Gin, PostgreSQL 15）。
+    """
+    import re
+    def tokens(s):
+        # 匹配中文词 + 英文单词（含数字）+ 组合词
+        return set(re.findall(r'[一-鿿]+|[A-Za-z][A-Za-z0-9]*|\d', s.lower()))
+    a_tok = tokens(a)
+    b_tok = tokens(b)
+    if not a_tok or not b_tok:
+        return 0.0
+    return len(a_tok & b_tok) / min(len(a_tok), len(b_tok))
+
+
+def _match_decisions(found: List[str], expected: List[Dict[str, Any]]) -> int:
+    """模糊匹配 found 决策与 expected 决策，返回匹配数"""
+    hits = 0
+    for exp in expected:
+        exp_text = exp["summary"]
+        for found_text in found:
+            if _calc_token_overlap(exp_text, found_text) >= 0.30:
+                hits += 1
+                break
+    return hits
+
+
+async def _create_llm_provider():
+    """创建 LLM Provider（与 main.py 一致）"""
+    from src.model.llm_provider import LLMProvider
+    api_key = os.getenv("API_KEY", "")
+    if not api_key:
+        logger.warning("API_KEY not set, LLM calls will fail")
+        return None
+    return LLMProvider(
+        provider_type="openai",
+        base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
+        api_key=api_key,
+        model=os.getenv("MODEL_NAME", "deepseek-chat"),
+        max_tokens=4096,
+        enable_stats=False,
+    )
+
+
 async def run_direct(episode: Dict[str, Any]) -> TestResult:
     """运行单阶段 (direct) 提取管道"""
     from src.extractors.simple_llm_extractor import SimpleLLMExtractor
-    from src.model.llm_provider import LLMProvider
 
-    provider = LLMProvider(
-        base_url=os.getenv("BASE_URL", "http://127.0.0.1:8002/v1"),
-        api_key=os.getenv("API_KEY", "EMPTY"),
-        model=os.getenv("MODEL_NAME", "qwen3-4b"),
-    )
+    provider = await _create_llm_provider()
+    if provider is None:
+        return TestResult(group="direct", episode_id=episode["id"],
+                          llm_calls=0, elapsed_ms=0.0)
     extractor = SimpleLLMExtractor(provider)
 
     result = TestResult(group="direct", episode_id=episode["id"])
@@ -125,23 +169,28 @@ async def run_direct(episode: Dict[str, Any]) -> TestResult:
     decisions = await extractor.extract_decision(episode["full_text"])
     elapsed = time.time() - start
 
-    result.decisions_found = [d.get("summary", "")[:50] for d in (decisions or [])]
-    result.llm_calls = 1
-    result.elapsed_ms = round(elapsed * 1000, 2)
-
-    # Calculate metrics
-    expected_decisions_set = {d["summary"] for d in episode["expected_decisions"]}
+    # Calculate metrics with fuzzy matching
+    expected_decisions = episode["expected_decisions"]
+    expected_count = len(expected_decisions)
     if decisions:
-        found_titles = {d.get("title", "") or d.get("summary", "") for d in decisions}
-        hits = found_titles & expected_decisions_set
-        result.decision_precision = len(hits) / len(found_titles) if found_titles else 1.0
-        result.decision_recall = len(hits) / len(expected_decisions_set) if expected_decisions_set else 1.0
+        found_texts = [
+            (d.get("title", "") or d.get("summary", "") or "")[:80]
+            for d in decisions
+        ]
+        hits = _match_decisions(found_texts, expected_decisions)
+        found_count = len(found_texts)
+        result.decision_precision = hits / found_count if found_count else 1.0
+        result.decision_recall = hits / expected_count if expected_count else 1.0
         result.decision_f1 = (2 * result.decision_precision * result.decision_recall /
                               (result.decision_precision + result.decision_recall)) if (result.decision_precision + result.decision_recall) > 0 else 0.0
     else:
         result.decision_precision = 0.0
         result.decision_recall = 0.0
         result.decision_f1 = 0.0
+
+    result.decisions_found = [d.get("summary", "")[:50] for d in (decisions or [])]
+    result.llm_calls = 1
+    result.elapsed_ms = round(elapsed * 1000, 2)
 
     return result
 
@@ -151,14 +200,12 @@ async def run_two_stage(episode: Dict[str, Any]) -> TestResult:
     from src.extractors.simple_llm_extractor import SimpleLLMExtractor
     from src.extractors.memory_extractor import MemoryExtractor
     from src.storage.entity_store import EntityStore
-    from src.model.llm_provider import LLMProvider
     from src.ontology.manager import OntologyManager
 
-    provider = LLMProvider(
-        base_url=os.getenv("BASE_URL", "http://127.0.0.1:8002/v1"),
-        api_key=os.getenv("API_KEY", "EMPTY"),
-        model=os.getenv("MODEL_NAME", "qwen3-4b"),
-    )
+    provider = await _create_llm_provider()
+    if provider is None:
+        return TestResult(group="two_stage", episode_id=episode["id"],
+                          llm_calls=0, elapsed_ms=0.0)
     memory_extractor = MemoryExtractor(provider, OntologyManager.get_instance())
     entity_store = EntityStore()
     decision_extractor = SimpleLLMExtractor(provider)
@@ -206,13 +253,18 @@ async def run_two_stage(episode: Dict[str, Any]) -> TestResult:
     else:
         result.entity_recall = 1.0
 
-    # Decision metrics
-    expected_decisions_set = {d["summary"] for d in episode["expected_decisions"]}
+    # Decision metrics (fuzzy matching)
+    expected_decisions = episode["expected_decisions"]
+    expected_count = len(expected_decisions)
     if decisions:
-        found_titles = {d.get("title", "") or d.get("summary", "") for d in decisions}
-        hits = found_titles & expected_decisions_set
-        result.decision_precision = len(hits) / len(found_titles) if found_titles else 1.0
-        result.decision_recall = len(hits) / len(expected_decisions_set) if expected_decisions_set else 1.0
+        found_texts = [
+            (d.get("title", "") or d.get("summary", "") or "")[:80]
+            for d in decisions
+        ]
+        hits = _match_decisions(found_texts, expected_decisions)
+        found_count = len(found_texts)
+        result.decision_precision = hits / found_count if found_count else 1.0
+        result.decision_recall = hits / expected_count if expected_count else 1.0
         result.decision_f1 = (2 * result.decision_precision * result.decision_recall /
                               (result.decision_precision + result.decision_recall)) if (result.decision_precision + result.decision_recall) > 0 else 0.0
     else:
