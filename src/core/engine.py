@@ -455,6 +455,8 @@ class MemoryEngine:
 
         self._memory_extractor: Optional[Any] = None
         self._entity_store: Optional[Any] = None
+        self._neo4j_sync: Optional[Any] = None
+        self._doc_splitter: Optional[Any] = None
 
         # Project codebase detection
         self._project_detector: Optional[Any] = None
@@ -758,7 +760,7 @@ class MemoryEngine:
         1. 将文件变更列表传入 ConversationFileBridge
         2. 通过 bridge 构建 ProjectDevelopmentContext
         3. 如果 bridge 判断需要与对话上下文合并，提取决策
-        4. 对变更文档执行实体提取（走 MemoryExtractor → EntityStore → Neo4j）
+        4. 对变更文档执行实体提取（分块 → MemoryExtractor → EntityStore → Neo4j）
         """
         changes = getattr(detect_result, "changes", [])
         if not changes:
@@ -770,39 +772,86 @@ class MemoryEngine:
             sum(1 for c in changes if getattr(c, "is_significant", False)),
         )
 
-        # ── 文档实体提取 ──
-        # 对每个有内容的文件变更，走 MemoryExtractor 提取实体并存入 EntityStore
+        # ── 文档实体提取（分块 → 提取 → 同步） ──
         if self._memory_extractor is not None and self._entity_store is not None:
+            project_root = self._resolve_project_root()
+            entity_count = 0
+            rel_count = 0
+
             for change in changes:
-                content = getattr(change, "content", "") or ""
-                doc_id = getattr(change, "doc_token", "") or getattr(change, "file_path", "")
-                if not content or not doc_id:
+                if not getattr(change, "is_significant", False):
                     continue
+                if getattr(change, "change_type", "") == "deleted":
+                    continue
+
+                file_path = getattr(change, "file_path", "")
+                if not file_path:
+                    continue
+
+                # ── 读取文件内容 ──
+                abs_path = os.path.join(project_root, file_path) if project_root else file_path
+                if not os.path.isfile(abs_path):
+                    logger.debug("[Project] File not found (may have been deleted): %s", file_path)
+                    continue
+
                 try:
-                    mem_result = await self._memory_extractor.extract(
-                        content,
-                        episode_id=doc_id,
-                        existing_entities=self._entity_store.build_extraction_context(),
-                    )
-                    if mem_result.entities:
-                        # Mark entities as coming from a document source
+                    with open(abs_path, encoding="utf-8", errors="replace") as f:
+                        content = f.read()
+                except Exception as exc:
+                    logger.warning("[Project] Failed to read %s: %s", file_path, exc)
+                    continue
+
+                if not content.strip():
+                    continue
+
+                # ── CocoIndex 分块 ──
+                chunks = self._split_document(content, file_path)
+
+                # ── 逐块提取实体 ──
+                for chunk_idx, chunk in enumerate(chunks):
+                    chunk_text = chunk.text if hasattr(chunk, "text") else chunk
+                    chunk_id = f"{file_path}#chunk-{chunk_idx}"
+
+                    try:
+                        mem_result = await self._memory_extractor.extract(
+                            chunk_text,
+                            episode_id=chunk_id,
+                            existing_entities=self._entity_store.build_extraction_context(),
+                        )
+                        if not mem_result or (not mem_result.entities and not mem_result.relationships):
+                            continue
+
                         for ent in mem_result.entities:
                             ent.source_type = "document"
                         self._entity_store.add_entities(mem_result.entities)
                         self._entity_store.add_relationships(mem_result.relationships)
                         self._entity_store.add_facts(mem_result.facts)
-                        logger.info(
-                            "[Project] Doc entity extraction: %s → %d entities, %d rels",
-                            doc_id[:20] if len(doc_id) > 20 else doc_id,
+
+                        entity_count += len(mem_result.entities)
+                        rel_count += len(mem_result.relationships)
+
+                        logger.debug(
+                            "[Project] Chunk extraction: %s → %d entities, %d rels",
+                            chunk_id,
                             len(mem_result.entities),
                             len(mem_result.relationships),
                         )
-                except Exception as exc:
-                    logger.warning(
-                        "[Project] Doc entity extraction failed for %s: %s",
-                        doc_id[:20] if len(doc_id) > 20 else doc_id,
-                        exc,
-                    )
+                    except Exception as exc:
+                        logger.warning(
+                            "[Project] Chunk extraction failed for %s: %s",
+                            chunk_id, exc,
+                        )
+
+            if entity_count > 0:
+                logger.info(
+                    "[Project] Doc entity extraction complete: %d entities, %d rels across %d files",
+                    entity_count,
+                    rel_count,
+                    sum(1 for c in changes if getattr(c, "is_significant", False)),
+                )
+
+                # ── 同步到 Neo4j ──
+                await self._sync_doc_entities_to_neo4j()
 
         # Feed file changes to the conversation-file bridge
         if self._project_bridge and changes:
@@ -816,6 +865,116 @@ class MemoryEngine:
                 len(ctx.significant_changes),
                 len(ctx.linked_conversation_snippets),
             )
+
+    def _resolve_project_root(self) -> str:
+        """Resolve the project codebase root directory."""
+        if self._project_detector is not None:
+            watcher = getattr(self._project_detector, "_watcher", None)
+            if watcher is not None:
+                return getattr(watcher, "project_dir", "") or ""
+        return ""
+
+    def _split_document(self, content: str, file_path: str) -> List[Any]:
+        """Split document content into chunks using CocoIndex splitter.
+
+        Falls back to a single chunk (the full content) when:
+        - No splitter is configured
+        - Content is small (< 1024 bytes)
+        - The splitter raises an error
+        """
+        # Small files — skip splitting, the content fits in one LLM call
+        if len(content) < 1024:
+            return self._make_single_chunk(content)
+
+        if self._doc_splitter is None:
+            return self._make_single_chunk(content)
+
+        try:
+            # Infer language from file extension
+            language = self._infer_splitter_language(file_path)
+            chunks = self._doc_splitter.split(
+                content,
+                language=language,
+            )
+            if chunks:
+                logger.debug(
+                    "[Project] Split %s (%d bytes) into %d chunks (language=%s)",
+                    file_path, len(content), len(chunks), language or "auto",
+                )
+                return chunks
+            return self._make_single_chunk(content)
+        except Exception as exc:
+            logger.warning("[Project] Chunking failed for %s, using full content: %s", file_path, exc)
+            return self._make_single_chunk(content)
+
+    def _make_single_chunk(self, content: str) -> List[Any]:
+        """Wrap content as a single chunk for uniform processing."""
+        class _SimpleChunk:
+            def __init__(self, text, start=0, end=None):
+                self.text = text
+                self.start = start
+                self.end = end or len(text)
+        return [_SimpleChunk(content)]
+
+    @staticmethod
+    def _infer_splitter_language(file_path: str) -> Optional[str]:
+        """Map file extension to CocoIndex splitter language parameter."""
+        ext = os.path.splitext(file_path)[1].lower()
+        lang_map = {
+            ".md": "markdown",
+            ".markdown": "markdown",
+            ".py": "python",
+            ".js": "javascript",
+            ".ts": "typescript",
+            ".jsx": "javascript",
+            ".tsx": "typescript",
+            ".java": "java",
+            ".go": "go",
+            ".rs": "rust",
+            ".cpp": "cpp",
+            ".c": "c",
+            ".h": "c",
+            ".hpp": "cpp",
+            ".rb": "ruby",
+            ".php": "php",
+            ".swift": "swift",
+            ".kt": "kotlin",
+            ".scala": "scala",
+            ".sh": "bash",
+            ".bash": "bash",
+            ".yaml": "yaml",
+            ".yml": "yaml",
+            ".json": "json",
+            ".xml": "xml",
+            ".html": "html",
+            ".css": "css",
+            ".sql": "sql",
+            ".r": "r",
+            ".toml": "toml",
+            ".txt": None,
+        }
+        return lang_map.get(ext)
+
+    async def _sync_doc_entities_to_neo4j(self) -> None:
+        """Sync document entities from EntityStore to Neo4j."""
+        if self._neo4j_sync is None:
+            logger.debug("[Project] Neo4j sync not configured, skipping")
+            return
+        try:
+            stats = await self._neo4j_sync.sync_all(
+                entity_store=self._entity_store,
+            )
+            if stats.get("entities_written", 0) > 0 or stats.get("relationships_written", 0) > 0:
+                logger.info(
+                    "[Project] Neo4j sync: %d entities, %d rels written (errors=%d)",
+                    stats.get("entities_written", 0),
+                    stats.get("relationships_written", 0),
+                    stats.get("errors", 0),
+                )
+            else:
+                logger.debug("[Project] Neo4j sync: no new entities to sync")
+        except Exception as exc:
+            logger.warning("[Project] Neo4j sync failed: %s", exc)
 
     async def _build_project_context(self, detect_result: Any) -> Any:
         """Build ProjectDevelopmentContext from detect result.
@@ -1289,6 +1448,26 @@ class MemoryEngine:
             logger.info("Memory extractor set for 2-stage pipeline")
         if entity_store:
             logger.info("Entity store set for 2-stage pipeline")
+
+    def set_doc_splitter(self, splitter: Any = None) -> None:
+        """设置文档分块器（CocoIndex RecursiveSplitter）
+
+        启用文档实体提取前的内容分块，对大文件按语法边界拆分
+        后再逐块提取实体。
+        """
+        self._doc_splitter = splitter
+        if splitter:
+            logger.info("Document splitter set for doc entity extraction")
+
+    def set_neo4j_sync(self, neo4j_sync: Any = None) -> None:
+        """设置 Neo4j 同步引擎（Neo4jSyncEngine）
+
+        将 EntityStore 中的脏实体/关系同步到 Neo4j 数据库，
+        支持 Entity→MENTIONS→Episode/Document→REFERENCES→Decision 图查询。
+        """
+        self._neo4j_sync = neo4j_sync
+        if neo4j_sync:
+            logger.info("Neo4j sync engine set")
 
     def set_project_detector(
         self,
