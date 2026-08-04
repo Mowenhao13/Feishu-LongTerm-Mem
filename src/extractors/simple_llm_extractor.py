@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 from src.prompts.decision_prompts import DECISION_EXTRACTION_PROMPT_SHORT
 
@@ -38,7 +38,7 @@ class SimpleLLMExtractor:
         self._llm = llm_provider
         self._trace_id: Optional[str] = None
         self._confidence_threshold = 0.70  # 提高置信度阈值，只保留高置信度决策
-        logger.info("[LLM Extractor] Initialized with provider=%s, confidence_threshold=%.2f",
+        logger.info("[LLM Extractor] Initialized with provider=%s, confidence_threshold=%.2f", 
                     type(llm_provider).__name__, self._confidence_threshold)
 
     def set_trace_id(self, trace_id: Optional[str]) -> None:
@@ -61,7 +61,6 @@ class SimpleLLMExtractor:
             resp = await self._llm.generate(
                 prompt,
                 response_format={"type": "json_object"},
-                trace_id=self._trace_id,
             )
             logger.info("[LLM Extractor] <<< LLM response len=%d preview=%.200s", len(resp), resp[:200])
 
@@ -140,5 +139,136 @@ class SimpleLLMExtractor:
         except Exception as e:
             import traceback
             logger.error("[LLM Extractor] LLM call failed: %s", e)
+            logger.error("[LLM Extractor] Traceback: %s", traceback.format_exc())
+            return None
+
+    async def extract_with_context(
+        self,
+        content: str,
+        entity_context: Optional[List[Dict[str, Any]]] = None,
+        existing_decisions: Optional[List[Dict[str, Any]]] = None,
+    ) -> Optional[List[dict]]:
+        """提取决策 — 支持实体上下文注入（Stage 2 of two-stage pipeline）
+
+        Same as extract_decision but injects entity names from Stage 1
+        into the prompt so decisions can reference specific entities.
+
+        Args:
+            content: 对话内容
+            entity_context: Stage 1 提取的实体列表 [{"name": "...", "entity_type": "..."}, ...]
+            existing_decisions: 已有决策列表（去重用）
+
+        Returns:
+            Optional[List[dict]]: 同 extract_decision
+        """
+        if not content or not content.strip():
+            logger.info("[LLM Extractor] extract_with_context: Empty content, skipping")
+            return None
+
+        # Inject entity context as a preamble
+        if entity_context:
+            entity_lines = ["\n## 本段对话中已知的实体"]
+            for ent in entity_context:
+                name = ent.get("name", "?")
+                etype = ent.get("entity_type", "?")
+                entity_lines.append(f"- {name} ({etype})")
+            entity_lines.append("\n提取决策时，请尽量引用上述实体的具体名称。\n")
+            entity_preamble = "\n".join(entity_lines)
+        else:
+            entity_preamble = ""
+
+        if existing_decisions:
+            decision_lines = ["\n## 系统中已有决策（仅作参考）"]
+            for d in existing_decisions:
+                decision_lines.append(f"- {d.get('title', '') or d.get('summary', '')}")
+            decision_preamble = "\n".join(decision_lines)
+        else:
+            decision_preamble = ""
+
+        safe_content = content.replace("{", "{{").replace("}", "}}")
+        enriched_content = f"{entity_preamble}\n{decision_preamble}\n\n## 对话内容\n\n{safe_content}"
+
+        prompt = DECISION_EXTRACTION_PROMPT_SHORT.format(conversation_text=enriched_content)
+        logger.info("[LLM Extractor] extract_with_context: >>> Calling LLM (len=%d, entities=%d)",
+                    len(prompt), len(entity_context) if entity_context else 0)
+
+        try:
+            resp = await self._llm.generate(
+                prompt,
+                response_format={"type": "json_object"},
+                trace_id=self._trace_id,
+            )
+            logger.info("[LLM Extractor] extract_with_context: <<< LLM resp len=%d preview=%.200s",
+                        len(resp), resp[:200])
+
+            raw_resp = resp.strip()
+            if "```json" in raw_resp:
+                start = raw_resp.index("```json") + 7
+                end = raw_resp.index("```", start) if "```" in raw_resp[start:] else len(raw_resp)
+                raw_resp = raw_resp[start:end].strip()
+
+            result = json.loads(raw_resp)
+            has_any = result.get("has_decisions", result.get("has_decision", False))
+            if not has_any:
+                logger.info("[LLM Extractor] extract_with_context: No decision found")
+                return None
+
+            decisions = result.get("decisions", [])
+            if not decisions:
+                logger.info("[LLM Extractor] extract_with_context: Decisions array empty")
+                return None
+
+            # Apply same confidence calculation as extract_decision
+            extracted = []
+            for d in decisions:
+                base_conf = d.get("confidence", 0.80)
+                is_sug = bool(d.get("is_suggestion", False))
+                impact = d.get("impact_level", "minor")
+                has_executor = bool(d.get("executor"))
+                title = d.get("title", "")
+
+                conf = base_conf
+                if is_sug:
+                    conf = min(conf, 0.75)
+                if impact in ("advisory", "minor"):
+                    conf -= 0.05
+                if not has_executor:
+                    conf -= 0.05
+                if any(w in title for w in ["考虑", "建议", "可以", "看看", "确认", "准备"]):
+                    conf -= 0.10
+                if any(w in title for w in ["决定", "确认", "通过", "采用", "切换", "升级"]):
+                    conf += 0.05
+                conf = max(0.50, min(0.95, round(conf, 2)))
+
+                if conf >= self._confidence_threshold:
+                    extracted.append({
+                        "title": d.get("title", ""),
+                        "content": d.get("content", content),
+                        "summary": d.get("title", ""),
+                        "topic": "general",
+                        "status": d.get("status", "decided"),
+                        "impact_level": impact,
+                        "is_suggestion": is_sug,
+                        "parent_id": d.get("parent_id", ""),
+                        "confidence": conf,
+                        "rationale": d.get("rationale", ""),
+                        "proposer": d.get("proposer"),
+                        "executor": d.get("executor"),
+                    })
+                else:
+                    logger.info("[LLM Extractor] extract_with_context: Skipping decision "
+                                "(confidence=%.2f): %s", conf, title)
+
+            logger.info("[LLM Extractor] extract_with_context: Extracted %d decisions",
+                        len(extracted))
+            return extracted if extracted else None
+
+        except json.JSONDecodeError as e:
+            logger.error("[LLM Extractor] extract_with_context: Parse error: %s", e)
+            logger.error("[LLM Extractor] Raw: %.300s", resp[:300] if resp else "(empty)")
+            return None
+        except Exception as e:
+            import traceback
+            logger.error("[LLM Extractor] extract_with_context: Failed: %s", e)
             logger.error("[LLM Extractor] Traceback: %s", traceback.format_exc())
             return None

@@ -453,6 +453,9 @@ class MemoryEngine:
         self._hypergraph_embedding: Any = None
         self._hypergraph_modified: bool = False
 
+        self._memory_extractor: Optional[Any] = None
+        self._entity_store: Optional[Any] = None
+
         self._processed_episode_hashes: Set[str] = set()
         self._task_view_syncer: Any = None
 
@@ -862,6 +865,138 @@ class MemoryEngine:
             import traceback
             logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
 
+    async def _process_episode_v2(self, episode: Any) -> None:
+        """两阶段处理 pipeline
+
+        Stage 1: MemoryExtractor — 提取实体/关系/事实
+        Stage 2: DecisionExtractor with entity context — 提取决策
+
+        流程:
+        1. 内容去重 (content hash)
+        2. MemoryExtractor.extract() — 单次 LLM 调用获取实体/关系/事实
+        3. 将提取结果存入 EntityStore
+        4. 用实体上下文调用 DecisionExtractor.extract_with_context()
+        5. 若 Stage 2 返回空，fallback 到 _extract_decision
+        6. 应用决策 mutation
+        """
+        if self._memory_extractor is None or self._entity_store is None:
+            logger.info("[Engine] Memory extractor or entity store not configured, "
+                        "falling back to v1 pipeline")
+            await self._process_episode(episode)
+            return
+
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
+        content = getattr(episode, "full_text", "") or getattr(episode, "content", "")
+        episode_id = getattr(episode, "id", "")
+        chat_id = getattr(episode, "chat_id", "")
+
+        if not content:
+            logger.info("[Engine] v2: Empty content, skipping")
+            return
+
+        content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16]
+        if content_hash in self._processed_episode_hashes:
+            logger.info("[Engine] v2: Episode %s content hash %s already processed, skipping",
+                        episode_id[:12] if episode_id else "?", content_hash)
+            return
+        self._processed_episode_hashes.add(content_hash)
+
+        logger.info("[Engine] >>> _process_episode_v2 id=%s chat=%s len=%d trace_id=%s",
+                    episode_id[:12] if episode_id else "?",
+                    chat_id[:12] if chat_id else "?",
+                    len(content), trace_id)
+
+        proc_start = time.time()
+
+        try:
+            # ── Stage 1: Memory Extraction ──
+            if hasattr(self._memory_extractor, "set_trace_id"):
+                self._memory_extractor.set_trace_id(trace_id)
+
+            existing_entity_ctx = self._entity_store.build_extraction_context()
+            mem_result = await self._memory_extractor.extract(
+                content,
+                episode_id=episode_id,
+                existing_entities=existing_entity_ctx,
+            )
+
+            logger.info("[Engine] v2 Stage 1 done: entities=%d rels=%d facts=%d",
+                        len(mem_result.entities), len(mem_result.relationships),
+                        len(mem_result.facts))
+
+            # Store results
+            self._entity_store.add_entities(mem_result.entities)
+            self._entity_store.add_relationships(mem_result.relationships)
+            self._entity_store.add_facts(mem_result.facts)
+
+            # ── Stage 2: Decision Extraction with Entity Context ──
+            entity_context = [
+                {"name": e.name, "entity_type": e.entity_type}
+                for e in mem_result.entities
+            ]
+
+            nodes: Any = None
+            if self._extractor is not None:
+                if hasattr(self._extractor, "set_trace_id"):
+                    self._extractor.set_trace_id(trace_id)
+
+                if hasattr(self._extractor, "extract_with_context"):
+                    logger.info("[Engine] v2 Stage 2: Calling extract_with_context")
+                    if asyncio.iscoroutinefunction(self._extractor.extract_with_context):
+                        result = await self._extractor.extract_with_context(
+                            content,
+                            entity_context=entity_context,
+                            existing_decisions=self._build_existing_decisions_context(),
+                        )
+                    else:
+                        result = await asyncio.to_thread(
+                            self._extractor.extract_with_context,
+                            content,
+                            entity_context,
+                            self._build_existing_decisions_context(),
+                        )
+
+                    if result:
+                        logger.info("[Engine] v2 Stage 2: Extracted %d decisions", len(result))
+                        for item in result:
+                            node = self._dict_to_node(item, "im")
+                            if node:
+                                await self._apply_decision_mutations(node, "im", trace_id=trace_id)
+                        nodes = result
+                else:
+                    logger.info("[Engine] v2: extract_with_context not available, using v1 extract_decision")
+                    nodes = await self._extract_decision(
+                        content, "im",
+                        existing_decisions=self._build_existing_decisions_context(),
+                        trace_id=trace_id,
+                    )
+                    if nodes:
+                        for node in nodes:
+                            await self._apply_decision_mutations(node, "im", trace_id=trace_id)
+            else:
+                logger.info("[Engine] v2: No decision extractor, decisions skipped")
+
+            # Fallback to direct extraction if Stage 2 returned nothing
+            if not nodes and self._extractor is not None and hasattr(self._extractor, "extract_decision"):
+                logger.info("[Engine] v2: Stage 2 returned empty, falling back to direct extraction")
+                fallback = await self._extract_decision(
+                    content, "im",
+                    existing_decisions=self._build_existing_decisions_context(),
+                    trace_id=trace_id,
+                )
+                if fallback:
+                    for node in fallback:
+                        await self._apply_decision_mutations(node, "im", trace_id=trace_id)
+
+            elapsed = time.time() - proc_start
+            logger.info("[Engine] <<< _process_episode_v2 done time=%.2fs", elapsed)
+
+        except Exception as e:
+            elapsed = time.time() - proc_start
+            logger.error("[Engine] _process_episode_v2 FAILED after %.2fs: %s", elapsed, e)
+            import traceback
+            logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
+
     async def _extract_decision(self, content: str, source: str,
                                  existing_decisions: Optional[List[Dict]] = None,
                                  trace_id: Optional[str] = None) -> Optional[List[DecisionNode]]:
@@ -981,6 +1116,18 @@ class MemoryEngine:
             logger.info("Embedding provider set for similarity search")
         if reranker:
             logger.info("Reranker provider set for similarity search")
+
+    def set_memory_extractor(self, memory_extractor: Any = None, entity_store: Any = None) -> None:
+        """设置 Stage 1 记忆提取器（MemoryExtractor）和 EntityStore
+
+        启用两阶段管道 (_process_episode_v2)。
+        """
+        self._memory_extractor = memory_extractor
+        self._entity_store = entity_store
+        if memory_extractor:
+            logger.info("Memory extractor set for 2-stage pipeline")
+        if entity_store:
+            logger.info("Entity store set for 2-stage pipeline")
 
     @staticmethod
     def _summary_similarity(a: str, b: str) -> float:
