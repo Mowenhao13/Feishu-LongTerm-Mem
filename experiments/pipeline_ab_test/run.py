@@ -14,6 +14,14 @@ Pipeline A/B 测试 — 对比单阶段 (direct) 和两阶段 (two_stage) 提取
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# Ensure src module is importable from experiments/ subdirectory
+_repo_root = Path(__file__).resolve().parent.parent.parent
+if str(_repo_root) not in sys.path:
+    sys.path.insert(0, str(_repo_root))
+
 import argparse
 import json
 import logging
