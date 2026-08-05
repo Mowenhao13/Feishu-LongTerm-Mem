@@ -197,7 +197,9 @@ Analyze the following conversation and extract ALL valid decisions and suggestio
 1. A clear choice/plan/conclusion was reached
 2. Technical parameters were specified and confirmed (e.g. shard_count=256)
 3. Responsibility was assigned ("张三负责", "李四来改")
-4. Explicit agreement ("那就定", "确认用", "同意", "就这样", "OK", "好的")
+4. Explicit agreement ("那就定", "确认用", "同意", "就这样", "OK", "好的", "行，就按")
+5. A definitive statement about what WILL be done ("下周启动", "先做POC", "先试点")
+6. Someone proposes a concrete plan and it gets acknowledged/accepted
 
 # WHAT COUNTS AS A SUGGESTION (is_suggestion=true)?
 
@@ -217,6 +219,29 @@ Analyze the following conversation and extract ALL valid decisions and suggestio
 5. Pure questions without any proposed solution
 6. Simple information sharing without actionable items
 
+# DECISION SUMMARY STYLE GUIDELINES
+
+When writing the `title` (which doubles as `summary`), follow these patterns:
+
+**For confirmed decisions**, match the ground-truth style:
+- Start with the conclusion, then context: "那折中选Nginx + ModSecurity，我负责加固配置。"
+- Use action-oriented language: "下周一启动Istio灰度发布"
+- Include key technical details: "同意混合模型，订单用Raft，其他用最终一致性。"
+- Mention timeline when present: "先做POC，一个月后给结论。"
+- Format like: "那就定{{方案}}吧，{{执行人}}负责{{任务}}" or "同意{{方案}}，{{执行人}}出{{交付物}}"
+- Keep summaries CONCISE: 15-40 characters, focused on the decision outcome
+- **IMPORTANT**: Write the title/summary as a natural language statement of what was decided, NOT a label or agenda topic
+
+**Examples of good summary style**:
+- ✅ "那先做POC，一个月后给结论。"
+- ✅ "同意混合模型，订单用Raft，其他用最终一致性。"
+- ✅ "那就定GP3吧，成本可控且安全达标。决策了"
+- ✅ "下周一启动Istio灰度发布"
+- ✅ "行，先按这个配置上线，观察一周再调整。"
+- ❌ "技术选型" (too vague, no decision content)
+- ❌ "讨论预算问题" (not a decision)
+- ❌ "需要验证一下性能" (vague, no commitment)
+
 ---
 
 # OUTPUT FORMAT
@@ -230,6 +255,7 @@ Return JSON:
             "decision_id": "dec_1",
             "title": "采用PostgreSQL作为主数据库",
             "content": "决定使用PostgreSQL替代MySQL，先并行运行再切换",
+            "topic": "数据库选型",
             "confidence": 0.90,
             "rationale": "团队达成共识，有明确执行计划",
             "proposer": "张三",
@@ -263,7 +289,7 @@ Return JSON:
 
 If no decisions found, return {{"has_decisions": false, "decisions": []}}
 
-**IMPORTANT**: 
+**IMPORTANT**:
 - Set `is_suggestion: true` for items that are proposed but not yet confirmed
 - Set `is_suggestion: false` for items that have been agreed upon or decided
 - Always extract a specific `topic` — DO NOT default to "general" unless truly cross-cutting

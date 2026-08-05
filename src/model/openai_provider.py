@@ -57,7 +57,7 @@ class OpenAIProvider(LLMProvider):
         self.enable_stats = enable_stats
 
         # Use OpenRouter API key and base URL
-        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("API_KEY")
         self.base_url = base_url or "https://openrouter.ai/api/v1"
         
         # Optional statistics feature (disabled by default, does not affect existing usage)

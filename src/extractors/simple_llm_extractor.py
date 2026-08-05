@@ -207,11 +207,11 @@ class SimpleLLMExtractor:
         safe_content = content.replace("{", "{{").replace("}", "}}")
         enriched_parts = []
         if entity_preamble:
-            enriched_parts.append(entity_preamble)
+            enriched_parts.append(entity_preamble.replace("{", "{{").replace("}", "}}"))
         if project_preamble:
-            enriched_parts.append(project_preamble)
+            enriched_parts.append(project_preamble.replace("{", "{{").replace("}", "}}"))
         if existing_decisions and decision_preamble:
-            enriched_parts.append(decision_preamble)
+            enriched_parts.append(decision_preamble.replace("{", "{{").replace("}", "}}"))
         enriched_parts.append(f"\n## 对话内容\n\n{safe_content}")
         enriched_content = "\n".join(enriched_parts)
 
