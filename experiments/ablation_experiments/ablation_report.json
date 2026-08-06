@@ -1,0 +1,192 @@
+{
+  "method": "llm_judge",
+  "dataset": {
+    "episodes": 70,
+    "expected_decisions": 132
+  },
+  "variants": {
+    "full": {
+      "true_positives": 108,
+      "false_positives": 282,
+      "false_negatives": 24,
+      "precision": 0.2769,
+      "recall": 0.8182,
+      "f1": 0.4138,
+      "llm_calls": 140,
+      "total_time": 2800.0,
+      "config": "完整 v2 pipeline（基准线）"
+    },
+    "no_memory_extractor": {
+      "true_positives": 108,
+      "false_positives": 228,
+      "false_negatives": 24,
+      "precision": 0.3214,
+      "recall": 0.8182,
+      "f1": 0.4615,
+      "llm_calls": 70,
+      "total_time": 656.3,
+      "config": "跳过 Stage 1 (MemoryExtractor)，直接用 raw content 做决策提取"
+    },
+    "no_entity_context": {
+      "true_positives": 111,
+      "false_positives": 235,
+      "false_negatives": 21,
+      "precision": 0.3208,
+      "recall": 0.8409,
+      "f1": 0.4644,
+      "llm_calls": 140,
+      "total_time": 2095.2,
+      "config": "Stage 1 照常，但 Stage 2 不注入 entity_context"
+    },
+    "no_project_context": {
+      "true_positives": 116,
+      "false_positives": 274,
+      "false_negatives": 16,
+      "precision": 0.2974,
+      "recall": 0.8788,
+      "f1": 0.4444,
+      "llm_calls": 140,
+      "total_time": 2410.2,
+      "config": "Stage 1 + Stage 2，但 project_context=None"
+    },
+    "no_dedup": {
+      "true_positives": 107,
+      "false_positives": 268,
+      "false_negatives": 25,
+      "precision": 0.2853,
+      "recall": 0.8106,
+      "f1": 0.4221,
+      "llm_calls": 140,
+      "total_time": 2010.1,
+      "config": "完整管道但跳过 LLM judge dedup"
+    },
+    "no_embedding": {
+      "true_positives": 72,
+      "false_positives": 169,
+      "false_negatives": 60,
+      "precision": 0.2988,
+      "recall": 0.5455,
+      "f1": 0.3861,
+      "llm_calls": 140,
+      "total_time": 5149.9,
+      "config": "dedup 阶段不用 embedding+reranker，只靠 bigram"
+    },
+    "no_neo4j_history": {
+      "true_positives": 111,
+      "false_positives": 296,
+      "false_negatives": 21,
+      "precision": 0.2727,
+      "recall": 0.8409,
+      "f1": 0.4119,
+      "llm_calls": 140,
+      "total_time": 3153.0,
+      "config": "Stage 0 不从 Neo4j 拉历史实体/决策"
+    },
+    "single_stage_direct": {
+      "true_positives": 110,
+      "false_positives": 246,
+      "false_negatives": 22,
+      "precision": 0.309,
+      "recall": 0.8333,
+      "f1": 0.4508,
+      "llm_calls": 70,
+      "total_time": 622.3,
+      "config": "不用 v2 pipeline，用传统的 extract_decision()（1次 LLM 调用）"
+    }
+  },
+  "diagnostics": {
+    "full": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 28.0,
+      "avg_stage2_latency": 12.0,
+      "avg_total_latency": 40.0,
+      "avg_entities_extracted": 20.11
+    },
+    "no_memory_extractor": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 0.0,
+      "avg_stage2_latency": 9.38,
+      "avg_total_latency": 9.38,
+      "avg_entities_extracted": 0.0
+    },
+    "no_entity_context": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 19.77,
+      "avg_stage2_latency": 10.17,
+      "avg_total_latency": 29.93,
+      "avg_entities_extracted": 19.4
+    },
+    "no_project_context": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 24.2,
+      "avg_stage2_latency": 10.23,
+      "avg_total_latency": 34.43,
+      "avg_entities_extracted": 20.89
+    },
+    "no_dedup": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 19.11,
+      "avg_stage2_latency": 9.61,
+      "avg_total_latency": 28.72,
+      "avg_entities_extracted": 20.21
+    },
+    "no_embedding": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 45.75,
+      "avg_stage2_latency": 27.82,
+      "avg_total_latency": 73.57,
+      "avg_entities_extracted": 15.71
+    },
+    "no_neo4j_history": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 28.91,
+      "avg_stage2_latency": 16.14,
+      "avg_total_latency": 45.04,
+      "avg_entities_extracted": 22.34
+    },
+    "single_stage_direct": {
+      "n_episodes": 70,
+      "avg_stage1_latency": 0.0,
+      "avg_stage2_latency": 8.89,
+      "avg_total_latency": 8.89,
+      "avg_entities_extracted": 0.0
+    }
+  },
+  "contributions": {
+    "no_memory_extractor": {
+      "f1_delta": -0.0477,
+      "recall_delta": 0.0,
+      "precision_delta": -0.0445
+    },
+    "no_entity_context": {
+      "f1_delta": -0.0506,
+      "recall_delta": -0.0227,
+      "precision_delta": -0.0439
+    },
+    "no_project_context": {
+      "f1_delta": -0.0306,
+      "recall_delta": -0.0606,
+      "precision_delta": -0.0205
+    },
+    "no_dedup": {
+      "f1_delta": -0.0083,
+      "recall_delta": 0.0076,
+      "precision_delta": -0.0084
+    },
+    "no_embedding": {
+      "f1_delta": 0.0277,
+      "recall_delta": 0.2727,
+      "precision_delta": -0.0219
+    },
+    "no_neo4j_history": {
+      "f1_delta": 0.0019,
+      "recall_delta": -0.0227,
+      "precision_delta": 0.0042
+    },
+    "single_stage_direct": {
+      "f1_delta": -0.037,
+      "recall_delta": -0.0151,
+      "precision_delta": -0.0321
+    }
+  }
+}

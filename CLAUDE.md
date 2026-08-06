@@ -104,4 +104,48 @@ python experiments/pipeline_ab_test/run.py --all
 
 ---
 
+## 6. 实验框架
+
+### 消融实验
+对比 8 个管道变体，量化每个组件的贡献度：
+```bash
+uv run python experiments/ablation/run_ablation.py --mode ablation
+
+# 快速验证（只跑前 3 个 chat）
+uv run python experiments/ablation/run_ablation.py --mode ablation --sample 3
+```
+
+### 阈值扫描
+对关键超参数做步进扫描，找最优值：
+```bash
+# embedding 相似度阈值 (0.3~0.8)
+uv run python experiments/ablation/run_ablation.py \
+    --mode threshold-scan \
+    --param embedding_similarity \
+    --range "0.3,0.8,0.05"
+
+# MemoryExtractor 置信度阈值 (0.3~0.9)
+uv run python experiments/ablation/run_ablation.py \
+    --mode threshold-scan \
+    --param confidence_threshold \
+    --range "0.3,0.9,0.1"
+```
+
+### Claude Code 基线
+对比纯 Agent 输出与分阶段管道的差距：
+```bash
+uv run python experiments/ablation/run_ablation.py --mode claude_code
+```
+
+### 实验结果记录
+所有实验结果自动写入 `EXPERIMENTS.md`（项目根目录）。
+每次 commit 前检查 `EXPERIMENTS.md` 是否有新记录，与代码改动一起提。
+
+### 提交要求
+1. **消融实验 Precision / Recall / F1 不能下降**（或下降原因有合理解释）
+2. **阈值扫描结果确认当前参数在最优区间**
+3. 实验记录（EXPERIMENTS.md）与代码改动一起提交
+
+---
+
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
