@@ -261,7 +261,9 @@ Return JSON:
             "proposer": "张三",
             "executor": "李四",
             "impact_level": "major",
-            "is_suggestion": false
+            "is_suggestion": false,
+            "source_message_ids": ["m013"],
+            "evidence_quote": "决定使用PostgreSQL替代MySQL，先并行运行再切换"
         }},
         {{
             "decision_id": "dec_2",
@@ -273,7 +275,9 @@ Return JSON:
             "proposer": "王五",
             "executor": null,
             "impact_level": "minor",
-            "is_suggestion": true
+            "is_suggestion": true,
+            "source_message_ids": ["m014"],
+            "evidence_quote": "有人提出key命名规范，但还在讨论中"
         }}
     ],
     "reasoning": "Brief explanation"
@@ -293,7 +297,12 @@ If no decisions found, return {{"has_decisions": false, "decisions": []}}
 - Set `is_suggestion: true` for items that are proposed but not yet confirmed
 - Set `is_suggestion: false` for items that have been agreed upon or decided
 - Always extract a specific `topic` — DO NOT default to "general" unless truly cross-cutting
-- WHEN IN DOUBT, EXTRACT IT (don't miss important decisions!)
+- For every extracted item, include `source_message_ids` using the message IDs visible in the conversation and an exact `evidence_quote` from those messages.
+- `source_message_ids` MUST be a non-empty JSON array of exact IDs from the visible `[msg_id]` prefixes, for example `["m013"]`.
+- `evidence_quote` MUST be a contiguous exact substring copied from one of the cited original chat messages, excluding speaker names and excluding any context sections.
+- Do NOT cite project context, entity context, existing-decision context, or inferred rationale as evidence. Evidence must come only from original chat lines.
+- If you cannot identify an exact supporting `[msg_id]` and quote for a candidate, do not output that candidate.
+- WHEN IN DOUBT, skip the item unless it has exact source-message evidence.
 """
 
 

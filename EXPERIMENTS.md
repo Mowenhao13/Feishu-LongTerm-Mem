@@ -153,6 +153,124 @@ uv run python experiments/ablation/run_ablation.py --mode ablation --sample 3
 
 ---
 
+## 2026-08-07 — 生产路径 contract smoke 与证据字段约束回归
+
+**目标**: 重建可信的 production-path 消融与评估流程，重点验证最终 `MemoryEngine → mutation/dedup → graph export → evidence-aware evaluator` 输出是否保留可审计证据字段。
+
+**代码修正**:
+- 强化 `DECISION_EXTRACTION_PROMPT_SHORT`：每条输出必须包含非空 `source_message_ids`，且 `evidence_quote` 必须是原始 `[msg_id]` 聊天行中的连续原文片段；没有精确证据则不输出。
+- 修复生产 mutation 路径丢证据字段的问题：`source_message_id`、`source_message_ids`、`evidence_quote`、`source_chat_id`、`is_suggestion` 通过 mutation metadata 写回最终 `DecisionNode`。
+- `SimpleLLMExtractor` / `MemoryExtractor` 记录 `last_error`，production runner 将 extractor/provider 错误标为 `runner_errors`，避免 LLM/API/JSON 失败静默变成空输出或 FN。
+- Langfuse 代码层临时强制禁用，避免当前 SDK API 不兼容影响生产 smoke；后续需单独恢复并验证 observability 集成。
+
+### 回归测试
+
+**命令**:
+
+```bash
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp uv run pytest -p no:cacheprovider \
+  tests/test_confirmed_decision_eval.py \
+  tests/test_evidence_linking.py \
+  tests/test_pipeline_options.py \
+  tests/test_production_ablation_runner.py \
+  tests/test_production_ablation_cli.py
+```
+
+**结果**: 19 passed。
+
+**补充相邻回归**:
+
+```bash
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp uv run pytest -p no:cacheprovider \
+  tests/test_prompts.py tests/test_llm_config.py tests/test_comparator.py
+```
+
+**结果**: 35 passed。合计 54 项相关回归通过，覆盖生产消融开关、证据 evaluator、runner/CLI contract、prompt 基础结构、LLM config 与 comparator。
+
+**未纳入通过数的旧测试**: `tests/test_eval.py tests/test_eval_pipeline.py` 本轮尝试结果为 44 passed / 7 failed；失败原因是旧 `eval_data/classification|conflicts|crosstopic|corpus` 数据目录缺失，以及旧 async 测试未加 pytest async 标记，非本次生产 contract 修改引入。
+
+### 真实 one-chat contract smoke
+
+**命令**:
+
+```bash
+LANGFUSE_ENABLE=false MODEL_NAME=deepseek-local \
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp \
+uv run python experiments/production_ablation/run.py --sample 1
+```
+
+**Run ID**: `3a488298c2614448bab1ada4fb5ec07d`
+
+| 指标 | 值 |
+|---|---:|
+| selected chats | 1 |
+| expected_count | 2 |
+| output_count | 8 |
+| strict_tp | 2 |
+| strict_fp | 6 |
+| strict_fn | 0 |
+| evidence_valid | 8 |
+| evidence_invalid | 0 |
+| precision | 0.2500 |
+| recall | 1.0000 |
+| f1 | 0.4000 |
+| incomplete | false |
+| runner_errors | 0 |
+
+**结论**: one-chat 最终生产输出的证据 contract 已通过。此前 smoke 出现 `evidence_valid=0/evidence_invalid=全部输出`，根因是 LLM 输出证据在 `_dict_to_node` 后进入 mutation CREATE 时未写回最终 graph 节点；现已修复并由 runner 测试覆盖。
+
+### 真实 three-chat contract smoke
+
+**命令**:
+
+```bash
+LANGFUSE_ENABLE=false MODEL_NAME=deepseek-local \
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp \
+uv run python experiments/production_ablation/run.py --sample 3
+```
+
+**Run ID**: `48873e09d6c74acea2787d4ef81a1f53`
+
+| 指标 | 值 |
+|---|---:|
+| selected chats | 3 |
+| expected_count | 6 |
+| output_count | 15 |
+| strict_tp | 5 |
+| strict_fp | 10 |
+| strict_fn | 1 |
+| evidence_valid | 15 |
+| evidence_invalid | 0 |
+| precision | 0.3333 |
+| recall | 0.8333 |
+| f1 | 0.4762 |
+| incomplete | false |
+| runner_errors | 0 |
+
+**结论**: three-chat smoke 满足当前 acceptance contract：样本 GT 对齐、生产路径执行完成、无 runner/evaluator 基础设施错误、最终输出全部带可追溯证据。
+
+### 仍需继续完善
+
+1. 当前 evaluator 未启用 semantic/neutral adjudicator，因此所有 GT 外但证据有效的 confirmed 输出仍计入 strict FP；下一步应接入三态 judge，将 `valid_extra` 与真正 invalid 区分开。
+2. three-chat smoke 中 `strict_fn=1`，需要查看漏掉的 GT 所在消息，判断是 prompt 漏召回、dedup 合并误伤，还是 GT 与 evidence 精确匹配粒度不一致。
+3. 当前 full 路径仍使用两阶段 entity context，smoke 输出密度偏高；后续应在 production ablation 中比较 `full`、`no_entity_context`、`no_memory_extractor`，再决定是否切 production 默认路径。
+4. 如果要把 Langfuse 打开参与生产 smoke，需要单独验证当前安装的 Langfuse SDK 版本 API；本轮为了 contract smoke 稳定性使用 `LANGFUSE_ENABLE=false`。
+
+### Langfuse 代码层禁用后复测
+
+**命令**:
+
+```bash
+MODEL_NAME=deepseek-local UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp \
+uv run python experiments/production_ablation/run.py --sample 1
+```
+
+**Run ID**: `dfb67b24d4f5446d8df6e27957c07f60`
+
+**结果**: `evidence_valid=5`、`evidence_invalid=0`、`runner_errors=0`、`incomplete=false`。说明 Langfuse 硬禁用后生产 smoke contract 仍通过；本次 LLM 输出存在随机波动（strict_tp=1/2），不作为组件效果结论。
+
+---
+
 ## 2026-08-07 — 消融实验
 
 **命令**: `experiments/ablation/run_ablation.py --mode ablation --variant single_stage_direct`
@@ -213,6 +331,21 @@ uv run python experiments/ablation/run_ablation.py --mode ablation --sample 3
 | no_embedding | 29.88% | 54.55% | 38.61% | 140 | 5150 |
 | no_neo4j_history | 27.27% | 84.09% | 41.19% | 140 | 3153 |
 | single_stage_direct | 30.90% | 83.33% | 45.08% | 70 | 622 |
+
+---
+
+## 2026-08-08 — 方法学更正：旧消融结果仅作探索记录
+
+2026-08-06 至 2026-08-07 的 `experiments/ablation/run_ablation.py` 结果保留用于排查，但**不得作为生产组件贡献结论**，原因如下：
+
+1. runner 直接调用 extractor，没有经过 `MemoryEngine` 的 mutation、embedding、LLM dedup、storage 等生产路径；
+2. `no_embedding` 与 `full` 实现相同，`full` 没有注入 Neo4j client，`no_dedup` 没有进入生产 dedup；
+3. `--sample` 只截断 chat，没有同步过滤 expected.jsonl，样本 P/R/F1 无效；
+4. project context 是所有 chat 共用的伪造文件变化，不代表真实 conversation-file 关联；
+5. LLM/Judge API、JSON 或限流错误会被计入未匹配结果；
+6. prompt 要求输出 suggestions，而主 GT 只覆盖 confirmed decisions，导致严格 Precision 目标不一致。
+
+此前关于“各组件正负收益”以及“真实 F1 为 60-70%”的判断均撤回。后续以 `experiments/production_ablation/` 的 production-path、evidence-aware 结果为准。
 
 ---
 
@@ -293,9 +426,34 @@ uv run python experiments/ablation/run_ablation.py --mode ablation --sample 3
 - 改为："提取实体 → **只保留高置信实体**(conf≥0.70) → 注入 + 要求 LLM **引用对话原文**作为支撑 → 提取决策"
 - 核心：不要让实体列表诱导 LLM 做 "实体相关幻觉"
 
-**8. Claude Code 全量基线**（待跑）
-- 跑全量 70 chats 的 Claude Code 基线（~23分钟）
-- 与 single-stage 公平对比：两个都是 "纯 LLM 输入→输出决策JSON"
-- 预期：系统有定制 prompt + project context，F1 应该比裸 Claude Code 高 5-10pp
+**8. Claude Code 全量基线**（已执行，指标暂不采信）
+- 已生成 70 chats 的 Claude Code 输出（约 614s）；生成模型为 `CLAUDE_MODEL=sonnet`
+- 评估阶段的 DeepSeek LLM Judge 连接 `aigw.sysu.edu.cn` 失败；当前实现会把 judge 调用失败错误地作为 `match=false`，因此 P/R/F1 被系统性低估
+- 还发现 4 个 chat 返回了可解析但空的 `decisions`；应在下次运行中单独统计为 generation failure，而非 `0 failed`
+- 需要先持久化每 chat 原始预测、修复 judge-failure 状态、并统一生成模型，才能与 single-stage 做公平架构对比
+
+---
+
+## 2026-08-07 — Claude Code 基线
+
+**命令**: `experiments/ablation/run_ablation.py --mode claude_code`
+**时间**: 2026-08-07 02:02:29
+**环境**: deepseek-local
+
+### 结果
+
+| true_positives | 91 |
+| false_positives | 363 |
+| false_negatives | 41 |
+| precision | 0.2004 |
+| recall | 0.6894 |
+| f1 | 0.3106 |
+| total_time | 613.6 |
+| avg_time_per_chat | 8.8 |
+| n_claude_calls | 70 |
+| all_decisions_count | 454 |
+| failed_chats | 0 |
+| model | deepseek-local |
+| claude_project_dir | D:\Projects\feishu-longterm-mem\ref\ArgusBot |
 
 ---

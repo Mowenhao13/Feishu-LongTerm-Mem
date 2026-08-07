@@ -13,6 +13,7 @@ from typing import Any, Dict, List, Optional, Set
 from src.card.config import CardConfig
 from src.card.pusher import PushEngine, PushTrigger
 from src.core.engine_config import EngineConfig, EngineStatus
+from src.core.pipeline_options import PipelineOptions
 from src.core.mutations import DecisionMutation, MutationType
 from src.graph.memory_graph import Conflict, MemoryGraph
 from src.graph.snapshot import DetectorSnapshot, SnapshotManager
@@ -172,6 +173,14 @@ class PipelineEngine:
             confidence=mut.confidence,
             source=mut.source or "",
             parent_id=mut.parent_id,
+            source_message_id=mut.metadata.get("source_message_id", "") if mut.metadata else "",
+            source_chat_id=mut.metadata.get("source_chat_id", "") if mut.metadata else "",
+            extra={
+                "is_suggestion": bool(mut.metadata.get("is_suggestion", False)) if mut.metadata else False,
+                "source_message_ids": list(mut.metadata.get("source_message_ids", [])) if mut.metadata else [],
+                "evidence_quote": mut.metadata.get("evidence_quote", "") if mut.metadata else "",
+            },
+            is_suggestion=bool(mut.metadata.get("is_suggestion", False)) if mut.metadata else False,
             created_at=datetime.now(),
             updated_at=datetime.now(),
         )
@@ -189,7 +198,7 @@ class PipelineEngine:
             commit_hash = self._storage.write_decision(node_dict)
             node.git_commit_hash = commit_hash
 
-        logger.info("Created decision: %s v%d — %s", node.sid, node.version, node.summary[:60])
+        logger.info("Created decision: %s v%s — %s", node.sid, node.version, node.summary[:60])
         return True
 
     def _apply_update(self, mut: DecisionMutation) -> bool:
@@ -216,6 +225,17 @@ class PipelineEngine:
             existing.tags = mut.tags
         if mut.parent_id and mut.parent_id != existing.parent_id:
             existing.parent_id = mut.parent_id
+        if mut.metadata:
+            existing.source_message_id = mut.metadata.get("source_message_id", existing.source_message_id)
+            existing.source_chat_id = mut.metadata.get("source_chat_id", existing.source_chat_id)
+            existing.is_suggestion = bool(mut.metadata.get("is_suggestion", existing.is_suggestion))
+            existing.extra["is_suggestion"] = existing.is_suggestion
+            existing.extra["source_message_ids"] = list(
+                mut.metadata.get("source_message_ids", existing.extra.get("source_message_ids", []))
+            )
+            existing.extra["evidence_quote"] = mut.metadata.get(
+                "evidence_quote", existing.extra.get("evidence_quote", "")
+            )
         if mut.new_status:
             try:
                 existing.status = DecisionStatus(mut.new_status)
@@ -432,8 +452,10 @@ class MemoryEngine:
         config: Optional[EngineConfig] = None,
         detector: Any = None,
         decision_extractor: Any = None,
+        pipeline_options: Optional[PipelineOptions] = None,
     ) -> None:
         self._config = config or EngineConfig.from_env()
+        self._pipeline_options = pipeline_options or PipelineOptions()
         self._detector = detector
         self._extractor = decision_extractor
         self._status = EngineStatus()
@@ -463,6 +485,7 @@ class MemoryEngine:
         self._project_bridge: Optional[Any] = None
 
         self._processed_episode_hashes: Set[str] = set()
+        self._active_episode_chat_id: str = ""
         self._task_view_syncer: Any = None
 
         self._sleep_manager: Any = None
@@ -976,6 +999,25 @@ class MemoryEngine:
         except Exception as exc:
             logger.warning("[Project] Neo4j sync failed: %s", exc)
 
+    async def _sync_entity_store_to_neo4j(self, trace_id: str = "") -> None:
+        """Sync conversation entities from EntityStore to Neo4j (non-blocking)."""
+        if self._neo4j_sync is None or self._entity_store is None:
+            return
+        try:
+            stats = await self._neo4j_sync.sync_all(
+                entity_store=self._entity_store,
+            )
+            if stats.get("entities_written", 0) > 0 or stats.get("relationships_written", 0) > 0:
+                logger.info(
+                    "[Engine] Neo4j entity sync: %d entities, %d rels written (errors=%d) trace=%s",
+                    stats.get("entities_written", 0),
+                    stats.get("relationships_written", 0),
+                    stats.get("errors", 0),
+                    trace_id[:12],
+                )
+        except Exception as exc:
+            logger.debug("[Engine] Neo4j entity sync skipped: %s", exc)
+
     async def _build_project_context(self, detect_result: Any) -> Any:
         """Build ProjectDevelopmentContext from detect result.
 
@@ -1175,9 +1217,12 @@ class MemoryEngine:
         5. 若 Stage 2 返回空，fallback 到 _extract_decision
         6. 应用决策 mutation
         """
-        if self._memory_extractor is None or self._entity_store is None:
-            logger.info("[Engine] Memory extractor or entity store not configured, "
-                        "falling back to v1 pipeline")
+        if (
+            not self._pipeline_options.enable_memory_extraction
+            or self._memory_extractor is None
+            or self._entity_store is None
+        ):
+            logger.info("[Engine] Memory extraction disabled or unavailable, falling back to direct pipeline")
             await self._process_episode(episode)
             return
 
@@ -1203,17 +1248,55 @@ class MemoryEngine:
                     len(content), trace_id)
 
         proc_start = time.time()
+        self._active_episode_chat_id = chat_id
 
         try:
+            # ── Stage 0: Historical context retrieval from Neo4j ──
+            # 从 Neo4j 查询该 chat 的历史实体和决策，合并到当前 context
+            historical_entity_ctx: List[Dict] = []
+            historical_decision_ctx: List[Dict] = []
+            if self._pipeline_options.enable_neo4j_history and self._neo4j_sync is not None and chat_id:
+                try:
+                    historical_entity_ctx = await self._neo4j_sync.get_historical_entity_context(
+                        chat_id, limit=50,
+                    )
+                    historical_decision_ctx = await self._neo4j_sync.get_historical_decisions(
+                        chat_id, limit=20,
+                    )
+                    if historical_entity_ctx:
+                        logger.info(
+                            "[Engine] v2: Loaded %d historical entities from Neo4j for chat=%s",
+                            len(historical_entity_ctx), chat_id[:12],
+                        )
+                    if historical_decision_ctx:
+                        logger.info(
+                            "[Engine] v2: Loaded %d historical decisions from Neo4j for chat=%s",
+                            len(historical_decision_ctx), chat_id[:12],
+                        )
+                except Exception as exc:
+                    logger.debug("[Engine] v2: Historical context load skipped: %s", exc)
+
             # ── Stage 1: Memory Extraction ──
             if hasattr(self._memory_extractor, "set_trace_id"):
                 self._memory_extractor.set_trace_id(trace_id)
 
-            existing_entity_ctx = self._entity_store.build_extraction_context()
+            # 合并当前 EntityStore 中的实体 + Neo4j 历史实体
+            local_entity_ctx = self._entity_store.build_extraction_context()
+            seen_names = {e["name"] for e in local_entity_ctx}
+            merged_entity_ctx = list(local_entity_ctx)
+            for he in historical_entity_ctx:
+                if he.get("name") and he["name"] not in seen_names:
+                    seen_names.add(he["name"])
+                    merged_entity_ctx.append(he)
+            logger.info(
+                "[Engine] v2 Stage 1: local_entities=%d historical=%d merged=%d",
+                len(local_entity_ctx), len(historical_entity_ctx), len(merged_entity_ctx),
+            )
+
             mem_result = await self._memory_extractor.extract(
                 content,
                 episode_id=episode_id,
-                existing_entities=existing_entity_ctx,
+                existing_entities=merged_entity_ctx,
             )
 
             logger.info("[Engine] v2 Stage 1 done: entities=%d rels=%d facts=%d",
@@ -1225,15 +1308,32 @@ class MemoryEngine:
             self._entity_store.add_relationships(mem_result.relationships)
             self._entity_store.add_facts(mem_result.facts)
 
+            # ══ 异步写 Neo4j（不阻塞主 pipeline）══
+            neo4j_task = None
+            if self._neo4j_sync is not None:
+                neo4j_task = asyncio.create_task(
+                    self._sync_entity_store_to_neo4j(trace_id=trace_id),
+                    name=f"neo4j-sync-{episode_id[:12] if episode_id else '?'}",
+                )
+                logger.debug("[Engine] v2: Neo4j sync task scheduled")
+
             # ── Stage 2: Decision Extraction with Entity Context ──
-            entity_context = [
-                {"name": e.name, "entity_type": e.entity_type}
-                for e in mem_result.entities
-            ]
+            # 合并当前 Stage 1 新提取的实体 + 历史实体
+            stage2_entity_context = []
+            if self._pipeline_options.inject_entity_context:
+                stage2_entity_context = [
+                    {"name": e.name, "entity_type": e.entity_type}
+                    for e in mem_result.entities
+                ]
+                seen_s2 = {e["name"] for e in stage2_entity_context}
+                for he in historical_entity_ctx:
+                    if he.get("name") and he["name"] not in seen_s2:
+                        seen_s2.add(he["name"])
+                        stage2_entity_context.append(he)
 
             # ── Project Context: check conv-file bridge for merge ──
             project_ctx = None
-            if self._project_bridge is not None:
+            if self._pipeline_options.inject_project_context and self._project_bridge is not None:
                 # Get recent file changes via the bridge
                 # The bridge decides whether to merge based on its level
                 file_changes = getattr(self._project_bridge, "_recent_file_changes", [])
@@ -1256,23 +1356,34 @@ class MemoryEngine:
 
                 if hasattr(self._extractor, "extract_with_context"):
                     logger.info(
-                        "[Engine] v2 Stage 2: Calling extract_with_context (entities=%d, project=%s)",
-                        len(entity_context),
+                        "[Engine] v2 Stage 2: Calling extract_with_context (entities=%d, project=%s, historical_decisions=%d)",
+                        len(stage2_entity_context),
                         "yes" if project_ctx and project_ctx.has_changes else "no",
+                        len(historical_decision_ctx),
                     )
+
+                    # 合并历史决策到 existing_decisions
+                    combined_decisions = list(self._build_existing_decisions_context() or [])
+                    seen_titles = {d.get("title", "") for d in combined_decisions if d.get("title")}
+                    for hd in historical_decision_ctx:
+                        t = hd.get("title", "") or hd.get("summary", "")
+                        if t and t not in seen_titles:
+                            seen_titles.add(t)
+                            combined_decisions.append({"title": t, "summary": t})
+
                     if asyncio.iscoroutinefunction(self._extractor.extract_with_context):
                         result = await self._extractor.extract_with_context(
                             content,
-                            entity_context=entity_context,
-                            existing_decisions=self._build_existing_decisions_context(),
+                            entity_context=stage2_entity_context,
+                            existing_decisions=combined_decisions,
                             project_context=project_ctx,
                         )
                     else:
                         result = await asyncio.to_thread(
                             self._extractor.extract_with_context,
                             content,
-                            entity_context,
-                            self._build_existing_decisions_context(),
+                            stage2_entity_context,
+                            combined_decisions,
                             project_ctx,
                         )
 
@@ -1308,11 +1419,29 @@ class MemoryEngine:
                     for node in fallback:
                         await self._apply_decision_mutations(node, "im", trace_id=trace_id)
 
+            # ── 等待 Neo4j sync 完成（如果有） ──
+            if neo4j_task is not None:
+                try:
+                    await neo4j_task
+                except Exception as exc:
+                    logger.warning("[Engine] v2: Neo4j sync task failed: %s", exc)
+
+            # ── 如果有决策产生，同步到 Neo4j ──
+            if nodes and self._neo4j_sync is not None:
+                try:
+                    await self._neo4j_sync.sync_all(
+                        memory_graph=self._graph,
+                    )
+                except Exception as exc:
+                    logger.debug("[Engine] v2: Neo4j decision sync failed: %s", exc)
+
             elapsed = time.time() - proc_start
             logger.info("[Engine] <<< _process_episode_v2 done time=%.2fs", elapsed)
 
         except Exception as e:
             elapsed = time.time() - proc_start
+            self._status.error_count += 1
+            self._status.last_error = str(e)
             logger.error("[Engine] _process_episode_v2 FAILED after %.2fs: %s", elapsed, e)
             import traceback
             logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
@@ -1549,7 +1678,7 @@ class MemoryEngine:
 
         candidate_texts = [(d, d.full_text or d.summary) for d in same_topic]
 
-        if self._embedder:
+        if self._pipeline_options.enable_embedding_dedup and self._embedder:
             try:
                 import numpy as np
                 query_text = node.full_text or node.summary
@@ -1613,6 +1742,9 @@ class MemoryEngine:
         if new_node.parent_id == existing_node.sid or existing_node.parent_id == new_node.sid:
             logger.debug("[Dedup] Parent-child guard: skipping dedup")
             return "create_new", "parent-child relationship", ""
+
+        if not self._pipeline_options.enable_llm_dedup:
+            return "create_new", "LLM dedup disabled", ""
 
         if self._extractor is None:
             return "create_new", "no LLM", ""
@@ -1688,6 +1820,13 @@ class MemoryEngine:
 
         # 在 mutation 中携带 trace_id，用于 Git commit 溯源
         trace_meta = {"trace_id": trace_id or ""} if trace_id else {}
+        audit_meta = {
+            "source_message_id": node.source_message_id,
+            "source_message_ids": list(node.extra.get("source_message_ids", [])),
+            "evidence_quote": node.extra.get("evidence_quote", ""),
+            "source_chat_id": node.source_chat_id,
+            "is_suggestion": bool(node.extra.get("is_suggestion", node.is_suggestion)),
+        }
 
         if existing:
             logger.info("[Mutation] Existing by sid: sid=%s v%d", node.sid[:12], existing.version)
@@ -1705,7 +1844,7 @@ class MemoryEngine:
                 tags=node.tags,
                 confidence=node.confidence,
                 parent_id=node.parent_id,
-                metadata={**trace_meta},
+                metadata={**trace_meta, **audit_meta},
             )
             if await asyncio.to_thread(self._pipeline.apply_mutation, updates):
                 self._status.total_mutations_applied += 1
@@ -1838,7 +1977,7 @@ class MemoryEngine:
             parent_id=node.parent_id,
             new_status=node.status.value,
             new_impact_level=node.impact_level.value,
-            metadata={**trace_meta},
+            metadata={**trace_meta, **audit_meta},
         )
         if await asyncio.to_thread(self._pipeline.apply_mutation, create):
             self._status.total_mutations_applied += 1
@@ -2018,8 +2157,7 @@ class MemoryEngine:
 
     # ==================== 辅助 ====================
 
-    @staticmethod
-    def _dict_to_node(data: dict, source: str = "im") -> Optional[DecisionNode]:
+    def _dict_to_node(self, data: dict, source: str = "im") -> Optional[DecisionNode]:
         """从 dict 构建 DecisionNode"""
         try:
             import hashlib
@@ -2063,6 +2201,13 @@ class MemoryEngine:
                 proposer=data.get("proposer", "") or data.get("authority", ""),
                 authority=data.get("proposer", "") or data.get("authority", ""),
                 assignee=data.get("executor", "") or data.get("assignee", ""),
+                source_message_id=data.get("source_message_id", "") or "",
+                source_chat_id=data.get("source_chat_id", "") or self._active_episode_chat_id,
+                extra={
+                    "is_suggestion": bool(data.get("is_suggestion", False)),
+                    "source_message_ids": list(data.get("source_message_ids", [])),
+                    "evidence_quote": data.get("evidence_quote", "") or "",
+                },
                 is_suggestion=bool(data.get("is_suggestion", False)),
                 source=source,
                 created_at=datetime.now(),

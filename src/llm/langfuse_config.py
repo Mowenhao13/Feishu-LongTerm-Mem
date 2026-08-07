@@ -13,8 +13,11 @@ _langfuse_enabled = False
 
 
 def is_langfuse_enabled() -> bool:
-    """检查 Langfuse 是否启用（环境变量 LANGFUSE_ENABLE=true）"""
-    return os.getenv("LANGFUSE_ENABLE", "false").lower() == "true"
+    """检查 Langfuse 是否启用（临时强制禁用）。"""
+    # Temporarily disabled: the installed Langfuse SDK API is incompatible
+    # with the current manual tracing calls. Keep LLM paths independent from
+    # observability until the SDK integration is verified separately.
+    return False
 
 
 def _get_langfuse_host() -> str:

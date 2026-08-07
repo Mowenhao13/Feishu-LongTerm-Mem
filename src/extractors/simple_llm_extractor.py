@@ -41,6 +41,7 @@ class SimpleLLMExtractor:
     def __init__(self, llm_provider: Any) -> None:
         self._llm = llm_provider
         self._trace_id: Optional[str] = None
+        self.last_error: Optional[str] = None
         self._confidence_threshold = 0.70  # 提高置信度阈值，只保留高置信度决策
         logger.info("[LLM Extractor] Initialized with provider=%s, confidence_threshold=%.2f", 
                     type(llm_provider).__name__, self._confidence_threshold)
@@ -49,12 +50,54 @@ class SimpleLLMExtractor:
         """设置当前 trace_id，用于 Langfuse 溯源"""
         self._trace_id = trace_id
 
+    @staticmethod
+    def _attach_evidence(decision: Dict[str, Any], content: str) -> None:
+        """Attach auditable evidence when an extractor omitted it.
+
+        The fallback only links an output to an explicit ``[msg_id]`` source
+        line when its title/summary has substantial character overlap with the
+        message. It deliberately leaves unrelated decisions unlinked so the
+        evaluator can reject them instead of fabricating provenance.
+        """
+        if decision.get("source_message_ids") and decision.get("evidence_quote"):
+            decision["evidence_source"] = "model"
+            return
+
+        import re
+
+        query = decision.get("summary", "") or decision.get("title", "")
+        query_chars = set(re.sub(r"\s+", "", query.lower()))
+        if len(query_chars) < 3:
+            return
+
+        best_id = ""
+        best_text = ""
+        best_score = 0.0
+        for line in content.splitlines():
+            match = re.match(r"^\[([^\]]+)\]\s*[^:：]+[:：]\s*(.+)$", line.strip())
+            if not match:
+                continue
+            msg_id, message = match.groups()
+            message_chars = set(re.sub(r"\s+", "", message.lower()))
+            if not message_chars:
+                continue
+            score = len(query_chars & message_chars) / len(query_chars)
+            if score > best_score:
+                best_id, best_text, best_score = msg_id, message, score
+
+        if best_score >= 0.6:
+            decision["source_message_ids"] = [best_id]
+            decision["source_message_id"] = best_id
+            decision["evidence_quote"] = best_text
+            decision["evidence_source"] = "heuristic"
+
     async def extract_decision(self, content: str,
                                  existing_decisions: Optional[List] = None) -> Optional[List[dict]]:
         """从消息内容中提取所有决策（支持批量返回）"""
         if not content or not content.strip():
             logger.info("[LLM Extractor] Empty content, skipping")
             return None
+        self.last_error = None
 
         # Escape braces in content so .format() doesn't treat {foo} as placeholders
         safe_content = content.replace("{", "{{").replace("}", "}}")
@@ -114,7 +157,7 @@ class SimpleLLMExtractor:
                 
                 # 只有高于置信度阈值的决策才被保留
                 if conf >= self._confidence_threshold:
-                    extracted.append({
+                    item = {
                         "title": d.get("title", ""),
                         "content": d.get("content", content),
                         "summary": d.get("title", ""),
@@ -127,7 +170,13 @@ class SimpleLLMExtractor:
                         "rationale": d.get("rationale", ""),
                         "proposer": d.get("proposer"),
                         "executor": d.get("executor"),
-                    })
+                        "source_message_id": d.get("source_message_id", ""),
+                        "source_message_ids": d.get("source_message_ids", []),
+                        "evidence_quote": d.get("evidence_quote", ""),
+                        "source_chat_id": d.get("source_chat_id", ""),
+                    }
+                    self._attach_evidence(item, content)
+                    extracted.append(item)
                 else:
                     logger.info("[LLM Extractor] Skipping decision (confidence=%.2f < threshold=%.2f): %s", 
                                conf, self._confidence_threshold, title)
@@ -137,10 +186,12 @@ class SimpleLLMExtractor:
             return extracted if extracted else None
 
         except json.JSONDecodeError as e:
+            self.last_error = f"json_parse_error: {e}"
             logger.error("[LLM Extractor] Failed to parse LLM response: %s", e)
             logger.error("[LLM Extractor] Raw response: %.300s", resp[:300] if resp else "(empty)")
             return None
         except Exception as e:
+            self.last_error = f"llm_call_error: {e}"
             import traceback
             logger.error("[LLM Extractor] LLM call failed: %s", e)
             logger.error("[LLM Extractor] Traceback: %s", traceback.format_exc())
@@ -171,6 +222,7 @@ class SimpleLLMExtractor:
         if not content or not content.strip():
             logger.info("[LLM Extractor] extract_with_context: Empty content, skipping")
             return None
+        self.last_error = None
 
         # Inject entity context as a preamble
         if entity_context:
@@ -272,7 +324,7 @@ class SimpleLLMExtractor:
                 conf = max(0.50, min(0.95, round(conf, 2)))
 
                 if conf >= self._confidence_threshold:
-                    extracted.append({
+                    item = {
                         "title": d.get("title", ""),
                         "content": d.get("content", content),
                         "summary": d.get("title", ""),
@@ -285,7 +337,13 @@ class SimpleLLMExtractor:
                         "rationale": d.get("rationale", ""),
                         "proposer": d.get("proposer"),
                         "executor": d.get("executor"),
-                    })
+                        "source_message_id": d.get("source_message_id", ""),
+                        "source_message_ids": d.get("source_message_ids", []),
+                        "evidence_quote": d.get("evidence_quote", ""),
+                        "source_chat_id": d.get("source_chat_id", ""),
+                    }
+                    self._attach_evidence(item, content)
+                    extracted.append(item)
                 else:
                     logger.info("[LLM Extractor] extract_with_context: Skipping decision "
                                 "(confidence=%.2f): %s", conf, title)
@@ -295,10 +353,12 @@ class SimpleLLMExtractor:
             return extracted if extracted else None
 
         except json.JSONDecodeError as e:
+            self.last_error = f"json_parse_error: {e}"
             logger.error("[LLM Extractor] extract_with_context: Parse error: %s", e)
             logger.error("[LLM Extractor] Raw: %.300s", resp[:300] if resp else "(empty)")
             return None
         except Exception as e:
+            self.last_error = f"llm_call_error: {e}"
             import traceback
             logger.error("[LLM Extractor] extract_with_context: Failed: %s", e)
             logger.error("[LLM Extractor] Traceback: %s", traceback.format_exc())

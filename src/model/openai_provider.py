@@ -94,7 +94,7 @@ class OpenAIProvider(LLMProvider):
         langfuse = get_langfuse()
         f_trace = None
         f_span = None
-        if langfuse and should_sample():
+        if langfuse and should_sample() and hasattr(langfuse, "trace"):
             # 从 trace_id 推断调用阶段：trc_20260101_120000_abc_decision-extraction
             # 或在 generate() 的 kwargs 中传递 task_name
             trace_parts = (trace_id or "").split("_")

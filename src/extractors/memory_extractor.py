@@ -40,6 +40,7 @@ class MemoryExtractor:
         self._ontology = ontology_manager or OntologyManager.get_instance()
         self._confidence_threshold = confidence_threshold
         self._trace_id: Optional[str] = None
+        self.last_error: Optional[str] = None
 
         logger.info(
             "[MemoryExtractor] Initialized with provider=%s, confidence_threshold=%.2f",
@@ -71,6 +72,7 @@ class MemoryExtractor:
         if not content or not content.strip():
             logger.info("[MemoryExtractor] Empty content, skipping")
             return MemoryExtractionResult()
+        self.last_error = None
 
         # Build ontology context
         ontology_context = self._ontology.to_prompt_context()
@@ -125,10 +127,12 @@ class MemoryExtractor:
             return result
 
         except json.JSONDecodeError as e:
+            self.last_error = f"json_parse_error: {e}"
             logger.error("[MemoryExtractor] Failed to parse LLM response: %s", e)
             logger.error("[MemoryExtractor] Raw response: %.300s", resp[:300] if resp else "(empty)")
             return MemoryExtractionResult()
         except Exception as e:
+            self.last_error = f"llm_call_error: {e}"
             import traceback
             logger.error("[MemoryExtractor] LLM call failed: %s", e)
             logger.error("[MemoryExtractor] Traceback: %s", traceback.format_exc())
