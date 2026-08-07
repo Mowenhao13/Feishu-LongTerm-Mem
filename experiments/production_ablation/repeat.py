@@ -21,12 +21,20 @@ def aggregate_reports(reports: list[dict[str, Any]]) -> dict[str, Any]:
         values = [float(report["metrics"][key]) for report in reports if key in report.get("metrics", {})]
         if values:
             numeric[key] = {"mean": statistics.mean(values), "stddev": statistics.pstdev(values), "min": min(values), "max": max(values)}
+    macro_values: dict[str, list[float]] = {"precision": [], "recall": [], "f1": []}
+    for report in reports:
+        for row in report.get("chat_metrics", {}).values():
+            for key in macro_values:
+                if key in row:
+                    macro_values[key].append(float(row[key]))
+    macro = {key: {"mean": statistics.mean(values), "stddev": statistics.pstdev(values), "min": min(values), "max": max(values)} for key, values in macro_values.items() if values}
     complete = [report for report in reports if not report.get("metrics", {}).get("incomplete") and not report.get("runner_errors")]
     return {
         "runs": len(reports),
         "complete_runs": len(complete),
         "incomplete_runs": len(reports) - len(complete),
         "numeric": numeric,
+        "macro": macro,
         "health": {
             "all_complete": len(complete) == len(reports),
             "evidence_contract_pass_rate": sum(report.get("metrics", {}).get("evidence_invalid", 0) == 0 for report in reports) / len(reports) if reports else 0.0,

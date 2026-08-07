@@ -715,3 +715,20 @@ argusbot_v3 的 GT 很保守，只覆盖每个 chat 的少数关键决策；而 
 **运行方式**: `uv run python experiments/production_ablation/run.py --sample 3 --adjudicate`。批量重复工具也支持 `repeat.py --adjudicate`。
 
 **下一步**: 对三态 evaluator 的 `full`、`no_entity_context`、`no_memory_extractor` 各重复至少 5 次，比较 `match_gt`、`valid_extra`、`invalid` 的均值/方差；在此之前不改变 production 默认配置。
+
+---
+
+## 2026-08-07 - sample size and macro-F1 protocol
+
+**Dataset scope**: current `eval_dataset/argusbot_v3` contains 59 unique chats, 2373 messages, and 132 GT decisions. The old 70-chat number belongs to an older runner/statistics record.
+
+**`sample` semantics**: `--sample N` selects N chats, including all messages and GT rows for those chats. It is not N messages. `--sample 3` is therefore a three-chat smoke.
+
+**Statistical interpretation**: 5 runs x 3 chats is useful for pipeline smoke and variance debugging, but too small for a production-default conclusion. The full protocol is:
+1. Run each variant once on all 59 chats with `--adjudicate` to verify end-to-end health and full-scope F1.
+2. Repeat the strongest candidates 3-5 times on all 59 chats.
+3. Compare micro-F1 and macro-F1, plus per-chat TP/FP/FN and evidence/runner health.
+
+`run.py` now writes `chat_metrics`; `repeat.py` aggregates macro precision/recall/F1 as well as micro metrics. This prevents a few high-volume chats from dominating the conclusion.
+
+**Cost gate**: current adjudication is one judge call per evidence-valid output. A full 59-chat run will therefore make hundreds of judge calls; run the one-pass full matrix first, then repeat only candidates after checking judge health and latency.

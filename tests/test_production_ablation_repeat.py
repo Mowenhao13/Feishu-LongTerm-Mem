@@ -26,3 +26,11 @@ def test_aggregate_reports_does_not_hide_incomplete_runs():
     assert not result["health"]["all_complete"]
     assert result["health"]["evidence_contract_pass_rate"] == 0.5
     assert result["health"]["runner_error_free_rate"] == 0.5
+
+def test_aggregate_reports_includes_macro_chat_metrics():
+    report = _report(2, 0.4)
+    report["chat_metrics"] = {"chat-a": {"precision": 1.0, "recall": 0.5, "f1": 0.6666666667}, "chat-b": {"precision": 0.0, "recall": 0.0, "f1": 0.0}}
+    result = aggregate_reports([report])
+    assert result["macro"]["f1"]["mean"] == 0.33333333335
+    assert result["macro"]["f1"]["min"] == 0.0
+    assert result["macro"]["f1"]["max"] == 0.6666666667

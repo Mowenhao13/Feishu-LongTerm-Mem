@@ -102,6 +102,16 @@ async def main() -> int:
                 raise RuntimeError("missing adjudication result")
             return adjudication_cache[key]
     outcome = ConfirmedDecisionEvaluator(adjudicator=adjudicator).evaluate(result.decisions, selection)
+    chat_metrics = {}
+    for chat_id in selection.chat_ids:
+        rows = [row for row in outcome.details if row.get("chat_id") == chat_id]
+        chat_tp = sum(row.get("adjudication") == "match_gt" for row in rows)
+        chat_fp = sum(row.get("adjudication") == "invalid" for row in rows)
+        chat_fn = max(len(selection.expected_by_chat.get(chat_id, ())) - chat_tp, 0)
+        chat_precision = chat_tp / (chat_tp + chat_fp) if chat_tp + chat_fp else 0.0
+        chat_recall = chat_tp / (chat_tp + chat_fn) if chat_tp + chat_fn else 0.0
+        chat_f1 = 2 * chat_precision * chat_recall / (chat_precision + chat_recall) if chat_precision + chat_recall else 0.0
+        chat_metrics[chat_id] = {"expected": len(selection.expected_by_chat.get(chat_id, ())), "tp": chat_tp, "fp": chat_fp, "fn": chat_fn, "precision": chat_precision, "recall": chat_recall, "f1": chat_f1}
     incomplete_reason = (
         "runner_error" if result.errors
         else "evaluation_error" if outcome.incomplete
@@ -110,9 +120,11 @@ async def main() -> int:
     )
     report = {
         "metadata": metadata,
-        "selection": {"chat_ids": selection.chat_ids, "expected_count": selection.expected_count},
+        "selection": {"chat_ids": selection.chat_ids, "expected_count": selection.expected_count, "expected_by_chat": {chat_id: len(rows) for chat_id, rows in selection.expected_by_chat.items()}},
         "trace": result.trace.__dict__,
         "output_count": len(result.decisions),
+        "chat_metrics": chat_metrics,
+        "chat_metrics": chat_metrics,
         "metrics": {
             "strict_tp": outcome.strict_tp,
             "strict_fp": outcome.strict_fp,
