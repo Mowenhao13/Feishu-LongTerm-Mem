@@ -756,3 +756,34 @@ uv run python experiments/production_ablation/chunked.py \\
 ```
 
 建议先使用 `--chunk-size 10` 完成 full baseline，再对 `no_entity_context` 和 `no_memory_extractor` 运行相同范围。单块失败不会丢失已完成块，修复后可用同一个 job-id `--resume` 继续。
+
+---
+
+## 2026-08-07 - full 70-chat baseline completed
+
+**Job**: `full_70_adjudicate_20260807_s3`
+**Scope**: 70/70 chats, 24 checkpoint chunks, `full` variant, three-state adjudicator enabled.
+
+| metric | value |
+|---|---:|
+| output_count | 298 |
+| strict_tp / match_gt | 86 |
+| strict_fp / invalid | 86 |
+| strict_fn | 46 |
+| valid_extra | 109 |
+| evidence_valid | 281 |
+| evidence_invalid | 0 |
+| micro precision | 0.5000 |
+| micro recall | 0.6515 |
+| micro F1 | 0.5658 |
+| macro precision | 0.5725 |
+| macro recall | 0.6571 |
+| macro F1 | 0.5821 |
+| chunks complete | 24/24 |
+| runner/evidence health | 100% / 100% |
+
+**Domain macro-F1**: `ai_ml_platform=0.5467`, `backend_arch=0.6600`, `cloud_infra=0.6667`, `data_platform=0.5238`, `frontend_mobile=0.5238`, `sec_compliance=0.5767`, `sre_reliability=0.5771`.
+
+**Interpretation**: 109 of 298 evidence-valid outputs were adjudicated `valid_extra`, which explains why strict precision/F1 remains lower than the raw extraction quality might suggest. The full run is complete and healthy, but this is still one stochastic run of the `full` variant; it is not enough to choose a production default. The next comparison is the same 70-chat checkpointed run for `no_entity_context` and `no_memory_extractor`, followed by repeated runs for the strongest variant.
+
+**Artifact**: `experiments/production_ablation/chunked_runs/full_70_adjudicate_20260807_s3/aggregate.json`.

@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "run_id": "d33aa41650544a74b696c959bc70af3a",
+    "created_at": "2026-08-07T15:20:58.574369+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "3d61ab177e446db7d2ccac4030ff9a4eb380d6bf8f0efe0d9b200b9db5e04683",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_9",
+      "backend_arch_channel_0",
+      "backend_arch_channel_1"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_9": 1,
+      "backend_arch_channel_0": 2,
+      "backend_arch_channel_1": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 13,
+  "chat_metrics": {
+    "ai_ml_platform_channel_9": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "backend_arch_channel_0": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "backend_arch_channel_1": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 4,
+    "strict_fn": 1,
+    "valid_extra": 5,
+    "invalid": 4,
+    "evidence_valid": 13,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.5,
+    "recall": 0.8,
+    "f1": 0.6153846153846154,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_9",
+        "title": "在线学习管道每日更新，架构支持每小时扩展",
+        "summary": "在线学习管道每日更新，架构支持每小时扩展",
+        "source_message_ids": [
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "我支持每日更新，但需要为未来每小时更新预留架构扩展性",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m016",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_9",
+        "title": "漂移检测延迟不超过5分钟",
+        "summary": "漂移检测延迟不超过5分钟",
+        "source_message_ids": [
+          "m008",
+          "m009"
+        ],
+        "evidence_quote": "特征存储要扩展，漂移检测的延迟不能超过5分钟，这是业务要求",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求漂移检测延迟不超过5分钟，证据支持该业务要求，但GT候选仅涉及更新频率和架构预留，无等价决策"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "API版本控制用Header方案",
+        "summary": "API版本控制用Header方案",
+        "source_message_ids": [
+          "m023",
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "API版本用URL路径还是Header？我建议用Header。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: m025"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "Bob负责整理Kafka运维文档",
+        "summary": "Bob负责整理Kafka运维文档",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "Kafka运维文档我下午整理，明天发给大家。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "Bob承诺整理Kafka运维文档，与GT中Bob评估运维成本是同一决策的执行承诺"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "Charlie负责设计事件Schema",
+        "summary": "Charlie负责设计事件Schema",
+        "source_message_ids": [
+          "m027",
+          "m031"
+        ],
+        "evidence_quote": "我负责设计事件Schema，确保兼容性。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m021",
+        "reason": "Charlie负责设计事件Schema的决策与GT中Charlie被分配微服务拆分方案设计任务等价，均为设计职责分配。"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "下周三召开Sprint计划会议",
+        "summary": "下周三召开Sprint计划会议",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "别忘了下周三的Sprint计划会议。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确安排了Sprint计划会议，证据支持，但GT候选均不涉及该会议，属于未被覆盖的有效决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Saga方案下周二开始编码",
+        "summary": "Saga方案下周二开始编码",
+        "source_message_ids": [
+          "m025"
+        ],
+        "evidence_quote": "Saga方案下周二开始编码，大家准备",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.25"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Saga补偿操作使用唯一键约束保证幂等性",
+        "summary": "Saga补偿操作使用唯一键约束保证幂等性",
+        "source_message_ids": [
+          "m007",
+          "m009"
+        ],
+        "evidence_quote": "幂等性可以用唯一键约束解决",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺使用唯一键约束保证Saga补偿幂等性，证据[m009]支持该方案，但候选GT均未涉及此决策，属于有效额外决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "审计日志必须实时写入，不能异步",
+        "summary": "审计日志必须实时写入，不能异步",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "同意，但审计日志要实时写入，不能异步",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果是对审计日志写入方式的约束要求，并非决策或执行承诺，且与候选GT中的Saga试点或GraphQL切换无等价关系"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "新模块用GraphQL，旧接口保持REST",
+        "summary": "新模块用GraphQL，旧接口保持REST",
+        "source_message_ids": [
+          "m021",
+          "m022"
+        ],
+        "evidence_quote": "那我们先在新模块用GraphQL，旧接口保持REST",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m021",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Emma负责编写安全规范，包含限流和查询深度限制",
+        "summary": "Emma负责编写安全规范，包含限流和查询深度限制",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "我写一份安全规范，包含限流和深度限制",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选主题不同，GT候选涉及Saga试点和GraphQL迁移，而提取结果明确承诺编写安全规范，证据支持且为独立决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "David通知前端团队下周联调",
+        "summary": "David通知前端团队下周联调",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "我通知前端团队下周联调",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: "
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Emma为Saga补偿逻辑添加监控告警",
+        "summary": "Emma为Saga补偿逻辑添加监控告警",
+        "source_message_ids": [
+          "m027"
+        ],
+        "evidence_quote": "Saga补偿逻辑我会加监控告警",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是明确的执行承诺（添加监控告警），证据支持，但未被任何候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_1",
+        "msg_id": "m010",
+        "expected_topic": "分布式事务方案",
+        "expected_summary": "我们先用Saga试点订单服务，一个月后评估效果",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 13,
+    "errors": {}
+  }
+}

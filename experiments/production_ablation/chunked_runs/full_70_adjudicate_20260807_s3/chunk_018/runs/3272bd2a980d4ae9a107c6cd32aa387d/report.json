@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "run_id": "3272bd2a980d4ae9a107c6cd32aa387d",
+    "created_at": "2026-08-07T15:42:01.239206+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "8d2e2ee0872566eb9cd520d7785fc6c8cb8ea20c4c4f4ccc4dbb686601a5f12c",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sec_compliance_channel_4",
+      "sec_compliance_channel_5",
+      "sec_compliance_channel_6"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "sec_compliance_channel_4": 2,
+      "sec_compliance_channel_5": 2,
+      "sec_compliance_channel_6": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 18,
+  "chat_metrics": {
+    "sec_compliance_channel_4": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    "sec_compliance_channel_5": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "sec_compliance_channel_6": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 5,
+    "strict_fn": 3,
+    "valid_extra": 9,
+    "invalid": 5,
+    "evidence_valid": 17,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.375,
+    "recall": 0.5,
+    "f1": 0.42857142857142855,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "title": "Eve起草安全SDLC流程文档，下周三前发给大家评审",
+        "summary": "Eve起草安全SDLC流程文档，下周三前发给大家评审",
+        "source_message_ids": [
+          "m010"
+        ],
+        "evidence_quote": "好，那我起草一份安全SDLC流程文档，下周三前发给大家评审",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行承诺（起草文档并发送评审），证据原文完全支持，但候选GT中无等价决策"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "title": "在CI/CD中加自动触发威胁建模工单的步骤",
+        "summary": "在CI/CD中加自动触发威胁建模工单的步骤",
+        "source_message_ids": [
+          "m011",
+          "m012"
+        ],
+        "evidence_quote": "对，加一个自动触发威胁建模工单的步骤，防止遗漏。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行决策（在CI/CD中增加自动触发威胁建模工单的步骤），证据支持该决策，但候选GT中无等价决策或执行承诺。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "title": "渗透测试周期从季度改为双月一次",
+        "summary": "渗透测试周期从季度改为双月一次",
+        "source_message_ids": [
+          "m014",
+          "m020",
+          "m030"
+        ],
+        "evidence_quote": "渗透测试周期我建议从季度改为月度，但预算要控制，不能每次都请外部团队",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m020",
+        "reason": "提取结果与GT m020均明确将渗透测试周期改为双月一次，决策等价"
+      },
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "title": "内部培养红队能力，Eve有两人可兼职做渗透测试",
+        "summary": "内部培养红队能力，Eve有两人可兼职做渗透测试",
+        "source_message_ids": [
+          "m015",
+          "m016",
+          "m018"
+        ],
+        "evidence_quote": "内部可以培养红队能力，我这边有两个人可以兼职做渗透测试",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了内部培养红队能力的具体人员安排，是明确的执行决策，但候选GT中无等价决策（m009是自动化方案，m020是频率调整），因此属于有效额外决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "title": "Alice在Q2预算预留2万美金用于工具和培训",
+        "summary": "Alice在Q2预算预留2万美金用于工具和培训",
+        "source_message_ids": [
+          "m018",
+          "m019",
+          "m020"
+        ],
+        "evidence_quote": "工具授权费用我可以在Q2预算里预留，大概需要多少？",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.19"
+      },
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "title": "Dave在Jenkins加定时任务，每两个月自动触发渗透测试流程",
+        "summary": "Dave在Jenkins加定时任务，每两个月自动触发渗透测试流程",
+        "source_message_ids": [
+          "m021"
+        ],
+        "evidence_quote": "收到，我会在Jenkins里加个定时任务，每两个月自动触发渗透测试流程",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.35"
+      },
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "title": "每年做一次外部渗透测试作为内部测试的补充",
+        "summary": "每年做一次外部渗透测试作为内部测试的补充",
+        "source_message_ids": [
+          "m028",
+          "m029",
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "建议每年做一次外部渗透测试，作为内部测试的补充",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据链明确形成决策（外部测试一年一次），但候选GT均不涉及外部渗透测试频率，属于未被覆盖的有效额外决策"
+      },
+      {
+        "chat_id": "sec_compliance_channel_5",
+        "title": "Eve周五前给出安全SDLC初稿，核心增加威胁建模和代码审计",
+        "summary": "Eve周五前给出安全SDLC初稿，核心增加威胁建模和代码审计",
+        "source_message_ids": [
+          "m002",
+          "m004",
+          "m005"
+        ],
+        "evidence_quote": "我周五前给出初稿。核心是增加威胁建模和代码审计阶段。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选均不等价：GT候选分别涉及支付模块试点和核心分类清单，而提取结果明确承诺周五前给出安全SDLC初稿（含威胁建模和代码审计），证据支持且为独立决策承诺，未被任何GT覆盖。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_5",
+        "title": "安全SDLC试点项目定为支付模块",
+        "summary": "安全SDLC试点项目定为支付模块",
+        "source_message_ids": [
+          "m009",
+          "m010",
+          "m012"
+        ],
+        "evidence_quote": "好，那就定支付模块试点。@Eve 你周五前把细节敲定。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_5",
+        "title": "Bob明天开始部署OWASP Threat Dragon",
+        "summary": "Bob明天开始部署OWASP Threat Dragon",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "没问题，我明天开始部署。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果中的部署承诺在证据原文中仅为确认性回复，但候选GT中无对应决策，且证据本身是执行承诺而非决策，属于噪声。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_5",
+        "title": "渗透测试周期：核心系统按月，非核心按季度",
+        "summary": "渗透测试周期：核心系统按月，非核心按季度",
+        "source_message_ids": [
+          "m018",
+          "m019",
+          "m020",
+          "m022"
+        ],
+        "evidence_quote": "我建议核心系统按月，非核心按季度，折中方案。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.18"
+      },
+      {
+        "chat_id": "sec_compliance_channel_5",
+        "title": "Eve出核心系统分类清单",
+        "summary": "Eve出核心系统分类清单",
+        "source_message_ids": [
+          "m022"
+        ],
+        "evidence_quote": "折中方案合理。@Eve 你出个具体分类清单，哪些算核心。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m022",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_5",
+        "title": "Bob在流水线加标记区分核心和非核心系统",
+        "summary": "Bob在流水线加标记区分核心和非核心系统",
+        "source_message_ids": [
+          "m023",
+          "m024"
+        ],
+        "evidence_quote": "好，我会在流水线里加个标记，区分核心和非核心。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Bob承诺在流水线加标记区分核心与非核心系统，证据充分，但该决策未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "title": "把威胁建模作为需求阶段的强制门禁",
+        "summary": "把威胁建模作为需求阶段的强制门禁",
+        "source_message_ids": [
+          "m004",
+          "m008",
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "好，那我更新流程文档，把威胁建模作为需求阶段的强制门禁。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.06"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "title": "威胁建模工单按模块负责人自动分派给安全组",
+        "summary": "威胁建模工单按模块负责人自动分派给安全组",
+        "source_message_ids": [
+          "m013",
+          "m014"
+        ],
+        "evidence_quote": "可以，我来配置规则，按模块负责人自动分派。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺配置规则按模块负责人自动分派，是具体执行决策，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "title": "David联系外部团队安排下季度深度渗透测试",
+        "summary": "David联系外部团队安排下季度深度渗透测试",
+        "source_message_ids": [
+          "m031"
+        ],
+        "evidence_quote": "没问题，我同时联系外部团队安排下季度的深度测试。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺联系外部团队安排下季度深度测试，证据原文支持，但候选GT均为安全投入或测试模式的讨论，未覆盖此具体执行决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "title": "Ivy维护误报白名单库并定期更新",
+        "summary": "Ivy维护误报白名单库并定期更新",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "我来维护一个误报白名单库，定期更新。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺维护误报白名单库并定期更新，属于具体执行承诺，但未被任何候选GT覆盖。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "sec_compliance_channel_4",
+        "msg_id": "m009",
+        "expected_topic": "安全SDLC流程",
+        "expected_summary": "我赞成 @Dave 的方案，自动化威胁建模+SAST扫描，先试点一个项目",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "msg_id": "m009",
+        "expected_topic": "安全SDLC流程",
+        "expected_summary": "@Eva 可以接受，安全上的投入长期看是节省成本的。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sec_compliance_channel_6",
+        "msg_id": "m025",
+        "expected_topic": "渗透测试周期",
+        "expected_summary": "混合模式合理，自动化覆盖高频，人工聚焦深度。我支持。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 17,
+    "errors": {}
+  }
+}

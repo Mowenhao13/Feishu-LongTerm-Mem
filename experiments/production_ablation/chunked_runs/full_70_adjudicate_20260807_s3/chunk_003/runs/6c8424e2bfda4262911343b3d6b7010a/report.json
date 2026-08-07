@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "run_id": "6c8424e2bfda4262911343b3d6b7010a",
+    "created_at": "2026-08-07T14:51:20.460036+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "3d61ab177e446db7d2ccac4030ff9a4eb380d6bf8f0efe0d9b200b9db5e04683",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_9",
+      "backend_arch_channel_0",
+      "backend_arch_channel_1"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_9": 1,
+      "backend_arch_channel_0": 2,
+      "backend_arch_channel_1": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 13,
+  "chat_metrics": {
+    "ai_ml_platform_channel_9": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "backend_arch_channel_0": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "backend_arch_channel_1": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 3,
+    "strict_fn": 1,
+    "valid_extra": 4,
+    "invalid": 3,
+    "evidence_valid": 13,
+    "evidence_invalid": 0,
+    "errors": [
+      "backend_arch_channel_0:API版本控制用Header方案: match_gt must name a candidate msg_id, got 'm025'",
+      "backend_arch_channel_1:David通知前端团队下周联调: match_gt must name a candidate msg_id, got ''"
+    ],
+    "precision": 0.5714285714285714,
+    "recall": 0.8,
+    "f1": 0.6666666666666666,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_9",
+        "title": "在线学习管道每日更新，架构支持每小时扩展",
+        "summary": "在线学习管道每日更新，架构支持每小时扩展",
+        "source_message_ids": [
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "我支持每日更新，但需要为未来每小时更新预留架构扩展性。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m016",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_9",
+        "title": "Bob负责收集监控数据为正式决策做准备",
+        "summary": "Bob负责收集监控数据为正式决策做准备",
+        "source_message_ids": [
+          "m029"
+        ],
+        "evidence_quote": "试运行期间我会收集监控数据，为正式决策做准备。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅是试运行期间的监控数据收集计划，并非正式决策或执行承诺，与GT候选的架构扩展性决策无关。"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "API版本控制用Header方案",
+        "summary": "API版本控制用Header方案",
+        "source_message_ids": [
+          "m023",
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "API版本用URL路径还是Header？我建议用Header。",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "",
+        "reason": "match_gt must name a candidate msg_id, got 'm025'"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "Bob负责整理Kafka运维文档",
+        "summary": "Bob负责整理Kafka运维文档",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "Kafka运维文档我下午整理，明天发给大家。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "Bob承诺整理Kafka运维文档，与GT中Bob评估运维成本的决策等价"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "Charlie负责设计事件Schema",
+        "summary": "Charlie负责设计事件Schema",
+        "source_message_ids": [
+          "m027",
+          "m031"
+        ],
+        "evidence_quote": "我负责设计事件Schema，确保兼容性。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺设计事件Schema并提及初稿，是执行承诺，但GT候选均为微服务拆分与Kafka讨论，无对应覆盖。"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "下周三召开Sprint计划会议",
+        "summary": "下周三召开Sprint计划会议",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "别忘了下周三的Sprint计划会议。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为提醒事项，无决策或执行承诺，属于噪声信息。"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Saga模式试点订单服务，一个月后评估效果",
+        "summary": "Saga模式试点订单服务，一个月后评估效果",
+        "source_message_ids": [
+          "m005",
+          "m010",
+          "m025"
+        ],
+        "evidence_quote": "我们先用Saga试点订单服务，一个月后评估效果",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m010",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "审计日志必须实时写入，不能异步",
+        "summary": "审计日志必须实时写入，不能异步",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "同意，但审计日志要实时写入，不能异步",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求审计日志实时写入，但候选GT中无等价决策"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Saga补偿操作使用唯一键约束保证幂等性",
+        "summary": "Saga补偿操作使用唯一键约束保证幂等性",
+        "source_message_ids": [
+          "m007",
+          "m009"
+        ],
+        "evidence_quote": "幂等性可以用唯一键约束解决",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为技术方案讨论，缺乏明确决策或执行承诺，且证据仅支持幂等性可用唯一键约束，未形成具体实施决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "新模块用GraphQL，旧接口保持REST",
+        "summary": "新模块用GraphQL，旧接口保持REST",
+        "source_message_ids": [
+          "m021",
+          "m022"
+        ],
+        "evidence_quote": "那我们先在新模块用GraphQL，旧接口保持REST",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m021",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Emma负责编写GraphQL安全规范，包含限流和深度限制",
+        "summary": "Emma负责编写GraphQL安全规范，包含限流和深度限制",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "我写一份安全规范，包含限流和深度限制",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了Emma编写GraphQL安全规范的具体决策，证据原文支持该承诺，但候选GT中无等价决策"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "David通知前端团队下周联调",
+        "summary": "David通知前端团队下周联调",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "我通知前端团队下周联调",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "",
+        "reason": "match_gt must name a candidate msg_id, got ''"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Emma为Saga补偿逻辑添加监控告警",
+        "summary": "Emma为Saga补偿逻辑添加监控告警",
+        "source_message_ids": [
+          "m027"
+        ],
+        "evidence_quote": "Saga补偿逻辑我会加监控告警",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是明确的执行承诺（添加监控告警），证据真实支持，但未被任何候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_0",
+        "msg_id": "m021",
+        "expected_topic": "微服务拆分粒度",
+        "expected_summary": "下午会议开始。微服务拆分方案大家同意吗？@Charlie @Bob @David",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 11,
+    "errors": {
+      "backend_arch_channel_0|API版本控制用Header方案|m023,m024,m025|API版本用URL路径还是Header？我建议用Header。": "match_gt must name a candidate msg_id, got 'm025'",
+      "backend_arch_channel_1|David通知前端团队下周联调|m026|我通知前端团队下周联调": "match_gt must name a candidate msg_id, got ''"
+    }
+  }
+}

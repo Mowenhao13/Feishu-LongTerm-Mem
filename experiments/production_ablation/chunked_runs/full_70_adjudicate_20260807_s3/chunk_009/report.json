@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "run_id": "479798cd422e4651bc36424f472ccad5",
+    "created_at": "2026-08-07T15:12:23.892706+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "90e1f00ca135381b1087f7d183f99f5b5d0c88ed3a51dd127809b7d7890cef27",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "cloud_infra_channel_7",
+      "cloud_infra_channel_8",
+      "cloud_infra_channel_9"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "cloud_infra_channel_7": 2,
+      "cloud_infra_channel_8": 2,
+      "cloud_infra_channel_9": 1
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 7,
+  "chat_metrics": {
+    "cloud_infra_channel_7": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "cloud_infra_channel_8": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "cloud_infra_channel_9": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 2,
+    "strict_fp": 2,
+    "strict_fn": 3,
+    "valid_extra": 3,
+    "invalid": 2,
+    "evidence_valid": 7,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.5,
+    "recall": 0.4,
+    "f1": 0.4444444444444445,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "cloud_infra_channel_7",
+        "title": "好的，我更新一下项目计划，存储这块成本降低30%，大家加油",
+        "summary": "好的，我更新一下项目计划，存储这块成本降低30%，大家加油",
+        "source_message_ids": [
+          "m009"
+        ],
+        "evidence_quote": "好的，我更新一下项目计划，存储这块成本降低30%，大家加油",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "仅是个人表态和计划更新，无具体决策或执行承诺，属于讨论噪声"
+      },
+      {
+        "chat_id": "cloud_infra_channel_8",
+        "title": "采用Kubernetes + Volcano + 节点池作为GPU调度方案",
+        "summary": "采用Kubernetes + Volcano + 节点池作为GPU调度方案",
+        "source_message_ids": [
+          "m016",
+          "m022",
+          "m025",
+          "m026",
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "我倾向于用Volcano + 节点池，大家表决？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m025",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_8",
+        "title": "采用SSD+HDD混合存储方案，热数据用SSD，冷数据用HDD",
+        "summary": "采用SSD+HDD混合存储方案，热数据用SSD，冷数据用HDD",
+        "source_message_ids": [
+          "m002",
+          "m012",
+          "m014",
+          "m015"
+        ],
+        "evidence_quote": "我建议用SSD+HDD混合，兼顾性能与成本。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.24"
+      },
+      {
+        "chat_id": "cloud_infra_channel_9",
+        "title": "同意混合方案，数据库用IO2，日志用GP3",
+        "summary": "同意混合方案，数据库用IO2，日志用GP3",
+        "source_message_ids": [
+          "m007",
+          "m008"
+        ],
+        "evidence_quote": "我建议数据库用IO2，日志用GP3，混合方案",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m008",
+        "reason": "提取结果与GT m008的决策一致，均为同意混合方案"
+      },
+      {
+        "chat_id": "cloud_infra_channel_9",
+        "title": "安排明天评审存储方案",
+        "summary": "安排明天评审存储方案",
+        "source_message_ids": [
+          "m009"
+        ],
+        "evidence_quote": "好的，我安排明天评审。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果有明确执行承诺（安排明天评审），证据真实且未被GT候选覆盖"
+      },
+      {
+        "chat_id": "cloud_infra_channel_9",
+        "title": "先做POC，下周一启动",
+        "summary": "先做POC，下周一启动",
+        "source_message_ids": [
+          "m025",
+          "m026",
+          "m027"
+        ],
+        "evidence_quote": "两个方案各有利弊，我们做个POC",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺先做POC并下周一启动，是具体执行决策，但未被任何候选GT覆盖"
+      },
+      {
+        "chat_id": "cloud_infra_channel_9",
+        "title": "POC期间注意GPU MIG隔离测试",
+        "summary": "POC期间注意GPU MIG隔离测试",
+        "source_message_ids": [
+          "m031",
+          "m032"
+        ],
+        "evidence_quote": "POC期间注意GPU MIG隔离测试",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确的测试执行承诺，但未被候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "cloud_infra_channel_7",
+        "msg_id": "m007",
+        "expected_topic": "存储类选型",
+        "expected_summary": "@Bob @Dave 综合考虑性能和成本，我倾向混合方案：热数据用SSD，冷数据用HDD",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "cloud_infra_channel_7",
+        "msg_id": "m020",
+        "expected_topic": "GPU调度策略",
+        "expected_summary": "@Bob @Henry 综合意见，我们先用Volcano + MIG做一期，保障安全和性能",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "cloud_infra_channel_8",
+        "msg_id": "m011",
+        "expected_topic": "存储类选型",
+        "expected_summary": "@Carol 回来。@Bob 你整理一下SSD+HDD的容量和成本对比。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 7,
+    "errors": {}
+  }
+}

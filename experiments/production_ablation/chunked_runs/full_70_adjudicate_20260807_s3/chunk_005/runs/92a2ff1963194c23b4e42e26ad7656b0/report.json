@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "run_id": "92a2ff1963194c23b4e42e26ad7656b0",
+    "created_at": "2026-08-07T14:54:48.083605+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "54e7d759aefe8ac354c0746c15a87bd1b34d84cffd3c0e1400f72973f9e8ed70",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "backend_arch_channel_5",
+      "backend_arch_channel_6",
+      "backend_arch_channel_7"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "backend_arch_channel_5": 2,
+      "backend_arch_channel_6": 1,
+      "backend_arch_channel_7": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 9,
+  "chat_metrics": {
+    "backend_arch_channel_5": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "backend_arch_channel_6": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    "backend_arch_channel_7": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 5,
+    "strict_fp": 2,
+    "strict_fn": 0,
+    "valid_extra": 0,
+    "invalid": 2,
+    "evidence_valid": 8,
+    "evidence_invalid": 0,
+    "errors": [
+      "backend_arch_channel_5:强一致性用2PC，最终一致性用Saga: invalid semantic GT identity"
+    ],
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1": 0.8333333333333333,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "backend_arch_channel_5",
+        "title": "限流熔断采用Sentinel",
+        "summary": "限流熔断采用Sentinel",
+        "source_message_ids": [
+          "m001",
+          "m008",
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "那就定Sentinel吧",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m009",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_7",
+        "title": "数据一致性采用Kafka事件驱动+本地消息表",
+        "summary": "数据一致性采用Kafka事件驱动+本地消息表",
+        "source_message_ids": [
+          "m019",
+          "m025",
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "那就用Kafka事件驱动+本地消息表，先试点再推广",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_5",
+        "title": "订单系统必须强一致性",
+        "summary": "订单系统必须强一致性",
+        "source_message_ids": [
+          "m012"
+        ],
+        "evidence_quote": "订单系统必须强一致性，否则会超卖",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m026",
+        "reason": "提取结果与GT候选m026中的‘强一致性用2PC’等价，均为明确决策承诺"
+      },
+      {
+        "chat_id": "backend_arch_channel_5",
+        "title": "强一致性用2PC，最终一致性用Saga",
+        "summary": "强一致性用2PC，最终一致性用Saga",
+        "source_message_ids": [
+          "m026",
+          "m030"
+        ],
+        "evidence_quote": "强一致性用2PC，最终用Saga",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m026",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "限流用Redis令牌桶+熔断器",
+        "summary": "限流用Redis令牌桶+熔断器",
+        "source_message_ids": [
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "大家意见统一，限流用Redis令牌桶+熔断器。决策吧。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m015",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "先调研Saga和TCC优缺点",
+        "summary": "先调研Saga和TCC优缺点",
+        "source_message_ids": [
+          "m032",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "暂时不定论，先调研Saga和TCC的优缺点。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为调研计划，未形成明确决策或执行承诺，属于讨论/状态噪声。"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "好的，我准备测试用例。",
+        "summary": "好的，我准备测试用例。",
+        "source_message_ids": [
+          "m017"
+        ],
+        "evidence_quote": "好的，我准备测试用例。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为测试用例准备说明，无决策或执行承诺，属于讨论噪声。"
+      },
+      {
+        "chat_id": "backend_arch_channel_7",
+        "title": "限流熔断采用Resilience4j+令牌桶",
+        "summary": "限流熔断采用Resilience4j+令牌桶",
+        "source_message_ids": [
+          "m005",
+          "m007",
+          "m011",
+          "m012",
+          "m033"
+        ],
+        "evidence_quote": "好，限流熔断方案就定Resilience4j+令牌桶",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m011",
+        "reason": "提取结果与GT候选m011的决策内容完全一致，均为‘同意用Resilience4j+令牌桶’并承诺执行POC"
+      }
+    ],
+    "unmatched_expected": []
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 8,
+    "errors": {}
+  }
+}

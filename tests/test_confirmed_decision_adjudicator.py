@@ -24,10 +24,11 @@ async def test_adjudicator_returns_valid_extra():
     assert provider.prompts
 
 @pytest.mark.asyncio
-async def test_adjudicator_rejects_unknown_gt_identity():
+async def test_adjudicator_downgrades_unknown_gt_identity():
     provider = FakeProvider('{"adjudication":"match_gt","matched_msg_id":"unknown","reason":"bad"}')
-    with pytest.raises(ValueError, match="candidate msg_id"):
-        await LLMDecisionAdjudicator(provider).adjudicate(_output(), [{"msg_id":"m1","expected_summary":"完全不同的决策"}], [{"msg_id":"m1","msg":"确认采用 PostgreSQL"}])
+    result = await LLMDecisionAdjudicator(provider).adjudicate(_output(), [{"msg_id":"m1","expected_summary":"完全不同的决策"}], [{"msg_id":"m1","msg":"确认采用 PostgreSQL"}])
+    assert result.outcome is Adjudication.INVALID
+    assert "unknown GT" in result.reason
 
 @pytest.mark.asyncio
 async def test_adjudicator_downgrades_low_overlap_match():

@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "run_id": "fc60aad3888a45398f6883211444e758",
+    "created_at": "2026-08-07T14:48:09.813616+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "1fc35d13eb429a914468fa4560cf2ac93c41af654e05d59569961609aa87932c",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_3",
+      "ai_ml_platform_channel_4",
+      "ai_ml_platform_channel_5"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_3": 2,
+      "ai_ml_platform_channel_4": 2,
+      "ai_ml_platform_channel_5": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 8,
+  "chat_metrics": {
+    "ai_ml_platform_channel_3": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ai_ml_platform_channel_4": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ai_ml_platform_channel_5": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    }
+  },
+  "metrics": {
+    "strict_tp": 1,
+    "strict_fp": 3,
+    "strict_fn": 5,
+    "valid_extra": 4,
+    "invalid": 3,
+    "evidence_valid": 8,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.25,
+    "recall": 0.16666666666666666,
+    "f1": 0.2,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_5",
+        "title": "Kafka+Flink组合可行，先做POC",
+        "summary": "Kafka+Flink组合可行，先做POC",
+        "source_message_ids": [
+          "m002",
+          "m003",
+          "m006",
+          "m007"
+        ],
+        "evidence_quote": "综合看，Kafka+Flink组合可行，但成本要评估",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m006",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_5",
+        "title": "模型数据流用TLS 1.3加密传输",
+        "summary": "模型数据流用TLS 1.3加密传输",
+        "source_message_ids": [
+          "m016",
+          "m018"
+        ],
+        "evidence_quote": "模型数据流建议加密传输，用TLS 1.3",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.12"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_4",
+        "title": "漂移检测采用Evidently+Prometheus，三级告警",
+        "summary": "漂移检测采用Evidently+Prometheus，三级告警",
+        "source_message_ids": [
+          "m023",
+          "m024",
+          "m025",
+          "m027",
+          "m031"
+        ],
+        "evidence_quote": "好，漂移检测方案基本清晰了：用Evidently+Prometheus，三级告警。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选无等价决策，GT候选m010为Kafka+Flink+Redis管道决策，m032为回滚流程讨论，均不涉及漂移检测方案；证据链完整支持该决策，属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_4",
+        "title": "模型回滚必须人工审批，不能全自动",
+        "summary": "模型回滚必须人工审批，不能全自动",
+        "source_message_ids": [
+          "m019",
+          "m020"
+        ],
+        "evidence_quote": "我同意Charlie，回滚必须有人批准。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.19"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_4",
+        "title": "告警日志保留至少90天",
+        "summary": "告警日志保留至少90天",
+        "source_message_ids": [
+          "m028"
+        ],
+        "evidence_quote": "告警日志要保留至少90天，满足合规审计要求。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为合规要求陈述，非具体决策或执行承诺，属于噪声信息。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_5",
+        "title": "特征存储选用Cassandra加ACL",
+        "summary": "特征存储选用Cassandra加ACL",
+        "source_message_ids": [
+          "m021",
+          "m022",
+          "m023"
+        ],
+        "evidence_quote": "选Cassandra，运维成本可控，长期更稳定",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确选择Cassandra加ACL作为特征存储，证据链完整且为执行决策，但候选GT中无等价决策（m006为Kafka+Flink方案，m018为加密方案）。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_5",
+        "title": "漂移检测阈值设为0.05，记录上下文",
+        "summary": "漂移检测阈值设为0.05，记录上下文",
+        "source_message_ids": [
+          "m026",
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "阈值0.05通过，按此实施",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确记录了阈值0.05通过并需记录上下文的决策，证据链完整，但候选GT中无等价决策。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_5",
+        "title": "Bob下午开始部署Flink作业监控漂移数据流",
+        "summary": "Bob下午开始部署Flink作业监控漂移数据流",
+        "source_message_ids": [
+          "m025"
+        ],
+        "evidence_quote": "我下午开始部署Flink作业，监控漂移数据流",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了具体的部署执行动作，证据原文支持，但未被任何候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "ai_ml_platform_channel_3",
+        "msg_id": "m011",
+        "expected_topic": "在线学习管道",
+        "expected_summary": "我们决策：采用Flink+Kafka组合，Charlie评估资源。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_3",
+        "msg_id": "m027",
+        "expected_topic": "模型监控漂移检测",
+        "expected_summary": "我们先试点一个模型，再决定是否全面推广。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_4",
+        "msg_id": "m010",
+        "expected_topic": "在线学习管道",
+        "expected_summary": "好，我拍板：管道用Kafka+Flink+Redis，TLS加密，先做MVP。@Charlie 按这个报预算。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_4",
+        "msg_id": "m032",
+        "expected_topic": "模型监控漂移检测",
+        "expected_summary": "@Bob 同意。但回滚流程还需要细化，下次会议专门讨论。今天先到这。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_5",
+        "msg_id": "m018",
+        "expected_topic": "模型监控漂移检测",
+        "expected_summary": "@David 加密方案纳入管道设计，确保合规",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 8,
+    "errors": {}
+  }
+}

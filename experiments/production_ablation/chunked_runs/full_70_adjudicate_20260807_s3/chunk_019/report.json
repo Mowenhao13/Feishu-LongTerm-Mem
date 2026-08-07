@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "run_id": "140a632b52e34e68b986e8a764b2a8f5",
+    "created_at": "2026-08-07T15:43:55.713878+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "3aee15e25483e349960b56d8fd4da2a2034994495107ed14275c7b6ee9a0e7e5",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sec_compliance_channel_7",
+      "sec_compliance_channel_8",
+      "sec_compliance_channel_9"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "sec_compliance_channel_7": 2,
+      "sec_compliance_channel_8": 2,
+      "sec_compliance_channel_9": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 15,
+  "chat_metrics": {
+    "sec_compliance_channel_7": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    "sec_compliance_channel_8": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    "sec_compliance_channel_9": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 5,
+    "strict_fn": 2,
+    "valid_extra": 6,
+    "invalid": 5,
+    "evidence_valid": 15,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.4444444444444444,
+    "recall": 0.6666666666666666,
+    "f1": 0.5333333333333333,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sec_compliance_channel_7",
+        "title": "SAST、DAST、SCA三件套作为硬性门禁",
+        "summary": "SAST、DAST、SCA三件套作为硬性门禁",
+        "source_message_ids": [
+          "m009",
+          "m012"
+        ],
+        "evidence_quote": "我建议把SAST、DAST和SCA都设为卡点，不通过不能合并主干。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.00"
+      },
+      {
+        "chat_id": "sec_compliance_channel_7",
+        "title": "外部季度+内部月度+高危触发渗透测试方案",
+        "summary": "外部季度+内部月度+高危触发渗透测试方案",
+        "source_message_ids": [
+          "m025",
+          "m026",
+          "m027"
+        ],
+        "evidence_quote": "那么决策一下：外部季度+内部月度+高危触发，大家有异议吗？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m025",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_7",
+        "title": "内部扫描集成到nightly build",
+        "summary": "内部扫描集成到nightly build",
+        "source_message_ids": [
+          "m022"
+        ],
+        "evidence_quote": "另外内部扫描可以集成到nightly build里。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺将内部扫描集成到nightly build，但候选GT中无等价决策"
+      },
+      {
+        "chat_id": "sec_compliance_channel_7",
+        "title": "Carol更新决策纪要到wiki",
+        "summary": "Carol更新决策纪要到wiki",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "Carol把决策纪要更新到wiki。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.13"
+      },
+      {
+        "chat_id": "sec_compliance_channel_7",
+        "title": "设计评审阶段安全工程师必须签字",
+        "summary": "设计评审阶段安全工程师必须签字",
+        "source_message_ids": [
+          "m006",
+          "m007"
+        ],
+        "evidence_quote": "必须签字，尤其是涉及敏感数据处理的模块。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "证据原文是讨论是否需要安全工程师签字，并未形成明确决策或执行承诺，属于建议性讨论噪声。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_8",
+        "title": "需求阶段做威胁建模，开发阶段集成SAST",
+        "summary": "需求阶段做威胁建模，开发阶段集成SAST",
+        "source_message_ids": [
+          "m008",
+          "m009"
+        ],
+        "evidence_quote": "好，那就定下来：需求阶段做威胁建模，开发阶段集成SAST。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m008",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_8",
+        "title": "小版本改动大时触发快速自动化扫描再决定是否手动测试",
+        "summary": "小版本改动大时触发快速自动化扫描再决定是否手动测试",
+        "source_message_ids": [
+          "m021",
+          "m022",
+          "m025"
+        ],
+        "evidence_quote": "小版本改动大时，可以触发快速自动化扫描，再决定是否手动测试。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了针对小版本改动的自动化扫描决策，而候选GT分别涉及威胁建模和成本安全平衡，内容不等价，且证据充分支持该决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_8",
+        "title": "Eve准备测试用例模板明天分享",
+        "summary": "Eve准备测试用例模板明天分享",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "太好了，我准备测试用例模板，明天分享。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取内容仅为准备模板的承诺，非决策或执行结果，与GT候选无等价关系"
+      },
+      {
+        "chat_id": "sec_compliance_channel_9",
+        "title": "威胁建模必须纳入安全SDLC流程",
+        "summary": "威胁建模必须纳入安全SDLC流程",
+        "source_message_ids": [
+          "m005",
+          "m006"
+        ],
+        "evidence_quote": "好，威胁建模必须纳入流程。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m006",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_8",
+        "title": "收到，我更新项目计划，给安全活动预留时间。",
+        "summary": "收到，我更新项目计划，给安全活动预留时间。",
+        "source_message_ids": [
+          "m009"
+        ],
+        "evidence_quote": "收到，我更新项目计划，给安全活动预留时间。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺更新项目计划并预留安全活动时间，是具体执行决策，但未被候选GT覆盖。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_8",
+        "title": "收到，我准备好环境。",
+        "summary": "收到，我准备好环境。",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "收到，我准备好环境。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为确认准备就绪的状态声明，未包含任何决策或执行承诺，属于讨论噪声。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_9",
+        "title": "CI/CD集成SonarQube和Trivy安全扫描",
+        "summary": "CI/CD集成SonarQube和Trivy安全扫描",
+        "source_message_ids": [
+          "m007",
+          "m009"
+        ],
+        "evidence_quote": "可以集成SonarQube和Trivy，但需要调整流水线",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺了集成SonarQube和Trivy并已有脚本待测试，属于具体执行决策，但候选GT中m006是询问能否集成，m017是扫描频率建议，均不覆盖此执行承诺。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_9",
+        "title": "渗透测试周期：每季度基础扫描+半年深度渗透",
+        "summary": "渗透测试周期：每季度基础扫描+半年深度渗透",
+        "source_message_ids": [
+          "m017",
+          "m018"
+        ],
+        "evidence_quote": "折中一下：每季度一次基础扫描，半年一次深度渗透",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_9",
+        "title": "Bob准备安全流程文档供客户审计",
+        "summary": "Bob准备安全流程文档供客户审计",
+        "source_message_ids": [
+          "m027",
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "已经让Bob准备了，今天内完成",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了Bob准备安全流程文档的具体执行承诺，证据链完整，但候选GT中无对应msg_id覆盖此决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_9",
+        "title": "明天早上同步渗透测试排期",
+        "summary": "明天早上同步渗透测试排期",
+        "source_message_ids": [
+          "m033",
+          "m034"
+        ],
+        "evidence_quote": "明天早上同步一下渗透测试排期",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行承诺（明天早上同步排期），有证据支持，但未被任何候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "sec_compliance_channel_7",
+        "msg_id": "m010",
+        "expected_topic": "安全SDLC流程",
+        "expected_summary": "@Alice 同意。SCA工具我们已集成，SAST需要额外买License，预算够吗？",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sec_compliance_channel_8",
+        "msg_id": "m024",
+        "expected_topic": "渗透测试周期",
+        "expected_summary": "同意，成本与安全平衡，就这么办。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 15,
+    "errors": {}
+  }
+}

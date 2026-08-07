@@ -223,7 +223,10 @@ class ConfirmedDecisionEvaluator:
                 continue
             if result.outcome is Adjudication.MATCH_GT:
                 key = (output.chat_id, result.matched_msg_id)
-                if not result.matched_msg_id or key in matched_expected or not any(
+                if key in matched_expected:
+                    invalid += 1
+                    record_detail(output, True, Adjudication.INVALID, result.reason or "duplicate_gt_match", result.matched_msg_id)
+                elif not result.matched_msg_id or not any(
                     expected.get("msg_id") == result.matched_msg_id for expected in candidates
                 ):
                     errors.append(f"{output.chat_id}:{output.title}: invalid semantic GT identity")

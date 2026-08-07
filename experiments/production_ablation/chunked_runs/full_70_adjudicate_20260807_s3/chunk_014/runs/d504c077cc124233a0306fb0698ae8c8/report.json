@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "run_id": "d504c077cc124233a0306fb0698ae8c8",
+    "created_at": "2026-08-07T15:38:28.295995+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "ee6068fd629387add8daaff68732d703f8eec9a606983be97afed6267db3bb28",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "frontend_mobile_channel_2",
+      "frontend_mobile_channel_3",
+      "frontend_mobile_channel_4"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "frontend_mobile_channel_2": 2,
+      "frontend_mobile_channel_3": 2,
+      "frontend_mobile_channel_4": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 19,
+  "chat_metrics": {
+    "frontend_mobile_channel_2": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "frontend_mobile_channel_3": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 3,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "frontend_mobile_channel_4": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 3,
+    "strict_fn": 2,
+    "valid_extra": 10,
+    "invalid": 3,
+    "evidence_valid": 19,
+    "evidence_invalid": 0,
+    "errors": [
+      "frontend_mobile_channel_2:设计Token用JSON方案: invalid semantic GT identity",
+      "frontend_mobile_channel_2:组件库命名用PascalCase，安全组件加Sec前缀: invalid semantic GT identity"
+    ],
+    "precision": 0.5714285714285714,
+    "recall": 0.6666666666666666,
+    "f1": 0.6153846153846153,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "采用分层采样，错误事件100%采集，常规指标10%",
+        "summary": "采用分层采样，错误事件100%采集，常规指标10%",
+        "source_message_ids": [
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "可以用分层采样，对错误事件100%采集，常规指标10%即可",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选主题不同，且为独立决策建议"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "数据存储用ClickHouse",
+        "summary": "数据存储用ClickHouse",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015"
+        ],
+        "evidence_quote": "那存储方案就定ClickHouse了，我下周开始对接安全审核",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m015",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "组件库技术栈定为React + TypeScript + Storybook",
+        "summary": "组件库技术栈定为React + TypeScript + Storybook",
+        "source_message_ids": [
+          "m020",
+          "m021"
+        ],
+        "evidence_quote": "设计稿还没，但可以先定技术栈：React + TypeScript + Storybook",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是技术栈决策，但候选GT分别是存储方案和样式方案，主题不同且无等价关系"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "CSS方案用CSS Modules + Tailwind CSS，加tw-前缀",
+        "summary": "CSS方案用CSS Modules + Tailwind CSS，加tw-前缀",
+        "source_message_ids": [
+          "m028",
+          "m029",
+          "m030",
+          "m035"
+        ],
+        "evidence_quote": "同意，JSON Token + CSS Modules + Tailwind前缀，就这样",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m035",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "设计Token用JSON方案",
+        "summary": "设计Token用JSON方案",
+        "source_message_ids": [
+          "m032",
+          "m035"
+        ],
+        "evidence_quote": "同意，JSON Token + CSS Modules + Tailwind前缀，就这样",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m035",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "组件库命名用PascalCase，安全组件加Sec前缀",
+        "summary": "组件库命名用PascalCase，安全组件加Sec前缀",
+        "source_message_ids": [
+          "m037",
+          "m038"
+        ],
+        "evidence_quote": "命名用PascalCase，安全相关的组件加Sec前缀，比如SecButton",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m035",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_2",
+        "title": "Frank负责搭建组件库脚手架，明天开始",
+        "summary": "Frank负责搭建组件库脚手架，明天开始",
+        "source_message_ids": [
+          "m036"
+        ],
+        "evidence_quote": "好，我明天开始搭脚手架，组件库命名规范再同步一下",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选主题不同，GT候选涉及存储方案和命名规范，而提取结果为搭建脚手架的执行承诺，证据支持但未被GT覆盖"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_4",
+        "title": "采用分层缓存方案：内存LRU + Service Worker兜底",
+        "summary": "采用分层缓存方案：内存LRU + Service Worker兜底",
+        "source_message_ids": [
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "缓存策略我倾向用分层方案：内存LRU + Service Worker兜底",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m009",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "title": "Diana负责写缓存数据加密和清理策略文档",
+        "summary": "Diana负责写缓存数据加密和清理策略文档",
+        "source_message_ids": [
+          "m015",
+          "m016"
+        ],
+        "evidence_quote": "好的，我会写缓存数据加密和清理策略文档。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: "
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "title": "CDN缓存TTL设为24小时",
+        "summary": "CDN缓存TTL设为24小时",
+        "source_message_ids": [
+          "m017"
+        ],
+        "evidence_quote": "CDN配置我下午改，TTL设24小时。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "证据仅提及CDN配置修改和TTL设置，但未明确指定缓存类型（静态/动态），与候选GT中m014的静态资源SW和动态数据Memory Cache决策无等价关系，且m033为预算审批，不相关；证据为个人操作承诺，非正式决策记录。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "title": "采用VWO作为A/B测试框架",
+        "summary": "采用VWO作为A/B测试框架",
+        "source_message_ids": [
+          "m028",
+          "m032",
+          "m033",
+          "m034"
+        ],
+        "evidence_quote": "那就定VWO。Bob牵头集成，两周内上线第一个实验。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确决策采用VWO并指定执行人及时间线，证据链完整，但候选GT中无等价决策（m033仅为预算批准，非工具选型决策）"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "title": "Bob牵头集成VWO，两周内上线第一个实验",
+        "summary": "Bob牵头集成VWO，两周内上线第一个实验",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "那就定VWO。Bob牵头集成，两周内上线第一个实验。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行决策（集成VWO并设定时间线），但候选GT中无对应内容，属于有效额外决策。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "title": "Frank配置VWO的CDN加速确保全球低延迟",
+        "summary": "Frank配置VWO的CDN加速确保全球低延迟",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "我配置VWO的CDN加速，确保全球低延迟。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行决策（配置CDN加速），证据原文支持该决策，但候选GT中无等价决策内容。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "title": "Eve帮Bob写实验配置代码",
+        "summary": "Eve帮Bob写实验配置代码",
+        "source_message_ids": [
+          "m037"
+        ],
+        "evidence_quote": "我帮@Bob写实验配置代码，练练手。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "仅为协助编写代码的提议，无明确决策或执行承诺"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_4",
+        "title": "CDN缓存配置改为max-age=3600配合stale-while-revalidate",
+        "summary": "CDN缓存配置改为max-age=3600配合stale-while-revalidate",
+        "source_message_ids": [
+          "m005",
+          "m012",
+          "m021"
+        ],
+        "evidence_quote": "CDN缓存也要配合，建议设置max-age=3600配合stale-while-revalidate",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确描述了CDN缓存配置的决策和执行承诺（max-age=3600配合stale-while-revalidate），证据链完整，但未被任何候选GT覆盖"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_4",
+        "title": "先用GrowthBook作为A/B测试框架，以后再迁移",
+        "summary": "先用GrowthBook作为A/B测试框架，以后再迁移",
+        "source_message_ids": [
+          "m013",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "A/B测试框架我调研了GrowthBook，开源且支持feature flag",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m016",
+        "reason": "提取结果与GT m016均明确决策先用GrowthBook，以后再迁移，内容等价"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_4",
+        "title": "灰度实验比例从5%起步，观察两天无异常再提升",
+        "summary": "灰度实验比例从5%起步，观察两天无异常再提升",
+        "source_message_ids": [
+          "m025",
+          "m026"
+        ],
+        "evidence_quote": "灰度比例我建议5%起步，观察两天无异常再提升",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选主题不同，GT候选讨论缓存策略和A/B框架选型，而提取结果是灰度实验比例的具体执行建议，属于独立决策"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_4",
+        "title": "缓存监控接入Grafana，告警阈值设为95%命中率",
+        "summary": "缓存监控接入Grafana，告警阈值设为95%命中率",
+        "source_message_ids": [
+          "m023",
+          "m029"
+        ],
+        "evidence_quote": "缓存监控已接入Grafana，告警阈值设为95%命中率",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确描述了缓存监控已接入Grafana并设置告警阈值，证据链完整，但未被候选GT覆盖"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_4",
+        "title": "David更新缓存策略文档并归档到项目wiki",
+        "summary": "David更新缓存策略文档并归档到项目wiki",
+        "source_message_ids": [
+          "m033",
+          "m034"
+        ],
+        "evidence_quote": "我这边缓存策略文档已更新，包括失效策略和清理机制",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了David更新缓存策略文档并归档的具体执行动作，证据链完整，但候选GT均为讨论性建议，无等价执行结果"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "msg_id": "m014",
+        "expected_topic": "构建缓存策略",
+        "expected_summary": "我们折中：静态资源用SW，动态数据用Memory Cache。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_3",
+        "msg_id": "m033",
+        "expected_topic": "A/B测试框架",
+        "expected_summary": "$99/月可以接受，我批预算。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 19,
+    "errors": {}
+  }
+}

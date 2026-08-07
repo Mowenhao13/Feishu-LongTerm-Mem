@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "run_id": "4267abd387ac4f799335735087cbb01a",
+    "created_at": "2026-08-07T14:56:21.888146+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "7b8399ce90b86fb511eacc9016c6a2dc71b48377ca18f6bf7776f24b291bde9a",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "backend_arch_channel_8",
+      "backend_arch_channel_9",
+      "cloud_infra_channel_0"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "backend_arch_channel_8": 2,
+      "backend_arch_channel_9": 2,
+      "cloud_infra_channel_0": 1
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 7,
+  "chat_metrics": {
+    "backend_arch_channel_8": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "backend_arch_channel_9": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "cloud_infra_channel_0": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 0,
+    "strict_fn": 1,
+    "valid_extra": 3,
+    "invalid": 0,
+    "evidence_valid": 7,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.888888888888889,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "backend_arch_channel_9",
+        "title": "选Sentinel作为限流熔断组件",
+        "summary": "选Sentinel作为限流熔断组件",
+        "source_message_ids": [
+          "m014",
+          "m015"
+        ],
+        "evidence_quote": "那就定Sentinel吧，Bob你牵头做POC，下周出结果。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m014",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_8",
+        "title": "下周跟业务方确认限流阈值",
+        "summary": "下周跟业务方确认限流阈值",
+        "source_message_ids": [
+          "m010"
+        ],
+        "evidence_quote": "好的，我记录一下，下周跟业务方确认阈值。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果为下周确认阈值的执行承诺，证据真实，但未被候选GT覆盖"
+      },
+      {
+        "chat_id": "backend_arch_channel_8",
+        "title": "先做一期强一致性核心链路，二期优化其他模块",
+        "summary": "先做一期强一致性核心链路，二期优化其他模块",
+        "source_message_ids": [
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "先做一期强一致性核心链路，二期再优化其他模块。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m029",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_8",
+        "title": "Bob下周一出Seata集成方案",
+        "summary": "Bob下周一出Seata集成方案",
+        "source_message_ids": [
+          "m030"
+        ],
+        "evidence_quote": "同意，我下周一出Seata集成方案。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺下周一出Seata集成方案，证据原文支持，但候选GT中无等价决策"
+      },
+      {
+        "chat_id": "backend_arch_channel_8",
+        "title": "Dave准备Seata部署脚本并跑Demo",
+        "summary": "Dave准备Seata部署脚本并跑Demo",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "我准备一下Seata的部署脚本，先跑个Demo。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行承诺（准备部署脚本并跑Demo），证据支持，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "backend_arch_channel_9",
+        "title": "最终方案定Saga+Kafka，Frank和Charlie负责实现",
+        "summary": "最终方案定Saga+Kafka，Frank和Charlie负责实现",
+        "source_message_ids": [
+          "m038"
+        ],
+        "evidence_quote": "好，就Saga+Kafka，Frank和Charlie负责实现。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m037",
+        "reason": "提取结果与GT候选m037均明确确认Saga+Kafka为最终方案，决策等价。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_0",
+        "title": "先做POC，一个月后给结论",
+        "summary": "先做POC，一个月后给结论",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016"
+        ],
+        "evidence_quote": "那先做POC，一个月后给结论。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m013",
+        "reason": "exact_source_match"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_8",
+        "msg_id": "m009",
+        "expected_topic": "限流熔断策略",
+        "expected_summary": "大家意见比较一致，那就选Sentinel作为限流熔断组件。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 7,
+    "errors": {}
+  }
+}

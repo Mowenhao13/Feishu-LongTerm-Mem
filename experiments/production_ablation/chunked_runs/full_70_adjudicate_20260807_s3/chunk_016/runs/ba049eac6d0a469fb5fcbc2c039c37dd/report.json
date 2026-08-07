@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "run_id": "ba049eac6d0a469fb5fcbc2c039c37dd",
+    "created_at": "2026-08-07T15:33:34.985199+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "5bc83ced44c237d12d11224597938eb8652bc4f54e04da31deba9240697a096a",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "frontend_mobile_channel_8",
+      "frontend_mobile_channel_9",
+      "sec_compliance_channel_0"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "frontend_mobile_channel_8": 2,
+      "frontend_mobile_channel_9": 2,
+      "sec_compliance_channel_0": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 12,
+  "chat_metrics": {
+    "frontend_mobile_channel_8": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "frontend_mobile_channel_9": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "sec_compliance_channel_0": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 4,
+    "strict_fn": 3,
+    "valid_extra": 4,
+    "invalid": 4,
+    "evidence_valid": 11,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.42857142857142855,
+    "recall": 0.5,
+    "f1": 0.4615384615384615,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "frontend_mobile_channel_8",
+        "title": "采用stale-while-revalidate作为默认缓存策略",
+        "summary": "采用stale-while-revalidate作为默认缓存策略",
+        "source_message_ids": [
+          "m011",
+          "m012"
+        ],
+        "evidence_quote": "我建议用stale-while-revalidate策略，既快又新鲜。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "提取结果与GT候选m012的决策内容完全一致，均采用stale-while-revalidate作为默认缓存策略。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_8",
+        "title": "Bob负责实现缓存逻辑，Frank辅助写单元测试",
+        "summary": "Bob负责实现缓存逻辑，Frank辅助写单元测试",
+        "source_message_ids": [
+          "m014",
+          "m015"
+        ],
+        "evidence_quote": "我来实现缓存逻辑，下周可以提交PR。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m034",
+        "reason": "提取结果与GT m034均明确Bob牵头实现缓存、Frank协助测试，决策等价。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_8",
+        "title": "采用混合方案做A/B测试：服务器决定分组，前端缓存结果",
+        "summary": "采用混合方案做A/B测试：服务器决定分组，前端缓存结果",
+        "source_message_ids": [
+          "m026",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "我建议用混合方案：服务器决定分组，前端缓存结果。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.32"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_9",
+        "title": "Bob下午搭Redis集群，版本号键用独立namespace",
+        "summary": "Bob下午搭Redis集群，版本号键用独立namespace",
+        "source_message_ids": [
+          "m013"
+        ],
+        "evidence_quote": "收到，我下午搭Redis集群，版本号键用独立namespace",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为执行承诺，非决策，且与候选GT无等价关系"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_9",
+        "title": "A/B测试框架MVP聚焦用户分组和指标收集",
+        "summary": "A/B测试框架MVP聚焦用户分组和指标收集",
+        "source_message_ids": [
+          "m031"
+        ],
+        "evidence_quote": "A/B测试框架MVP先聚焦用户分组和指标收集",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.21"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "title": "零信任试点计划4个月，基础设施改造至少4个月",
+        "summary": "零信任试点计划4个月，基础设施改造至少4个月",
+        "source_message_ids": [
+          "m010",
+          "m020"
+        ],
+        "evidence_quote": "3个月太紧，基础设施改造至少4个月",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确的试点和改造时间承诺，证据支持，但未被任何候选GT覆盖"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "title": "零信任采用开源方案，需通过渗透测试",
+        "summary": "零信任采用开源方案，需通过渗透测试",
+        "source_message_ids": [
+          "m018",
+          "m019"
+        ],
+        "evidence_quote": "我支持零信任用开源方案，但需加固",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m018",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "title": "密钥管理采用Vault + 云KMS混合方案",
+        "summary": "密钥管理采用Vault + 云KMS混合方案",
+        "source_message_ids": [
+          "m030",
+          "m031",
+          "m033"
+        ],
+        "evidence_quote": "那就定混合方案，Charlie出架构图",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确决策为'混合方案'，证据链完整（m030建议、m031讨论、m033定案），但候选GT中无等价决策，属于有效额外决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "title": "Charlie负责出密钥管理架构图",
+        "summary": "Charlie负责出密钥管理架构图",
+        "source_message_ids": [
+          "m033",
+          "m035"
+        ],
+        "evidence_quote": "那就定混合方案，Charlie出架构图",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确指定Charlie出架构图，是具体执行承诺，但候选GT均未覆盖此分配结果。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "title": "Bob准备Vault部署脚本",
+        "summary": "Bob准备Vault部署脚本",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "收到，我准备Vault部署脚本",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "仅表示准备部署脚本，无具体决策或执行承诺，且与GT候选无等价关系"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "title": "Charlie明天开始写设计文档，周五评审",
+        "summary": "Charlie明天开始写设计文档，周五评审",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "明天开始写设计文档，周五评审",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行承诺（开始写文档并设定评审时间），证据原文支持该承诺，但候选GT中无等价决策。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "frontend_mobile_channel_9",
+        "msg_id": "m012",
+        "expected_topic": "构建缓存策略",
+        "expected_summary": "好，版本号+哈希缓存方案，决策通过，进入实现",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_9",
+        "msg_id": "m025",
+        "expected_topic": "A/B测试框架",
+        "expected_summary": "六周太长，压缩到四周，先上MVP",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sec_compliance_channel_0",
+        "msg_id": "m029",
+        "expected_topic": "密钥管理方案",
+        "expected_summary": "@David 别打岔。密钥管理方案今天必须有结论。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 11,
+    "errors": {}
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "run_id": "c861d040dc5a4a588e0a2579c6eb9cdd",
+    "created_at": "2026-08-07T15:17:05.762130+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "7f1b11f66b82747191f1f17ecaf348ec82a60eebb8428bb8aba01e6d26e2902d",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "data_platform_channel_6",
+      "data_platform_channel_7",
+      "data_platform_channel_8"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "data_platform_channel_6": 2,
+      "data_platform_channel_7": 2,
+      "data_platform_channel_8": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 17,
+  "chat_metrics": {
+    "data_platform_channel_6": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "data_platform_channel_7": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "data_platform_channel_8": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 1,
+    "strict_fn": 2,
+    "valid_extra": 9,
+    "invalid": 1,
+    "evidence_valid": 16,
+    "evidence_invalid": 0,
+    "errors": [
+      "data_platform_channel_8:先PoC DataHub，两周后给结论: invalid semantic GT identity",
+      "data_platform_channel_8:David每天同步PoC进展: invalid semantic GT identity"
+    ],
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "f1": 0.7272727272727272,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "脱敏方案时间线：本周五评审，下周三开发",
+        "summary": "脱敏方案时间线：本周五评审，下周三开发",
+        "source_message_ids": [
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "脱敏方案的时间线：本周五评审，下周三开始开发。@所有人 确认",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了脱敏方案的时间线（周五评审、下周三开发），证据中有明确确认，但候选GT均涉及其他主题（Envoy、DataHub），无等价决策覆盖。"
+      },
+      {
+        "chat_id": "data_platform_channel_6",
+        "title": "Bob出详细设计文档",
+        "summary": "Bob出详细设计文档",
+        "source_message_ids": [
+          "m010",
+          "m011"
+        ],
+        "evidence_quote": "好，动态+静态方案我批准了，Bob出详细设计",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m010",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "David负责部署DataHub测试环境",
+        "summary": "David负责部署DataHub测试环境",
+        "source_message_ids": [
+          "m022"
+        ],
+        "evidence_quote": "好的，我先搭K8s集群，预计下周一开始",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m021",
+        "reason": "提取结果与GT m021中'@David 你负责部署环境'等价，均明确David负责部署DataHub测试环境，且证据m022支持该执行承诺。"
+      },
+      {
+        "chat_id": "data_platform_channel_6",
+        "title": "建议元数据管理平台提上日程",
+        "summary": "建议元数据管理平台提上日程",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "元数据管理平台也该提上日程了，不然数据都找不到",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果建议将元数据管理平台提上日程，但候选GT是批准动态+静态方案和做POC对比工具，两者主题相关但决策内容不同，属于未被覆盖的有效额外决策建议。"
+      },
+      {
+        "chat_id": "data_platform_channel_7",
+        "title": "第一阶段聚焦身份证和手机号，采用替换+掩码",
+        "summary": "第一阶段聚焦身份证和手机号，采用替换+掩码",
+        "source_message_ids": [
+          "m012",
+          "m013",
+          "m014"
+        ],
+        "evidence_quote": "同意。第一阶段聚焦身份证和手机号，采用替换+掩码。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "提取结果与GT m012均明确第一阶段使用替换算法处理身份证号，决策等价"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "先PoC DataHub，两周后给结论",
+        "summary": "先PoC DataHub，两周后给结论",
+        "source_message_ids": [
+          "m021"
+        ],
+        "evidence_quote": "先PoC DataHub吧，两周后给结论。@David 你负责部署环境",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m021",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "data_platform_channel_7",
+        "title": "Charlie安排DataHub资源预算",
+        "summary": "Charlie安排DataHub资源预算",
+        "source_message_ids": [
+          "m028"
+        ],
+        "evidence_quote": "记得把资源预估发我，我好安排预算。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "证据是请求发送资源预估，并非决策或执行承诺，属于讨论/建议噪声。"
+      },
+      {
+        "chat_id": "data_platform_channel_7",
+        "title": "Bob在POC期间同步做安全评估",
+        "summary": "Bob在POC期间同步做安全评估",
+        "source_message_ids": [
+          "m029"
+        ],
+        "evidence_quote": "POC期间我会同步做安全评估。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Bob承诺在POC期间同步做安全评估，属于明确的执行承诺，但候选GT中无等价决策覆盖。"
+      },
+      {
+        "chat_id": "data_platform_channel_7",
+        "title": "脱敏后数据保留原始数据审计日志",
+        "summary": "脱敏后数据保留原始数据审计日志",
+        "source_message_ids": [
+          "m035",
+          "m036"
+        ],
+        "evidence_quote": "脱敏后的数据要保留原始数据审计日志，别忘了。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确要求保留原始数据审计日志，并有执行承诺，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "采用混合方案：动态脱敏+静态脱敏",
+        "summary": "采用混合方案：动态脱敏+静态脱敏",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "好，就按混合方案：动态+静态脱敏，@Bob 出详细架构图",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺采用混合方案（动态+静态脱敏），并指定@Bob出架构图，属于有效执行决策，但未被候选GT覆盖。"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "Bob明天提交架构图初稿",
+        "summary": "Bob明天提交架构图初稿",
+        "source_message_ids": [
+          "m012"
+        ],
+        "evidence_quote": "收到，明天提交初稿。另外元数据管理平台也要同步推进",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺明天提交架构图初稿，证据真实且未被任何候选GT覆盖"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "PoC期间不接入生产库",
+        "summary": "PoC期间不接入生产库",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "PoC期间注意数据安全，不要接入生产库",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确要求不接入生产库，但GT候选均未提及此限制，属于额外有效决策"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "Eve准备静态脱敏ETL脚本模板",
+        "summary": "Eve准备静态脱敏ETL脚本模板",
+        "source_message_ids": [
+          "m025"
+        ],
+        "evidence_quote": "确认，我会准备静态脱敏的ETL脚本模板",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Eve承诺准备静态脱敏ETL脚本模板，是明确的执行承诺，但候选GT中无等价决策"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "动态脱敏代理层采用Envoy",
+        "summary": "动态脱敏代理层采用Envoy",
+        "source_message_ids": [
+          "m027",
+          "m028",
+          "m030"
+        ],
+        "evidence_quote": "Envoy的Lua过滤器可以实现动态脱敏，性能损耗约5%，推荐使用",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m030",
+        "reason": "提取结果与GT m030均明确决策采用Envoy，且m030中‘那就Envoy吧’是最终执行承诺，等价于摘要内容。"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "David每天同步PoC进展",
+        "summary": "David每天同步PoC进展",
+        "source_message_ids": [
+          "m031",
+          "m032"
+        ],
+        "evidence_quote": "元数据平台PoC期间，@David 每天同步进展，有问题及时提",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m021",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "data_platform_channel_8",
+        "title": "本周五评审会改为线上",
+        "summary": "本周五评审会改为线上",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "本周五评审会改为线上，链接稍后发。@所有人 准备PPT",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确宣布评审会改为线上，属于执行决策，但候选GT中无等价决策内容。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "data_platform_channel_6",
+        "msg_id": "m020",
+        "expected_topic": "元数据管理平台",
+        "expected_summary": "先做个POC，对比Atlas和DataHub，两周出结果",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "data_platform_channel_7",
+        "msg_id": "m026",
+        "expected_topic": "元数据管理平台",
+        "expected_summary": "大家先做DataHub的POC，两周后汇报结果再决策。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 16,
+    "errors": {}
+  }
+}

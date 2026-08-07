@@ -51,7 +51,7 @@ class LLMDecisionAdjudicator:
         matched = str(data.get("matched_msg_id", "") or "")
         expected_ids = {str(row.get("msg_id", "")) for row in expected if row.get("msg_id") }
         if outcome is Adjudication.MATCH_GT and matched not in expected_ids:
-            raise ValueError(f"match_gt must name a candidate msg_id, got {matched!r}")
+            return AdjudicationResult(Adjudication.INVALID, "", f"judge returned unknown GT msg_id: {matched}")
         if outcome is Adjudication.MATCH_GT:
             candidate = next(row for row in expected if str(row.get("msg_id", "")) == matched)
             output_chars = set("".join(str(output.title or output.summary).split()))

@@ -1,0 +1,220 @@
+{
+  "job_id": "full_70_adjudicate_20260807_s3",
+  "variant": "full",
+  "chunks": [
+    {
+      "index": 1,
+      "chat_ids": [
+        "ai_ml_platform_channel_3",
+        "ai_ml_platform_channel_4",
+        "ai_ml_platform_channel_5"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 2,
+      "chat_ids": [
+        "ai_ml_platform_channel_6",
+        "ai_ml_platform_channel_7",
+        "ai_ml_platform_channel_8"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 6,
+      "chat_ids": [
+        "backend_arch_channel_8",
+        "backend_arch_channel_9",
+        "cloud_infra_channel_0"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 7,
+      "chat_ids": [
+        "cloud_infra_channel_1",
+        "cloud_infra_channel_2",
+        "cloud_infra_channel_3"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 8,
+      "chat_ids": [
+        "cloud_infra_channel_4",
+        "cloud_infra_channel_5",
+        "cloud_infra_channel_6"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 0,
+      "chat_ids": [
+        "ai_ml_platform_channel_0",
+        "ai_ml_platform_channel_1",
+        "ai_ml_platform_channel_2"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 4,
+      "chat_ids": [
+        "backend_arch_channel_2",
+        "backend_arch_channel_3",
+        "backend_arch_channel_4"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 5,
+      "chat_ids": [
+        "backend_arch_channel_5",
+        "backend_arch_channel_6",
+        "backend_arch_channel_7"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 9,
+      "chat_ids": [
+        "cloud_infra_channel_7",
+        "cloud_infra_channel_8",
+        "cloud_infra_channel_9"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 10,
+      "chat_ids": [
+        "data_platform_channel_0",
+        "data_platform_channel_1",
+        "data_platform_channel_2"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 3,
+      "chat_ids": [
+        "ai_ml_platform_channel_9",
+        "backend_arch_channel_0",
+        "backend_arch_channel_1"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 12,
+      "chat_ids": [
+        "data_platform_channel_6",
+        "data_platform_channel_7",
+        "data_platform_channel_8"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 13,
+      "chat_ids": [
+        "data_platform_channel_9",
+        "frontend_mobile_channel_0",
+        "frontend_mobile_channel_1"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 15,
+      "chat_ids": [
+        "frontend_mobile_channel_5",
+        "frontend_mobile_channel_6",
+        "frontend_mobile_channel_7"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 16,
+      "chat_ids": [
+        "frontend_mobile_channel_8",
+        "frontend_mobile_channel_9",
+        "sec_compliance_channel_0"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 11,
+      "chat_ids": [
+        "data_platform_channel_3",
+        "data_platform_channel_4",
+        "data_platform_channel_5"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 17,
+      "chat_ids": [
+        "sec_compliance_channel_1",
+        "sec_compliance_channel_2",
+        "sec_compliance_channel_3"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 18,
+      "chat_ids": [
+        "sec_compliance_channel_4",
+        "sec_compliance_channel_5",
+        "sec_compliance_channel_6"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 19,
+      "chat_ids": [
+        "sec_compliance_channel_7",
+        "sec_compliance_channel_8",
+        "sec_compliance_channel_9"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 20,
+      "chat_ids": [
+        "sre_reliability_channel_0",
+        "sre_reliability_channel_1",
+        "sre_reliability_channel_2"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 21,
+      "chat_ids": [
+        "sre_reliability_channel_3",
+        "sre_reliability_channel_4",
+        "sre_reliability_channel_5"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 22,
+      "chat_ids": [
+        "sre_reliability_channel_6",
+        "sre_reliability_channel_7",
+        "sre_reliability_channel_8"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 23,
+      "chat_ids": [
+        "sre_reliability_channel_9"
+      ],
+      "status": "complete"
+    },
+    {
+      "index": 14,
+      "chat_ids": [
+        "frontend_mobile_channel_2",
+        "frontend_mobile_channel_3",
+        "frontend_mobile_channel_4"
+      ],
+      "status": "complete"
+    }
+  ]
+}

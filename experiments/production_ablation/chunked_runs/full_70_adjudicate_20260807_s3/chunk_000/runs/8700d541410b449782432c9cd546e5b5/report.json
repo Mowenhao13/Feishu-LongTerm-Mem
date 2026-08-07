@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "run_id": "8700d541410b449782432c9cd546e5b5",
+    "created_at": "2026-08-07T14:46:41.272323+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "53b8d08cd62146fc17032c139541924e4b7f4c74aa1e36c5305f2ad194eaafbc",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_0",
+      "ai_ml_platform_channel_1",
+      "ai_ml_platform_channel_2"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_0": 2,
+      "ai_ml_platform_channel_1": 2,
+      "ai_ml_platform_channel_2": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 10,
+  "chat_metrics": {
+    "ai_ml_platform_channel_0": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ai_ml_platform_channel_1": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ai_ml_platform_channel_2": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 2,
+    "strict_fn": 3,
+    "valid_extra": 4,
+    "invalid": 2,
+    "evidence_valid": 10,
+    "evidence_invalid": 0,
+    "errors": [
+      "ai_ml_platform_channel_0:等Bob报告后再定最终方案: match_gt must name a candidate msg_id, got 'm025'"
+    ],
+    "precision": 0.6,
+    "recall": 0.5,
+    "f1": 0.5454545454545454,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "先做PoC验证NFS性能，再定方案",
+        "summary": "先做PoC验证NFS性能，再定方案",
+        "source_message_ids": [
+          "m005"
+        ],
+        "evidence_quote": "先做PoC验证NFS性能，再定方案",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果为执行承诺（先PoC验证性能），与候选GT的namespace方案或对比报告均不等价，属于未被覆盖的有效决策"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "同意namespace隔离方案，进入实施",
+        "summary": "同意namespace隔离方案，进入实施",
+        "source_message_ids": [
+          "m008",
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "好，namespace隔离方案通过，进入实施",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确同意namespace隔离方案并进入实施，证据链完整，但候选GT中m009是带条件的同意，m023不相关，因此属于未被GT覆盖的有效决策。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "等Bob报告后再定最终方案",
+        "summary": "等Bob报告后再定最终方案",
+        "source_message_ids": [
+          "m023",
+          "m025"
+        ],
+        "evidence_quote": "好，等Bob报告后再定最终方案",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "",
+        "reason": "match_gt must name a candidate msg_id, got 'm025'"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "那就定NFS，尽快搭建测试环境",
+        "summary": "那就定NFS，尽快搭建测试环境",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "那就定NFS，尽快搭建测试环境",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为重复证据中的一句话，未形成独立决策或执行承诺，且与候选GT无等价关系"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "明天开短会细化实施计划，David订了会议室",
+        "summary": "明天开短会细化实施计划，David订了会议室",
+        "source_message_ids": [
+          "m033",
+          "m034"
+        ],
+        "evidence_quote": "同意，明天开个短会细化实施计划",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确决策（开短会细化实施计划）和执行承诺（David订会议室），证据真实，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "好，特征存储选Feast，进入implementation。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "Frank搭建MLflow PoC，明天开始",
+        "summary": "Frank搭建MLflow PoC，明天开始",
+        "source_message_ids": [
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "好，我明天开始搭建。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m033",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "Emma负责写安全审查文档",
+        "summary": "Emma负责写安全审查文档",
+        "source_message_ids": [
+          "m013"
+        ],
+        "evidence_quote": "同意，我回头写安全审查文档",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.00"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "整体方案为K8s+Volcano+网络隔离",
+        "summary": "整体方案为K8s+Volcano+网络隔离",
+        "source_message_ids": [
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "那整体方案就是K8s+Volcano+网络隔离？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "Frank明天开始写调度配置",
+        "summary": "Frank明天开始写调度配置",
+        "source_message_ids": [
+          "m030"
+        ],
+        "evidence_quote": "好的，我明天开始写调度配置",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺明天开始写调度配置，证据支持，但未被任何候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "msg_id": "m009",
+        "expected_topic": "ML模型训练平台",
+        "expected_summary": "同意namespace方案，但需限制每个团队资源上限",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "msg_id": "m023",
+        "expected_topic": "推理服务部署方案",
+        "expected_summary": "我下周一前出Knative vs Istio对比报告",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "msg_id": "m012",
+        "expected_topic": "A/B评估框架",
+        "expected_summary": "好的，那就定下分层抽样+差分隐私的方案",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 9,
+    "errors": {
+      "ai_ml_platform_channel_0|等Bob报告后再定最终方案|m023,m025|好，等Bob报告后再定最终方案": "match_gt must name a candidate msg_id, got 'm025'"
+    }
+  }
+}
