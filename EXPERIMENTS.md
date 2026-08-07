@@ -732,3 +732,27 @@ argusbot_v3 的 GT 很保守，只覆盖每个 chat 的少数关键决策；而 
 `run.py` now writes `chat_metrics`; `repeat.py` aggregates macro precision/recall/F1 as well as micro metrics. This prevents a few high-volume chats from dominating the conclusion.
 
 **Cost gate**: current adjudication is one judge call per evidence-valid output. A full 59-chat run will therefore make hundreds of judge calls; run the one-pass full matrix first, then repeat only candidates after checking judge health and latency.
+
+---
+
+## 2026-08-07 - checkpointed full-run execution
+
+此前 70-chat full run 连续运行近 4 小时后卡住，未生成 report。新增 `experiments/production_ablation/chunked.py`：
+- 默认按 10 chat 一块执行；
+- 每块独立写 `chunk_XXX/report.json`；
+- 每块有独立 timeout，失败写入 manifest；
+- `--resume` 会跳过已经 complete 的块；
+- 最终按计数合并 micro-F1，并按 chat 合并 macro-F1/per-chat 指标。
+
+示例：
+```bash
+uv run python experiments/production_ablation/chunked.py \\
+  --variant full \\
+  --chunk-size 10 \\
+  --sample 70 \\
+  --timeout 1800 \\
+  --adjudicate \\
+  --resume
+```
+
+建议先使用 `--chunk-size 10` 完成 full baseline，再对 `no_entity_context` 和 `no_memory_extractor` 运行相同范围。单块失败不会丢失已完成块，修复后可用同一个 job-id `--resume` 继续。

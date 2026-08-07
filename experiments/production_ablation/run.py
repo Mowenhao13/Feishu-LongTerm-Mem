@@ -124,7 +124,6 @@ async def main() -> int:
         "trace": result.trace.__dict__,
         "output_count": len(result.decisions),
         "chat_metrics": chat_metrics,
-        "chat_metrics": chat_metrics,
         "metrics": {
             "strict_tp": outcome.strict_tp,
             "strict_fp": outcome.strict_fp,
