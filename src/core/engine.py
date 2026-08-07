@@ -1122,6 +1122,8 @@ class MemoryEngine:
         logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d trace_id=%s",
                     episode_id[:12], chat_id[:12], episode.message_count, len(content), trace_id)
 
+        self._active_episode_chat_id = chat_id
+
         if episode.message_count < 2 and len(content) < 100:
             logger.info("[Engine] Episode %s too short (msgs=%d, len=%d), skipping LLM extraction",
                         episode_id[:12], episode.message_count, len(content))

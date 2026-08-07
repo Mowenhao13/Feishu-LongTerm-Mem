@@ -1,0 +1,283 @@
+{
+  "metadata": {
+    "run_id": "cec09badc7cd470f8728defdd2f27f18",
+    "created_at": "2026-08-07T07:47:38.972163+00:00",
+    "commit": "cf1a6998778fb3b26b9c1a01903b3ce35ff228c4",
+    "dataset_hash": "53b8d08cd62146fc17032c139541924e4b7f4c74aa1e36c5305f2ad194eaafbc",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_0",
+      "ai_ml_platform_channel_1",
+      "ai_ml_platform_channel_2"
+    ],
+    "expected_count": 6
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 14,
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 10,
+    "strict_fn": 2,
+    "valid_extra": 0,
+    "invalid": 10,
+    "evidence_valid": 14,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.2857142857142857,
+    "recall": 0.6666666666666666,
+    "f1": 0.4,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "先做PoC验证NFS性能，再定方案",
+        "summary": "先做PoC验证NFS性能，再定方案",
+        "source_message_ids": [
+          "m005"
+        ],
+        "evidence_quote": "先做PoC验证NFS性能，再定方案",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "同意namespace隔离方案，进入实施",
+        "summary": "同意namespace隔离方案，进入实施",
+        "source_message_ids": [
+          "m008",
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "好，namespace隔离方案通过，进入实施",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "A/B测试是刚需，尽快实现",
+        "summary": "A/B测试是刚需，尽快实现",
+        "source_message_ids": [
+          "m014",
+          "m015"
+        ],
+        "evidence_quote": "A/B测试是刚需，尽快实现",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "Bob下周一前出Knative vs Istio对比报告",
+        "summary": "Bob下周一前出Knative vs Istio对比报告",
+        "source_message_ids": [
+          "m023",
+          "m025"
+        ],
+        "evidence_quote": "我下周一前出Knative vs Istio对比报告",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m023",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "定NFS，尽快搭建测试环境",
+        "summary": "定NFS，尽快搭建测试环境",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "那就定NFS，尽快搭建测试环境",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "CI/CD用GitLab + ArgoCD，需加入模型验证步骤",
+        "summary": "CI/CD用GitLab + ArgoCD，需加入模型验证步骤",
+        "source_message_ids": [
+          "m031",
+          "m032",
+          "m033"
+        ],
+        "evidence_quote": "CI/CD用GitLab + ArgoCD，Bob觉得呢",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "明天10点开短会细化CI/CD实施计划",
+        "summary": "明天10点开短会细化CI/CD实施计划",
+        "source_message_ids": [
+          "m033",
+          "m034"
+        ],
+        "evidence_quote": "我订了会议室，明天10点",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "Bob下班前提交推理方案报告初稿",
+        "summary": "Bob下班前提交推理方案报告初稿",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "下班前提交推理方案报告初稿",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "我倾向于Feast，因为可控性更好。大家同意吗？",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "先定MLflow，PoC后决定",
+        "summary": "先定MLflow，PoC后决定",
+        "source_message_ids": [
+          "m028",
+          "m029",
+          "m031",
+          "m032",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "那就先定MLflow，PoC后决定。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "好，我明天开始搭建。",
+        "summary": "好，我明天开始搭建。",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "好，我明天开始搭建。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m033",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "定下分层抽样+差分隐私的方案",
+        "summary": "定下分层抽样+差分隐私的方案",
+        "source_message_ids": [
+          "m004",
+          "m008",
+          "m010",
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "好的，那就定下分层抽样+差分隐私的方案",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "整体方案为K8s+Volcano+网络隔离+Pod安全策略+密钥管理",
+        "summary": "整体方案为K8s+Volcano+网络隔离+Pod安全策略+密钥管理",
+        "source_message_ids": [
+          "m018",
+          "m022",
+          "m026",
+          "m028",
+          "m029",
+          "m030"
+        ],
+        "evidence_quote": "那整体方案就是K8s+Volcano+网络隔离？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "Frank明天开始写GPU调度配置",
+        "summary": "Frank明天开始写GPU调度配置",
+        "source_message_ids": [
+          "m030"
+        ],
+        "evidence_quote": "好的，我明天开始写调度配置",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "msg_id": "m009",
+        "expected_topic": "ML模型训练平台",
+        "expected_summary": "同意namespace方案，但需限制每个团队资源上限",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "msg_id": "m017",
+        "expected_topic": "特征存储选型",
+        "expected_summary": "好，特征存储选Feast，进入implementation。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": []
+}

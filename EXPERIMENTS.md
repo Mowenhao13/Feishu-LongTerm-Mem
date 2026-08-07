@@ -627,3 +627,25 @@ uv run python experiments/production_ablation/run.py --chat-id ai_ml_platform_ch
 **审计结果**: `m033` 已被独立命中；本次剩余 FN 是 `ai_ml_platform_channel_0/m009` 和 `ai_ml_platform_channel_2/m012`。这表明 evidence contract 和执行确认拆分已生效，但 LLM 对其他确认句的召回仍存在随机波动，不能仅凭一次 three-chat 运行修改生产默认配置。
 
 **下一步**: 对 `full`、`no_entity_context`、`no_memory_extractor` 各运行至少 5 次，记录均值、标准差、最小/最大值，以及 evidence health 和 runner health。
+
+---
+
+## 2026-08-07 - five-run production-path ablation repeat
+
+**Method**: three-chat sample, 5 independent runs per variant, `LANGFUSE_ENABLE=false`, `MODEL_NAME=deepseek-local`. Aggregate reports preserve mean, population standard deviation, min/max, complete-run count, evidence contract pass rate, and runner error-free rate.
+
+| variant | complete | F1 mean | F1 stddev | F1 min-max | Recall mean | evidence pass | runner pass |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `full` | 5/5 | 0.3232 | 0.0741 | 0.2105-0.4000 | 0.5667 | 100% | 100% |
+| `no_entity_context` | 5/5 | 0.4304 | 0.0115 | 0.4211-0.4444 | 0.6667 | 100% | 100% |
+| `no_memory_extractor` | 5/5 | 0.3708 | 0.0655 | 0.2727-0.4444 | 0.6000 | 100% | 100% |
+
+**Observations**: `no_entity_context` is the strongest of these three under the current strict evaluator, with higher mean F1 and much lower variance than `full`. `full` has the lowest mean F1 and highest variance in this sample. `no_memory_extractor` is between them after fixing direct-branch `source_chat_id` provenance.
+
+**Interpretation limits**: all three variants use the current no-adjudicator evaluator, so evidence-valid GT extras are still counted as strict FP. These results are component signals, not a production-default decision. The 5-run sample is also too small for a final statistical claim.
+
+**Code fix discovered during repeats**: direct `_process_episode` did not set `self._active_episode_chat_id`; multi-chat `no_memory_extractor` reports therefore had `unknown_chat` evidence failures. The fix is covered by the production runner path and all post-fix repeats have evidence/runner health at 100%.
+
+**Artifacts**: `experiments/production_ablation/repeat.py`, `experiments/production_ablation/aggregates/`, and the 15 successful run reports.
+
+**Next gate**: add a semantic/neutral adjudicator, then repeat the same matrix with `valid_extra` separated from `invalid`; only after that consider changing the production default.
