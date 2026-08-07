@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "run_id": "f7d12bc2e84e469fa9db73badb966407",
+    "created_at": "2026-08-07T06:51:04.731626+00:00",
+    "commit": "ccff0a2ebbe617eed803cfd5a724aa7fc826a5ed",
+    "dataset_hash": "bebfc797e737b54885ae6067589b2f4ef1af81e52d77e28d624aee6c2c3d2e48",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_1"
+    ],
+    "expected_count": 2
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 2,
+  "metrics": {
+    "strict_tp": 1,
+    "strict_fp": 1,
+    "strict_fn": 1,
+    "valid_extra": 0,
+    "invalid": 1,
+    "evidence_valid": 2,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1": 0.5,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "好，特征存储选Feast，进入implementation。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "先定MLflow，PoC后决定",
+        "summary": "先定MLflow，PoC后决定",
+        "source_message_ids": [
+          "m028",
+          "m029",
+          "m031",
+          "m032",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "那就先定MLflow，PoC后决定。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "no_adjudicator_for_gt_extra"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "msg_id": "m033",
+        "expected_topic": "模型版本管理",
+        "expected_summary": "好，我明天开始搭建。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": []
+}

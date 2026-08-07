@@ -113,3 +113,52 @@ def test_semantic_adjudication_requires_a_valid_unmatched_gt_identity(tmp_path: 
     assert outcome.strict_tp == 1
     assert outcome.strict_fn == 0
     assert not outcome.incomplete
+
+
+def test_argusbot_model_version_acknowledgement_regression():
+    dataset = Path(__file__).resolve().parents[1] / "eval_dataset" / "argusbot_v3"
+    selection = DatasetSelection.from_jsonl(dataset, chat_ids=["ai_ml_platform_channel_1"])
+
+    feast_output = EvidenceDecision(
+        chat_id="ai_ml_platform_channel_1",
+        title="特征存储选Feast，进入implementation",
+        summary="特征存储选Feast，进入implementation",
+        status="decided",
+        is_suggestion=False,
+        source_message_ids=("m017",),
+        evidence_quote="好，特征存储选Feast，进入implementation。",
+    )
+    outcome_without_ack = ConfirmedDecisionEvaluator().evaluate([feast_output], selection)
+    assert outcome_without_ack.strict_fn == 1
+    assert outcome_without_ack.unmatched_expected[0]["msg_id"] == "m033"
+    assert outcome_without_ack.unmatched_expected[0]["expected_topic"] == "模型版本管理"
+
+    mlflow_decision_with_wrong_quote = EvidenceDecision(
+        chat_id="ai_ml_platform_channel_1",
+        title="先定MLflow，PoC后决定",
+        summary="先定MLflow，PoC后决定",
+        status="decided",
+        is_suggestion=False,
+        source_message_ids=("m032", "m033"),
+        evidence_quote="那就先定MLflow，PoC后决定。",
+    )
+    outcome_with_wrong_quote = ConfirmedDecisionEvaluator().evaluate(
+        [feast_output, mlflow_decision_with_wrong_quote], selection
+    )
+    assert outcome_with_wrong_quote.strict_tp == 1
+    assert outcome_with_wrong_quote.strict_fn == 1
+    assert outcome_with_wrong_quote.unmatched_expected[0]["msg_id"] == "m033"
+
+    model_version_ack = EvidenceDecision(
+        chat_id="ai_ml_platform_channel_1",
+        title="好，我明天开始搭建。",
+        summary="好，我明天开始搭建。",
+        status="decided",
+        is_suggestion=False,
+        source_message_ids=("m033",),
+        evidence_quote="好，我明天开始搭建。",
+    )
+    outcome_with_ack = ConfirmedDecisionEvaluator().evaluate([feast_output, model_version_ack], selection)
+    assert outcome_with_ack.strict_tp == 2
+    assert outcome_with_ack.strict_fn == 0
+    assert outcome_with_ack.unmatched_expected == ()

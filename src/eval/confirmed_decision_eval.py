@@ -149,6 +149,13 @@ class ConfirmedDecisionEvaluator:
     def _expected_source_ids(expected: dict) -> set[str]:
         return {expected["msg_id"]} if expected.get("msg_id") else set()
 
+    @staticmethod
+    def _quote_matches_message(decision: EvidenceDecision, message_id: str, messages: Sequence[dict]) -> bool:
+        return any(
+            message.get("msg_id") == message_id and decision.evidence_quote in message.get("msg", "")
+            for message in messages
+        )
+
     def evaluate(self, outputs: Sequence[EvidenceDecision], selection: DatasetSelection) -> EvaluationOutcome:
         confirmed = [output for output in outputs if output.is_confirmed]
         evidence_valid = 0
@@ -191,7 +198,10 @@ class ConfirmedDecisionEvaluator:
             candidates = selection.expected_by_chat.get(output.chat_id, ())
             exact = next(
                 (expected for expected in candidates
-                 if self._expected_source_ids(expected).intersection(output.source_message_ids)
+                 if any(
+                     source_id in output.source_message_ids and self._quote_matches_message(output, source_id, messages)
+                     for source_id in self._expected_source_ids(expected)
+                 )
                  and (output.chat_id, expected.get("msg_id", "")) not in matched_expected),
                 None,
             )

@@ -200,6 +200,7 @@ Analyze the following conversation and extract ALL valid decisions and suggestio
 4. Explicit agreement ("那就定", "确认用", "同意", "就这样", "OK", "好的", "行，就按")
 5. A definitive statement about what WILL be done ("下周启动", "先做POC", "先试点")
 6. Someone proposes a concrete plan and it gets acknowledged/accepted
+7. An implementation acknowledgement that accepts the previous decision and commits to execution ("好，我明天开始搭建", "没问题，我今晚开始搭环境")
 
 # WHAT COUNTS AS A SUGGESTION (is_suggestion=true)?
 
@@ -231,6 +232,7 @@ When writing the `title` (which doubles as `summary`), follow these patterns:
 - Format like: "那就定{{方案}}吧，{{执行人}}负责{{任务}}" or "同意{{方案}}，{{执行人}}出{{交付物}}"
 - Keep summaries CONCISE: 15-40 characters, focused on the decision outcome
 - **IMPORTANT**: Write the title/summary as a natural language statement of what was decided, NOT a label or agenda topic
+- For execution acknowledgements, include the concrete action and timeline from the acknowledgement, and cite the acknowledgement message itself.
 
 **Examples of good summary style**:
 - ✅ "那先做POC，一个月后给结论。"
@@ -238,6 +240,7 @@ When writing the `title` (which doubles as `summary`), follow these patterns:
 - ✅ "那就定GP3吧，成本可控且安全达标。决策了"
 - ✅ "下周一启动Istio灰度发布"
 - ✅ "行，先按这个配置上线，观察一周再调整。"
+- ✅ "好，我明天开始搭建。"
 - ❌ "技术选型" (too vague, no decision content)
 - ❌ "讨论预算问题" (not a decision)
 - ❌ "需要验证一下性能" (vague, no commitment)

@@ -325,6 +325,67 @@ uv run pytest -p no:cacheprovider --basetemp .tmp/pytest \
 
 ---
 
+## 2026-08-07 — focused regression：模型版本管理执行确认漏召回
+
+**术语说明**:
+- `GT` = ground truth，即评测集里的人工/基准答案。
+- `focused regression` = 针对一个已知漏例或 bug 的最小回归测试，用来保证这个具体问题后续不会被宽松指标掩盖或再次退化。
+
+**目标漏例**: `ai_ml_platform_channel_1/m033`，GT topic 为“模型版本管理”，GT summary 为“好，我明天开始搭建。”。
+
+**代码修正**:
+- `DECISION_EXTRACTION_PROMPT_SHORT` 明确补充：承接上一条决定并承诺执行的确认语也算 confirmed decision，例如“好，我明天开始搭建”。
+- `ConfirmedDecisionEvaluator` 收紧 deterministic exact match：不能只因为 `source_message_ids` 里夹带了 GT msg_id 就算 TP；`evidence_quote` 必须来自该 GT message 本身，才算 `exact_source_match`。
+- 新增 `test_argusbot_model_version_acknowledgement_regression`：使用真实 `argusbot_v3` 数据，验证缺少 `m033` 时 audit 会报告该 GT；只有输出引用 `m033` 原文“好，我明天开始搭建。”时，`strict_fn` 才归零。
+
+**回归测试**:
+
+```bash
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp \
+uv run pytest -p no:cacheprovider --basetemp .tmp/pytest \
+  tests/test_confirmed_decision_eval.py \
+  tests/test_evidence_linking.py \
+  tests/test_pipeline_options.py \
+  tests/test_production_ablation_runner.py \
+  tests/test_production_ablation_cli.py \
+  tests/test_prompts.py tests/test_llm_config.py tests/test_comparator.py
+```
+
+**结果**: 57 passed。
+
+### 新 exact-match 规则下的单 chat smoke
+
+**命令**:
+
+```bash
+LANGFUSE_ENABLE=false MODEL_NAME=deepseek-local \
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp \
+uv run python experiments/production_ablation/run.py --chat-id ai_ml_platform_channel_1
+```
+
+**Run ID**: `f7d12bc2e84e469fa9db73badb966407`
+
+| 指标 | 值 |
+|---|---:|
+| expected_count | 2 |
+| output_count | 2 |
+| strict_tp | 1 |
+| strict_fp | 1 |
+| strict_fn | 1 |
+| evidence_valid | 2 |
+| evidence_invalid | 0 |
+| incomplete | false |
+| runner_errors | 0 |
+
+**结论**: evidence contract 通过，但 `m033` 仍未被模型作为独立 confirmed decision 抽出。当前剩余问题不是证据字段丢失，而是抽取粒度：模型把“先定 MLflow，PoC 后决定”（`m032`）作为决策输出，并把 `m033` 放进 source ids，但没有用 `m033` 的原文作为独立 evidence。
+
+**下一步**: 需要进一步改抽取策略，而不是继续放宽 evaluator。候选方向：
+1. 在 extractor 后处理阶段，针对 `expected_decision=true` 风格的“承接式执行确认”增加可解释的拆分规则；
+2. 或让 prompt 要求将“方案决定”和“执行承诺”拆成两条 confirmed decisions，并用各自原文 evidence；
+3. 然后重跑 `ai_ml_platform_channel_1` 和 three-chat smoke，目标是 `m033` 被独立命中且 `evidence_invalid=0`。
+
+---
+
 ## 2026-08-07 — 消融实验
 
 **命令**: `experiments/ablation/run_ablation.py --mode ablation --variant single_stage_direct`
