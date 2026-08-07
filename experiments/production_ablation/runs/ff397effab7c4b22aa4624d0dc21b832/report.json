@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "run_id": "ff397effab7c4b22aa4624d0dc21b832",
+    "created_at": "2026-08-07T08:14:59.055191+00:00",
+    "commit": "1da779b0d8402277fc2d726161c7afd02c79002b",
+    "dataset_hash": "bebfc797e737b54885ae6067589b2f4ef1af81e52d77e28d624aee6c2c3d2e48",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_1"
+    ],
+    "expected_count": 2
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 4,
+  "metrics": {
+    "strict_tp": 2,
+    "strict_fp": 1,
+    "strict_fn": 0,
+    "valid_extra": 1,
+    "invalid": 1,
+    "evidence_valid": 4,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "好，特征存储选Feast，进入implementation。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "David更新Jira任务跟踪MLflow PoC",
+        "summary": "David更新Jira任务跟踪MLflow PoC",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "记得更新Jira任务。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "证据仅提及'记得更新Jira任务'，是提醒而非实际执行决策或承诺，且与GT候选中的具体实施决策无关。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "Emma负责MLflow PoC安全检查清单",
+        "summary": "Emma负责MLflow PoC安全检查清单",
+        "source_message_ids": [
+          "m031",
+          "m035"
+        ],
+        "evidence_quote": "我写一份安全检查清单给你。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺写安全检查清单，属于执行承诺，但未被GT候选覆盖（GT候选为特征存储和搭建决策）。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "好，我明天开始搭建。",
+        "summary": "好，我明天开始搭建。",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "好，我明天开始搭建。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m033",
+        "reason": "exact_source_match"
+      }
+    ],
+    "unmatched_expected": []
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 4,
+    "errors": {}
+  }
+}

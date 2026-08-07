@@ -649,3 +649,69 @@ uv run python experiments/production_ablation/run.py --chat-id ai_ml_platform_ch
 **Artifacts**: `experiments/production_ablation/repeat.py`, `experiments/production_ablation/aggregates/`, and the 15 successful run reports.
 
 **Next gate**: add a semantic/neutral adjudicator, then repeat the same matrix with `valid_extra` separated from `invalid`; only after that consider changing the production default.
+
+---
+
+## 2026-08-07 - 真实三态 adjudicator 接入
+
+### 为什么此前 strict F1 偏低
+
+旧 evaluator 的 strict 公式是：
+- evidence-valid 且命中 GT：TP
+- evidence-valid 但不在 GT：FP
+- evidence-invalid：FP
+- 未命中 GT：FN
+
+argusbot_v3 的 GT 很保守，只覆盖每个 chat 的少数关键决策；而 production extractor 会输出执行承诺、任务分配、阶段性结论等真实决策。因此很多“有真实证据、但 GT 未标注”的输出被系统性算成 FP。比如 three-chat 中一次典型结果是 `output_count=16`、`strict_tp=4`、`strict_fp=9`、`strict_fn=2`，其中很多 FP 实际是 evidence-valid extra。这个 F1 不能代表真实决策质量。
+
+### 三态 adjudicator
+
+新增 `LLMDecisionAdjudicator`，通过 `run.py --adjudicate` 显式启用：
+- `match_gt`：语义上等价于某条 GT，计入 TP。
+- `valid_extra`：证据真实、是独立有效决策，但 GT 未覆盖；单独统计，不计 strict FP。
+- `invalid`：不是决策、只是噪声/提醒，或 judge 判定不成立；计入 FP。
+- judge/API/JSON 失败：run 标记 `incomplete`，不静默变成 FP。
+- judge 返回的 `match_gt` 还经过候选 msg_id 和标题/GT summary 词面重叠防线，避免把无关输出强行对齐。
+
+### 真实 one-chat adjudication
+
+**Run ID**: `ff397effab7c4b22aa4624d0dc21b832`
+
+| metric | value |
+|---|---:|
+| strict_tp | 2 |
+| strict_fp | 1 |
+| strict_fn | 0 |
+| valid_extra | 1 |
+| invalid | 1 |
+| evidence_valid | 4 |
+| evidence_invalid | 0 |
+| precision | 0.6667 |
+| recall | 1.0000 |
+| f1 | 0.8000 |
+| incomplete | false |
+
+### 真实 three-chat adjudication
+
+**Run ID**: `643c764a42664899941d1fb20b2fddec`
+
+| metric | value |
+|---|---:|
+| strict_tp | 5 |
+| strict_fp | 2 |
+| strict_fn | 1 |
+| valid_extra | 8 |
+| invalid | 2 |
+| evidence_valid | 15 |
+| evidence_invalid | 0 |
+| precision | 0.7143 |
+| recall | 0.8333 |
+| f1 | 0.7692 |
+| incomplete | false |
+| adjudicator calls | 15 |
+
+**结论**: 三态 adjudication 解释了此前低 F1 的主要来源：本次 8 条 valid extra 不再污染 strict FP，生产路径的 evidence health 仍为 100%。剩余 `strict_fn=1` 是 GT 漏召回/粒度问题，不能靠 adjudicator 凭空修复。
+
+**运行方式**: `uv run python experiments/production_ablation/run.py --sample 3 --adjudicate`。批量重复工具也支持 `repeat.py --adjudicate`。
+
+**下一步**: 对三态 evaluator 的 `full`、`no_entity_context`、`no_memory_extractor` 各重复至少 5 次，比较 `match_gt`、`valid_extra`、`invalid` 的均值/方差；在此之前不改变 production 默认配置。

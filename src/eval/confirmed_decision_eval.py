@@ -125,6 +125,7 @@ class EvaluationOutcome:
 class AdjudicationResult:
     outcome: Adjudication
     matched_msg_id: str = ""
+    reason: str = ""
 
 
 Adjudicator = Callable[[EvidenceDecision, Sequence[dict], Sequence[dict]], AdjudicationResult]
@@ -172,7 +173,7 @@ class ConfirmedDecisionEvaluator:
             evidence_ok: bool,
             adjudication: Adjudication,
             reason: str,
-            matched_msg_id: str = "",
+            matched_msg_id: str = ""
         ) -> None:
             details.append({
                 "chat_id": output.chat_id,
@@ -236,13 +237,13 @@ class ConfirmedDecisionEvaluator:
                 else:
                     matched_expected.add(key)
                     strict_tp += 1
-                    record_detail(output, True, Adjudication.MATCH_GT, "semantic_match", result.matched_msg_id)
+                    record_detail(output, True, Adjudication.MATCH_GT, result.reason or "semantic_match", result.matched_msg_id)
             elif result.outcome is Adjudication.VALID_EXTRA:
                 valid_extra += 1
-                record_detail(output, True, Adjudication.VALID_EXTRA, "adjudicated_valid_extra")
+                record_detail(output, True, Adjudication.VALID_EXTRA, result.reason or "adjudicated_valid_extra")
             elif result.outcome is Adjudication.INVALID:
                 invalid += 1
-                record_detail(output, True, Adjudication.INVALID, "adjudicated_invalid")
+                record_detail(output, True, Adjudication.INVALID, result.reason or "adjudicated_invalid")
             else:
                 errors.append(f"{output.chat_id}:{output.title}: evaluation error")
                 record_detail(output, True, Adjudication.EVALUATION_ERROR, "adjudicator_returned_error")

@@ -46,6 +46,7 @@ def main() -> int:
     parser.add_argument("--runs", type=int, default=5)
     parser.add_argument("--run-root", type=Path, default=REPO / "experiments" / "production_ablation" / "runs")
     parser.add_argument("--aggregate-root", type=Path, default=REPO / "experiments" / "production_ablation" / "aggregates")
+    parser.add_argument("--adjudicate", action="store_true")
     args = parser.parse_args()
     if args.runs <= 0:
         parser.error("--runs must be positive")
@@ -55,6 +56,8 @@ def main() -> int:
     for index in range(args.runs):
         before = {path.name for path in args.run_root.iterdir() if path.is_dir()}
         command = [sys.executable, str(RUNNER), "--variant", args.variant, "--sample", str(args.sample), "--run-root", str(args.run_root)]
+        if args.adjudicate:
+            command.append("--adjudicate")
         completed = subprocess.run(command, cwd=REPO, env=os.environ.copy(), capture_output=True, text=True, check=False)
         report_path = _latest_new_report(args.run_root, before)
         if report_path is not None:

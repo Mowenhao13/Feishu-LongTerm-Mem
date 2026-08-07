@@ -19,6 +19,7 @@ if str(REPO) not in sys.path:
 
 from experiments.production_ablation.runner import run_variant
 from experiments.production_ablation.variants import build_variants
+from src.eval.confirmed_decision_adjudicator import LLMDecisionAdjudicator
 from src.eval.confirmed_decision_eval import ConfirmedDecisionEvaluator, DatasetSelection
 from src.extractors.memory_extractor import MemoryExtractor
 from src.extractors.simple_llm_extractor import SimpleLLMExtractor
@@ -58,6 +59,7 @@ async def main() -> int:
     parser.add_argument("--sample", type=int, default=3)
     parser.add_argument("--chat-id", action="append", default=[])
     parser.add_argument("--run-root", type=Path, default=REPO / "experiments" / "production_ablation" / "runs")
+    parser.add_argument("--adjudicate", action="store_true", help="Use LLM three-state adjudication for evidence-valid GT extras")
     args = parser.parse_args()
 
     selection = DatasetSelection.from_jsonl(
@@ -74,7 +76,32 @@ async def main() -> int:
     result = await run_variant(
         dict(selection.messages_by_chat), variant, run_dir, extractor, memory_extractor,
     )
-    outcome = ConfirmedDecisionEvaluator().evaluate(result.decisions, selection)
+    evaluator = ConfirmedDecisionEvaluator()
+    adjudicator = None
+    adjudication_errors: dict[tuple[str, str, tuple[str, ...], str], str] = {}
+    adjudication_cache: dict[tuple[str, str, tuple[str, ...], str], object] = {}
+    if args.adjudicate:
+        judge = LLMDecisionAdjudicator(provider)
+        for output in result.decisions:
+            if not output.is_confirmed:
+                continue
+            messages = selection.messages_by_chat.get(output.chat_id)
+            if messages is None or not evaluator._evidence_valid(output, messages):
+                continue
+            candidates = selection.expected_by_chat.get(output.chat_id, ())
+            key = (output.chat_id, output.title, output.source_message_ids, output.evidence_quote)
+            try:
+                adjudication_cache[key] = await judge.adjudicate(output, candidates, messages)
+            except Exception as exc:
+                adjudication_errors[key] = str(exc)
+        def adjudicator(output, expected, messages):
+            key = (output.chat_id, output.title, output.source_message_ids, output.evidence_quote)
+            if key in adjudication_errors:
+                raise RuntimeError(adjudication_errors[key])
+            if key not in adjudication_cache:
+                raise RuntimeError("missing adjudication result")
+            return adjudication_cache[key]
+    outcome = ConfirmedDecisionEvaluator(adjudicator=adjudicator).evaluate(result.decisions, selection)
     incomplete_reason = (
         "runner_error" if result.errors
         else "evaluation_error" if outcome.incomplete
@@ -106,6 +133,7 @@ async def main() -> int:
             "unmatched_expected": outcome.unmatched_expected,
         },
         "runner_errors": result.errors,
+        "adjudicator": {"enabled": args.adjudicate, "calls": len(adjudication_cache), "errors": {"|".join((key[0], key[1], ",".join(key[2]), key[3])): value for key, value in adjudication_errors.items()}},
     }
     run_dir.mkdir(parents=True, exist_ok=True)
     temp_path = run_dir / "report.json.tmp"
