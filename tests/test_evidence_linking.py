@@ -40,3 +40,22 @@ def test_evidence_linker_repairs_model_quote_spanning_multiple_messages():
     assert decision["source_message_ids"] == ["m2"]
     assert decision["evidence_quote"] == "好，特征存储选Feast，进入implementation。"
     assert decision["evidence_source"] == "heuristic"
+
+def test_execution_ack_split_only_uses_cited_followup_messages():
+    content = "[m032] Charlie: 那就先定MLflow，PoC后决定。\n[m033] Frank: 好，我明天开始搭建。"
+    decision = {
+        "title": "先定MLflow，PoC后决定",
+        "summary": "先定MLflow，PoC后决定",
+        "status": "decided",
+        "is_suggestion": False,
+        "source_message_id": "m032",
+        "source_message_ids": ["m032", "m033"],
+        "evidence_quote": "那就先定MLflow，PoC后决定。",
+    }
+
+    result = SimpleLLMExtractor._add_execution_acknowledgements([decision], content)
+
+    assert len(result) == 2
+    assert result[1]["source_message_ids"] == ["m033"]
+    assert result[1]["evidence_quote"] == "好，我明天开始搭建。"
+    assert result[1]["evidence_source"] == "derived_execution_ack"

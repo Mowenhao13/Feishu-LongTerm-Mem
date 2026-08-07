@@ -574,3 +574,56 @@ uv run python experiments/production_ablation/run.py --chat-id ai_ml_platform_ch
 | claude_project_dir | D:\Projects\feishu-longterm-mem\ref\ArgusBot |
 
 ---
+
+---
+
+## 2026-08-07 - execution acknowledgement split follow-up
+
+**Implementation**: `SimpleLLMExtractor` now inspects only the model-cited `source_message_ids`. If a later cited message is an execution acknowledgement such as "好，我明天开始搭建", it is emitted as a separate confirmed decision with that message as exact evidence. Uncited messages are never used for this derivation.
+
+**Regression**: `tests/test_evidence_linking.py` now covers the `m032 -> m033` shape.
+
+**Smoke run**: `bd15a855d4344a06afee636995e95171` on `ai_ml_platform_channel_1`.
+
+| metric | value |
+|---|---:|
+| expected_count | 2 |
+| output_count | 2 |
+| strict_tp | 2 |
+| strict_fp | 0 |
+| strict_fn | 0 |
+| evidence_valid | 2 |
+| evidence_invalid | 0 |
+| precision | 1.0000 |
+| recall | 1.0000 |
+| f1 | 1.0000 |
+| incomplete | false |
+| runner_errors | 0 |
+
+**Conclusion**: The previously missing `m033` is now matched with exact evidence. This is a targeted one-chat result, not yet a general production-quality claim; the next gate is to rerun the three-chat smoke and then repeat each ablation variant multiple times.
+
+**Verification**: 58 related regression tests passed.
+
+### Follow-up three-chat smoke after execution-ack split
+
+**Run ID**: `e3fa913c188c46adb11a441df0cdd1d8`
+
+| metric | value |
+|---|---:|
+| selected chats | 3 |
+| expected_count | 6 |
+| output_count | 16 |
+| strict_tp | 4 |
+| strict_fp | 9 |
+| strict_fn | 2 |
+| evidence_valid | 13 |
+| evidence_invalid | 0 |
+| precision | 0.3077 |
+| recall | 0.6667 |
+| f1 | 0.4211 |
+| incomplete | false |
+| runner_errors | 0 |
+
+**审计结果**: `m033` 已被独立命中；本次剩余 FN 是 `ai_ml_platform_channel_0/m009` 和 `ai_ml_platform_channel_2/m012`。这表明 evidence contract 和执行确认拆分已生效，但 LLM 对其他确认句的召回仍存在随机波动，不能仅凭一次 three-chat 运行修改生产默认配置。
+
+**下一步**: 对 `full`、`no_entity_context`、`no_memory_extractor` 各运行至少 5 次，记录均值、标准差、最小/最大值，以及 evidence health 和 runner health。

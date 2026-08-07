@@ -106,6 +106,31 @@ class SimpleLLMExtractor:
             return True
         return False
 
+    @staticmethod
+    def _add_execution_acknowledgements(decisions: List[dict], content: str) -> List[dict]:
+        import re
+        messages_by_id: Dict[str, str] = {}
+        for line in content.splitlines():
+            match = re.match(r"^\[([^\]]+)\]\s*[^:]+:\s*(.+)$", line.strip())
+            if match:
+                messages_by_id[match.group(1)] = match.group(2)
+        acknowledgement = re.compile(r"^(?:\u597d|\u597d\u7684|\u6ca1\u95ee\u9898|\u884c|\u53ef\u4ee5|\u6536\u5230|\u660e\u767d)[，,、 ]*(?:\u6211|\u6211\u4eec|\u8fd9\u8fb9)?(?:\u4eca\u5929|\u4eca\u665a|\u660e\u5929|\u4e0b\u5468|\u672c\u5468|\u9a6c\u4e0a|\u7a0d\u540e)?(?:\u5f00\u59cb|\u642d\u5efa|\u5b9e\u73b0|\u914d\u7f6e|\u63d0\u4ea4|\u66f4\u65b0|\u5199|\u8d1f\u8d23|\u8dd1|\u6267\u884c|\u51c6\u5907|\u5b89\u6392|\u5b8c\u6210)")
+        existing_sources = {str(decision.get("source_message_id")) for decision in decisions if decision.get("source_message_id")}
+        derived: List[dict] = []
+        for decision in decisions:
+            source_ids = [str(item) for item in decision.get("source_message_ids", []) if item]
+            quote = str(decision.get("evidence_quote", "") or "")
+            if len(source_ids) < 2 or not quote: continue
+            evidence_index = next((index for index, source_id in enumerate(source_ids) if quote in messages_by_id.get(source_id, "")), None)
+            if evidence_index is None: continue
+            for source_id in source_ids[evidence_index + 1:]:
+                message = messages_by_id.get(source_id, "")
+                if not message or source_id in existing_sources or not acknowledgement.search(message): continue
+                derived.append({"title": message, "content": message, "summary": message, "topic": decision.get("topic", "general"), "status": "decided", "impact_level": decision.get("impact_level", "major"), "is_suggestion": False, "parent_id": decision.get("parent_id", ""), "confidence": max(float(decision.get("confidence", 0.80)), 0.80), "rationale": "Execution acknowledgement following a cited decision", "proposer": decision.get("proposer"), "executor": decision.get("executor"), "source_message_id": source_id, "source_message_ids": [source_id], "evidence_quote": message, "source_chat_id": decision.get("source_chat_id", ""), "evidence_source": "derived_execution_ack"})
+                existing_sources.add(source_id)
+        return decisions + derived
+
+
     async def extract_decision(self, content: str,
                                  existing_decisions: Optional[List] = None) -> Optional[List[dict]]:
         """从消息内容中提取所有决策（支持批量返回）"""
@@ -198,8 +223,9 @@ class SimpleLLMExtractor:
                     logger.info("[LLM Extractor] Skipping decision (confidence=%.2f < threshold=%.2f): %s", 
                                conf, self._confidence_threshold, title)
 
-            logger.info("[LLM Extractor] Extracted %d decisions (filtered from %d total)", 
-                       len(extracted), len(decisions))
+            extracted = self._add_execution_acknowledgements(extracted, content)
+            logger.info("[LLM Extractor] Extracted %d decisions (filtered from %d total)",
+                        len(extracted), len(decisions))
             return extracted if extracted else None
 
         except json.JSONDecodeError as e:
@@ -370,6 +396,7 @@ class SimpleLLMExtractor:
                     logger.info("[LLM Extractor] extract_with_context: Skipping decision "
                                 "(confidence=%.2f): %s", conf, title)
 
+            extracted = self._add_execution_acknowledgements(extracted, content)
             logger.info("[LLM Extractor] extract_with_context: Extracted %d decisions",
                         len(extracted))
             return extracted if extracted else None
