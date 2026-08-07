@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "run_id": "bd15a855d4344a06afee636995e95171",
+    "created_at": "2026-08-07T07:18:04.540801+00:00",
+    "commit": "878013c0d0e90144e6e402f3cab862f4361b79c7",
+    "dataset_hash": "bebfc797e737b54885ae6067589b2f4ef1af81e52d77e28d624aee6c2c3d2e48",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_1"
+    ],
+    "expected_count": 2
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 2,
+  "metrics": {
+    "strict_tp": 2,
+    "strict_fp": 0,
+    "strict_fn": 0,
+    "valid_extra": 0,
+    "invalid": 0,
+    "evidence_valid": 2,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "好，特征存储选Feast，进入implementation。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "Frank搭建MLflow PoC，明天开始",
+        "summary": "Frank搭建MLflow PoC，明天开始",
+        "source_message_ids": [
+          "m029",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "好，我明天开始搭建。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m033",
+        "reason": "exact_source_match"
+      }
+    ],
+    "unmatched_expected": []
+  },
+  "runner_errors": []
+}
