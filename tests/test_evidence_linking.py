@@ -22,3 +22,21 @@ def test_evidence_linker_does_not_fabricate_unrelated_evidence():
 
     assert decision.get("source_message_ids", []) == []
     assert decision.get("evidence_quote", "") == ""
+
+
+def test_evidence_linker_repairs_model_quote_spanning_multiple_messages():
+    content = (
+        "[m1] Alice: 我倾向于Feast，因为可控性更好。\n"
+        "[m2] Bob: 好，特征存储选Feast，进入implementation。"
+    )
+    decision = {
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": ["m1", "m2"],
+        "evidence_quote": "我倾向于Feast，因为可控性更好。好，特征存储选Feast，进入implementation。",
+    }
+
+    assert SimpleLLMExtractor._attach_evidence(decision, content)
+    assert decision["source_message_ids"] == ["m2"]
+    assert decision["evidence_quote"] == "好，特征存储选Feast，进入implementation。"
+    assert decision["evidence_source"] == "heuristic"

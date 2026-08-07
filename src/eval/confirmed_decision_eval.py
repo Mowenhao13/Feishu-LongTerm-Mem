@@ -99,6 +99,8 @@ class EvaluationOutcome:
     evidence_valid: int
     evidence_invalid: int
     errors: tuple[str, ...] = ()
+    details: tuple[dict[str, object], ...] = ()
+    unmatched_expected: tuple[dict[str, object], ...] = ()
 
     @property
     def incomplete(self) -> bool:
@@ -156,12 +158,34 @@ class ConfirmedDecisionEvaluator:
         matched_expected: set[tuple[str, str]] = set()
         strict_tp = 0
         errors: list[str] = []
+        details: list[dict[str, object]] = []
+
+        def record_detail(
+            output: EvidenceDecision,
+            evidence_ok: bool,
+            adjudication: Adjudication,
+            reason: str,
+            matched_msg_id: str = "",
+        ) -> None:
+            details.append({
+                "chat_id": output.chat_id,
+                "title": output.title,
+                "summary": output.summary,
+                "source_message_ids": output.source_message_ids,
+                "evidence_quote": output.evidence_quote,
+                "evidence_valid": evidence_ok,
+                "adjudication": adjudication.value,
+                "matched_msg_id": matched_msg_id,
+                "reason": reason,
+            })
 
         for output in confirmed:
             messages = selection.messages_by_chat.get(output.chat_id)
             if messages is None or not self._evidence_valid(output, messages):
                 evidence_invalid += 1
                 invalid += 1
+                reason = "unknown_chat" if messages is None else "missing_or_invalid_evidence"
+                record_detail(output, False, Adjudication.INVALID, reason)
                 continue
             evidence_valid += 1
             candidates = selection.expected_by_chat.get(output.chat_id, ())
@@ -174,14 +198,17 @@ class ConfirmedDecisionEvaluator:
             if exact is not None:
                 matched_expected.add((output.chat_id, exact["msg_id"]))
                 strict_tp += 1
+                record_detail(output, True, Adjudication.MATCH_GT, "exact_source_match", exact["msg_id"])
                 continue
             if self._adjudicator is None:
                 invalid += 1
+                record_detail(output, True, Adjudication.INVALID, "no_adjudicator_for_gt_extra")
                 continue
             try:
                 result = self._adjudicator(output, candidates, messages)
             except Exception as exc:  # adjudication errors make the full run incomplete
                 errors.append(f"{output.chat_id}:{output.title}: {exc}")
+                record_detail(output, True, Adjudication.EVALUATION_ERROR, str(exc))
                 continue
             if result.outcome is Adjudication.MATCH_GT:
                 key = (output.chat_id, result.matched_msg_id)
@@ -189,18 +216,35 @@ class ConfirmedDecisionEvaluator:
                     expected.get("msg_id") == result.matched_msg_id for expected in candidates
                 ):
                     errors.append(f"{output.chat_id}:{output.title}: invalid semantic GT identity")
+                    record_detail(
+                        output,
+                        True,
+                        Adjudication.EVALUATION_ERROR,
+                        "invalid_semantic_gt_identity",
+                        result.matched_msg_id,
+                    )
                 else:
                     matched_expected.add(key)
                     strict_tp += 1
+                    record_detail(output, True, Adjudication.MATCH_GT, "semantic_match", result.matched_msg_id)
             elif result.outcome is Adjudication.VALID_EXTRA:
                 valid_extra += 1
+                record_detail(output, True, Adjudication.VALID_EXTRA, "adjudicated_valid_extra")
             elif result.outcome is Adjudication.INVALID:
                 invalid += 1
+                record_detail(output, True, Adjudication.INVALID, "adjudicated_invalid")
             else:
                 errors.append(f"{output.chat_id}:{output.title}: evaluation error")
+                record_detail(output, True, Adjudication.EVALUATION_ERROR, "adjudicator_returned_error")
 
         strict_fn = selection.expected_count - strict_tp
         strict_fp = invalid
+        unmatched_expected = tuple(
+            expected | {"chat_id": chat_id}
+            for chat_id, rows in selection.expected_by_chat.items()
+            for expected in rows
+            if (chat_id, expected.get("msg_id", "")) not in matched_expected
+        )
         return EvaluationOutcome(
             strict_tp=strict_tp,
             strict_fp=strict_fp,
@@ -210,4 +254,6 @@ class ConfirmedDecisionEvaluator:
             evidence_valid=evidence_valid,
             evidence_invalid=evidence_invalid,
             errors=tuple(errors),
+            details=tuple(details),
+            unmatched_expected=unmatched_expected,
         )

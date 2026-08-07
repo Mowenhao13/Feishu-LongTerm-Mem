@@ -68,7 +68,9 @@ use the exact same name (case-preserving) to avoid duplication.
 - Skip: opinions, jokes, greetings, meta-conversation, status updates without substance
 
 ## General
-- Be thorough — extract everything that fits the rules above
+- Be selective — extract only production-relevant named entities, relationships, and facts.
+- Hard limits: at most 20 entities, 20 relationships, and 10 facts.
+- Keep `reasoning` to one short sentence.
 - When in doubt between two entity types, choose the more specific one
 - When in doubt about whether something is a fact, extract it
 - Use the exact same entity name in relationships and facts as used in the entities array

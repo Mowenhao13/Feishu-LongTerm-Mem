@@ -51,6 +51,9 @@ def test_exact_source_evidence_matches_ground_truth(tmp_path: Path):
     assert outcome.strict_fn == 0
     assert outcome.evidence_valid == 1
     assert not outcome.incomplete
+    assert outcome.details[0]["adjudication"] == "match_gt"
+    assert outcome.details[0]["matched_msg_id"] == "m1"
+    assert outcome.unmatched_expected == ()
 
 
 def test_cross_chat_or_fabricated_evidence_is_invalid(tmp_path: Path):
@@ -78,6 +81,8 @@ def test_valid_extra_is_not_a_strict_false_positive(tmp_path: Path):
     assert outcome.valid_extra == 1
     assert outcome.strict_fp == 0
     assert outcome.strict_fn == 1
+    assert outcome.details[0]["adjudication"] == "valid_extra"
+    assert outcome.unmatched_expected[0]["msg_id"] == "m1"
 
 
 def test_adjudicator_failure_marks_run_incomplete(tmp_path: Path):

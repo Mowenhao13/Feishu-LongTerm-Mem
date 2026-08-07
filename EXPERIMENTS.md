@@ -251,10 +251,10 @@ uv run python experiments/production_ablation/run.py --sample 3
 
 ### 仍需继续完善
 
-1. 当前 evaluator 未启用 semantic/neutral adjudicator，因此所有 GT 外但证据有效的 confirmed 输出仍计入 strict FP；下一步应接入三态 judge，将 `valid_extra` 与真正 invalid 区分开。
-2. three-chat smoke 中 `strict_fn=1`，需要查看漏掉的 GT 所在消息，判断是 prompt 漏召回、dedup 合并误伤，还是 GT 与 evidence 精确匹配粒度不一致。
-3. 当前 full 路径仍使用两阶段 entity context，smoke 输出密度偏高；后续应在 production ablation 中比较 `full`、`no_entity_context`、`no_memory_extractor`，再决定是否切 production 默认路径。
-4. 如果要把 Langfuse 打开参与生产 smoke，需要单独验证当前安装的 Langfuse SDK 版本 API；本轮为了 contract smoke 稳定性使用 `LANGFUSE_ENABLE=false`。
+1. evaluator 已具备三态结果结构（`match_gt` / `valid_extra` / `invalid`），但 production runner 当前仍未接入真实 semantic/neutral adjudicator；因此 GT 外但证据有效的 confirmed 输出仍会在无 adjudicator 模式下按 `invalid` 计入 strict FP。
+2. three-chat smoke 中 `strict_fn=1`，需要依赖逐条输出审计定位漏掉的 GT 所在消息，判断是 prompt 漏召回、dedup 合并误伤，还是 GT 与 evidence 精确匹配粒度不一致。
+3. 当前 full 路径仍使用两阶段 entity context，smoke 输出密度偏高；后续应在 production ablation 中比较 `full`、`no_entity_context`、`no_memory_extractor`，并使用多次重复运行统计均值/方差，再决定是否切 production 默认路径。
+4. 如果要把 Langfuse 打开参与生产 smoke，需要单独验证当前安装的 Langfuse SDK 版本 API；本轮为了 contract smoke 稳定性保持代码层禁用。
 
 ### Langfuse 代码层禁用后复测
 
@@ -268,6 +268,60 @@ uv run python experiments/production_ablation/run.py --sample 1
 **Run ID**: `dfb67b24d4f5446d8df6e27957c07f60`
 
 **结果**: `evidence_valid=5`、`evidence_invalid=0`、`runner_errors=0`、`incomplete=false`。说明 Langfuse 硬禁用后生产 smoke contract 仍通过；本次 LLM 输出存在随机波动（strict_tp=1/2），不作为组件效果结论。
+
+---
+
+## 2026-08-07 — production smoke 审计明细补强
+
+**目标**: 让 contract smoke 的最终 `report.json` 支持直接定位 `strict_fn`、`strict_fp` 和 evidence contract 问题，而不是只保留聚合指标。
+
+**代码修正**:
+- `EvaluationOutcome` 新增 `details`：记录每条 confirmed 输出的 `chat_id`、title/summary、`source_message_ids`、`evidence_quote`、evidence 是否有效、adjudication、匹配到的 GT message id 和判定原因。
+- `EvaluationOutcome` 新增 `unmatched_expected`：列出本次 selection 内未被 exact/semantic match 覆盖的 GT，便于直接排查 three-chat smoke 的 `strict_fn=1`。
+- `experiments/production_ablation/run.py` 将 report 拆成稳定的 `metrics` 与独立 `evaluation_audit`，避免把大块审计明细混入指标对象。
+- `SimpleLLMExtractor` 不再盲信模型给出的 evidence：`evidence_quote` 必须能映射到某一条 cited `[msg_id]` 原始消息；多消息拼接 quote 会被本地重新绑定到单条 exact message，仍无法绑定则跳过该候选。
+- `MEMORY_EXTRACTION_PROMPT` 增加 Stage 1 输出上限（20 entities / 20 relationships / 10 facts）并缩短 reasoning，production smoke runner 默认 `MAX_TOKENS=8192`，降低 MemoryExtractor JSON 截断概率。
+
+**回归测试**:
+
+```bash
+UV_CACHE_DIR=.uv-cache TEMP=.tmp TMP=.tmp \
+uv run pytest -p no:cacheprovider --basetemp .tmp/pytest \
+  tests/test_confirmed_decision_eval.py \
+  tests/test_evidence_linking.py \
+  tests/test_pipeline_options.py \
+  tests/test_production_ablation_cli.py \
+  tests/test_production_ablation_runner.py \
+  tests/test_prompts.py tests/test_llm_config.py tests/test_comparator.py
+```
+
+**结果**: 56 passed。
+
+### 新 report 结构下的 three-chat smoke
+
+**诊断性失败 run**: `6719a8535bd1481598215e3047bcf178`。结果为 `evidence_valid=12`、`evidence_invalid=2`、`runner_errors=1`、`incomplete=true`。根因有两类：一是模型把多条消息拼成一个 `evidence_quote`，不满足单条 source-message exact quote contract；二是 MemoryExtractor Stage 1 输出被截断导致 JSON parse error。
+
+**修复后通过 run**: `f5bda6bc74454707a7f6e248cda37041`。
+
+| 指标 | 值 |
+|---|---:|
+| selected chats | 3 |
+| expected_count | 6 |
+| output_count | 15 |
+| strict_tp | 5 |
+| strict_fp | 10 |
+| strict_fn | 1 |
+| evidence_valid | 15 |
+| evidence_invalid | 0 |
+| precision | 0.3333 |
+| recall | 0.8333 |
+| f1 | 0.4762 |
+| incomplete | false |
+| runner_errors | 0 |
+
+**审计定位**: `evaluation_audit.unmatched_expected` 只剩 `ai_ml_platform_channel_1/m033`，GT 为“模型版本管理 / 好，我明天开始搭建。”。这说明当前剩余 `strict_fn=1` 不是证据字段丢失或 runner 基础设施错误，而是模型召回/抽取粒度问题。
+
+**下一步**: 接入真实三态 adjudicator，把 evidence-valid 的 GT 外输出分成 `valid_extra` 与 `invalid`；同时针对 `ai_ml_platform_channel_1/m033` 建一个 focused regression，确认是 prompt 漏召回、dedup/update 合并误伤，还是 GT 粒度需要调整。
 
 ---
 
@@ -349,13 +403,15 @@ uv run python experiments/production_ablation/run.py --sample 1
 
 ---
 
-## 2026-08-08 — 消融实验：组件贡献度分析与改进方案
+## 2026-08-08 — 旧 runner 消融记录：仅作排查线索
 
-### 实验结论
+### 实验结论状态
 
 **实验方法**: 对 argusbot_v3 全量数据集（70 chats, 2373 messages, 132 GT decisions）逐一跑 8 个消融变体，用 LLM Judge 评估每个变体的 Precision / Recall / F1。
 
 **环境**: deepseek-chat + Qwen3-Embedding-4B, no Neo4j, Sonnet for LLM Judge
+
+**采信状态**: 本节来自旧 `experiments/ablation/run_ablation.py`，不经过完整 `MemoryEngine → mutation/dedup → graph export → evidence-aware evaluator` 生产路径。下面的组件贡献度只保留为排查假设，不作为生产默认配置调整依据。
 
 ### 组件贡献度分析
 
@@ -383,7 +439,7 @@ uv run python experiments/production_ablation/run.py --sample 1
 
 **True Recall 远高于计算值**：系统提取了大量正确决策，但 GT 只标注了 132 条 "关键决策"，额外正确输出被算作 FP，Precision 被系统性低估。
 
-**真实 P/R/F1 估计应在 60-70% 范围**。需要在 LLM Judge 中引入 neutral 类别（"决策正确但不在 GT 中"）才能得到准确值。
+真实 P/R/F1 需要在 production-path runner 中接入三态 adjudicator 后重新计算。旧 runner 里的 GT 外正确输出现象只说明需要 `valid_extra` / neutral 分类，不能直接推出 60-70% 的可信区间。
 
 ---
 

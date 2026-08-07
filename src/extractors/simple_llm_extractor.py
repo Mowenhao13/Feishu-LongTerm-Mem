@@ -51,7 +51,7 @@ class SimpleLLMExtractor:
         self._trace_id = trace_id
 
     @staticmethod
-    def _attach_evidence(decision: Dict[str, Any], content: str) -> None:
+    def _attach_evidence(decision: Dict[str, Any], content: str) -> bool:
         """Attach auditable evidence when an extractor omitted it.
 
         The fallback only links an output to an explicit ``[msg_id]`` source
@@ -59,25 +59,38 @@ class SimpleLLMExtractor:
         message. It deliberately leaves unrelated decisions unlinked so the
         evaluator can reject them instead of fabricating provenance.
         """
-        if decision.get("source_message_ids") and decision.get("evidence_quote"):
-            decision["evidence_source"] = "model"
-            return
-
         import re
+
+        messages_by_id = {}
+        for line in content.splitlines():
+            match = re.match(r"^\[([^\]]+)\]\s*[^:：]+[:：]\s*(.+)$", line.strip())
+            if match:
+                msg_id, message = match.groups()
+                messages_by_id[msg_id] = message
+
+        source_ids = [str(item) for item in decision.get("source_message_ids", []) if item]
+        evidence_quote = str(decision.get("evidence_quote", "") or "")
+        if source_ids and evidence_quote and any(
+            evidence_quote in messages_by_id.get(message_id, "") for message_id in source_ids
+        ):
+            decision["evidence_source"] = "model"
+            if not decision.get("source_message_id"):
+                decision["source_message_id"] = source_ids[0]
+            return True
+
+        decision["source_message_ids"] = []
+        decision["source_message_id"] = ""
+        decision["evidence_quote"] = ""
 
         query = decision.get("summary", "") or decision.get("title", "")
         query_chars = set(re.sub(r"\s+", "", query.lower()))
         if len(query_chars) < 3:
-            return
+            return False
 
         best_id = ""
         best_text = ""
         best_score = 0.0
-        for line in content.splitlines():
-            match = re.match(r"^\[([^\]]+)\]\s*[^:：]+[:：]\s*(.+)$", line.strip())
-            if not match:
-                continue
-            msg_id, message = match.groups()
+        for msg_id, message in messages_by_id.items():
             message_chars = set(re.sub(r"\s+", "", message.lower()))
             if not message_chars:
                 continue
@@ -90,6 +103,8 @@ class SimpleLLMExtractor:
             decision["source_message_id"] = best_id
             decision["evidence_quote"] = best_text
             decision["evidence_source"] = "heuristic"
+            return True
+        return False
 
     async def extract_decision(self, content: str,
                                  existing_decisions: Optional[List] = None) -> Optional[List[dict]]:
@@ -175,8 +190,10 @@ class SimpleLLMExtractor:
                         "evidence_quote": d.get("evidence_quote", ""),
                         "source_chat_id": d.get("source_chat_id", ""),
                     }
-                    self._attach_evidence(item, content)
-                    extracted.append(item)
+                    if self._attach_evidence(item, content):
+                        extracted.append(item)
+                    else:
+                        logger.info("[LLM Extractor] Skipping decision without exact evidence: %s", title)
                 else:
                     logger.info("[LLM Extractor] Skipping decision (confidence=%.2f < threshold=%.2f): %s", 
                                conf, self._confidence_threshold, title)
@@ -342,8 +359,13 @@ class SimpleLLMExtractor:
                         "evidence_quote": d.get("evidence_quote", ""),
                         "source_chat_id": d.get("source_chat_id", ""),
                     }
-                    self._attach_evidence(item, content)
-                    extracted.append(item)
+                    if self._attach_evidence(item, content):
+                        extracted.append(item)
+                    else:
+                        logger.info(
+                            "[LLM Extractor] extract_with_context: Skipping decision without exact evidence: %s",
+                            title,
+                        )
                 else:
                     logger.info("[LLM Extractor] extract_with_context: Skipping decision "
                                 "(confidence=%.2f): %s", conf, title)

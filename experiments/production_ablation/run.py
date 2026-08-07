@@ -33,7 +33,7 @@ def _provider() -> LLMProvider:
         base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
         api_key=os.getenv("API_KEY", ""),
         model=os.getenv("MODEL_NAME", "deepseek-chat"),
-        max_tokens=4096,
+        max_tokens=int(os.getenv("MAX_TOKENS", "8192")),
         enable_stats=False,
     )
 
@@ -86,12 +86,24 @@ async def main() -> int:
         "selection": {"chat_ids": selection.chat_ids, "expected_count": selection.expected_count},
         "trace": result.trace.__dict__,
         "output_count": len(result.decisions),
-        "metrics": outcome.__dict__ | {
+        "metrics": {
+            "strict_tp": outcome.strict_tp,
+            "strict_fp": outcome.strict_fp,
+            "strict_fn": outcome.strict_fn,
+            "valid_extra": outcome.valid_extra,
+            "invalid": outcome.invalid,
+            "evidence_valid": outcome.evidence_valid,
+            "evidence_invalid": outcome.evidence_invalid,
+            "errors": outcome.errors,
             "precision": outcome.precision,
             "recall": outcome.recall,
             "f1": outcome.f1,
             "incomplete": outcome.incomplete or outcome.evidence_invalid > 0 or bool(result.errors),
             "incomplete_reason": incomplete_reason,
+        },
+        "evaluation_audit": {
+            "confirmed_outputs": outcome.details,
+            "unmatched_expected": outcome.unmatched_expected,
         },
         "runner_errors": result.errors,
     }
