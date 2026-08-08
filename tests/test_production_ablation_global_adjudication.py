@@ -148,14 +148,13 @@ async def test_per_chat_adjudication_uses_one_call_per_chat(
     result = _run_result([_decision("chat-a", "m1", "这是 PostgreSQL 决策", "采用 PostgreSQL")])
 
     provider = RecordingProvider(_valid_assignment)
-    evaluator = ConfirmedDecisionEvaluator()
 
     from experiments.production_ablation.run import _adjudicate_decisions
     from src.eval.confirmed_decision_adjudicator import LLMDecisionAdjudicator
 
     judge = LLMDecisionAdjudicator(provider)
     adjudicator_report, global_adjudicator = await _adjudicate_decisions(
-        judge, result.decisions, selection, evaluator,
+        judge, result.decisions, selection,
     )
 
     # One call for one chat
@@ -175,7 +174,6 @@ async def test_cache_hit_avoids_second_provider_call(
     result = _run_result([_decision("chat-a", "m1", "这是 PostgreSQL 决策", "采用 PostgreSQL")])
 
     provider = RecordingProvider(_valid_assignment)
-    evaluator = ConfirmedDecisionEvaluator()
 
     from experiments.production_ablation.run import _adjudicate_decisions
     from src.eval.confirmed_decision_adjudicator import LLMDecisionAdjudicator
@@ -183,14 +181,14 @@ async def test_cache_hit_avoids_second_provider_call(
     judge = LLMDecisionAdjudicator(provider)
     cache: dict = {}
     report1, global_adjudicator = await _adjudicate_decisions(
-        judge, result.decisions, selection, evaluator, cache=cache,
+        judge, result.decisions, selection, cache=cache,
     )
     assert report1["calls"] == 1
     assert report1["cache_hits"] == 0
 
     # Second call with the same cache: no provider call, one cache hit
     report2, _ = await _adjudicate_decisions(
-        judge, result.decisions, selection, evaluator, cache=cache,
+        judge, result.decisions, selection, cache=cache,
     )
     assert report2["calls"] == 0
     assert report2["cache_hits"] == 1
@@ -206,14 +204,13 @@ async def test_invalid_assignment_marks_run_incomplete(
     result = _run_result([_decision("chat-a", "m1", "这是 PostgreSQL 决策", "采用 PostgreSQL")])
 
     provider = RecordingProvider(_invalid_missing_output_index)
-    evaluator = ConfirmedDecisionEvaluator()
 
     from experiments.production_ablation.run import _adjudicate_decisions
     from src.eval.confirmed_decision_adjudicator import LLMDecisionAdjudicator
 
     judge = LLMDecisionAdjudicator(provider)
     adjudicator_report, global_adjudicator = await _adjudicate_decisions(
-        judge, result.decisions, selection, evaluator,
+        judge, result.decisions, selection,
     )
 
     assert adjudicator_report["errors"]

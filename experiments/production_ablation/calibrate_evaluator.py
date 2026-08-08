@@ -8,9 +8,8 @@ is performed — only the evaluator over frozen decisions.
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
-from collections import defaultdict
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Mapping
@@ -255,7 +254,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if not args.labels.exists():
-        print(f"Error: labels file not found: {args.labels}", file=__import__("sys").stderr)
+        print(f"Error: labels file not found: {args.labels}", file=sys.stderr)
         return 1
 
     report = run_calibration(

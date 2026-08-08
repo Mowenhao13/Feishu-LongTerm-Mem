@@ -11,7 +11,7 @@ import subprocess
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Callable
+from typing import Callable, Sequence
 import sys
 
 REPO = Path(__file__).resolve().parents[2]
@@ -48,19 +48,25 @@ async def _adjudicate_decisions(
     judge: LLMDecisionAdjudicator,
     decisions: tuple,
     selection: DatasetSelection,
-    evaluator: ConfirmedDecisionEvaluator,
     cache: dict[str, ChatAssignment] | None = None,
 ) -> tuple[dict, Callable[[GlobalAdjudicationGroup], ChatAssignment]]:
     """Build global per-chat adjudication assignments and return report metadata + closure.
 
+    Only builds groups from outputs that lack an exact source match — mirroring the
+    evaluate() residual pipeline — so cache keys computed here and in the
+    global_adjudicator closure are identical.
+
     Optionally accepts an existing *cache* dict to reuse across invocations.
     """
+    confirmed = [output for output in decisions if output.is_confirmed]
+    residual_decisions = _filter_exact_matches(confirmed, selection)
+
     adjudicator_calls = 0
     adjudicator_cache_hits = 0
     adjudication_errors: list[str] = []
     adjudication_cache: dict[str, ChatAssignment] = {} if cache is None else cache
 
-    for group in build_global_adjudication_groups(decisions, selection):
+    for group in build_global_adjudication_groups(residual_decisions, selection):
         key = judge.cache_key(group)
         if key in adjudication_cache:
             adjudicator_cache_hits += 1
@@ -87,6 +93,49 @@ async def _adjudicate_decisions(
         "schema_version": judge.SCHEMA_VERSION,
         "cache_keys": sorted(adjudication_cache),
     }, global_adjudicator
+
+
+def _filter_exact_matches(
+    confirmed: Sequence[EvidenceDecision],
+    selection: DatasetSelection,
+) -> list[EvidenceDecision]:
+    """Return only confirmed outputs that lack an exact source-match against expected data.
+
+    Mirrors the exact-match filter in ConfirmedDecisionEvaluator.evaluate()
+    so that adjudication groups built here match those built in evaluate().
+    """
+    from src.eval.confirmed_decision_eval import (
+        ConfirmedDecisionEvaluator,
+    )
+
+    matched_expected: set[tuple[str, str]] = set()
+    residual: list[EvidenceDecision] = []
+    messages_by_chat = selection.messages_by_chat
+
+    for output in confirmed:
+        candidates = selection.expected_by_chat.get(output.chat_id, ())
+        messages = messages_by_chat.get(output.chat_id)
+        if not messages:
+            residual.append(output)
+            continue
+        exact = next(
+            (
+                expected
+                for expected in candidates
+                if any(
+                    source_id in output.source_message_ids
+                    and ConfirmedDecisionEvaluator._quote_matches_message(output, source_id, messages)
+                    for source_id in ConfirmedDecisionEvaluator._expected_source_ids(expected)
+                )
+                and (output.chat_id, expected.get("msg_id", "")) not in matched_expected
+            ),
+            None,
+        )
+        if exact is not None:
+            matched_expected.add((output.chat_id, exact["msg_id"]))
+            continue
+        residual.append(output)
+    return residual
 
 
 async def main() -> int:
@@ -140,14 +189,16 @@ async def main() -> int:
         "schema_version": "",
         "cache_keys": [],
     }
-    evaluator = ConfirmedDecisionEvaluator()
+    evaluator: ConfirmedDecisionEvaluator
 
     if args.adjudicate:
         judge = LLMDecisionAdjudicator(provider)
         adjudicator_report, global_adjudicator = await _adjudicate_decisions(
-            judge, result.decisions, selection, evaluator,
+            judge, result.decisions, selection,
         )
         evaluator = ConfirmedDecisionEvaluator(global_adjudicator=global_adjudicator)
+    else:
+        evaluator = ConfirmedDecisionEvaluator()
 
     outcome = evaluator.evaluate(result.decisions, selection)
     chat_metrics = {}
