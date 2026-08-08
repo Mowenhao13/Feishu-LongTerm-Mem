@@ -11,32 +11,23 @@ import subprocess
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Callable
 import sys
 
 REPO = Path(__file__).resolve().parents[2]
 if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
-from experiments.production_ablation.runner import run_variant
-from experiments.production_ablation.variants import build_variants
 from src.eval.confirmed_decision_adjudicator import LLMDecisionAdjudicator
-from src.eval.confirmed_decision_eval import ConfirmedDecisionEvaluator, DatasetSelection
-from src.extractors.memory_extractor import MemoryExtractor
-from src.extractors.simple_llm_extractor import SimpleLLMExtractor
-from src.model.llm_provider import LLMProvider
+from src.eval.confirmed_decision_eval import (
+    build_global_adjudication_groups,
+    ChatAssignment,
+    ConfirmedDecisionEvaluator,
+    DatasetSelection,
+    GlobalAdjudicationGroup,
+)
 
 DATASET = REPO / "eval_dataset" / "argusbot_v3"
-
-
-def _provider() -> LLMProvider:
-    return LLMProvider(
-        provider_type="openai",
-        base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
-        api_key=os.getenv("API_KEY", ""),
-        model=os.getenv("MODEL_NAME", "deepseek-chat"),
-        max_tokens=int(os.getenv("MAX_TOKENS", "8192")),
-        enable_stats=False,
-    )
 
 
 def _run_metadata(options: object, selection: DatasetSelection) -> dict:
@@ -53,7 +44,69 @@ def _run_metadata(options: object, selection: DatasetSelection) -> dict:
     }
 
 
+async def _adjudicate_decisions(
+    judge: LLMDecisionAdjudicator,
+    decisions: tuple,
+    selection: DatasetSelection,
+    evaluator: ConfirmedDecisionEvaluator,
+    cache: dict[str, ChatAssignment] | None = None,
+) -> tuple[dict, Callable[[GlobalAdjudicationGroup], ChatAssignment]]:
+    """Build global per-chat adjudication assignments and return report metadata + closure.
+
+    Optionally accepts an existing *cache* dict to reuse across invocations.
+    """
+    adjudicator_calls = 0
+    adjudicator_cache_hits = 0
+    adjudication_errors: list[str] = []
+    adjudication_cache: dict[str, ChatAssignment] = {} if cache is None else cache
+
+    for group in build_global_adjudication_groups(decisions, selection):
+        key = judge.cache_key(group)
+        if key in adjudication_cache:
+            adjudicator_cache_hits += 1
+            continue
+        try:
+            adjudication_cache[key] = await judge.adjudicate_chat(group)
+            adjudicator_calls += 1
+        except Exception as exc:
+            adjudication_errors.append(f"{group.chat_id}: {exc}")
+
+    def global_adjudicator(group: GlobalAdjudicationGroup) -> ChatAssignment:
+        key = judge.cache_key(group)
+        if key not in adjudication_cache:
+            raise RuntimeError(f"missing adjudication result for {group.chat_id}")
+        return adjudication_cache[key]
+
+    return {
+        "enabled": True,
+        "mode": "global_assignment_v1",
+        "calls": adjudicator_calls,
+        "cache_hits": adjudicator_cache_hits,
+        "errors": list(adjudication_errors),
+        "prompt_version": judge.PROMPT_VERSION,
+        "schema_version": judge.SCHEMA_VERSION,
+        "cache_keys": sorted(adjudication_cache),
+    }, global_adjudicator
+
+
 async def main() -> int:
+    # Heavy imports deferred to avoid circular/chain imports at module level
+    from experiments.production_ablation.runner import run_variant
+    from experiments.production_ablation.variants import build_variants
+    from src.extractors.memory_extractor import MemoryExtractor
+    from src.extractors.simple_llm_extractor import SimpleLLMExtractor
+    from src.model.llm_provider import LLMProvider
+
+    def _provider() -> LLMProvider:
+        return LLMProvider(
+            provider_type="openai",
+            base_url=os.getenv("BASE_URL", "https://api.deepseek.com"),
+            api_key=os.getenv("API_KEY", ""),
+            model=os.getenv("MODEL_NAME", "deepseek-chat"),
+            max_tokens=int(os.getenv("MAX_TOKENS", "8192")),
+            enable_stats=False,
+        )
+
     parser = argparse.ArgumentParser(description="Production-path ablation smoke runner")
     parser.add_argument("--variant", default="full", choices=sorted(build_variants()))
     parser.add_argument("--sample", type=int, default=3)
@@ -76,32 +129,27 @@ async def main() -> int:
     result = await run_variant(
         dict(selection.messages_by_chat), variant, run_dir, extractor, memory_extractor,
     )
+
+    adjudicator_report: dict = {
+        "enabled": False,
+        "mode": "disabled",
+        "calls": 0,
+        "cache_hits": 0,
+        "errors": [],
+        "prompt_version": "",
+        "schema_version": "",
+        "cache_keys": [],
+    }
     evaluator = ConfirmedDecisionEvaluator()
-    adjudicator = None
-    adjudication_errors: dict[tuple[str, str, tuple[str, ...], str], str] = {}
-    adjudication_cache: dict[tuple[str, str, tuple[str, ...], str], object] = {}
+
     if args.adjudicate:
         judge = LLMDecisionAdjudicator(provider)
-        for output in result.decisions:
-            if not output.is_confirmed:
-                continue
-            messages = selection.messages_by_chat.get(output.chat_id)
-            if messages is None or not evaluator._evidence_valid(output, messages):
-                continue
-            candidates = selection.expected_by_chat.get(output.chat_id, ())
-            key = (output.chat_id, output.title, output.source_message_ids, output.evidence_quote)
-            try:
-                adjudication_cache[key] = await judge.adjudicate(output, candidates, messages)
-            except Exception as exc:
-                adjudication_errors[key] = str(exc)
-        def adjudicator(output, expected, messages):
-            key = (output.chat_id, output.title, output.source_message_ids, output.evidence_quote)
-            if key in adjudication_errors:
-                raise RuntimeError(adjudication_errors[key])
-            if key not in adjudication_cache:
-                raise RuntimeError("missing adjudication result")
-            return adjudication_cache[key]
-    outcome = ConfirmedDecisionEvaluator(adjudicator=adjudicator).evaluate(result.decisions, selection)
+        adjudicator_report, global_adjudicator = await _adjudicate_decisions(
+            judge, result.decisions, selection, evaluator,
+        )
+        evaluator = ConfirmedDecisionEvaluator(global_adjudicator=global_adjudicator)
+
+    outcome = evaluator.evaluate(result.decisions, selection)
     chat_metrics = {}
     for chat_id in selection.chat_ids:
         rows = [row for row in outcome.details if row.get("chat_id") == chat_id]
@@ -144,7 +192,7 @@ async def main() -> int:
             "unmatched_expected": outcome.unmatched_expected,
         },
         "runner_errors": result.errors,
-        "adjudicator": {"enabled": args.adjudicate, "calls": len(adjudication_cache), "errors": {"|".join((key[0], key[1], ",".join(key[2]), key[3])): value for key, value in adjudication_errors.items()}},
+        "adjudicator": adjudicator_report,
     }
     run_dir.mkdir(parents=True, exist_ok=True)
     temp_path = run_dir / "report.json.tmp"
