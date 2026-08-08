@@ -1,11 +1,17 @@
 from pathlib import Path
 
+import pytest
+
 from src.eval.confirmed_decision_eval import (
     Adjudication,
     AdjudicationResult,
+    AssignmentRow,
+    ChatAssignment,
     ConfirmedDecisionEvaluator,
     DatasetSelection,
     EvidenceDecision,
+    GlobalAdjudicationGroup,
+    build_global_adjudication_groups,
 )
 
 
@@ -28,6 +34,18 @@ def _write_dataset(tmp_path: Path) -> Path:
         encoding="utf-8",
     )
     return dataset
+
+
+def _decision(chat_id: str, msg_id: str, evidence_quote: str, title: str) -> EvidenceDecision:
+    return EvidenceDecision(
+        chat_id=chat_id,
+        title=title,
+        summary=evidence_quote,
+        status="decided",
+        is_suggestion=False,
+        source_message_ids=(msg_id,),
+        evidence_quote=evidence_quote,
+    )
 
 
 def test_sample_filters_ground_truth_with_selected_chats(tmp_path: Path):
@@ -68,21 +86,79 @@ def test_cross_chat_or_fabricated_evidence_is_invalid(tmp_path: Path):
     assert outcome.evidence_invalid == 1
 
 
-def test_valid_extra_is_not_a_strict_false_positive(tmp_path: Path):
+def test_global_assignment_matches_outputs_independent_of_input_order(tmp_path: Path):
     selection = DatasetSelection.from_jsonl(_write_dataset(tmp_path), chat_ids=["a"])
-    output = EvidenceDecision(
-        chat_id="a", title="extra", summary="extra", status="decided", is_suggestion=False,
-        source_message_ids=("m3",), evidence_quote="确认每周执行备份演练。",
+    outputs = [
+        _decision("a", "m3", "确认每周执行备份演练。", "备份演练"),
+        _decision("a", "m3", "确认每周执行备份演练。", "备份计划"),
+    ]
+    assignment = ChatAssignment(
+        chat_id="a",
+        input_hash="fixture",
+        rows=(
+            AssignmentRow(0, Adjudication.VALID_EXTRA, reason="独立真实决定"),
+            AssignmentRow(1, Adjudication.MATCH_GT, "m1", "execution_commitment", True),
+        ),
     )
-    evaluator = ConfirmedDecisionEvaluator(
-        adjudicator=lambda output, expected, messages: AdjudicationResult(Adjudication.VALID_EXTRA),
+    evaluator = ConfirmedDecisionEvaluator(global_adjudicator=lambda *_: assignment)
+    forward = evaluator.evaluate(outputs, selection)
+    reverse = evaluator.evaluate(list(reversed(outputs)), selection)
+    assert (forward.strict_tp, forward.strict_fp, forward.valid_extra) == (1, 0, 1)
+    assert (reverse.strict_tp, reverse.strict_fp, reverse.valid_extra) == (1, 0, 1)
+
+
+def test_global_assignment_builder_groups_outputs_by_chat_and_order(tmp_path: Path):
+    selection = DatasetSelection.from_jsonl(_write_dataset(tmp_path), chat_ids=["a"])
+    outputs = [
+        _decision("a", "m3", "确认每周执行备份演练。", "备份演练"),
+        _decision("a", "m3", "确认每周执行备份演练。", "备份计划"),
+    ]
+    groups = build_global_adjudication_groups(outputs, selection)
+    assert len(groups) == 1
+    assert groups[0].chat_id == "a"
+    assert [output.title for output in groups[0].outputs] == ["备份演练", "备份计划"]
+
+
+@pytest.mark.parametrize("rows", [
+    (AssignmentRow(0, Adjudication.MATCH_GT, "unknown", "choice", True),),
+    (AssignmentRow(0, Adjudication.MATCH_GT, "m1", "choice", False),),
+    (
+        AssignmentRow(0, Adjudication.MATCH_GT, "m1", "choice", True),
+        AssignmentRow(1, Adjudication.MATCH_GT, "m1", "choice", True),
+    ),
+])
+def test_invalid_global_assignment_marks_evaluation_incomplete_without_fp(tmp_path: Path, rows):
+    selection = DatasetSelection.from_jsonl(_write_dataset(tmp_path), chat_ids=["a"])
+    outputs = [
+        EvidenceDecision("a", "备份演练", "每周执行备份演练", "decided", False, ("m3",), "确认每周执行备份演练。"),
+        EvidenceDecision("a", "备份计划", "制定备份计划", "decided", False, ("m3",), "确认每周执行备份演练。"),
+    ]
+    assignment = ChatAssignment("a", "fixture", rows)
+    evaluator = ConfirmedDecisionEvaluator(global_adjudicator=lambda received: assignment)
+    outcome = evaluator.evaluate(outputs, selection)
+    assert outcome.incomplete
+    assert outcome.strict_fp == 0
+    assert outcome.invalid == 0
+
+
+def test_valid_extra_row_is_not_counted_as_strict_false_positive(tmp_path: Path):
+    selection = DatasetSelection.from_jsonl(_write_dataset(tmp_path), chat_ids=["a"])
+    outputs = [
+        EvidenceDecision("a", "备份演练", "每周执行备份演练", "decided", False, ("m3",), "确认每周执行备份演练。"),
+        EvidenceDecision("a", "备份计划", "制定备份计划", "decided", False, ("m3",), "确认每周执行备份演练。"),
+    ]
+    assignment = ChatAssignment(
+        chat_id="a",
+        input_hash="fixture",
+        rows=(
+            AssignmentRow(0, Adjudication.VALID_EXTRA, reason="保留为真实补充"),
+            AssignmentRow(1, Adjudication.MATCH_GT, "m1", "execution_commitment", True),
+        ),
     )
-    outcome = evaluator.evaluate([output], selection)
+    outcome = ConfirmedDecisionEvaluator(global_adjudicator=lambda *_: assignment).evaluate(outputs, selection)
     assert outcome.valid_extra == 1
     assert outcome.strict_fp == 0
-    assert outcome.strict_fn == 1
-    assert outcome.details[0]["adjudication"] == "valid_extra"
-    assert outcome.unmatched_expected[0]["msg_id"] == "m1"
+    assert outcome.strict_tp == 1
 
 
 def test_adjudicator_failure_marks_run_incomplete(tmp_path: Path):

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
 from typing import Callable, Iterable, Mapping, Sequence
@@ -128,14 +128,48 @@ class AdjudicationResult:
     reason: str = ""
 
 
+@dataclass(frozen=True)
+class AssignmentRow:
+    output_index: int
+    outcome: Adjudication
+    matched_msg_id: str = ""
+    decision_kind: str = ""
+    core_equivalent: bool = False
+    polarity_compatible: bool = True
+    commitment_compatible: bool = True
+    material_qualifier_conflict: bool = False
+    reason: str = ""
+
+
+@dataclass(frozen=True)
+class ChatAssignment:
+    chat_id: str
+    input_hash: str
+    rows: tuple[AssignmentRow, ...]
+
+
+@dataclass(frozen=True)
+class GlobalAdjudicationGroup:
+    chat_id: str
+    outputs: tuple[EvidenceDecision, ...]
+    candidates: tuple[dict, ...]
+    messages: tuple[dict, ...]
+
+
 Adjudicator = Callable[[EvidenceDecision, Sequence[dict], Sequence[dict]], AdjudicationResult]
+GlobalAdjudicator = Callable[[GlobalAdjudicationGroup], ChatAssignment]
 
 
 class ConfirmedDecisionEvaluator:
     """Deterministic evidence-first scorer for confirmed decisions."""
 
-    def __init__(self, adjudicator: Adjudicator | None = None) -> None:
+    def __init__(
+        self,
+        adjudicator: Adjudicator | None = None,
+        global_adjudicator: GlobalAdjudicator | None = None,
+    ) -> None:
         self._adjudicator = adjudicator
+        self._global_adjudicator = global_adjudicator
 
     @staticmethod
     def _evidence_valid(decision: EvidenceDecision, messages: Sequence[dict]) -> bool:
@@ -157,6 +191,83 @@ class ConfirmedDecisionEvaluator:
             for message in messages
         )
 
+    @staticmethod
+    def _group_chat_id(outputs: Sequence[EvidenceDecision], candidates: Sequence[dict]) -> str:
+        if outputs:
+            return outputs[0].chat_id
+        if candidates:
+            return str(candidates[0].get("chat_id", ""))
+        return ""
+
+    @staticmethod
+    def _validate_assignment(
+        assignment: ChatAssignment,
+        outputs: Sequence[EvidenceDecision],
+        candidates: Sequence[dict],
+    ) -> dict[int, AssignmentRow]:
+        group_chat_id = ConfirmedDecisionEvaluator._group_chat_id(outputs, candidates)
+        if assignment.chat_id != group_chat_id:
+            raise ValueError("assignment chat_id does not match group chat")
+
+        rows_by_index: dict[int, AssignmentRow] = {}
+        seen_gt_ids: set[str] = set()
+        candidate_ids = {candidate.get("msg_id", "") for candidate in candidates if candidate.get("msg_id")}
+        expected_indices = set(range(len(outputs)))
+
+        for row in assignment.rows:
+            if row.output_index < 0 or row.output_index >= len(outputs):
+                raise ValueError("assignment output_index out of range")
+            if row.output_index in rows_by_index:
+                raise ValueError("assignment output_index repeated")
+            if row.outcome is Adjudication.MATCH_GT:
+                if not row.matched_msg_id:
+                    raise ValueError("assignment MATCH_GT row missing matched_msg_id")
+                if not row.core_equivalent:
+                    raise ValueError("assignment MATCH_GT row is not core equivalent")
+                if not row.polarity_compatible:
+                    raise ValueError("assignment MATCH_GT row has incompatible polarity")
+                if not row.commitment_compatible:
+                    raise ValueError("assignment MATCH_GT row has incompatible commitment")
+                if row.material_qualifier_conflict:
+                    raise ValueError("assignment MATCH_GT row has material qualifier conflict")
+                if row.matched_msg_id not in candidate_ids:
+                    raise ValueError("assignment MATCH_GT row references absent GT id")
+                if row.matched_msg_id in seen_gt_ids:
+                    raise ValueError("assignment MATCH_GT row references repeated GT id")
+                seen_gt_ids.add(row.matched_msg_id)
+            elif row.matched_msg_id:
+                raise ValueError("non-MATCH_GT row must not carry matched_msg_id")
+            rows_by_index[row.output_index] = row
+
+        if set(rows_by_index) != expected_indices:
+            raise ValueError("assignment must include exactly one row per output")
+        return rows_by_index
+
+    def _record_detail(
+        self,
+        details: list[dict[str, object]],
+        output: EvidenceDecision,
+        evidence_ok: bool,
+        adjudication: Adjudication,
+        reason: str,
+        matched_msg_id: str = "",
+        output_index: int | None = None,
+    ) -> None:
+        detail: dict[str, object] = {
+            "chat_id": output.chat_id,
+            "title": output.title,
+            "summary": output.summary,
+            "source_message_ids": output.source_message_ids,
+            "evidence_quote": output.evidence_quote,
+            "evidence_valid": evidence_ok,
+            "adjudication": adjudication.value,
+            "matched_msg_id": matched_msg_id,
+            "reason": reason,
+        }
+        if output_index is not None:
+            detail["output_index"] = output_index
+        details.append(detail)
+
     def evaluate(self, outputs: Sequence[EvidenceDecision], selection: DatasetSelection) -> EvaluationOutcome:
         confirmed = [output for output in outputs if output.is_confirmed]
         evidence_valid = 0
@@ -167,25 +278,7 @@ class ConfirmedDecisionEvaluator:
         strict_tp = 0
         errors: list[str] = []
         details: list[dict[str, object]] = []
-
-        def record_detail(
-            output: EvidenceDecision,
-            evidence_ok: bool,
-            adjudication: Adjudication,
-            reason: str,
-            matched_msg_id: str = ""
-        ) -> None:
-            details.append({
-                "chat_id": output.chat_id,
-                "title": output.title,
-                "summary": output.summary,
-                "source_message_ids": output.source_message_ids,
-                "evidence_quote": output.evidence_quote,
-                "evidence_valid": evidence_ok,
-                "adjudication": adjudication.value,
-                "matched_msg_id": matched_msg_id,
-                "reason": reason,
-            })
+        residual_outputs: list[EvidenceDecision] = []
 
         for output in confirmed:
             messages = selection.messages_by_chat.get(output.chat_id)
@@ -193,63 +286,143 @@ class ConfirmedDecisionEvaluator:
                 evidence_invalid += 1
                 invalid += 1
                 reason = "unknown_chat" if messages is None else "missing_or_invalid_evidence"
-                record_detail(output, False, Adjudication.INVALID, reason)
+                self._record_detail(details, output, False, Adjudication.INVALID, reason)
                 continue
+
             evidence_valid += 1
             candidates = selection.expected_by_chat.get(output.chat_id, ())
             exact = next(
-                (expected for expected in candidates
-                 if any(
-                     source_id in output.source_message_ids and self._quote_matches_message(output, source_id, messages)
-                     for source_id in self._expected_source_ids(expected)
-                 )
-                 and (output.chat_id, expected.get("msg_id", "")) not in matched_expected),
+                (
+                    expected
+                    for expected in candidates
+                    if any(
+                        source_id in output.source_message_ids and self._quote_matches_message(output, source_id, messages)
+                        for source_id in self._expected_source_ids(expected)
+                    )
+                    and (output.chat_id, expected.get("msg_id", "")) not in matched_expected
+                ),
                 None,
             )
             if exact is not None:
                 matched_expected.add((output.chat_id, exact["msg_id"]))
                 strict_tp += 1
-                record_detail(output, True, Adjudication.MATCH_GT, "exact_source_match", exact["msg_id"])
+                self._record_detail(details, output, True, Adjudication.MATCH_GT, "exact_source_match", exact["msg_id"])
                 continue
-            if self._adjudicator is None:
-                invalid += 1
-                record_detail(output, True, Adjudication.INVALID, "no_adjudicator_for_gt_extra")
-                continue
-            try:
-                result = self._adjudicator(output, candidates, messages)
-            except Exception as exc:  # adjudication errors make the full run incomplete
-                errors.append(f"{output.chat_id}:{output.title}: {exc}")
-                record_detail(output, True, Adjudication.EVALUATION_ERROR, str(exc))
-                continue
-            if result.outcome is Adjudication.MATCH_GT:
-                key = (output.chat_id, result.matched_msg_id)
-                if key in matched_expected:
+
+            residual_outputs.append(output)
+
+        if self._global_adjudicator is not None:
+            for group in build_global_adjudication_groups(residual_outputs, selection):
+                try:
+                    assignment = self._global_adjudicator(group)
+                    rows_by_index = self._validate_assignment(assignment, group.outputs, group.candidates)
+                except Exception as exc:
+                    errors.append(f"{group.chat_id}: {exc}")
+                    for output in group.outputs:
+                        self._record_detail(details, output, True, Adjudication.EVALUATION_ERROR, str(exc))
+                    continue
+
+                for output_index, output in enumerate(group.outputs):
+                    row = rows_by_index[output_index]
+                    if row.outcome is Adjudication.MATCH_GT:
+                        key = (group.chat_id, row.matched_msg_id)
+                        if key in matched_expected:
+                            invalid += 1
+                            self._record_detail(
+                                details,
+                                output,
+                                True,
+                                Adjudication.INVALID,
+                                row.reason or "duplicate_gt_match",
+                                row.matched_msg_id,
+                                output_index,
+                            )
+                            continue
+                        matched_expected.add(key)
+                        strict_tp += 1
+                        self._record_detail(
+                            details,
+                            output,
+                            True,
+                            Adjudication.MATCH_GT,
+                            row.reason or "global_match",
+                            row.matched_msg_id,
+                            output_index,
+                        )
+                    elif row.outcome is Adjudication.VALID_EXTRA:
+                        valid_extra += 1
+                        self._record_detail(
+                            details,
+                            output,
+                            True,
+                            Adjudication.VALID_EXTRA,
+                            row.reason or "global_valid_extra",
+                            output_index=output_index,
+                        )
+                    elif row.outcome is Adjudication.INVALID:
+                        invalid += 1
+                        self._record_detail(
+                            details,
+                            output,
+                            True,
+                            Adjudication.INVALID,
+                            row.reason or "global_invalid",
+                            output_index=output_index,
+                        )
+                    else:
+                        errors.append(f"{group.chat_id}: unsupported global adjudication")
+                        self._record_detail(
+                            details,
+                            output,
+                            True,
+                            Adjudication.EVALUATION_ERROR,
+                            "unsupported_global_adjudication",
+                            output_index=output_index,
+                        )
+        else:
+            for output in residual_outputs:
+                messages = selection.messages_by_chat.get(output.chat_id, ())
+                candidates = selection.expected_by_chat.get(output.chat_id, ())
+                if self._adjudicator is None:
                     invalid += 1
-                    record_detail(output, True, Adjudication.INVALID, result.reason or "duplicate_gt_match", result.matched_msg_id)
-                elif not result.matched_msg_id or not any(
-                    expected.get("msg_id") == result.matched_msg_id for expected in candidates
-                ):
-                    errors.append(f"{output.chat_id}:{output.title}: invalid semantic GT identity")
-                    record_detail(
-                        output,
-                        True,
-                        Adjudication.EVALUATION_ERROR,
-                        "invalid_semantic_gt_identity",
-                        result.matched_msg_id,
-                    )
+                    self._record_detail(details, output, True, Adjudication.INVALID, "no_adjudicator_for_gt_extra")
+                    continue
+                try:
+                    result = self._adjudicator(output, candidates, messages)
+                except Exception as exc:  # adjudication errors make the full run incomplete
+                    errors.append(f"{output.chat_id}:{output.title}: {exc}")
+                    self._record_detail(details, output, True, Adjudication.EVALUATION_ERROR, str(exc))
+                    continue
+                if result.outcome is Adjudication.MATCH_GT:
+                    key = (output.chat_id, result.matched_msg_id)
+                    if key in matched_expected:
+                        invalid += 1
+                        self._record_detail(details, output, True, Adjudication.INVALID, result.reason or "duplicate_gt_match", result.matched_msg_id)
+                    elif not result.matched_msg_id or not any(
+                        expected.get("msg_id") == result.matched_msg_id for expected in candidates
+                    ):
+                        errors.append(f"{output.chat_id}:{output.title}: invalid semantic GT identity")
+                        self._record_detail(
+                            details,
+                            output,
+                            True,
+                            Adjudication.EVALUATION_ERROR,
+                            "invalid_semantic_gt_identity",
+                            result.matched_msg_id,
+                        )
+                    else:
+                        matched_expected.add(key)
+                        strict_tp += 1
+                        self._record_detail(details, output, True, Adjudication.MATCH_GT, result.reason or "semantic_match", result.matched_msg_id)
+                elif result.outcome is Adjudication.VALID_EXTRA:
+                    valid_extra += 1
+                    self._record_detail(details, output, True, Adjudication.VALID_EXTRA, result.reason or "adjudicated_valid_extra")
+                elif result.outcome is Adjudication.INVALID:
+                    invalid += 1
+                    self._record_detail(details, output, True, Adjudication.INVALID, result.reason or "adjudicated_invalid")
                 else:
-                    matched_expected.add(key)
-                    strict_tp += 1
-                    record_detail(output, True, Adjudication.MATCH_GT, result.reason or "semantic_match", result.matched_msg_id)
-            elif result.outcome is Adjudication.VALID_EXTRA:
-                valid_extra += 1
-                record_detail(output, True, Adjudication.VALID_EXTRA, result.reason or "adjudicated_valid_extra")
-            elif result.outcome is Adjudication.INVALID:
-                invalid += 1
-                record_detail(output, True, Adjudication.INVALID, result.reason or "adjudicated_invalid")
-            else:
-                errors.append(f"{output.chat_id}:{output.title}: evaluation error")
-                record_detail(output, True, Adjudication.EVALUATION_ERROR, "adjudicator_returned_error")
+                    errors.append(f"{output.chat_id}:{output.title}: evaluation error")
+                    self._record_detail(details, output, True, Adjudication.EVALUATION_ERROR, "adjudicator_returned_error")
 
         strict_fn = selection.expected_count - strict_tp
         strict_fp = invalid
@@ -271,3 +444,30 @@ class ConfirmedDecisionEvaluator:
             details=tuple(details),
             unmatched_expected=unmatched_expected,
         )
+
+
+def build_global_adjudication_groups(
+    outputs: Sequence[EvidenceDecision],
+    selection: DatasetSelection,
+) -> tuple[GlobalAdjudicationGroup, ...]:
+    grouped: dict[str, list[EvidenceDecision]] = {}
+    chat_order: list[str] = []
+    for output in outputs:
+        messages = selection.messages_by_chat.get(output.chat_id)
+        if messages is None or not output.is_confirmed or not ConfirmedDecisionEvaluator._evidence_valid(output, messages):
+            continue
+        if output.chat_id not in grouped:
+            grouped[output.chat_id] = []
+            chat_order.append(output.chat_id)
+        grouped[output.chat_id].append(output)
+
+    return tuple(
+        GlobalAdjudicationGroup(
+            chat_id=chat_id,
+            outputs=tuple(grouped[chat_id]),
+            candidates=tuple(selection.expected_by_chat.get(chat_id, ())),
+            messages=tuple(selection.messages_by_chat.get(chat_id, ())),
+        )
+        for chat_id in chat_order
+    )
+
