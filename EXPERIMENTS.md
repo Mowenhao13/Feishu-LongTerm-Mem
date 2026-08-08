@@ -787,3 +787,20 @@ uv run python experiments/production_ablation/chunked.py \\
 **Interpretation**: 109 of 298 evidence-valid outputs were adjudicated `valid_extra`, which explains why strict precision/F1 remains lower than the raw extraction quality might suggest. The full run is complete and healthy, but this is still one stochastic run of the `full` variant; it is not enough to choose a production default. The next comparison is the same 70-chat checkpointed run for `no_entity_context` and `no_memory_extractor`, followed by repeated runs for the strongest variant.
 
 **Artifact**: `experiments/production_ablation/chunked_runs/full_70_adjudicate_20260807_s3/aggregate.json`.
+
+---
+
+## 2026-08-08 — Global semantic evaluator: calibration tooling and performance manifests
+
+**Scope**: Added frozen-output evaluator calibration harness (`calibrate_evaluator.py`), label seed file (`calibration_labels.json`), and balanced 35/35 dev/holdout performance manifests (`performance_manifest.py` + `performance_dev_35.json` + `performance_holdout_35.json`). Also added the global semantic decision matcher (`confirmed_decision_adjudicator.py` with per-chat `adjudicate_chat`) and integrated per-chat global adjudication into the production runner (`run.py`).
+
+**What changed**:
+1. `confirmed_decision_eval.py` — `AssignmentRow`/`ChatAssignment`/`GlobalAdjudicationGroup` domain, `build_global_adjudication_groups()`, `GlobalAdjudicator` callback contract.
+2. `confirmed_decision_adjudicator.py` — `LLMDecisionAdjudicator` with `PROMPT_VERSION="global-assignment-v1"`, `SCHEMA_VERSION="global-assignment-v1"`, stable normalized payload, versioned cache key, Chinese one-to-one global assignment prompt, `temp=0`/`response_format=json_object`, strict parser.
+3. `run.py` — `_adjudicate_decisions()` helper with in-memory per-chat cache, extended report metadata (`calls`, `cache_hits`, `errors`, `prompt_version`, `schema_version`, `cache_keys`).
+4. `performance_manifest.py` — Balanced 35-chat dev / 35-chat holdout selection by stratified domain sampling. Generated manifests verified against the `full_70_adjudicate_20260807_s3` aggregate.
+5. `calibrate_evaluator.py` — Frozen-output calibration: `load_final_outputs()` (only `chunk_*/report.json`), `score_calibration()` (per-class confusion matrix, `valid_extra` distinct from `invalid`), `run_calibration()` (dry-run, unreviewed-label guard, repeat agreement). Seed `calibration_labels.json` with `reviewed: false`.
+
+**No extractor comparison, no production-default decision, no quality improvement claim.** The calibration harness requires human-reviewed labels before it can produce meaningful agreement/confusion metrics. The evaluator changes (Tasks 1-3) replace per-output lexical-overlap adjudication with validated per-chat global semantic assignment but do not change production defaults or extraction behavior.
+
+**Focused tests**: 29/29 passing across Task 1-5 test modules.
