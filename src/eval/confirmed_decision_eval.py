@@ -74,6 +74,9 @@ class DatasetSelection:
         return sum(len(rows) for rows in self.expected_by_chat.values())
 
 
+CONFIRMABLE_DECISION_KINDS = frozenset({"choice", "conditional_choice", "execution_commitment", "policy_constraint"})
+
+
 @dataclass(frozen=True)
 class EvidenceDecision:
     chat_id: str
@@ -83,9 +86,12 @@ class EvidenceDecision:
     is_suggestion: bool
     source_message_ids: tuple[str, ...] = ()
     evidence_quote: str = ""
+    decision_kind: str = "choice"
 
     @property
     def is_confirmed(self) -> bool:
+        if self.decision_kind not in CONFIRMABLE_DECISION_KINDS:
+            return False
         return not self.is_suggestion and self.status == "decided"
 
 

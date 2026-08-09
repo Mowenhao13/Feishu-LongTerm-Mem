@@ -42,6 +42,7 @@ class SimpleLLMExtractor:
         self._llm = llm_provider
         self._trace_id: Optional[str] = None
         self.last_error: Optional[str] = None
+        self.last_extraction_stats: Optional[dict] = None
         self._confidence_threshold = 0.70  # 提高置信度阈值，只保留高置信度决策
         logger.info("[LLM Extractor] Initialized with provider=%s, confidence_threshold=%.2f", 
                     type(llm_provider).__name__, self._confidence_threshold)
@@ -346,12 +347,32 @@ class SimpleLLMExtractor:
 
             # Apply same confidence calculation as extract_decision
             extracted = []
+            stats = {
+                "total_candidates": len(decisions),
+                "confidence_filtered": 0,
+                "status_discussion_filtered": 0,
+                "evidence_attachment_dropped": 0,
+                "confirmed_output": 0,
+            }
             for d in decisions:
-                base_conf = d.get("confidence", 0.80)
+                kind = str(d.get("decision_kind", "choice"))
+                title = d.get("title", "")
+
+                # Typed filtering: status and discussion are never decisions
+                if kind in ("status", "discussion"):
+                    stats["status_discussion_filtered"] += 1
+                    logger.info("[LLM Extractor] extract_with_context: Filtered %s decision: %s",
+                                kind, title)
+                    continue
+
+                # Suggestion kind forces is_suggestion=True
                 is_sug = bool(d.get("is_suggestion", False))
+                if kind == "suggestion":
+                    is_sug = True
+
+                base_conf = d.get("confidence", 0.80)
                 impact = d.get("impact_level", "minor")
                 has_executor = bool(d.get("executor"))
-                title = d.get("title", "")
 
                 conf = base_conf
                 if is_sug:
@@ -375,6 +396,7 @@ class SimpleLLMExtractor:
                         "status": d.get("status", "decided"),
                         "impact_level": impact,
                         "is_suggestion": is_sug,
+                        "decision_kind": kind,
                         "parent_id": d.get("parent_id", ""),
                         "confidence": conf,
                         "rationale": d.get("rationale", ""),
@@ -387,18 +409,23 @@ class SimpleLLMExtractor:
                     }
                     if self._attach_evidence(item, content):
                         extracted.append(item)
+                        stats["confirmed_output"] += 1
                     else:
+                        stats["evidence_attachment_dropped"] += 1
                         logger.info(
                             "[LLM Extractor] extract_with_context: Skipping decision without exact evidence: %s",
                             title,
                         )
                 else:
+                    stats["confidence_filtered"] += 1
                     logger.info("[LLM Extractor] extract_with_context: Skipping decision "
                                 "(confidence=%.2f): %s", conf, title)
 
             extracted = self._add_execution_acknowledgements(extracted, content)
-            logger.info("[LLM Extractor] extract_with_context: Extracted %d decisions",
-                        len(extracted))
+            stats["confirmed_output"] = len(extracted)
+            self.last_extraction_stats = stats
+            logger.info("[LLM Extractor] extract_with_context: Extracted %d decisions "
+                        "(stats: %s)", len(extracted), stats)
             return extracted if extracted else None
 
         except json.JSONDecodeError as e:

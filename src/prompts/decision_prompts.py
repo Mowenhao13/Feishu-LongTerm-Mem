@@ -260,6 +260,7 @@ Return JSON:
             "content": "决定使用PostgreSQL替代MySQL，先并行运行再切换",
             "topic": "数据库选型",
             "confidence": 0.90,
+            "decision_kind": "choice",
             "rationale": "团队达成共识，有明确执行计划",
             "proposer": "张三",
             "executor": "李四",
@@ -274,6 +275,7 @@ Return JSON:
             "content": "有人提出key命名规范，但还在讨论中",
             "topic": "Redis缓存规范",
             "confidence": 0.75,
+            "decision_kind": "suggestion",
             "rationale": "具体建议但尚未确认",
             "proposer": "王五",
             "executor": null,
@@ -285,6 +287,31 @@ Return JSON:
     ],
     "reasoning": "Brief explanation"
 }}
+```
+
+## decision_kind taxonomy
+
+Every extracted item MUST have one `decision_kind`:
+- `choice`: a clear technology/approach/plan selection that was adopted
+- `conditional_choice`: a choice with material conditions, scope, timeline, or rollout stage
+- `execution_commitment`: a concrete promise to act ("好，我明天开始搭建", "我来负责")
+- `policy_constraint`: a rule, standard, or compliance requirement adopted by the team
+- `suggestion`: a proposal not yet confirmed — set `is_suggestion: true`
+- `status`: a progress update, completion report, or current-state description — do NOT extract
+- `discussion`: open-ended brainstorming, questions, or deliberation — do NOT extract
+
+## Compound decisions
+
+An atomic decision is one proposition that is adopted, rejected, constrained, or committed to.
+Choice + conditions + rollout + ownership + deadline remain ONE output when they jointly define
+that proposition. Split into separate items ONLY when the clauses can be independently executed
+or reversed.
+
+## Context boundaries
+
+Entity context, project context, history, and existing decisions may resolve names, normalize
+terminology, and identify duplicates. They CANNOT provide evidence for new decisions. The
+conversation must independently support every output through cited source messages.
 ```
 
 **Confidence guidelines** — Vary confidence based on how definitive the decision is:
