@@ -228,3 +228,88 @@ class TestRunCalibration:
             or "dry_run" in messages.lower()
             or "labels" in messages.lower()
         )
+
+
+def test_calibration_accepts_complete_independent_reference_labels():
+    from experiments.production_ablation.calibrate_evaluator import validate_independent_reference_labels
+
+    labels = {
+        "label_source": "independent_llm",
+        "reference_model": "reference-model",
+        "reference_prompt_version": "reference-assignment-v1",
+        "reference_schema_version": "reference-assignment-v1",
+        "manifest_sha256": "abc",
+        "source_reports_sha256": "def",
+        "dataset_hash": "ghi",
+        "selected_chat_ids": ["ai_ml_platform_channel_0"],
+        "expected_output_count": 3,
+        "rows": [
+            {"output_normalized": "a", "classification": "match_gt", "matched_msg_id": "g1"},
+            {"output_normalized": "b", "classification": "valid_extra", "matched_msg_id": ""},
+            {"output_normalized": "c", "classification": "invalid", "matched_msg_id": ""},
+        ],
+        "unresolved": [],
+        "coverage": {
+            "ready": True,
+            "classes": {"match_gt": 1, "valid_extra": 1, "invalid": 1},
+            "domains": {
+                "ai_ml_platform": 1,
+                "backend_arch": 1,
+                "cloud_infra": 1,
+                "data_platform": 1,
+                "frontend_mobile": 1,
+                "sec_compliance": 1,
+                "sre_reliability": 1,
+            },
+            "failure_slices": {"lexical_veto": 1, "unknown_gt": 1},
+        },
+    }
+
+    assert len(validate_independent_reference_labels(labels)) == 3
+
+
+def test_calibration_rejects_unresolved_independent_labels():
+    from experiments.production_ablation.calibrate_evaluator import validate_independent_reference_labels
+
+    with pytest.raises(ValueError, match="unresolved"):
+        validate_independent_reference_labels({
+            "label_source": "independent_llm", "rows": [],
+            "unresolved": [{"output_normalized": "x"}], "coverage": {"ready": False},
+            "reference_model": "reference-model",
+            "reference_prompt_version": "reference-assignment-v1",
+            "reference_schema_version": "reference-assignment-v1",
+            "manifest_sha256": "abc",
+            "source_reports_sha256": "def",
+            "dataset_hash": "ghi",
+            "selected_chat_ids": [],
+            "expected_output_count": 0,
+        })
+
+
+def test_freeze_gate_requires_precision_agreement_and_zero_errors():
+    from experiments.production_ablation.calibrate_evaluator import evaluate_freeze_gate
+
+    passed = evaluate_freeze_gate({
+        "per_class": {
+            "match_gt": {"precision": 0.95},
+            "valid_extra": {"precision": 0.90},
+        },
+        "agreement": 0.98,
+        "structural_violations": 0,
+        "evaluator_errors": 0,
+        "reference_ready": True,
+    })
+    assert passed["evaluator_frozen"] is True
+
+    failed = evaluate_freeze_gate({
+        "per_class": {
+            "match_gt": {"precision": 0.15},
+            "valid_extra": {"precision": 0.90},
+        },
+        "agreement": 0.98,
+        "structural_violations": 0,
+        "evaluator_errors": 0,
+        "reference_ready": True,
+    })
+    assert failed["evaluator_frozen"] is False
+    assert "match_gt_precision" in failed["failed_gates"]
