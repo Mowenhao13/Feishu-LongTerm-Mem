@@ -37,5 +37,7 @@
   - [x] Extraction stats tracking (last_extraction_stats)
   - [x] 17 new tests + 32 existing tests pass
   - [x] Pipeline A/B: no regression
+  - [x] Dev-35 smoke test: 35/35 episodes extracted with decision_kind
+    (adjudication phase interrupted by server disconnect; extraction pipeline validated)
 - [ ] 换强 judge model 后恢复 freeze gate 严格阈值（match_gt >= 0.95, valid_extra >= 0.90）
 - [ ] 第 3 切片：实验执行与 promotion evidence
