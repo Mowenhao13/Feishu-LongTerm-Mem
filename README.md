@@ -1,84 +1,140 @@
 # Feishu-LongTerm-Mem
 
+飞书长期记忆系统 — 从团队聊天会话中提取结构化知识，构建带本体约束的知识图谱，提供多模态决策检索。
 
+## 架构概览
 
-## 核心架构
-hi 
 ```
-cd existing_repo
-git remote add origin https://git.sysu.edu.cn/Halllo-max/feishu-longterm-mem.git
-git branch -M master
-git push -uf origin master
+飞书消息 / 文档
+    │
+    ▼
+┌──────────────────────────────┐
+│         Pipeline Engine       │  决策管道引擎
+│  (mutation → dedup → merge)   │
+└──────┬───────────────────────┘
+       │
+       ▼
+┌──────────────────────────────┐
+│       Memory Extractor       │  记忆提取（两阶段）
+│  Stage 1: 实体/关系/事实      │  ← 受本体(Ontology)约束
+│  Stage 2: 带实体上下文的决策   │
+└──────┬───────────────────────┘
+       ▼
+┌──────────────────────────────┐
+│    Neo4j Graph Database      │  知识图谱：实体节点、决策节点
+│  (Entity / Decision / Episode)│  关系: MENTIONS, BELONGS_TO,
+│                               │        REFERENCES, RELATES, …
+└──────┬───────────────────────┘
+       ▼
+┌──────────────────────────────┐
+│   Hierarchical Retriever     │  层次化检索（RRF 融合）
+│  EntityGraph + Vector + BM25 │  Neo4j 图信号 + 向量相似度
+└──────────────────────────────┘
 ```
 
-## Integrate with your tools
+## 架构定位：Ontology-Guided Knowledge Graph（本体约束的知识图谱）
 
-* [Set up project integrations](https://git.sysu.edu.cn/Halllo-max/feishu-longterm-mem/-/settings/integrations)
+本项目**采用本体（Ontology）约束知识图谱**的混合架构，而非纯粹的简单知识图谱或完整形式化本体：
 
-## Collaborate with your team
+| 维度 | 本项目的定位 |
+|------|-------------|
+| **实体类型** | 由 YAML 定义（5 种：Person, Technology, Project, Service, Concept），每个类型带属性 schema |
+| **关系类型** | 由 YAML 定义（Person→Technology: USES/ADOPTED/…，Person→Person: REPORTS_TO/…，等 9 组关系约束） |
+| **约束检查** | 运行时可校验实体/关系是否符合类型定义和属性枚举 |
+| **存储** | Neo4j 图数据库，按类型标签查询（:Entity, :Decision, :Episode, :Document, :Topic） |
+| **动态本体** | 支持热加载 + YAML 链式合并（默认 + 自定义扩展） |
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### 与纯知识图谱的区别
 
-## Test and Deploy
+- **纯知识图谱**（如标准 Neo4j schema-lite）：只有节点标签和关系类型，不约束属性和关系合法性
+- **本项目**的 Ontology Manager + YAML 本体定义提供了**运行时约束**和**LLM prompt 注入**，确保提取的实体和关系符合领域模型
 
-Use the built-in continuous integration in GitLab.
+### 与完整形式化本体的区别
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+- **完整形式化本体**（如 OWL/RDF）：支持推理、约束传播、一致性检查
+- **本项目**的 Ontology 更轻量：只有实体类型定义和关系约束，不做推理，定位为**LLM 提取的 Schema 约束**
 
-***
+### 实体类型
 
-# Editing this README
+| 类型 | 描述 | 关键属性 |
+|------|------|---------|
+| `Person` | 团队成员 | role |
+| `Technology` | 技术栈/工具/框架 | version, category (database/framework/language/tool/platform/service/library) |
+| `Project` | 项目/模块/子系统 | status (active/planning/evaluating/deprecated) |
+| `Service` | 服务/微服务实例 | type, provider |
+| `Concept` | 抽象概念/架构模式 | description |
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### 关系类型
 
-## Suggestions for a good README
+| 源 → 目标 | 关系 |
+|-----------|------|
+| Person → Technology | USES, ADOPTED, RECOMMENDS, REJECTED, EVALUATING |
+| Person → Project | OWNS, CONTRIBUTES_TO, DECIDES, REVIEWS |
+| Person → Person | REPORTS_TO, COLLABORATES_WITH, MENTORS |
+| Project → Technology | USES_TECHNOLOGY, EVALUATING, MIGRATING_TO, DEPENDS_ON |
+| Technology → Technology | DEPENDS_ON, REPLACES, COMPATIBLE_WITH, INCOMPATIBLE_WITH |
+| Service → Service | DEPENDS_ON, COMMUNICATES_WITH |
+| 任意 → 任意 | ASSOCIATED_WITH, SAME_AS |
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+本体定义位于 `configs/ontology/default.yaml`，用户可通过 `configs/ontology/custom.yaml` 扩展。
 
-## Name
-Choose a self-explaining name for your project.
+## 核心组件
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### 1. 记忆提取管道（两阶段）
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+- **Stage 1 — MemoryExtractor** (`src/extractors/memory_extractor.py`)：单次 LLM 调用提取实体、关系和事实，受 Ontology 约束
+- **Stage 2 — Decision Extractor** (`src/extractors/simple_llm_extractor.py`)：基于实体上下文提取决策，输出带 evidence 引用的 `DecisionNode`
+- 支持 `decision_kind` 类型过滤（choice / execution_commitment / policy_constraint / suggestion / status / discussion 等），过滤非决策输出
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### 2. Pipeline Engine（`src/core/engine.py`）
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+- 接收 mutation（决策变化），执行去重（LLM dedup）、合并、冲突检测
+- 支持实时推送（Card Push / MCP Bridge）
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### 3. Neo4j 图存储（`src/storage/neo4j_client.py`）
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+- **节点类型**: Entity, Decision, Episode, Document, Topic
+- **关系类型**: MENTIONS, BELONGS_TO, REFERENCES, RELATES, SUPERSEDES, DEPENDS_ON, CONFLICTS_WITH, REFINES, OBJECTION
+- 实体去重通过 `MERGE` 和唯一 name 约束实现
+- 实体→决策检索：`(Entity)←[:MENTIONS]-(Episode)-[:REFERENCES]->(Decision)`
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### 4. 层次化检索（`src/graph/retrieval.py`）
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- **3 路信号 RRF 融合**: Entity Graph（Neo4j 遍历）+ 向量相似度（Embedding）+ 稀疏检索（BM25）
+- 可选 Cohere/Dense reranker 精排
+- 结果按 topic 分组输出
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+### 5. 文档/项目检测与文件桥接（`src/detect/`）
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- 监听到文件变更时，自动触发 MemoryExtractor 提取实体
+- 支持文档→实体→决策的跨模态关联
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+### 6. 评估框架
 
-## License
-For open source projects, say how it is licensed.
+- 三态 adjudicator（match_gt / valid_extra / invalid），区分"未命中 GT"和"有效但未标注"
+- 70 chat 全量消融实验，Phase 3 后 F1 从 0.566 提升至 0.755（+0.189）
+- A/B 测试脚本：`experiments/ablation/run_ablation.py`、`experiments/production_ablation/`
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## 快速开始
+
+```bash
+# 安装
+pip install -e .
+
+# 运行测试
+pytest tests/
+
+# 消融实验
+uv run python experiments/ablation/run_ablation.py --mode ablation --sample 3
+
+# 生产路径评估
+uv run python experiments/production_ablation/run.py --sample 3 --adjudicate
+```
+
+## 依赖
+
+- **LLM 提供方**: OpenAI / DeepSeek / Anthropic
+- **图数据库**: Neo4j (v5.28+)
+- **增量处理**: CocoIndex (memoization)
+- **向量嵌入**: OpenAI Embeddings / Qwen Embedding
+- **观测**: Langfuse
