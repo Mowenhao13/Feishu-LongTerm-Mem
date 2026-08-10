@@ -559,7 +559,7 @@ def parse_args() -> argparse.Namespace:
         description="Ablation / threshold-scan / Claude-Code 实验框架",
     )
     parser.add_argument(
-        "--mode", choices=["ablation", "threshold-scan", "claude_code"],
+        "--mode", choices=["ablation", "threshold-scan", "claude_code", "agentic_baseline"],
         required=True,
         help="实验模式",
     )
@@ -658,6 +658,19 @@ async def main() -> None:
             " ".join(sys.argv),
             report,
             notes="",
+        )
+
+    elif args.mode == "agentic_baseline":
+        from experiments.ablation.agentic_baseline import run_agentic_baseline
+        report = await run_agentic_baseline(
+            provider, episodes, gt_entries, messages,
+            sample=args.sample,
+        )
+        write_experiments_md(
+            "Agentic Baseline (3-tier)",
+            " ".join(sys.argv),
+            report,
+            notes="Tier1=single-shot, Tier2=structured-4step, Tier3=agentic-tool-loop",
         )
 
     # Save report
