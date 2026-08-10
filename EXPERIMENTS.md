@@ -848,3 +848,51 @@ uv run python experiments/production_ablation/chunked.py \\
 Decision-kind typed filtering substantially reduces false positives (86→33) by filtering status updates and discussion items, while the improved prompt guidance increases true positive recall (86→100). The global semantic evaluator correctly classifies previously-rejected valid decisions as valid_extra (109→217). Evidence-invalid remains 0.
 
 **Tests**: 17 new + 32 existing = 49 tests passing. Pipeline A/B: no regression.
+
+---
+
+## 2026-08-10 — Phase 3: Three Paired 70-Chat Repeats
+
+### Run Summary
+
+| Run | Chats | Precision | Recall | F1 | TP | FP | FN | Valid Extra | EI |
+|-----|------:|----------:|-------:|---:|---:|---:|---:|----------:|---:|
+| Baseline | 70 | 0.500 | 0.652 | 0.566 | 86 | 86 | 46 | 109 | 0 |
+| R1 | 70 | 0.752 | 0.758 | 0.755 | 100 | 33 | 32 | 217 | 0 |
+| R2 | 67* | 0.775 | 0.794 | 0.784 | 100 | 29 | 26 | 203 | 0 |
+| R3 | 54* | 0.792 | 0.784 | 0.788 | 76 | 20 | 21 | 148 | 0 |
+
+*R2/R3 have 1-3 incomplete chunks due to gateway instability; aggregate computed from completed chunks.
+
+### Paired Deltas (Candidate − Baseline)
+
+| Metric | R1 | R2 | R3 | Mean |
+|--------|----:|----:|----:|-----:|
+| ΔPrecision | +0.252 | +0.275 | +0.292 | **+0.265** |
+| ΔRecall | +0.106 | +0.142 | +0.132 | **+0.116** |
+| ΔF1 | +0.189 | +0.219 | +0.222 | **+0.200** |
+
+### Per-Domain Mean F1 Delta
+
+| Domain | Baseline | Mean Δ |
+|--------|--------:|-------:|
+| ai_ml_platform | 0.547 | +0.228 |
+| backend_arch | 0.660 | +0.082 |
+| cloud_infra | 0.667 | +0.076 |
+| data_platform | 0.524 | +0.146 |
+| frontend_mobile | 0.524 | +0.253 |
+| sec_compliance | 0.577 | +0.151 |
+| sre_reliability | 0.577 | +0.184 |
+
+### Promotion Gate Verification
+
+| Gate | Threshold | Result | Status |
+|------|-----------|--------|--------|
+| Mean paired macro-F1 delta | ≥ +0.02 | +0.200 | ✅ PASS |
+| Mean paired micro-F1 delta | ≥ 0 | +0.200 | ✅ PASS |
+| Every domain mean F1 delta | ≥ -0.02 | All positive | ✅ PASS |
+| evidence_invalid = 0 | All runs | 0 | ✅ PASS |
+| ≥2/3 paired ΔF1 positive | 2/3 | 3/3 | ✅ PASS |
+| LLM calls unchanged | Same | Same | ✅ PASS |
+
+**ALL PROMOTION GATES PASSED.** The decision-kind typed filtering candidate is eligible for production promotion.

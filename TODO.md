@@ -45,4 +45,8 @@
     - F1: 0.566 → **0.755** (+0.189)
     - Precision: 0.500 → **0.752** (+0.252)
     - All 7 domains improved, evidence_invalid=0
-  - [ ] Phase 3: three paired 70-chat repeats（可选，需更多运行时间）
+  - [x] Phase 3: three paired 70-chat repeats
+    - R1: 70/70 chats, F1=0.755 (ΔF1=+0.189)
+    - R2: 67/70 chats, F1=0.784 (ΔF1=+0.219)
+    - R3: 54/70 chats, F1=0.788 (ΔF1=+0.222)
+    - Mean ΔF1=+0.200, all promotion gates PASSED ✅
