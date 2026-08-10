@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "run_id": "77368f69697f45bdbacaaa7b416b17e3",
+    "created_at": "2026-08-07T15:40:17.413312+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "bd098f7b76b523cd3d951988420596aba947f98645bd11bf88761a6cb3b1ccef",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sec_compliance_channel_1",
+      "sec_compliance_channel_2",
+      "sec_compliance_channel_3"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "sec_compliance_channel_1": 2,
+      "sec_compliance_channel_2": 1,
+      "sec_compliance_channel_3": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 18,
+  "chat_metrics": {
+    "sec_compliance_channel_1": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "sec_compliance_channel_2": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "sec_compliance_channel_3": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    }
+  },
+  "metrics": {
+    "strict_tp": 5,
+    "strict_fp": 3,
+    "strict_fn": 0,
+    "valid_extra": 4,
+    "invalid": 3,
+    "evidence_valid": 12,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1": 0.7692307692307693,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sec_compliance_channel_1",
+        "title": "关键系统每周扫描，非关键系统两周一次",
+        "summary": "关键系统每周扫描，非关键系统两周一次",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "折中一下，对关键系统每周扫描，非关键系统两周一次",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_1",
+        "title": "动态阈值方案三周内上线",
+        "summary": "动态阈值方案三周内上线",
+        "source_message_ids": [
+          "m027",
+          "m030"
+        ],
+        "evidence_quote": "初步估计需要三周，包括开发和测试",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据显示方案已批准并计划三周内上线，是明确决策，但候选GT中无等价执行承诺或时间节点。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_1",
+        "title": "明天开kickoff会议",
+        "summary": "明天开kickoff会议",
+        "source_message_ids": [
+          "m031",
+          "m032"
+        ],
+        "evidence_quote": "明天我们开个kickoff会议",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m031",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_1",
+        "title": "收到，我准备一下基线数据的需求文档",
+        "summary": "收到，我准备一下基线数据的需求文档",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "收到，我准备一下基线数据的需求文档",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为确认收到并准备文档，属于状态回复，不包含决策或执行承诺，且与候选GT无等价关系。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_2",
+        "title": "用OpenSCAP做PoC，集成CI/CD",
+        "summary": "用OpenSCAP做PoC，集成CI/CD",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "我们达成一致：用OpenSCAP做PoC，集成CI/CD。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m011",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_2",
+        "title": "Frank准备PoC方案，下周出第一版",
+        "summary": "Frank准备PoC方案，下周出第一版",
+        "source_message_ids": [
+          "m010"
+        ],
+        "evidence_quote": "那我先准备PoC方案，下周出第一版。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Frank承诺准备PoC方案并给出时间节点，是明确执行决策，但GT候选是已达成使用OpenSCAP做PoC并集成CI/CD的具体方案，两者不等价，故为有效额外决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_2",
+        "title": "先做敏感数据发现，再定级",
+        "summary": "先做敏感数据发现，再定级",
+        "source_message_ids": [
+          "m026",
+          "m027"
+        ],
+        "evidence_quote": "我建议先做敏感数据发现，再定级。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确决策步骤（先敏感数据发现再定级），但候选GT仅涉及OpenSCAP PoC集成，两者决策内容不同，未被覆盖。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_3",
+        "title": "渗透测试周期方案先通过，工具和培训后续细化",
+        "summary": "渗透测试周期方案先通过，工具和培训后续细化",
+        "source_message_ids": [
+          "m019"
+        ],
+        "evidence_quote": "渗透测试周期方案我先通过，工具和培训后续细化",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m019",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sec_compliance_channel_3",
+        "title": "在安全SDLC中加入威胁建模环节，在需求阶段识别风险",
+        "summary": "在安全SDLC中加入威胁建模环节，在需求阶段识别风险",
+        "source_message_ids": [
+          "m009",
+          "m013"
+        ],
+        "evidence_quote": "关于安全SDLC，我建议加入威胁建模环节，在需求阶段就识别风险",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.24"
+      },
+      {
+        "chat_id": "sec_compliance_channel_3",
+        "title": "在CI/CD流水线中加入SAST安全门禁，不通过直接阻断构建",
+        "summary": "在CI/CD流水线中加入SAST安全门禁，不通过直接阻断构建",
+        "source_message_ids": [
+          "m011",
+          "m013"
+        ],
+        "evidence_quote": "我可以在流水线里加一个安全门禁，SAST扫描不通过直接阻断构建",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.25"
+      },
+      {
+        "chat_id": "sec_compliance_channel_3",
+        "title": "Dave更新项目计划，将威胁建模和SAST门禁纳入冲刺",
+        "summary": "Dave更新项目计划，将威胁建模和SAST门禁纳入冲刺",
+        "source_message_ids": [
+          "m015"
+        ],
+        "evidence_quote": "好的，我更新项目计划，把这两项纳入冲刺",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m013",
+        "reason": "Dave承诺更新项目计划纳入威胁建模和SAST门禁，与m013中‘威胁建模和SAST门禁都定下来’等价，均为确认纳入决策。"
+      },
+      {
+        "chat_id": "sec_compliance_channel_3",
+        "title": "安全SDLC流程文档更新后全员培训，Carol准备材料",
+        "summary": "安全SDLC流程文档更新后全员培训，Carol准备材料",
+        "source_message_ids": [
+          "m025"
+        ],
+        "evidence_quote": "安全SDLC流程的文档更新后，全员需要培训一次，Carol你准备材料",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求Carol准备培训材料，属于执行承诺，但候选GT仅涉及威胁建模、SAST门禁和渗透测试周期，未覆盖培训材料准备这一决策。"
+      }
+    ],
+    "unmatched_expected": []
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 12,
+    "errors": {}
+  }
+}

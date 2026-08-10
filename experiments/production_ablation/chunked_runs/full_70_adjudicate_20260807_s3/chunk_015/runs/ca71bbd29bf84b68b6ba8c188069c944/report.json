@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "run_id": "ca71bbd29bf84b68b6ba8c188069c944",
+    "created_at": "2026-08-07T15:31:51.192240+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "41eea72c9bdc30347ed66413509cee3c0dc3c37550b3519e3bcae8912a26a7c5",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "frontend_mobile_channel_5",
+      "frontend_mobile_channel_6",
+      "frontend_mobile_channel_7"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "frontend_mobile_channel_5": 2,
+      "frontend_mobile_channel_6": 2,
+      "frontend_mobile_channel_7": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 12,
+  "chat_metrics": {
+    "frontend_mobile_channel_5": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    "frontend_mobile_channel_6": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "frontend_mobile_channel_7": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    }
+  },
+  "metrics": {
+    "strict_tp": 5,
+    "strict_fp": 4,
+    "strict_fn": 1,
+    "valid_extra": 3,
+    "invalid": 4,
+    "evidence_valid": 12,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.5555555555555556,
+    "recall": 0.8333333333333334,
+    "f1": 0.6666666666666667,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "frontend_mobile_channel_5",
+        "title": "就定SWR+CDN方案，Eve负责加密部分",
+        "summary": "就定SWR+CDN方案，Eve负责加密部分",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "好，就定SWR+CDN方案，Eve你负责加密部分。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.29"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_5",
+        "title": "自建GrowthBook，Dave用Docker部署在K8s上",
+        "summary": "自建GrowthBook，Dave用Docker部署在K8s上",
+        "source_message_ids": [
+          "m030",
+          "m031",
+          "m032",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "言归正传，我倾向于自建GrowthBook，大家投票？",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.08"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_5",
+        "title": "没问题，我今晚开始搭环境。",
+        "summary": "没问题，我今晚开始搭环境。",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "没问题，我今晚开始搭环境。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m033",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_6",
+        "title": "采用分层缓存方案：CDN + Service Worker + 本地存储",
+        "summary": "采用分层缓存方案：CDN + Service Worker + 本地存储",
+        "source_message_ids": [
+          "m014",
+          "m015",
+          "m016"
+        ],
+        "evidence_quote": "缓存策略我倾向于分层方案：CDN + Service Worker + 本地存储。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m014",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_6",
+        "title": "试用GrowthBook两周再决定是否长期使用",
+        "summary": "试用GrowthBook两周再决定是否长期使用",
+        "source_message_ids": [
+          "m028",
+          "m029",
+          "m030"
+        ],
+        "evidence_quote": "A/B测试框架先试用GrowthBook两周，再决定是否长期使用。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_6",
+        "title": "建议Service Worker缓存敏感数据需加密存储",
+        "summary": "建议Service Worker缓存敏感数据需加密存储",
+        "source_message_ids": [
+          "m004"
+        ],
+        "evidence_quote": "Service Worker缓存的数据如果包含用户敏感信息，需要加密存储。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为建议性安全规范，并非具体决策或执行承诺，且未被任何候选GT覆盖"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_7",
+        "title": "采用Redis主缓存+本地二级缓存，版本号同步",
+        "summary": "采用Redis主缓存+本地二级缓存，版本号同步",
+        "source_message_ids": [
+          "m014"
+        ],
+        "evidence_quote": "好，那就定Redis主缓存+本地二级缓存，版本号同步。@David 出详细设计。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m014",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_7",
+        "title": "敏感数据使用AES加密后入缓存",
+        "summary": "敏感数据使用AES加密后入缓存",
+        "source_message_ids": [
+          "m006",
+          "m008"
+        ],
+        "evidence_quote": "对，敏感字段走AES加密后再入缓存。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺对敏感字段使用AES加密后入缓存，证据支持该决策，但候选GT均未覆盖此加密方案，属于未被GT覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_7",
+        "title": "自研A/B测试框架，基于Feature Flag实现",
+        "summary": "自研A/B测试框架，基于Feature Flag实现",
+        "source_message_ids": [
+          "m024",
+          "m025",
+          "m037"
+        ],
+        "evidence_quote": "框架决策先这样，细节在开发中迭代。@Eve 进度你盯着。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m037",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_7",
+        "title": "分流算法采用一致性哈希",
+        "summary": "分流算法采用一致性哈希",
+        "source_message_ids": [
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "分流算法建议用一致性哈希，保证用户稳定性。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为建议性讨论，无明确决策或执行承诺，属于噪声。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_7",
+        "title": "自研框架支持多维度分层分流",
+        "summary": "自研框架支持多维度分层分流",
+        "source_message_ids": [
+          "m039",
+          "m040"
+        ],
+        "evidence_quote": "我补充一下，框架需要支持多维度分流，比如按用户ID和地域。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了框架需支持多维度分层分流，证据中明确有设计承诺，但候选GT均不涉及此具体决策，属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_7",
+        "title": "自研框架部署在现有staging环境",
+        "summary": "自研框架部署在现有staging环境",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "不用，直接在现有staging环境上部署即可。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确指示在现有staging环境部署，证据充分，但未被任何GT候选覆盖。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "frontend_mobile_channel_5",
+        "msg_id": "m011",
+        "expected_topic": "构建缓存策略",
+        "expected_summary": "@Carol 简单，用现成库如SWR.js，一周搞定。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 12,
+    "errors": {}
+  }
+}

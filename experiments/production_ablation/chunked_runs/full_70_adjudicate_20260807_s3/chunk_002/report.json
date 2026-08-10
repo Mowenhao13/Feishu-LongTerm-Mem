@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "run_id": "8622271aef3e4633be3e460f457c65e5",
+    "created_at": "2026-08-07T14:49:43.325453+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "7404ae13e46980c8322427fed43a64429ce0c367632fc1dbccf412fbae0e03dc",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_6",
+      "ai_ml_platform_channel_7",
+      "ai_ml_platform_channel_8"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_6": 2,
+      "ai_ml_platform_channel_7": 2,
+      "ai_ml_platform_channel_8": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 11,
+  "chat_metrics": {
+    "ai_ml_platform_channel_6": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "ai_ml_platform_channel_7": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ai_ml_platform_channel_8": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    }
+  },
+  "metrics": {
+    "strict_tp": 5,
+    "strict_fp": 3,
+    "strict_fn": 1,
+    "valid_extra": 2,
+    "invalid": 3,
+    "evidence_valid": 10,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.625,
+    "recall": 0.8333333333333334,
+    "f1": 0.7142857142857143,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_6",
+        "title": "建议Redis Stream开启TLS加密",
+        "summary": "建议Redis Stream开启TLS加密",
+        "source_message_ids": [
+          "m020",
+          "m022"
+        ],
+        "evidence_quote": "如果用Redis Stream，TLS加密必须开启",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求开启TLS加密，证据中有确认配置SSL的承诺，但候选GT均未涉及TLS加密决策，属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_6",
+        "title": "漂移检测用KS检验，Charlie负责监控部署",
+        "summary": "漂移检测用KS检验，Charlie负责监控部署",
+        "source_message_ids": [
+          "m018",
+          "m010"
+        ],
+        "evidence_quote": "好，漂移检测就用KS检验，Charlie负责监控部署",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m018",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_6",
+        "title": "建议管道先做小流量试点，验证延迟",
+        "summary": "建议管道先做小流量试点，验证延迟",
+        "source_message_ids": [
+          "m023",
+          "m024"
+        ],
+        "evidence_quote": "我建议管道先做小流量试点，验证延迟",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为建议性讨论，未形成明确决策或执行承诺，且不被证据中的具体执行动作支持"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_6",
+        "title": "Alice要求明天看漂移检测dashboard",
+        "summary": "Alice要求明天看漂移检测dashboard",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "漂移检测的dashboard明天给我看",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确要求明天展示dashboard，但GT候选均未涉及此展示承诺，属于未被覆盖的有效执行决策。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_7",
+        "title": "采用Prefect + Feast + MLflow作为在线学习管道技术栈",
+        "summary": "采用Prefect + Feast + MLflow作为在线学习管道技术栈",
+        "source_message_ids": [
+          "m009",
+          "m013",
+          "m014",
+          "m015",
+          "m016"
+        ],
+        "evidence_quote": "看起来大家倾向 Prefect + Feast + MLflow。我建议进入决策阶段",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m015",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_7",
+        "title": "先PoC Evidently进行漂移检测，两周后评估",
+        "summary": "先PoC Evidently进行漂移检测，两周后评估",
+        "source_message_ids": [
+          "m029",
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "那么先 PoC Evidently，两周后评估是否满足需求",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m029",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_8",
+        "title": "采用Kafka做特征流缓冲，Bob牵头做POC",
+        "summary": "采用Kafka做特征流缓冲，Bob牵头做POC",
+        "source_message_ids": [
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "我决定采用Kafka方案，Bob你牵头做POC，两周内出结果",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m009",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_8",
+        "title": "数据流加密必须用TLS 1.3",
+        "summary": "数据流加密必须用TLS 1.3",
+        "source_message_ids": [
+          "m006",
+          "m007"
+        ],
+        "evidence_quote": "数据流加密必须用TLS 1.3，不然模型中间结果会泄露",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为安全规范要求，并非具体决策或执行承诺，且证据中仅提及Ingress已支持TLS 1.3，无新决策产生。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_8",
+        "title": "漂移检测先做试点，选推荐系统高流量模型跑两周",
+        "summary": "漂移检测先做试点，选推荐系统高流量模型跑两周",
+        "source_message_ids": [
+          "m020",
+          "m021"
+        ],
+        "evidence_quote": "漂移检测先做试点，选一个高流量模型跑两周看看",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m020",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_8",
+        "title": "新代码必须过安全扫描，加CI规则",
+        "summary": "新代码必须过安全扫描，加CI规则",
+        "source_message_ids": [
+          "m024"
+        ],
+        "evidence_quote": "新代码必须过安全扫描，我加条CI规则",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果与证据原文一致，但内容仅为建议性要求（加CI规则），缺乏具体执行承诺或决策动作，属于噪声"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "ai_ml_platform_channel_6",
+        "msg_id": "m025",
+        "expected_topic": "在线学习管道",
+        "expected_summary": "好，管道先用Redis Stream试点，下周一上线",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 10,
+    "errors": {}
+  }
+}

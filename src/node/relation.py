@@ -1,14 +1,13 @@
 """
 Hypergraph relation edge definitions for decision nodes.
 
-Based on structure.py Hyperedge / DecisionHyperedge design.
-Relations are modeled as hypergraph hyperedges: an edge connects
-a set of node IDs with typed roles, forming an n-ary semantic relation.
+Relations are modeled as direct edges between nodes:
+an edge connects source and target nodes with typed roles,
+forming binary semantic relations.
 
 Relates to:
 - src/node/types.py Relation (the outgoing link from a node to edge)
 - src/node/node.py DecisionNode.relations (list of Relation)
-- src/structure.py DecisionHyperedge, FactHyperedge, EpisodeHyperedge
 """
 
 from __future__ import annotations

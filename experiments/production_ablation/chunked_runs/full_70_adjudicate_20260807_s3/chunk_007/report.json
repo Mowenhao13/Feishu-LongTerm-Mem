@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "run_id": "b2680a7e691948b09d90cd11f95f2c69",
+    "created_at": "2026-08-07T14:57:47.410054+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "9eb50c416422841080f254290607f4c8a039a8ab4711bf713bb81ece1e99cec7",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "cloud_infra_channel_1",
+      "cloud_infra_channel_2",
+      "cloud_infra_channel_3"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "cloud_infra_channel_1": 1,
+      "cloud_infra_channel_2": 2,
+      "cloud_infra_channel_3": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 10,
+  "chat_metrics": {
+    "cloud_infra_channel_1": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    "cloud_infra_channel_2": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "cloud_infra_channel_3": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 5,
+    "strict_fp": 2,
+    "strict_fn": 0,
+    "valid_extra": 3,
+    "invalid": 2,
+    "evidence_valid": 10,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1": 0.8333333333333333,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "cloud_infra_channel_1",
+        "title": "下周一启动Istio灰度发布",
+        "summary": "下周一启动Istio灰度发布",
+        "source_message_ids": [
+          "m014",
+          "m015",
+          "m016"
+        ],
+        "evidence_quote": "那下周一启动灰度，大家没问题吧？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m014",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_1",
+        "title": "灰度期间启用审计日志监控异常访问",
+        "summary": "灰度期间启用审计日志监控异常访问",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "我建议在灰度期间启用审计日志，监控异常访问模式",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为建议，没有形成明确决策或执行承诺，属于讨论噪声"
+      },
+      {
+        "chat_id": "cloud_infra_channel_1",
+        "title": "Emma周五前出安全评估报告",
+        "summary": "Emma周五前出安全评估报告",
+        "source_message_ids": [
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "你能否出一份安全评估报告？我们下周再议",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选（下周一启动灰度）主题不同，证据显示Emma承诺周五前出报告，属于明确执行承诺，但不被任何GT覆盖。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_1",
+        "title": "没问题，我安排团队准备升级脚本",
+        "summary": "没问题，我安排团队准备升级脚本",
+        "source_message_ids": [
+          "m015"
+        ],
+        "evidence_quote": "没问题，我安排团队准备升级脚本",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为确认性回复，无具体决策或执行承诺，属于讨论噪声"
+      },
+      {
+        "chat_id": "cloud_infra_channel_2",
+        "title": "那折中选Nginx + ModSecurity，我负责加固配置。",
+        "summary": "那折中选Nginx + ModSecurity，我负责加固配置。",
+        "source_message_ids": [
+          "m011",
+          "m012"
+        ],
+        "evidence_quote": "那折中选Nginx + ModSecurity，我负责加固配置。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m011",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_2",
+        "title": "冷却时间设为10分钟，缩容冷却15分钟。",
+        "summary": "冷却时间设为10分钟，缩容冷却15分钟。",
+        "source_message_ids": [
+          "m029",
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "10分钟可以接受，但缩容需更保守，用15分钟。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确支持冷却10分钟、缩容15分钟的决策，但候选GT均为安全配置与上线观察，不覆盖此决策"
+      },
+      {
+        "chat_id": "cloud_infra_channel_2",
+        "title": "先按这个配置上线，观察一周再调整。",
+        "summary": "先按这个配置上线，观察一周再调整。",
+        "source_message_ids": [
+          "m032",
+          "m033"
+        ],
+        "evidence_quote": "行，先按这个配置上线，观察一周再调整。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m032",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_2",
+        "title": "我准备安全审计脚本配合部署。",
+        "summary": "我准备安全审计脚本配合部署。",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "同意，我准备安全审计脚本配合部署。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺安全审计脚本配合部署，但候选GT中无等价决策，属于额外有效决策。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_3",
+        "title": "那就定混合存储方案吧，Dave负责加密架构",
+        "summary": "那就定混合存储方案吧，Dave负责加密架构",
+        "source_message_ids": [
+          "m012"
+        ],
+        "evidence_quote": "那就定混合存储方案吧，Dave负责加密架构",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_3",
+        "title": "先试点动态优先级吧，看看效果再定",
+        "summary": "先试点动态优先级吧，看看效果再定",
+        "source_message_ids": [
+          "m026",
+          "m027"
+        ],
+        "evidence_quote": "先试点动态优先级吧，看看效果再定",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m026",
+        "reason": "exact_source_match"
+      }
+    ],
+    "unmatched_expected": []
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 10,
+    "errors": {}
+  }
+}

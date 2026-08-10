@@ -197,7 +197,10 @@ Analyze the following conversation and extract ALL valid decisions and suggestio
 1. A clear choice/plan/conclusion was reached
 2. Technical parameters were specified and confirmed (e.g. shard_count=256)
 3. Responsibility was assigned ("张三负责", "李四来改")
-4. Explicit agreement ("那就定", "确认用", "同意", "就这样", "OK", "好的")
+4. Explicit agreement ("那就定", "确认用", "同意", "就这样", "OK", "好的", "行，就按")
+5. A definitive statement about what WILL be done ("下周启动", "先做POC", "先试点")
+6. Someone proposes a concrete plan and it gets acknowledged/accepted
+7. An implementation acknowledgement that accepts the previous decision and commits to execution ("好，我明天开始搭建", "没问题，我今晚开始搭环境")
 
 # WHAT COUNTS AS A SUGGESTION (is_suggestion=true)?
 
@@ -217,6 +220,31 @@ Analyze the following conversation and extract ALL valid decisions and suggestio
 5. Pure questions without any proposed solution
 6. Simple information sharing without actionable items
 
+# DECISION SUMMARY STYLE GUIDELINES
+
+When writing the `title` (which doubles as `summary`), follow these patterns:
+
+**For confirmed decisions**, match the ground-truth style:
+- Start with the conclusion, then context: "那折中选Nginx + ModSecurity，我负责加固配置。"
+- Use action-oriented language: "下周一启动Istio灰度发布"
+- Include key technical details: "同意混合模型，订单用Raft，其他用最终一致性。"
+- Mention timeline when present: "先做POC，一个月后给结论。"
+- Format like: "那就定{{方案}}吧，{{执行人}}负责{{任务}}" or "同意{{方案}}，{{执行人}}出{{交付物}}"
+- Keep summaries CONCISE: 15-40 characters, focused on the decision outcome
+- **IMPORTANT**: Write the title/summary as a natural language statement of what was decided, NOT a label or agenda topic
+- For execution acknowledgements, include the concrete action and timeline from the acknowledgement, and cite the acknowledgement message itself.
+
+**Examples of good summary style**:
+- ✅ "那先做POC，一个月后给结论。"
+- ✅ "同意混合模型，订单用Raft，其他用最终一致性。"
+- ✅ "那就定GP3吧，成本可控且安全达标。决策了"
+- ✅ "下周一启动Istio灰度发布"
+- ✅ "行，先按这个配置上线，观察一周再调整。"
+- ✅ "好，我明天开始搭建。"
+- ❌ "技术选型" (too vague, no decision content)
+- ❌ "讨论预算问题" (not a decision)
+- ❌ "需要验证一下性能" (vague, no commitment)
+
 ---
 
 # OUTPUT FORMAT
@@ -230,12 +258,16 @@ Return JSON:
             "decision_id": "dec_1",
             "title": "采用PostgreSQL作为主数据库",
             "content": "决定使用PostgreSQL替代MySQL，先并行运行再切换",
+            "topic": "数据库选型",
             "confidence": 0.90,
+            "decision_kind": "choice",
             "rationale": "团队达成共识，有明确执行计划",
             "proposer": "张三",
             "executor": "李四",
             "impact_level": "major",
-            "is_suggestion": false
+            "is_suggestion": false,
+            "source_message_ids": ["m013"],
+            "evidence_quote": "决定使用PostgreSQL替代MySQL，先并行运行再切换"
         }},
         {{
             "decision_id": "dec_2",
@@ -243,15 +275,43 @@ Return JSON:
             "content": "有人提出key命名规范，但还在讨论中",
             "topic": "Redis缓存规范",
             "confidence": 0.75,
+            "decision_kind": "suggestion",
             "rationale": "具体建议但尚未确认",
             "proposer": "王五",
             "executor": null,
             "impact_level": "minor",
-            "is_suggestion": true
+            "is_suggestion": true,
+            "source_message_ids": ["m014"],
+            "evidence_quote": "有人提出key命名规范，但还在讨论中"
         }}
     ],
     "reasoning": "Brief explanation"
 }}
+```
+
+## decision_kind taxonomy
+
+Every extracted item MUST have one `decision_kind`:
+- `choice`: a clear technology/approach/plan selection that was adopted
+- `conditional_choice`: a choice with material conditions, scope, timeline, or rollout stage
+- `execution_commitment`: a concrete promise to act ("好，我明天开始搭建", "我来负责")
+- `policy_constraint`: a rule, standard, or compliance requirement adopted by the team
+- `suggestion`: a proposal not yet confirmed — set `is_suggestion: true`
+- `status`: a progress update, completion report, or current-state description — do NOT extract
+- `discussion`: open-ended brainstorming, questions, or deliberation — do NOT extract
+
+## Compound decisions
+
+An atomic decision is one proposition that is adopted, rejected, constrained, or committed to.
+Choice + conditions + rollout + ownership + deadline remain ONE output when they jointly define
+that proposition. Split into separate items ONLY when the clauses can be independently executed
+or reversed.
+
+## Context boundaries
+
+Entity context, project context, history, and existing decisions may resolve names, normalize
+terminology, and identify duplicates. They CANNOT provide evidence for new decisions. The
+conversation must independently support every output through cited source messages.
 ```
 
 **Confidence guidelines** — Vary confidence based on how definitive the decision is:
@@ -263,11 +323,16 @@ Return JSON:
 
 If no decisions found, return {{"has_decisions": false, "decisions": []}}
 
-**IMPORTANT**: 
+**IMPORTANT**:
 - Set `is_suggestion: true` for items that are proposed but not yet confirmed
 - Set `is_suggestion: false` for items that have been agreed upon or decided
 - Always extract a specific `topic` — DO NOT default to "general" unless truly cross-cutting
-- WHEN IN DOUBT, EXTRACT IT (don't miss important decisions!)
+- For every extracted item, include `source_message_ids` using the message IDs visible in the conversation and an exact `evidence_quote` from those messages.
+- `source_message_ids` MUST be a non-empty JSON array of exact IDs from the visible `[msg_id]` prefixes, for example `["m013"]`.
+- `evidence_quote` MUST be a contiguous exact substring copied from one of the cited original chat messages, excluding speaker names and excluding any context sections.
+- Do NOT cite project context, entity context, existing-decision context, or inferred rationale as evidence. Evidence must come only from original chat lines.
+- If you cannot identify an exact supporting `[msg_id]` and quote for a candidate, do not output that candidate.
+- WHEN IN DOUBT, skip the item unless it has exact source-message evidence.
 """
 
 

@@ -10,6 +10,7 @@ from src.prompts.decision_prompts import (
     DECISION_STATUS_LIFECYCLE,
     DEDUP_DECISION_PROMPT,
 )
+from src.prompts.memory_prompts import MEMORY_EXTRACTION_PROMPT
 from src.prompts.topic_prompts import (
     CLASSIFICATION_PROMPT,
     CROSS_TOPIC_DETECT_PROMPT,
@@ -48,6 +49,13 @@ class TestDecisionExtractionPrompts:
     def test_role_assignment_prompt_has_placeholders(self):
         assert "{topic_id}" in DECISION_ROLE_ASSIGNMENT_PROMPT
         assert "{decisions_text}" in DECISION_ROLE_ASSIGNMENT_PROMPT
+
+
+class TestMemoryExtractionPrompts:
+    def test_memory_prompt_caps_output_size(self):
+        assert "at most 20 entities" in MEMORY_EXTRACTION_PROMPT
+        assert "20 relationships" in MEMORY_EXTRACTION_PROMPT
+        assert "10 facts" in MEMORY_EXTRACTION_PROMPT
 
 
 class TestConflictAndDedupPrompts:

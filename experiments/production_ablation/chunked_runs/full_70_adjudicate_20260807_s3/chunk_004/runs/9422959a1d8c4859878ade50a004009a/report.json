@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "run_id": "9422959a1d8c4859878ade50a004009a",
+    "created_at": "2026-08-07T15:08:49.188210+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "4d43caa0ad63000b6d654ab069fcf32e7fa8f67e3252c32b277b682408cd99af",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "backend_arch_channel_2",
+      "backend_arch_channel_3",
+      "backend_arch_channel_4"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "backend_arch_channel_2": 2,
+      "backend_arch_channel_3": 1,
+      "backend_arch_channel_4": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 14,
+  "chat_metrics": {
+    "backend_arch_channel_2": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "backend_arch_channel_3": {
+      "expected": 1,
+      "tp": 0,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "backend_arch_channel_4": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 5,
+    "strict_fn": 2,
+    "valid_extra": 6,
+    "invalid": 5,
+    "evidence_valid": 14,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.375,
+    "recall": 0.6,
+    "f1": 0.4615384615384615,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "采用语义化版本，数据模型变更对应主版本号升级",
+        "summary": "采用语义化版本，数据模型变更对应主版本号升级",
+        "source_message_ids": [
+          "m004"
+        ],
+        "evidence_quote": "@Emma 数据模型变更应该对应主版本号升级，这样下游能感知断裂性变化。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确提出了'数据模型变更对应主版本号升级'的决策，证据充分，但候选GT中无等价决策（m007讨论安全更新，m018讨论POC选型），故为有效额外决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "旧版本最多支持18个月安全更新，超期强制升级",
+        "summary": "旧版本最多支持18个月安全更新，超期强制升级",
+        "source_message_ids": [
+          "m007",
+          "m008",
+          "m009"
+        ],
+        "evidence_quote": "那就定下来：语义化版本+18个月安全窗口，开始写规范文档。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m007",
+        "reason": "提取结果与m007中的决策提议完全一致，均为‘旧版本最多支持18个月安全更新，超期强制升级’，且m008和m009确认了该决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "Emma负责安全配置模板，Frank负责性能测试脚本",
+        "summary": "Emma负责安全配置模板，Frank负责性能测试脚本",
+        "source_message_ids": [
+          "m021"
+        ],
+        "evidence_quote": "没问题，我负责安全配置模板，你负责性能测试脚本。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: "
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "先做POC对比Consul和K8s原生在500节点下的表现",
+        "summary": "先做POC对比Consul和K8s原生在500节点下的表现",
+        "source_message_ids": [
+          "m018",
+          "m019"
+        ],
+        "evidence_quote": "那我们先做POC，对比Consul和K8s原生在500节点下的表现。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m018",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "必须加上版本废弃通知机制",
+        "summary": "必须加上版本废弃通知机制",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "所以版本废弃通知机制必须加上，不能突然下线。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求增加版本废弃通知机制，证据支持该决策，但候选GT中无等价决策（m007讨论升级策略，m018讨论POC对比），故为有效额外决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "API网关统一处理版本路由",
+        "summary": "API网关统一处理版本路由",
+        "source_message_ids": [
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "API网关要不要统一处理版本路由？这样后端更干净。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确建议网关统一处理版本路由，证据支持该决策，但候选GT中无等价决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "如果性能达标，下个迭代切到Consul",
+        "summary": "如果性能达标，下个迭代切到Consul",
+        "source_message_ids": [
+          "m029"
+        ],
+        "evidence_quote": "如果性能达标，我们就在下个迭代切到Consul。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个条件性决策承诺，但候选GT中无等价决策（m007是询问，m018是计划做POC，均未承诺切换）。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "下班前共享文档初稿，明天review安全checklist",
+        "summary": "下班前共享文档初稿，明天review安全checklist",
+        "source_message_ids": [
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "今天效率不错，两个话题都推进了。下班前把文档初稿共享出来。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: "
+      },
+      {
+        "chat_id": "backend_arch_channel_3",
+        "title": "建议增加IP白名单防止内部接口被滥用",
+        "summary": "建议增加IP白名单防止内部接口被滥用",
+        "source_message_ids": [
+          "m010",
+          "m011"
+        ],
+        "evidence_quote": "限流熔断策略我建议增加IP白名单，防止内部接口被滥用。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: m011"
+      },
+      {
+        "chat_id": "backend_arch_channel_3",
+        "title": "订单系统需要强一致性，日志可以最终一致",
+        "summary": "订单系统需要强一致性，日志可以最终一致",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "回到数据一致性，订单系统需要强一致性，但日志可以最终一致。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.06"
+      },
+      {
+        "chat_id": "backend_arch_channel_3",
+        "title": "数据一致性模型今天不定论，明天继续",
+        "summary": "数据一致性模型今天不定论，明天继续",
+        "source_message_ids": [
+          "m030",
+          "m031",
+          "m034"
+        ],
+        "evidence_quote": "今天暂时不定论，大家回去再调研一下补偿方案的成本。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "证据中只有‘今天暂时不定论’的讨论状态，没有明确决策或执行承诺，属于噪声。"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "title": "Bob负责Envoy部署文档",
+        "summary": "Bob负责Envoy部署文档",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "收到，我负责Envoy部署文档。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺Bob负责Envoy部署文档，但候选GT中无等价决策内容"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "title": "同意混合模型，订单用Raft，其他用最终一致性。",
+        "summary": "同意混合模型，订单用Raft，其他用最终一致性。",
+        "source_message_ids": [
+          "m031",
+          "m038"
+        ],
+        "evidence_quote": "同意混合模型，订单用Raft，其他用最终一致性。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m038",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "title": "Bob下午配置etcd集群，Eve负责业务代码适配",
+        "summary": "Bob下午配置etcd集群，Eve负责业务代码适配",
+        "source_message_ids": [
+          "m040"
+        ],
+        "evidence_quote": "我下午把etcd集群配置好，@Eve 你负责业务代码适配。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与候选GT主题不同，证据真实且包含明确分工承诺，属于有效额外决策。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_3",
+        "msg_id": "m020",
+        "expected_topic": "限流熔断策略",
+        "expected_summary": "没意见，Sentinel支持QPS和线程数限流，够用了。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "msg_id": "m022",
+        "expected_topic": "限流熔断策略",
+        "expected_summary": "那就定Envoy吧，下周三前完成集成。大家加油！",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 14,
+    "errors": {}
+  }
+}

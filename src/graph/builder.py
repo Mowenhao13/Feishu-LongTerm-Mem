@@ -11,9 +11,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from src.node.node import DecisionNode
 from src.node.types import DecisionStatus, ImpactLevel, Relation, RelationType
 from src.structure import (
-    EpisodeHyperedge,
     EpisodeNode,
-    EpisodeRole,
     Hypergraph,
     TopicNode,
 )
@@ -23,12 +21,13 @@ logger = get_logger(__name__)
 
 
 class HypergraphBuilder:
-    """超图构建器
+    """Hypergraph builder
 
-    整合 ref/main stage2 的核心逻辑：
-    1. 从对话/文档内容中提取 Topic 层级
-    2. 基于 Topic 提取 Fact 层级
-    3. 构建完整的超图结构
+    Builds a simplified two-layer hypergraph from episodes:
+    - Raw Data Layer: EpisodeNode
+    - Knowledge Layer: TopicNode + DecisionNode
+
+    No hyperedge intermediaries — episodes link directly to topics.
     """
 
     def __init__(self, llm_provider: Optional[Any] = None) -> None:
@@ -44,8 +43,8 @@ class HypergraphBuilder:
             "source_id": source_id,
             "source_type": source_type,
             "topics": {},
-            "facts": {},
-            "hyperedges": {},
+            "episodes": {},
+            "decisions": {},
             "created_at": datetime.now().isoformat(),
         }
         return hypergraph
@@ -56,18 +55,17 @@ class HypergraphBuilder:
         llm_provider: Optional[Any] = None,
         existing_hypergraph: Optional[Hypergraph] = None,
     ) -> Hypergraph:
-        """从 episode 列表构建或增量更新超图
+        """Build or incrementally update hypergraph from episode dicts.
 
-        输入是 Episode.to_dict() 的列表。
-        每个 episode dict 应包含: id, chat_id, participants, full_text,
-        start_time, end_time, messages, has_decision_signal, topic
+        Each episode dict should contain: id, chat_id, participants, full_text,
+        start_time, end_time, messages, has_decision_signal, topic.
 
-        输出完整 Hypergraph（L2 Episode + L3 Topic 两层）。
+        Produces Hypergraph with EpisodeNode (raw data) + TopicNode (knowledge)
+        linked directly (no EpisodeHyperedge intermediaries).
 
-        当 existing_hypergraph 不为 None 时，执行增量合并：
-        1. 跳过已存在的 episode_id
-        2. 新 episode 尝试匹配已有 topic（按 chat_id 分组）
-        3. 合并到已有 hyperedge，不重复创建
+        When existing_hypergraph is provided, performs incremental merge:
+        - Skips already-existing episode_ids
+        - New episodes match existing topics by chat participant overlap
         """
         if existing_hypergraph is not None:
             hypergraph = existing_hypergraph
@@ -104,8 +102,7 @@ class HypergraphBuilder:
                     keywords=[],
                     subject=topic_hint,
                     episode_description="",
-                    hyperedge={},
-                    fact_hyperedge_id="",
+                    topic_id="",
                 )
                 hypergraph.episodes[ep_id] = episode_node
                 episode_ids.append(ep_id)
@@ -113,44 +110,29 @@ class HypergraphBuilder:
             if not episode_ids:
                 continue
 
-            # 尝试匹配已有 topic → 合并到现有 hyperedge
+            # Try to match existing topic by chat participant overlap
             existing_topic_id = self._find_topic_for_chat(hypergraph, chat_id, episode_ids)
             if existing_topic_id is not None:
                 topic_node = hypergraph.topics[existing_topic_id]
-                hyperedge_id = topic_node.episode_hyperedge_id
-                hyperedge = hypergraph.episode_hyperedges.get(hyperedge_id)
+                for ep_id in episode_ids:
+                    if ep_id in hypergraph.episodes:
+                        hypergraph.episodes[ep_id].topic_id = existing_topic_id
+                    if ep_id not in topic_node.episode_ids:
+                        topic_node.episode_ids.append(ep_id)
 
-                if hyperedge is not None:
-                    for ep_id in episode_ids:
-                        if ep_id not in hyperedge.relation:
-                            hyperedge.relation[ep_id] = EpisodeRole.DEVELOPING.value
-                            topic_node.episode_ids.append(ep_id)
-                        if ep_id in hypergraph.episodes:
-                            hypergraph.episodes[ep_id].hyperedge[hyperedge_id] = EpisodeRole.DEVELOPING.value
+                if llm_provider:
+                    self._enrich_topic_with_llm(hypergraph, existing_topic_id, topic_node.episode_ids, llm_provider)
 
-                    if llm_provider:
-                        self._enrich_topic_with_llm(hypergraph, existing_topic_id, topic_node.episode_ids, llm_provider)
+                logger.debug("Merged %d episode(s) into existing topic %s", len(episode_ids), existing_topic_id[:12])
+                continue
 
-                    logger.debug("Merged %d episode(s) into existing topic %s", len(episode_ids), existing_topic_id[:12])
-                    continue
-
-            # 无匹配 → 创建新 topic + hyperedge（原逻辑）
+            # No match — create new topic
             topic_id = f"topic_{_short_hash(chat_id)}_{int(time.time())}"
-            hyperedge_id = f"eh_{_short_hash(chat_id)}_{int(time.time())}"
 
-            relation = {ep_id: EpisodeRole.DEVELOPING.value for ep_id in episode_ids}
-            episode_hyperedge = EpisodeHyperedge(
-                id=hyperedge_id,
-                relation=relation,
-                topic_node_id=topic_id,
-                created_at=datetime.now(),
-                coherence_score=0.8,
-            )
-            hypergraph.episode_hyperedges[hyperedge_id] = episode_hyperedge
-
+            # Assign topic_id to episodes
             for ep_id in episode_ids:
                 if ep_id in hypergraph.episodes:
-                    hypergraph.episodes[ep_id].hyperedge[hyperedge_id] = EpisodeRole.DEVELOPING.value
+                    hypergraph.episodes[ep_id].topic_id = topic_id
 
             topic_node = TopicNode(
                 id=topic_id,
@@ -159,18 +141,11 @@ class HypergraphBuilder:
                 episode_ids=episode_ids,
                 timestamp=datetime.now(),
                 user_id_list=[],
-                episode_hyperedge_id=hyperedge_id,
             )
             hypergraph.topics[topic_id] = topic_node
 
             if llm_provider:
                 self._enrich_topic_with_llm(hypergraph, topic_id, episode_ids, llm_provider)
-
-        validation_errors = hypergraph.validate_bidirectional_links()
-        if validation_errors:
-            logger.warning("[Hypergraph] %d bidirectional link errors: %s",
-                          sum(len(v) for v in validation_errors.values()),
-                          validation_errors)
 
         return hypergraph
 
@@ -180,11 +155,7 @@ class HypergraphBuilder:
         chat_id: str,
         new_episode_ids: List[str],
     ) -> Optional[str]:
-        """在已有 hypergraph 中查找属于同一 chat 的 topic
-
-        遍历已存在的 episode，检查是否有 episode 的 user_id_list
-        与当前 chat 的 participants 存在重叠。若找到，返回其 topic_id。
-        """
+        """Find existing topic belonging to the same chat by participant overlap."""
         new_participants: set = set()
         for ep_id in new_episode_ids:
             ep = hypergraph.episodes.get(ep_id)
@@ -198,10 +169,8 @@ class HypergraphBuilder:
             if not chat_participants:
                 continue
             if new_participants and chat_participants & new_participants:
-                for hyperedge_id, _role in ep_node.hyperedge.items():
-                    eh = hypergraph.episode_hyperedges.get(hyperedge_id)
-                    if eh and eh.topic_node_id in hypergraph.topics:
-                        return eh.topic_node_id
+                if ep_node.topic_id and ep_node.topic_id in hypergraph.topics:
+                    return ep_node.topic_id
 
         return None
 
@@ -212,7 +181,7 @@ class HypergraphBuilder:
         episode_ids: List[str],
         llm: Any,
     ) -> None:
-        """用 LLM 丰富 topic 的标题和关键词"""
+        """Enrich topic title and keywords via LLM."""
         try:
             episode_texts = []
             for ep_id in episode_ids:
@@ -253,7 +222,7 @@ class HypergraphBuilder:
     ) -> Dict[str, Any]:
         topics: Dict[str, Dict] = {}
         decision_nodes: Dict[str, Dict] = {}
-        hyperedges: List[Dict] = []
+        relations: List[Dict] = []
 
         for d in decisions:
             tid = d.topic_id or "general"
@@ -277,7 +246,7 @@ class HypergraphBuilder:
             }
 
             for rel in d.relations:
-                hyperedges.append({
+                relations.append({
                     "source": d.sid,
                     "target": rel.target_id,
                     "type": rel.type.value,
@@ -287,7 +256,7 @@ class HypergraphBuilder:
         return {
             "topics": topics,
             "decisions": decision_nodes,
-            "hyperedges": hyperedges,
+            "relations": relations,
             "decision_count": len(decisions),
             "topic_count": len(topics),
             "built_at": datetime.now().isoformat(),

@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "run_id": "85b78be68552435cbb20083298d44cb4",
+    "created_at": "2026-08-07T15:45:24.020039+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "d1b744c54d844aa37414f483877b3f4dbf448514654c7e806eccb234231409b5",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sre_reliability_channel_0",
+      "sre_reliability_channel_1",
+      "sre_reliability_channel_2"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "sre_reliability_channel_0": 2,
+      "sre_reliability_channel_1": 2,
+      "sre_reliability_channel_2": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 13,
+  "chat_metrics": {
+    "sre_reliability_channel_0": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    "sre_reliability_channel_1": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "sre_reliability_channel_2": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 4,
+    "strict_fn": 2,
+    "valid_extra": 5,
+    "invalid": 4,
+    "evidence_valid": 13,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.5,
+    "recall": 0.6666666666666666,
+    "f1": 0.5714285714285715,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sre_reliability_channel_0",
+        "title": "SLO暂定99.9%可用性，P99延迟<300ms",
+        "summary": "SLO暂定99.9%可用性，P99延迟<300ms",
+        "source_message_ids": [
+          "m006",
+          "m007"
+        ],
+        "evidence_quote": "好，那SLO暂定99.9%可用性，P99延迟<300ms。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m006",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_0",
+        "title": "引入告警聚合，减少干扰",
+        "summary": "引入告警聚合，减少干扰",
+        "source_message_ids": [
+          "m013",
+          "m014"
+        ],
+        "evidence_quote": "我建议引入告警聚合，类似告警的合并为一条，减少干扰。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为建议性讨论，未形成明确决策或执行承诺，且不被任何GT候选覆盖。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_0",
+        "title": "按优先级分级：P0实时告警，P1-P3聚合后延迟通知",
+        "summary": "按优先级分级：P0实时告警，P1-P3聚合后延迟通知",
+        "source_message_ids": [
+          "m018",
+          "m019"
+        ],
+        "evidence_quote": "那就按优先级分级：P0实时告警，P1-P3聚合后延迟通知。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.22"
+      },
+      {
+        "chat_id": "sre_reliability_channel_0",
+        "title": "Bob下周开始实施聚合规则，Charlie审核配置",
+        "summary": "Bob下周开始实施聚合规则，Charlie审核配置",
+        "source_message_ids": [
+          "m020"
+        ],
+        "evidence_quote": "好，我下周开始实施聚合规则，@Charlie 帮我审核配置。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确的执行承诺（下周实施聚合规则）和审核指派（Charlie审核配置），证据原文支持，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_0",
+        "title": "下周二灰度发布，错误预算足够再全量",
+        "summary": "下周二灰度发布，错误预算足够再全量",
+        "source_message_ids": [
+          "m022"
+        ],
+        "evidence_quote": "下周二灰度发布，错误预算足够的话再全量。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确的灰度发布决策和时间承诺，但候选GT中无等价决策内容。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_1",
+        "title": "用Chaos Mesh做混沌工程，配合Q2发布计划",
+        "summary": "用Chaos Mesh做混沌工程，配合Q2发布计划",
+        "source_message_ids": [
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "那就用Chaos Mesh吧，开源且K8s原生支持",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m009",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_1",
+        "title": "Emma在PoC期间同步做安全审计",
+        "summary": "Emma在PoC期间同步做安全审计",
+        "source_message_ids": [
+          "m031"
+        ],
+        "evidence_quote": "PoC期间我会同步做安全审计",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺在PoC期间同步做安全审计，证据原文支持，但候选GT中无等价决策承诺。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_1",
+        "title": "暂定OpenTelemetry+Jaeger方案，需PoC验证",
+        "summary": "暂定OpenTelemetry+Jaeger方案，需PoC验证",
+        "source_message_ids": [
+          "m029",
+          "m030"
+        ],
+        "evidence_quote": "那就暂定这个方案，但还需要PoC验证",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m029",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_1",
+        "title": "PoC两周内完成，排进Q2计划",
+        "summary": "PoC两周内完成，排进Q2计划",
+        "source_message_ids": [
+          "m030"
+        ],
+        "evidence_quote": "PoC两周够吗？我要排进Q2计划",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺PoC两周内完成并排入Q2计划，证据支持该决策，但GT候选仅提及方案和需要PoC验证，未覆盖具体时间承诺。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_1",
+        "title": "Frank负责搭建数据管道和可视化Dashboard",
+        "summary": "Frank负责搭建数据管道和可视化Dashboard",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "我负责搭建数据管道和可视化Dashboard",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: "
+      },
+      {
+        "chat_id": "sre_reliability_channel_2",
+        "title": "先用Elasticsearch做POC",
+        "summary": "先用Elasticsearch做POC",
+        "source_message_ids": [
+          "m009",
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "可以先用ES做POC，评估后再定。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_2",
+        "title": "模型中加入磁盘加密开销参数",
+        "summary": "模型中加入磁盘加密开销参数",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "明白，我会在模型中加入加密开销参数。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺在模型中加入磁盘加密开销参数，证据[m028]支持该决策，但候选GT均为评估或配合提供数据，不覆盖此具体执行承诺。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_2",
+        "title": "Frank先做原型下周演示",
+        "summary": "Frank先做原型下周演示",
+        "source_message_ids": [
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "我先做个原型，下周演示。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.00"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "sre_reliability_channel_0",
+        "msg_id": "m019",
+        "expected_topic": "告警噪声治理",
+        "expected_summary": "@Alice 同意分级，但需要定期review告警规则，避免规则膨胀。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sre_reliability_channel_2",
+        "msg_id": "m031",
+        "expected_topic": "容量规划模型",
+        "expected_summary": "好，我配合提供安全基线数据。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 13,
+    "errors": {}
+  }
+}

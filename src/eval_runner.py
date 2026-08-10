@@ -47,15 +47,26 @@ class EvalRunner:
                  delay: float = 1.0,
                  max_messages: int = 0,
                  group_num: int = 1,
-                 expected_path: str = ""):
+                 expected_path: str = "",
+                 websearch_expected: str = "",
+                 websearch_sessions: bool = False,
+                 session1_input: str = "",
+                 session2_input: str = "",
+                 cross_session_expected: str = ""):
         self._input_path = str(PROJECT_ROOT / input_path) if not os.path.isabs(input_path) else input_path
         self._delay = delay
         self._max_messages = max_messages
         self._group_num = max(1, group_num)
         self._expected_path = str(PROJECT_ROOT / expected_path) if expected_path and not os.path.isabs(expected_path) else expected_path
+        self._websearch_expected = str(PROJECT_ROOT / websearch_expected) if websearch_expected and not os.path.isabs(websearch_expected) else websearch_expected
+        self._websearch_sessions = websearch_sessions
+        self._session1_input = str(PROJECT_ROOT / session1_input) if session1_input and not os.path.isabs(session1_input) else session1_input
+        self._session2_input = str(PROJECT_ROOT / session2_input) if session2_input and not os.path.isabs(session2_input) else session2_input
+        self._cross_session_expected = str(PROJECT_ROOT / cross_session_expected) if cross_session_expected and not os.path.isabs(cross_session_expected) else cross_session_expected
         self._engine: Optional[MemoryEngine] = None
         self._episode_manager: Optional[ChatEpisodeManager] = None
         self._pool: Optional[SuspendPool] = None
+        self._websearch_metrics: Optional[Dict[str, Any]] = None
         self._stats: Dict[str, Any] = {
             "total_messages": 0,
             "decisions_extracted": 0,
@@ -503,6 +514,53 @@ class EvalRunner:
         with open(report_path, "w", encoding="utf-8") as f:
             json.dump(report, f, ensure_ascii=False, indent=2)
         print(f"  报告已保存: {report_path}")
+
+    def _run_websearch_comparison(self) -> None:
+        """运行 WebSearch 维度评测"""
+        from src.eval.websearch_evaluator import WebSearchComparator
+        decisions = self._engine._graph.get_all_decisions() if self._engine else []
+        actual = [
+            {
+                "sid": d.sid,
+                "topic_id": d.topic_id or "",
+                "summary": d.summary or "",
+                "status": d.status.value if hasattr(d.status, "value") else str(d.status),
+                "impact": d.impact_level.value if hasattr(d.impact_level, "value") else str(d.impact_level),
+                "chat_id": getattr(d, "chat_id", ""),
+                "is_suggestion": getattr(d, "is_suggestion", False),
+            }
+            for d in decisions
+        ]
+
+        wc = WebSearchComparator(self._websearch_expected)
+        wc.match(actual)
+        metrics = wc.compute_metrics()
+        self._websearch_metrics = metrics.to_dict()
+
+        # Print colored WebSearch report
+        print()
+        print(f"\033[1m{'=' * 62}")
+        print(f"  WebSearch 维度评测报告")
+        print(f"{'=' * 62}\033[0m")
+
+        d = self._websearch_metrics
+        print(f"  extraction_accuracy:        {d['extraction_accuracy']:.2%}")
+        print(f"  update_correctness:         {d['update_correctness']:.2%}")
+        print(f"  conflict_detection_rate:    {d['conflict_detection_rate']:.2%}")
+        print(f"  conflict_detection_fpr:     {d['conflict_detection_fpr']:.2%}")
+        print(f"  conflict_resolution_accuracy:{d['conflict_resolution_accuracy']:.2%}")
+        print(f"  stale_consistency:          {d['stale_consistency']:.2%}")
+        print(f"  cross_session_recall:       {d['cross_session_recall']:.2%}")
+        print(f"  merge_quality:              {d['merge_quality']:.2%}")
+        print(f"  noise_filter_ratio:         {d['noise_filter_ratio']:.2%}")
+
+        # Save WebSearch report
+        report_path = Path(self._input_path).parent / "eval_websearch_report.json"
+        import json
+        with open(report_path, "w", encoding="utf-8") as f:
+            json.dump(self._websearch_metrics, f, ensure_ascii=False, indent=2)
+        print(f"\n  报告已保存: {report_path}")
+        print(f"  {'=' * 62}\033[0m")
 
 
 def parse_args() -> argparse.Namespace:

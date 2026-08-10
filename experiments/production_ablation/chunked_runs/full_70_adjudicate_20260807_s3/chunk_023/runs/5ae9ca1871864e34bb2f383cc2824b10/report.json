@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "run_id": "5ae9ca1871864e34bb2f383cc2824b10",
+    "created_at": "2026-08-07T15:49:53.815768+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "072b545014ee03d657a48257d91a375648bde4b9a3b83fa5a5ad6189cca673c5",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sre_reliability_channel_9"
+    ],
+    "expected_count": 2,
+    "expected_by_chat": {
+      "sre_reliability_channel_9": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 7,
+  "chat_metrics": {
+    "sre_reliability_channel_9": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285715
+    }
+  },
+  "metrics": {
+    "strict_tp": 2,
+    "strict_fp": 3,
+    "strict_fn": 0,
+    "valid_extra": 2,
+    "invalid": 3,
+    "evidence_valid": 7,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "故障演练周期缩短为每月一次，自动化脚本优先做，下季度开始执行",
+        "summary": "故障演练周期缩短为每月一次，自动化脚本优先做，下季度开始执行",
+        "source_message_ids": [
+          "m001",
+          "m004",
+          "m005",
+          "m010",
+          "m011"
+        ],
+        "evidence_quote": "好，那就定每月一次演练，自动化脚本优先做，下季度开始执行",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m010",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "演练场景覆盖DDoS和数据库故障",
+        "summary": "演练场景覆盖DDoS和数据库故障",
+        "source_message_ids": [
+          "m008",
+          "m037"
+        ],
+        "evidence_quote": "演练场景要覆盖DDoS和数据库故障，别漏了",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为讨论场景覆盖范围，未形成具体决策或执行承诺，属于建议噪声。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "on-call轮值规范草案下周五前完成，试行一个月",
+        "summary": "on-call轮值规范草案下周五前完成，试行一个月",
+        "source_message_ids": [
+          "m013",
+          "m017",
+          "m019",
+          "m020",
+          "m025",
+          "m026",
+          "m027",
+          "m028",
+          "m029",
+          "m031",
+          "m032",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "大家意见基本一致，规范草案下周五前出来，试行一个月",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m034",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "使用PagerDuty自动排班，但先定规范再上工具",
+        "summary": "使用PagerDuty自动排班，但先定规范再上工具",
+        "source_message_ids": [
+          "m021",
+          "m022"
+        ],
+        "evidence_quote": "自动排班好，但先定规范再上工具，别本末倒置",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选均不等价：m010是演练计划，m034是规范草案时间，而提取结果强调'先定规范再上工具'，属于前置原则性决策，未被任何GT覆盖。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "安全培训考核内容包括钓鱼邮件识别",
+        "summary": "安全培训考核内容包括钓鱼邮件识别",
+        "source_message_ids": [
+          "m036",
+          "m037"
+        ],
+        "evidence_quote": "我补充一下，安全考核内容要包括钓鱼邮件识别",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求安全考核包含钓鱼邮件识别，证据中m036提出该要求，m037承诺执行，但候选GT中无此决策内容，属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "收到，我更新项目计划，下季度上线",
+        "summary": "收到，我更新项目计划，下季度上线",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "收到，我更新项目计划，下季度上线",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为个人表态，缺乏具体决策或执行承诺，且与候选GT无等价关系"
+      },
+      {
+        "chat_id": "sre_reliability_channel_9",
+        "title": "好，我负责催进度，下周五前给Liam审阅",
+        "summary": "好，我负责催进度，下周五前给Liam审阅",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "好，我负责催进度，下周五前给Liam审阅",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.26"
+      }
+    ],
+    "unmatched_expected": []
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 7,
+    "errors": {}
+  }
+}

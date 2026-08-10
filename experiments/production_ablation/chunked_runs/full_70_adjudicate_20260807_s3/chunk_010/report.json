@@ -1,0 +1,301 @@
+{
+  "metadata": {
+    "run_id": "7ecf50fa73674fbf8ea79e30b94b31aa",
+    "created_at": "2026-08-07T15:13:47.480699+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "52c617a0a67f644d078ba6617cb64a4c60165440c77ace2b8881e1a6175466d7",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "data_platform_channel_0",
+      "data_platform_channel_1",
+      "data_platform_channel_2"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "data_platform_channel_0": 2,
+      "data_platform_channel_1": 2,
+      "data_platform_channel_2": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 13,
+  "chat_metrics": {
+    "data_platform_channel_0": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    "data_platform_channel_1": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "data_platform_channel_2": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 5,
+    "strict_fn": 3,
+    "valid_extra": 5,
+    "invalid": 5,
+    "evidence_valid": 13,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.375,
+    "recall": 0.5,
+    "f1": 0.42857142857142855,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "data_platform_channel_0",
+        "title": "同意选Iceberg，但需要两周内完成PoC验证",
+        "summary": "同意选Iceberg，但需要两周内完成PoC验证",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "同意，但需要两周内完成PoC验证",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确决策（同意选Iceberg）和执行承诺（两周内PoC），但候选GT中m011建议选Iceberg（未提及PoC），m024建议选Flink，均不等价，故为有效额外决策"
+      },
+      {
+        "chat_id": "data_platform_channel_0",
+        "title": "Bob准备环境，周末加班搞定PoC",
+        "summary": "Bob准备环境，周末加班搞定PoC",
+        "source_message_ids": [
+          "m013"
+        ],
+        "evidence_quote": "收到，我准备环境。周末加班能搞定",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.06"
+      },
+      {
+        "chat_id": "data_platform_channel_0",
+        "title": "那就Flink，但实时场景先小规模试点",
+        "summary": "那就Flink，但实时场景先小规模试点",
+        "source_message_ids": [
+          "m024"
+        ],
+        "evidence_quote": "好，那就Flink。但实时场景先小规模试点",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m024",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "data_platform_channel_0",
+        "title": "Bob搭Flink集群，用Kubernetes部署",
+        "summary": "Bob搭Flink集群，用Kubernetes部署",
+        "source_message_ids": [
+          "m027"
+        ],
+        "evidence_quote": "收到，我搭Flink集群，用Kubernetes部署",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.29"
+      },
+      {
+        "chat_id": "data_platform_channel_0",
+        "title": "David要求月底前出结果",
+        "summary": "David要求月底前出结果",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "我要求月底前出结果，不然影响排期",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.08"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "title": "核心指标定为空值率、唯一性、时效性，下周启动",
+        "summary": "核心指标定为空值率、唯一性、时效性，下周启动",
+        "source_message_ids": [
+          "m005",
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "核心指标：空值率、唯一性、时效性。大家怎么看？",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.30"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "title": "监控日志保留至少90天",
+        "summary": "监控日志保留至少90天",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "同意@Charlie的方案，但监控日志要保留至少90天",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求监控日志保留至少90天，但候选GT均为其他主题的决策，无等价覆盖。"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "title": "数据血缘追踪采用OpenLineage标准",
+        "summary": "数据血缘追踪采用OpenLineage标准",
+        "source_message_ids": [
+          "m018",
+          "m019",
+          "m020"
+        ],
+        "evidence_quote": "我建议用OpenLineage标准，便于集成现有工具",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺采用OpenLineage标准，证据链完整（建议、开发评估、接受条件），但候选GT均不涉及此决策"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "title": "血缘数据权限模型：列级仅对管理员开放，其他角色只看表级",
+        "summary": "血缘数据权限模型：列级仅对管理员开放，其他角色只看表级",
+        "source_message_ids": [
+          "m023",
+          "m025",
+          "m026",
+          "m027"
+        ],
+        "evidence_quote": "折中：列级血缘只对数据管理员开放，其他角色只看表级",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.25"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "title": "决策记录需同步给合规团队",
+        "summary": "决策记录需同步给合规团队",
+        "source_message_ids": [
+          "m028"
+        ],
+        "evidence_quote": "记得把决策记录同步给合规团队",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确要求同步决策记录给合规团队，属于执行承诺，但未被任何GT候选覆盖"
+      },
+      {
+        "chat_id": "data_platform_channel_2",
+        "title": "整体分层方案：ODS->DWD->DWS->ADS",
+        "summary": "整体分层方案：ODS->DWD->DWS->ADS",
+        "source_message_ids": [
+          "m010",
+          "m011"
+        ],
+        "evidence_quote": "整体分层方案：ODS->DWD->DWS->ADS，我们敲定这个？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m010",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "data_platform_channel_2",
+        "title": "Airflow需启用HTTPS和轮换密钥",
+        "summary": "Airflow需启用HTTPS和轮换密钥",
+        "source_message_ids": [
+          "m021"
+        ],
+        "evidence_quote": "那用Airflow吧，但必须启用HTTPS和轮换密钥",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m031",
+        "reason": "证据中明确要求启用HTTPS和轮换密钥，与GT m031中检查默认配置漏洞的决策等价，均涉及Airflow安全配置的强制执行"
+      },
+      {
+        "chat_id": "data_platform_channel_2",
+        "title": "Airflow用KubernetesExecutor实现Pod隔离",
+        "summary": "Airflow用KubernetesExecutor实现Pod隔离",
+        "source_message_ids": [
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "可以用KubernetesExecutor，每个任务跑独立Pod",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺使用KubernetesExecutor实现Pod隔离，证据支持，但未被候选GT覆盖"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "data_platform_channel_0",
+        "msg_id": "m011",
+        "expected_topic": "数据湖方案选型",
+        "expected_summary": "综合看，我建议选Iceberg，生态和成本更平衡",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "msg_id": "m012",
+        "expected_topic": "数据质量监控",
+        "expected_summary": "好，那先定这套指标，下周出原型。@Charlie 排期？",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "data_platform_channel_1",
+        "msg_id": "m027",
+        "expected_topic": "数据血缘追踪",
+        "expected_summary": "好，那就按这个权限模型设计，下周出技术方案",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 13,
+    "errors": {}
+  }
+}

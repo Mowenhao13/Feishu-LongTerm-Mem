@@ -65,10 +65,12 @@ mcp = FastMCP(
 22. decision_ancestors — 祖先路径
 23. decision_tree — 完整层级树
 24. show_tree — 决策森林
-25. create_decision — 创建决策
-26. update_decision — 更新决策
-27. confirm_decision — 确认决策
-28. reject_decision — 拒绝决策
+25. timeline — 时间线查询（按时间、主题、状态筛选）
+26. mutation_history — 决策变更审计日志
+27. create_decision — 创建决策
+28. update_decision — 更新决策
+29. confirm_decision — 确认决策
+30. reject_decision — 拒绝决策
 29. revert_decision — 回滚决策
 30. resolve_conflict — 解决冲突
 31. resolve_conflict_action — 获取冲突解决建议
@@ -108,6 +110,7 @@ class MemoryLoader:
         self._decisions: List[Any] = []
         self._syncer: Optional[TaskViewSyncer] = None
         self._loaded = False
+        self.mutation_log: List[Dict[str, Any]] = []
 
     def ensure_loaded(self) -> None:
         if self._loaded:
@@ -163,6 +166,29 @@ class MemoryLoader:
 
 _loader = MemoryLoader()
 
+_neo4j_client: Any = None
+
+
+def set_neo4j_client(client: Any) -> None:
+    global _neo4j_client
+    _neo4j_client = client
+
+
+def get_neo4j_client() -> Any:
+    global _neo4j_client
+    return _neo4j_client
+
+
+def _record_mutation(t: str, sid: str, old_status: str = "", new_status: str = "") -> None:
+    """Record a mutation event for audit trail (in-memory, MCP-scoped)."""
+    _loader.mutation_log.append({
+        "timestamp": datetime.now().isoformat(timespec="seconds"),
+        "type": t,
+        "sid": sid,
+        "old_status": old_status,
+        "new_status": new_status,
+    })
+
 
 def _get_storage() -> GitStorage:
     """Return the GitStorage instance (for test access)."""
@@ -188,6 +214,16 @@ def _node_to_dict(node: Any) -> Dict[str, Any]:
         "hot_score": round(getattr(node.access_stats, "hot_score", 0.0), 1),
         "created_at": node.created_at.strftime("%Y-%m-%d %H:%M") if node.created_at else "",
         "updated_at": node.updated_at.strftime("%Y-%m-%d %H:%M") if hasattr(node, "updated_at") and node.updated_at else "",
+        # Lifecycle timestamps
+        "proposed_at": node.proposed_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "proposed_at", None) else "",
+        "discussed_at": node.discussed_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "discussed_at", None) else "",
+        "decided_at": node.decided_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "decided_at", None) else "",
+        "executing_at": node.executing_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "executing_at", None) else "",
+        "completed_at": node.completed_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "completed_at", None) else "",
+        "shelved_at": node.shelved_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "shelved_at", None) else "",
+        "rejected_at": node.rejected_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "rejected_at", None) else "",
+        "superseded_at": node.superseded_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "superseded_at", None) else "",
+        "deprecated_at": node.deprecated_at.strftime("%Y-%m-%d %H:%M") if getattr(node, "deprecated_at", None) else "",
     }
 
 
@@ -281,6 +317,39 @@ def topic(topic_id: str = "", top_k: int = 50) -> str:
 )
 def list_decisions(top_k: int = 50) -> str:
     return topic(topic_id="", top_k=top_k)
+
+
+@mcp.tool(
+    name="timeline",
+    description="获取决策时间线。按创建时间排序，支持按主题、状态、时间段筛选。返回每个决策的完整生命周期时间戳。",
+)
+def timeline(topic_id: str = "", status: str = "", hours: int = 0, top_k: int = 50) -> str:
+    """统一的时间线查询：按 created_at 排序，返回完整生命周期时间戳"""
+    _loader.ensure_loaded()
+    nodes = _loader.decisions
+
+    # Filter by topic
+    if topic_id:
+        nodes = [d for d in nodes if d.topic_id == topic_id]
+
+    # Filter by status
+    if status:
+        nodes = [d for d in nodes if (hasattr(d.status, "value") and d.status.value == status) or str(d.status) == status]
+
+    # Filter by recency
+    if hours > 0:
+        since = datetime.now() - timedelta(hours=hours)
+        nodes = [d for d in nodes if d.created_at and d.created_at > since]
+
+    # Sort by created_at descending
+    nodes.sort(key=lambda d: d.created_at or datetime.min, reverse=True)
+
+    results = [_node_to_dict(d) for d in nodes[:top_k]]
+    return json.dumps({
+        "results": results,
+        "total": len(results),
+        "filters": {"topic_id": topic_id, "status": status, "hours": hours},
+    }, ensure_ascii=False)
 
 
 @mcp.tool(
@@ -672,6 +741,7 @@ def create_decision(summary: str, content: str, topic_id: str = "general",
         impact_level=impact, tags=tag_list,
         created_at=now, updated_at=now,
     )
+    node.change_status(DecisionStatus.DECIDED)
     _loader.graph.upsert_decision(node, PROJECT)
 
     dec_dict = _node_to_dict(node)
@@ -679,6 +749,7 @@ def create_decision(summary: str, content: str, topic_id: str = "general",
     commit_hash = _loader.storage.write_decision(dec_dict)
 
     _loader.decisions = _loader.graph.get_all_decisions()
+    _record_mutation("create", sid, "", "decided")
     return json.dumps({"sid": sid, "summary": summary, "commit_hash": commit_hash}, ensure_ascii=False)
 
 
@@ -699,7 +770,7 @@ def update_decision(sid: str, summary: str = "", content: str = "",
         node.full_text = content
     if status:
         try:
-            node.status = DecisionStatus(status)
+            node.change_status(DecisionStatus(status))
         except ValueError:
             pass
     if impact_level:
@@ -715,6 +786,7 @@ def update_decision(sid: str, summary: str = "", content: str = "",
     commit_hash = _loader.storage.write_decision(dec_dict)
 
     _loader.decisions = _loader.graph.get_all_decisions()
+    _record_mutation("update", sid)
     return json.dumps({"sid": sid, "summary": node.summary, "commit_hash": commit_hash}, ensure_ascii=False)
 
 
@@ -727,13 +799,13 @@ def confirm_decision(sid: str) -> str:
     node = _loader.graph.get_decision(sid)
     if node is None:
         return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
-    node.status = DecisionStatus.DECIDED
-    node.updated_at = datetime.now()
+    node.change_status(DecisionStatus.DECIDED)
     _loader.graph.upsert_decision(node, PROJECT)
     dec_dict = _node_to_dict(node)
     dec_dict["project"] = PROJECT
     _loader.storage.write_decision(dec_dict)
     _loader.decisions = _loader.graph.get_all_decisions()
+    _record_mutation("confirm", sid, "", "decided")
     return json.dumps({"sid": sid, "status": "decided", "summary": node.summary}, ensure_ascii=False)
 
 
@@ -746,13 +818,13 @@ def reject_decision(sid: str, reason: str = "") -> str:
     node = _loader.graph.get_decision(sid)
     if node is None:
         return json.dumps({"error": f"Decision not found: {sid}"}, ensure_ascii=False)
-    node.status = DecisionStatus.REJECTED
-    node.updated_at = datetime.now()
+    node.change_status(DecisionStatus.REJECTED)
     _loader.graph.upsert_decision(node, PROJECT)
     dec_dict = _node_to_dict(node)
     dec_dict["project"] = PROJECT
     _loader.storage.write_decision(dec_dict)
     _loader.decisions = _loader.graph.get_all_decisions()
+    _record_mutation("reject", sid, "", "rejected")
     return json.dumps({"sid": sid, "status": "rejected", "summary": node.summary}, ensure_ascii=False)
 
 
@@ -978,6 +1050,108 @@ def extract_and_create(text: str, topic_id: str = "general") -> str:
 def refresh() -> str:
     _loader.reload()
     return json.dumps({"reloaded": True, "total": len(_loader.decisions)}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="mutation_history",
+    description="获取决策的变更审计日志。列出指定决策的所有 mutation 记录，按时间排序。",
+)
+def mutation_history(sid: str, limit: int = 50) -> str:
+    """列出指定决策的所有 mutation 变更记录"""
+    _loader.ensure_loaded()
+    records = [m for m in _loader.mutation_log if m["sid"] == sid]
+    records.sort(key=lambda x: x.get("timestamp", ""), reverse=True)
+    return json.dumps({
+        "sid": sid,
+        "history": records[:limit],
+        "total": len(records),
+    }, ensure_ascii=False)
+
+
+# ==================== 实体/关系查询（Neo4j） ====================
+
+
+@mcp.tool(
+    name="list_entities",
+    description="列出所有已知实体（Person, Technology, Project 等）。需要 Neo4j 连接。",
+)
+def list_entities(entity_type: str = "", limit: int = 50) -> str:
+    """列出实体，可按类型筛选。"""
+    client = get_neo4j_client()
+    if client is None:
+        return json.dumps({"error": "Neo4j not configured", "entities": []}, ensure_ascii=False)
+
+    import asyncio
+
+    async def _query():
+        if entity_type:
+            return await client.query_entities_by_type(entity_type)
+        return []
+
+    try:
+        loop = asyncio.new_event_loop()
+        try:
+            results = loop.run_until_complete(_query())
+        finally:
+            loop.close()
+        return json.dumps({"entities": results, "total": len(results)}, ensure_ascii=False, default=str)
+    except Exception as e:
+        return json.dumps({"error": str(e), "entities": []}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="get_entity",
+    description="获取单个实体的详细信息。需要 Neo4j 连接。",
+)
+def get_entity(name: str) -> str:
+    """获取单个实体详情。"""
+    client = get_neo4j_client()
+    if client is None:
+        return json.dumps({"error": "Neo4j not configured"}, ensure_ascii=False)
+
+    import asyncio
+
+    async def _query():
+        return await client.query_entity(name)
+
+    try:
+        loop = asyncio.new_event_loop()
+        try:
+            result = loop.run_until_complete(_query())
+            if result is None:
+                return json.dumps({"error": f"Entity '{name}' not found"}, ensure_ascii=False)
+            return json.dumps({"entity": result}, ensure_ascii=False, default=str)
+        finally:
+            loop.close()
+    except Exception as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+
+
+@mcp.tool(
+    name="search_entity_relations",
+    description="查询实体的关系网络（关联的实体和关系）。需要 Neo4j 连接。",
+)
+def search_entity_relations(name: str, max_depth: int = 2) -> str:
+    """查询实体的关系网络，max_depth 控制图遍历深度（1-3）。"""
+    client = get_neo4j_client()
+    if client is None:
+        return json.dumps({"error": "Neo4j not configured"}, ensure_ascii=False)
+
+    import asyncio
+
+    async def _query():
+        return await client.query_entity_relationships(name, max_depth=max_depth)
+
+    try:
+        loop = asyncio.new_event_loop()
+        try:
+            results = loop.run_until_complete(_query())
+            return json.dumps({"entity": name, "relations": results, "total": len(results)},
+                              ensure_ascii=False, default=str)
+        finally:
+            loop.close()
+    except Exception as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
 
 
 # ==================== 启动 ====================

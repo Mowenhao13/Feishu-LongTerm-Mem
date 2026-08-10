@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "run_id": "77913816e81a4adba4738fd2b830b929",
+    "created_at": "2026-08-07T15:10:28.812236+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "54e7d759aefe8ac354c0746c15a87bd1b34d84cffd3c0e1400f72973f9e8ed70",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "backend_arch_channel_5",
+      "backend_arch_channel_6",
+      "backend_arch_channel_7"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "backend_arch_channel_5": 2,
+      "backend_arch_channel_6": 1,
+      "backend_arch_channel_7": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 10,
+  "chat_metrics": {
+    "backend_arch_channel_5": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "backend_arch_channel_6": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "backend_arch_channel_7": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 1,
+    "strict_fn": 1,
+    "valid_extra": 5,
+    "invalid": 1,
+    "evidence_valid": 10,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8000000000000002,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "backend_arch_channel_5",
+        "title": "采用Sentinel作为限流熔断组件",
+        "summary": "采用Sentinel作为限流熔断组件",
+        "source_message_ids": [
+          "m008",
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "我倾向于Sentinel，因为团队对Java生态更熟悉",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m009",
+        "reason": "提取结果与GT m009中'定Sentinel'的决策一致，均为确定采用Sentinel作为限流熔断组件。"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "Bob下周出Saga/TCC对比报告",
+        "summary": "Bob下周出Saga/TCC对比报告",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "收到，下周出对比报告",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺下周出对比报告，属于执行承诺，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "backend_arch_channel_7",
+        "title": "数据一致性用Kafka事件驱动+本地消息表",
+        "summary": "数据一致性用Kafka事件驱动+本地消息表",
+        "source_message_ids": [
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "那就用Kafka事件驱动+本地消息表，先试点再推广",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "限流用Redis令牌桶+熔断器",
+        "summary": "限流用Redis令牌桶+熔断器",
+        "source_message_ids": [
+          "m015"
+        ],
+        "evidence_quote": "大家意见统一，限流用Redis令牌桶+熔断器。决策吧",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m015",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "Bob出详细设计文档",
+        "summary": "Bob出详细设计文档",
+        "source_message_ids": [
+          "m016"
+        ],
+        "evidence_quote": "同意，明天我出详细设计文档",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确承诺‘明天我出详细设计文档’，是具体执行承诺，但GT候选是限流方案决策，两者主题不同，不构成等价决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "Grace配合做性能基准测试",
+        "summary": "Grace配合做性能基准测试",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "我配合做性能基准测试",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺执行性能基准测试，证据真实，但候选GT是关于限流决策，两者主题不同，无等价关系。"
+      },
+      {
+        "chat_id": "backend_arch_channel_6",
+        "title": "下周三前出数据一致性结论",
+        "summary": "下周三前出数据一致性结论",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "好，下周三前出结论，别拖延",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺下周三前出结论，但GT候选是已完成的限流决策，两者决策内容不同，无等价关系。"
+      },
+      {
+        "chat_id": "backend_arch_channel_7",
+        "title": "限流熔断方案定Resilience4j+令牌桶",
+        "summary": "限流熔断方案定Resilience4j+令牌桶",
+        "source_message_ids": [
+          "m011",
+          "m012"
+        ],
+        "evidence_quote": "同意用Resilience4j+令牌桶，我先写个POC",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m011",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_7",
+        "title": "Frank写事件接口文档供review",
+        "summary": "Frank写事件接口文档供review",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "我先写事件接口文档，大家review",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Frank承诺写事件接口文档供review，是明确的执行决策，但未被任何GT候选覆盖（GT候选涉及POC和Kafka方案，非同一决策）"
+      },
+      {
+        "chat_id": "backend_arch_channel_7",
+        "title": "Eve明天演示限流熔断POC",
+        "summary": "Eve明天演示限流熔断POC",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "限流熔断的POC已经跑通，明天演示",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.29"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_5",
+        "msg_id": "m026",
+        "expected_topic": "数据一致性模型",
+        "expected_summary": "好的，我下周出详细设计，强一致性用2PC，最终用Saga",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 10,
+    "errors": {}
+  }
+}

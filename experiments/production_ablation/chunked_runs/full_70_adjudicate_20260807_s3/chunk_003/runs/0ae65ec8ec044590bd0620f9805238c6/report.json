@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "run_id": "0ae65ec8ec044590bd0620f9805238c6",
+    "created_at": "2026-08-07T15:06:59.142999+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "3d61ab177e446db7d2ccac4030ff9a4eb380d6bf8f0efe0d9b200b9db5e04683",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_9",
+      "backend_arch_channel_0",
+      "backend_arch_channel_1"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_9": 1,
+      "backend_arch_channel_0": 2,
+      "backend_arch_channel_1": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 12,
+  "chat_metrics": {
+    "ai_ml_platform_channel_9": {
+      "expected": 1,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "backend_arch_channel_0": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "backend_arch_channel_1": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 4,
+    "strict_fn": 2,
+    "valid_extra": 4,
+    "invalid": 4,
+    "evidence_valid": 12,
+    "evidence_invalid": 0,
+    "errors": [
+      "backend_arch_channel_0:Bob负责整理Kafka运维文档: invalid semantic GT identity"
+    ],
+    "precision": 0.42857142857142855,
+    "recall": 0.6,
+    "f1": 0.5,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_9",
+        "title": "在线学习管道每日更新，架构支持每小时扩展",
+        "summary": "在线学习管道每日更新，架构支持每小时扩展",
+        "source_message_ids": [
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "我支持每日更新，但需要为未来每小时更新预留架构扩展性。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m016",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_9",
+        "title": "Bob负责收集试运行监控数据",
+        "summary": "Bob负责收集试运行监控数据",
+        "source_message_ids": [
+          "m029"
+        ],
+        "evidence_quote": "试运行期间我会收集监控数据，为正式决策做准备。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果只是试运行期间收集数据的承诺，并非正式决策或执行承诺，且与GT候选的架构扩展性讨论无关。"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "微服务按订单、支付、库存三个领域拆分",
+        "summary": "微服务按订单、支付、库存三个领域拆分",
+        "source_message_ids": [
+          "m013",
+          "m025"
+        ],
+        "evidence_quote": "我提议微服务按订单、支付、库存三个领域拆分，事件驱动用Kafka。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: m025"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "事件驱动架构使用Kafka",
+        "summary": "事件驱动架构使用Kafka",
+        "source_message_ids": [
+          "m013",
+          "m017",
+          "m025"
+        ],
+        "evidence_quote": "不行，Kafka更成熟，直接上。Bob你评估运维成本。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "API版本控制策略使用Header方式",
+        "summary": "API版本控制策略使用Header方式",
+        "source_message_ids": [
+          "m023",
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "好，微服务按订单、支付、库存拆分，API版本用Header。决策通过。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确记录了API版本使用Header的决策，证据链完整，但候选GT中无对应决策消息。"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "Bob负责整理Kafka运维文档",
+        "summary": "Bob负责整理Kafka运维文档",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "Kafka运维文档我下午整理，明天发给大家。",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m017",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "backend_arch_channel_0",
+        "title": "Charlie负责设计事件Schema",
+        "summary": "Charlie负责设计事件Schema",
+        "source_message_ids": [
+          "m027",
+          "m031"
+        ],
+        "evidence_quote": "我负责设计事件Schema，确保兼容性。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据表明Charlie承诺设计事件Schema并提及初稿，属于明确执行承诺，但候选GT中无等价决策消息。"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Saga方案下周二开始编码",
+        "summary": "Saga方案下周二开始编码",
+        "source_message_ids": [
+          "m025",
+          "m026"
+        ],
+        "evidence_quote": "Saga方案下周二开始编码，大家准备",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.25"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "审计日志要实时写入，不能异步",
+        "summary": "审计日志要实时写入，不能异步",
+        "source_message_ids": [
+          "m011"
+        ],
+        "evidence_quote": "同意，但审计日志要实时写入，不能异步",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确决策（审计日志实时写入），但未被任何候选GT覆盖"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "先在新模块用GraphQL，旧接口保持REST",
+        "summary": "先在新模块用GraphQL，旧接口保持REST",
+        "source_message_ids": [
+          "m021",
+          "m022"
+        ],
+        "evidence_quote": "那我们先在新模块用GraphQL，旧接口保持REST",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m021",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Emma写一份安全规范，包含限流和深度限制",
+        "summary": "Emma写一份安全规范，包含限流和深度限制",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "我写一份安全规范，包含限流和深度限制",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果与证据原文主语不一致，且证据消息中未提及‘Emma’，内容为讨论而非决策或执行承诺"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "title": "Saga补偿逻辑加监控告警",
+        "summary": "Saga补偿逻辑加监控告警",
+        "source_message_ids": [
+          "m027"
+        ],
+        "evidence_quote": "Saga补偿逻辑我会加监控告警",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺对Saga补偿逻辑增加监控告警，证据原文支持，但候选GT中无等价决策"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_0",
+        "msg_id": "m021",
+        "expected_topic": "微服务拆分粒度",
+        "expected_summary": "下午会议开始。微服务拆分方案大家同意吗？@Charlie @Bob @David",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "backend_arch_channel_1",
+        "msg_id": "m010",
+        "expected_topic": "分布式事务方案",
+        "expected_summary": "我们先用Saga试点订单服务，一个月后评估效果",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 12,
+    "errors": {}
+  }
+}

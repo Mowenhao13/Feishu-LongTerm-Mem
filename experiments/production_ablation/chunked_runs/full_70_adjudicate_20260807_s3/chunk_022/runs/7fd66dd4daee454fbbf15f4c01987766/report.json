@@ -1,0 +1,285 @@
+{
+  "metadata": {
+    "run_id": "7fd66dd4daee454fbbf15f4c01987766",
+    "created_at": "2026-08-07T15:48:30.483318+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "92293e08f40f6a1f48dd4f774e961f92cfb8edab8c35ffab92a57e1827c59ff8",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sre_reliability_channel_6",
+      "sre_reliability_channel_7",
+      "sre_reliability_channel_8"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "sre_reliability_channel_6": 2,
+      "sre_reliability_channel_7": 2,
+      "sre_reliability_channel_8": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 14,
+  "chat_metrics": {
+    "sre_reliability_channel_6": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "sre_reliability_channel_7": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    "sre_reliability_channel_8": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 5,
+    "strict_fp": 3,
+    "strict_fn": 1,
+    "valid_extra": 5,
+    "invalid": 3,
+    "evidence_valid": 13,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.625,
+    "recall": 0.8333333333333334,
+    "f1": 0.7142857142857143,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sre_reliability_channel_6",
+        "title": "每月一次小型演练，每季度一次大型综合演练",
+        "summary": "每月一次小型演练，每季度一次大型综合演练",
+        "source_message_ids": [
+          "m009",
+          "m013"
+        ],
+        "evidence_quote": "好，大家达成一致：每月小型演练，每季度大型演练",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m013",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_6",
+        "title": "普通值班三天一轮，安全值班专人每月轮换",
+        "summary": "普通值班三天一轮，安全值班专人每月轮换",
+        "source_message_ids": [
+          "m030"
+        ],
+        "evidence_quote": "那最终定下来：普通值班三天一轮，安全值班专人每月轮换",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m030",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_6",
+        "title": "Grace负责准备交接清单模板，Bob协助技术细节",
+        "summary": "Grace负责准备交接清单模板，Bob协助技术细节",
+        "source_message_ids": [
+          "m031",
+          "m033"
+        ],
+        "evidence_quote": "交接清单模板我明天发群里",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果描述了Grace和Bob的具体分工，证据支持（m031和m033），但候选GT中无等价决策内容。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "title": "on-call轮值改为两天一轮，强制休息期，响应时间10/20分钟",
+        "summary": "on-call轮值改为两天一轮，强制休息期，响应时间10/20分钟",
+        "source_message_ids": [
+          "m032",
+          "m033"
+        ],
+        "evidence_quote": "那么on-call规范基本达成：两天一轮，强制休息，响应时间10/20分钟。下周开始试点。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确描述了on-call轮值改为两天一轮、强制休息期、响应时间10/20分钟，并包含下周试点的执行承诺，证据充分；但候选GT中m008和m031均不涉及此具体决策，因此不被覆盖。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_6",
+        "title": "Eve准备安全值班培训材料",
+        "summary": "Eve准备安全值班培训材料",
+        "source_message_ids": [
+          "m028"
+        ],
+        "evidence_quote": "培训材料我来准备",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Eve承诺准备培训材料，属于明确的执行承诺，但候选GT均为值班演练安排，不覆盖此内容。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "title": "三周一次故障演练，聚焦高优先级故障",
+        "summary": "三周一次故障演练，聚焦高优先级故障",
+        "source_message_ids": [
+          "m008",
+          "m009"
+        ],
+        "evidence_quote": "那么我们先定一个折中方案：三周一次演练，每次聚焦一个高优先级故障。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m008",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "title": "Bob负责整理故障演练场景清单",
+        "summary": "Bob负责整理故障演练场景清单",
+        "source_message_ids": [
+          "m009"
+        ],
+        "evidence_quote": "三周一次可以接受，我负责整理场景清单。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.27"
+      },
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "title": "Diana负责更新排班表并发邮件通知",
+        "summary": "Diana负责更新排班表并发邮件通知",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "好的，我更新排班表并发邮件通知大家。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据中Diana承诺更新排班表并通知，是明确的执行决策，但候选GT中无此内容，故为有效额外决策。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "title": "Charlie准备安全培训材料，包括事件升级流程",
+        "summary": "Charlie准备安全培训材料，包括事件升级流程",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "安全培训材料我下周准备好，包括事件升级流程。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果描述的是未来计划（准备材料），而非已发生的决策或执行承诺，且与候选GT中的演练安排或值班要求无事实等价关系。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "title": "Bob的轮值排班工具部署到测试环境供试用",
+        "summary": "Bob的轮值排班工具部署到测试环境供试用",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "排班工具已经部署到测试环境，大家可以试用。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为状态通报，无决策或执行承诺，属于噪声"
+      },
+      {
+        "chat_id": "sre_reliability_channel_8",
+        "title": "故障演练周期定为双月一次，下周开始实施",
+        "summary": "故障演练周期定为双月一次，下周开始实施",
+        "source_message_ids": [
+          "m007",
+          "m008",
+          "m009",
+          "m011"
+        ],
+        "evidence_quote": "好，故障演练周期定为双月一次，下周开始实施。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m007",
+        "reason": "提取结果与GT候选m007中的‘折中为双月一次’决策一致，均为双月一次演练周期，且证据链支持该决策。m025不相关。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_8",
+        "title": "建议轮值周期从一周缩短为三天",
+        "summary": "建议轮值周期从一周缩短为三天",
+        "source_message_ids": [
+          "m015",
+          "m018",
+          "m029",
+          "m030"
+        ],
+        "evidence_quote": "轮值周期先试行三天制，一个月后复盘。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确建议轮值周期从一周缩短为三天，并有试行和复盘计划，证据链完整，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "sre_reliability_channel_8",
+        "title": "建议试用开源方案Oncall做POC",
+        "summary": "建议试用开源方案Oncall做POC",
+        "source_message_ids": [
+          "m023",
+          "m025",
+          "m027"
+        ],
+        "evidence_quote": "我负责搭建POC环境，预计两周完成。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m025",
+        "reason": "提取结果与GT m025均明确建议试用开源方案Oncall做POC，决策等价。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "sre_reliability_channel_7",
+        "msg_id": "m031",
+        "expected_topic": "on-call轮值规范",
+        "expected_summary": "10分钟和20分钟可以接受，但必须确保值班手机信号畅通。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 13,
+    "errors": {}
+  }
+}

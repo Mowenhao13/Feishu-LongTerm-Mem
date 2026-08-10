@@ -16,6 +16,7 @@ class AdapterType(str, Enum):
     CONTACT = "Contact"
     WIKI = "Wiki"
     MINUTES = "Minutes"
+    PROJECT = "Project"
 
 
 class ChangeType(str, Enum):

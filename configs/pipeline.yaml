@@ -1,0 +1,67 @@
+# Feishu-LongTerm-Mem 声明式 Pipeline 配置
+# 定义数据源、转换器、索引和整理阶段的编排
+pipeline:
+  version: "1.0"
+
+  # ==================== 数据源 ====================
+  sources:
+    - name: lark_im
+      type: im
+      enabled: true
+      mode: websocket
+      config:
+        poll_interval: 10
+
+    - name: doc_watch
+      type: file
+      enabled: false
+      mode: watchdog
+      config:
+        watch_dir: data/docs
+
+  # ==================== 转换器 ====================
+  transforms:
+    - name: memory_extractor
+      type: llm_extract
+      mode: two_stage   # direct | two_stage（A/B 对比模式）
+      enabled: true
+      inputs: [lark_im, doc_watch]
+      config:
+        stage1:
+          type: memory   # 提取 entities + relationships + facts
+          ontology: default
+        stage2:
+          type: decision  # 从记忆提取/验证决策
+          validate: true
+      # direct mode fallback:
+      #   type: decision_direct — 单阶段决策提取（当前模式，baseline）
+
+  # ==================== 索引存储 ====================
+  indexes:
+    - name: memory_graph
+      type: in_memory
+      source: memory_extractor.decisions
+      config:
+        backend: git
+
+    - name: entity_graph
+      type: in_memory
+      source: memory_extractor.entities
+      config:
+        backend: git
+
+    - name: neo4j_graph
+      type: neo4j
+      source: memory_extractor
+      enabled: false  # 待 Neo4j 集成就绪后启用
+      config:
+        uri: bolt://localhost:7687
+        user: neo4j
+        password: neo4j123
+
+  # ==================== 批量整理 ====================
+  consolidation:
+    name: sleep_manager
+    enabled: true
+    interval: 3600
+    phases: [light, rem, deep, promote, tree, wave]

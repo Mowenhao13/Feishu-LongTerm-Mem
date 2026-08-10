@@ -1,8 +1,9 @@
 """
-Git-based storage backend for decision persistence.
+Graph database and Git-based storage backends.
 
 Provides version-controlled storage using Git as the backend,
-enabling history tracking, branching, and collaboration.
+enabling history tracking, branching, and collaboration, along
+with Neo4j graph database for persistent graph querying.
 """
 from .git_cli import GitCLI, CommitLogEntry, BlameEntry, SearchHit
 from .git_format import (
@@ -13,6 +14,8 @@ from .git_format import (
     format_decision_summary,
 )
 from .git_storage import GitStorage, GitStorageConfig
+from .neo4j_client import Neo4jClient, ExtractedEntity, ExtractedRelationship
+from .neo4j_sync import Neo4jSyncEngine
 
 __all__ = [
     "GitCLI",
@@ -26,4 +29,8 @@ __all__ = [
     "format_decision_summary",
     "GitStorage",
     "GitStorageConfig",
+    "Neo4jClient",
+    "ExtractedEntity",
+    "ExtractedRelationship",
+    "Neo4jSyncEngine",
 ]

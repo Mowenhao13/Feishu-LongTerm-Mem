@@ -1,0 +1,83 @@
+{
+  "runs": 5,
+  "complete_runs": 5,
+  "incomplete_runs": 0,
+  "numeric": {
+    "strict_tp": {
+      "mean": 3.4,
+      "stddev": 0.8,
+      "min": 2.0,
+      "max": 4.0
+    },
+    "strict_fp": {
+      "mean": 11.6,
+      "stddev": 1.3564659966250536,
+      "min": 10.0,
+      "max": 14.0
+    },
+    "strict_fn": {
+      "mean": 2.6,
+      "stddev": 0.8,
+      "min": 2.0,
+      "max": 4.0
+    },
+    "valid_extra": {
+      "mean": 0.0,
+      "stddev": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "invalid": {
+      "mean": 11.6,
+      "stddev": 1.3564659966250536,
+      "min": 10.0,
+      "max": 14.0
+    },
+    "evidence_valid": {
+      "mean": 15.0,
+      "stddev": 1.4142135623730951,
+      "min": 13.0,
+      "max": 17.0
+    },
+    "evidence_invalid": {
+      "mean": 0.0,
+      "stddev": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "precision": {
+      "mean": 0.22653953889248007,
+      "stddev": 0.05187187740888759,
+      "min": 0.15384615384615385,
+      "max": 0.2857142857142857
+    },
+    "recall": {
+      "mean": 0.5666666666666667,
+      "stddev": 0.13333333333333333,
+      "min": 0.3333333333333333,
+      "max": 0.6666666666666666
+    },
+    "f1": {
+      "mean": 0.3231969251191219,
+      "stddev": 0.07409334541818063,
+      "min": 0.21052631578947367,
+      "max": 0.4
+    }
+  },
+  "health": {
+    "all_complete": true,
+    "evidence_contract_pass_rate": 1.0,
+    "runner_error_free_rate": 1.0
+  },
+  "run_ids": [
+    "8ab6b61c2605416197b2e3ba53b5119d",
+    "833fa23954bc410b816efd4098c2a359",
+    "1322f6b5e25d46429561e2291beb1092",
+    "cec09badc7cd470f8728defdd2f27f18",
+    "66ac2494547242f986ccdb0098ba0eed"
+  ],
+  "variant": "full",
+  "sample": 3,
+  "failures": [],
+  "created_at": "2026-08-07T07:50:47.438294+00:00"
+}

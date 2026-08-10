@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "run_id": "d805df3de95649b2a4a8f5af46a411b3",
+    "created_at": "2026-08-07T14:53:02.568134+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "4d43caa0ad63000b6d654ab069fcf32e7fa8f67e3252c32b277b682408cd99af",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "backend_arch_channel_2",
+      "backend_arch_channel_3",
+      "backend_arch_channel_4"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "backend_arch_channel_2": 2,
+      "backend_arch_channel_3": 1,
+      "backend_arch_channel_4": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 12,
+  "chat_metrics": {
+    "backend_arch_channel_2": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "backend_arch_channel_3": {
+      "expected": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "backend_arch_channel_4": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 2,
+    "strict_fn": 2,
+    "valid_extra": 4,
+    "invalid": 2,
+    "evidence_valid": 12,
+    "evidence_invalid": 0,
+    "errors": [
+      "backend_arch_channel_2:Emma负责安全配置模板，Frank负责性能测试脚本: match_gt must name a candidate msg_id, got ''",
+      "backend_arch_channel_2:API网关统一处理版本路由: match_gt must name a candidate msg_id, got 'm024'",
+      "backend_arch_channel_3:建议Sentinel规则中加入来源IP过滤: match_gt must name a candidate msg_id, got 'm011'"
+    ],
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1": 0.6,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "采用语义化版本，数据模型变更对应主版本号升级",
+        "summary": "采用语义化版本，数据模型变更对应主版本号升级",
+        "source_message_ids": [
+          "m004"
+        ],
+        "evidence_quote": "@Emma 数据模型变更应该对应主版本号升级，这样下游能感知断裂性变化。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确提出了语义化版本和数据模型变更对应主版本号升级的决策，但候选GT中m007和m018均不涉及此决策内容，属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "旧版本最多支持18个月安全更新，超期强制升级",
+        "summary": "旧版本最多支持18个月安全更新，超期强制升级",
+        "source_message_ids": [
+          "m007",
+          "m008",
+          "m009"
+        ],
+        "evidence_quote": "旧版本最多支持18个月安全更新，超期强制升级如何？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m007",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "Emma负责安全配置模板，Frank负责性能测试脚本",
+        "summary": "Emma负责安全配置模板，Frank负责性能测试脚本",
+        "source_message_ids": [
+          "m021"
+        ],
+        "evidence_quote": "没问题，我负责安全配置模板，你负责性能测试脚本。",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "",
+        "reason": "match_gt must name a candidate msg_id, got ''"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "先做POC对比Consul和K8s原生在500节点下的表现",
+        "summary": "先做POC对比Consul和K8s原生在500节点下的表现",
+        "source_message_ids": [
+          "m018",
+          "m019"
+        ],
+        "evidence_quote": "那我们先做POC，对比Consul和K8s原生在500节点下的表现。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m018",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "版本废弃通知机制必须加上",
+        "summary": "版本废弃通知机制必须加上",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "所以版本废弃通知机制必须加上，不能突然下线。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为建议性结论，缺乏具体执行承诺或事实决策，属于讨论噪声。"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "API网关统一处理版本路由",
+        "summary": "API网关统一处理版本路由",
+        "source_message_ids": [
+          "m024",
+          "m025"
+        ],
+        "evidence_quote": "好想法，网关层做版本转换还能减少安全漏洞面。",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "",
+        "reason": "match_gt must name a candidate msg_id, got 'm024'"
+      },
+      {
+        "chat_id": "backend_arch_channel_2",
+        "title": "如果性能达标，下个迭代切到Consul",
+        "summary": "如果性能达标，下个迭代切到Consul",
+        "source_message_ids": [
+          "m029"
+        ],
+        "evidence_quote": "如果性能达标，我们就在下个迭代切到Consul。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果包含明确的条件性决策承诺（性能达标则切换Consul），但候选GT中m007是询问安全更新策略，m018是提议做POC对比，均不涉及该切换决策，因此属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_3",
+        "title": "建议Sentinel规则中加入来源IP过滤",
+        "summary": "建议Sentinel规则中加入来源IP过滤",
+        "source_message_ids": [
+          "m010",
+          "m011"
+        ],
+        "evidence_quote": "限流熔断策略我建议增加IP白名单，防止内部接口被滥用。",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "",
+        "reason": "match_gt must name a candidate msg_id, got 'm011'"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "title": "同意混合模型，订单用Raft，其他用最终一致性。",
+        "summary": "同意混合模型，订单用Raft，其他用最终一致性。",
+        "source_message_ids": [
+          "m031",
+          "m037",
+          "m038"
+        ],
+        "evidence_quote": "同意混合模型，订单用Raft，其他用最终一致性。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m038",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "backend_arch_channel_3",
+        "title": "数据一致性方案今天不定论，明天继续",
+        "summary": "数据一致性方案今天不定论，明天继续",
+        "source_message_ids": [
+          "m030",
+          "m031",
+          "m034"
+        ],
+        "evidence_quote": "今天暂时不定论，大家回去再调研一下补偿方案的成本。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "证据原文是‘今天暂时不定论’，提取结果‘今天不定论，明天继续’只是复述了会议状态，并非明确决策或执行承诺，属于讨论噪声。"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "title": "收到，我负责Envoy部署文档。",
+        "summary": "收到，我负责Envoy部署文档。",
+        "source_message_ids": [
+          "m023"
+        ],
+        "evidence_quote": "收到，我负责Envoy部署文档。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是对任务的确认承诺，但未被任何候选GT覆盖，候选GT分别是技术选型定案和混合模型决策。"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "title": "Bob负责etcd集群配置，Eve负责业务代码适配。",
+        "summary": "Bob负责etcd集群配置，Eve负责业务代码适配。",
+        "source_message_ids": [
+          "m040"
+        ],
+        "evidence_quote": "我下午把etcd集群配置好，@Eve 你负责业务代码适配。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选无等价决策，GT候选为Envoy集成和一致性模型讨论，而证据为etcd配置与业务适配分工，属于不同决策内容。"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "backend_arch_channel_3",
+        "msg_id": "m020",
+        "expected_topic": "限流熔断策略",
+        "expected_summary": "没意见，Sentinel支持QPS和线程数限流，够用了。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "backend_arch_channel_4",
+        "msg_id": "m022",
+        "expected_topic": "限流熔断策略",
+        "expected_summary": "那就定Envoy吧，下周三前完成集成。大家加油！",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 9,
+    "errors": {
+      "backend_arch_channel_2|Emma负责安全配置模板，Frank负责性能测试脚本|m021|没问题，我负责安全配置模板，你负责性能测试脚本。": "match_gt must name a candidate msg_id, got ''",
+      "backend_arch_channel_2|API网关统一处理版本路由|m024,m025|好想法，网关层做版本转换还能减少安全漏洞面。": "match_gt must name a candidate msg_id, got 'm024'",
+      "backend_arch_channel_3|建议Sentinel规则中加入来源IP过滤|m010,m011|限流熔断策略我建议增加IP白名单，防止内部接口被滥用。": "match_gt must name a candidate msg_id, got 'm011'"
+    }
+  }
+}

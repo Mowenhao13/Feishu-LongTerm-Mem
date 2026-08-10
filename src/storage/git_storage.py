@@ -57,6 +57,7 @@ class GitStorage:
         self._cli = GitCLI(str(self._work_dir))
         self._init_repo()
         self.post_commit_hooks: List[Callable[[str], None]] = []
+        self._current_trace_id: Optional[str] = None
 
     @property
     def cli(self) -> GitCLI:
@@ -65,6 +66,10 @@ class GitStorage:
     @property
     def work_dir(self) -> Path:
         return self._work_dir
+
+    def set_trace_id(self, trace_id: Optional[str]) -> None:
+        """设置当前 trace_id，用于注入 commit message 溯源"""
+        self._current_trace_id = trace_id
 
     # ==================== Init ====================
 
@@ -138,6 +143,7 @@ class GitStorage:
 
         rel_path = str(path.relative_to(self._work_dir))
         msg = self._format_commit_message("decision", decision)
+        msg = self._append_trace_to_message(msg)
         commit_hash = self._cli.commit(rel_path, msg)
 
         # Update decision branch to point to the same commit as main
@@ -336,3 +342,11 @@ class GitStorage:
         if proposer:
             msg += f"Proposer: {proposer}\n"
         return msg
+
+    def _append_trace_to_message(self, message: str) -> str:
+        """如果设置了 trace_id，追加到 commit message 末尾"""
+        if self._current_trace_id:
+            trace_meta = f"\nTraceID: {self._current_trace_id}"
+            if trace_meta not in message:
+                message += trace_meta
+        return message

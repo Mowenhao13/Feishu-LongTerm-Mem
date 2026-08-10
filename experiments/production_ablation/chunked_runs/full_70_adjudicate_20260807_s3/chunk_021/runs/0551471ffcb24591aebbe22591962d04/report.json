@@ -1,0 +1,231 @@
+{
+  "metadata": {
+    "run_id": "0551471ffcb24591aebbe22591962d04",
+    "created_at": "2026-08-07T15:47:09.407339+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "a947caae1c8a2fa3086e96908e262e7450fe2178d2bd3a9f85b998534161bce5",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "sre_reliability_channel_3",
+      "sre_reliability_channel_4",
+      "sre_reliability_channel_5"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "sre_reliability_channel_3": 2,
+      "sre_reliability_channel_4": 2,
+      "sre_reliability_channel_5": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 10,
+  "chat_metrics": {
+    "sre_reliability_channel_3": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "sre_reliability_channel_4": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "sre_reliability_channel_5": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    }
+  },
+  "metrics": {
+    "strict_tp": 2,
+    "strict_fp": 3,
+    "strict_fn": 4,
+    "valid_extra": 2,
+    "invalid": 3,
+    "evidence_valid": 7,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.4,
+    "recall": 0.3333333333333333,
+    "f1": 0.3636363636363636,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "sre_reliability_channel_3",
+        "title": "两周一次故障演练，每次演练后必须有复盘文档",
+        "summary": "两周一次故障演练，每次演练后必须有复盘文档",
+        "source_message_ids": [
+          "m006",
+          "m007",
+          "m008"
+        ],
+        "evidence_quote": "我同意两周一次，但每次演练后必须有复盘文档",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m007",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "sre_reliability_channel_4",
+        "title": "核心系统每月一次故障演练，非核心每季度一次",
+        "summary": "核心系统每月一次故障演练，非核心每季度一次",
+        "source_message_ids": [
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "要不折中一下：核心系统每月一次，非核心每季度一次",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.31"
+      },
+      {
+        "chat_id": "sre_reliability_channel_4",
+        "title": "David排Q2演练日历，下周三前发出",
+        "summary": "David排Q2演练日历，下周三前发出",
+        "source_message_ids": [
+          "m012"
+        ],
+        "evidence_quote": "好的，我排一下Q2的演练日历，下周三前发出来",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与候选GT主题不同，且证据明确承诺执行排期，属于有效决策但未被GT覆盖"
+      },
+      {
+        "chat_id": "sre_reliability_channel_4",
+        "title": "Bob准备培训材料，包括常见故障处理步骤",
+        "summary": "Bob准备培训材料，包括常见故障处理步骤",
+        "source_message_ids": [
+          "m024"
+        ],
+        "evidence_quote": "培训材料我来准备，包括常见故障处理步骤",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与候选GT无等价决策：m010要求整理系统清单，m023同意培训机制但未指定具体材料，而提取结果为准备培训材料的具体承诺，属于未被覆盖的有效额外决策"
+      },
+      {
+        "chat_id": "sre_reliability_channel_4",
+        "title": "David排培训时间表，本周五前完成全员通知",
+        "summary": "David排培训时间表，本周五前完成全员通知",
+        "source_message_ids": [
+          "m026"
+        ],
+        "evidence_quote": "我排个培训时间表，本周五之前完成全员通知",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.27"
+      },
+      {
+        "chat_id": "sre_reliability_channel_5",
+        "title": "核心服务月度演练，其他服务双月演练",
+        "summary": "核心服务月度演练，其他服务双月演练",
+        "source_message_ids": [
+          "m011",
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "折中方案：核心服务月度，其他服务双月，如何？",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.25"
+      },
+      {
+        "chat_id": "sre_reliability_channel_5",
+        "title": "两周轮值+二级on-call+安全认证考试",
+        "summary": "两周轮值+二级on-call+安全认证考试",
+        "source_message_ids": [
+          "m023",
+          "m027",
+          "m028",
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "我整理一下方案：两周轮值+二级支持+安全认证",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "sre_reliability_channel_3",
+        "msg_id": "m021",
+        "expected_topic": "on-call轮值规范",
+        "expected_summary": "大家意见分歧，我们先投票决定轮换周期吧",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sre_reliability_channel_4",
+        "msg_id": "m010",
+        "expected_topic": "故障演练周期",
+        "expected_summary": "我看这个方案可行。@Bob 你整理一下核心系统清单",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sre_reliability_channel_4",
+        "msg_id": "m023",
+        "expected_topic": "on-call轮值规范",
+        "expected_summary": "我同意二级on-call机制，但必须全员覆盖培训",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "sre_reliability_channel_5",
+        "msg_id": "m012",
+        "expected_topic": "故障演练周期",
+        "expected_summary": "@Diana 同意折中，按服务分级执行",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 7,
+    "errors": {}
+  }
+}

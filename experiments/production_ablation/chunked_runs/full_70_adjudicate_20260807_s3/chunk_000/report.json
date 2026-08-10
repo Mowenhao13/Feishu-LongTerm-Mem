@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "run_id": "a0c811fead794b53bf4fc59355d8a505",
+    "created_at": "2026-08-07T15:05:09.537797+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "53b8d08cd62146fc17032c139541924e4b7f4c74aa1e36c5305f2ad194eaafbc",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "ai_ml_platform_channel_0",
+      "ai_ml_platform_channel_1",
+      "ai_ml_platform_channel_2"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "ai_ml_platform_channel_0": 2,
+      "ai_ml_platform_channel_1": 2,
+      "ai_ml_platform_channel_2": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 11,
+  "chat_metrics": {
+    "ai_ml_platform_channel_0": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ai_ml_platform_channel_1": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "ai_ml_platform_channel_2": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 2,
+    "strict_fn": 2,
+    "valid_extra": 5,
+    "invalid": 2,
+    "evidence_valid": 11,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "先做PoC验证NFS性能，再定方案",
+        "summary": "先做PoC验证NFS性能，再定方案",
+        "source_message_ids": [
+          "m005"
+        ],
+        "evidence_quote": "先做PoC验证NFS性能，再定方案",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行承诺（先做PoC验证），但候选GT中无等价决策，m009是同意namespace方案，m023是出对比报告，均不匹配。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "同意namespace隔离方案，进入实施",
+        "summary": "同意namespace隔离方案，进入实施",
+        "source_message_ids": [
+          "m008",
+          "m009",
+          "m010"
+        ],
+        "evidence_quote": "好，namespace隔离方案通过，进入实施",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据链显示m010明确同意namespace隔离方案并进入实施，但候选GT中m009是带条件的同意（需限制资源上限），两者决策不等价，且无其他GT匹配。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "等Bob报告后再定最终方案",
+        "summary": "等Bob报告后再定最终方案",
+        "source_message_ids": [
+          "m025",
+          "m023"
+        ],
+        "evidence_quote": "好，等Bob报告后再定最终方案",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.23"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "定NFS，尽快搭建测试环境",
+        "summary": "定NFS，尽快搭建测试环境",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "那就定NFS，尽快搭建测试环境",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求执行NFS搭建，但GT候选均为其他主题，无等价决策"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "CI/CD用GitLab + ArgoCD，加入模型验证",
+        "summary": "CI/CD用GitLab + ArgoCD，加入模型验证",
+        "source_message_ids": [
+          "m031",
+          "m032",
+          "m033"
+        ],
+        "evidence_quote": "同意，明天开个短会细化实施计划",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确决策了CI/CD方案（GitLab+ArgoCD）并加入模型验证，证据链完整（m031提出、m032补充、m033确认），但候选GT中无等价决策，故为有效额外决策。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "title": "明天10点开短会细化实施计划",
+        "summary": "明天10点开短会细化实施计划",
+        "source_message_ids": [
+          "m033",
+          "m034"
+        ],
+        "evidence_quote": "我订了会议室，明天10点",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺明天10点开短会细化实施计划，证据[m034]支持，但未被任何GT候选覆盖。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "特征存储选Feast，进入implementation",
+        "summary": "特征存储选Feast，进入implementation",
+        "source_message_ids": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017"
+        ],
+        "evidence_quote": "我倾向于Feast，因为可控性更好。大家同意吗？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m017",
+        "reason": "提取结果与GT m017完全一致，均为明确决策'特征存储选Feast，进入implementation'。"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "先试MLflow，PoC后决定",
+        "summary": "先试MLflow，PoC后决定",
+        "source_message_ids": [
+          "m028",
+          "m029",
+          "m031",
+          "m032",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "evidence_quote": "那就先定MLflow，PoC后决定。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.10"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_1",
+        "title": "好，我明天开始搭建。",
+        "summary": "好，我明天开始搭建。",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "好，我明天开始搭建。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m033",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "定下分层抽样+差分隐私的方案",
+        "summary": "定下分层抽样+差分隐私的方案",
+        "source_message_ids": [
+          "m004",
+          "m005",
+          "m008",
+          "m010",
+          "m011",
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "好的，那就定下分层抽样+差分隐私的方案",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_2",
+        "title": "建议用Kubernetes管理GPU节点",
+        "summary": "建议用Kubernetes管理GPU节点",
+        "source_message_ids": [
+          "m018",
+          "m019",
+          "m020",
+          "m022",
+          "m026",
+          "m027",
+          "m028",
+          "m029",
+          "m030"
+        ],
+        "evidence_quote": "那整体方案就是K8s+Volcano+网络隔离？",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "exact_source_match"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "msg_id": "m009",
+        "expected_topic": "ML模型训练平台",
+        "expected_summary": "同意namespace方案，但需限制每个团队资源上限",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "ai_ml_platform_channel_0",
+        "msg_id": "m023",
+        "expected_topic": "推理服务部署方案",
+        "expected_summary": "我下周一前出Knative vs Istio对比报告",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 11,
+    "errors": {}
+  }
+}

@@ -1,20 +1,7 @@
 """
-Topic-based Fact Extractor - Two-stage Extraction Pipeline
+Topic-based Fact Extractor - Extracts facts from topics and episodes.
 
-Stage 1: Fact Extraction
-- Extract key facts from a Topic and its associated Episodes
-- Each fact is a complete statement that can directly answer user queries
-- Supports cross-episode information merging
-- Output: Fact list
-
-Stage 2: Role and Weight Assignment
-- Assign roles and importance weights to each fact within the topic
-- Build fact hyperedges (FactHyperedge), connecting facts to episodes
-- Output: Fact hyperedges
-
-Methods:
-- extract_facts(): Execute the complete two-stage pipeline
-  Returns: (FactExtractResult, FactHyperedgeExtractResult)
+Stores facts directly on the episode (no hyperedge intermediaries).
 """
 
 import re
@@ -35,11 +22,11 @@ except ImportError:
 from src.utils.logger import get_logger
 from model.llm_provider import LLMProvider
 from types import Fact, Episode, Topic
-from structure import FactHyperedge, FactRole
 from prompts.fact_prompts import (
     FACT_EXTRACTION_PROMPT,
     FACT_ROLE_ASSIGNMENT_PROMPT
 )
+from src.structure import FactRole
 
 logger = get_logger(__name__)
 
@@ -491,7 +478,7 @@ class FactExtractor:
         fact_ids = {fact.fact_id for fact in facts}
 
         # Valid role enum values
-        valid_roles = {role.value for role in FactRole}
+        valid_roles = {"core", "context", "detail", "temporal", "causal"}
 
         # Check each role assignment
         assigned_fact_ids = set()
@@ -633,11 +620,11 @@ class FactExtractor:
                     role_str = item.get("role", "detail")
                     weight = item.get("weight", 0.5)
 
-                    try:
-                        role = FactRole(role_str)
-                    except ValueError:
+                    if role_str not in {"core", "context", "detail", "temporal", "causal"}:
                         logger.warning(f"[Stage2] Unknown role type: {role_str}, using default value 'detail'")
-                        role = FactRole.DETAIL
+                        role = "detail"
+                    else:
+                        role = role_str
 
                     fact_roles[actual_fact_id] = role
                     fact_weights[actual_fact_id] = float(weight)
@@ -659,85 +646,18 @@ class FactExtractor:
                 print(f"  Attempt {attempt} failed: {type(e).__name__}")
                 print(f"  Error details: {str(e)}")
 
-                valid_roles_str = ', '.join([role.value for role in FactRole])
+                valid_roles_str = "core, context, detail, temporal, causal"
                 if isinstance(e, json.JSONDecodeError):
                     last_feedback = "JSON parsing failed. Please provide valid JSON format."
                 elif isinstance(e, ValueError) and "validation errors" in str(e):
                     last_feedback = str(e) + f"\n\nValid roles: {valid_roles_str}"
                 else:
                     last_feedback = f"Processing error: {str(e)}\n\nPlease check the output format and retry."
-    
-    def _build_fact_hyperedges(
-        self,
-        topic: Topic,
-        facts: List[Fact],
-        role_result: RoleAssignmentResult
-    ) -> List[FactHyperedgeExtractResult]:
-        """
-        Build fact hyperedges (one hyperedge per episode)
-
-        Args:
-            topic: Topic object
-            facts: List of facts
-            role_result: Role assignment result
-
-        Returns:
-            List of fact hyperedge results
-        """
-        hyperedge_results = []
-
-        # Build one hyperedge for each episode
-        for episode_id in topic.episode_ids:
-            # Find facts associated with this episode
-            related_facts = [
-                fact for fact in facts
-                if episode_id in fact.episode_ids
-            ]
-
-            if not related_facts:
-                continue
-
-            # Build role mapping and weight mapping
-            relation_map = {}
-            weights_map = {}
-
-            for fact in related_facts:
-                fact_id = fact.fact_id
-                role = role_result.fact_roles.get(fact_id, FactRole.DETAIL)
-                weight = role_result.fact_weights.get(fact_id, 0.5)
-
-                relation_map[fact_id] = role.value
-                weights_map[fact_id] = weight
-
-            # Generate hyperedge ID
-            hyperedge_id = f"fact_hyperedge_{episode_id}"
-
-            # Create fact hyperedge
-            fact_hyperedge = FactHyperedge(
-                id=hyperedge_id,
-                relation=relation_map,
-                weights=weights_map,
-                episode_node_id=episode_id,
-                created_at=datetime.now(),
-                extraction_confidence=role_result.extraction_confidence
-            )
-            
-            hyperedge_result = FactHyperedgeExtractResult(
-                topic_id=topic.topic_id,
-                episode_id=episode_id,
-                fact_hyperedge=fact_hyperedge,
-                role_assignment_result=role_result
-            )
-            
-            hyperedge_results.append(hyperedge_result)
-        
-        return hyperedge_results
-    
     async def extract_facts(
         self,
         topic: Topic,
         episodes: List[Episode]
-    ) -> Tuple[Optional[FactExtractResult], List[FactHyperedgeExtractResult]]:
+    ) -> Tuple[Optional[FactExtractResult], RoleAssignmentResult]:
         """
         Two-stage fact extraction pipeline
 
@@ -746,7 +666,7 @@ class FactExtractor:
             episodes: Associated Episode list
 
         Returns:
-            (FactExtractResult, List[FactHyperedgeExtractResult]) tuple
+            (FactExtractResult, RoleAssignmentResult) tuple
         """
         logger.info(f"[FactExtractor] Starting two-stage fact extraction - Topic: {topic.topic_id}")
 
@@ -755,16 +675,14 @@ class FactExtractor:
 
         if not fact_result.facts:
             logger.warning("[FactExtractor] No facts were extracted")
-            return fact_result, []
+            return fact_result, RoleAssignmentResult(
+                fact_roles={}, fact_weights={},
+                extraction_confidence=0.0, reasoning=""
+            )
 
         # ========== Stage 2: Role Assignment ==========
         role_result = await self._assign_fact_roles_stage(topic, fact_result.facts)
 
-        # ========== Build Fact Hyperedges ==========
-        hyperedge_results = self._build_fact_hyperedges(
-            topic, fact_result.facts, role_result
-        )
+        logger.info(f"[FactExtractor] Extraction complete - Facts: {fact_result.fact_count}")
 
-        logger.info(f"[FactExtractor] Extraction complete - Facts: {fact_result.fact_count}, Hyperedges: {len(hyperedge_results)}")
-
-        return fact_result, hyperedge_results
+        return fact_result, role_result

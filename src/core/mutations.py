@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import datetime
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
@@ -50,6 +51,10 @@ class DecisionMutation:
     current_version: int = 0
 
     metadata: Dict[str, Any] = field(default_factory=dict)
+
+    # === Audit fields ===
+    timestamp: Optional[datetime] = None
+    """When this mutation was applied. Auto-set by PipelineEngine if None."""
 
     @property
     def is_valid(self) -> bool:

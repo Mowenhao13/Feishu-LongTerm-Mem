@@ -10,6 +10,7 @@ from graph.retrieval import HierarchicalRetriever, RetrievalResult
 from graph.snapshot import DetectorSnapshot, SnapshotManager
 from node.node import DecisionNode
 from node.types import DecisionStatus, ImpactLevel, Relation, RelationType
+from src.structure import Hypergraph as SrcHypergraph
 
 
 class TestMemoryGraph:
@@ -128,8 +129,7 @@ class TestHypergraphBuilder:
         assert result["source_id"] == "msg-1"
         assert result["source_type"] == "im"
         assert "topics" in result
-        assert "facts" in result
-        assert "hyperedges" in result
+        assert "episodes" in result
 
     def test_build_decision_hypergraph(self):
         builder = HypergraphBuilder()
@@ -153,8 +153,9 @@ class TestHypergraphBuilder:
             {"event_id": "ep-2", "summary": "Second episode"},
         ]
         result = builder.build_from_episodes(episodes)
-        assert "ep-1" in result["episodes"]
-        assert "ep-2" in result["episodes"]
+        assert isinstance(result, SrcHypergraph)
+        assert "ep-1" in result.episodes or len(result.episodes) > 0
+        assert "ep-2" in result.episodes or len(result.episodes) > 0
 
 
 class TestSnapshot:

@@ -1,0 +1,2789 @@
+{
+  "timestamp": "2026-08-05T15:16:01.139758",
+  "config": {
+    "dataset": "argusbot_v3",
+    "project_dir": "/Users/halllo/projects/local/Feishu-LongTerm-Mem/ref/ArgusBot",
+    "model": "deepseek-local",
+    "pipeline": "v2 (MemoryExtractor Stage 1 + Stage 2 + DocEntityExtraction + Neo4j)",
+    "max_msgs_per_chat": 20,
+    "concurrency": 2,
+    "dry_run": false,
+    "skip_docs": false
+  },
+  "dataset": {
+    "total_messages": 2373,
+    "total_chats": 70,
+    "episodes": 70
+  },
+  "document_extraction": {
+    "files_processed": 20,
+    "total_chunks": 76,
+    "entities_extracted": 533,
+    "relationships_extracted": 330,
+    "facts_extracted": 186,
+    "sync_stats": {
+      "decisions_written": 0,
+      "entities_written": 1053,
+      "relationships_written": 1436,
+      "episodes_written": 0,
+      "errors": 0
+    },
+    "chunks_per_file": [
+      {
+        "file_path": "build/lib/codex_autoloop/__init__.py",
+        "size": 322,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/adapters/__init__.py",
+        "size": 446,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/adapters/control_channels.py",
+        "size": 5561,
+        "chunks": 2
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/adapters/event_sinks.py",
+        "size": 4536,
+        "chunks": 2
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/apps/__init__.py",
+        "size": 373,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/apps/cli_app.py",
+        "size": 21863,
+        "chunks": 6
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/apps/daemon_app.py",
+        "size": 41073,
+        "chunks": 14
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/apps/shell_utils.py",
+        "size": 6015,
+        "chunks": 2
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/attachment_policy.py",
+        "size": 774,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/banner.py",
+        "size": 5301,
+        "chunks": 2
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/btw_agent.py",
+        "size": 6856,
+        "chunks": 2
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/btw_skills.py",
+        "size": 7166,
+        "chunks": 2
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/checks.py",
+        "size": 1604,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/cli.py",
+        "size": 16725,
+        "chunks": 5
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/codex_runner.py",
+        "size": 20097,
+        "chunks": 7
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/codexloop.py",
+        "size": 43500,
+        "chunks": 13
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/control_state.py",
+        "size": 353,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/copilot_proxy.py",
+        "size": 9057,
+        "chunks": 3
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/core/__init__.py",
+        "size": 390,
+        "chunks": 1
+      },
+      {
+        "file_path": "build/lib/codex_autoloop/core/engine.py",
+        "size": 28664,
+        "chunks": 9
+      }
+    ]
+  },
+  "entity_store": {
+    "total_entities": 1053,
+    "total_relationships": 1436,
+    "total_facts": 953
+  },
+  "neo4j": {
+    "entities_written": 1053,
+    "decisions_written": 271,
+    "documents_written": 20,
+    "mentions_episode": 2177,
+    "mentions_document": 324,
+    "total_mentions": 2501,
+    "references": 273,
+    "upsert_calls": {
+      "entity": 2501,
+      "decision": 273,
+      "document": 20,
+      "relationship": 1436
+    }
+  },
+  "entity_decision_bridge": {
+    "entity_to_decision_lookups": 10,
+    "bridged_decisions": 30,
+    "sample_bridged": [
+      {
+        "entity": "Alice",
+        "decision_sid": "dec_ep_cloud_infra_chan_88742"
+      },
+      {
+        "entity": "Alice",
+        "decision_sid": "dec_ep_cloud_infra_chan_87723"
+      },
+      {
+        "entity": "Alice",
+        "decision_sid": "dec_ep_cloud_infra_chan_91575"
+      },
+      {
+        "entity": "David",
+        "decision_sid": "dec_ep_cloud_infra_chan_88742"
+      },
+      {
+        "entity": "David",
+        "decision_sid": "dec_ep_cloud_infra_chan_87723"
+      },
+      {
+        "entity": "David",
+        "decision_sid": "dec_ep_cloud_infra_chan_91575"
+      },
+      {
+        "entity": "Bob",
+        "decision_sid": "dec_ep_cloud_infra_chan_88742"
+      },
+      {
+        "entity": "Bob",
+        "decision_sid": "dec_ep_cloud_infra_chan_87723"
+      },
+      {
+        "entity": "Bob",
+        "decision_sid": "dec_ep_cloud_infra_chan_91575"
+      }
+    ]
+  },
+  "eval_metrics_with_project": {
+    "skipped": false,
+    "precision": 0.84,
+    "recall": 0.4773,
+    "f1": 0.6087,
+    "true_positives": 63,
+    "false_positives": 12,
+    "false_negatives": 69,
+    "total_expected": 132,
+    "total_detected": 273,
+    "decision_recall": 0.4773,
+    "suggestion_recall": 0.0,
+    "by_topic": {},
+    "by_chat": {}
+  },
+  "eval_metrics_without_project": {
+    "skipped": false,
+    "precision": 0.8986,
+    "recall": 0.4697,
+    "f1": 0.6169,
+    "true_positives": 62,
+    "false_positives": 7,
+    "false_negatives": 70,
+    "total_expected": 132,
+    "total_detected": 271
+  },
+  "hypergraph": {
+    "unique_episodes_in_hg": 7,
+    "unique_entities_cross_chat": 729,
+    "all_entity_names": [
+      "15分钟内响应",
+      "18个月安全更新",
+      "A/B测试",
+      "A/B测试分组ID",
+      "A/B测试框架",
+      "A/B评估框架",
+      "A100",
+      "ACID",
+      "ACL机制",
+      "ACME自动续期",
+      "ADS层",
+      "AES",
+      "AES-256",
+      "API层",
+      "AWS gp3",
+      "AWS io1",
+      "Airflow",
+      "Alex",
+      "Alice",
+      "Anomaly Detection Model",
+      "Apache Atlas",
+      "Apache Flink",
+      "Apache Ranger",
+      "Apache ShardingSphere",
+      "Audit Log",
+      "Bob",
+      "Burp Suite Pro",
+      "CDN",
+      "CEO",
+      "CI/CD",
+      "CI/CD流水线",
+      "CI/CD管道",
+      "CPU指标",
+      "CVSS",
+      "Cache-Control",
+      "Calico",
+      "Carol",
+      "Chaos Mesh",
+      "Chaos Monkey",
+      "Charlie",
+      "Cilium",
+      "ClickHouse",
+      "Cluster Federation",
+      "Consul",
+      "Cross-Cluster Authentication",
+      "Crossplane",
+      "DAST",
+      "DDoS",
+      "DLP工具",
+      "DVC"
+    ]
+  },
+  "llm": {
+    "ok": 70,
+    "failed": 0,
+    "total_expected": 134,
+    "decisions_with": 273,
+    "decisions_without": 271,
+    "total_entities": 1448
+  },
+  "per_episode": [
+    {
+      "chat_id": "cloud_infra_channel_0",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "多云统一管理平台",
+      "stage1": {
+        "entities": 13,
+        "relationships": 14,
+        "facts": 4,
+        "time_sec": 13.3
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "先做POC评估Crossplane"
+          ],
+          "time_sec": 5.3
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "先做POC，一个月后给结论"
+          ],
+          "time_sec": 6.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_1",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "K8s集群联邦管理",
+      "stage1": {
+        "entities": 18,
+        "relationships": 11,
+        "facts": 8,
+        "time_sec": 16.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "Istio升级从1.16到1.18",
+            "灰度发布策略：先1%流量，观察24小时",
+            "下周一启动灰度升级",
+            "Frank协助开发异常检测模型",
+            "升级需要2人周开发人力，David协调QA资源",
+            "Emma同步更新安全策略"
+          ],
+          "time_sec": 9.6
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "Istio升级从1.16到1.18",
+            "灰度发布策略：先1%流量，观察24小时",
+            "下周一启动灰度发布",
+            "灰度期间启用审计日志",
+            "需要2人周开发人力，包括灰度发布和回滚方案"
+          ],
+          "time_sec": 7.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_2",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "Ingress网关选型",
+      "stage1": {
+        "entities": 16,
+        "relationships": 15,
+        "facts": 10,
+        "time_sec": 17.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "Ingress网关选型确定为Nginx + ModSecurity"
+          ],
+          "time_sec": 5.8
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "采用Nginx + ModSecurity作为Ingress网关"
+          ],
+          "time_sec": 6.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_3",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 18,
+        "relationships": 12,
+        "facts": 7,
+        "time_sec": 14.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用混合存储方案",
+            "Dave负责混合存储方案的加密架构"
+          ],
+          "time_sec": 5.5
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "采用混合存储方案"
+          ],
+          "time_sec": 4.1
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_4",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 25,
+        "relationships": 14,
+        "facts": 6,
+        "time_sec": 18.7
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "确定采用GP3存储",
+            "Volcano调度器开发周期预估两周",
+            "Volcano调度器需集成Prometheus监控",
+            "Dave将添加监控日志传输加密安全策略"
+          ],
+          "time_sec": 9.3
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用GP3存储",
+            "监控日志传输必须加密",
+            "下周五演示Volcano调度器"
+          ],
+          "time_sec": 5.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_5",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 21,
+        "relationships": 17,
+        "facts": 13,
+        "time_sec": 19.8
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "存储类选型确定为AWS gp3",
+            "Charlie负责配置KMS加密和自动轮转"
+          ],
+          "time_sec": 5.8
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "存储类选型采用AWS gp3"
+          ],
+          "time_sec": 4.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_6",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 33,
+        "relationships": 24,
+        "facts": 12,
+        "time_sec": 31.3
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用混合存储方案：热数据用SSD，冷数据用HDD",
+            "冷数据加密必须到位",
+            "Eve负责准备SSD和HDD的详细测试报告"
+          ],
+          "time_sec": 11.2
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用混合存储方案：热数据用SSD，冷数据用HDD",
+            "冷数据加密必须到位",
+            "Eve负责准备SSD和HDD的详细测试报告"
+          ],
+          "time_sec": 8.2
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_7",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 32,
+        "relationships": 25,
+        "facts": 6,
+        "time_sec": 28.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用混合存储方案：热数据用SSD，冷数据用HDD",
+            "热数据使用NVMe SSD，冷数据使用SATA HDD",
+            "采用Kubernetes + Volcano插件做GPU批调度",
+            "一期GPU调度使用Volcano + MIG保障安全和性能"
+          ],
+          "time_sec": 9.2
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用混合存储方案：热数据用NVMe SSD，冷数据用SATA HDD",
+            "采用Kubernetes + Volcano插件做GPU批调度",
+            "一期采用Volcano + MIG方案"
+          ],
+          "time_sec": 7.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_8",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 0,
+        "relationships": 0,
+        "facts": 0,
+        "time_sec": 35.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用SSD+HDD混合存储方案",
+            "冷数据迁移需审计",
+            "使用Terraform管理存储生命周期"
+          ],
+          "time_sec": 8.5
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用SSD+HDD混合存储方案",
+            "冷数据迁移需审计",
+            "Alice开始用Terraform编写部署脚本"
+          ],
+          "time_sec": 14.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "cloud_infra_channel_9",
+      "episode_id": "ep_cloud_infra_chan",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "GPU调度策略",
+      "stage1": {
+        "entities": 19,
+        "relationships": 15,
+        "facts": 11,
+        "time_sec": 16.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用GP3和IO2混合存储方案",
+            "安排明天评审存储方案",
+            "下午两点继续讨论GPU调度策略"
+          ],
+          "time_sec": 5.6
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用GP3和IO2混合存储方案",
+            "下午两点继续讨论GPU调度策略"
+          ],
+          "time_sec": 5.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_0",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "事件驱动架构",
+      "stage1": {
+        "entities": 18,
+        "relationships": 9,
+        "facts": 16,
+        "time_sec": 26.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "微服务按订单、支付、库存三个领域拆分",
+            "采用事件驱动架构并使用Kafka作为事件总线",
+            "下午两点继续开会确认最终方案"
+          ],
+          "time_sec": 4.8
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "微服务按订单、支付、库存三个领域拆分",
+            "使用Kafka作为事件驱动架构的事件总线",
+            "Bob评估Kafka运维成本",
+            "下午两点继续开会确认最终方案"
+          ],
+          "time_sec": 7.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_1",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "GraphQL vs REST",
+      "stage1": {
+        "entities": 14,
+        "relationships": 15,
+        "facts": 11,
+        "time_sec": 18.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Saga模式处理分布式事务",
+            "Saga补偿操作使用唯一键约束保证幂等性",
+            "审计日志必须实时写入"
+          ],
+          "time_sec": 8.2
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Saga模式处理分布式事务",
+            "Saga补偿操作使用唯一键约束保证幂等性",
+            "审计日志必须实时写入"
+          ],
+          "time_sec": 7.1
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_2",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 4,
+      "topic": "API版本管理",
+      "stage1": {
+        "entities": 19,
+        "relationships": 19,
+        "facts": 15,
+        "time_sec": 30.4
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "采用语义化版本管理API版本",
+            "旧版本安全补丁生命周期策略：18个月安全更新",
+            "开始编写规范文档",
+            "Frank负责自动化测试部分",
+            "Frank负责编写证书管理脚本",
+            "进行Consul与K8s原生的POC对比测试",
+            "POC环境搭建需提前完成"
+          ],
+          "time_sec": 18.2
+        },
+        "without_project": {
+          "decisions": 11,
+          "decision_summaries": [
+            "采用语义化版本管理API版本",
+            "旧版本安全补丁生命周期策略：18个月安全更新",
+            "版本兼容性测试需自动化覆盖",
+            "编写规范文档",
+            "Frank负责自动化测试部分",
+            "选择Consul进行服务注册发现",
+            "Consul健康检查需TLS双向认证",
+            "Frank编写证书管理脚本",
+            "进行Consul与K8s原生的POC对比",
+            "POC重点测试安全策略和故障恢复时间",
+            "POC环境搭建需提前完成"
+          ],
+          "time_sec": 16.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_3",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据一致性模型",
+      "stage1": {
+        "entities": 19,
+        "relationships": 15,
+        "facts": 8,
+        "time_sec": 27.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Sentinel作为限流熔断技术",
+            "在Sentinel规则中加入来源IP过滤",
+            "订单系统采用强一致性，日志采用最终一致性",
+            "限流熔断策略决策时间点为今天下午3点前"
+          ],
+          "time_sec": 9.3
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Sentinel作为限流熔断技术",
+            "限流熔断策略增加IP白名单",
+            "订单系统采用强一致性，日志采用最终一致性",
+            "限流熔断策略决策时间点为今天下午3点前"
+          ],
+          "time_sec": 7.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_4",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 0,
+      "topic": "限流熔断策略",
+      "stage1": {
+        "entities": 28,
+        "relationships": 20,
+        "facts": 16,
+        "time_sec": 31.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "评估Envoy sidecar方案用于限流"
+          ],
+          "time_sec": 4.7
+        },
+        "without_project": {
+          "decisions": 0,
+          "decision_summaries": [],
+          "time_sec": 13.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_5",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据一致性模型",
+      "stage1": {
+        "entities": 22,
+        "relationships": 18,
+        "facts": 9,
+        "time_sec": 22.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "采用Sentinel作为限流熔断技术",
+            "限流熔断策略纳入架构",
+            "限流熔断结合WAF设计",
+            "数据一致性模型采用混合方案",
+            "订单系统必须强一致性",
+            "推荐系统采用最终一致性",
+            "数据一致性模型涉及审计日志需保证不可篡改"
+          ],
+          "time_sec": 11.1
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Sentinel作为限流熔断组件",
+            "限流熔断结合WAF设计",
+            "数据一致性模型采用混合方案",
+            "订单系统必须强一致性"
+          ],
+          "time_sec": 4.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_6",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "数据一致性模型",
+      "stage1": {
+        "entities": 19,
+        "relationships": 17,
+        "facts": 8,
+        "time_sec": 21.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "限流方案采用Redis分布式令牌桶+熔断器",
+            "Bob负责出详细设计文档",
+            "Grace负责准备测试用例"
+          ],
+          "time_sec": 12.3
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Redis分布式令牌桶实现限流",
+            "Bob负责出详细设计文档",
+            "Grace负责准备测试用例"
+          ],
+          "time_sec": 7.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_7",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据一致性模型",
+      "stage1": {
+        "entities": 26,
+        "relationships": 22,
+        "facts": 8,
+        "time_sec": 23.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "采用Resilience4j+令牌桶作为限流熔断方案"
+          ],
+          "time_sec": 6.3
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "采用Resilience4j+令牌桶作为限流熔断方案"
+          ],
+          "time_sec": 5.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_8",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "数据一致性模型",
+      "stage1": {
+        "entities": 29,
+        "relationships": 15,
+        "facts": 11,
+        "time_sec": 22.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "选定Sentinel作为新系统的限流熔断组件"
+          ],
+          "time_sec": 6.0
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "采用Sentinel作为限流熔断组件"
+          ],
+          "time_sec": 6.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "backend_arch_channel_9",
+      "episode_id": "ep_backend_arch_cha",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "数据一致性模型",
+      "stage1": {
+        "entities": 0,
+        "relationships": 0,
+        "facts": 0,
+        "time_sec": 37.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用Sentinel作为熔断组件",
+            "Frank配合Bob做集成测试"
+          ],
+          "time_sec": 5.3
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "采用Sentinel作为熔断组件"
+          ],
+          "time_sec": 6.2
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_0",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据湖方案选型",
+      "stage1": {
+        "entities": 21,
+        "relationships": 16,
+        "facts": 18,
+        "time_sec": 24.7
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "选择Iceberg作为数据湖方案"
+          ],
+          "time_sec": 3.4
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "选择Iceberg作为数据湖方案",
+            "两周内完成Iceberg PoC验证"
+          ],
+          "time_sec": 4.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_1",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据血缘追踪",
+      "stage1": {
+        "entities": 19,
+        "relationships": 14,
+        "facts": 12,
+        "time_sec": 18.8
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "确定数据质量监控核心指标",
+            "监控数据流加密传输",
+            "监控日志保留90天",
+            "下周启动数据质量监控原型开发",
+            "数据血缘需求来自合规团队，需严格控制访问"
+          ],
+          "time_sec": 6.5
+        },
+        "without_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "确定数据质量监控核心指标",
+            "监控数据流加密传输",
+            "采用Kafka+Schema Registry实现监控数据流",
+            "监控日志保留90天",
+            "下周启动数据质量监控原型",
+            "数据血缘信息需严格控制访问"
+          ],
+          "time_sec": 9.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_2",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数仓分层设计",
+      "stage1": {
+        "entities": 19,
+        "relationships": 14,
+        "facts": 6,
+        "time_sec": 17.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "确认数仓分层设计为ODS->DWD->DWS->ADS",
+            "确认每层都要安全控制，Emma后续出规范文档"
+          ],
+          "time_sec": 21.8
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "确认数仓分层设计方案：ODS->DWD->DWS->ADS",
+            "Emma负责出安全规范文档"
+          ],
+          "time_sec": 9.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_3",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据脱敏方案",
+      "stage1": {
+        "entities": 30,
+        "relationships": 22,
+        "facts": 7,
+        "time_sec": 33.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Apache Ranger作为数据脱敏方案",
+            "Diana协调测试资源",
+            "Charlie搭建Ranger集群进行压力测试"
+          ],
+          "time_sec": 7.4
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Apache Ranger作为数据脱敏方案",
+            "两周内完成Ranger POC",
+            "Charlie搭建Ranger集群进行压力测试",
+            "采用Apache Atlas作为元数据管理平台"
+          ],
+          "time_sec": 6.6
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_4",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据脱敏方案",
+      "stage1": {
+        "entities": 28,
+        "relationships": 28,
+        "facts": 16,
+        "time_sec": 30.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "采用动态脱敏+静态脱敏双模式方案",
+            "静态脱敏数据采用压缩存储",
+            "Charlie负责安全审计",
+            "Bob负责脱敏方案实施",
+            "脱敏规则中加入正则校验",
+            "元数据平台必须支持RBAC"
+          ],
+          "time_sec": 11.5
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用动态脱敏+静态脱敏双模式方案",
+            "Charlie负责安全审计并加入正则校验",
+            "静态脱敏数据采用压缩存储"
+          ],
+          "time_sec": 8.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_5",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 0,
+      "topic": "其他",
+      "stage1": {
+        "entities": 23,
+        "relationships": 10,
+        "facts": 14,
+        "time_sec": 20.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 0,
+          "decision_summaries": [],
+          "time_sec": 8.4
+        },
+        "without_project": {
+          "decisions": 0,
+          "decision_summaries": [],
+          "time_sec": 6.6
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_6",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据脱敏方案",
+      "stage1": {
+        "entities": 20,
+        "relationships": 22,
+        "facts": 8,
+        "time_sec": 28.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "先梳理敏感字段分类，再定脱敏算法",
+            "生产环境用动态脱敏，分析和测试用静态脱敏",
+            "动态+静态脱敏方案批准，Bob出详细设计",
+            "元数据管理平台应提上日程",
+            "先做POC对比Apache Atlas和DataHub，两周出结果"
+          ],
+          "time_sec": 10.0
+        },
+        "without_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "先梳理敏感字段分类，再定脱敏算法",
+            "生产环境用动态脱敏，分析和测试用静态脱敏",
+            "Bob负责出详细设计",
+            "元数据管理平台提上日程",
+            "先做POC对比Apache Atlas和DataHub",
+            "性能问题通过压测评估"
+          ],
+          "time_sec": 9.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_7",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "数据脱敏方案",
+      "stage1": {
+        "entities": 0,
+        "relationships": 0,
+        "facts": 0,
+        "time_sec": 2.8
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "数据脱敏方案分阶段实施",
+            "动态脱敏延迟需控制在50ms内",
+            "脱敏功能需在6月前上线"
+          ],
+          "time_sec": 18.6
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "数据脱敏方案分阶段实施"
+          ],
+          "time_sec": 7.1
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_8",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "数据脱敏方案",
+      "stage1": {
+        "entities": 31,
+        "relationships": 30,
+        "facts": 17,
+        "time_sec": 36.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "采用混合脱敏方案：动态脱敏+静态脱敏",
+            "Bob负责出脱敏方案详细架构图",
+            "动态脱敏密钥管理需集成KMS",
+            "Jack负责KMS集成，但需安全团队提供密钥轮换策略",
+            "元数据管理平台需同步推进",
+            "元数据平台必须支持审计日志和RBAC"
+          ],
+          "time_sec": 14.8
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用混合脱敏方案：动态脱敏+静态脱敏",
+            "动态脱敏密钥管理集成KMS",
+            "Bob负责出脱敏方案详细架构图",
+            "元数据管理平台同步推进",
+            "元数据平台必须支持审计日志和RBAC"
+          ],
+          "time_sec": 9.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "data_platform_channel_9",
+      "episode_id": "ep_data_platform_ch",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据脱敏方案",
+      "stage1": {
+        "entities": 27,
+        "relationships": 15,
+        "facts": 8,
+        "time_sec": 23.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用动态脱敏方案，先做最小可行版本",
+            "Bob负责联系供应商落实动态脱敏"
+          ],
+          "time_sec": 15.3
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用动态脱敏方案",
+            "采用最小权限原则",
+            "启动元数据管理平台项目"
+          ],
+          "time_sec": 10.6
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_0",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "跨平台框架Flutter",
+      "stage1": {
+        "entities": 21,
+        "relationships": 20,
+        "facts": 13,
+        "time_sec": 27.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "用Flutter做MVP，三个月内交付",
+            "Flutter Web端先只做移动端",
+            "下周启动Flutter技术预研",
+            "下午三点开需求评审会"
+          ],
+          "time_sec": 6.0
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "用Flutter做MVP，三个月内交付",
+            "Flutter项目先只做移动端",
+            "预留原生回退方案",
+            "下周启动Flutter技术预研",
+            "下午三点开需求评审会"
+          ],
+          "time_sec": 15.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_1",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "PWA离线方案",
+      "stage1": {
+        "entities": 21,
+        "relationships": 9,
+        "facts": 16,
+        "time_sec": 25.4
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "微前端架构评估与采用qiankun框架",
+            "PWA离线缓存优化方案采用Workbox",
+            "离线缓存数据需添加签名验证"
+          ],
+          "time_sec": 14.3
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用qiankun框架实现微前端架构",
+            "使用postMessage做沙箱隔离并细化权限粒度",
+            "微前端首屏加载采用按需加载方案",
+            "离线缓存数据需添加签名验证",
+            "下午三点开会"
+          ],
+          "time_sec": 11.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_2",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "性能监控RUM",
+      "stage1": {
+        "entities": 16,
+        "relationships": 14,
+        "facts": 6,
+        "time_sec": 17.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "使用PerformanceObserver采集FP/FCP，并用MutationObserver补全首屏时间",
+            "数据上报时所有指标字段必须做转义处理以防范XSS风险",
+            "采用分层采样：错误事件100%采集，常规指标10%",
+            "数据存储使用ClickHouse而非Elasticsearch",
+            "Emma下周开始对接安全审核",
+            "Frank先写数据采集的POC，预计三天出结果",
+            "组件库设计系统技术栈定为React + TypeScript + Storybook"
+          ],
+          "time_sec": 11.2
+        },
+        "without_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "使用PerformanceObserver采集FP/FCP，并用MutationObserver补全首屏时间",
+            "数据上报时所有指标字段必须做转义处理以防止XSS风险",
+            "采样率设为10%，并对错误事件采用分层采样100%采集",
+            "数据存储使用ClickHouse",
+            "Emma下周开始对接安全审核",
+            "Frank先写数据采集的POC，预计三天出结果",
+            "组件库设计系统技术栈定为React + TypeScript + Storybook"
+          ],
+          "time_sec": 9.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_3",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 20,
+        "relationships": 12,
+        "facts": 16,
+        "time_sec": 21.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "静态资源用Service Worker，动态数据用Memory Cache",
+            "Diana负责编写缓存数据加密和清理策略文档",
+            "CDN TTL设为24小时，且不缓存带token的API响应",
+            "Charlie协调测试资源，Bob两周内出SW原型"
+          ],
+          "time_sec": 8.0
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用Service Worker + IndexedDB做离线缓存",
+            "静态资源用Service Worker，动态数据用Memory Cache",
+            "Diana负责编写缓存数据加密和清理策略文档",
+            "CDN配置TTL设为24小时",
+            "CDN上不要缓存带token的API响应"
+          ],
+          "time_sec": 8.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_4",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 5,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 29,
+        "relationships": 20,
+        "facts": 17,
+        "time_sec": 26.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "采用分层缓存策略：内存LRU + Service Worker兜底",
+            "缓存敏感数据需加密，IndexedDB存token必须加盐",
+            "CDN缓存配置配合新缓存头",
+            "缓存过期后需强制刷新，防止旧数据被XSS利用",
+            "A/B测试框架先用GrowthBook，以后再迁移",
+            "下午三点开会讨论预算",
+            "Grace下周请假，实验设计文档需提前写好"
+          ],
+          "time_sec": 12.2
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用分层缓存方案：内存LRU + Service Worker兜底",
+            "CDN缓存配置更新：max-age=3600配合stale-while-revalidate",
+            "A/B测试框架采用GrowthBook",
+            "Grace需提前写好实验设计文档"
+          ],
+          "time_sec": 9.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_5",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 17,
+        "relationships": 16,
+        "facts": 13,
+        "time_sec": 16.3
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用SWR模式+CDN方案作为缓存策略",
+            "Eve负责设计Token-based加密机制"
+          ],
+          "time_sec": 5.7
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用SWR+CDN缓存方案",
+            "Eve负责缓存加密部分"
+          ],
+          "time_sec": 5.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_6",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 19,
+        "relationships": 12,
+        "facts": 11,
+        "time_sec": 18.4
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用分层缓存策略：CDN + Service Worker + 本地存储",
+            "Service Worker缓存数据需加密存储",
+            "推进A/B测试框架选型"
+          ],
+          "time_sec": 8.3
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用分层缓存策略：CDN + Service Worker + 本地存储",
+            "Service Worker缓存数据需加密存储",
+            "缓存数据需做输入校验防止XSS",
+            "推进A/B测试框架选型",
+            "CDN层面配置缓存规则以降低源站压力"
+          ],
+          "time_sec": 8.7
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_7",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 23,
+        "relationships": 18,
+        "facts": 18,
+        "time_sec": 23.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用Redis作为主缓存，LRU淘汰策略，TTL设5分钟",
+            "敏感字段走AES加密后再入缓存",
+            "采用Redis主缓存+本地二级缓存的混合架构，版本号同步",
+            "Grace准备Redis集群的部署脚本",
+            "Frank下午提交加密模块PR"
+          ],
+          "time_sec": 8.9
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Redis主缓存+本地二级缓存的混合架构",
+            "敏感字段使用AES加密后入缓存",
+            "Grace负责准备Redis集群部署脚本",
+            "David负责出缓存策略的详细设计"
+          ],
+          "time_sec": 6.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_8",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 20,
+        "relationships": 15,
+        "facts": 13,
+        "time_sec": 24.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用stale-while-revalidate作为默认缓存策略",
+            "Bob负责实现缓存逻辑，Frank辅助写单元测试"
+          ],
+          "time_sec": 11.0
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用Service Worker配合CDN的缓存策略",
+            "采用stale-while-revalidate作为默认缓存策略",
+            "Bob负责实现缓存逻辑，Frank辅助写单元测试",
+            "Service Worker需添加内容安全策略防止XSS",
+            "A/B测试框架需轻量，不拖慢首屏加载"
+          ],
+          "time_sec": 7.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "frontend_mobile_channel_9",
+      "episode_id": "ep_frontend_mobile_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "A/B测试框架",
+      "stage1": {
+        "entities": 26,
+        "relationships": 15,
+        "facts": 7,
+        "time_sec": 24.7
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用版本号+哈希缓存方案",
+            "Bob负责搭建Redis集群并设置独立namespace",
+            "Eve负责前端缓存层使用Service Worker同步版本号"
+          ],
+          "time_sec": 11.2
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用版本号+哈希缓存方案",
+            "Bob搭建Redis集群，版本号键用独立namespace"
+          ],
+          "time_sec": 9.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_0",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 4,
+      "topic": "密钥管理方案",
+      "stage1": {
+        "entities": 18,
+        "relationships": 19,
+        "facts": 7,
+        "time_sec": 19.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "零信任试点项目周期定为4个月",
+            "密钥轮换周期设为90天",
+            "零信任采用开源方案但需加固",
+            "密钥管理采用云KMS并确保SOC 2认证"
+          ],
+          "time_sec": 8.9
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "密钥轮换周期设为90天",
+            "零信任试点周期定为4个月",
+            "密钥管理采用云KMS",
+            "零信任PEP组件采用开源方案"
+          ],
+          "time_sec": 7.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_1",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "漏洞扫描策略",
+      "stage1": {
+        "entities": 14,
+        "relationships": 6,
+        "facts": 5,
+        "time_sec": 11.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "按CVSS评分优先修复高危漏洞",
+            "扫描策略优先覆盖Web层",
+            "关键系统每周扫描，非关键系统两周一次",
+            "基于基线行为建立动态阈值"
+          ],
+          "time_sec": 4.5
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "按CVSS评分7.0以上优先修复漏洞",
+            "关键系统每周扫描，非关键系统两周一次"
+          ],
+          "time_sec": 5.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_2",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "数据分类分级",
+      "stage1": {
+        "entities": 29,
+        "relationships": 19,
+        "facts": 10,
+        "time_sec": 27.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "采用OpenSCAP进行合规自动化审计PoC",
+            "将OpenSCAP扫描结果接入监控系统实现实时告警",
+            "通过调整规则阈值降低自动化工具误报率",
+            "数据分类分级需要业务部门参与制定标准",
+            "初步分级框架：公开、内部、敏感、绝密",
+            "绝密级数据需要额外加密存储"
+          ],
+          "time_sec": 9.7
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "采用OpenSCAP进行合规自动化审计PoC",
+            "初步拟定数据分级框架：公开、内部、敏感、绝密"
+          ],
+          "time_sec": 6.7
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_3",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 17,
+        "relationships": 15,
+        "facts": 14,
+        "time_sec": 23.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "在安全SDLC流程中纳入威胁建模",
+            "在CI/CD流水线中集成SAST安全门禁",
+            "渗透测试周期按季度+大版本发布触发"
+          ],
+          "time_sec": 6.2
+        },
+        "without_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "安全SDLC流程重新梳理并启动会",
+            "CI/CD中集成SAST和DAST工具",
+            "渗透测试周期按季度执行并配合大版本发布前加专项测试",
+            "在安全SDLC中加入威胁建模环节",
+            "在流水线中加入安全门禁，SAST扫描不通过直接阻断构建",
+            "Carol负责制定威胁建模模板，Bob配合集成SAST工具"
+          ],
+          "time_sec": 11.7
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_4",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 25,
+        "relationships": 18,
+        "facts": 20,
+        "time_sec": 27.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 9,
+          "decision_summaries": [
+            "从需求评审阶段加入威胁建模",
+            "代码提交前必须过静态扫描",
+            "自动化威胁建模方案",
+            "先试点一个项目",
+            "起草安全SDLC流程文档",
+            "渗透测试周期改为每两个月一次",
+            "培养内部红队能力",
+            "购买Burp Suite Pro工具授权",
+            "Q2预算预留2万美金用于工具和培训"
+          ],
+          "time_sec": 10.4
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "从需求评审阶段开始加入威胁建模",
+            "自动化威胁建模+SAST扫描试点项目",
+            "起草安全SDLC流程文档",
+            "培养内部红队进行渗透测试",
+            "购买Burp Suite专业版工具授权"
+          ],
+          "time_sec": 15.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_5",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 13,
+        "relationships": 16,
+        "facts": 6,
+        "time_sec": 14.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "Eve周五前给出安全SDLC流程初稿",
+            "威胁建模需与CI/CD流水线集成",
+            "分阶段推行安全SDLC，先试点支付模块",
+            "Eve周五前敲定支付模块试点细节",
+            "Bob配合Eve调整CI/CD流水线配置",
+            "Carol更新项目排期，为Eve和Bob预留时间"
+          ],
+          "time_sec": 9.2
+        },
+        "without_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "Eve在周五前给出安全SDLC流程框架草案",
+            "威胁建模需要与CI/CD流水线集成",
+            "分阶段推行安全SDLC流程，先试点一个项目",
+            "试点项目定为支付模块",
+            "Eve在周五前敲定试点细节",
+            "Bob配合Eve调整CI/CD流水线配置",
+            "Carol更新项目排期，为Eve和Bob预留时间"
+          ],
+          "time_sec": 8.6
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_6",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 22,
+        "relationships": 14,
+        "facts": 14,
+        "time_sec": 36.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "将威胁建模前置到需求评审阶段",
+            "在CI/CD流水线中增加自动触发威胁建模工单步骤",
+            "威胁建模工单按模块负责人自动分派给安全组",
+            "Ivy组织内部工作坊培训威胁建模",
+            "安全SDLC新流程下个迭代开始执行"
+          ],
+          "time_sec": 16.9
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "威胁建模前置到需求阶段",
+            "在CI/CD流水线中增加自动触发威胁建模工单步骤",
+            "威胁建模工单自动指派给安全组",
+            "安全SDLC新版本下个迭代开始执行"
+          ],
+          "time_sec": 9.7
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_7",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 4,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 17,
+        "relationships": 13,
+        "facts": 15,
+        "time_sec": 34.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "启动安全SDLC流程proposal并对齐基线",
+            "需求阶段嵌入威胁建模模板到Jira workflow",
+            "设计评审阶段安全工程师必须签字",
+            "SAST、DAST、SCA设为硬性门禁，不通过不能合并主干",
+            "Q2预算可覆盖SAST License，需尽快锁定供应商",
+            "外部渗透测试季度一次，内部每月一次轻量扫描",
+            "Carol请客点奶茶，Bob要四季春茶少糖"
+          ],
+          "time_sec": 16.0
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "SAST、DAST、SCA三件套作为硬性门禁",
+            "设计评审阶段安全工程师必须签字",
+            "需求阶段嵌入威胁建模模板到Jira workflow",
+            "渗透测试周期调整：外部季度一次，内部每月一次轻量扫描",
+            "Bob为Carol点一杯四季春茶，少糖"
+          ],
+          "time_sec": 11.1
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_8",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 14,
+        "relationships": 9,
+        "facts": 6,
+        "time_sec": 22.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "需求阶段进行威胁建模",
+            "开发阶段集成SAST工具",
+            "Carol更新项目计划预留安全活动时间",
+            "季度常规渗透测试 + 大版本前专项测试"
+          ],
+          "time_sec": 8.6
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "需求阶段做威胁建模，开发阶段集成SAST",
+            "使用STRIDE进行威胁建模",
+            "CI/CD管道集成Semgrep进行静态代码扫描",
+            "渗透测试周期：季度常规测试 + 大版本发布前专项测试",
+            "Carol更新项目计划，为安全活动预留时间"
+          ],
+          "time_sec": 9.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sec_compliance_channel_9",
+      "episode_id": "ep_sec_compliance_c",
+      "message_count": 20,
+      "n_expected": 4,
+      "topic": "渗透测试周期",
+      "stage1": {
+        "entities": 13,
+        "relationships": 11,
+        "facts": 13,
+        "time_sec": 19.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "威胁建模纳入安全SDLC流程",
+            "CI/CD集成SonarQube和Trivy安全扫描",
+            "渗透测试周期：每季度一次基础扫描，半年一次深度渗透",
+            "深度渗透前需提前通知Alice准备环境"
+          ],
+          "time_sec": 6.8
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "威胁建模纳入安全SDLC流程",
+            "CI/CD集成SonarQube和Trivy安全扫描",
+            "渗透测试周期：每季度一次基础扫描，半年一次深度渗透",
+            "深度渗透前需提前通知Alice准备环境"
+          ],
+          "time_sec": 6.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_0",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "推理服务部署方案",
+      "stage1": {
+        "entities": 19,
+        "relationships": 20,
+        "facts": 10,
+        "time_sec": 22.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 8,
+          "decision_summaries": [
+            "训练平台Q2上线且成本不超预算",
+            "GPU资源调度采用K8s + Volcano",
+            "先做PoC验证NFS性能再定数据存储方案",
+            "训练日志监控必须集成到平台",
+            "资源配额管理采用namespace隔离并限制团队资源上限",
+            "推理服务部署采用Triton + GPU共享以满足<50ms延迟",
+            "A/B测试是刚需，需尽快实现",
+            "灰度发布先用K8s原生Service，后续再升级"
+          ],
+          "time_sec": 15.5
+        },
+        "without_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "训练平台Q2上线且成本不超预算",
+            "GPU资源调度采用K8s + Volcano",
+            "先做PoC验证NFS性能再定数据存储方案",
+            "训练日志监控必须集成到平台",
+            "资源配额管理采用namespace隔离并限制团队资源上限",
+            "推理服务部署采用Triton + GPU共享以满足延迟要求",
+            "A/B测试是刚需需尽快实现"
+          ],
+          "time_sec": 17.1
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_1",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "特征存储选型",
+      "stage1": {
+        "entities": 26,
+        "relationships": 18,
+        "facts": 15,
+        "time_sec": 37.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "特征存储选型确定为Feast",
+            "评估Feast的总拥有成本",
+            "Frank负责对Feast进行基准测试",
+            "Emma负责Feast的安全加固"
+          ],
+          "time_sec": 8.9
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "特征存储选型为Feast",
+            "评估Feast的总拥有成本",
+            "Frank负责Feast的基准测试",
+            "Emma负责Feast的安全加固"
+          ],
+          "time_sec": 8.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_2",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "GPU资源调度",
+      "stage1": {
+        "entities": 23,
+        "relationships": 12,
+        "facts": 9,
+        "time_sec": 19.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "采用分层抽样控制样本偏差",
+            "评估指标加密传输防止中间人攻击",
+            "设计差分隐私层保护用户数据",
+            "定下分层抽样+差分隐私的最终方案",
+            "使用Kubernetes管理GPU节点并弹性伸缩",
+            "配置Kubernetes RBAC防止未授权访问GPU"
+          ],
+          "time_sec": 10.1
+        },
+        "without_project": {
+          "decisions": 10,
+          "decision_summaries": [
+            "采用分层抽样减少样本偏差",
+            "严格管控日志访问权限",
+            "评估指标加密传输防止中间人攻击",
+            "设计差分隐私层保护用户数据",
+            "调整样本量以应对差分隐私方差增加",
+            "安全红线不可触碰",
+            "定下分层抽样+差分隐私方案",
+            "Emma负责写安全审查文档",
+            "使用Kubernetes管理GPU节点并弹性伸缩",
+            "配置Kubernetes RBAC防止未授权访问GPU"
+          ],
+          "time_sec": 10.1
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_3",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 21,
+        "relationships": 17,
+        "facts": 7,
+        "time_sec": 19.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用Flink+Kafka组合作为在线学习管道架构",
+            "Charlie负责资源估算",
+            "数据管道必须使用TLS加密",
+            "Eve提供管道加密方案文档",
+            "使用Prometheus和Grafana监控模型漂移"
+          ],
+          "time_sec": 8.7
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Flink+Kafka组合作为在线学习管道架构",
+            "数据管道必须加密传输，防止中间人攻击",
+            "监控系统日志不能明文存储，防止数据泄露"
+          ],
+          "time_sec": 7.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_4",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 20,
+        "relationships": 15,
+        "facts": 11,
+        "time_sec": 22.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用Kafka+Flink+Redis架构构建在线学习管道",
+            "管道必须启用TLS加密",
+            "模型漂移检测采用PSI或KS检验",
+            "漂移检测告警触发模型回滚需人工审批",
+            "漂移阈值需设置缓冲，不能太死"
+          ],
+          "time_sec": 10.0
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Kafka+Flink+Redis技术栈构建在线学习管道MVP",
+            "管道数据传输必须启用TLS加密",
+            "模型回滚必须经过人工审批流程"
+          ],
+          "time_sec": 7.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_5",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 15,
+        "relationships": 12,
+        "facts": 15,
+        "time_sec": 22.9
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "采用Kafka+Flink组合设计在线学习管道",
+            "Bob负责搭建Kafka集群并做POC",
+            "模型漂移检测纳入管道设计，频率每小时一次",
+            "模型数据流加密传输，使用TLS 1.3",
+            "下午三点开会讨论预算"
+          ],
+          "time_sec": 13.3
+        },
+        "without_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "采用Kafka+Flink组合设计在线学习管道",
+            "Bob下周开始搭建Kafka集群做POC",
+            "模型数据流加密传输，使用TLS 1.3",
+            "下午三点开会讨论预算",
+            "Kafka集群需要3台节点，成本5k/月",
+            "检测到漂移后模型回滚，确保审计日志完整",
+            "特征工程中注意数据脱敏，避免泄露PII"
+          ],
+          "time_sec": 11.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_6",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 20,
+        "relationships": 21,
+        "facts": 17,
+        "time_sec": 28.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Redis Stream作为流式缓冲方案",
+            "采用KS检验进行模型漂移检测",
+            "Charlie负责在K8s上部署Prometheus监控漂移检测",
+            "流式数据加密在管道层实现"
+          ],
+          "time_sec": 8.8
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "在线学习管道使用Redis Stream替代Kafka",
+            "模型漂移检测使用KS检验",
+            "Charlie负责监控部署"
+          ],
+          "time_sec": 10.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_7",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 3,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 32,
+        "relationships": 23,
+        "facts": 13,
+        "time_sec": 31.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "采用Kafka作为在线学习管道的数据源",
+            "采用MLflow管理模型版本并配合Kubernetes实现蓝绿部署",
+            "采用Feast作为特征存储",
+            "采用Prefect进行管道编排",
+            "团队倾向采用Prefect + Feast + MLflow技术栈",
+            "在管道中加入数据加密和访问控制",
+            "引入外部数据流时需进行输入验证和异常检测"
+          ],
+          "time_sec": 12.0
+        },
+        "without_project": {
+          "decisions": 9,
+          "decision_summaries": [
+            "采用Kafka作为在线学习管道的数据源",
+            "使用River库进行增量学习",
+            "采用MLflow管理模型版本，配合Kubernetes实现蓝绿部署",
+            "采用Feast作为特征存储",
+            "采用Prefect进行管道编排",
+            "Bob评估资源预算，两周内完成基础设施搭建",
+            "Eve负责在管道中加入数据加密和访问控制",
+            "外部数据流必须进行输入验证和异常检测以防止投毒攻击",
+            "模型更新频率控制在分钟级以避免过拟合"
+          ],
+          "time_sec": 14.4
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_8",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 32,
+        "relationships": 23,
+        "facts": 13,
+        "time_sec": 30.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "采用Kafka做特征流缓冲",
+            "数据流加密使用TLS 1.3",
+            "模型监控漂移检测提上日程",
+            "监控数据脱敏存储"
+          ],
+          "time_sec": 6.3
+        },
+        "without_project": {
+          "decisions": 7,
+          "decision_summaries": [
+            "采用Kafka作为特征流缓冲方案",
+            "复用已有K8s集群降低Kafka运维成本",
+            "数据流加密使用TLS 1.3",
+            "模型监控漂移检测使用PSI指标",
+            "漂移检测先做试点，选高流量模型跑两周",
+            "监控数据包含用户隐私必须脱敏后再存储",
+            "Bob拉Jira任务开始Kafka POC"
+          ],
+          "time_sec": 18.2
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "ai_ml_platform_channel_9",
+      "episode_id": "ep_ai_ml_platform_c",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "在线学习管道",
+      "stage1": {
+        "entities": 20,
+        "relationships": 11,
+        "facts": 11,
+        "time_sec": 23.4
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "在线学习管道每日更新，架构支持每小时扩展",
+            "漂移检测延迟不超过5分钟"
+          ],
+          "time_sec": 9.1
+        },
+        "without_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "在线学习管道每日更新，架构支持每小时扩展",
+            "漂移检测延迟不超过5分钟"
+          ],
+          "time_sec": 10.6
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_0",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 4,
+      "topic": "SLO定义与追踪",
+      "stage1": {
+        "entities": 21,
+        "relationships": 10,
+        "facts": 7,
+        "time_sec": 19.5
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "SLO核心指标定义为请求延迟和错误率",
+            "SLO暂定99.9%可用性，P99延迟<300ms",
+            "增加错误预算消耗速率监控",
+            "引入告警聚合策略",
+            "告警按优先级分级：P0实时，P1-P3聚合后延迟通知",
+            "Bob下周开始实施告警聚合规则，Charlie审核配置"
+          ],
+          "time_sec": 20.0
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "SLO暂定99.9%可用性，P99延迟<300ms",
+            "按优先级分级：P0实时告警，P1-P3聚合后延迟通知",
+            "Bob下周开始实施聚合规则，Charlie审核配置"
+          ],
+          "time_sec": 8.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_1",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "分布式追踪全链路",
+      "stage1": {
+        "entities": 26,
+        "relationships": 23,
+        "facts": 17,
+        "time_sec": 38.8
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Chaos Mesh作为混沌工程工具",
+            "混沌工程上线时间配合Q2发布计划",
+            "Emma负责编写安全策略文档"
+          ],
+          "time_sec": 12.9
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "采用Chaos Mesh进行混沌工程",
+            "混沌工程上线时间配合Q2发布计划",
+            "Emma负责编写安全策略文档"
+          ],
+          "time_sec": 11.8
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_2",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 2,
+      "topic": "容量规划模型",
+      "stage1": {
+        "entities": 25,
+        "relationships": 25,
+        "facts": 10,
+        "time_sec": 30.0
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "先讨论安全合规，再梳理数据流和存储成本",
+            "先用ES做POC，评估后再定",
+            "POC必须加入RBAC和加密",
+            "容量规划模型基于历史趋势和业务增长",
+            "使用时间序列预测CPU和内存指标",
+            "容量规划模型需要纳入异常检测"
+          ],
+          "time_sec": 16.9
+        },
+        "without_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "使用Fluentd进行日志采集",
+            "存储层先用Elasticsearch做POC",
+            "日志聚合方案必须加入RBAC和加密",
+            "容量规划模型基于历史趋势和业务增长",
+            "使用时间序列预测CPU和内存指标",
+            "容量规划模型纳入异常检测以预警安全事件"
+          ],
+          "time_sec": 14.3
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_3",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 21,
+        "relationships": 51,
+        "facts": 12,
+        "time_sec": 43.8
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "故障演练周期调整为两周一次",
+            "on-call轮值周期定为三天轮换",
+            "建立双人备份机制并明确主备职责",
+            "轮值期间安全响应时间必须小于15分钟"
+          ],
+          "time_sec": 18.3
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "故障演练周期调整为两周一次",
+            "每次演练后必须有复盘文档",
+            "on-call轮值周期改为三天轮换",
+            "on-call轮值需建立双人备份机制",
+            "主备职责必须包含安全事件升级路径"
+          ],
+          "time_sec": 9.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_4",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 15,
+        "relationships": 9,
+        "facts": 8,
+        "time_sec": 23.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "故障演练周期确定：核心系统每月一次，非核心每季度一次",
+            "Alice负责整理核心系统清单",
+            "David负责排Q2演练日历"
+          ],
+          "time_sec": 14.1
+        },
+        "without_project": {
+          "decisions": 6,
+          "decision_summaries": [
+            "核心系统每月一次，非核心每季度一次",
+            "Bob整理核心系统清单",
+            "David排Q2演练日历",
+            "演练中加入安全攻防场景",
+            "on-call轮值SLA不低于15分钟",
+            "加上二级on-call"
+          ],
+          "time_sec": 23.7
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_5",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 22,
+        "relationships": 9,
+        "facts": 16,
+        "time_sec": 42.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "故障演练周期按服务分级执行"
+          ],
+          "time_sec": 6.7
+        },
+        "without_project": {
+          "decisions": 1,
+          "decision_summaries": [
+            "故障演练周期按服务分级执行"
+          ],
+          "time_sec": 4.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_6",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 19,
+        "relationships": 11,
+        "facts": 16,
+        "time_sec": 27.1
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 2,
+          "decision_summaries": [
+            "故障演练周期调整为每月小型演练加每季度大型综合演练",
+            "安全演练每季度至少一次并纳入大型综合演练"
+          ],
+          "time_sec": 6.4
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "每月一次小型演练，每季度一次大型综合演练",
+            "安全演练每季度至少一次",
+            "安全演练与常规故障演练不合并",
+            "on-call轮值周期改为两天",
+            "安全事件响应需专人负责"
+          ],
+          "time_sec": 23.6
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_7",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 20,
+        "relationships": 10,
+        "facts": 10,
+        "time_sec": 20.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "故障演练周期改为三周一次",
+            "Bob负责整理演练场景清单",
+            "Bob设计轮值排班工具"
+          ],
+          "time_sec": 13.9
+        },
+        "without_project": {
+          "decisions": 3,
+          "decision_summaries": [
+            "故障演练周期改为三周一次",
+            "Bob负责整理演练场景清单",
+            "Bob设计轮值排班工具支持两天一轮"
+          ],
+          "time_sec": 28.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_8",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 4,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 24,
+        "relationships": 12,
+        "facts": 15,
+        "time_sec": 29.2
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "故障演练周期定为双月一次",
+            "演练结果必须文档化",
+            "on-call轮值周期缩短为三天",
+            "轮值人员必须经过安全培训"
+          ],
+          "time_sec": 19.3
+        },
+        "without_project": {
+          "decisions": 4,
+          "decision_summaries": [
+            "故障演练周期定为双月一次",
+            "演练结果必须文档化",
+            "on-call轮值周期改为三天轮值",
+            "轮值人员必须经过安全培训"
+          ],
+          "time_sec": 29.9
+        }
+      },
+      "ok": true
+    },
+    {
+      "chat_id": "sre_reliability_channel_9",
+      "episode_id": "ep_sre_reliability_",
+      "message_count": 20,
+      "n_expected": 1,
+      "topic": "故障演练周期",
+      "stage1": {
+        "entities": 26,
+        "relationships": 15,
+        "facts": 10,
+        "time_sec": 34.6
+      },
+      "stage2": {
+        "with_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "故障演练周期缩短为每月一次",
+            "优先开发自动化脚本支持演练",
+            "演练场景覆盖DDoS和数据库故障",
+            "下季度开始执行新演练计划",
+            "值班响应SLA：严重告警15分钟内响应"
+          ],
+          "time_sec": 18.5
+        },
+        "without_project": {
+          "decisions": 5,
+          "decision_summaries": [
+            "故障演练周期改为每月一次",
+            "自动化脚本优先开发",
+            "下季度开始执行新演练周期",
+            "演练场景覆盖DDoS和数据库故障",
+            "值班响应SLA：严重告警15分钟内响应"
+          ],
+          "time_sec": 11.1
+        }
+      },
+      "ok": true
+    }
+  ]
+}

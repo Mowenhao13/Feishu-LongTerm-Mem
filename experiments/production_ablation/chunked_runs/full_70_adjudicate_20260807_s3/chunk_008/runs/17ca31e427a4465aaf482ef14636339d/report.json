@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "run_id": "17ca31e427a4465aaf482ef14636339d",
+    "created_at": "2026-08-07T14:59:11.349330+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "765b841bb857e93192c01cd52db6fc110d792e8b96d503990f4910c42b800af3",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "cloud_infra_channel_4",
+      "cloud_infra_channel_5",
+      "cloud_infra_channel_6"
+    ],
+    "expected_count": 5,
+    "expected_by_chat": {
+      "cloud_infra_channel_4": 1,
+      "cloud_infra_channel_5": 2,
+      "cloud_infra_channel_6": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 12,
+  "chat_metrics": {
+    "cloud_infra_channel_4": {
+      "expected": 1,
+      "tp": 0,
+      "fp": 4,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "cloud_infra_channel_5": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "cloud_infra_channel_6": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 4,
+    "strict_fn": 2,
+    "valid_extra": 5,
+    "invalid": 4,
+    "evidence_valid": 12,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.42857142857142855,
+    "recall": 0.6,
+    "f1": 0.5,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "cloud_infra_channel_5",
+        "title": "Bob更新Terraform模板以适配gp3存储类名称",
+        "summary": "Bob更新Terraform模板以适配gp3存储类名称",
+        "source_message_ids": [
+          "m025",
+          "m026"
+        ],
+        "evidence_quote": "是的，存储类名称需要改，我会更新Terraform模板",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Bob承诺更新Terraform模板以适配gp3存储类名称，证据真实且为明确执行承诺，但候选GT中无等价决策（m010为选型确认，m023为PoC任务）"
+      },
+      {
+        "chat_id": "cloud_infra_channel_4",
+        "title": "那这个Sprint的目标先聚焦在Bug修复上",
+        "summary": "那这个Sprint的目标先聚焦在Bug修复上",
+        "source_message_ids": [
+          "m033"
+        ],
+        "evidence_quote": "那这个Sprint的目标先聚焦在Bug修复上",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取内容仅为讨论中的建议，并非最终决策或执行承诺，且与GT候选无等价关系。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_4",
+        "title": "修复后我会做一次安全扫描，确保没有新漏洞",
+        "summary": "修复后我会做一次安全扫描，确保没有新漏洞",
+        "source_message_ids": [
+          "m034"
+        ],
+        "evidence_quote": "修复后我会做一次安全扫描，确保没有新漏洞",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为修复后的安全扫描承诺，属于后续操作计划，而非决策本身，与GT候选中的决策内容不等价。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_4",
+        "title": "我会在修复后更新调度策略文档",
+        "summary": "我会在修复后更新调度策略文档",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "我会在修复后更新调度策略文档",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为执行承诺，非决策或执行结果，与GT候选无等价关系"
+      },
+      {
+        "chat_id": "cloud_infra_channel_4",
+        "title": "我帮你写单元测试，关于GPU资源申请的部分",
+        "summary": "我帮你写单元测试，关于GPU资源申请的部分",
+        "source_message_ids": [
+          "m022"
+        ],
+        "evidence_quote": "我帮你写单元测试，关于GPU资源申请的部分",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果只是承诺帮忙写单元测试，并非实际决策或执行承诺，属于讨论/建议噪声"
+      },
+      {
+        "chat_id": "cloud_infra_channel_5",
+        "title": "存储类选型就用gp3，Charlie确认加密配置",
+        "summary": "存储类选型就用gp3，Charlie确认加密配置",
+        "source_message_ids": [
+          "m010",
+          "m011",
+          "m012"
+        ],
+        "evidence_quote": "好，存储类选型就用gp3，Charlie确认一下加密配置",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m010",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_5",
+        "title": "先做PoC验证Volcano，两周内出结果",
+        "summary": "先做PoC验证Volcano，两周内出结果",
+        "source_message_ids": [
+          "m023",
+          "m024"
+        ],
+        "evidence_quote": "先做PoC验证Volcano，两周内出结果",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m023",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_6",
+        "title": "混合存储方案：热数据用SSD，冷数据用HDD",
+        "summary": "混合存储方案：热数据用SSD，冷数据用HDD",
+        "source_message_ids": [
+          "m010",
+          "m014"
+        ],
+        "evidence_quote": "我建议混合存储：热数据用SSD，冷数据用HDD，这样控制成本",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m010",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "cloud_infra_channel_6",
+        "title": "Eve准备SSD和HDD详细测试报告，下周出结果",
+        "summary": "Eve准备SSD和HDD详细测试报告，下周出结果",
+        "source_message_ids": [
+          "m012",
+          "m013"
+        ],
+        "evidence_quote": "同意，我会准备SSD和HDD的详细测试报告，下周出结果",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的执行承诺（准备测试报告），证据充分，但未被任何候选GT覆盖。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_6",
+        "title": "Charlie团队准备回退方案，下周二前完成",
+        "summary": "Charlie团队准备回退方案，下周二前完成",
+        "source_message_ids": [
+          "m030",
+          "m031"
+        ],
+        "evidence_quote": "回退方案我让团队准备，下周二前完成",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选无等价决策，但证据明确承诺了回退方案准备及完成时间，属于有效执行承诺。"
+      },
+      {
+        "chat_id": "cloud_infra_channel_6",
+        "title": "Eve写Volcano部署文档，方便后续维护",
+        "summary": "Eve写Volcano部署文档，方便后续维护",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "我会写一份详细的部署文档，方便后续维护",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "Eve承诺写部署文档，是明确的执行承诺，但GT候选均为存储方案和方案选定，不覆盖该文档编写决策"
+      },
+      {
+        "chat_id": "cloud_infra_channel_6",
+        "title": "Diana审计GPU资源权限，确保合规",
+        "summary": "Diana审计GPU资源权限，确保合规",
+        "source_message_ids": [
+          "m035"
+        ],
+        "evidence_quote": "实施阶段我会审计GPU资源权限，确保合规",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确承诺审计GPU权限，但候选GT中无等价决策"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "cloud_infra_channel_4",
+        "msg_id": "m007",
+        "expected_topic": "存储类选型",
+        "expected_summary": "@Bob @Dave 那就定GP3吧，成本可控且安全达标。决策了",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "cloud_infra_channel_6",
+        "msg_id": "m029",
+        "expected_topic": "GPU调度策略",
+        "expected_summary": "好，那我们暂定Volcano方案，先试运行一个月",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 12,
+    "errors": {}
+  }
+}

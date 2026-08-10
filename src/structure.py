@@ -1,18 +1,33 @@
 """
-Three-Layer Hypergraph Structure Definition
+Two-Layer Structure Definition
 
-- L1: FactNode / FactHyperedge — facts extracted from episodes
-- L2: EpisodeNode / EpisodeHyperedge — conversation episodes
-- L3: TopicNode — generalized topic information
+The simplified architecture after removing 4-layer hypergraph:
+
+Raw Data Layer:
+  EpisodeNode — conversation episodes from IM messages
+  Document   — from local MD files (future)
+
+Knowledge Layer:
+  DecisionNode — prescriptive knowledge (decisions made)
+  Objection   — objections to decisions (kept in node/types.py)
+  TopicNode   — topics that group related episodes and decisions
+  Person      — person entity (future, currently string references)
+
+Relations are now direct between entities:
+  Decision -[:DECIDES]-> Requirement (future)
+  Person -[:RAISES_OBJECTION]-> Objection
+  Decision -[:REFERENCES]-> Episode
+  Decision -[:DEPENDS_ON|OVERRULES]-> Decision
+  Decision|Objection -[:BELONGS_TO]-> Topic
 """
 
 import numpy as np
-from typing import Dict, List, Any, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field
 from datetime import datetime
 from enum import Enum
 
-from .types import Fact, Episode, Topic, Decision, DecisionStatus, RawDataType
+from .types import Episode, Topic, Decision, DecisionStatus, RawDataType
 
 
 # ==================== Role Type Enumerations ====================
@@ -26,155 +41,51 @@ class FactRole(str, Enum):
     CAUSAL = "causal"
 
 
-
 class EpisodeRole(str, Enum):
     """Episode role types in a topic."""
-    INITIATING = "initiating"     # Initiating event
-    DEVELOPING = "developing"     # Developing event
-    CLIMAX = "climax"            # Climax event
-    CONCLUDING = "concluding"     # Concluding event
-    RECURRING = "recurring"       # Recurring pattern
-    BACKGROUND = "background"     # Background event
-    KEY_MOMENT = "key_moment"    # Key moment
-    TRANSITION = "transition"     # Transition event
-
+    INITIATING = "initiating"
+    DEVELOPING = "developing"
+    CLIMAX = "climax"
+    CONCLUDING = "concluding"
+    RECURRING = "recurring"
+    BACKGROUND = "background"
+    KEY_MOMENT = "key_moment"
+    TRANSITION = "transition"
 
 
 class DecisionRole(str, Enum):
     """Decision role types in an episode or topic."""
-    PRIMARY = "primary"           # Main/top-level decision
-    SUPPORTING = "supporting"     # Supporting or sub-decision
-    ALTERNATIVE = "alternative"   # Considered but rejected alternative
-    AMENDMENT = "amendment"       # Amendment to a prior decision
-    SUPERSEDING = "superseding"   # Replaces a prior decision
+    PRIMARY = "primary"
+    SUPPORTING = "supporting"
+    ALTERNATIVE = "alternative"
+    AMENDMENT = "amendment"
+    SUPERSEDING = "superseding"
 
 
-
-# ==================== Node and Hyperedge Data Types ====================
-
-class FactNode(BaseModel):
-    """L1 layer Fact node."""
-    id: str = Field(..., description="Fact unique identifier (fact_id)")
-    content: str = Field(..., description="Fact content")
-    episode_ids: List[str] = Field(default_factory=list, description="List of episode IDs that compose this fact")
-    topic_id: str = Field(default="", description="Source topic ID")
-    
-    confidence: float = Field(default=0.8, description="Confidence (0.0-1.0)")
-    temporal: Optional[str] = Field(default=None, description="Time information, format: 'relative time (absolute time)'")
-    spatial: Optional[str] = Field(default=None, description="Location information")
-    keywords: List[str] = Field(default_factory=list, description="Keywords")
-    query_patterns: List[str] = Field(default_factory=list, description="Query patterns that can be answered")
-    timestamp: Optional[datetime] = Field(default=None, description="Timestamp")
-    
-    hyperedge: Dict[str, str] = Field(
-        default_factory=dict, 
-        description="Hyperedge ID to role mapping (hyperedge_id -> role)"
-    )
-    
-    @classmethod
-    def from_fact(cls, fact: Fact, hyperedge: Optional[Dict[str, str]] = None) -> 'FactNode':
-        """Create FactNode from Fact data class"""
-        return cls(
-            id=fact.fact_id,
-            content=fact.content,
-            episode_ids=fact.episode_ids or [],
-            topic_id=fact.topic_id or "",
-            confidence=fact.confidence,
-            temporal=fact.temporal,
-            spatial=fact.spatial,
-            keywords=fact.keywords or [],
-            query_patterns=fact.query_patterns or [],
-            timestamp=fact.timestamp,
-            hyperedge=hyperedge or {}
-        )
-    
-    def to_fact(self) -> Fact:
-        """Convert to Fact data class"""
-        return Fact(
-            fact_id=self.id,
-            content=self.content,
-            episode_ids=self.episode_ids,
-            topic_id=self.topic_id,
-            confidence=self.confidence,
-            temporal=self.temporal,
-            spatial=self.spatial,
-            keywords=self.keywords,
-            query_patterns=self.query_patterns,
-            timestamp=self.timestamp
-        )
-    
-    def to_text(self) -> str:
-        parts = [self.content]
-        if self.temporal:
-            parts.append(f"Time: {self.temporal}")
-        if self.spatial:
-            parts.append(f"Location: {self.spatial}")
-        if len(parts) > 1:
-            return f"{parts[0]} ({'; '.join(parts[1:])})"
-        return self.content
-
-
-
-class FactHyperedge(BaseModel):
-    """L1 layer Fact hyperedge, connecting multiple fact nodes to the same episode."""
-    id: str = Field(..., description="Hyperedge unique identifier")
-    
-    relation: Dict[str, str] = Field(
-        default_factory=dict, 
-        description="Fact ID to role mapping (fact_id -> role)"
-    )
-    
-    weights: Optional[Dict[str, float]] = Field(
-        default=None,
-        description="Importance weight for each fact (fact_id -> weight)"
-    )
-    
-    episode_node_id: str = Field(
-        default="", 
-        description="Corresponding episode node ID (bidirectional link)"
-    )
-    
-    created_at: Optional[datetime] = Field(default=None, description="Hyperedge creation time")
-    extraction_confidence: float = Field(default=0.8, description="Extraction confidence (0.0-1.0)")
-
-
+# ==================== Node Types ====================
 
 class EpisodeNode(BaseModel):
     """
-    Episode node in L2 layer.
-    
-    Stores complete episode information
-    This class extends the Episode dataclass, adding hypergraph-specific fields
-    Field order is consistent with Episode
+    Episode node — raw data layer.
+
+    Stores complete episode information from conversation aggregation.
     """
-    # Node identifier
     id: str = Field(..., description="Node unique identifier, corresponds to event_id")
-    
-    # Core episode fields (aligned with Episode)
     user_id_list: List[str] = Field(default_factory=list, description="Involved user ID list")
     original_data: List[Dict[str, Any]] = Field(default_factory=list, description="Original data")
     timestamp: Optional[datetime] = Field(default=None, description="Event timestamp")
     summary: Optional[str] = Field(default=None, description="Episode summary")
-    
-    # Optional episode fields (aligned with Episode)
     participants: Optional[List[str]] = Field(default=None, description="Participant list")
     type: Optional[RawDataType] = Field(default=None, description="Raw data type")
     keywords: Optional[List[str]] = Field(default=None, description="Keywords extracted from episode")
     subject: Optional[str] = Field(default=None, description="Episode subject")
     episode_description: Optional[str] = Field(default=None, description="Episode memory description")
-    
-    # Hypergraph structure fields
-    hyperedge: Dict[str, str] = Field(
-        default_factory=dict, 
-        description="Hyperedge ID to role mapping (hyperedge_id -> role)"
-    )
-    fact_hyperedge_id: str = Field(
-        default="", 
-        description="Corresponding fact hyperedge ID (bidirectional link)"
-    )
-    
+
+    # Direct topic reference (replaces hyperedge indirection)
+    topic_id: str = Field(default="", description="Associated topic ID")
+
     @classmethod
-    def from_episode(cls, episode: Episode, fact_hyperedge_id: str = "", hyperedge: Optional[Dict[str, str]] = None) -> 'EpisodeNode':
+    def from_episode(cls, episode: Episode, topic_id: str = "") -> 'EpisodeNode':
         """Create EpisodeNode from Episode data class"""
         return cls(
             id=episode.event_id,
@@ -187,10 +98,9 @@ class EpisodeNode(BaseModel):
             keywords=episode.keywords,
             subject=episode.subject,
             episode_description=episode.episode_description,
-            hyperedge=hyperedge or {},
-            fact_hyperedge_id=fact_hyperedge_id
+            topic_id=topic_id,
         )
-    
+
     def to_episode(self) -> Episode:
         """Convert to Episode data class"""
         return Episode(
@@ -203,104 +113,27 @@ class EpisodeNode(BaseModel):
             type=self.type,
             keywords=self.keywords,
             subject=self.subject,
-            episode_description=self.episode_description
+            episode_description=self.episode_description,
         )
-
-
-
-class EpisodeHyperedge(BaseModel):
-    """
-    Episode hyperedge in L2 layer.
-    
-    Connects multiple episode nodes to the same topic
-    Describes each episode's role and importance in the topic
-    
-    Responsibilities:
-    - Store episode role (initiating/developing/climax etc)
-    - Store episode weight (importance)
-    - Do not store specific semantic content (stored by nodes)
-    - Do not store binary relationships between nodes
-    """
-    # Hyperedge identifier
-    id: str = Field(..., description="Hyperedge unique identifier")
-    
-    # Node role mapping
-    relation: Dict[str, str] = Field(
-        default_factory=dict, 
-        description="""
-        Episode ID to role mapping (episode_id -> role)
-        Role types refer to EpisodeRole enum:
-        - "initiating": Topic initiating event
-        - "developing": Topic developing event
-        - "climax": Topic climax event
-        - "concluding": Topic concluding event
-        - "recurring": Recurring pattern event
-        - "background": Background event
-        - "key_moment": Key moment
-        - "transition": Transition event
-        """
-    )
-    
-    # Node weights
-    weights: Optional[Dict[str, float]] = Field(
-        default=None,
-        description="""
-        Importance weight of each episode in the topic (episode_id -> weight)
-        Range: 0.0-1.0, higher value means more important
-        Used for sorting and filtering during retrieval
-        """
-    )
-    
-    # Cross-layer connection
-    topic_node_id: str = Field(
-        default="", 
-        description="Corresponding topic node ID (bidirectional link)"
-    )
-    
-    # Hyperedge metadata
-    created_at: Optional[datetime] = Field(
-        default=None, 
-        description="Hyperedge creation time"
-    )
-    
-    coherence_score: float = Field(
-        default=0.8,
-        description="Topic coherence score, indicates how closely these episodes form a topic (0.0-1.0)"
-    )
-
 
 
 class TopicNode(BaseModel):
     """
-    Topic node in L3 layer.
-    
-    Stores generalized topic information
-    This class extends the Topic dataclass, adding hypergraph-specific fields
-    Field order is consistent with Topic
-    Provides conversion methods between Topic and TopicNode
+    Topic node — knowledge layer.
+
+    Stores generalized topic information that groups related episodes and decisions.
     """
-    # Node identifier
     id: str = Field(..., description="Node unique identifier, corresponds to topic_id")
-    
-    # Core topic fields (aligned with Topic)
     title: str = Field(..., description="Topic title/theme")
     summary: str = Field(..., description="Topic summary")
     episode_ids: List[str] = Field(default_factory=list, description="List of episode IDs that compose this topic")
-    timestamp: Optional[datetime] = Field(default=None, description="Topic creation time (time of last episode)")
+    timestamp: Optional[datetime] = Field(default=None, description="Topic creation time")
     user_id_list: List[str] = Field(default_factory=list, description="Involved user ID list")
-    
-    # Optional topic fields (aligned with Topic)
     participants: Optional[List[str]] = Field(default=None, description="Participant list")
     keywords: Optional[List[str]] = Field(default=None, description="Keywords describing this topic")
-    
-    # Hypergraph structure fields
-    episode_hyperedge_id: str = Field(
-        default="", 
-        description="Corresponding episode hyperedge ID (bidirectional link)"
-    )
-    
+
     @classmethod
-    def from_topic(cls, topic: Topic, episode_hyperedge_id: str = "") -> 'TopicNode':
+    def from_topic(cls, topic: Topic) -> 'TopicNode':
         """Create TopicNode from Topic data class"""
         return cls(
             id=topic.topic_id,
@@ -311,9 +144,8 @@ class TopicNode(BaseModel):
             user_id_list=topic.user_id_list,
             participants=topic.participants,
             keywords=topic.keywords,
-            episode_hyperedge_id=episode_hyperedge_id
         )
-    
+
     def to_topic(self) -> Topic:
         """Convert to Topic data class"""
         return Topic(
@@ -324,18 +156,16 @@ class TopicNode(BaseModel):
             timestamp=self.timestamp if self.timestamp else datetime.now(),
             user_id_list=self.user_id_list,
             participants=self.participants,
-            keywords=self.keywords
+            keywords=self.keywords,
         )
-
 
 
 class DecisionNode(BaseModel):
     """
-    Decision node in the hypergraph.
+    Decision node — knowledge layer.
 
     Stores decision-level prescriptive knowledge:
     who decided what, why, and what came of it.
-    Complements FactNode (declarative knowledge) at L1 layer.
     """
     id: str = Field(..., description="Decision unique identifier (decision_id)")
     title: str = Field(..., description="Decision title")
@@ -352,13 +182,8 @@ class DecisionNode(BaseModel):
     topic_id: str = Field(default="", description="Source topic ID")
     source_decision_ids: List[str] = Field(default_factory=list, description="Decisions this one supersedes/replaces")
 
-    hyperedge: Dict[str, str] = Field(
-        default_factory=dict,
-        description="Hyperedge ID to role mapping (hyperedge_id -> role)"
-    )
-
     @classmethod
-    def from_decision(cls, decision: Decision, hyperedge: Optional[Dict[str, str]] = None) -> 'DecisionNode':
+    def from_decision(cls, decision: Decision) -> 'DecisionNode':
         """Create DecisionNode from Decision data class"""
         return cls(
             id=decision.decision_id,
@@ -373,7 +198,6 @@ class DecisionNode(BaseModel):
             episode_ids=decision.source_episode_ids or [],
             topic_id=decision.source_topic_ids[0] if decision.source_topic_ids else "",
             source_decision_ids=decision.superseded_decision_ids or [],
-            hyperedge=hyperedge or {},
         )
 
     def to_decision(self) -> Decision:
@@ -404,120 +228,52 @@ class DecisionNode(BaseModel):
         return " | ".join(parts)
 
 
-
-class DecisionHyperedge(BaseModel):
-    """Hyperedge connecting multiple decision nodes from the same context."""
-    id: str = Field(..., description="Hyperedge unique identifier")
-
-    relation: Dict[str, str] = Field(
-        default_factory=dict,
-        description="Decision ID to role mapping (decision_id -> role)"
-    )
-
-    weights: Optional[Dict[str, float]] = Field(
-        default=None,
-        description="Importance weight for each decision (decision_id -> weight)"
-    )
-
-    episode_node_id: str = Field(
-        default="",
-        description="Corresponding episode node ID (bidirectional link)"
-    )
-
-    created_at: Optional[datetime] = Field(default=None, description="Hyperedge creation time")
-    extraction_confidence: float = Field(default=0.8, description="Extraction confidence (0.0-1.0)")
-
-
-
-# ==================== Hypergraph Container Class ====================
+# ==================== Graph Container ====================
 
 class Hypergraph(BaseModel):
     """
-    Complete hypergraph structure container
-    
-    L0: Decision layer - decision nodes and hyperedges (prescriptive knowledge)
-    L1: Fact layer - fact nodes and hyperedges (declarative knowledge)
-    L2: Episode layer - episode nodes and hyperedges
-    L3: Topic layer - topic nodes
+    Simplified two-layer knowledge graph container.
+
+    Raw Data Layer: episodes
+    Knowledge Layer: decisions, topics
     """
-    # L0 layer: Decision layer
     decisions: Dict[str, DecisionNode] = Field(
         default_factory=dict,
-        description="Decision node dictionary"
+        description="Decision node dictionary (knowledge layer)"
     )
-    decision_hyperedges: Dict[str, DecisionHyperedge] = Field(
-        default_factory=dict,
-        description="Decision hyperedge dictionary"
-    )
-    
-    # L1 layer: Fact layer
-    facts: Dict[str, FactNode] = Field(
-        default_factory=dict, 
-        description="Fact node dictionary"
-    )
-    fact_hyperedges: Dict[str, FactHyperedge] = Field(
-        default_factory=dict, 
-        description="Fact hyperedge dictionary"
-    )
-    
-    # L2 layer: Episode layer
     episodes: Dict[str, EpisodeNode] = Field(
-        default_factory=dict, 
-        description="Episode node dictionary, keyed by episode ID"
+        default_factory=dict,
+        description="Episode node dictionary (raw data layer)"
     )
-    episode_hyperedges: Dict[str, EpisodeHyperedge] = Field(
-        default_factory=dict, 
-        description="Episode hyperedge dictionary, keyed by hyperedge ID"
-    )
-    
-    # L3 layer: Topic layer
     topics: Dict[str, TopicNode] = Field(
-        default_factory=dict, 
-        description="Topic node dictionary, keyed by topic ID"
+        default_factory=dict,
+        description="Topic node dictionary (knowledge layer)"
     )
-    
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             'decisions': {k: v.model_dump(mode='json') for k, v in self.decisions.items()},
-            'decision_hyperedges': {k: v.model_dump(mode='json') for k, v in self.decision_hyperedges.items()},
-            'facts': {k: v.model_dump(mode='json') for k, v in self.facts.items()},
-            'fact_hyperedges': {k: v.model_dump(mode='json') for k, v in self.fact_hyperedges.items()},
             'episodes': {k: v.model_dump(mode='json') for k, v in self.episodes.items()},
-            'episode_hyperedges': {k: v.model_dump(mode='json') for k, v in self.episode_hyperedges.items()},
-            'topics': {k: v.model_dump(mode='json') for k, v in self.topics.items()}
+            'topics': {k: v.model_dump(mode='json') for k, v in self.topics.items()},
         }
-    
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'Hypergraph':
         return cls(
             decisions={k: DecisionNode(**v) for k, v in data.get('decisions', {}).items()},
-            decision_hyperedges={k: DecisionHyperedge(**v) for k, v in data.get('decision_hyperedges', {}).items()},
-            facts={k: FactNode(**v) for k, v in data.get('facts', {}).items()},
-            fact_hyperedges={k: FactHyperedge(**v) for k, v in data.get('fact_hyperedges', {}).items()},
             episodes={k: EpisodeNode(**v) for k, v in data.get('episodes', {}).items()},
-            episode_hyperedges={k: EpisodeHyperedge(**v) for k, v in data.get('episode_hyperedges', {}).items()},
-            topics={k: TopicNode(**v) for k, v in data.get('topics', {}).items()}
+            topics={k: TopicNode(**v) for k, v in data.get('topics', {}).items()},
         )
-    
+
     def get_stats(self) -> Dict[str, int]:
         return {
             'decisions': len(self.decisions),
-            'decision_hyperedges': len(self.decision_hyperedges),
-            'facts': len(self.facts),
-            'fact_hyperedges': len(self.fact_hyperedges),
             'episodes': len(self.episodes),
-            'episode_hyperedges': len(self.episode_hyperedges),
-            'topics': len(self.topics)
+            'topics': len(self.topics),
         }
 
     def add_node(self, layer: str, node_id: str, **kwargs):
-        """
-        Add node to specified layer
-        
-        Args:
-            layer: Layer type ("decision", "fact", "episode", "topic")
-            node_id: Node ID
-        """
+        """Add node to the specified layer."""
         if layer == "decision":
             self.decisions[node_id] = DecisionNode(
                 id=node_id,
@@ -532,112 +288,38 @@ class Hypergraph(BaseModel):
                 episode_ids=kwargs.get("episode_ids", []),
                 topic_id=kwargs.get("topic_id", ""),
                 source_decision_ids=kwargs.get("source_decision_ids", []),
-                hyperedge=kwargs.get("hyperedge", {})
             )
-
-        elif layer == "fact":
-            self.facts[node_id] = FactNode(
-                id=node_id,
-                content=kwargs.get("content", ""),
-                episode_ids=kwargs.get("episode_ids", []),
-                topic_id=kwargs.get("topic_id", ""),
-                confidence=kwargs.get("confidence", 0.8),
-                temporal=kwargs.get("temporal"),
-                spatial=kwargs.get("spatial"),
-                keywords=kwargs.get("keywords", []),
-                query_patterns=kwargs.get("query_patterns", []),
-                timestamp=kwargs.get("timestamp"),
-                hyperedge=kwargs.get("hyperedge", {})
-            )
-
         elif layer == "episode":
             self.episodes[node_id] = EpisodeNode(
                 id=node_id,
                 user_id_list=kwargs.get("user_id_list", []),
                 original_data=kwargs.get("original_data", []),
-                timestamp=kwargs.get("timestamp", None),
+                timestamp=kwargs.get("timestamp"),
                 summary=kwargs.get("summary", ""),
-                participants=kwargs.get("participants", None),
-                type=kwargs.get("type", None),
-                keywords=kwargs.get("keywords", None),
-                subject=kwargs.get("subject", None),
-                episode_description=kwargs.get("episode_description", None),
-                hyperedge=kwargs.get("hyperedge", {}),
-                fact_hyperedge_id=kwargs.get("fact_hyperedge_id", "")
+                participants=kwargs.get("participants"),
+                type=kwargs.get("type"),
+                keywords=kwargs.get("keywords"),
+                subject=kwargs.get("subject"),
+                episode_description=kwargs.get("episode_description"),
+                topic_id=kwargs.get("topic_id", ""),
             )
-
         elif layer == "topic":
             self.topics[node_id] = TopicNode(
                 id=node_id,
                 title=kwargs.get("title", ""),
                 summary=kwargs.get("summary", ""),
                 episode_ids=kwargs.get("episode_ids", []),
-                timestamp=kwargs.get("timestamp", None),
+                timestamp=kwargs.get("timestamp"),
                 user_id_list=kwargs.get("user_id_list", []),
-                participants=kwargs.get("participants", None),
-                keywords=kwargs.get("keywords", None),
-                episode_hyperedge_id=kwargs.get("episode_hyperedge_id", "")
+                participants=kwargs.get("participants"),
+                keywords=kwargs.get("keywords"),
             )
-            
         else:
-            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'fact', 'episode', or 'topic'")
-    
-    def add_hyperedge(self, layer: str, hyperedge_id: str, **kwargs):
-        """
-        Add hyperedge to specified layer and update connected nodes' adjacency lists
-        
-        Args:
-            layer: Layer type ("decision", "fact", "episode")
-            hyperedge_id: Hyperedge ID
-        """
-        if layer == "decision":
-            self.decision_hyperedges[hyperedge_id] = DecisionHyperedge(
-                id=hyperedge_id,
-                relation=kwargs.get("relation", {}),
-                weights=kwargs.get("weights", None),
-                episode_node_id=kwargs.get("episode_node_id", ""),
-                created_at=kwargs.get("created_at", None),
-                extraction_confidence=kwargs.get("extraction_confidence", 0.8)
-            )
-            for node_id, role in kwargs.get("relation", {}).items():
-                if node_id in self.decisions:
-                    self.decisions[node_id].hyperedge[hyperedge_id] = role
+            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'episode', or 'topic'")
 
-        elif layer == "fact":
-            self.fact_hyperedges[hyperedge_id] = FactHyperedge(
-                id=hyperedge_id,
-                relation=kwargs.get("relation", {}),
-                weights=kwargs.get("weights", None),
-                episode_node_id=kwargs.get("episode_node_id", ""),
-                created_at=kwargs.get("created_at", None),
-                extraction_confidence=kwargs.get("extraction_confidence", 0.8)
-            )
-            for node_id, role in kwargs.get("relation", {}).items():
-                if node_id in self.facts:
-                    self.facts[node_id].hyperedge[hyperedge_id] = role
-                
-        elif layer == "episode":
-            self.episode_hyperedges[hyperedge_id] = EpisodeHyperedge(
-                id=hyperedge_id,
-                relation=kwargs.get("relation", {}),
-                weights=kwargs.get("weights", None),
-                topic_node_id=kwargs.get("topic_node_id", ""),
-                created_at=kwargs.get("created_at", None),
-                coherence_score=kwargs.get("coherence_score", 0.8)
-            )
-            for node_id, role in kwargs.get("relation", {}).items():
-                if node_id in self.episodes:
-                    self.episodes[node_id].hyperedge[hyperedge_id] = role
-
-        else:
-            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'fact', or 'episode'")
-    
     def get_node(self, layer: str, node_id: str) -> Dict[str, Any]:
         if layer == "decision":
             node = self.decisions.get(node_id)
-            return node.model_dump() if node else {}
-        elif layer == "fact":
-            node = self.facts.get(node_id)
             return node.model_dump() if node else {}
         elif layer == "episode":
             node = self.episodes.get(node_id)
@@ -646,250 +328,26 @@ class Hypergraph(BaseModel):
             node = self.topics.get(node_id)
             return node.model_dump() if node else {}
         else:
-            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'fact', 'episode', or 'topic'")
-    
-    def get_hyperedge(self, layer: str, hyperedge_id: str) -> Dict[str, Any]:
-        if layer == "decision":
-            hyperedge = self.decision_hyperedges.get(hyperedge_id)
-            return hyperedge.model_dump() if hyperedge else {}
-        elif layer == "fact":
-            hyperedge = self.fact_hyperedges.get(hyperedge_id)
-            return hyperedge.model_dump() if hyperedge else {}
-        elif layer == "episode":
-            hyperedge = self.episode_hyperedges.get(hyperedge_id)
-            return hyperedge.model_dump() if hyperedge else {}
-        else:
-            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'fact', or 'episode'")
-    
-    def get_node_degree(self, layer: str, node_id: str) -> int:
-        if layer == "decision" and node_id in self.decisions:
-            return len(self.decisions[node_id].hyperedge)
-        elif layer == "fact" and node_id in self.facts:
-            return len(self.facts[node_id].hyperedge)
-        elif layer == "episode" and node_id in self.episodes:
-            return len(self.episodes[node_id].hyperedge)
-        elif layer == "topic":
-            return 0
-        else:
-            return 0
-    
-    def get_hyperedge_degree(self, layer: str, hyperedge_id: str) -> int:
-        if layer == "decision":
-            hyperedge = self.decision_hyperedges.get(hyperedge_id)
-            return len(hyperedge.relation) if hyperedge else 0
-        elif layer == "fact":
-            hyperedge = self.fact_hyperedges.get(hyperedge_id)
-            return len(hyperedge.relation) if hyperedge else 0
-        elif layer == "episode":
-            hyperedge = self.episode_hyperedges.get(hyperedge_id)
-            return len(hyperedge.relation) if hyperedge else 0
-        else:
-            return 0
-    
-    def validate_bidirectional_links(self) -> Dict[str, List[str]]:
-        """Validate consistency of all bidirectional links in the hypergraph"""
-        errors = {
-            'decision_node_to_hyperedge': [],
-            'decision_hyperedge_to_node': [],
-            'decision_hyperedge_to_episode': [],
-            'fact_node_to_hyperedge': [],
-            'fact_hyperedge_to_node': [],
-            'fact_hyperedge_to_episode': [],
-            'episode_to_fact_hyperedge': [],
-            'episode_node_to_hyperedge': [],
-            'episode_hyperedge_to_node': [],
-            'episode_hyperedge_to_topic': [],
-            'topic_to_episode_hyperedge': []
-        }
-        
-        # L0: DecisionNode -> DecisionHyperedge
-        for dec_id, dec in self.decisions.items():
-            for hyperedge_id, role in dec.hyperedge.items():
-                if hyperedge_id not in self.decision_hyperedges:
-                    errors['decision_node_to_hyperedge'].append(
-                        f"Decision '{dec_id}' references non-existent hyperedge '{hyperedge_id}'"
-                    )
-                elif dec_id not in self.decision_hyperedges[hyperedge_id].relation:
-                    errors['decision_node_to_hyperedge'].append(
-                        f"Decision '{dec_id}' references hyperedge '{hyperedge_id}', but hyperedge doesn't reference back"
-                    )
-                elif self.decision_hyperedges[hyperedge_id].relation[dec_id] != role:
-                    errors['decision_node_to_hyperedge'].append(
-                        f"Decision '{dec_id}' has role '{role}' in hyperedge '{hyperedge_id}', but hyperedge has role '{self.decision_hyperedges[hyperedge_id].relation[dec_id]}'"
-                    )
+            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'episode', or 'topic'")
 
-        # L0: DecisionHyperedge -> DecisionNode
-        for hyperedge_id, hyperedge in self.decision_hyperedges.items():
-            for node_id, role in hyperedge.relation.items():
-                if node_id not in self.decisions:
-                    errors['decision_hyperedge_to_node'].append(
-                        f"Decision hyperedge '{hyperedge_id}' references non-existent decision '{node_id}'"
-                    )
-                elif hyperedge_id not in self.decisions[node_id].hyperedge:
-                    errors['decision_hyperedge_to_node'].append(
-                        f"Decision hyperedge '{hyperedge_id}' references decision '{node_id}', but decision doesn't reference back"
-                    )
-                elif self.decisions[node_id].hyperedge[hyperedge_id] != role:
-                    errors['decision_hyperedge_to_node'].append(
-                        f"Decision hyperedge '{hyperedge_id}' has role '{role}' for decision '{node_id}', but decision has role '{self.decisions[node_id].hyperedge[hyperedge_id]}'"
-                    )
 
-        # L0-L2: DecisionHyperedge -> EpisodeNode
-        for hyperedge_id, hyperedge in self.decision_hyperedges.items():
-            if hyperedge.episode_node_id:
-                if hyperedge.episode_node_id not in self.episodes:
-                    errors['decision_hyperedge_to_episode'].append(
-                        f"Decision hyperedge '{hyperedge_id}' references non-existent episode '{hyperedge.episode_node_id}'"
-                    )
-
-        # L1: FactNode -> FactHyperedge
-        for fact_id, fact in self.facts.items():
-            for hyperedge_id, role in fact.hyperedge.items():
-                if hyperedge_id not in self.fact_hyperedges:
-                    errors['fact_node_to_hyperedge'].append(
-                        f"Fact '{fact_id}' references non-existent hyperedge '{hyperedge_id}'"
-                    )
-                elif fact_id not in self.fact_hyperedges[hyperedge_id].relation:
-                    errors['fact_node_to_hyperedge'].append(
-                        f"Fact '{fact_id}' references hyperedge '{hyperedge_id}', but hyperedge doesn't reference back"
-                    )
-                elif self.fact_hyperedges[hyperedge_id].relation[fact_id] != role:
-                    errors['fact_node_to_hyperedge'].append(
-                        f"Fact '{fact_id}' has role '{role}' in hyperedge '{hyperedge_id}', but hyperedge has role '{self.fact_hyperedges[hyperedge_id].relation[fact_id]}'"
-                    )
-        
-        # L1: FactHyperedge -> FactNode
-        for hyperedge_id, hyperedge in self.fact_hyperedges.items():
-            for node_id, role in hyperedge.relation.items():
-                if node_id not in self.facts:
-                    errors['fact_hyperedge_to_node'].append(
-                        f"Fact hyperedge '{hyperedge_id}' references non-existent fact '{node_id}'"
-                    )
-                elif hyperedge_id not in self.facts[node_id].hyperedge:
-                    errors['fact_hyperedge_to_node'].append(
-                        f"Fact hyperedge '{hyperedge_id}' references fact '{node_id}', but fact doesn't reference back"
-                    )
-                elif self.facts[node_id].hyperedge[hyperedge_id] != role:
-                    errors['fact_hyperedge_to_node'].append(
-                        f"Fact hyperedge '{hyperedge_id}' has role '{role}' for fact '{node_id}', but fact has role '{self.facts[node_id].hyperedge[hyperedge_id]}'"
-                    )
-        
-        # L1-L2: FactHyperedge -> EpisodeNode
-        for hyperedge_id, hyperedge in self.fact_hyperedges.items():
-            if hyperedge.episode_node_id:
-                if hyperedge.episode_node_id not in self.episodes:
-                    errors['fact_hyperedge_to_episode'].append(
-                        f"Fact hyperedge '{hyperedge_id}' references non-existent episode '{hyperedge.episode_node_id}'"
-                    )
-                elif self.episodes[hyperedge.episode_node_id].fact_hyperedge_id != hyperedge_id:
-                    errors['fact_hyperedge_to_episode'].append(
-                        f"Fact hyperedge '{hyperedge_id}' references episode '{hyperedge.episode_node_id}', but episode references hyperedge '{self.episodes[hyperedge.episode_node_id].fact_hyperedge_id}'"
-                    )
-        
-        # L1-L2: EpisodeNode -> FactHyperedge
-        for episode_id, episode in self.episodes.items():
-            if episode.fact_hyperedge_id:
-                if episode.fact_hyperedge_id not in self.fact_hyperedges:
-                    errors['episode_to_fact_hyperedge'].append(
-                        f"Episode '{episode_id}' references non-existent fact hyperedge '{episode.fact_hyperedge_id}'"
-                    )
-                elif self.fact_hyperedges[episode.fact_hyperedge_id].episode_node_id != episode_id:
-                    errors['episode_to_fact_hyperedge'].append(
-                        f"Episode '{episode_id}' references fact hyperedge '{episode.fact_hyperedge_id}', but hyperedge references episode '{self.fact_hyperedges[episode.fact_hyperedge_id].episode_node_id}'"
-                    )
-        
-        # L2: EpisodeNode -> EpisodeHyperedge
-        for episode_id, episode in self.episodes.items():
-            for hyperedge_id, role in episode.hyperedge.items():
-                if hyperedge_id not in self.episode_hyperedges:
-                    errors['episode_node_to_hyperedge'].append(
-                        f"Episode '{episode_id}' references non-existent hyperedge '{hyperedge_id}'"
-                    )
-                elif episode_id not in self.episode_hyperedges[hyperedge_id].relation:
-                    errors['episode_node_to_hyperedge'].append(
-                        f"Episode '{episode_id}' references hyperedge '{hyperedge_id}', but hyperedge doesn't reference back"
-                    )
-                elif self.episode_hyperedges[hyperedge_id].relation[episode_id] != role:
-                    errors['episode_node_to_hyperedge'].append(
-                        f"Episode '{episode_id}' has role '{role}' in hyperedge '{hyperedge_id}', but hyperedge has role '{self.episode_hyperedges[hyperedge_id].relation[episode_id]}'"
-                    )
-        
-        # L2: EpisodeHyperedge -> EpisodeNode
-        for hyperedge_id, hyperedge in self.episode_hyperedges.items():
-            for node_id, role in hyperedge.relation.items():
-                if node_id not in self.episodes:
-                    errors['episode_hyperedge_to_node'].append(
-                        f"Episode hyperedge '{hyperedge_id}' references non-existent episode '{node_id}'"
-                    )
-                elif hyperedge_id not in self.episodes[node_id].hyperedge:
-                    errors['episode_hyperedge_to_node'].append(
-                        f"Episode hyperedge '{hyperedge_id}' references episode '{node_id}', but episode doesn't reference back"
-                    )
-                elif self.episodes[node_id].hyperedge[hyperedge_id] != role:
-                    errors['episode_hyperedge_to_node'].append(
-                        f"Episode hyperedge '{hyperedge_id}' has role '{role}' for episode '{node_id}', but episode has role '{self.episodes[node_id].hyperedge[hyperedge_id]}'"
-                    )
-        
-        # L2-L3: EpisodeHyperedge -> TopicNode
-        for hyperedge_id, hyperedge in self.episode_hyperedges.items():
-            if hyperedge.topic_node_id:
-                if hyperedge.topic_node_id not in self.topics:
-                    errors['episode_hyperedge_to_topic'].append(
-                        f"Episode hyperedge '{hyperedge_id}' references non-existent topic '{hyperedge.topic_node_id}'"
-                    )
-                elif self.topics[hyperedge.topic_node_id].episode_hyperedge_id != hyperedge_id:
-                    errors['episode_hyperedge_to_topic'].append(
-                        f"Episode hyperedge '{hyperedge_id}' references topic '{hyperedge.topic_node_id}', but topic references hyperedge '{self.topics[hyperedge.topic_node_id].episode_hyperedge_id}'"
-                    )
-        
-        # L2-L3: TopicNode -> EpisodeHyperedge
-        for topic_id, topic in self.topics.items():
-            if topic.episode_hyperedge_id:
-                if topic.episode_hyperedge_id not in self.episode_hyperedges:
-                    errors['topic_to_episode_hyperedge'].append(
-                        f"Topic '{topic_id}' references non-existent episode hyperedge '{topic.episode_hyperedge_id}'"
-                    )
-                elif self.episode_hyperedges[topic.episode_hyperedge_id].topic_node_id != topic_id:
-                    errors['topic_to_episode_hyperedge'].append(
-                        f"Topic '{topic_id}' references episode hyperedge '{topic.episode_hyperedge_id}', but hyperedge references topic '{self.episode_hyperedges[topic.episode_hyperedge_id].topic_node_id}'"
-                    )
-        
-        errors = {k: v for k, v in errors.items() if v}
-        return errors
-    
-
-# ==================== Hypergraph Embedding Container Class ====================
+# ==================== Embedding Container ====================
 
 class HypergraphEmbedding(BaseModel):
-    """Complete hypergraph embedding container"""
+    """Embedding vectors for Hypergraph nodes."""
     model_config = {"arbitrary_types_allowed": True}
-    
-    # L0 layer: Decision layer embeddings
+
     decisions: Dict[str, np.ndarray] = Field(default_factory=dict)
-    decision_hyperedges: Dict[str, np.ndarray] = Field(default_factory=dict)
-    
-    # L1 layer: Fact layer embeddings
-    facts: Dict[str, np.ndarray] = Field(default_factory=dict)
-    fact_hyperedges: Dict[str, np.ndarray] = Field(default_factory=dict)
-    
-    # L2 layer: Episode layer embeddings
     episodes: Dict[str, np.ndarray] = Field(default_factory=dict)
-    episode_hyperedges: Dict[str, np.ndarray] = Field(default_factory=dict)
-    
-    # L3 layer: Topic layer embeddings
     topics: Dict[str, np.ndarray] = Field(default_factory=dict)
-    
+
     def get_stats(self) -> Dict[str, int]:
         return {
             'decisions': len(self.decisions),
-            'decision_hyperedges': len(self.decision_hyperedges),
-            'facts': len(self.facts),
-            'fact_hyperedges': len(self.fact_hyperedges),
             'episodes': len(self.episodes),
-            'episode_hyperedges': len(self.episode_hyperedges),
-            'topics': len(self.topics)
+            'topics': len(self.topics),
         }
-    
+
     def to_dict(self) -> Dict[str, Any]:
         def convert_numpy(obj):
             if isinstance(obj, np.ndarray):
@@ -900,235 +358,81 @@ class HypergraphEmbedding(BaseModel):
                 return [convert_numpy(item) for item in obj]
             else:
                 return obj
-        
+
         return convert_numpy({
             'decisions': self.decisions,
-            'decision_hyperedges': self.decision_hyperedges,
-            'facts': self.facts,
-            'fact_hyperedges': self.fact_hyperedges,
             'episodes': self.episodes,
-            'episode_hyperedges': self.episode_hyperedges,
-            'topics': self.topics
+            'topics': self.topics,
         })
-    
+
     def add_embedding(self, layer: str, node_id: str, embedding: np.ndarray):
         if layer == "decision":
             self.decisions[node_id] = embedding
-        elif layer == "decision_hyperedge":
-            self.decision_hyperedges[node_id] = embedding
-        elif layer == "fact":
-            self.facts[node_id] = embedding
-        elif layer == "fact_hyperedge":
-            self.fact_hyperedges[node_id] = embedding
         elif layer == "episode":
             self.episodes[node_id] = embedding
-        elif layer == "episode_hyperedge":
-            self.episode_hyperedges[node_id] = embedding
         elif layer == "topic":
             self.topics[node_id] = embedding
         else:
-            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'fact', 'episode', 'topic', 'decision_hyperedge', 'fact_hyperedge', or 'episode_hyperedge'")
+            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'episode', or 'topic'")
 
     def get_embedding(self, layer: str, node_id: str) -> np.ndarray:
         if layer == "decision":
             return self.decisions.get(node_id, np.array([]))
-        elif layer == "decision_hyperedge":
-            return self.decision_hyperedges.get(node_id, np.array([]))
-        elif layer == "fact":
-            return self.facts.get(node_id, np.array([]))
-        elif layer == "fact_hyperedge":
-            return self.fact_hyperedges.get(node_id, np.array([]))
         elif layer == "episode":
             return self.episodes.get(node_id, np.array([]))
-        elif layer == "episode_hyperedge":
-            return self.episode_hyperedges.get(node_id, np.array([]))
         elif layer == "topic":
             return self.topics.get(node_id, np.array([]))
         else:
-            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'fact', 'episode', 'topic', 'decision_hyperedge', 'fact_hyperedge', or 'episode_hyperedge'")
-    
-    
-def _print_hypergraph(hypergraph):
-    print("  L0 Layer - Decision Layer:")
-    print("    Decision Nodes:")
-    for dec_id, dec_data in hypergraph.decisions.items():
-        print(f"      {dec_id}: {dec_data}")
-    print("    Decision Hyperedges:")
-    for hyperedge_id, hyperedge_data in hypergraph.decision_hyperedges.items():
-        print(f"      {hyperedge_id}: {hyperedge_data}")
-    
-    print("  L1 Layer - Fact Layer:")
-    print("    Fact Nodes:")
-    for fact_id, fact_data in hypergraph.facts.items():
-        print(f"      {fact_id}: {fact_data}")
-    print("    Fact Hyperedges:")
-    for hyperedge_id, hyperedge_data in hypergraph.fact_hyperedges.items():
-        print(f"      {hyperedge_id}: {hyperedge_data}")
-    
-    print("  L2 Layer - Episode Layer:")
-    print("    Episode Nodes:")
-    for episode_id, episode_data in hypergraph.episodes.items():
-        print(f"      {episode_id}: {episode_data}")
-    print("    Episode Hyperedges:")
-    for hyperedge_id, hyperedge_data in hypergraph.episode_hyperedges.items():
-        print(f"      {hyperedge_id}: {hyperedge_data}")
-    
-    print("  L3 Layer - Topic Layer:")
-    print("    Topic Nodes:")
-    for topic_id, topic_data in hypergraph.topics.items():
-        print(f"      {topic_id}: {topic_data}")
+            raise ValueError(f"Invalid layer: {layer}. Must be 'decision', 'episode', or 'topic'")
 
+    @classmethod
+    def compute_from_hypergraph(
+        cls,
+        hypergraph: Hypergraph,
+        embed_fn,
+        batch_size: int = 32,
+    ) -> "HypergraphEmbedding":
+        """Generate embeddings for all text-bearing nodes in a Hypergraph."""
+        emb = cls()
+        import numpy as np
 
-def _test():
-    print("=== Testing Hypergraph Basic Functionality ===")
-    
-    hypergraph = Hypergraph()
-    
-    print("\n1. Adding nodes and hyperedges...")
-    
-    # Add fact node
-    hypergraph.add_node("fact", "fact_1", 
-                       content="John works in New York",
-                       episode_ids=["episode_1"],
-                       topic_id="topic_1",
-                       confidence=0.9,
-                       temporal="current",
-                       keywords=["work", "location"],
-                       query_patterns=["Where does John work?"],
-                       timestamp=datetime.now())
-    
-    # Add fact hyperedge
-    hypergraph.add_hyperedge("fact", "fh_1", 
-                           relation={"fact_1": "core"},
-                           weights={"fact_1": 1.0},
-                           episode_node_id="episode_1",
-                           created_at=datetime.now(),
-                           extraction_confidence=0.9)
-    
-    # Add episode node
-    hypergraph.add_node("episode", "episode_1", 
-                       user_id_list=["user_1"],
-                       original_data=[{"content": "John works in New York"}],
-                       timestamp=datetime.now(),
-                       summary="Work information",
-                       fact_hyperedge_id="fh_1")
-    
-    # Add episode hyperedge
-    hypergraph.add_hyperedge("episode", "eh_1", 
-                           relation={"episode_1": "key_moment"},
-                           weights={"episode_1": 1.0},
-                           topic_node_id="topic_1",
-                           created_at=datetime.now(),
-                           coherence_score=0.85)
-    
-    # Add topic node
-    hypergraph.add_node("topic", "topic_1", 
-                       title="Work Topic",
-                       summary="John works in New York",
-                       episode_ids=["episode_1"],
-                       timestamp=datetime.now(),
-                       user_id_list=["user_1"],
-                       episode_hyperedge_id="eh_1")
-    
-    print("Added 1 fact node, 1 fact hyperedge, 1 episode node, 1 episode hyperedge, 1 topic node")
-    print(f"Statistics: {hypergraph.get_stats()}")
-    print("Complete hypergraph after addition:")
-    _print_hypergraph(hypergraph)
-    
-    print("\n2. Verifying adjacency lists...")
-    
-    fact_1_data = hypergraph.get_node("fact", "fact_1")
-    print(f"Fact 1 hyperedge adjacency: {fact_1_data.get('hyperedge', {})}")
-    print(f"Fact 1 text: {hypergraph.facts['fact_1'].to_text()}")
-    
-    fh_1_data = hypergraph.get_hyperedge("fact", "fh_1")
-    print(f"Fact hyperedge 1 relation: {fh_1_data.get('relation', {})}")
-    
-    episode_1_data = hypergraph.get_node("episode", "episode_1")
-    print(f"Episode 1 hyperedge adjacency: {episode_1_data.get('hyperedge', {})}")
-    
-    print("\n3. Testing degrees...")
-    print(f"Fact 1 degree: {hypergraph.get_node_degree('fact', 'fact_1')}")
-    print(f"Episode 1 degree: {hypergraph.get_node_degree('episode', 'episode_1')}")
-    print(f"Topic 1 degree: {hypergraph.get_node_degree('topic', 'topic_1')}")
-    print(f"Fact hyperedge 1 degree: {hypergraph.get_hyperedge_degree('fact', 'fh_1')}")
-    print(f"Episode hyperedge 1 degree: {hypergraph.get_hyperedge_degree('episode', 'eh_1')}")
-    
-    print("\n4. Validating bidirectional links...")
-    validation_errors = hypergraph.validate_bidirectional_links()
-    if validation_errors:
-        print("Found bidirectional link errors:")
-        for error_type, error_list in validation_errors.items():
-            print(f"  {error_type}:")
-            for error in error_list:
-                print(f"    - {error}")
-    else:
-        print("✓ All bidirectional links validation passed")
-    
-    print("\n5. Testing error detection (intentionally breaking a bidirectional link)...")
-    hypergraph.facts["fact_1"].hyperedge["non_existent_hyperedge"] = "test_role"
-    
-    validation_errors = hypergraph.validate_bidirectional_links()
-    if validation_errors:
-        print("✓ Successfully detected bidirectional link errors:")
-        for error_type, error_list in validation_errors.items():
-            print(f"  {error_type}:")
-            for error in error_list:
-                print(f"    - {error}")
-    else:
-        print("✗ Failed to detect bidirectional link errors")
-    
-    hypergraph.facts["fact_1"].hyperedge.pop("non_existent_hyperedge", None)
-    
-    print("\n6. Testing role and weight functionality...")
-    
-    hypergraph.add_node("fact", "fact_2", 
-                       content="John started working in 2020",
-                       episode_ids=["episode_1"],
-                       topic_id="topic_1",
-                       confidence=0.8,
-                       temporal="2020",
-                       keywords=["work", "time"],
-                       timestamp=datetime.now())
-    
-    hypergraph.add_node("fact", "fact_3", 
-                       content="New York is a big city",
-                       episode_ids=["episode_1"],
-                       topic_id="topic_1",
-                       confidence=0.5,
-                       keywords=["location", "attribute"],
-                       timestamp=datetime.now())
-    
-    hypergraph.add_hyperedge("fact", "fh_2", 
-                           relation={
-                               "fact_1": "core",
-                               "fact_2": "temporal",
-                               "fact_3": "context"
-                           },
-                           weights={
-                               "fact_1": 1.0,
-                               "fact_2": 0.7,
-                               "fact_3": 0.3
-                           },
-                           episode_node_id="episode_1",
-                           created_at=datetime.now(),
-                           extraction_confidence=0.85)
-    
-    fh_2 = hypergraph.fact_hyperedges.get("fh_2")
-    if fh_2:
-        print(f"\nFact Hyperedge fh_2:")
-        print(f"  All relations: {fh_2.relation}")
-        print(f"  All weights: {fh_2.weights}")
-        
-        core_facts = [fid for fid, role in fh_2.relation.items() if role == "core"]
-        print(f"  Core facts: {core_facts}")
-        
-        if fh_2.weights:
-            sorted_facts = sorted(fh_2.weights.items(), key=lambda x: x[1], reverse=True)
-            print(f"  Facts by importance: {sorted_facts}")
-    
-    print("\n=== Test Completed Successfully! ===")
+        def _batch_embed(items: Dict[str, str]) -> Dict[str, np.ndarray]:
+            ids = list(items.keys())
+            texts = [items[i] for i in ids]
+            result: Dict[str, np.ndarray] = {}
+            for start in range(0, len(texts), batch_size):
+                batch_texts = texts[start:start + batch_size]
+                batch_ids = ids[start:start + batch_size]
+                vectors = embed_fn(batch_texts)
+                for nid, vec in zip(batch_ids, vectors):
+                    result[nid] = np.array(vec, dtype=np.float32)
+            return result
 
+        # decisions
+        decision_texts: Dict[str, str] = {}
+        for did, d in hypergraph.decisions.items():
+            txt = (d.content or d.title or "").strip()
+            if txt:
+                decision_texts[did] = txt
+        if decision_texts:
+            emb.decisions = _batch_embed(decision_texts)
 
-if __name__ == "__main__":
-    _test()
+        # episodes
+        episode_texts: Dict[str, str] = {}
+        for eid, e in hypergraph.episodes.items():
+            txt = (e.summary or e.episode_description or "").strip()
+            if txt:
+                episode_texts[eid] = txt
+        if episode_texts:
+            emb.episodes = _batch_embed(episode_texts)
+
+        # topics
+        topic_texts: Dict[str, str] = {}
+        for tid, t in hypergraph.topics.items():
+            txt = f"{t.title}: {t.summary}" if t.title and t.summary else (t.title or t.summary or "").strip()
+            if txt:
+                topic_texts[tid] = txt
+        if topic_texts:
+            emb.topics = _batch_embed(topic_texts)
+
+        return emb

@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "run_id": "81946327f4874881b30674a2fd5a24d7",
+    "created_at": "2026-08-07T15:27:44.493377+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "8fab552b6271bc08c36c31c07662cfa6d8f594eaae5238d53b6854e9b2237ca8",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "data_platform_channel_9",
+      "frontend_mobile_channel_0",
+      "frontend_mobile_channel_1"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "data_platform_channel_9": 2,
+      "frontend_mobile_channel_0": 2,
+      "frontend_mobile_channel_1": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 14,
+  "chat_metrics": {
+    "data_platform_channel_9": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "frontend_mobile_channel_0": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "frontend_mobile_channel_1": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    }
+  },
+  "metrics": {
+    "strict_tp": 4,
+    "strict_fp": 2,
+    "strict_fn": 2,
+    "valid_extra": 4,
+    "invalid": 2,
+    "evidence_valid": 10,
+    "evidence_invalid": 0,
+    "errors": [],
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666,
+    "incomplete": false,
+    "incomplete_reason": ""
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "data_platform_channel_9",
+        "title": "动态脱敏+最小权限原则",
+        "summary": "动态脱敏+最小权限原则",
+        "source_message_ids": [
+          "m012"
+        ],
+        "evidence_quote": "同意，动态脱敏+最小权限原则，我去联系供应商。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m012",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "data_platform_channel_9",
+        "title": "明天上午开会定下来",
+        "summary": "明天上午开会定下来",
+        "source_message_ids": [
+          "m031"
+        ],
+        "evidence_quote": "好，明天上午开会定下来。先散会。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m031",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "data_platform_channel_9",
+        "title": "下周三必须出选型结论",
+        "summary": "下周三必须出选型结论",
+        "source_message_ids": [
+          "m029"
+        ],
+        "evidence_quote": "我们时间线很紧，下周三必须出选型结论。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.10"
+      },
+      {
+        "chat_id": "data_platform_channel_9",
+        "title": "Jack今晚做POC对比，明早分享结果",
+        "summary": "Jack今晚做POC对比，明早分享结果",
+        "source_message_ids": [
+          "m030"
+        ],
+        "evidence_quote": "我今晚做个POC对比，明早分享结果。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "提取结果仅为个人计划陈述，未形成团队决策或执行承诺，与GT候选中的决策性内容不等价。"
+      },
+      {
+        "chat_id": "data_platform_channel_9",
+        "title": "Bob准备好安全评估清单",
+        "summary": "Bob准备好安全评估清单",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "收到，我会准备好安全评估清单。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据显示Bob承诺准备安全评估清单，是明确的执行承诺，但未被候选GT覆盖。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_0",
+        "title": "预留原生回退方案",
+        "summary": "预留原生回退方案",
+        "source_message_ids": [
+          "m010"
+        ],
+        "evidence_quote": "同意，但需要预留原生回退方案",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "证据明确要求预留原生回退方案，这是一个具体的决策约束，但候选GT中无对应内容"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_0",
+        "title": "Flutter预研结果出来后，再讨论Wasm",
+        "summary": "Flutter预研结果出来后，再讨论Wasm",
+        "source_message_ids": [
+          "m027"
+        ],
+        "evidence_quote": "Flutter预研结果出来后，我们再讨论Wasm",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m027",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_0",
+        "title": "先不做Wasm，等Flutter稳定后再评估",
+        "summary": "先不做Wasm，等Flutter稳定后再评估",
+        "source_message_ids": [
+          "m022",
+          "m023",
+          "m024"
+        ],
+        "evidence_quote": "先不做Wasm，等Flutter稳定后再评估",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确做出‘先不做Wasm，等Flutter稳定后再评估’的决策，证据链完整，但未被任何候选GT覆盖（m030是CI搭建，m027是条件性讨论，均不等价于该决策）"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_1",
+        "title": "微前端做按需加载，不影响功能完整性",
+        "summary": "微前端做按需加载，不影响功能完整性",
+        "source_message_ids": [
+          "m012",
+          "m014"
+        ],
+        "evidence_quote": "微前端首屏加载会有额外开销，但我们可以做按需加载。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确决策了按需加载且不影响功能完整性，但GT候选均为具体框架选型或执行分配，未覆盖该决策等价内容。"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_1",
+        "title": "离线方案先做核心页面，Frank负责实现",
+        "summary": "离线方案先做核心页面，Frank负责实现",
+        "source_message_ids": [
+          "m027",
+          "m028",
+          "m029"
+        ],
+        "evidence_quote": "这周上线计划紧，离线方案先做核心页面。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m028",
+        "reason": "提取结果与GT m028均明确决策由Frank负责实现核心页面，决策内容等价"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "frontend_mobile_channel_0",
+        "msg_id": "m030",
+        "expected_topic": "跨平台框架Flutter",
+        "expected_summary": "Flutter的CI流水线我已经搭好了，明天可以跑",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "frontend_mobile_channel_1",
+        "msg_id": "m016",
+        "expected_topic": "微前端架构",
+        "expected_summary": "好，微前端我们用qiankun框架，@David 你觉得如何？",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 10,
+    "errors": {}
+  }
+}

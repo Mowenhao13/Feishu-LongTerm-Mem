@@ -1,0 +1,90 @@
+# Feishu-LongTerm-Mem 默认本体定义
+# 定义支持的实体类型和关系类型
+# 用户可通过 configs/ontology/custom.yaml 扩展
+
+entity_types:
+  Person:
+    description: "团队成员"
+    attributes:
+      role:
+        type: str
+        required: false
+        description: "角色，如 backend_engineer, pm, designer"
+
+  Technology:
+    description: "技术栈 / 工具 / 框架 / 库"
+    attributes:
+      version:
+        type: str
+        required: false
+        description: "版本号，如 15, v3.2.1"
+      category:
+        type: str
+        required: false
+        enum: ["database", "framework", "language", "tool", "platform", "service", "library"]
+        description: "技术分类"
+
+  Project:
+    description: "项目 / 模块／子系统"
+    attributes:
+      status:
+        type: str
+        required: false
+        enum: ["active", "planning", "evaluating", "deprecated"]
+        description: "项目状态"
+
+  Service:
+    description: "服务 / 微服务 / 组件实例"
+    attributes:
+      type:
+        type: str
+        required: false
+        description: "服务类型，如 web, worker, api"
+      provider:
+        type: str
+        required: false
+        description: "服务提供方，如 AWS, self-hosted"
+
+  Concept:
+    description: "抽象概念 / 方案 / 架构模式 / 方法论"
+    attributes:
+      description:
+        type: str
+        required: false
+        description: "概念描述"
+
+relationship_types:
+  # 人 → 技术
+  - source: Person
+    target: Technology
+    types: [USES, ADOPTED, RECOMMENDS, REJECTED, EVALUATING]
+
+  # 人 → 项目
+  - source: Person
+    target: Project
+    types: [OWNS, CONTRIBUTES_TO, DECIDES, REVIEWS]
+
+  # 人 → 人
+  - source: Person
+    target: Person
+    types: [REPORTS_TO, COLLABORATES_WITH, MENTORS]
+
+  # 项目 → 技术
+  - source: Project
+    target: Technology
+    types: [USES_TECHNOLOGY, EVALUATING, MIGRATING_TO, DEPENDS_ON]
+
+  # 技术 → 技术
+  - source: Technology
+    target: Technology
+    types: [DEPENDS_ON, REPLACES, COMPATIBLE_WITH, INCOMPATIBLE_WITH]
+
+  # 服务间
+  - source: Service
+    target: Service
+    types: [DEPENDS_ON, COMMUNICATES_WITH]
+
+  # 通用关系（任意类型之间）
+  - source: '*'
+    target: '*'
+    types: [ASSOCIATED_WITH, SAME_AS]

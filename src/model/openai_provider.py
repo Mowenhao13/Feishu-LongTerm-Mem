@@ -17,6 +17,7 @@ import asyncio
 import random
 
 from .protocol import LLMProvider, LLMError
+from src.llm.langfuse_config import get_langfuse, should_sample
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -56,7 +57,7 @@ class OpenAIProvider(LLMProvider):
         self.enable_stats = enable_stats
 
         # Use OpenRouter API key and base URL
-        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("API_KEY")
         self.base_url = base_url or "https://openrouter.ai/api/v1"
         
         # Optional statistics feature (disabled by default, does not affect existing usage)
@@ -73,7 +74,7 @@ class OpenAIProvider(LLMProvider):
         
 
 
-    async def generate(self, prompt: str, temperature: float | None = None, max_tokens: int | None = None, extra_body: dict | None = None, response_format: dict | None = None) -> str:
+    async def generate(self, prompt: str, temperature: float | None = None, max_tokens: int | None = None, extra_body: dict | None = None, response_format: dict | None = None, trace_id: str | None = None) -> str:
         """
         Generate a response for the given prompt.
 
@@ -81,6 +82,7 @@ class OpenAIProvider(LLMProvider):
             prompt: Input prompt
             temperature: Override temperature for this request
             max_tokens: Override max tokens for this request
+            trace_id: Optional trace ID for Langfuse observability
 
         Returns:
             Generated response text
@@ -88,6 +90,39 @@ class OpenAIProvider(LLMProvider):
         Raises:
             LLMError: If generation fails
         """
+        # Langfuse 手动埋点（带语义化的 trace name）
+        langfuse = get_langfuse()
+        f_trace = None
+        f_span = None
+        if langfuse and should_sample() and hasattr(langfuse, "trace"):
+            # 从 trace_id 推断调用阶段：trc_20260101_120000_abc_decision-extraction
+            # 或在 generate() 的 kwargs 中传递 task_name
+            trace_parts = (trace_id or "").split("_")
+            task_name = "llm_generate"
+            if len(trace_parts) >= 4:
+                task_name = trace_parts[3]  # 第四个部分是 task name
+            f_trace = langfuse.trace(
+                name=task_name,
+                input={"prompt": prompt[:200]},
+                metadata={
+                    "model": self.model,
+                    "trace_id": trace_id or "",
+                    "task": task_name,
+                },
+            )
+            f_span = f_trace.span(name="openai_call")
+
+        try:
+            return await self._do_generate(prompt, temperature, max_tokens, extra_body, response_format)
+        except Exception as e:
+            if f_span:
+                f_span.end(output={"status": "error", "error": str(e)})
+            if f_trace:
+                f_trace.end()
+            raise
+
+    async def _do_generate(self, prompt: str, temperature: float | None = None, max_tokens: int | None = None, extra_body: dict | None = None, response_format: dict | None = None) -> str:
+        """实际执行 LLM API 调用（从 generate 拆分以便 Langfuse 包裹）"""
         # Use time.perf_counter() for more precise time measurement
         start_time = time.perf_counter()
         # Prepare request data

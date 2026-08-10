@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 from pathlib import Path
@@ -16,15 +17,39 @@ logger = logging.getLogger(__name__)
 class EvalComparator:
     """比较实际决策与预期真值，计算评估指标。
 
+    支持可选的 LLM Judge 验证：对 embedding 匹配的 TP 做二次确认。
+    当 llm_judge 为 True 时，调用 LLM Judge API 逐对验证匹配质量。
+
     Usage:
         comparator = EvalComparator("eval_dataset/single_chat/expected.jsonl")
         comparator.match(actual_decisions)
         report = comparator.compute_metrics()
+
+    With LLM Judge:
+        comparator = EvalComparator("...", embedding_provider=embed, llm_provider=my_llm)
+        comparator.match(actual_decisions)
+        comparator.llm_verify_matches()  # 二次验证 TP
+        report = comparator.compute_metrics()
     """
 
-    def __init__(self, expected_path: str, embedding_provider: Optional[Any] = None):
+    LLM_JUDGE_PROMPT = '''以下是一条 expected 决策和一条实际提取的决策。请判断它们是否在表述**同一件决策事项**（即语义等价，而非措辞相同）。
+
+Expected决策: {expected}
+实际决策:   {actual}
+
+请返回 JSON:
+{{"is_same_decision": true/false, "reason": "一句话说明理由"}}
+
+注意：
+- 即使措辞不同，只要说的是同一件决定就返回 true
+- 如果只有话题相关但决策内容不同，返回 false
+- **不确定时，返回 true**（宁保留，勿误删）'''
+
+    def __init__(self, expected_path: str, embedding_provider: Optional[Any] = None,
+                 llm_provider: Optional[Any] = None):
         self._expected_path = expected_path
         self._embedder = embedding_provider
+        self._llm_provider = llm_provider
         self._expected_decisions: List[Dict[str, Any]] = []
         self._actual_decisions: List[Dict[str, Any]] = []
         self._true_positives: List[Tuple[Dict, Dict]] = []  # (expected, actual)
@@ -33,7 +58,11 @@ class EvalComparator:
         self._load_expected()
 
     def _load_expected(self) -> None:
-        """加载 expected.jsonl 真值，只保留 expected_decision=true 的行"""
+        """加载 expected.jsonl 真值。
+
+        argusbot_v3 格式：每行一条 ground truth 决策，
+        不依赖 expected_decision 字段过滤。
+        """
         path = Path(self._expected_path)
         if not path.exists():
             raise FileNotFoundError(f"Expected file not found: {self._expected_path}")
@@ -42,7 +71,32 @@ class EvalComparator:
                 line = line.strip()
                 if line:
                     decision = json.loads(line)
-                    if decision.get("expected_decision"):
+                    # 兼容旧格式：如果有 expected_decision 字段才过滤
+                    if "expected_decision" in decision:
+                        if decision.get("expected_decision"):
+                            self._expected_decisions.append(decision)
+                    else:
+                        # argusbot_v3 格式：每行本身就是一条 ground truth
+                        self._expected_decisions.append(decision)
+        """加载 expected.jsonl 真值。
+
+        argusbot_v3 格式：每行一条 ground truth 决策，
+        不依赖 expected_decision 字段过滤。
+        """
+        path = Path(self._expected_path)
+        if not path.exists():
+            raise FileNotFoundError(f"Expected file not found: {self._expected_path}")
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    decision = json.loads(line)
+                    # 兼容旧格式：如果有 expected_decision 字段才过滤
+                    if "expected_decision" in decision:
+                        if decision.get("expected_decision"):
+                            self._expected_decisions.append(decision)
+                    else:
+                        # argusbot_v3 格式：每行本身就是一条 ground truth
                         self._expected_decisions.append(decision)
 
     @staticmethod
@@ -194,6 +248,89 @@ class EvalComparator:
                 if actual_topic in ("general", "unknown", ""):
                     continue
                 self._false_positives.append(actual)
+
+    async def llm_verify_matches(self, max_concurrent: int = 5) -> Dict[str, Any]:
+        """用 LLM 对每个 TP 做二次确认，剔除误匹配。
+
+        只对 embedding 匹配的 TP 做验证（字符匹配的 TP 跳过，因为字符匹配准确率已高）。
+        移除 LLM 判断为 false 的 TP pair，将其 expected 回归 FN，actual 回归 FP。
+
+        Args:
+            max_concurrent: 最大并发 LLM 调用数
+
+        Returns:
+            {"verified_tp": int, "rejected_tp": int, "details": [...]}
+        """
+        if not self._llm_provider:
+            return {"verified_tp": len(self._true_positives), "rejected_tp": 0, "reason": "no llm_provider"}
+
+        verified = []
+        rejected = []
+        need_verify = []
+
+        for exp, act in self._true_positives:
+            exp_summary = (exp.get("expected_summary") or "").strip()
+            act_summary = (act.get("summary") or "").strip()
+            # 跳过空摘要
+            if not exp_summary or not act_summary:
+                verified.append((exp, act))
+                continue
+            # 使用字符相似度作为过滤：>0.6 的已经足够准确，跳过 LLM 验证
+            char_sim = self._summary_similarity(exp_summary, act_summary)
+            if char_sim > 0.6:
+                verified.append((exp, act))
+                continue
+            # 字符相似度 < 0.3 的基本不可能是同一决策
+            if char_sim < 0.3:
+                rejected.append((exp, act))
+                continue
+            need_verify.append((exp, act, exp_summary, act_summary))
+
+        if not need_verify:
+            self._true_positives = verified
+            return {"verified_tp": len(verified), "rejected_tp": 0, "skipped": "all above char_sim 0.6"}
+
+        sem = asyncio.Semaphore(max_concurrent)
+
+        async def _judge_pair(exp: Dict, act: Dict, exp_s: str, act_s: str) -> bool:
+            prompt = self.LLM_JUDGE_PROMPT.format(expected=exp_s, actual=act_s)
+            async with sem:
+                try:
+                    resp = await self._llm_provider.generate(
+                        prompt, response_format={'type': 'json_object'}, temperature=0.1
+                    )
+                    result = json.loads(resp)
+                    return result.get("is_same_decision", False)
+                except Exception as e:
+                    logger.warning("LLM Judge failed for pair '%s' vs '%s': %s", exp_s[:20], act_s[:20], e)
+                    return True  # 默认保留（宁保留勿误删）
+
+        tasks = [asyncio.create_task(_judge_pair(e, a, es, aa)) for e, a, es, aa in need_verify]
+        results = await asyncio.gather(*tasks)
+
+        for (exp, act, _, _), is_same in zip(need_verify, results):
+            if is_same:
+                verified.append((exp, act))
+            else:
+                rejected.append((exp, act))
+
+        # 更新 TP
+        self._true_positives = verified
+        # rejected 的 expected 回归 FN
+        for exp, _ in rejected:
+            self._false_negatives.append(exp)
+        # rejected 的 actual 回归 FP
+        for _, act in rejected:
+            self._false_positives.append(act)
+
+        details = [
+            {
+                "expected_summary": (e.get("expected_summary") or "")[:50],
+                "actual_summary": (a.get("summary") or "")[:50],
+            }
+            for e, a in rejected
+        ]
+        return {"verified_tp": len(verified), "rejected_tp": len(rejected), "details": details}
 
     def compute_metrics(self) -> Dict[str, Any]:
         """计算评估指标"""

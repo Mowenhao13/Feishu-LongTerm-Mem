@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "run_id": "402e1b2d2b10498bbba7942dc4f9c5b9",
+    "created_at": "2026-08-07T15:15:20.693288+00:00",
+    "commit": "f2373d75207c1e8fd88d064d03cc99819bf085ed",
+    "dataset_hash": "d2a6a007a023f10141640944b73a5cd203e0fcc0de0738a3259c2ea7b199fa47",
+    "model": "deepseek-local",
+    "options": {
+      "enable_memory_extraction": true,
+      "inject_entity_context": true,
+      "inject_project_context": true,
+      "enable_neo4j_history": true,
+      "enable_embedding_dedup": true,
+      "enable_llm_dedup": true
+    }
+  },
+  "selection": {
+    "chat_ids": [
+      "data_platform_channel_3",
+      "data_platform_channel_4",
+      "data_platform_channel_5"
+    ],
+    "expected_count": 6,
+    "expected_by_chat": {
+      "data_platform_channel_3": 2,
+      "data_platform_channel_4": 2,
+      "data_platform_channel_5": 2
+    }
+  },
+  "trace": {
+    "memory_extraction_enabled": true,
+    "entity_context_injected": true,
+    "project_context_injected": true,
+    "neo4j_history_reads": 0,
+    "embedding_dedup_enabled": true,
+    "llm_dedup_enabled": true
+  },
+  "output_count": 15,
+  "chat_metrics": {
+    "data_platform_channel_3": {
+      "expected": 2,
+      "tp": 2,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285715
+    },
+    "data_platform_channel_4": {
+      "expected": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "data_platform_channel_5": {
+      "expected": 2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "metrics": {
+    "strict_tp": 3,
+    "strict_fp": 5,
+    "strict_fn": 3,
+    "valid_extra": 6,
+    "invalid": 5,
+    "evidence_valid": 15,
+    "evidence_invalid": 0,
+    "errors": [
+      "data_platform_channel_3:Charlie搭Ranger集群做压力测试，下周三出结果: invalid semantic GT identity"
+    ],
+    "precision": 0.375,
+    "recall": 0.5,
+    "f1": 0.42857142857142855,
+    "incomplete": true,
+    "incomplete_reason": "evaluation_error"
+  },
+  "evaluation_audit": {
+    "confirmed_outputs": [
+      {
+        "chat_id": "data_platform_channel_3",
+        "title": "脱敏方案用Apache Ranger，Diana协调测试资源",
+        "summary": "脱敏方案用Apache Ranger，Diana协调测试资源",
+        "source_message_ids": [
+          "m010",
+          "m011"
+        ],
+        "evidence_quote": "好，脱敏方案就用Ranger，Diana协调测试资源。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m009",
+        "reason": "提取结果与GT m009均明确使用Ranger进行脱敏方案，且涉及测试资源协调，决策等价。"
+      },
+      {
+        "chat_id": "data_platform_channel_3",
+        "title": "Charlie搭Ranger集群做压力测试，下周三出结果",
+        "summary": "Charlie搭Ranger集群做压力测试，下周三出结果",
+        "source_message_ids": [
+          "m009"
+        ],
+        "evidence_quote": "那我先搭个Ranger集群做压力测试，预计下周三出结果。",
+        "evidence_valid": true,
+        "adjudication": "evaluation_error",
+        "matched_msg_id": "m009",
+        "reason": "invalid_semantic_gt_identity"
+      },
+      {
+        "chat_id": "data_platform_channel_3",
+        "title": "元数据管理平台选Apache Atlas",
+        "summary": "元数据管理平台选Apache Atlas",
+        "source_message_ids": [
+          "m020",
+          "m021",
+          "m022",
+          "m023"
+        ],
+        "evidence_quote": "我们Hive占数据量60%，血缘必须准确。Atlas更稳妥。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m023",
+        "reason": "提取结果与GT m023均为决定采用Atlas并准备部署方案，决策等价"
+      },
+      {
+        "chat_id": "data_platform_channel_3",
+        "title": "Diana申请HBase扩容预算，下周一开始实施",
+        "summary": "Diana申请HBase扩容预算，下周一开始实施",
+        "source_message_ids": [
+          "m023",
+          "m024"
+        ],
+        "evidence_quote": "扩容预算我申请，下周一开始实施。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: m024"
+      },
+      {
+        "chat_id": "data_platform_channel_3",
+        "title": "Frank写血缘采集脚本，注意与数据治理委员会对齐",
+        "summary": "Frank写血缘采集脚本，注意与数据治理委员会对齐",
+        "source_message_ids": [
+          "m025",
+          "m026"
+        ],
+        "evidence_quote": "我下午写血缘采集脚本。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.12"
+      },
+      {
+        "chat_id": "data_platform_channel_3",
+        "title": "Bob在脱敏POC结果出来后写安全审计报告",
+        "summary": "Bob在脱敏POC结果出来后写安全审计报告",
+        "source_message_ids": [
+          "m028"
+        ],
+        "evidence_quote": "脱敏POC结果出来后，我写安全审计报告。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.19"
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "采用动态脱敏+静态脱敏双模式",
+        "summary": "采用动态脱敏+静态脱敏双模式",
+        "source_message_ids": [
+          "m002",
+          "m009"
+        ],
+        "evidence_quote": "建议采用动态脱敏+静态脱敏双模式，静态用于备份，动态用于实时查询。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选均不等价：GT m009是确认采用脱敏方案，GT m022是PoC验证决策，而提取结果仅为建议采用双模式，未形成最终决策或执行承诺。"
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "身份证号脱敏规则已写好，需加上手机号脱敏规则",
+        "summary": "身份证号脱敏规则已写好，需加上手机号脱敏规则",
+        "source_message_ids": [
+          "m027",
+          "m028"
+        ],
+        "evidence_quote": "脱敏方案里的身份证号正则我写好了，发到代码库了。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果明确要求添加手机号脱敏规则，但候选GT中无对应决策，属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "脱敏规则中加入正则校验",
+        "summary": "脱敏规则中加入正则校验",
+        "source_message_ids": [
+          "m010"
+        ],
+        "evidence_quote": "收到，我会在脱敏规则中加入正则校验，防止漏网之鱼。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge returned unknown GT msg_id: "
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "元数据管理平台先做DataHub PoC验证",
+        "summary": "元数据管理平台先做DataHub PoC验证",
+        "source_message_ids": [
+          "m022",
+          "m023"
+        ],
+        "evidence_quote": "那先做PoC验证，两周内出结果，再决定是否采用。",
+        "evidence_valid": true,
+        "adjudication": "match_gt",
+        "matched_msg_id": "m022",
+        "reason": "exact_source_match"
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "Eve明天搭建PoC环境，Bob提供数据样例",
+        "summary": "Eve明天搭建PoC环境，Bob提供数据样例",
+        "source_message_ids": [
+          "m023",
+          "m026"
+        ],
+        "evidence_quote": "PoC环境我明天搭建，@Bob 你提供数据样例。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果与GT候选均不等价：m009是脱敏方案分工，m022是PoC验证周期决策，而提取结果是Eve搭建环境、Bob提供数据的具体执行承诺，属于有效但未被GT覆盖的额外决策。"
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "Eve需写PoC时间表同步给老板",
+        "summary": "Eve需写PoC时间表同步给老板",
+        "source_message_ids": [
+          "m025"
+        ],
+        "evidence_quote": "@Eve 别忘了写PoC时间表，我需要同步给老板。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果要求写PoC时间表，证据明确支持，但候选GT中无等价决策（m009是脱敏方案，m022是PoC验证周期决策，均不涉及写时间表）。"
+      },
+      {
+        "chat_id": "data_platform_channel_4",
+        "title": "明天上午十点开短会回顾PoC进度",
+        "summary": "明天上午十点开短会回顾PoC进度",
+        "source_message_ids": [
+          "m032"
+        ],
+        "evidence_quote": "明天上午十点开个短会，回顾PoC进度。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果是一个明确的会议安排决策，但候选GT中无等价决策（m009是脱敏方案分工，m022是PoC验证计划），因此属于未被覆盖的有效额外决策。"
+      },
+      {
+        "chat_id": "data_platform_channel_5",
+        "title": "动态脱敏延迟增加约5%，可接受",
+        "summary": "动态脱敏延迟增加约5%，可接受",
+        "source_message_ids": [
+          "m021"
+        ],
+        "evidence_quote": "结果出来了，动态脱敏延迟增加约5%，可接受。",
+        "evidence_valid": true,
+        "adjudication": "valid_extra",
+        "matched_msg_id": "",
+        "reason": "提取结果为延迟评估结论，非GT候选中的执行决策或资源协调承诺"
+      },
+      {
+        "chat_id": "data_platform_channel_5",
+        "title": "元数据管理平台先POC两个平台，两周后出对比报告",
+        "summary": "元数据管理平台先POC两个平台，两周后出对比报告",
+        "source_message_ids": [
+          "m030",
+          "m031",
+          "m032",
+          "m033"
+        ],
+        "evidence_quote": "那先POC两个平台，两周后出对比报告。",
+        "evidence_valid": true,
+        "adjudication": "invalid",
+        "matched_msg_id": "",
+        "reason": "judge match_gt lexical overlap too low: 0.20"
+      }
+    ],
+    "unmatched_expected": [
+      {
+        "chat_id": "data_platform_channel_4",
+        "msg_id": "m009",
+        "expected_topic": "数据脱敏方案",
+        "expected_summary": "脱敏方案就这么定了，@Charlie 你负责安全审计，@Bob 负责实施。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "data_platform_channel_5",
+        "msg_id": "m022",
+        "expected_topic": "数据脱敏方案",
+        "expected_summary": "好，脱敏方案就定动态网关，@Bob 负责实施。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      },
+      {
+        "chat_id": "data_platform_channel_5",
+        "msg_id": "m031",
+        "expected_topic": "元数据管理平台",
+        "expected_summary": "同意，@Dave 协调资源，尽快启动POC。",
+        "expected_status": "decided",
+        "expected_impact": "major",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "runner_errors": [],
+  "adjudicator": {
+    "enabled": true,
+    "calls": 15,
+    "errors": {}
+  }
+}

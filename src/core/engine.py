@@ -5,6 +5,7 @@ import hashlib
 import os
 import signal
 import time
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
@@ -12,6 +13,7 @@ from typing import Any, Dict, List, Optional, Set
 from src.card.config import CardConfig
 from src.card.pusher import PushEngine, PushTrigger
 from src.core.engine_config import EngineConfig, EngineStatus
+from src.core.pipeline_options import PipelineOptions
 from src.core.mutations import DecisionMutation, MutationType
 from src.graph.memory_graph import Conflict, MemoryGraph
 from src.graph.snapshot import DetectorSnapshot, SnapshotManager
@@ -19,6 +21,7 @@ from src.node.node import DecisionNode
 from src.node.types import DecisionStatus, ImpactLevel, Objection, Relation, RelationType
 from src.prompts import REALTIME_DEDUP_PROMPT
 from src.storage.git_storage import GitStorage, GitStorageConfig
+from src.llm.langfuse_config import get_langfuse, should_sample
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -42,6 +45,7 @@ class PipelineEngine:
         self._config = config or EngineConfig()
         self._applied_count = 0
         self._failed_count = 0
+        self._mutation_history: List[Dict[str, Any]] = []
 
     # ==================== 入口 ====================
 
@@ -49,7 +53,11 @@ class PipelineEngine:
         """应用单个 Mutation
 
         对应 Go ApplyMutation, 按 mut.mtype 分发。
+        自动设置 mutation timestamp 并记录到历史。
         """
+        if mut.timestamp is None:
+            mut.timestamp = datetime.now()
+
         if not mut.is_valid:
             logger.warning("Invalid mutation: sdr_id=%s, type=%s", mut.sdr_id, mut.mtype)
             self._failed_count += 1
@@ -72,9 +80,15 @@ class PipelineEngine:
                 self._failed_count += 1
                 return False
 
+            # 从 mutation metadata 中提取 trace_id，注入 GitStorage 用于 commit 溯源
+            trace_id = mut.metadata.get("trace_id") if mut.metadata else None
+            if trace_id and self._storage:
+                self._storage.set_trace_id(trace_id)
+
             result = handler(mut)
             if result:
                 self._applied_count += 1
+                self._record_mutation(mut)
             else:
                 self._failed_count += 1
             return result
@@ -83,6 +97,29 @@ class PipelineEngine:
             logger.error("Mutation failed: %s — %s", mut.mtype, e)
             self._failed_count += 1
             return False
+
+    def _record_mutation(self, mut: DecisionMutation) -> None:
+        """记录 mutation 到历史（用于审计追踪）"""
+        self._mutation_history.append({
+            "timestamp": mut.timestamp.isoformat() if mut.timestamp else "",
+            "type": mut.mtype.value,
+            "sid": mut.sdr_id,
+            "topic": mut.topic,
+            "old_status": mut.old_status,
+            "new_status": mut.new_status,
+            "summary": mut.summary or "",
+        })
+
+    def get_mutations_for_decision(self, sid: str) -> List[Dict[str, Any]]:
+        """获取指定决策的所有 mutation 记录，按时间排序"""
+        return [
+            m for m in self._mutation_history
+            if m["sid"] == sid
+        ]
+
+    def get_all_mutation_history(self, limit: int = 100) -> List[Dict[str, Any]]:
+        """获取最近的 mutation 历史"""
+        return list(reversed(self._mutation_history))[:limit]
 
     def batch_apply(self, mutations: List[DecisionMutation]) -> int:
         """批量应用 Mutation，返回成功数"""
@@ -117,6 +154,7 @@ class PipelineEngine:
 
     def _apply_create(self, mut: DecisionMutation) -> bool:
         """CREATE — 新建决策"""
+        status = DecisionStatus(mut.new_status) if mut.new_status else DecisionStatus.PENDING
         node = DecisionNode(
             sid=mut.sdr_id,
             topic_id=mut.topic,
@@ -124,7 +162,7 @@ class PipelineEngine:
             summary=mut.summary,
             full_text=mut.full_text,
             rationale=mut.rationale,
-            status=DecisionStatus(mut.new_status) if mut.new_status else DecisionStatus.PENDING,
+            status=status,
             impact_level=ImpactLevel(mut.new_impact_level) if mut.new_impact_level else ImpactLevel.MINOR,
             version=1,
             branch=f"decision/{mut.sdr_id}",
@@ -135,9 +173,18 @@ class PipelineEngine:
             confidence=mut.confidence,
             source=mut.source or "",
             parent_id=mut.parent_id,
+            source_message_id=mut.metadata.get("source_message_id", "") if mut.metadata else "",
+            source_chat_id=mut.metadata.get("source_chat_id", "") if mut.metadata else "",
+            extra={
+                "is_suggestion": bool(mut.metadata.get("is_suggestion", False)) if mut.metadata else False,
+                "source_message_ids": list(mut.metadata.get("source_message_ids", [])) if mut.metadata else [],
+                "evidence_quote": mut.metadata.get("evidence_quote", "") if mut.metadata else "",
+            },
+            is_suggestion=bool(mut.metadata.get("is_suggestion", False)) if mut.metadata else False,
             created_at=datetime.now(),
             updated_at=datetime.now(),
         )
+        node.change_status(status)
 
         errors = self.validate_decision(node)
         if errors:
@@ -151,7 +198,7 @@ class PipelineEngine:
             commit_hash = self._storage.write_decision(node_dict)
             node.git_commit_hash = commit_hash
 
-        logger.info("Created decision: %s v%d — %s", node.sid, node.version, node.summary[:60])
+        logger.info("Created decision: %s v%s — %s", node.sid, node.version, node.summary[:60])
         return True
 
     def _apply_update(self, mut: DecisionMutation) -> bool:
@@ -178,6 +225,17 @@ class PipelineEngine:
             existing.tags = mut.tags
         if mut.parent_id and mut.parent_id != existing.parent_id:
             existing.parent_id = mut.parent_id
+        if mut.metadata:
+            existing.source_message_id = mut.metadata.get("source_message_id", existing.source_message_id)
+            existing.source_chat_id = mut.metadata.get("source_chat_id", existing.source_chat_id)
+            existing.is_suggestion = bool(mut.metadata.get("is_suggestion", existing.is_suggestion))
+            existing.extra["is_suggestion"] = existing.is_suggestion
+            existing.extra["source_message_ids"] = list(
+                mut.metadata.get("source_message_ids", existing.extra.get("source_message_ids", []))
+            )
+            existing.extra["evidence_quote"] = mut.metadata.get(
+                "evidence_quote", existing.extra.get("evidence_quote", "")
+            )
         if mut.new_status:
             try:
                 existing.status = DecisionStatus(mut.new_status)
@@ -203,7 +261,7 @@ class PipelineEngine:
         return True
 
     def _apply_status_change(self, mut: DecisionMutation) -> bool:
-        """STATUS_CHANGE — 变更决策状态"""
+        """STATUS_CHANGE — 变更决策状态（自动记录生命周期时间戳）"""
         existing = self._graph.get_decision(mut.sdr_id)
         if existing is None:
             logger.warning("Status change failed: decision %s not found", mut.sdr_id)
@@ -216,8 +274,7 @@ class PipelineEngine:
             return False
 
         old_status = existing.status
-        existing.status = new_status
-        existing.updated_at = datetime.now()
+        existing.change_status(new_status)
 
         self._graph.upsert_decision(existing, mut.project)
 
@@ -262,7 +319,7 @@ class PipelineEngine:
         ))
 
         self._graph.upsert_decision(merged, mut.project)
-        target.status = DecisionStatus.SUPERSEDED
+        target.change_status(DecisionStatus.SUPERSEDED)
         self._graph.upsert_decision(target, mut.project)
 
         if self._storage:
@@ -350,8 +407,7 @@ class PipelineEngine:
             return False
 
         old_status = existing.status
-        existing.status = DecisionStatus.DEPRECATED
-        existing.updated_at = datetime.now()
+        existing.change_status(DecisionStatus.DEPRECATED)
 
         self._graph.upsert_decision(existing, mut.project)
 
@@ -373,8 +429,7 @@ class PipelineEngine:
             return False
 
         logger.info("Revert: %s to version %s (simplified, marking as pending)", mut.sdr_id, mut.revert_to_version)
-        existing.status = DecisionStatus.PENDING
-        existing.updated_at = datetime.now()
+        existing.change_status(DecisionStatus.PENDING)
 
         self._graph.upsert_decision(existing, mut.project)
 
@@ -397,8 +452,10 @@ class MemoryEngine:
         config: Optional[EngineConfig] = None,
         detector: Any = None,
         decision_extractor: Any = None,
+        pipeline_options: Optional[PipelineOptions] = None,
     ) -> None:
         self._config = config or EngineConfig.from_env()
+        self._pipeline_options = pipeline_options or PipelineOptions()
         self._detector = detector
         self._extractor = decision_extractor
         self._status = EngineStatus()
@@ -415,9 +472,20 @@ class MemoryEngine:
 
         self._hypergraph: Any = None
         self._hg_persistence: Any = None
+        self._hypergraph_embedding: Any = None
         self._hypergraph_modified: bool = False
 
+        self._memory_extractor: Optional[Any] = None
+        self._entity_store: Optional[Any] = None
+        self._neo4j_sync: Optional[Any] = None
+        self._doc_splitter: Optional[Any] = None
+
+        # Project codebase detection
+        self._project_detector: Optional[Any] = None
+        self._project_bridge: Optional[Any] = None
+
         self._processed_episode_hashes: Set[str] = set()
+        self._active_episode_chat_id: str = ""
         self._task_view_syncer: Any = None
 
         self._sleep_manager: Any = None
@@ -500,8 +568,18 @@ class MemoryEngine:
             if self._hg_persistence.exists():
                 self._hypergraph = self._hg_persistence.load()
                 stats = self._hypergraph.get_stats()
-                logger.info("Hypergraph loaded: decisions=%d facts=%d episodes=%d topics=%d",
-                            stats["decisions"], stats["facts"], stats["episodes"], stats["topics"])
+                logger.info("Hypergraph loaded: decisions=%d episodes=%d topics=%d",
+                            stats["decisions"], stats["episodes"], stats["topics"])
+
+                # Load cached embeddings if available
+                try:
+                    self._hypergraph_embedding = self._hg_persistence.load_embeddings()
+                    if self._hypergraph_embedding is not None:
+                        emb_stats = self._hypergraph_embedding.get_stats()
+                        logger.info("Hypergraph embeddings loaded: stats=%s", emb_stats)
+                except Exception as emb_load_err:
+                    logger.debug("Hypergraph embedding cache not found or invalid: %s", str(emb_load_err)[:60])
+                    self._hypergraph_embedding = None
             else:
                 self._hypergraph = Hypergraph()
                 logger.info("No existing hypergraph found, starting fresh")
@@ -563,6 +641,19 @@ class MemoryEngine:
             )
             self._tasks.append(task)
 
+        # Project codebase detection loop (watchdog + MemoStore)
+        if self._project_detector:
+            try:
+                await self._project_detector.start()
+                task = asyncio.create_task(
+                    self._run_project_detector_loop(),
+                    name="project-detector-loop",
+                )
+                self._tasks.append(task)
+                logger.info("Project detector loop started")
+            except Exception as e:
+                logger.warning("Project detector start failed (non-fatal): %s", e)
+
         self._tasks.append(
             asyncio.create_task(
                 self._sync_loop(),
@@ -595,6 +686,13 @@ class MemoryEngine:
         self._status.is_running = False
         self._status.last_snapshot_time = datetime.now().isoformat()
 
+        # Stop project detector first (before cancelling tasks)
+        if self._project_detector:
+            try:
+                await self._project_detector.stop()
+            except Exception as e:
+                logger.warning("Project detector stop error: %s", e)
+
         for task in self._tasks:
             task.cancel()
         if self._tasks:
@@ -608,6 +706,10 @@ class MemoryEngine:
             try:
                 self._hg_persistence.save(self._hypergraph)
                 logger.info("Hypergraph saved on stop")
+
+                # Also persist embeddings if available
+                if self._hypergraph_embedding is not None:
+                    self._hg_persistence.save_embeddings(self._hypergraph_embedding)
             except Exception as e:
                 logger.warning("Hypergraph save on stop failed: %s", e)
 
@@ -651,6 +753,295 @@ class MemoryEngine:
 
         await asyncio.sleep(self._config.ingester_poll_interval)
 
+    # ==================== 项目代码检测循环 ====================
+
+    async def _run_project_detector_loop(self) -> None:
+        """项目代码库检测循环 — 基于 watchdog + MemoStore 的事件驱动检测
+
+        与 _run_detector_loop 不同，该项目检测器是事件驱动的（watchdog 在后台
+        监听文件系统事件），loop 只需定期 poll 待处理事件队列即可。
+
+        检测到的文件变更通过 ConversationFileBridge 与对话上下文桥接，
+        然后传给 LLM 进行决策提取。
+        """
+        while self._running:
+            try:
+                result = await self._project_detector.detect()
+                if result and result.has_changes:
+                    await self._process_project_changes(result)
+            except asyncio.CancelledError:
+                break
+            except Exception as e:
+                self._status.error_count += 1
+                logger.error("Project detector loop error: %s", e)
+            # Short sleep to yield control — watchdog handles real-time events
+            await asyncio.sleep(0.5)
+
+    async def _process_project_changes(self, detect_result: Any) -> None:
+        """处理项目文件变更检测结果
+
+        1. 将文件变更列表传入 ConversationFileBridge
+        2. 通过 bridge 构建 ProjectDevelopmentContext
+        3. 如果 bridge 判断需要与对话上下文合并，提取决策
+        4. 对变更文档执行实体提取（分块 → MemoryExtractor → EntityStore → Neo4j）
+        """
+        changes = getattr(detect_result, "changes", [])
+        if not changes:
+            return
+
+        logger.info(
+            "[Project] Detected %d file changes (significant=%d)",
+            len(changes),
+            sum(1 for c in changes if getattr(c, "is_significant", False)),
+        )
+
+        # ── 文档实体提取（分块 → 提取 → 同步） ──
+        if self._memory_extractor is not None and self._entity_store is not None:
+            project_root = self._resolve_project_root()
+            entity_count = 0
+            rel_count = 0
+
+            for change in changes:
+                if not getattr(change, "is_significant", False):
+                    continue
+                if getattr(change, "change_type", "") == "deleted":
+                    continue
+
+                file_path = getattr(change, "file_path", "")
+                if not file_path:
+                    continue
+
+                # ── 读取文件内容 ──
+                abs_path = os.path.join(project_root, file_path) if project_root else file_path
+                if not os.path.isfile(abs_path):
+                    logger.debug("[Project] File not found (may have been deleted): %s", file_path)
+                    continue
+
+                try:
+                    with open(abs_path, encoding="utf-8", errors="replace") as f:
+                        content = f.read()
+                except Exception as exc:
+                    logger.warning("[Project] Failed to read %s: %s", file_path, exc)
+                    continue
+
+                if not content.strip():
+                    continue
+
+                # ── CocoIndex 分块 ──
+                chunks = self._split_document(content, file_path)
+
+                # ── 逐块提取实体 ──
+                for chunk_idx, chunk in enumerate(chunks):
+                    chunk_text = chunk.text if hasattr(chunk, "text") else chunk
+                    chunk_id = f"{file_path}#chunk-{chunk_idx}"
+
+                    try:
+                        mem_result = await self._memory_extractor.extract(
+                            chunk_text,
+                            episode_id=chunk_id,
+                            existing_entities=self._entity_store.build_extraction_context(),
+                        )
+                        if not mem_result or (not mem_result.entities and not mem_result.relationships):
+                            continue
+
+                        for ent in mem_result.entities:
+                            ent.source_type = "document"
+                        self._entity_store.add_entities(mem_result.entities)
+                        self._entity_store.add_relationships(mem_result.relationships)
+                        self._entity_store.add_facts(mem_result.facts)
+
+                        entity_count += len(mem_result.entities)
+                        rel_count += len(mem_result.relationships)
+
+                        logger.debug(
+                            "[Project] Chunk extraction: %s → %d entities, %d rels",
+                            chunk_id,
+                            len(mem_result.entities),
+                            len(mem_result.relationships),
+                        )
+                    except Exception as exc:
+                        logger.warning(
+                            "[Project] Chunk extraction failed for %s: %s",
+                            chunk_id, exc,
+                        )
+
+            if entity_count > 0:
+                logger.info(
+                    "[Project] Doc entity extraction complete: %d entities, %d rels across %d files",
+                    entity_count,
+                    rel_count,
+                    sum(1 for c in changes if getattr(c, "is_significant", False)),
+                )
+
+                # ── 同步到 Neo4j ──
+                await self._sync_doc_entities_to_neo4j()
+
+        # Feed file changes to the conversation-file bridge
+        if self._project_bridge and changes:
+            self._project_bridge.feed_file_changes(changes)
+
+        # Build project development context for potential LLM injection
+        ctx = await self._build_project_context(detect_result)
+        if ctx and ctx.significant_changes:
+            logger.info(
+                "[Project] Built context: %d significant changes, %d linked snippets",
+                len(ctx.significant_changes),
+                len(ctx.linked_conversation_snippets),
+            )
+
+    def _resolve_project_root(self) -> str:
+        """Resolve the project codebase root directory."""
+        if self._project_detector is not None:
+            watcher = getattr(self._project_detector, "_watcher", None)
+            if watcher is not None:
+                return getattr(watcher, "project_dir", "") or ""
+        return ""
+
+    def _split_document(self, content: str, file_path: str) -> List[Any]:
+        """Split document content into chunks using CocoIndex splitter.
+
+        Falls back to a single chunk (the full content) when:
+        - No splitter is configured
+        - Content is small (< 1024 bytes)
+        - The splitter raises an error
+        """
+        # Small files — skip splitting, the content fits in one LLM call
+        if len(content) < 1024:
+            return self._make_single_chunk(content)
+
+        if self._doc_splitter is None:
+            return self._make_single_chunk(content)
+
+        try:
+            # Infer language from file extension
+            language = self._infer_splitter_language(file_path)
+            chunks = self._doc_splitter.split(
+                content,
+                language=language,
+            )
+            if chunks:
+                logger.debug(
+                    "[Project] Split %s (%d bytes) into %d chunks (language=%s)",
+                    file_path, len(content), len(chunks), language or "auto",
+                )
+                return chunks
+            return self._make_single_chunk(content)
+        except Exception as exc:
+            logger.warning("[Project] Chunking failed for %s, using full content: %s", file_path, exc)
+            return self._make_single_chunk(content)
+
+    def _make_single_chunk(self, content: str) -> List[Any]:
+        """Wrap content as a single chunk for uniform processing."""
+        class _SimpleChunk:
+            def __init__(self, text, start=0, end=None):
+                self.text = text
+                self.start = start
+                self.end = end or len(text)
+        return [_SimpleChunk(content)]
+
+    @staticmethod
+    def _infer_splitter_language(file_path: str) -> Optional[str]:
+        """Map file extension to CocoIndex splitter language parameter."""
+        ext = os.path.splitext(file_path)[1].lower()
+        lang_map = {
+            ".md": "markdown",
+            ".markdown": "markdown",
+            ".py": "python",
+            ".js": "javascript",
+            ".ts": "typescript",
+            ".jsx": "javascript",
+            ".tsx": "typescript",
+            ".java": "java",
+            ".go": "go",
+            ".rs": "rust",
+            ".cpp": "cpp",
+            ".c": "c",
+            ".h": "c",
+            ".hpp": "cpp",
+            ".rb": "ruby",
+            ".php": "php",
+            ".swift": "swift",
+            ".kt": "kotlin",
+            ".scala": "scala",
+            ".sh": "bash",
+            ".bash": "bash",
+            ".yaml": "yaml",
+            ".yml": "yaml",
+            ".json": "json",
+            ".xml": "xml",
+            ".html": "html",
+            ".css": "css",
+            ".sql": "sql",
+            ".r": "r",
+            ".toml": "toml",
+            ".txt": None,
+        }
+        return lang_map.get(ext)
+
+    async def _sync_doc_entities_to_neo4j(self) -> None:
+        """Sync document entities from EntityStore to Neo4j."""
+        if self._neo4j_sync is None:
+            logger.debug("[Project] Neo4j sync not configured, skipping")
+            return
+        try:
+            stats = await self._neo4j_sync.sync_all(
+                entity_store=self._entity_store,
+            )
+            if stats.get("entities_written", 0) > 0 or stats.get("relationships_written", 0) > 0:
+                logger.info(
+                    "[Project] Neo4j sync: %d entities, %d rels written (errors=%d)",
+                    stats.get("entities_written", 0),
+                    stats.get("relationships_written", 0),
+                    stats.get("errors", 0),
+                )
+            else:
+                logger.debug("[Project] Neo4j sync: no new entities to sync")
+        except Exception as exc:
+            logger.warning("[Project] Neo4j sync failed: %s", exc)
+
+    async def _sync_entity_store_to_neo4j(self, trace_id: str = "") -> None:
+        """Sync conversation entities from EntityStore to Neo4j (non-blocking)."""
+        if self._neo4j_sync is None or self._entity_store is None:
+            return
+        try:
+            stats = await self._neo4j_sync.sync_all(
+                entity_store=self._entity_store,
+            )
+            if stats.get("entities_written", 0) > 0 or stats.get("relationships_written", 0) > 0:
+                logger.info(
+                    "[Engine] Neo4j entity sync: %d entities, %d rels written (errors=%d) trace=%s",
+                    stats.get("entities_written", 0),
+                    stats.get("relationships_written", 0),
+                    stats.get("errors", 0),
+                    trace_id[:12],
+                )
+        except Exception as exc:
+            logger.debug("[Engine] Neo4j entity sync skipped: %s", exc)
+
+    async def _build_project_context(self, detect_result: Any) -> Any:
+        """Build ProjectDevelopmentContext from detect result.
+
+        Uses the ConversationFileBridge to merge conversation keywords
+        with file changes.
+        """
+        if self._project_bridge is None or not hasattr(self._project_detector, "build_development_context"):
+            return None
+
+        changes = getattr(detect_result, "changes", [])
+        return self._project_detector.build_development_context(
+            changes=changes,
+            conv_signal=getattr(self._detector, "_last_signal", None),
+        )
+
+    async def _feed_project_keywords(self, keywords: List[str]) -> None:
+        """Feed conversation keywords to the project bridge.
+
+        Called after each conversation episode is processed, so the bridge
+        can build up a keyword profile for Level 1 matching.
+        """
+        if self._project_bridge and keywords:
+            self._project_bridge.feed_keywords(keywords)
+
     # ==================== 检测结果处理 ====================
 
     async def _process_detection(self, detection_result: Any) -> None:
@@ -661,10 +1052,12 @@ class MemoryEngine:
         3. 冲突检测 + 应用 Mutation
         4. 同步到 GitStorage
         """
+        # 生成 trace_id 贯穿整个检测流程
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
         content = getattr(detection_result, "content", "") or str(detection_result)
         source = getattr(detection_result, "source", "im")
         content_preview = content[:80].replace("\n", " ")
-        logger.info("[Engine] >>> _process_detection source=%s content=%.60s", source, content_preview)
+        logger.info("[Engine] >>> _process_detection source=%s content=%.60s trace_id=%s", source, content_preview, trace_id)
 
         proc_start = time.time()
 
@@ -679,11 +1072,11 @@ class MemoryEngine:
 
             # Step 2: Extract decision via LLM
             existing_decisions = self._build_existing_decisions_context()
-            node = await self._extract_decision(content, source, existing_decisions=existing_decisions)
+            node = await self._extract_decision(content, source, existing_decisions=existing_decisions, trace_id=trace_id)
 
             # Step 3: Apply mutations
             if node:
-                await self._apply_decision_mutations(node, source)
+                await self._apply_decision_mutations(node, source, trace_id=trace_id)
             else:
                 logger.info("[Engine] No decision extracted from content (%.60s)", content_preview)
 
@@ -712,6 +1105,8 @@ class MemoryEngine:
             - episode.messages: EpisodeMessage 列表
             - episode.to_dict(): 序列化方法
         """
+        # 生成 trace_id 贯穿整个 episode 处理流程
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}_decision-extraction"
         content = episode.full_text
         chat_id = episode.chat_id
         episode_id = episode.id
@@ -724,8 +1119,10 @@ class MemoryEngine:
             return
         self._processed_episode_hashes.add(content_hash)
 
-        logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d",
-                    episode_id[:12], chat_id[:12], episode.message_count, len(content))
+        logger.info("[Engine] >>> _process_episode id=%s chat=%s msgs=%d len=%d trace_id=%s",
+                    episode_id[:12], chat_id[:12], episode.message_count, len(content), trace_id)
+
+        self._active_episode_chat_id = chat_id
 
         if episode.message_count < 2 and len(content) < 100:
             logger.info("[Engine] Episode %s too short (msgs=%d, len=%d), skipping LLM extraction",
@@ -741,11 +1138,12 @@ class MemoryEngine:
 
         try:
             nodes = await self._extract_decision(content, "im",
-                                                  existing_decisions=self._build_existing_decisions_context())
+                                                  existing_decisions=self._build_existing_decisions_context(),
+                                                  trace_id=trace_id)
 
             if nodes:
                 for node in nodes:
-                    await self._apply_decision_mutations(node, "im")
+                    await self._apply_decision_mutations(node, "im", trace_id=trace_id)
             else:
                 logger.info("[Engine] No decision extracted from episode %s (len=%d)",
                             episode_id[:12], len(content))
@@ -780,6 +1178,21 @@ class MemoryEngine:
                 if self._hg_persistence:
                     self._hg_persistence.save(self._hypergraph)
                     self._hypergraph_modified = True
+
+                # ── Generate embeddings for hypergraph content ──
+                if self._embedder and self._hg_persistence and stats.get("episodes", 0) > 0:
+                    try:
+                        from src.structure import HypergraphEmbedding
+                        emb = HypergraphEmbedding.compute_from_hypergraph(
+                            self._hypergraph,
+                            embed_fn=self._embedder.embed,
+                        )
+                        self._hg_persistence.save_embeddings(emb)
+                        emb_stats = emb.get_stats()
+                        logger.info("[Engine] Hypergraph embeddings generated: stats=%s", emb_stats)
+                    except Exception as emb_err:
+                        logger.warning("[Engine] Hypergraph embedding generation skipped: %s",
+                                        str(emb_err)[:60])
             except Exception as hg_err:
                 logger.warning("[Engine] Hypergraph build skipped: %s", str(hg_err)[:60])
 
@@ -792,8 +1205,252 @@ class MemoryEngine:
             import traceback
             logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
 
+    async def _process_episode_v2(self, episode: Any) -> None:
+        """两阶段处理 pipeline
+
+        Stage 1: MemoryExtractor — 提取实体/关系/事实
+        Stage 2: DecisionExtractor with entity context — 提取决策
+
+        流程:
+        1. 内容去重 (content hash)
+        2. MemoryExtractor.extract() — 单次 LLM 调用获取实体/关系/事实
+        3. 将提取结果存入 EntityStore
+        4. 用实体上下文调用 DecisionExtractor.extract_with_context()
+        5. 若 Stage 2 返回空，fallback 到 _extract_decision
+        6. 应用决策 mutation
+        """
+        if (
+            not self._pipeline_options.enable_memory_extraction
+            or self._memory_extractor is None
+            or self._entity_store is None
+        ):
+            logger.info("[Engine] Memory extraction disabled or unavailable, falling back to direct pipeline")
+            await self._process_episode(episode)
+            return
+
+        trace_id = f"trc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}_memory-extraction"
+        content = getattr(episode, "full_text", "") or getattr(episode, "content", "")
+        episode_id = getattr(episode, "id", "")
+        chat_id = getattr(episode, "chat_id", "")
+
+        if not content:
+            logger.info("[Engine] v2: Empty content, skipping")
+            return
+
+        content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16]
+        if content_hash in self._processed_episode_hashes:
+            logger.info("[Engine] v2: Episode %s content hash %s already processed, skipping",
+                        episode_id[:12] if episode_id else "?", content_hash)
+            return
+        self._processed_episode_hashes.add(content_hash)
+
+        logger.info("[Engine] >>> _process_episode_v2 id=%s chat=%s len=%d trace_id=%s",
+                    episode_id[:12] if episode_id else "?",
+                    chat_id[:12] if chat_id else "?",
+                    len(content), trace_id)
+
+        proc_start = time.time()
+        self._active_episode_chat_id = chat_id
+
+        try:
+            # ── Stage 0: Historical context retrieval from Neo4j ──
+            # 从 Neo4j 查询该 chat 的历史实体和决策，合并到当前 context
+            historical_entity_ctx: List[Dict] = []
+            historical_decision_ctx: List[Dict] = []
+            if self._pipeline_options.enable_neo4j_history and self._neo4j_sync is not None and chat_id:
+                try:
+                    historical_entity_ctx = await self._neo4j_sync.get_historical_entity_context(
+                        chat_id, limit=50,
+                    )
+                    historical_decision_ctx = await self._neo4j_sync.get_historical_decisions(
+                        chat_id, limit=20,
+                    )
+                    if historical_entity_ctx:
+                        logger.info(
+                            "[Engine] v2: Loaded %d historical entities from Neo4j for chat=%s",
+                            len(historical_entity_ctx), chat_id[:12],
+                        )
+                    if historical_decision_ctx:
+                        logger.info(
+                            "[Engine] v2: Loaded %d historical decisions from Neo4j for chat=%s",
+                            len(historical_decision_ctx), chat_id[:12],
+                        )
+                except Exception as exc:
+                    logger.debug("[Engine] v2: Historical context load skipped: %s", exc)
+
+            # ── Stage 1: Memory Extraction ──
+            if hasattr(self._memory_extractor, "set_trace_id"):
+                self._memory_extractor.set_trace_id(trace_id)
+
+            # 合并当前 EntityStore 中的实体 + Neo4j 历史实体
+            local_entity_ctx = self._entity_store.build_extraction_context()
+            seen_names = {e["name"] for e in local_entity_ctx}
+            merged_entity_ctx = list(local_entity_ctx)
+            for he in historical_entity_ctx:
+                if he.get("name") and he["name"] not in seen_names:
+                    seen_names.add(he["name"])
+                    merged_entity_ctx.append(he)
+            logger.info(
+                "[Engine] v2 Stage 1: local_entities=%d historical=%d merged=%d",
+                len(local_entity_ctx), len(historical_entity_ctx), len(merged_entity_ctx),
+            )
+
+            mem_result = await self._memory_extractor.extract(
+                content,
+                episode_id=episode_id,
+                existing_entities=merged_entity_ctx,
+            )
+
+            logger.info("[Engine] v2 Stage 1 done: entities=%d rels=%d facts=%d",
+                        len(mem_result.entities), len(mem_result.relationships),
+                        len(mem_result.facts))
+
+            # Store results
+            self._entity_store.add_entities(mem_result.entities)
+            self._entity_store.add_relationships(mem_result.relationships)
+            self._entity_store.add_facts(mem_result.facts)
+
+            # ══ 异步写 Neo4j（不阻塞主 pipeline）══
+            neo4j_task = None
+            if self._neo4j_sync is not None:
+                neo4j_task = asyncio.create_task(
+                    self._sync_entity_store_to_neo4j(trace_id=trace_id),
+                    name=f"neo4j-sync-{episode_id[:12] if episode_id else '?'}",
+                )
+                logger.debug("[Engine] v2: Neo4j sync task scheduled")
+
+            # ── Stage 2: Decision Extraction with Entity Context ──
+            # 合并当前 Stage 1 新提取的实体 + 历史实体
+            stage2_entity_context = []
+            if self._pipeline_options.inject_entity_context:
+                stage2_entity_context = [
+                    {"name": e.name, "entity_type": e.entity_type}
+                    for e in mem_result.entities
+                ]
+                seen_s2 = {e["name"] for e in stage2_entity_context}
+                for he in historical_entity_ctx:
+                    if he.get("name") and he["name"] not in seen_s2:
+                        seen_s2.add(he["name"])
+                        stage2_entity_context.append(he)
+
+            # ── Project Context: check conv-file bridge for merge ──
+            project_ctx = None
+            if self._pipeline_options.inject_project_context and self._project_bridge is not None:
+                # Get recent file changes via the bridge
+                # The bridge decides whether to merge based on its level
+                file_changes = getattr(self._project_bridge, "_recent_file_changes", [])
+                if file_changes and hasattr(self._project_detector, "build_development_context"):
+                    project_ctx = self._project_detector.build_development_context(
+                        changes=file_changes,
+                        conv_signal=getattr(self._detector, "_last_signal", None),
+                    )
+                    if project_ctx and project_ctx.linked_conversation_snippets:
+                        logger.info(
+                            "[Engine] v2: Project context merged (%d changes, %d linked snippets)",
+                            len(project_ctx.recent_changes),
+                            len(project_ctx.linked_conversation_snippets),
+                        )
+
+            nodes: Any = None
+            if self._extractor is not None:
+                if hasattr(self._extractor, "set_trace_id"):
+                    self._extractor.set_trace_id(trace_id)
+
+                if hasattr(self._extractor, "extract_with_context"):
+                    logger.info(
+                        "[Engine] v2 Stage 2: Calling extract_with_context (entities=%d, project=%s, historical_decisions=%d)",
+                        len(stage2_entity_context),
+                        "yes" if project_ctx and project_ctx.has_changes else "no",
+                        len(historical_decision_ctx),
+                    )
+
+                    # 合并历史决策到 existing_decisions
+                    combined_decisions = list(self._build_existing_decisions_context() or [])
+                    seen_titles = {d.get("title", "") for d in combined_decisions if d.get("title")}
+                    for hd in historical_decision_ctx:
+                        t = hd.get("title", "") or hd.get("summary", "")
+                        if t and t not in seen_titles:
+                            seen_titles.add(t)
+                            combined_decisions.append({"title": t, "summary": t})
+
+                    if asyncio.iscoroutinefunction(self._extractor.extract_with_context):
+                        result = await self._extractor.extract_with_context(
+                            content,
+                            entity_context=stage2_entity_context,
+                            existing_decisions=combined_decisions,
+                            project_context=project_ctx,
+                        )
+                    else:
+                        result = await asyncio.to_thread(
+                            self._extractor.extract_with_context,
+                            content,
+                            stage2_entity_context,
+                            combined_decisions,
+                            project_ctx,
+                        )
+
+                    if result:
+                        logger.info("[Engine] v2 Stage 2: Extracted %d decisions", len(result))
+                        for item in result:
+                            node = self._dict_to_node(item, "im")
+                            if node:
+                                await self._apply_decision_mutations(node, "im", trace_id=trace_id)
+                        nodes = result
+                else:
+                    logger.info("[Engine] v2: extract_with_context not available, using v1 extract_decision")
+                    nodes = await self._extract_decision(
+                        content, "im",
+                        existing_decisions=self._build_existing_decisions_context(),
+                        trace_id=trace_id,
+                    )
+                    if nodes:
+                        for node in nodes:
+                            await self._apply_decision_mutations(node, "im", trace_id=trace_id)
+            else:
+                logger.info("[Engine] v2: No decision extractor, decisions skipped")
+
+            # Fallback to direct extraction if Stage 2 returned nothing
+            if not nodes and self._extractor is not None and hasattr(self._extractor, "extract_decision"):
+                logger.info("[Engine] v2: Stage 2 returned empty, falling back to direct extraction")
+                fallback = await self._extract_decision(
+                    content, "im",
+                    existing_decisions=self._build_existing_decisions_context(),
+                    trace_id=trace_id,
+                )
+                if fallback:
+                    for node in fallback:
+                        await self._apply_decision_mutations(node, "im", trace_id=trace_id)
+
+            # ── 等待 Neo4j sync 完成（如果有） ──
+            if neo4j_task is not None:
+                try:
+                    await neo4j_task
+                except Exception as exc:
+                    logger.warning("[Engine] v2: Neo4j sync task failed: %s", exc)
+
+            # ── 如果有决策产生，同步到 Neo4j ──
+            if nodes and self._neo4j_sync is not None:
+                try:
+                    await self._neo4j_sync.sync_all(
+                        memory_graph=self._graph,
+                    )
+                except Exception as exc:
+                    logger.debug("[Engine] v2: Neo4j decision sync failed: %s", exc)
+
+            elapsed = time.time() - proc_start
+            logger.info("[Engine] <<< _process_episode_v2 done time=%.2fs", elapsed)
+
+        except Exception as e:
+            elapsed = time.time() - proc_start
+            self._status.error_count += 1
+            self._status.last_error = str(e)
+            logger.error("[Engine] _process_episode_v2 FAILED after %.2fs: %s", elapsed, e)
+            import traceback
+            logger.error("[Engine] Traceback:\n%s", traceback.format_exc())
+
     async def _extract_decision(self, content: str, source: str,
-                                 existing_decisions: Optional[List[Dict]] = None) -> Optional[List[DecisionNode]]:
+                                 existing_decisions: Optional[List[Dict]] = None,
+                                 trace_id: Optional[str] = None) -> Optional[List[DecisionNode]]:
         """使用 LLM 提取决策（支持批量返回多条决策）
 
         Args:
@@ -801,10 +1458,15 @@ class MemoryEngine:
             source: 来源 ("im", "doc", etc.)
             existing_decisions: 已有决策列表（注入到 prompt 中让 LLM 避免重复提取）
                 格式: [{"title": "...", "summary": "..."}, ...]
+            trace_id: 用于 Langfuse 溯源的 trace ID
         """
         if self._extractor is None:
             logger.warning("[LLM] No extractor configured, skipping LLM extraction")
             return None
+
+        # 将 trace_id 传入 extractor，使 LLM 调用可溯源
+        if hasattr(self._extractor, "set_trace_id"):
+            self._extractor.set_trace_id(trace_id)
 
         # 注入已有决策上下文（Plan A）
         if existing_decisions:
@@ -906,6 +1568,60 @@ class MemoryEngine:
         if reranker:
             logger.info("Reranker provider set for similarity search")
 
+    def set_memory_extractor(self, memory_extractor: Any = None, entity_store: Any = None) -> None:
+        """设置 Stage 1 记忆提取器（MemoryExtractor）和 EntityStore
+
+        启用两阶段管道 (_process_episode_v2)。
+        """
+        self._memory_extractor = memory_extractor
+        self._entity_store = entity_store
+        if memory_extractor:
+            logger.info("Memory extractor set for 2-stage pipeline")
+        if entity_store:
+            logger.info("Entity store set for 2-stage pipeline")
+
+    def set_doc_splitter(self, splitter: Any = None) -> None:
+        """设置文档分块器（CocoIndex RecursiveSplitter）
+
+        启用文档实体提取前的内容分块，对大文件按语法边界拆分
+        后再逐块提取实体。
+        """
+        self._doc_splitter = splitter
+        if splitter:
+            logger.info("Document splitter set for doc entity extraction")
+
+    def set_neo4j_sync(self, neo4j_sync: Any = None) -> None:
+        """设置 Neo4j 同步引擎（Neo4jSyncEngine）
+
+        将 EntityStore 中的脏实体/关系同步到 Neo4j 数据库，
+        支持 Entity→MENTIONS→Episode/Document→REFERENCES→Decision 图查询。
+        """
+        self._neo4j_sync = neo4j_sync
+        if neo4j_sync:
+            logger.info("Neo4j sync engine set")
+
+    def set_project_detector(
+        self,
+        project_detector: Any,
+        project_bridge: Optional[Any] = None,
+    ) -> None:
+        """Configure project codebase detection.
+
+        Enables a new async loop (_project_detector_loop) that monitors
+        the local project directory for file changes using watchdog + MemoStore.
+
+        Args:
+            project_detector: ProjectDetector instance.
+            project_bridge: Optional ConversationFileBridge instance.
+                If None, uses the ProjectDetector's internal bridge.
+        """
+        self._project_detector = project_detector
+        self._project_bridge = project_bridge
+        logger.info(
+            "Project detector configured (dir=%s)",
+            getattr(project_detector, "name", "unknown"),
+        )
+
     @staticmethod
     def _summary_similarity(a: str, b: str) -> float:
         """计算两条决策摘要的文本相似度
@@ -964,7 +1680,7 @@ class MemoryEngine:
 
         candidate_texts = [(d, d.full_text or d.summary) for d in same_topic]
 
-        if self._embedder:
+        if self._pipeline_options.enable_embedding_dedup and self._embedder:
             try:
                 import numpy as np
                 query_text = node.full_text or node.summary
@@ -1011,7 +1727,7 @@ class MemoryEngine:
 
         return None, 0.0
 
-    async def _judge_decision_duplicate(self, new_node: DecisionNode, existing_node: DecisionNode) -> tuple:
+    async def _judge_decision_duplicate(self, new_node: DecisionNode, existing_node: DecisionNode, trace_id: Optional[str] = None) -> tuple:
         """用 LLM 判断新决策与已有决策的关系
 
         如果两者是同父决策或存在直接父子关系，跳过 LLM 判断直接返回 create_new。
@@ -1029,8 +1745,21 @@ class MemoryEngine:
             logger.debug("[Dedup] Parent-child guard: skipping dedup")
             return "create_new", "parent-child relationship", ""
 
+        if not self._pipeline_options.enable_llm_dedup:
+            return "create_new", "LLM dedup disabled", ""
+
         if self._extractor is None:
             return "create_new", "no LLM", ""
+
+        # Langfuse Trace: dedup_judge
+        langfuse = get_langfuse()
+        dedup_trace = None
+        if langfuse and should_sample():
+            dedup_trace = langfuse.trace(
+                name="dedup_judge",
+                input={"new": new_node.title, "existing": existing_node.title},
+                metadata={"trace_id": trace_id or ""},
+            )
 
         prompt = REALTIME_DEDUP_PROMPT.format(
             new_title=new_node.title or new_node.summary,
@@ -1053,6 +1782,7 @@ class MemoryEngine:
                     prompt,
                     temperature=_dedup_temperature,
                     response_format={"type": "json_object"},
+                    trace_id=trace_id,
                 )
                 import json
                 result = json.loads(resp)
@@ -1060,12 +1790,16 @@ class MemoryEngine:
                 reason = result.get("reason", "")
                 info = result.get("info_to_merge", "")
                 logger.info("[Dedup] LLM judge: action=%s reason=%.60s", action, reason)
+                if dedup_trace:
+                    dedup_trace.end(output={"action": action, "reason": reason})
                 return action, reason, info
         except Exception as e:
             logger.warning("[Dedup] LLM judge failed: %s", str(e)[:60])
+            if dedup_trace:
+                dedup_trace.end(output={"status": "error", "error": str(e)})
         return "create_new", "judge_failed", ""
 
-    async def _apply_decision_mutations(self, node: DecisionNode, source: str) -> None:
+    async def _apply_decision_mutations(self, node: DecisionNode, source: str, trace_id: Optional[str] = None) -> None:
         """将提取的决策应用于超图和存储
 
         核心流程：
@@ -1086,6 +1820,16 @@ class MemoryEngine:
 
         existing = self._graph.get_decision(node.sid)
 
+        # 在 mutation 中携带 trace_id，用于 Git commit 溯源
+        trace_meta = {"trace_id": trace_id or ""} if trace_id else {}
+        audit_meta = {
+            "source_message_id": node.source_message_id,
+            "source_message_ids": list(node.extra.get("source_message_ids", [])),
+            "evidence_quote": node.extra.get("evidence_quote", ""),
+            "source_chat_id": node.source_chat_id,
+            "is_suggestion": bool(node.extra.get("is_suggestion", node.is_suggestion)),
+        }
+
         if existing:
             logger.info("[Mutation] Existing by sid: sid=%s v%d", node.sid[:12], existing.version)
             updates = DecisionMutation(
@@ -1102,6 +1846,7 @@ class MemoryEngine:
                 tags=node.tags,
                 confidence=node.confidence,
                 parent_id=node.parent_id,
+                metadata={**trace_meta, **audit_meta},
             )
             if await asyncio.to_thread(self._pipeline.apply_mutation, updates):
                 self._status.total_mutations_applied += 1
@@ -1132,7 +1877,7 @@ class MemoryEngine:
                 node.confidence = max(node.confidence, similar.confidence)
                 node.tags = list(set(node.tags + similar.tags))
             else:
-                action, reason, info = await self._judge_decision_duplicate(node, similar)
+                action, reason, info = await self._judge_decision_duplicate(node, similar, trace_id=trace_id)
 
                 if action == "skip":
                     logger.info("[Mutation] SKIP: new=%s similar=%s reason=%.60s",
@@ -1184,7 +1929,7 @@ class MemoryEngine:
                             MemoryEngine._summary_similarity((node.full_text or ""), (existing.full_text or "")),
                             existing.summary[:80])
                 continue
-            action, reason, info = await self._judge_decision_duplicate(node, existing)
+            action, reason, info = await self._judge_decision_duplicate(node, existing, trace_id=trace_id)
             if action == "skip":
                 logger.info("[Mutation] Prefilter SKIP: new=%s vs existing=%s reason=%.60s",
                             node.sid[:12], existing.sid[:12], reason)
@@ -1234,6 +1979,7 @@ class MemoryEngine:
             parent_id=node.parent_id,
             new_status=node.status.value,
             new_impact_level=node.impact_level.value,
+            metadata={**trace_meta, **audit_meta},
         )
         if await asyncio.to_thread(self._pipeline.apply_mutation, create):
             self._status.total_mutations_applied += 1
@@ -1413,8 +2159,7 @@ class MemoryEngine:
 
     # ==================== 辅助 ====================
 
-    @staticmethod
-    def _dict_to_node(data: dict, source: str = "im") -> Optional[DecisionNode]:
+    def _dict_to_node(self, data: dict, source: str = "im") -> Optional[DecisionNode]:
         """从 dict 构建 DecisionNode"""
         try:
             import hashlib
@@ -1458,6 +2203,13 @@ class MemoryEngine:
                 proposer=data.get("proposer", "") or data.get("authority", ""),
                 authority=data.get("proposer", "") or data.get("authority", ""),
                 assignee=data.get("executor", "") or data.get("assignee", ""),
+                source_message_id=data.get("source_message_id", "") or "",
+                source_chat_id=data.get("source_chat_id", "") or self._active_episode_chat_id,
+                extra={
+                    "is_suggestion": bool(data.get("is_suggestion", False)),
+                    "source_message_ids": list(data.get("source_message_ids", [])),
+                    "evidence_quote": data.get("evidence_quote", "") or "",
+                },
                 is_suggestion=bool(data.get("is_suggestion", False)),
                 source=source,
                 created_at=datetime.now(),

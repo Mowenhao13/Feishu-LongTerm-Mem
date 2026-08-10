@@ -39,6 +39,18 @@ from src.detect.emitter import (
     WikiEmitter,
     new_emitters,
 )
+from src.detect.project_watcher import (
+    ProjectFileHandler,
+    ProjectWatcher,
+)
+from src.detect.project_detector import (
+    ProjectDetector,
+)
+from src.detect.conv_file_bridge import (
+    ConversationFileBridge,
+    ConvFileBridgeLevel,
+    extract_conversation_keywords,
+)
 from src.detect.types import (
     AdapterType,
     ChangeType,
@@ -110,4 +122,11 @@ __all__ = [
     "periodic_task",
     "run_async",
     "setup_event_loop",
+    # Project file detection
+    "ProjectFileHandler",
+    "ProjectWatcher",
+    "ProjectDetector",
+    "ConversationFileBridge",
+    "ConvFileBridgeLevel",
+    "extract_conversation_keywords",
 ]
