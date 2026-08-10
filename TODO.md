@@ -40,4 +40,9 @@
   - [x] Dev-35 smoke test: 35/35 episodes extracted with decision_kind
     (adjudication phase interrupted by server disconnect; extraction pipeline validated)
 - [ ] 换强 judge model 后恢复 freeze gate 严格阈值（match_gt >= 0.95, valid_extra >= 0.90）
-- [ ] 第 3 切片：实验执行与 promotion evidence
+- [x] 第 3 切片：实验执行与 promotion evidence
+  - [x] Phase 2: 70-chat full evaluation — 24/24 chunks complete
+    - F1: 0.566 → **0.755** (+0.189)
+    - Precision: 0.500 → **0.752** (+0.252)
+    - All 7 domains improved, evidence_invalid=0
+  - [ ] Phase 3: three paired 70-chat repeats（可选，需更多运行时间）

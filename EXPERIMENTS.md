@@ -804,3 +804,47 @@ uv run python experiments/production_ablation/chunked.py \\
 **No extractor comparison, no production-default decision, no quality improvement claim.** The calibration harness requires human-reviewed labels before it can produce meaningful agreement/confusion metrics. The evaluator changes (Tasks 1-3) replace per-output lexical-overlap adjudication with validated per-chat global semantic assignment but do not change production defaults or extraction behavior.
 
 **Focused tests**: 29/29 passing across Task 1-5 test modules.
+
+---
+
+## 2026-08-10 — Slice 2: Decision-Kind Typed Filtering + 70-Chat Full Evaluation
+
+### Changes
+1. **decision_kind schema** — 7 enum values added to extraction prompt: `choice`, `conditional_choice`, `execution_commitment`, `policy_constraint`, `suggestion`, `status`, `discussion`
+2. **Deterministic typed filtering** — `status`/`discussion` dropped before evidence check; `suggestion` forces `is_suggestion=True`
+3. **Compound-decision guidance** — atomic decision splitting rule in prompt
+4. **Context-boundary guidance** — context cannot provide evidence for new decisions
+5. **EvidenceDecision.is_confirmed** — only confirmable kinds pass (choice, conditional_choice, execution_commitment, policy_constraint)
+6. **Extraction stats** — `last_extraction_stats` tracks total_candidates, confidence_filtered, status_discussion_filtered, evidence_attachment_dropped
+
+### 70-Chat Full Evaluation Results (full_70_decision_kind_20260810)
+
+| Metric | Baseline (20260807) | Candidate | Delta |
+|--------|-------------------:|----------:|------:|
+| Precision | 0.500 | **0.752** | **+0.252** |
+| Recall | 0.652 | **0.758** | **+0.106** |
+| F1 | 0.566 | **0.755** | **+0.189** |
+| TP | 86 | 100 | +14 |
+| FP (invalid) | 86 | 33 | **-53** |
+| FN | 46 | 32 | -14 |
+| Valid extra | 109 | 217 | +108 |
+| Evidence invalid | 0 | 0 | ✅ |
+
+### Per-Domain F1
+
+| Domain | Baseline | Candidate | Delta |
+|--------|--------:|---------:|------:|
+| ai_ml_platform | 0.547 | 0.817 | +0.270 |
+| backend_arch | 0.660 | 0.847 | +0.187 |
+| cloud_infra | 0.667 | 0.750 | +0.083 |
+| data_platform | 0.524 | 0.570 | +0.046 |
+| frontend_mobile | 0.524 | 0.757 | +0.233 |
+| sec_compliance | 0.577 | 0.747 | +0.170 |
+| sre_reliability | 0.577 | 0.780 | +0.203 |
+
+**All 7 domains improved. No domain decreased.** Largest gains in ai_ml_platform (+0.27) and frontend_mobile (+0.23).
+
+### Conclusion
+Decision-kind typed filtering substantially reduces false positives (86→33) by filtering status updates and discussion items, while the improved prompt guidance increases true positive recall (86→100). The global semantic evaluator correctly classifies previously-rejected valid decisions as valid_extra (109→217). Evidence-invalid remains 0.
+
+**Tests**: 17 new + 32 existing = 49 tests passing. Pipeline A/B: no regression.
